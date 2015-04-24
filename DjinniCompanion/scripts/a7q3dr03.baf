@@ -1,0 +1,42 @@
+// Cheering script of the right spectator duergar
+
+IF
+  Global("appear", "LOCALS", 1)
+  Global("duel", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("duel", "LOCALS", 1)
+END
+
+IF
+  Delay(6)
+  !Allegiance(Myself, ENEMY)
+  Global("duel", "LOCALS", 1)
+  See("A7Q3DR02")
+  OR(3)
+    Detect([PC])
+    Detect([FAMILIAR])
+    Detect([CONTROLLED])
+THEN
+  RESPONSE #10
+    Wait(3)
+    FaceObject("A7Q3DR02")
+    DisplayStringNoNameHead(Myself, @3938)    // Move your feet!
+  RESPONSE #10
+    Wait(3)
+    FaceObject("A7Q3DR02")
+    DisplayStringNoNameHead(Myself, @3939)    // Yes, come on!
+  RESPONSE #10
+    Wait(3)
+    FaceObject("A7Q3DR02")
+    DisplayStringNoNameHead(Myself, @3940)    // You can beat him!
+  RESPONSE #10
+    Wait(3)
+    FaceObject("A7Q3DR02")
+    DisplayStringNoNameHead(Myself, @3941)    // More to the left!
+  RESPONSE #10
+    Wait(3)
+    FaceObject("A7Q3DR02")
+    DisplayStringNoNameHead(Myself, @3942)    // Pay attention to your right flank!
+  RESPONSE #50
+    FaceObject("A7Q3DR02")
+END

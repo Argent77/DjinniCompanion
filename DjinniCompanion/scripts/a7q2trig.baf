@@ -1,0 +1,46 @@
+// *** Triggers Quest 2 (used in proximity trigger regions) ***
+
+/*
+// Triggering Quest 2 in the following areas
+  OR(12)
+    AreaCheck("AR0020")    // City Gates
+    AreaCheck("AR0300")    // Docks
+    AreaCheck("AR0400")    // Slums
+    AreaCheck("AR0500")    // Bridge
+    AreaCheck("AR0700")    // Waukeen's Promenade
+    AreaCheck("AR1000")    // Government
+    AreaCheck("AR1100")    // Umar Hills
+    AreaCheck("AR1200")    // Windspear Hills
+    AreaCheck("AR1400")    // Temple Ruins (liberated)
+    AreaCheck("AR1700")    // Small Teeth Pass
+    AreaCheck("AR1900")    // Druid Grove
+    AreaCheck("AR2000")    // Trademeet
+*/
+IF
+  OR(2)                    // don't interfere with the druid quest
+    !AreaCheck("AR1900")
+    Dead("cefald01")
+  OR(2)                    // don't interfere with the githyanki quest
+    !PartyHasItem("misc8u")
+    GlobalGT("KruinTalked", "GLOBAL", 0)
+  OR(3)                    // don't interfere with the vampire quest
+    Global("Chapter", "GLOBAL", 6)
+    GlobalGT("VampShadWar", "GLOBAL", 5)
+    !TimeOfDay(NIGHT)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Range(Player1, 15)
+  See(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  HasItem("A7DJLMP", Player1)             // CHARNAME must have the djinni lamp
+  Global("A7AfaaqMet", "GLOBAL", 1)       // Afaaq must have talked to CHARNAME already
+  GlobalTimerExpired("A7TriggerQuest2", "GLOBAL")
+  Global("A7Quest2", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Quest2", "GLOBAL", 1)
+  ClearAllActions()
+  StartCutSceneMode()
+  CreateCreatureObject("A7Q2RK3", Myself, 0, 0, 0)
+  ActionOverride("A7Q2RK3", FaceObject(Player1))
+  StartCutScene("A7Q2ct1a")
+END

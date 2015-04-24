@@ -1,0 +1,43 @@
+// Cheering script of the bottom right spectator duergar
+
+IF
+  Global("appear", "LOCALS", 1)
+  Global("duel", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("duel", "LOCALS", 1)
+END
+
+IF
+  Delay(6)
+  !Allegiance(Myself, ENEMY)
+  Global("duel", "LOCALS", 1)
+  See("A7Q3DR01")
+  See("A7Q3DR02")
+  OR(3)
+    Detect([PC])
+    Detect([FAMILIAR])
+    Detect([CONTROLLED])
+THEN
+  RESPONSE #10
+    Wait(1)
+    FaceObject("A7Q3DR01")
+    DisplayStringNoNameHead(Myself, @3943)    // What a fight.
+  RESPONSE #10
+    Wait(1)
+    FaceObject("A7Q3DR01")
+    DisplayStringNoNameHead(Myself, @3944)    // Yeah, come on!
+  RESPONSE #10
+    Wait(1)
+    FaceObject("A7Q3DR01")
+    DisplayStringNoNameHead(Myself, @3945)    // Come on!  Come on!
+  RESPONSE #10
+    Wait(1)
+    FaceObject("A7Q3DR01")
+    DisplayStringNoNameHead(Myself, @3946)    // *clap*
+  RESPONSE #10
+    Wait(1)
+    FaceObject("A7Q3DR01")
+    DisplayStringNoNameHead(Myself, @3947)    // *cheer*
+  RESPONSE #50
+    FaceObject("A7Q3DR01")
+END

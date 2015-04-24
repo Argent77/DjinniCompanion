@@ -1,0 +1,22 @@
+// *** Area script for Greed Genie in Hell ***
+
+// Remove greed genie if quest is over
+IF
+  Global("A7GreedWaitForDecision", "GLOBAL", 3)
+  Exists("hellgen")
+THEN RESPONSE #100
+  ActionOverride("hellgen", EscapeAreaDestroy(0))
+END
+
+// Evaluating friendship path
+IF
+  OR(2)
+    GlobalLT("A7AfaaqFriendship", "GLOBAL", 12)    // 12 or more points ensure Afaaq's permanent stay
+    ReputationLT(Player1, 3)            // a reputation of 2 or lower causes Afaaq to leave, regardless of friendship
+  ReputationLT(Player1, 19)            // a reputation of 19 and higher causes Afaaq to stay, regardless of friendship
+  Global("A7AfaaqEvaluate", "AR2903", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqEvaluate", "AR2903", 1)
+  SetGlobal("A7AfaaqLeaveParty", "GLOBAL", 1)
+END
+

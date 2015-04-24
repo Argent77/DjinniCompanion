@@ -1,0 +1,63 @@
+// *** Cutscene: Malik prepares prison, party calls djinns, djinns appear ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Malik")
+  MoveViewObject(Myself, VERY_FAST)
+  // Malik prepares prison
+  ForceSpellRES("A7Q5SFX1", Myself)
+  ScreenShake([2.2], 15)
+  CreateVisualEffect("A703FIR2", [2398.1171])
+  SmallWait(5)
+  CreateVisualEffect("A703FIR2", [2363.1156])
+  CreateVisualEffect("A703FIR2", [2436.1172])
+  SmallWait(5)
+  CreateVisualEffect("A703FIR2", [2333.1132])
+  CreateVisualEffect("A703FIR2", [2472.1165])
+  SmallWait(5)
+  CreateVisualEffect("A703FIR2", [2319.1102])
+  CreateVisualEffect("A703FIR2", [2502.1148])
+  // Wait(1)
+  DisplayStringHead(Myself, @6858)    // It's your turn now, <CHARNAME>.
+  Wait(2)
+  // CHARNAME plays whistle
+  DisplayStringHead(Player1, @6859)    // *whistle*
+  ActionOverride(Player1, PlaySound("M_FLUTE"))
+  Wait(1)
+  // Djinns arrive
+  CreateCreature("A7Karim", [2381.1108], 3)
+  CreateCreature("A7Q5DJ01", [2386.1061], 2)
+  CreateCreature("A7Q5DJ02", [2422.1075], 2)
+  CreateCreature("A7Q5DJ03", [2457.1064], 2)
+  CreateCreature("A7Q5DJ04", [2458.1103], 3)
+  CreateCreature("A7Q5DJ05", [2420.1117], 3)
+  ActionOverride("A7Q5DJ05", SetName(@60001))    // Afaaq
+  ActionOverride("A7Q5DJ05", ApplySpellRES("A7Q5PIC1", Myself))
+  ActionOverride("A7Q5DJ05", SetDialogue("A7Q5DJ05"))
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ01")
+  SmallWait(2)
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ02")
+  SmallWait(2)
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ03")
+  SmallWait(2)
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ04")
+  SmallWait(2)
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ05")
+  SmallWait(2)
+  CreateVisualEffectObject("SPPORTAL", "A7Karim")
+  SmallWait(20)
+  ActionOverride("A7Q5DJ01", DestroyItem("A7RING01"))
+  SmallWait(2)
+  ActionOverride("A7Q5DJ02", DestroyItem("A7RING01"))
+  SmallWait(2)
+  ActionOverride("A7Q5DJ03", DestroyItem("A7RING01"))
+  SmallWait(2)
+  ActionOverride("A7Q5DJ04", DestroyItem("A7RING01"))
+  SmallWait(2)
+  ActionOverride("A7Q5DJ05", DestroyItem("A7RING01"))
+  SmallWait(2)
+  ActionOverride("A7Karim", DestroyItem("A7RING01"))
+  Wait(2)
+  StartDialogueNoSet(Player1)
+END

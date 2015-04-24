@@ -1,0 +1,9 @@
+IF
+  SpellCastOnMe([ANYONE], CLERIC_LESSER_RESTORATION)
+  Global("Restored", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("Restored", "LOCALS", 1)
+  Wait(2)
+  StartDialogueNoSet([PC])
+END

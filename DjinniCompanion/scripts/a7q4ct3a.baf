@@ -1,0 +1,25 @@
+// *** Cutscene: The Greed Genie will break the enchantment with the help of the soulcage ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("HELLGEN")
+  SetGlobal("A7WaitForDecision", "LOCALS", 1)
+  SetGlobal("A7AfaaqUpgrade", "LOCALS", 3)
+  SetGlobal("A7SoulcageUsed", "LOCALS", 1)
+  MoveViewObject("A7Afaaq", VERY_FAST)
+  Wait(1)
+  ForceSpellRES("A7Q4SFX1", Myself)    // some casting animations without projectile effect
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  Wait(4)
+  CreateVisualEffectObject("A7Q4CT3A", Myself)
+  Wait(3)
+  ChangeAnimation("A7AFAAQ2")
+  ActionOverride("A7Afaaq", MakeGlobal())
+  StartCutScene("A7Q4ct3c")
+END

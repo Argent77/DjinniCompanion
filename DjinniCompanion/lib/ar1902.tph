@@ -1,0 +1,158 @@
+// *** Area AR1902 (Adratha's Cottage) ***
+
+// *** Patching TRRAK01.BCS ***
+ACTION_IF (FILE_EXISTS_IN_GAME ~trrak01.bcs~) BEGIN
+  COPY_EXISTING ~trrak01.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      // Creatures will be handled in area script
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EVALUATE_REGEXP
+        ~CreateCreature\(Door\)?("trrak0[23]",\[.+\..+\],.+)~ ~~
+      // Remove redundant dimension door animations as well
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EVALUATE_REGEXP
+        ~CreateVisualEffect("spdimndr",\[.+\..+\])~ ~~
+      // Special case: older versions of SCS2 conjure up Saadat and Jalaal immediately -> disabling
+      REPLACE_TEXTUALLY CASE_INSENSITIVE EVALUATE_REGEXP
+        ~\(Global("DMWWtrrak","GLOBAL",0)\)~ ~False() \1~
+    END
+    BUT_ONLY
+  EXTEND_TOP ~trrak01.bcs~ ~DjinniCompanion/scripts/trrak01.baf~
+END
+
+
+// *** Patching AR1902.ARE ***
+COPY ~DjinniCompanion/areas/a7dimndr.bam~ ~override~
+COPY_EXISTING ~ar1902.mos~ ~override~
+              ~ar1902.wed~ ~override~
+              ~ar1902.tis~ ~override~
+              ~ar1902ht.bmp~ ~override~
+              ~ar1902lm.bmp~ ~override~
+              ~ar1902sr.bmp~ ~override~
+              ~am1902.wav~ ~override~
+
+// Check for existing area script (which isn't in a standard installation)
+COPY_EXISTING ~ar1902.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    READ_ASCII 0x94 scrpt
+    PATCH_IF ("%scrpt%" STRING_EQUAL_CASE ~~ OR "%scrpt%" STRING_EQUAL_CASE ~NONE~ OR !FILE_EXISTS_IN_GAME ~%scrpt%.BCS~) BEGIN
+      TEXT_SPRINT scrpt ~AR1902~
+      WRITE_ASCIIE 0x94 ~%scrpt%~ #8
+    END
+    
+    // Adding info region (teleporter is not yet usable)
+    LPF fj_are_structure
+      INT_VAR
+      fj_type               = 1      // info trigger
+      fj_box_left           = 207
+      fj_box_top            = 288
+      fj_box_right          = 281
+      fj_box_bottom         = 385
+      fj_cursor_idx         = 22    // question cursor
+      fj_flags              = (1 << 9)  // [Cannot be passed by NPC]
+      fj_info_point_strref  = RESOLVE_STR_REF(@1610)    // The portal is protected by some kind of forcefield which lets you rebound when you come close to it.
+      fj_loc_x              = 242
+      fj_loc_y              = 340
+      fj_vertex_0           = 218 + (370 << 16)
+      fj_vertex_1           = 242 + (385 << 16)
+      fj_vertex_2           = 272 + (370 << 16)
+      fj_vertex_3           = 281 + (340 << 16)
+      fj_vertex_4           = 275 + (310 << 16)
+      fj_vertex_5           = 242 + (288 << 16)
+      fj_vertex_6           = 215 + (310 << 16)
+      fj_vertex_7           = 207 + (340 << 16)
+      STR_VAR
+      fj_structure_type     = region
+      fj_name               = A7Info01
+    END
+    
+    // Adding travel region (teleporter is usable)
+    LPF fj_are_structure
+      INT_VAR
+      fj_type             = 2             // travel trigger
+      fj_box_left         = 207
+      fj_box_top          = 288
+      fj_box_right        = 281
+      fj_box_bottom       = 385
+      fj_cursor_idx       = 34            // area travel cursor
+      fj_flags            = (1 << 2) | (1 << 9) | (1 << 10)   // [Party required], [Cannot be passed by NPC], [Use activation point]
+      fj_loc_x            = 242
+      fj_loc_y            = 340
+      fj_alt_x            = 242
+      fj_alt_y            = 377
+      fj_vertex_0         = 218 + (370 << 16)
+      fj_vertex_1         = 242 + (385 << 16)
+      fj_vertex_2         = 272 + (370 << 16)
+      fj_vertex_3         = 281 + (340 << 16)
+      fj_vertex_4         = 275 + (310 << 16)
+      fj_vertex_5         = 242 + (288 << 16)
+      fj_vertex_6         = 215 + (310 << 16)
+      fj_vertex_7         = 207 + (340 << 16)
+      STR_VAR
+      fj_structure_type   = region
+      fj_name             = A7Tran01
+      fj_destination_area = A77001
+      fj_destination_name = Exit1902
+    END
+    
+    // Adding entrance from A77001 map
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 241
+      fj_loc_y          = 415
+      fj_orientation    = 0
+      STR_VAR
+      fj_structure_type = entrance
+      fj_name           = A7Exit01
+    END
+    
+    // Starting animation of teleporter
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 244
+      fj_loc_y          = 384
+      fj_schedule       = (1 << 24) - 1         // always active
+      fj_bam_seq        = 0
+      fj_flags          = (1 << 1) | (1 << 4) | (1 << 12)  // [Translucent], [Synchronized draw], [Don't remove in combat]
+      fj_loop_chance    = 100
+      STR_VAR
+      fj_structure_type = animation
+      fj_name           = A7dimndr1
+      fj_bam_resref     = A7DIMNDR
+    END
+    
+    // Looped animation of teleporter
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 244
+      fj_loc_y          = 384
+      fj_schedule       = (1 << 24) - 1   // always active
+      fj_bam_seq        = 1
+      fj_flags          = (1 << 1) | (1 << 12)       // [Translucent], [Synchronized draw], [Don't remove in combat]
+      fj_loop_chance    = 100
+      STR_VAR
+      fj_structure_type = animation
+      fj_name           = A7dimndr2
+      fj_bam_resref     = A7DIMNDR
+    END
+    
+    // Ending animation of teleporter
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 244
+      fj_loc_y          = 384
+      fj_schedule       = (1 << 24) - 1         // always active
+      fj_bam_seq        = 2
+      fj_flags          = (1 << 1) | (1 << 4) | (1 << 12)  // [Translucent], [Synchronized draw], [Don't remove in combat]
+      fj_loop_chance    = 100
+      STR_VAR
+      fj_structure_type = animation
+      fj_name           = A7dimndr3
+      fj_bam_resref     = A7DIMNDR
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar1902.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_FAIL @30    // Error: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Adding AR1902.BCS ***
+EXTEND_TOP ~%scrpt%.bcs~ ~DjinniCompanion/scripts/ar1902.baf~

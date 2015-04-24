@@ -1,0 +1,53 @@
+// *** Executed whenever a party member has equipped the demilich skull for more than 24 hours ***
+// TODO: find a way to apply the summoning effect for the helper creature in a non-dispellable way
+
+// If equipped by CHARNAME
+IF
+  InPartySlot(LastSummonerOf(Myself), 0)
+  HasItemEquiped("A7SKULL", LastSummonerOf(Myself))
+THEN RESPONSE #100
+  ClearAllActions()
+  StartCutSceneMode()
+  ApplySpellRES("A7DISPEL", LastSummonerOf(Myself))
+  VerbalConstant(LastSummonerOf(Myself), DYING)
+  DisplayStringHead(LastSummonerOf(Myself), @6862)    // Aaargh!!
+  CreateVisualEffectObject("trgooybb", LastSummonerOf(Myself))
+  SmallWait(5)
+  ActionOverride(LastSummonerOf(Myself), Polymorph(ZOMBIE))
+  SmallWait(30)
+  FadeToColor([45.0], 0)
+  SmallWait(30)
+  StartMovie("DEATHAND")
+  GoToStartScreen()
+  EndCutSceneMode()
+  DestroySelf()
+END
+
+// If equipped by another party member
+IF
+  !InPartySlot(LastSummonerOf(Myself), 0)
+  HasItemEquiped("A7SKULL", LastSummonerOf(Myself))
+THEN RESPONSE #100
+  ClearAllActions()
+  StartCutSceneMode()
+  SmallWait(5)
+  MoveViewObject(LastSummonerOf(Myself), INSTANT)
+  SmallWait(5)
+  ApplySpellRES("A7DISPEL", LastSummonerOf(Myself))
+  VerbalConstant(LastSummonerOf(Myself), DYING)
+  DisplayStringHead(LastSummonerOf(Myself), @6862)    // Aaargh!!
+  DisplayString(LastSummonerOf(Myself), @6863)    // transforms into a zombie...
+  CreateVisualEffectObject("trgooybb", LastSummonerOf(Myself))
+  SmallWait(5)
+  ActionOverride(LastSummonerOf(Myself), Polymorph(ZOMBIE))
+  ActionOverride(LastSummonerOf(Myself), ChangeAIType([ENEMY.UNDEAD.ZOMBIE.ZOMBIE_NORMAL.0.0.NEUTRAL_EVIL]))
+  ActionOverride(LastSummonerOf(Myself), ChangeAIScript("", OVERRIDE))
+  ActionOverride(LastSummonerOf(Myself), ChangeAIScript("", CLASS))
+  ActionOverride(LastSummonerOf(Myself), ChangeAIScript("", RACE))
+  ActionOverride(LastSummonerOf(Myself), ChangeAIScript("", GENERAL))
+  ActionOverride(LastSummonerOf(Myself), ChangeAIScript("A7ZOMBIE", DEFAULT))
+  ActionOverride(LastSummonerOf(Myself), LeaveParty())
+  SmallWait(15)
+  EndCutSceneMode()
+  DestroySelf()
+END

@@ -1,0 +1,63 @@
+// *** Area A77003 (Magma Cavern) ***
+
+// areas
+COPY ~DjinniCompanion/areas/a77003.are~ ~override~
+  READ_LONG 0x5c "region_ofs"
+  READ_LONG 0xc4 "autonote_ofs"
+  SAY (region_ofs + (0xc4 * 1) + 0x64) @6803      // This wooden bridge appears to be very old. How it is able to withstand the tremendous heat of this cavern for such a long time will always be a mystery.
+  SAY (region_ofs + (0xc4 * 2) + 0x64) @6803      // This wooden bridge appears to be very old. How it is able to withstand the tremendous heat of this cavern for such a long time will always be a mystery.
+  SAY (region_ofs + (0xc4 * 3) + 0x64) @6806      // The portal radiates waves of magical heat which even your protection is powerless against it. There is no way to enter it.
+  SAY (autonote_ofs + (0x34 * 0) + 0x04) @6802    // To the upper cave
+  SAY (autonote_ofs + (0x34 * 1) + 0x04) @6807    // To the Elemental Plane of Fire
+
+//COPY_LARGE ~DjinniCompanion/areas/a77003.tis~ ~override~
+COPY ~DjinniCompanion/areas/a77003.wed~   ~override~
+     ~DjinniCompanion/areas/a77003ht.bmp~ ~override~
+     ~DjinniCompanion/areas/a77003lm.bmp~ ~override~
+     ~DjinniCompanion/areas/a77003sr.bmp~ ~override~
+     ~DjinniCompanion/areas/a703gate.bam~ ~override~
+     ~DjinniCompanion/areas/a703gat2.bmp~ ~override~
+     ~DjinniCompanion/areas/a703gate.vvc~ ~override~
+     ~DjinniCompanion/areas/a703gat2.vvc~ ~override~
+     ~DjinniCompanion/areas/a7am03.wav~   ~override~
+     ~DjinniCompanion/areas/a7am03a1.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03a2.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03a3.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03a4.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03a5.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03b1.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03b2.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03b3.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03b4.wav~ ~override~
+     ~DjinniCompanion/areas/a7am03c.wav~  ~override~
+     ~DjinniCompanion/areas/a7comet1.vvc~ ~override~
+     ~DjinniCompanion/areas/a7comet2.vvc~ ~override~
+     ~DjinniCompanion/areas/a703fir1.bam~ ~override~
+     ~DjinniCompanion/areas/a703fir1.vvc~ ~override~
+     ~DjinniCompanion/areas/a703fir2.vvc~ ~override~
+
+
+// scripts
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a77003.baf~
+  ~DjinniCompanion/scripts/a703prtl.baf~
+  ~DjinniCompanion/scripts/a703fes.baf~
+  ~DjinniCompanion/scripts/a7q5fsp1.baf~
+  ~DjinniCompanion/scripts/a7q5fsp2.baf~
+  ~DjinniCompanion/scripts/a7q5fsp3.baf~
+  ~DjinniCompanion/scripts/a7q5fsp4.baf~
+  ~DjinniCompanion/scripts/a7q5fsp5.baf~
+  ~DjinniCompanion/scripts/a7q5fsp6.baf~
+
+
+// dialogs
+<<<<<<<< djinnicompanion/inlined/Player1_Q5.d
+APPEND PLAYER1
+IF ~Global("A7Q5ProtectionWarn", "GLOBAL", 1) AreaCheck("A77003")~ P1Q5.Heat.Warn
+  SAY @6815     // It is already over six hours ago you have applied protection from heat on your party.
+  IF ~~ EXIT
+END
+END
+>>>>>>>>
+COMPILE EVALUATE_BUFFER ~djinnicompanion/inlined/Player1_Q5.d~
+

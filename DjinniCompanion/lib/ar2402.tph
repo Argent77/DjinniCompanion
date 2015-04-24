@@ -1,0 +1,13 @@
+// *** Area AR2402: Passage out of the Underdark ***
+
+// *** Patching Demogorgon Statue sacrifice trigger: exclude Afaaq from the sacrifice ***
+ACTION_IF (FILE_EXISTS_IN_GAME ~udsac.bcs~) BEGIN
+  COPY_EXISTING ~udsac.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE
+        ~\(!IsOverMe(\[PC\])\)~
+        ~\1 !IsOverMe("A7Afaaq")~
+    END
+    BUT_ONLY
+END
+

@@ -1,0 +1,77 @@
+// Cutscene: PC's party and Tathas' party use the Anchor Stone and teleports to House Arabani
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  MoveViewObject("A7Tathas", VERY_FAST)
+  Wait(1)
+  DisplayStringHead("A7Tathas", @3923)    // I will break the enchantment.
+  Wait(2)
+  ActionOverride("A7Tathas", ForceSpellRES("A7Q3SFX1", "A7Tathas")    // Warping Anchor Stone: spellcasting duration 4s
+  Wait(2)
+  CreateVisualEffectObject("A7Q3CT5", "A7Tathas")
+  Wait(4)
+  DisplayStringHead("A7Tathas", @3917)    // Here we go!
+  ActionOverride("A7Tathas", ForceSpellRES("A7Q3SFX2", "A7Tathas"))    // Teleporting spell: spellcasting duration 2s
+  Wait(1)
+  CreateVisualEffectObject("SPDIMNDR", "A7Tathas")
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DHM")    // Handmaiden of Lolth
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DP01")    // Drow Priestess
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DCPT")    // Drow Captain
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DM01")    // Drow Wizard 1
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DM02")    // Drow Wizard 2
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW01")    // Drow Warrior 1
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW02")    // Drow Warrior 2
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW03")    // Drow Warrior 3
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW04")    // Drow Warrior 4
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW05")    // Drow Warrior 5
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW06")    // Drow Warrior 6
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW07")    // Drow Warrior 7
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW08")    // Drow Warrior 8
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW09")    // Drow Warrior 9
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW10")    // Drow Warrior 10
+  CreateVisualEffectObject("SPDIMNDR", "A7Q3DW11")    // Drow Warrior 11
+  CreateVisualEffectObject("SPDIMNDR", Player1)
+  CreateVisualEffectObject("SPDIMNDR", Player2)
+  CreateVisualEffectObject("SPDIMNDR", Player3)
+  CreateVisualEffectObject("SPDIMNDR", Player4)
+  CreateVisualEffectObject("SPDIMNDR", Player5)
+  CreateVisualEffectObject("SPDIMNDR", Player6)
+  CreateVisualEffectObject("SPDIMNDR", "A7Afaaq")
+  SmallWait(20)
+  FadeToColor([30.0], 0)
+  SmallWait(25)
+  ActionOverride("A7Tathas", MoveBetweenAreas("A77007", [1401.797], 8))
+  ActionOverride("A7Q3DHM", MoveBetweenAreas("A77007", [1458.781], 6))
+  ActionOverride("A7Q3DP01", MoveBetweenAreas("A77007", [642.976], 9))
+  ActionOverride("A7Q3DCPT", MoveBetweenAreas("A77007", [1258.769], 8))
+  ActionOverride("A7Q3DM01", MoveBetweenAreas("A77007", [1262.665], 13))
+  ActionOverride("A7Q3DM02", MoveBetweenAreas("A77007", [714.1051], 8))
+  ActionOverride("A7Q3DW01", MoveBetweenAreas("A77007", [572.834], 4))
+  ActionOverride("A7Q3DW02", MoveBetweenAreas("A77007", [1049.1019], 5))
+  ActionOverride("A7Q3DW03", MoveBetweenAreas("A77007", [1564.638], 2))
+  ActionOverride("A7Q3DW04", MoveBetweenAreas("A77007", [1164.773], 8))
+  ActionOverride("A7Q3DW05", MoveBetweenAreas("A77007", [661.881], 8))
+  ActionOverride("A7Q3DW06", MoveBetweenAreas("A77007", [784.944], 6))
+  ActionOverride("A7Q3DW07", MoveBetweenAreas("A77007", [576.716], 8))
+  ActionOverride("A7Q3DW08", MoveBetweenAreas("A77007", [453.880], 4))
+  ActionOverride("A7Q3DW09", MoveBetweenAreas("A77007", [635.814], 11))
+  ActionOverride("A7Q3DW10", MoveBetweenAreas("A77007", [1340.548], 0))
+  ActionOverride("A7Q3DW11", MoveBetweenAreas("A77007", [1326.657], 0))
+  SmallWait(1)
+  LeaveAreaLUAPanic("A77007", "", [1388.912], 8)
+  LeaveAreaLUA("A77007", "", [1388.912], 8)
+  ActionOverride(Player3, LeaveAreaLUA("A77007", "", [1448.913], 7))
+  ActionOverride(Player2, LeaveAreaLUA("A77007", "", [1331.904], 8))
+  ActionOverride(Player4, LeaveAreaLUA("A77007", "", [1279.889], 9))
+  ActionOverride(Player5, LeaveAreaLUA("A77007", "", [1501.906], 7))
+  ActionOverride(Player6, LeaveAreaLUA("A77007", "", [1229.870], 10))
+  ActionOverride("A7Afaaq", LeaveAreaLUA("A77007", "", [1351.955], 8))
+  MoveViewPoint([1401.797], INSTANT)
+  MultiPlayerSync()
+  FadeFromColor([30.0], 0)
+  SmallWait(30)
+  ActionOverride("A7ARAB01", DestroyItem("A7MISC4"))    // not needed anymore
+  ActionOverride("A7Tathas", StartDialogueNoSet("A7ARAB01"))
+END

@@ -1,0 +1,14 @@
+// *** Script for containers in House Arabani ***
+
+IF
+  Opened([ANYONE])
+  OR(3)
+    !Dead("A7ARAB01")
+    !Dead("A7ARAB02")
+    !Dead("A7ARAB03")
+  Global("A7ArabaniAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniAttacked", "GLOBAL", 1)
+  DisplayString(LastTrigger, @3924)    // You have triggered an alarm.
+  Continue()
+END

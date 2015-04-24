@@ -1,0 +1,10 @@
+// *** Area A77007 (Drow House Arabani) ***
+
+COPY ~DjinniCompanion/areas/a77007.are~   ~override~
+COPY_EXISTING ~ar2204ht.bmp~ ~override/a77007ht.bmp~
+              ~ar2204lm.bmp~ ~override/a77007lm.bmp~
+              ~ar2204sr.bmp~ ~override/a77007sr.bmp~
+              ~ar2204.mos~   ~override/a77007.mos~
+
+// COMPILE EVALUATE_BUFFER
+  // ~DjinniCompanion/scripts/a77007.baf~

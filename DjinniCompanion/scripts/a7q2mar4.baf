@@ -1,0 +1,60 @@
+// *** Trigger for the south-eastern marilith statue in map A77004 (Jungle of Chult) ***
+
+// When not yet searching for wardstones
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 20)
+  OR(2)
+    Global("PassWards", "A77004", 0)
+    Global("FField1Passed", "A77004", 1)
+THEN RESPONSE #100
+  DisplayString(Myself, @2300)    // The statue looks as ancient as the forest itself, but you can see no signs of negligence whatsoever.
+END
+
+// When you click the statue too early
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 20)
+  Global("FField1Passed", "A77004", 0)
+  GlobalGT("PassWards", "A77004", 0)
+  OR(3)
+    Global("MarilithStatue1", "A77004", 0)
+    Global("MarilithStatue2", "A77004", 0)
+    Global("MarilithStatue3", "A77004", 0)
+THEN RESPONSE #100
+  DisplayString(Myself, @2303)    // When you approach the statue, you hear a faint humming but nothing more is happening.
+END
+
+// When you haven't activated the statue yet
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 20)
+  Global("FField1Passed", "A77004", 0)
+  GlobalGT("PassWards", "A77004", 0)
+  Global("MarilithStatue1", "A77004", 1)
+  Global("MarilithStatue2", "A77004", 1)
+  Global("MarilithStatue3", "A77004", 1)
+  Global("MarilithStatue4", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("MarilithStatue4", "A77004", 1)
+  DisplayString(Myself, @2308)    // When you approach the statue, it lifts its head abruptly. It then starts to turn slowly until it faces the western direction.
+END
+
+// When you have already activated the statue
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 20)
+  Global("FField1Passed", "A77004", 0)
+  GlobalGT("PassWards", "A77004", 0)
+  GlobalGT("MarilithStatue4", "A77004", 0)
+THEN RESPONSE #100
+  DisplayString(Myself, @2309)    // The statue looks lifeless, but its head still faces the western direction.
+END
+
+// Message when you are too far away
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger, 20)
+THEN RESPONSE #100
+  DisplayString(Myself, 14702)    // You are too far away to use that.
+END

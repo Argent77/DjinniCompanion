@@ -1,0 +1,25 @@
+// *** Rakshasa battle script (only spell-related scripts) ***
+
+IF
+  OnCreation()
+  GlobalGT("RakCloud", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("RakCloud", "GLOBAL", 0)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  DifficultyGT(EASY)
+  Global("RakCloud", "GLOBAL", 0)
+THEN
+  RESPONSE #30
+    SetGlobal("RakCloud", "GLOBAL", 1)
+    ForceSpell(NearestEnemyOf(Myself), WIZARD_CLOUDKILL)
+  RESPONSE #30
+    SetGlobal("RakCloud", "GLOBAL", 1)
+    ForceSpell(NearestEnemyOf(Myself), WIZARD_DEATH_FOG)
+  RESPONSE #40
+    SetGlobal("RakCloud", "GLOBAL", 1)
+    AttackReevaluate(NearestEnemyOf(Myself), 10)
+END
+

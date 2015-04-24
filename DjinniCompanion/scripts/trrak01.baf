@@ -1,0 +1,13 @@
+// *** Script portion for the rakshasa Ihtafeer ***
+
+// Added on top of the script
+IF
+  Global("A7Attacked","AR1902",0)
+  OR(2)
+    Allegiance(Myself,ENEMY)
+    Global("attacked","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("A7Attacked","AR1902",1)
+    Continue()
+END

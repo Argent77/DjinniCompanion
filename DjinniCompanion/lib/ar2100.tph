@@ -1,0 +1,100 @@
+// *** Area AR2100: Adding an entrance and travel point to the Underdark map ***
+
+COPY_EXISTING ~ar2100.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Entrance from A77005
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 1628
+      fj_loc_y          = 3734
+      fj_orientation    = 6    // northwest
+      STR_VAR
+      fj_structure_type = entrance
+      fj_name           = A7Exit05
+    END
+
+    // Info trigger for Afaaq to sense his lost essence
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0         // proximity trigger
+      fj_box_left       = 930
+      fj_box_top        = 3000
+      fj_box_right      = 1888
+      fj_box_bottom     = 3835
+      fj_cursor_idx     = 0         // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1         // is trapped
+      fj_vertex_0       = 1414 + (3000 << 16)
+      fj_vertex_1       = 1525 + (3133 << 16)
+      fj_vertex_2       = 1375 + (3250 << 16)
+      fj_vertex_3       = 1575 + (3430 << 16)
+      fj_vertex_4       = 1888 + (3835 << 16)
+      fj_vertex_5       = 1616 + (3835 << 16)
+      fj_vertex_6       = 1400 + (3680 << 16)
+      fj_vertex_7       = 1015 + (3540 << 16)
+      fj_vertex_8       = 930 + (3250 << 16)
+      fj_vertex_9       = 1050 + (3070 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q3AfaaqEssence
+      fj_reg_script     = A7Q3AFQ1
+    END
+
+    // Info Trigger to A77005
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 1         // info trigger
+      fj_box_left       = 1600
+      fj_box_top        = 3770
+      fj_box_right      = 2155
+      fj_box_bottom     = 3836
+      fj_cursor_idx     = 22        // question cursor
+      fj_flags          = (1 << 8)  // [Deactivated]
+      fj_vertex_0       = 1600 + (3836 << 16)
+      fj_vertex_1       = 2155 + (3836 << 16)
+      fj_vertex_2       = 2105 + (3795 << 16)
+      fj_vertex_3       = 1950 + (3770 << 16)
+      fj_vertex_4       = 1920 + (3815 << 16)
+      fj_vertex_5       = 1820 + (3809 << 16)
+      fj_vertex_6       = 1800 + (3789 << 16)
+      fj_vertex_7       = 1709 + (3801 << 16)
+      fj_vertex_8       = 1675 + (3825 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Info05
+      fj_reg_script     = A7Q3Tran
+    END
+
+    // Travel Trigger to A77005
+    LPF fj_are_structure
+      INT_VAR
+      fj_type             = 2         // travel trigger
+      fj_box_left         = 1600
+      fj_box_top          = 3770
+      fj_box_right        = 2155
+      fj_box_bottom       = 3836
+      fj_cursor_idx       = 34        // travel cursor
+      fj_flags            = (1 << 2) | (1 << 8) | (1 << 10)   // [Party required, Deactivated, Use activation point]
+      fj_alt_x            = 1703
+      fj_alt_y            = 3810
+      fj_vertex_0         = 1600 + (3836 << 16)
+      fj_vertex_1         = 2155 + (3836 << 16)
+      fj_vertex_2         = 2105 + (3795 << 16)
+      fj_vertex_3         = 1950 + (3770 << 16)
+      fj_vertex_4         = 1920 + (3815 << 16)
+      fj_vertex_5         = 1820 + (3809 << 16)
+      fj_vertex_6         = 1800 + (3789 << 16)
+      fj_vertex_7         = 1709 + (3801 << 16)
+      fj_vertex_8         = 1675 + (3825 << 16)
+      STR_VAR
+      fj_structure_type   = region
+      fj_name             = A7Tran05
+      fj_destination_area = A77005
+      fj_destination_name = FR2100
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar2100.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+

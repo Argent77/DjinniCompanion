@@ -1,0 +1,168 @@
+// modified WTASIGHT.BCS for Quest 3 (Tathas group)
+
+// make sure no Melarn member survives after Arabani's victory
+IF
+  AreaCheck("A77007")
+  Global("A7Quest3", "GLOBAL", 7)
+  !Global("A7TathasDefeated", "MYAREA", 0)
+THEN RESPONSE #100
+  Kill(Myself)
+END
+
+// activate battle mode
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  !ActuallyInCombat()
+  See([0.0.0.0.%specific_arabani%])
+THEN RESPONSE #100
+  StartCombatCounter()
+  Continue()
+END
+
+IF
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("DrankPotionTimer", "LOCALS")
+  HasItem("POTN14", Myself)
+  Global("speedpotion", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("speedpotion", "LOCALS", 1)
+  SetGlobalTimer("DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN14", Myself)
+  Continue()
+END
+
+IF
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("DrankPotionTimer", "LOCALS")
+  HasItem("POTN11", Myself)
+  Global("invulpotion", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("invulpotion", "LOCALS", 1)
+  SetGlobalTimer("DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN11", Myself)
+  Continue()
+END
+
+IF
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  HPPercentLT(Myself, 50)
+  !GlobalTimerNotExpired("DrankPotionTimer", "LOCALS")
+  HasItem("POTN52", Myself)
+THEN RESPONSE #100
+  SetGlobalTimer("DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN52", Myself)
+  Continue()
+END
+
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  OR(2)
+    AttackedBy([0.0.0.0.%specific_arabani%], DEFAULT)
+    HitBy([0.0.0.0.%specific_arabani%], CRUSHING)
+THEN RESPONSE #100
+  Shout(%shout_helpme_tathas%)
+  Continue()
+END
+
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  See([0.0.0.0.%specific_arabani%])
+THEN RESPONSE #100
+  EquipMostDamagingMelee()
+  AttackReevaluate(LastSeenBy(Myself), 30)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  EquipMostDamagingMelee()
+  AttackReevaluate(NearestEnemyOf(Myself), 30)
+END
+
+IF
+  OR(2)
+    AttackedBy([0.0.0.0.%specific_tathas%], DEFAULT)
+    AttackedBy([GOODCUTOFF], DEFAULT)
+  See(LastAttackerOf(Myself))
+THEN RESPONSE #100
+  EquipMostDamagingMelee()
+  AttackReevaluate(LastSeenBy(Myself), 30)
+END
+
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  Heard([0.0.0.0.%specific_tathas%], %shout_helpme_tathas%)
+  See([0.0.0.0.%specific_arabani%])
+THEN RESPONSE #100
+  Shout(%shout_help_tathas%)
+  AttackReevaluate(LastAttackerOf(LastHeardBy(Myself)), 30)
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  Heard([0.0.0.0.%specific_tathas%], %shout_helpme_tathas%)
+  !See([0.0.0.0.%specific_arabani%])
+THEN RESPONSE #100
+  AttackReevaluate(LastAttackerOf(LastHeardBy(Myself)), 30)
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  Heard([0.0.0.0.%specific_tathas%], %shout_help_tathas%)
+  !See([0.0.0.0.%specific_arabani%])
+THEN RESPONSE #100
+  MoveToObject(LastHeardBy(Myself))
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  !See([0.0.0.0.%specific_arabani%])
+  See([0.0.0.0.%specific_tathas%])
+  !Range(LastSeenBy(Myself), 15)
+THEN RESPONSE #100
+  MoveToObject(LastSeenBy(Myself))
+END
+
+// roaming around
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  !See([0.0.0.0.%specific_arabani%])
+  RandomNumLT(100, 20)
+THEN RESPONSE #100
+  MoveToPoint([620.880])
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  !See([0.0.0.0.%specific_arabani%])
+  RandomNumLT(100, 55)
+THEN RESPONSE #100
+  MoveToPoint([950.1010])
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  !See([0.0.0.0.%specific_arabani%])
+  RandomNumLT(100, 90)
+THEN RESPONSE #100
+  MoveToPoint([1340.840])
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  !See([0.0.0.0.%specific_arabani%])
+THEN RESPONSE #100
+  MoveToPoint([1200.670])
+END

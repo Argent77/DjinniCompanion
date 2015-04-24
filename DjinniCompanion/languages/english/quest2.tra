@@ -1,0 +1,266 @@
+// -*- coding: cp1252 -*- 
+// *** Strings related to Quest 2: "Vengeance" (index 2000...2999)
+
+// *** Dialog: Serpent Statue ***
+@2001 = ~The eyes of the serpent statue begin to glow, and <GABBER> senses an alien presence in <HISHER> head. It speaks directly into <HISHER> mind with a powerful voice.~
+@2002 = ~YOU ARE NOT WORTHY OF MY PRESENCE. BEGONE!~
+@2003 = ~It retreats as quickly as it came and leaves a slightly shaken <GABBER>.~
+
+@2005 = ~The eyes of the serpent statue begin to glow, and you sense an alien presence in your head. You feel as if your mind is being probed... delicately at first, then with more insistence.~
+@2006 = ~Images of your childhood in Candlekeep as well as more recent memories flit before your eyes, occasionally mingled with a feeling of distant amusement. The images cease as quickly as they came. You begin to hear a voice resounding throughout your head.~
+@2007 = ~The eyes of the serpent statue begin to glow as your mind is probed by the presence once again.~
+@2008 = ~You stand before me again? Have you changed your mind? Are you now ready to answer my riddles?~
+@2009 = ~Yes, I am ready.~
+@2010 = ~No, I will find another way into the temple.~
+@2011 = ~You are not one of my followers. Your kind doesn't belong here, but I sense you are more than you appear.~
+@2012 = ~Yes, I feel the divine power of your soul.~
+@2013 = ~I know your intentions, <GABBER>. You want to reclaim your prize from my hunters.~
+@2014 = ~I don't know what you are talking about.~
+@2015 = ~You are right. I intend to take back what they have stolen from me.~
+@2016 = ~You cannot fool me. I know your thoughts.~
+@2017 = ~You are a brave creature following my hunters into unknown territory.~
+@2018 = ~I respect strength and cunning. My followers have disappointed me greatly, so I will help you.~
+@2019 = ~Prove your worth to me, and I will bring you one step closer to your goal.~
+@2020 = ~How can I do that?~
+@2021 = ~I don't want to play your games.~
+@2022 = ~You have proven your cunning by stealing from my hunters.~
+@2023 = ~You have proven your strength by defeating my hunters.~
+@2024 = ~However, you need to be strong not only in body but also in mind.~
+@2025 = ~Answer my riddles correctly, and I will grant you my help.~
+@2026 = ~Very well, I accept your challenge.~
+@2027 = ~Here is my first riddle. Listen carefully.~
+@2028 = ~You are correct. Now pay attention to my second riddle.~
+@2029 = ~I am impressed. Here comes my last riddle.~
+@2030 = ~I don't want to play your games anymore.~
+@2031 = ~You have satisfied my curiosity and solved all of my riddles correctly. In return I will help you.~
+@2032 = ~Take my wardstone, one of four. The remaining three are near, but take care! My enchantments will not yield without a fight.~
+@2033 = ~That isn't the correct answer!~
+@2034 = ~The strong are rewarded, but the weak will be...~
+@2035 = ~PUNISHED!~
+@2036 = ~So you want to rely only on yourself. Do you think your divine heritage is powerful enough to overcome my wards?~
+@2037 = ~So be it. Do what you need to do, but know that you have to surpass my power if you wish to advance.~
+
+
+// Riddles and answers
+// TRANSLATORS: The first answer is always the correct one
+// TRANSLATORS: The last two wrong answers are checked against INT and WIS: should be the easiest ones)
+@2100 = ~My step is slow, and cold my breath.
+I give the ground a grinding death.
+My marching makes an end to me,
+slain by sun or drowned in sea.~
+@2101 = ~A glacier?~
+@2102 = ~The undead?~
+@2103 = ~An avalanche!~
+@2104 = ~The night??~
+@2105 = ~A frost giant?~
+@2106 = ~A shadow?!~
+@2107 = ~A lizard.~
+
+@2110 = ~I am very strange, yet very common.
+I grow down, instead of up.
+Without me, so many things would not exist.
+What am I?~
+@2111 = ~A root.~
+@2112 = ~A mole!~
+@2113 = ~A dwarf?~
+@2114 = ~A stalactite?!~
+@2115 = ~A vine.~
+@2116 = ~A stalacmite!~
+@2117 = ~An iceberg??~
+
+@2120 = ~This garden is a lonely place
+where many came and yet remain.
+The plants grow strong on fertile ground,
+watered by legacies of pain.
+And should I plow, my plow would break
+on cast-off husks of iron grain.
+Now buried where they fell like wheat.
+What am I? Speak! Or face the bane.~
+@2121 = ~The battlefield?!~
+@2122 = ~A hunting ground?~
+@2123 = ~The cemetery!~
+@2124 = ~A swamp!!~
+@2125 = ~A forest glade.~
+@2126 = ~A garden!~
+@2127 = ~A stony field?~
+
+// TRANSLATORS: This riddle only works in english, replace it with whatever you like (number of answers must not change!)
+@2130 = ~My first is a number,
+my second another.
+And each, I assure you
+will rhyme with the other.
+My first I can say
+is one-fifth of my second.
+And when both are together,
+a long period reckoned.~
+@2131 = ~Fourscore?!~
+@2132 = ~A century.~
+@2133 = ~A dozen?~
+@2134 = ~Twenty-four!!~
+@2135 = ~A score??~
+@2136 = ~Six?!~
+@2137 = ~A millennium.~
+
+@2140 = ~A prison deep within the ground,
+walls of stone curve all around.
+A prisoner gets tightly bound,
+then he's hung and then he's drowned.
+The hanging rope is then rewound, 
+perhaps the prison then is crowned.
+But...if in this prison, magic's stuck,
+losing money might bring good luck.~
+@2141 = ~A well!~
+@2142 = ~A dungeon?~
+@2143 = ~A drow settlement?!~
+@2144 = ~A cavern.~
+@2145 = ~A marriage!!~
+@2146 = ~A money lender?~
+@2147 = ~A dwarven colony!!~
+
+
+// Dialog lines
+@2200 = ~Intruders have entered our territory? We will stop you here and now. Attack!~
+@2201 = ~Are you the one who took the djinni from our champion? Soon you will be powerless before us as he is sacrificed to Ravanna!~
+@2202 = ~You've made it far, <PRO_RACE>. But this will be the end of you. By sacrificing both you and the djinni, I will become the favorite in Ravanna's eyes.~
+@2203 = ~Attack them, my disciples. They must not survive!~
+@2204 = ~It appears we have been transported far away from Amn. The climate and vegetation doesn't match anything found on the Sword Coast.~
+@2205 = ~I haven't visited places that far to the south yet, but I believe this forest belongs to the Jungles of Chult.~
+@2206 = ~The sorcerous magics of the rakshasi have brought us far to the south.~
+@2207 = ~I recognize some of the plants from my studies.  The sounds of the birds remind me of species I have observed during my visit to a druid grove to the south.~
+@2208 = ~The specimen to your far left is a coyol palm, easily recognizable by the sharp spines jutting out from the trunk. It--~
+@2209 = ~Thank you Cernd, but I'm currently not in the mood to discuss the wonders of nature. Don't forget we are here to rescue Afaaq.~
+@2210 = ~Don't you have anything better to do than lecturing me about trees and bushes? We are here to get back the djinni lamp from the rakshasas.~
+@2211 = ~It is never a waste of time to learn more about nature's beauty. But you are right, all in good time. We should move on carefully and remind the rakshasi about the value of balance.~
+@2212 = ~You may be right, Jaheira. I recognize some of the plants from my studies, and the sounds of the birds remind me of species I have observed during my visit to a druid grove to the south.~
+// reserved: @2213 @2214
+
+
+// Marilith statue strings
+@2300 = ~The statue looks as ancient as the forest itself, but you can see no signs of negligence.~
+@2301 = ~When you approach the statue, it opens its eyes and slowly turns its head until it points to the south. You wait for something more to happen, but the statue remains lifeless.~
+@2302 = ~The statue remains lifeless, but its head still faces the southerly direction.~
+@2303 = ~When you approach the statue, you hear a faint humming. Nothing more happens.~
+@2304 = ~When you approach the statue, it comes to life and opens its fiery eyes. Its gaze meets yours, and you feel a shiver run down your spine. It then moves its head slowly to the east and stops abruptly. You wait for something more to happen, but the statue does not move.~
+@2305 = ~The statue remains lifeless while its head continues to face east.~
+@2306 = ~As you approach the statue, it slowly starts to move its head. You wait patiently until it stops moving. You guess that the next statue can be found in the southerly direction again.~
+@2307 = ~The statue remains lifeless while its head continues to face south.~
+@2308 = ~When you approach the statue, it lifts its head abruptly. It then starts to turn slowly until it faces the westerly direction.~
+@2309 = ~The statue remains lifeless, but its head still faces the westerly direction.~
+@2310 = ~As you approach the statue, it slowly lift its head and opens its eyes. Its head turns to you and you feel as if its gaze burns into your soul. Your vision begins to spin and you lose track of time. When you come to yourself again, the statue looks as lifeless as before, but you discover a wardstone in your backpack.~
+@2311 = ~The statue looks lifeless once again, but you have the feeling that its eyes still follow your movements.~
+
+
+// Cutscene strings
+@2400 = ~You are a slippery one, but we have finally tracked you down.~
+@2401 = ~Did you really think you could get away with our precious lamp so easily?~
+@2402 = ~I will take that from you...~
+@2403 = ~Attack, my brothers. Fight for the glory of Ravanna!~
+@2404 = ~I will deliver our prize to the master.~
+@2405 = ~For the glory of Ravanna!~
+@2406 = ~For Ravanna!~
+@2407 = ~The ongoing battle makes it impossible for you to concentrate on the orb's powers.~
+@2408 = ~The Jade Orb begins to glow as you are wrapped into a gleaming light...~
+@2409 = ~The Jade Orb flickers shortly and disintegrates into a cloud of dust. It looks like the stone's magic has already been used up. You have lost the djinni forever.~
+@2410 = ~The orb does nothing.~
+
+
+// journal entries
+@2800 = ~Vengeance
+
+A group of rakshasa has ambushed me, and their leader magically snatched the djinni lamp away. Before I could react, he teleported off to somewhere and left his minions behind to take care of me.
+I should make haste and follow them before the djinni is out of my reach forever.~
+
+@2801 = ~Vengeance
+
+I have used the Jade Orb I found on the body of a rakshasa. It teleported me into an unknown jungle. The climate is much different than Amn, so I could be anywhere.~
+
+@2802 = ~Vengeance
+
+I have discovered an ancient temple in the southern part of the jungle. When I tried to enter it, I was held back by a force field. There has to be a way to deactivate it.~
+
+@2803 = ~Vengeance
+
+I have come across a wardstone which has an air of magic around it. I don't know yet what purpose it serves, but I should hold on to it for a while.~
+
+@2804 = ~Vengeance
+
+I have come across a wardstone which has an air of magic around it. Perhaps it has something to do with the forcefield at the southern temple complex.~
+
+@2805 = ~Vengeance
+
+I have encountered a statue of serpent design. It communicated with me telepathically and challenged me to a duel of wits. After passing its tests, it presented me with a wardstone somehow linked to the forcefield blocking my way into the southern temple. The statue also mentioned that I will need four wardstones. Breaking the wards will trigger some kinds of traps.~
+
+@2806 = ~Vengeance
+
+I have encountered a statue of serpent design. It communicated with me telepathically and challenged me to a duel of wits. When I declined her challenge, it told me that I would need "godly powers" to overcome the wards, whatever that means.~
+
+@2807 = ~Vengeance
+
+After successfully disabling the barriers around the temple, a powerful rakshasa high priest was waiting for me. The battle was difficult, but I was victorious in the end. With the death of the high priest, the protective field around the altar disappeared, and I am able to access its content.~
+
+@2810 = ~Vengeance
+
+After my victory over the rakshasa high priest, I was able to use the teleporter in the jungle region to return to Amn. I hope I will not have to deal with the rakshasa for a long time.~
+
+
+// misc. strings for map A77004
+@2900 = ~The serpent head looks almost alive. You feel that some...thing is watching you.~
+@2901 = ~The serpent head remains silent.~
+@2902 = ~Magical Portal~
+@2903 = ~Temple~
+@2904 = ~Yuan-Ti Wardstone 1~
+@2905 = ~This stone is unnaturally cool to the touch. It bears an etching which you don't recognize.~
+@2907 = ~Yuan-Ti Wardstone 2~
+@2908 = ~Although this stone looks roughly cut, it bears intricate etchings which you don't recognize.~
+@2910 = ~Yuan-Ti Wardstone 3~
+@2911 = ~This unexpectedly heavy stone has been made from a material you don't recognize. Although the etchings on it are barely visible, they almost burn into your mind.~
+@2913 = ~Yuan-Ti Wardstone 4~
+@2914 = ~At first glance, this stone looks like any other, but you can see small markings which emit a faint glow when you cover the light.~
+@2916 = ~Serpent Statue~
+@2917 = ~Yuan-Ti Key~
+@2918 = ~This key was found on the body of a yuan-ti mage.~
+@2919 = ~Yuan-Ti Champion~
+@2920 = ~Ak'chazar High Priest~
+@2921 = ~The entrance to the temple is shielded by an impenetrable forcefield.~
+@2922 = ~This structure appears to be the living quarters for the inhabitants of this jungle. You see nothing of interest here.~
+@2923 = ~This ancient stone altar appears to be hundreds of years old. It must have been used recently, even though you don't see any offerings upon the altar.~
+@2924 = ~An impenetrable barrier blocks your path. You must find a way to deactivate it first.~
+@2925 = ~You are too far away to examine it closely.~
+@2926 = ~A second barrier blocks your way. You must find a way to deactivate it first.~
+@2927 = ~The portal doesn't appear to work. You have to find a way to activate it first.~
+@2928 = ~When you place the right wardstone into the slot, it begins to emit a purple glow. You hear a noise behind you...~
+@2930 = ~Attack them!~
+@2931 = ~As the last creature falls to the ground, you hear a high-pitched sound and register a slight flicker in the air. The barrier is gone.~
+@2932 = ~You hear a high-pitched sound and register a slight flicker in the air. The outer barrier is gone.~
+@2933 = ~When you place the last wardstone into the slot, you register a slight flicker in the air. The disappearing barrier slowly reveals the true scenery before you. You are not alone in this place.~
+@2934 = ~You register a slight flicker in the air and the disappearing inner barrier slowly reveals the true scenery before you. You are not alone in this place.~
+@2935 = ~With the defeat of the Ak'chazar High Priest, the protective field around the altar vanishes.~
+@2936 = ~Jade Orb~
+@2937 = ~The orb which you found on the body of a rakshasa is cool to the touch and looks almost liquid under normal sunlight. When you hold it in your hands, it emits a faint pulsating glow, and you can almost feel the magic inside. It is a mystery how such a savage species could fashion such delicate artifacts.~
+@2938 = ~Wizard Hat~
+@2939 = ~Pointy Hat~
+@2940 = ~The hat emits a blue glow.  It is surprisingly light and appears as though it was fashioned for a specific mage.
+
+Only usable by:
+ Mage (single, dual, & multi-class)
+ Bard
+ Chaotic characters~
+
+@2941 = ~Centuries ago, the mad wizard Harash Matar commissioned a local gnomish enchanter to find a way to utilize his powers to the fullest. The gnome knew of the wizard's mental state and fashioned a headpiece which transforms the chaotic thoughts of its wearer into powerful spells.
+
+The hat turned out to be more effective than he imagined. Soon after the gnome delivered his masterpiece, the mad wizard accidentally summoned a horde of demons to his hometown.  They ravaged everything within their reach and killed all townsfolk. Only this headpiece survived the slaughter.
+
+The hat taps into the chaotic forces of the mind, enabling the wearer to cast spells which are usually beyond his or her abilities. Because of its special nature, characters not following the chaotic path will find it nearly impossible to use it.
+
+Equipped Abilities:
+Effect: Chaos Shield
+Shields the wearer somewhat from the dangerous side effects when casting a wild magic spell.
+
+Special Abilities (3x/day):
+Effect: Nahal's Reckless Dweomer
+Enables the wearer to cast any spell from the spellbook without level restrictions. Because it relies on the chaotic energies of the mind, more often than not the result will be disastrous or at the very least not what the caster is expecting.
+
+Only usable by:
+ Mage (single, dual, & multi-class)
+ Bard
+ Chaotic characters~

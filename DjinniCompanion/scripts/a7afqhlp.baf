@@ -1,0 +1,175 @@
+// *** Helper creature ("A7AFQHLP") to trigger scripts related to Afaaq ***
+
+// use the following in a script or dialog file:
+// CreateCreature("A7AFQHLP", [-1.-1], 0)
+// use opcode 177 (Use EFF File: "A7AFQHLP") in a spell/item effect
+
+// First-time creation of the djinni
+IF
+  Global("A7AfaaqCreated", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqCreated", "GLOBAL", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", 360)   // Setting initial time interval for the first CHARNAME banter
+  DisplayStringHead(LastSummonerOf(Myself), @60080)   // You open the stopper of the lamp and wait for something to happen...
+  CreateCreature("A7Afaaq", [0.0], 0)
+  ActionOverride("A7Afaaq", MakeGlobal())
+  ActionOverride("A7Afaaq", DestroySelf())
+  SetInterrupt(FALSE)
+  Wait(1)
+  SetInterrupt(TRUE)
+END
+
+// The lamp doesn't work in certain areas or situations
+IF
+  OR(6)
+    AreaCheck("A77006")    // Djinni Lamp
+    AreaCheck("AR0012")    // Dream Candlekeep #1
+    AreaCheck("AR0028")    // Dream Candlekeep #2
+    AreaCheck("AR3004")    // WK Dead Magic Zone
+    AreaCheck("AR3008")    // WK Dead Magic Zone
+    Allegiance("A7Afaaq", ENEMY)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
+  SetGlobal("A7AfaaqUnsummonOverride", "GLOBAL", 0)
+  DestroySelf()
+END
+
+// Player1 switches places with Afaaq
+IF
+  !StateCheck("A7Afaaq", CD_STATE_NOTVALID)
+  InMyArea("A7Afaaq")
+  Global("SwitchPlaces", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("SwitchPlaces", "LOCALS", 0)
+  ClearActions(Player1)
+  ClearActions("A7Afaaq")
+  StartCutSceneMode()
+  CreateVisualEffectObject("ICRMPARI", Player1)
+  CreateVisualEffectObject("ICRMPARI", "A7Afaaq")
+  SmallWait(10)
+  FadeToColor([10.0], 0)
+  SmallWait(10)
+  MoveGlobalObject(Player1, "A7Afaaq")
+  MoveGlobalObject("A7Afaaq", Myself)
+  MoveViewObject(Player1, INSTANT)
+  FadeFromColor([10.0], 0)
+  SmallWait(5)
+  EndCutSceneMode()
+  DestroySelf()
+END
+
+// Display message "You have already summoned the djinni." when Afaaq is NOT in the current area
+IF
+  !InMyArea("A7Afaaq")
+  Global("A7AfaaqRequested", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
+  DisplayStringNoName(Myself, @60011)    // You have already summoned the djinni.
+  DestroySelf()
+END
+
+// Display message "You have already summoned the djinni." when Afaaq is in the current area
+IF
+  InMyArea("A7Afaaq")
+  Global("A7AfaaqRequested", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
+  MoveViewObject("A7Afaaq", INSTANT)
+  DisplayStringNoName(Myself, @60011)    // You have already summoned the djinni.
+  DestroySelf()
+END
+
+// Display a message when someone other than <CHARNAME> summons the djinni
+IF
+  !HasItem("A7DJLMP", Player1) // Afaaq's djinni lamp
+  !HasItem("A7DJLMPA", Player1) // Afaaq's djinni lamp
+  Global("A7AfaaqRequested", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7AfaaqMet", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
+  DisplayStringNoName(Player1, @60012)    // Only <CHARNAME> can call forth the djinni.
+  DestroySelf()
+END
+
+// Display a message when you attempt to summon the djinni before he is fully recovered
+IF
+  Global("A7AfaaqRequested", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7AfaaqCreated", "GLOBAL", 1)
+  GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")
+  Global("A7AfaaqSummonOverride", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
+  DisplayStringNoName(Player1, @60013)    // The djinni attempts to reform his body, but is too weak. He still needs some time to recover from his mortal wounds.
+  DestroySelf()
+END
+
+// Initiate djinni summoning
+IF
+  Global("A7AfaaqRequested", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7AfaaqCreated", "GLOBAL", 1)
+  OR(2)
+    !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")
+    Global("A7AfaaqSummonOverride", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
+  SetGlobal("A7AfaaqSummonOverride", "GLOBAL", 0)
+  MoveGlobalObject("A7Afaaq", LastSummonerOf(Myself))
+  Deactivate("A7Afaaq")
+  ActionOverride("A7Afaaq", SetGlobal("summoning", "LOCALS", 1))
+  DestroySelf()
+END
+
+// Force the djinni into the lamp, when in different area
+IF
+  !InActiveArea("A7Afaaq")
+  Global("A7AfaaqUnsummonOverride", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqUnsummonOverride", "GLOBAL", 0)
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 0) 
+  SetGlobalTimer("A7AfaaqHealTimer", "GLOBAL", ONE_TURN)
+  SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
+  Deactivate("A7Afaaq")
+  MoveGlobalObject("A7Afaaq", Player1)
+  ActionOverride("A7Afaaq", DestroySelf())
+  DestroySelf()
+END
+
+// Force the djinni into the lamp, when in same area (and not in gaseous form)
+IF
+  InActiveArea("A7Afaaq")
+  Global("A7AfaaqUnsummonOverride", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqUnsummonOverride", "GLOBAL", 0)
+  ApplySpellRES("A7DISPEL", "A7Afaaq")      // in case the djinni is incapacitated
+  ActionOverride("A7Afaaq", SetGlobal("unsummoning", "LOCALS", 1))
+  DestroySelf()
+END
+
+// Try to force the djinni into the lamp when he is in gaseous form
+IF
+  Global("A7AfaaqUnsummonOverride", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqUnsummonOverride", "GLOBAL", 0)
+  DisplayStringNoName(Player1, @60035)    // The djinni does not respond.
+  DestroySelf()
+END
+
+// If none of the above actions are triggered
+IF
+  True()
+THEN RESPONSE #100
+  // resetting (wrongly) set variables
+  SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
+  SetGlobal("A7AfaaqUnsummonOverride", "GLOBAL", 0)
+  DestroySelf()
+END

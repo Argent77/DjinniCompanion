@@ -1,0 +1,43 @@
+// *** Area AR0300 (Docks) ***
+
+// Adding trigger for Afaaq's Kangaxx commentary
+COPY_EXISTING ~ar0300.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0       // proximiy trigger
+      fj_box_left       = 2690
+      fj_box_top        = 2310
+      fj_box_right      = 2694
+      fj_box_bottom     = 2314
+      fj_cursor_idx     = 0       // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1       // is trapped
+      fj_vertex_0       = 2690 + (2310 << 16)
+      fj_vertex_1       = 2694 + (2310 << 16)
+      fj_vertex_2       = 2692 + (2314 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7AfaaqTrigger1
+      fj_reg_script     = A70300T1
+    END
+  END
+
+<<<<<<<< djinnicompanion/inline/a70300t1.baf
+IF
+  Detect(Player1)
+  Range("A7Afaaq", 15)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  !StateCheck("A7Afaaq", CD_STATE_NOTVALID)
+  !Dead("hldemi")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("KangaxxQuest", "GLOBAL", 0)
+  Global("A70300T1", "AR0300", 0)
+THEN RESPONSE #100
+  SetGlobal("A70300T1", "AR0300", 1)
+  ActionOverride("A7Afaaq", SetGlobal("KangaxxSensed", "LOCALS", 1))
+  ActionOverride("A7Afaaq", StartDialogNoSet(Player1))
+END
+>>>>>>>>
+COMPILE ~djinnicompanion/inline/a70300t1.baf~

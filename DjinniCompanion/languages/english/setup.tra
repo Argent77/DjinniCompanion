@@ -1,0 +1,33 @@
+// -*- coding: us-ascii -*- 
+// *** WeiDU strings (use index 1 - 99) ***
+
+@1 = ~Afaaq, the Djinni Companion~
+@2 = ~Full Version (includes quests, banters and more)~
+@3 = ~Light Version (the djinni only)~
+@4 = ~This mod requires BG2:ToB or BG2:EE to be installed.~
+@5 = ~You can't have BG1Tutu installed to install this component.~
+@6 = ~Install Banter Accelerator for the djinni? (Default: 60 Minutes)~
+@7 = ~15 Minutes~
+@8 = ~30 Minutes~
+@9 = ~45 Minutes~
+@10 = ~90 Minutes~
+@11 = ~120 Minutes~
+@12 = ~This component requires the full version to be installed.~
+@13 = ~This component requires Infinity Animation to be installed.~
+@14 = ~Add Infinity Animation creatures?~
+@15 = ~Remove Afaaq's banter soundtrack?~
+@16 = ~This component requires Infinity Animation's subcomponent "Distinctive Genies" to be installed.~
+@17 = ~This component requires either the full version or the light version of the "Djinni Companion" to be installed.~
+@18 = ~Alternate djinni portrait by Ulb~
+@19 = ~Tweaks~
+
+
+// Messages
+@25 = ~The dialog file of the genie in the Greed Hell Trial isn't compatible with this mod. You have to uninstall the responsible mod before installing again.~
+@26 = ~Questpack's "Revised Hell Trials" has been found...adjusting component.~
+@27 = ~Warning: Banter soundtrack has been disabled (Reason: songlist.2da already full)~
+@29 = ~Warning: Unable to read %filename% (Reason: %restype% file is invalid)~
+@30 = ~Error: Unable to patch %filename% (Reason: %restype% file is invalid)~
+@31 = ~Warning: Unable to patch %filename% (Reason: %restype% file is invalid)~
+@32 = ~Warning: Unable to patch AR2700.WED (Reason: Number of overlay entries is too small)~
+@33 = ~Warning: Unable to patch containers in AR3001.ARE (Reason: Number of existing containers is too small)~

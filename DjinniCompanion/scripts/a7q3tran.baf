@@ -1,0 +1,29 @@
+// Trigger for blocked entrance south of the duergar merchants
+
+// First time clicked
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 30)
+  Global("A7Q3Clicked", "AR2100", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q3Clicked", "AR2100", 1)
+  AddJournalEntry(@3801, QUEST)
+  DisplayString(Myself, @3901)    // The entrance to this passage is blocked. The magical runes on the floor tell you that only drow may pass.
+END
+
+// All consecutive clicks
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 30)
+  Global("A7Q3Clicked", "AR2100", 1)
+THEN RESPONSE #100
+  DisplayString(Myself, @3901)    // The entrance to this passage is blocked. The magical runes on the floor tell you that only drow may pass.
+END
+
+// Too far away
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger, 30)
+THEN RESPONSE #100
+  DisplayString(Myself, @2925)    // You are too far away to examine it closely.
+END

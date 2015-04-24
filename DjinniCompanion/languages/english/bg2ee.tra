@@ -1,0 +1,244 @@
+// -*- coding: utf-8 -*- 
+// *** BG2EE-specific strings ***
+
+// from afaaq.tra
+// *** Banter with Dorn (index 22000...22499) ***
+
+// *** Banter with Hexxat (index 22500...22999) ***
+
+// *** Banter with Neera (index 23000...23499) ***
+
+// *** Banter with Rasaad (index 23500...23999) ***
+
+
+// *** Party introductions ***
+@58485 = ~My only companion on my journey is Dorn.~
+@58486 = ~This is Dorn.~
+@58487 = ~My only companion on my journey is Neera.~
+@58488 = ~This is Neera.~
+@58489 = ~My only companion on my journey is Hexxat.~
+@58490 = ~This is Hexxat.~
+@58491 = ~My only companion on my journey is Rasaad.~
+@58492 = ~This is Rasaad.~
+@58493 = ~My only...companion on my journey is Wilson.~
+@58494 = ~This is Wilson.~
+@58495 = ~My only companion on my journey is Wilson.~
+@58496 = ~And last, but not least. This is Dorn. He is a hell of a warrior and possesses some unholy powers as well.~
+@58497 = ~And last, but not least. This is Dorn. He is a powerful blackguard and a valuable party member.~
+@58498 = ~Our next companion is Dorn. He is a hell of a warrior and possesses some unholy powers as well.~
+@58499 = ~Our next companion is Dorn. He is a powerful blackguard and a valuable party member.~
+@58500 = ~Our third companion is Dorn. He is a hell of a warrior and possesses some unholy powers as well.~
+@58501 = ~Our third companion is Dorn. He is a powerful blackguard and a valuable party member.~
+@58502 = ~The next one is Dorn. He is a hell of a warrior and possesses some unholy powers as well.~
+@58503 = ~The next one is Dorn. He is a powerful blackguard and a valuable party member.~
+@58504 = ~He is a hell of a warrior and possesses some unholy powers as well.~
+@58505 = ~He is a powerful blackguard and a valuable party member.~
+@58506 = ~And last, but not least. This is Neera. She is an enthusiastic half-elf with a fondness for wild magic.~
+@58507 = ~And last, but not least. This is Neera. She is an able wild mage and a valuable party member.~
+@58508 = ~Our next companion is Neera. She is an enthusiastic half-elf with a fondness for wild magic.~
+@58509 = ~Our next companion is Neera. She is an able wild mage and a valuable party member.~
+@58510 = ~Our third companion is Neera. She is an enthusiastic half-elf with a fondness for wild magic.~
+@58511 = ~Our third companion is Neera. She is an able wild mage and a valuable party member.~
+@58512 = ~The next one is Neera. She is an enthusiastic half-elf with a fondness for wild magic.~
+@58513 = ~The next one is Neera. She is an able wild mage and a valuable party member.~
+@58514 = ~She is an enthusiastic half-elf with a fondness for wild magic.~
+@58515 = ~She is an able wild mage and a valuable party member.~
+@58516 = ~And last, but not least. This is Hexxat. She doesn't talk much about herself, but she knows how to pick some mean locks.~
+@58517 = ~And last, but not least. This is Hexxat. Even though all her thoughts are set on her next job, she is an able thief and valuable party member.~
+@58518 = ~Our next companion is Hexxat. She doesn't talk much about herself, but she knows how to pick some mean locks.~
+@58519 = ~Our next companion is Hexxat. Even though all her thoughts are set on her next job, she is an able thief and valuable party member.~
+@58520 = ~Our third companion is Hexxat. She doesn't talk much about herself, but she knows how to pick some mean locks.~
+@58521 = ~Our third companion is Hexxat. Even though all her thoughts are set on her next job, she is an able thief and valuable party member.~
+@58522 = ~The next one is Hexxat. She doesn't talk much about herself, but she knows how to pick some mean locks.~
+@58523 = ~The next one is Hexxat. Even though all her thoughts are set on her next job, she is an able thief and valuable party member.~
+@58524 = ~She doesn't talk much about herself, but she knows how to pick some mean locks.~
+@58525 = ~Even though all her thoughts are set on her next job, she is an able thief and valuable party member.~
+@58526 = ~And last, but not least. This is Hexxat. She is a vampire of Chultan origin and a powerful ally of my party.~
+@58527 = ~And last, but not least. This is Hexxat. She is a talented thief and a valuable party member.~
+@58528 = ~Our next companion is Hexxat. She is a vampire of Chultan origin and a powerful ally of my party.~
+@58529 = ~Our next companion is Hexxat. She is a talented thief and a valuable party member.~
+@58530 = ~Our third companion is Hexxat. She is a vampire of Chultan origin and a powerful ally of my party.~
+@58531 = ~Our third companion is Hexxat. She is a talented thief and a valuable party member.~
+@58532 = ~The next one is Hexxat. She is a vampire of Chultan origin and a powerful ally of my party.~
+@58533 = ~The next one is Hexxat. She is a talented thief and a valuable party member.~
+@58534 = ~She is a vampire of Chultan origin and a powerful ally of my party.~
+@58535 = ~She is a talented thief and a valuable party member.~
+@58536 = ~And last, but not least. This is Rasaad. He is a monk who believes in the teachings of Selûne. He is currently on a holy quest to avenge his brother's death.~
+@58537 = ~And last, but not least. This is Rasaad. He is a Sun Soul monk and a valuable party member.~
+@58538 = ~Our next companion is Rasaad. He is a monk who believes in the teachings of Selûne. He is currently on a holy quest to avenge his brother's death.~
+@58539 = ~Our next companion is Rasaad. He is a Sun Soul monk and a valuable party member.~
+@58540 = ~Our third companion is Rasaad. He is a monk who believes in the teachings of Selûne. He is currently on a holy quest to avenge his brother's death.~
+@58541 = ~Our third companion is Rasaad. He is a Sun Soul monk and a valuable party member.~
+@58542 = ~The next one is Rasaad. He is a monk who believes in the teachings of Selûne. He is currently on a holy quest to avenge his brother's death.~
+@58543 = ~The next one is Rasaad. He is a Sun Soul monk and a valuable party member.~
+@58544 = ~He is a monk who believes in the teachings of Selûne. He is currently on a holy quest to avenge his brother's death.~
+@58545 = ~He is a Sun Soul monk and a valuable party member.~
+@58546 = ~And last, but not least. This is Wilson. He is strong-willed, powerful and a faithful companion.~
+@58547 = ~And last, but not least. This is Wilson. He is strong-willed, powerful and a valuable party member.~
+@58548 = ~Our next companion is Wilson. He is strong-willed, powerful and a faithful companion.~
+@58549 = ~Our next companion is Wilson. He is strong-willed, powerful and a valuable party member.~
+@58550 = ~Our third companion is Wilson. He is strong-willed, powerful and a faithful companion.~
+@58551 = ~Our third companion is Wilson. He is strong-willed, powerful and a valuable party member.~
+@58552 = ~The next one is Wilson. He is strong-willed, powerful and a faithful companion.~
+@58553 = ~The next one is Wilson. He is strong-willed, powerful and a valuable party member.~
+@58554 = ~He is strong-willed, powerful and a faithful companion.~
+@58555 = ~He is strong-willed, powerful and a valuable party member.~
+@58556 = ~You are unusually weak for a genie. I'm beginning to doubt if you're even worth the hassle <CHARNAME> has put us through to fetch you.~
+@58557 = ~The value of power lies in the eye of the beholder. Brute strength and a terrifying demeanor are not the only means to define one's worth.~
+@58558 = ~Do you really believe in this nonsense? I have yet to witness a single instance where your opponents are overwhelmed merely by the goodness of your heart.~
+@58559 = ~If you begin to walk the world with open eyes and an open mind, you will change your opinion sooner or later.~
+@58560 = ~It's great to have more unusual people...um, genies around. I mean even more unusual than me. And <CHARNAME>, of course.~
+@58561 = ~Everyone is unusual in his or her own way. I am no more an exception than you or the people we are encountering every day.~
+@58562 = ~Please excuse my lengthy remark. I am pleased to make your acquaintance, Neera.~
+@58563 = ~No, it's okay. We can talk about it later, if you like.~
+@58564 = ~I am sure we will find the time to talk in our travels ahead of us.~
+@58565 = ~I need to go to Dragomir's Tomb.~
+@58566 = ~I am pleased to make... your acquaintance. May I ask you why you have chosen to join <CHARNAME>'s party?~
+@58567 = ~Then your path is already set. I wish you the strength and perseverance to find what you are looking for.~
+@58568 = ~Afaaq, what's going on?~
+@58569 = ~Do not worry, my <PRO_LADYLORD>. I am certain that everything will become clear soon enough.~
+@58570 = ~How very delightful to have one of the fabled genies on our side. You and I have to get to know each other better.~
+@58571 = ~You have embraced the darkness to its full extent. I doubt that we have anything in common that warrants any form of acquaintance, vampire.~
+@58572 = ~Why so prejudiced, Afaaq? There is surely a spark of curiosity inside you that wants to know more about me.~
+@58573 = ~Your pretty words are wasted on me. I will tolerate your presence as long as <CHARNAME> wishes, but do not expect more than that.~
+@58574 = ~Greetings, Afaaq. I wish we could have met under better circumstances. No creature deserves to be imprisoned as you are.~
+@58575 = ~I appreciate your sentiment. But your own situation appears to be no less dire than mine. A prison out of duty can be as powerful as a prison formed by magic.~
+@58576 = ~You are probably right. I have to go that way to the bitter end though.~
+@58578 = ~The end does not necessarily have to be bitter though. I am certain you will ultimately prevail.~
+@58579 = ~GROWL?~
+@58580 = ~You are right. I am confident that <CHARNAME> can do it.~
+@58581 = ~GROWL!~
+@58582 = ~That is very perceptive of you. If someone can do it, then it is <CHARNAME>.~
+@58583 = ~And you too, my friend.~
+
+
+// from misc.tra
+
+
+// from quest2.tra
+@2213 = ~This jungle looks vaguely familiar to me. Like a dim memory or dream from a life very long time ago. It wouldn't surprise me if the stone teleported us to the Jungle of Chult, or maybe the Black Jungles.~
+@2214 = ~Either way it will be an interesting diversion. Am I right, <CHARNAME>?~
+
+@2940 = ~The hat emits a blue glow.  It is surprisingly light and appears as though it was fashioned for a specific mage.~
+
+@2941 = ~Centuries ago, the mad wizard Harash Matar commissioned a local gnomish enchanter to find a way to utilize his powers to the fullest. The gnome knew of the wizard's mental state and fashioned a headpiece which transforms the chaotic thoughts of its wearer into powerful spells.
+
+The hat turned out to be more effective than he imagined. Soon after the gnome delivered his masterpiece, the mad wizard accidentally summoned a horde of demons to his hometown.  They ravaged everything within their reach and killed all townsfolk. Only this headpiece survived the slaughter.
+
+The hat taps into the chaotic forces of the mind, enabling the wearer to cast spells which are usually beyond his or her abilities. Because of its special nature, characters not following the chaotic path will find it nearly impossible to use it.
+
+Equipped Abilities:
+Effect: Chaos Shield
+Shields the wearer somewhat from the dangerous side effects when casting a wild magic spell.
+
+Special Abilities (3x/day):
+Effect: Nahal's Reckless Dweomer
+Enables the wearer to cast any spell from the spellbook without level restrictions. Because it relies on the chaotic energies of the mind, more often than not the result will be disastrous or at the very least not what the caster is expecting.~
+
+
+// from quest5.tra
+@6809 = ~This magical wand has a limited number of charges which enable you and your party to withstand the tremendous heat coming from lava or similar heat sources. It does NOT protect against the burning effects of direct contact with fire.
+
+STATISTICS:
+
+Special:  Protects against heat
+Range:  Whole party
+Duration:  8 hours~
+
+@6822 = ~This wand looks like it will burst into flames any moment. The lower part looks metallic and feels very organic to the touch. Its upper part appears to burn but doesn't emit any heat.
+
+Special Abilities (ten charges each):
+
+ Aura of Flaming Death
+    Duration: one turn
+ Conjure Fire Elemental
+    Summons a 24 hit dice fire elemental
+    Duration: 4 hours
+ Comet
+    Stuns 1D4 rounds and deals 10D10 fire damage to enemies in 30' radius~
+
+@6826 = ~This excellent piece of workmanship contains very powerful enchantments which no mortal is capable of producing anymore. When equipped it enables the wearer not only to be protected from the elemental powers of the world, it will also project parts of the damage back to the attackers.
+
+Special Abilities:
+
+ Fireshield (Red)
+ Duration: two turns
+ Cast three times/day
+ 
+ Fireshield (Blue)
+ Duration: two turns
+ Cast three times/day
+ 
+ Airshield
+ Duration: two turns
+ Cast twice per day~
+
+@6828 = ~The scimitar crackles with energy when you hold it in your hand and each strike appears to slash the air itself.
+
+STATISTICS:
+
+Special Abilities:
+   50% electrical resistance while equipped.
+   Protects against stun while equipped.
+
+Combat Abilities:
+   Lightning Strike
+   (each hit stuns the target for two rounds, Save vs. Death)
+   Electrocution
+   (10% chance each hit that target must make a saving throw vs. death or die permanently)
+
+Damage: 1D8 +4, +2D8 electrical damage
+THAC0: +4
+Damage type: slashing
+Weight: 2
+Speed Factor: 1
+Proficiency Type: Scimitar
+Type:  1-handed
+Requires: 8 Strength~
+
+@6845 = ~The skull radiates an overwhelming aura of menace and you have the feeling that it is still possessed by the spirit of the demi-lich itself.
+
+STATISTICS:
+
+*CURSED*
+
+Special Abilities (three times per day): 
+ Absorb Life Force:
+ Drains three levels and causes 3d8 +8 damage to the victim while healing the caster at the same time.
+ Range: 40 yards
+
+Equipped Abilities:
+ Undead's Blessing:
+ The wearer obtains both the curses and the blessings of the undead for a short time. 
+ This includes:
+   - Immunity to death magic, level drain and panic
+   - Increased resistance to physical and cold damage
+   - Vulnerability to fire
+   - Slow decay of body and mind
+   - And more...~
+
+@6851 = ~A small clan of dwarves invented a strange substance which, if mixed correctly, could shatter even the hardest stone. It soon was developed into a tool to help digging tunnels and caves. Unfortunately, a deposit of this highly hazardous substance exploded within the city, wiping out the whole clan.
+
+The instructions on how to produce the substance survived however. A nearby party of derro scouts discovered the destroyed city and salvaged some of the substance, and also the recipe on how to create it. Being a cruel and evil race, they soon discovered its full potential and created a weapon out of it. When activated it explodes after a short delay and deals out fire damage to all creatures in the close vicinity. Later, a derro cleric of Diirinka perfected this weapon by adding a magical proximity trigger. When activated the weapon will stay in place and detonate only if a creature comes close to it.
+
+STATISTICS:
+
+Effect: Exploding Fire Trap
+Damage: 6D6 fire damage
+Trigger: Entering 20 ft radius around trap
+Damage: Everyone within 30 ft radius~
+
+@6885 = ~The power of this skull has been slightly weakened by the purification ritual. Nevertheless, it still contains much of its former power.
+
+STATISTICS:
+
+Equipped Abilities:
+ Undead's Blessing:
+ The wearer obtains the blessings and some of the curses of the undead for a short time. 
+ This includes:
+   - Immunity to death magic, 
+     level drain and panic
+   - Increased resistance to 
+     physical and cold damage
+   - Immunity to haste
+   - Vulnerability to fire~

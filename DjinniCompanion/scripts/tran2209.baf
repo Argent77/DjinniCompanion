@@ -1,0 +1,10 @@
+// Script portion for entrance to Jae'llat home (Quest 3)
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 10)
+  PartyHasItem("MISCBF")
+  GlobalGT("A7JaellatEntered", "AR2200", 0)
+THEN RESPONSE #100
+  DisplayString(Myself, @3969)    // The wardstone doesn't appear to work on this barrier anymore. There is no way to enter the building again.
+END

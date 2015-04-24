@@ -1,0 +1,73 @@
+// *** Area AR3001: Watcher's Keep Level 1 ***
+
+// adding scripts to several containers which add the undead ritual tome to the library
+COPY_EXISTING ~ar3001.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    READ_LONG 0x70 ofs_containers
+    READ_SHORT 0x74 num_containers
+    PATCH_IF (num_containers > 21) BEGIN
+      // Shelf2
+      WRITE_ASCII (ofs_containers + (3 * 0xC0) + 0x48) ~A7Q5BK1~ #8
+      // Shelf3
+      WRITE_ASCII (ofs_containers + (4 * 0xC0) + 0x48) ~A7Q5BK2~ #8
+      // Shelf4
+      WRITE_ASCII (ofs_containers + (5 * 0xC0) + 0x48) ~A7Q5BK3~ #8
+      // Shelf5
+      WRITE_ASCII (ofs_containers + (6 * 0xC0) + 0x48) ~A7Q5BK4~ #8
+      // Shelf7
+      WRITE_ASCII (ofs_containers + (10 * 0xC0) + 0x48) ~A7Q5BK5~ #8
+      // Shelf8
+      WRITE_ASCII (ofs_containers + (12 * 0xC0) + 0x48) ~A7Q5BK6~ #8
+      // Shelf9
+      WRITE_ASCII (ofs_containers + (13 * 0xC0) + 0x48) ~A7Q5BK7~ #8
+      // Shelf11
+      WRITE_ASCII (ofs_containers + (16 * 0xC0) + 0x48) ~A7Q5BK8~ #8
+      // Shelf12
+      WRITE_ASCII (ofs_containers + (17 * 0xC0) + 0x48) ~A7Q5BK9~ #8
+      // Shelf13
+      WRITE_ASCII (ofs_containers + (18 * 0xC0) + 0x48) ~A7Q5BK10~ #8
+      // Shelf14
+      WRITE_ASCII (ofs_containers + (19 * 0xC0) + 0x48) ~A7Q5BK11~ #8
+      // Shelf15
+      WRITE_ASCII (ofs_containers + (20 * 0xC0) + 0x48) ~A7Q5BK12~ #8
+      // Shelf16
+      WRITE_ASCII (ofs_containers + (21 * 0xC0) + 0x48) ~A7Q5BK13~ #8
+    END ELSE BEGIN
+      PATCH_WARN @33    // Warning: Unable to patch containers in AR3001.ARE (Reason: Number of existing containers is too small)
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar3001.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// scripts
+<<<<<<<< djinnicompanion/inline/ar3001.baf
+IF
+  PartyHasItem("A7BOOK01")
+  Global("A7TomeFound", "AR3001", 0)
+THEN RESPONSE #100
+  SetGlobal("A7TomeFound", "AR3001", 1)
+  SetGlobal("A7Q5Tome", "GLOBAL", 3)
+  EraseJournalEntry(@6547)
+  AddJournalEntry(@6548, QUEST)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~ar3001.bcs~ ~djinnicompanion/inline/ar3001.baf~
+
+// Generating container scripts
+OUTER_FOR (counter = 1; counter < 14; counter = counter + 1) BEGIN
+  <<<<<<<< djinnicompanion/inline/a7q5bk%counter%.baf
+  IF
+    Global("A7CreateTome", "AR3001", %counter%)
+    Global("A7TomeCreated", "AR3001", 0)
+  THEN RESPONSE #100
+    SetGlobal("A7TomeCreated", "AR3001", 1)
+    CreateItem("A7BOOK01", 0, 0, 0)
+  END
+  >>>>>>>>
+  COMPILE ~djinnicompanion/inline/a7q5bk%counter%.baf~ EVALUATE_BUFFER
+END
+
+// dialogs
+COMPILE ~DjinniCompanion/dialogs/gorarc1.d~

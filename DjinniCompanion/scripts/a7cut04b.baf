@@ -1,0 +1,11 @@
+// *** Cutscene: Khalid returns back to the grave ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Khalid")
+  CreateVisualEffectObject("SPHOLY", Myself)
+  SmallWait(23)
+  DestroySelf()
+  EndCutSceneMode()
+END

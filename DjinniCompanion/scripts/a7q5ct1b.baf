@@ -1,0 +1,22 @@
+// *** Cutscene: djinnis teleport away from Smuggler Cave ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  CreateVisualEffectObject("SPPLANAR", "A7Q5DJ01")
+  ActionOverride("A7Q5DJ01", PlaySound("EFF_M09"))
+  CreateVisualEffectObject("SPPLANAR", "A7Q5DJ05")
+  ActionOverride("A7Q5DJ05", PlaySound("EFF_M09"))
+  SmallWait(5)
+  CreateVisualEffectObject("SPPLANAR", "A7Karim")
+  ActionOverride("A7Karim", PlaySound("EFF_M09"))
+  SmallWait(25)
+  ActionOverride("A7Q5DJ01", DestroySelf())
+  ActionOverride("A7Q5DJ05", DestroySelf())
+  SmallWait(5)
+  ActionOverride("A7Karim", DestroySelf())
+  SmallWait(10)
+  EndCutSceneMode()
+END
+

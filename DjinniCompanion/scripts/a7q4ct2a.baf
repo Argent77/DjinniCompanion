@@ -1,0 +1,21 @@
+// *** Cutscene: If Afaaq is not around, then summon Afaaq ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("HELLGEN")
+  MoveViewPoint([385.842], VERY_FAST)
+  MoveGlobal("AR2903", "A7Afaaq", [385.842])
+  Deactivate("A7Afaaq")
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  ActionOverride("A7Afaaq", SetGlobal("initialize", "LOCALS", 1))
+  ActionOverride("A7Afaaq", ApplySpellRES("A7REST", Myself))
+  ActionOverride("A7Afaaq", Activate(Myself))
+  ActionOverride("A7Afaaq", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Afaaq", CreateVisualEffectObject("A7AFQSUM", Myself))
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)  // restoring player control
+  SmallWait(30)
+  ActionOverride("A7Afaaq", FaceObject("HELLGEN"))
+  SmallWait(15)
+  StartDialogueNoSet(Player1)
+END

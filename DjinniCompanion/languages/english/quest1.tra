@@ -1,0 +1,205 @@
+// -*- coding: cp1252 -*- 
+// *** Strings related to Quest 1: "A game of cat-and-mouse" (index 1000...1999)
+
+// Dialog: rakshasa
+@1100 = ~That was easy.~
+@1101 = ~Yeah!~
+@1102 = ~That was all?~
+@1103 = ~Don't disturb me in my hunt, <RACE>.~
+@1104 = ~I told you not to disturb me! You are scaring my prey.~
+@1105 = ~Don't try my patience, <RACE>, lest you will be my next target!~
+@1106 = ~That's it! Let's see how you handle this.~
+@1107 = ~Stop!~
+@1108 = ~What is a <RACE> doing in our territory?~
+@1109 = ~What are you?~
+@1110 = ~Who are you?~
+@1111 = ~A teleporter brought us here. Where are we?~
+@1112 = ~We have come here by accident. I think we should leave now. Goodbye.~
+@1113 = ~I'm sorry, it wasn't our intention to disturb your presence. We will take our leave.~
+@1114 = ~We'd rather die than tell you anything.~
+@1115 = ~We don't have to tell you anything. You have to see our leader. He will decide what to do with you.~
+@1116 = ~Very well, lead on.~
+@1117 = ~I'd like to think about it.~
+@1118 = ~No, I don't trust your kind.~
+@1119 = ~Since you already know of our presence, I cannot allow you to leave. Our leader will decide what to do with you.~
+@1120 = ~Very well, I accept.~
+@1121 = ~Don't do anything rash or we will kill you here and now.~
+@1122 = ~There is nothing to think about, <RACE>. You will obey our orders or suffer the consequences!~
+@1123 = ~Then you will die. ATTACK!~
+@1124 = ~What do you want from us, <RACE>?~
+@1125 = ~What are you doing here?~
+@1126 = ~Nothing.~
+@1127 = ~I have decided to end your existence. Die!~
+@1128 = ~It is highly unusual that our leader let you live.~
+@1129 = ~Do you have anything to say?~
+@1130 = ~I'm sorry for disturbing you.~
+@1131 = ~You are lucky not to be hunted as the prey you are.~
+@1132 = ~What do you want from us?~
+@1133 = ~Talk to our leader if you want to know something.~
+@1134 = ~Then stop bothering me!~
+@1135 = ~You have captured the dao? Our leader will be pleased.~
+@1136 = ~So you are useful after all. Bring your trophy to our leader.~
+
+
+// Dialog: Mahel (rakshasa leader)
+@1200 = ~Nooo!! My loyal Narantaka!~
+@1201 = ~A <RACE> has made it's way to our encampment?~
+@1202 = ~Who are you? Tell us at once!~
+@1203 = ~My name is <GABBER>. Who... or what are you?~
+@1204 = ~My name is <GABBER>. Who are you, rakshasa?~
+@1205 = ~I'm... an adventurer who stumbled upon your camp by accident.~
+@1206 = ~I'd like to know your name before I tell you anything.~
+@1207 = ~I won't tell you anything if you continue your rude behavior.~
+@1208 = ~ We are the hunters, you are the prey. That is all you need to know about us. You may still be of use to us, despite your ignorance.~
+@1209 = ~I'm called Mahel, <GABBER>. And I am the leader of our hunting party.~
+@1210 = ~You are pitiful excuse for a <RACE>. But you may still be useful to us.~
+@1211 = ~I don't know whether you are bold or merely ignorant, but I like your directness. I'm Mahel, the leader of our hunting party.~
+@1212 = ~You dare?~
+@1213 = ~We will hunt you down and feast on your innards. ATTACK THEM!~
+@1214 = ~We came here several moons ago for hunting and feasting. But we have aroused the interest of our enemies, the dao genies.~
+@1215 = ~They haven't pursued us directly yet. We are tiring of their games.~
+@1216 = ~Hmm, I cannot sense them anymore. They wouldn't leave unless they have collected their price.~
+@1217 = ~Your smell reveals you have worked for them already. Have you defeated our champion Ihtafeer?~
+@1218 = ~Yes, we have delivered his head to the dao genies.~
+@1219 = ~(Lie) No, we have destroyed the dao genies.~
+@1220 = ~I don't know what you are talking about?~
+@1221 = ~We have already destroyed them.~
+@1222 = ~(Lie) Actually, we have brought them the head of a rakshasa and they left.~
+@1223 = ~Hmm, do I smell the stench of the genies on you? No matter.~
+@1224 = ~I have something in mind to spice up our hunt. You can bring their leader to us.~
+@1225 = ~Do not listen to him. The rakshasa are demonic creatures and have only evil intentions.~
+@1226 = ~The rakshasa are evil creatures without honor. Do not enslave yourself to their whims.~
+@1227 = ~I'd rather slay those creatures where they stand and be done with them. It is doubtful they will even let us live once we have completed their task.~
+@1228 = ~I have some knowledge about those creatures. They call themselves rakshasa, evil creatures with strong predatory tendencies.~
+@1229 = ~Be careful around them. We might be just a piece of meat to them.~
+@1230 = ~The rakshasa are not part of the natural order of our world. Whatever their plan is, it will surely provoke a strong reaction from their opponents.~
+@1231 = ~Our friend wants you to dance to his tune, my raven. Or do you wonder whether the tune of the other side is more to your liking?~
+@1232 = ~This is a most interesting turn of events. You can choose between the tunes of the genies and the rakshasas, my raven. Do you have a preference?~
+@1233 = ~Speaking of dancing, I once met a gnomish bard in my youth when--~
+@1234 = ~Please, not now. I want to know how this little act develops before our host loses his patience.~
+@1235 = ~Powerful creatures always have powerful items in their possession. You'd be a fool to decline his offer.~
+@1236 = ~I suggest you accept his offer for now. You may still reconsider after you've heard the other side. Think about it.~
+@1237 = ~I suggest you accept his offer. You have slain his underling Ihtafeer already and can return its head for a reward.~
+@1238 = ~Why not get the best from both sides?~
+@1239 = ~Argh, do ye really want to bow down to those beasts? Let's have 'eir heads and loot 'em bodies. That be less a hassle an' more riches for us.~
+@1240 = ~Do that and I will be pleased.~
+@1241 = ~I doubt the dao genies would be willing to meet you.~
+@1242 = ~Yes, I will do it.~
+@1243 = ~What will be our reward for this task?~
+@1244 = ~I'm not interested in your offer.~
+@1245 = ~No, I'll never betray the dao genies.~
+@1246 = ~You are a mighty specimen, indeed, if you were able to defeat a ruhk in a straight fight.~
+@1247 = ~I don't think you tell us the truth. Your smell betrays you.~
+@1248 = ~You are a mighty specimen, indeed, if you were able to take on the dao genies.~
+@1249 = ~You are worthy to become our prey.~
+@1250 = ~The game has changed, my brothers. We will hunt you down and feast on your innards. ATTACK THEM!~
+@1251 = ~They wouldn't have much of a choice, after you are done with them.~
+@1252 = ~So, what is your answer?~
+@1253 = ~Very well, I will do it.~
+@1254 = ~You are more intelligent than I thought.~
+@1255 = ~Here, take this box. It contains a spell that will trap the spirit of the dao genie.~
+@1256 = ~The item has only one charge, so make sure to target Khan Zahraa only. Once he is trapped, return him to us immediately. Do you understand?~
+@1257 = ~Yes, absolutely. I will trap Khan Zahraa and return him to you.~
+@1258 = ~Could you please repeat that again?~
+@1259 = ~On second thought, I don't want to do it.~
+@1260 = ~Don't test my patience, <RACE>! Your reward is your life.~
+@1261 = ~If you actually manage to fulfill our demands, I might think it over.~
+@1262 = ~I have something rare in my possession which might be useful to you. Fulfill our demand, and it is yours.~
+@1263 = ~I think you misunderstand. I am not offering this task to you. I demand it.~
+@1264 = ~I don't have a choice, do I? Very well, I'll do it.~
+@1265 = ~No, I don't take orders from your kind.~
+@1266 = ~You dare to refuse us? We will feast on your innards. ATTACK THEM!~
+@1267 = ~Very good. I will eagerly await your return.~
+@1268 = ~Once again.~
+@1269 = ~Return to the dao genies and use the box on Khan Zahraa. Don't use it on anyone else because you have only one attempt.~
+@1270 = ~When he is trapped, return to me at once. Do you understand now?~
+@1271 = ~Yes. I will trap Khan Zahraa and return him to you.~
+@1272 = ~You return to us again. What do you want?~
+@1273 = ~Could you please repeat your task again?~
+@1274 = ~There is nothing more I need to know.~
+@1275 = ~Good. Go now and complete your task.~
+@1276 = ~You return to us again?~
+@1277 = ~I cannot sense the genies anymore, but our trap is still empty?~
+@1278 = ~You have failed us? We will feast on your innards. ATTACK THEM!~
+@1279 = ~You return?~
+@1280 = ~You return successful. I can sense a creature within our trap. Give it to me!~
+@1281 = ~Let's see what you have brought us...~
+@1282 = ~Ah, I sense the trapped genie. Very good.~
+@1283 = ~You have fulfilled your end of the deal. This magic lamp is your reward. You are very resourceful for a <RACE>.~
+@1284 = ~Our deal is completed. We will leave now, and so should you.~
+@1285 = ~This isn't the requested genie!~
+@1286 = ~You dare to betray us? We will feast on your innards. ATTACK THEM!~
+@1287 = ~I have nothing more to say to you until you have finished your task.~
+@1288 = ~You dare to steal from us? We will feast on your innards. ATTACK THEM!~
+@1289 = ~I've changed my mind. There is no way I can perform such a dark deed for you.~
+
+
+// Dialog: High Merchant Busya
+@1400 = ~I have imprisoned their leader and taken care of the remaining genies... they will bother you no further.~
+
+
+// Dialog: Lord Logan Coprith
+@1420 = ~I have taken care of the problem for you... I have imprisoned their leader and taken care of the remaining genies.~
+@1421 = ~Yes.  It was difficult, but I have imprisoned their leader and taken care of the remaining genies.~
+
+
+// Dialog: Khan Zahraa
+@1450 = ~You dare to sully our presence with one of those djinns, mortal?~ [a7slnt_s]
+@1451 = ~Ah, I see. He is your personal slave. Please keep your pet under control to avoid unnecessary distractions.~
+@1452 = ~You are too much beneath us to provoke a hostile reaction from me. Repeat it, however, and I will not hold back my wrath.~
+@1453 = ~I will show you the difference between us by destroying you and your pathetic master!~
+@1454 = ~Your taunts will have no effect on me, dao, as I sense that you are bound to service as well. Whether it is by magic or contract, is merely a question of semantics.~
+@1455 = ~Please calm down, you two! There is no need for hostility.~
+@1456 = ~This might be getting interesting. Don't lose to him, Afaaq!~
+
+
+// Dialog: Trademeet townsfolk
+@1500 = ~Ahhh! It's the genies from the tent! Ahhh!~
+@1501 = ~Eek! You are one of the genies! Please don't hurt me!~
+@1502 = ~Eek! Is that one of the genies? Please don't hurt me!~
+@1503 = ~Why hasn't Lord Logan chased those damn genies away already. If I had my way...~
+@1504 = ~Ahh! There is one of them! I was only kidding. Please excuse me.~
+
+
+// Misc. strings
+@1600 = ~Adratha's remains~
+@1601 = ~Judging from the skeletal structure and the items you found at her resting place, you suspect that these bones are the remains of Adratha, the real herbalist of the druid grove.~
+@1602 = ~Dao Genie Trap~
+@1603 = ~This unusually heavy box radiates strong magic which allows you to trap the targeted creature. The rakshasa leader has told you to use it only on Khan Zahraa.~
+@1604 = ~This unusually heavy box radiates strong magic which contains the soul of the creature you have trapped within.~
+@1605 = ~Magical Portal~
+@1606 = ~You step out of the teleporter and feel a dark and menacing aura emanating from the magic circle. You are quite sure that whoever put that magic in place might already know you are here.~
+@1607 = ~Mahel~
+@1608 = ~Rakshasa Hunter~
+@1609 = ~Narantaka~
+@1610 = ~The portal is protected by some kind of forcefield which blocks any attempt to enter it.~
+
+
+// journal entries
+@1800 = ~A game of cat-and-mouse
+
+After defeating Ihtafeer and her two brothers, I found an open teleporter which is still active. Maybe I can get to the bottom of the whole affair once I step through it.~
+@1801 = ~A game of cat-and-mouse
+
+I have entered the portal which appeared after I attacked the disguised rakshasa in the druid grove. It has transported me to a magic circle in an unknown area. I should be on my guard, even though the immediate surrounding appears to be deceptively quiet.~
+@1802 = ~A game of cat-and-mouse
+
+I have encountered a rakshasa hunting party led by the rakshasa Mahel. Instead of killing or hunting me down, he gave me the chance to work for him. I have to return to Trademeet and trap the leader of the dao genies, Khan Zahraa, in a magical box. Once the task is done, I should return to him to receive my reward.~
+@1803 = ~A game of cat-and-mouse
+
+I have offended the rakshasa somehow and they started to attack me.~
+@1804 = ~A game of cat-and-mouse
+
+The rakshasa leader wasn't amused by my actions and attacked me immediately.~
+@1810 = ~A game of cat-and-mouse
+
+After delivering the trapped genie to the rakshasa, their leader rewarded me with a magic lamp of some kind. I am really curious about what it might contain.~
+@1811 = ~A game of cat-and-mouse
+
+I have managed to steal a magic lamp from the rakshasa leader. I am really curious about what it might contain.~
+@1812 = ~A game of cat-and-mouse
+
+After defeating the rakshasa leader, I found a magic lamp in his possession. I am really curious about what it might contain.~
+@1820 = ~A game of cat-and-mouse
+
+The magic lamp from the rakshasa leader turned out to be a vessel for an entrapped djinni. This is a precious artifact. I wonder who was powerful enough to enslave such a mighty creature. Hopefully, the djinni will satisfy my curiosity.~

@@ -1,0 +1,23 @@
+// *** Cutscene: Khalid rises from his grave ***
+
+/*
+Effects: Afaaq casts a dummy conjuration spell -> Earth splits open -> Rising Corpse VFX -> Khalid appears (awakening animation) -> Khalid Faces Jaheira -> Khalid starts conversation with Jaheira
+*/
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  Face(12)
+  ForceSpellRES("A7CONJ1", Myself)              // Afaaq casts a dummy conjuration spell
+  CreateCreatureObjectOffset("A7KHALID", Myself, [100.0])    // creating a sleeping invisible Khalid near Afaaq
+  ActionOverride("A7Khalid", PlayDead(55))
+  CreateVisualEffectObject("A7CUT04", "A7KHALID")        // calls a VEF file
+  SmallWait(45)
+  ActionOverride("A7Khalid", DestroyItem("A7RING01"))      // remove invisibility from Khalid
+  SmallWait(35)                        // wait for Khalid to awake
+  ActionOverride("A7Khalid", FaceObject("Jaheira"))
+  SmallWait(5)
+  ActionOverride("Jaheira", FaceObject("A7Khalid"))
+  SmallWait(5)
+  ActionOverride("A7Khalid", StartDialogNoSet("Jaheira"))
+END

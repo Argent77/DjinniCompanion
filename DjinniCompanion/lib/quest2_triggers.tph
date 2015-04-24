@@ -1,0 +1,837 @@
+// *** Quest 2: Adding Proximity Triggers to a couple of maps ***
+
+// *** Trademeet (AR2000) ***
+COPY_EXISTING ~ar2000.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0       // proximiy trigger
+      fj_box_left       = 3360
+      fj_box_top        = 2360
+      fj_box_right      = 3370
+      fj_box_bottom     = 2370
+      fj_cursor_idx     = 0       // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1         // is trapped
+      fj_vertex_0       = 3365 | (2370 << 16)
+      fj_vertex_1       = 3360 | (2360 << 16)
+      fj_vertex_2       = 3370 | (2360 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1320
+      fj_box_top        = 3260
+      fj_box_right      = 1330
+      fj_box_bottom     = 3270
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1325 | (3270 << 16)
+      fj_vertex_1       = 1320 | (3260 << 16)
+      fj_vertex_2       = 1330 | (3260 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2610
+      fj_box_top        = 1390
+      fj_box_right      = 2620
+      fj_box_bottom     = 1400
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2615 | (1400 << 16)
+      fj_vertex_1       = 2610 | (1390 << 16)
+      fj_vertex_2       = 2620 | (1390 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #4
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1420
+      fj_box_top        = 1415
+      fj_box_right      = 1430
+      fj_box_bottom     = 1425
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1425 | (1425 << 16)
+      fj_vertex_1       = 1420 | (1415 << 16)
+      fj_vertex_2       = 1430 | (1415 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger4
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar2000.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Druid Grove (AR1900) ***
+COPY_EXISTING ~ar1900.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 4400
+      fj_box_top        = 1990
+      fj_box_right      = 4410
+      fj_box_bottom     = 2000
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 4405 | (2000 << 16)
+      fj_vertex_1       = 4400 | (1990 << 16)
+      fj_vertex_2       = 4410 | (1990 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1310
+      fj_box_top        = 2345
+      fj_box_right      = 1320
+      fj_box_bottom     = 2355
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1315 | (2355 << 16)
+      fj_vertex_1       = 1310 | (2345 << 16)
+      fj_vertex_2       = 1320 | (2345 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2940
+      fj_box_top        = 1690
+      fj_box_right      = 2950
+      fj_box_bottom     = 1700
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2945 | (1700 << 16)
+      fj_vertex_1       = 2940 | (1690 << 16)
+      fj_vertex_2       = 2950 | (1690 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #4
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1540
+      fj_box_top        = 560
+      fj_box_right      = 1550
+      fj_box_bottom     = 570
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1545 | (570 << 16)
+      fj_vertex_1       = 1540 | (560 << 16)
+      fj_vertex_2       = 1550 | (560 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger4
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar1900.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Small Teeth Pass (AR1700) ***
+COPY_EXISTING ~ar1700.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 3010
+      fj_box_top        = 520
+      fj_box_right      = 3020
+      fj_box_bottom     = 530
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 3015 | (530 << 16)
+      fj_vertex_1       = 3010 | (520 << 16)
+      fj_vertex_2       = 3020 | (520 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2080
+      fj_box_top        = 2480
+      fj_box_right      = 2090
+      fj_box_bottom     = 2490
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2085 | (2490 << 16)
+      fj_vertex_1       = 2080 | (2480 << 16)
+      fj_vertex_2       = 2090 | (2480 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 620
+      fj_box_top        = 2670
+      fj_box_right      = 630
+      fj_box_bottom     = 2680
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 625 | (2680 << 16)
+      fj_vertex_1       = 620 | (2670 << 16)
+      fj_vertex_2       = 630 | (2670 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar1700.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Temple Ruins (AR1400) ***
+COPY_EXISTING ~ar1400.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 750
+      fj_box_top        = 880
+      fj_box_right      = 760
+      fj_box_bottom     = 890
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 755 | (890 << 16)
+      fj_vertex_1       = 750 | (880 << 16)
+      fj_vertex_2       = 760 | (880 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1085
+      fj_box_top        = 2080
+      fj_box_right      = 1095
+      fj_box_bottom     = 2090
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1090 | (2090 << 16)
+      fj_vertex_1       = 1085 | (2080 << 16)
+      fj_vertex_2       = 1095 | (2080 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 3970
+      fj_box_top        = 1230
+      fj_box_right      = 3980
+      fj_box_bottom     = 1240
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 3975 | (1240 << 16)
+      fj_vertex_1       = 3970 | (1230 << 16)
+      fj_vertex_2       = 3980 | (1230 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar1400.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Windspear Hills (AR1200) ***
+COPY_EXISTING ~ar1200.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1960
+      fj_box_top        = 2600
+      fj_box_right      = 1970
+      fj_box_bottom     = 2610
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1965 | (2700 << 16)
+      fj_vertex_1       = 1960 | (2600 << 16)
+      fj_vertex_2       = 1970 | (2600 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 4080
+      fj_box_top        = 940
+      fj_box_right      = 4090
+      fj_box_bottom     = 950
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 4085 | (950 << 16)
+      fj_vertex_1       = 4080 | (940 << 16)
+      fj_vertex_2       = 4090 | (940 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 980
+      fj_box_top        = 630
+      fj_box_right      = 990
+      fj_box_bottom     = 640
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 985 | (640 << 16)
+      fj_vertex_1       = 980 | (630 << 16)
+      fj_vertex_2       = 990 | (630 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar1200.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Umar Hills (AR1100) ***
+COPY_EXISTING ~ar1100.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 4340
+      fj_box_top        = 2750
+      fj_box_right      = 4350
+      fj_box_bottom     = 2760
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 4345 | (2760 << 16)
+      fj_vertex_1       = 4340 | (2750 << 16)
+      fj_vertex_2       = 4350 | (2750 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 3895
+      fj_box_top        = 1720
+      fj_box_right      = 3905
+      fj_box_bottom     = 1730
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 3900 | (1730 << 16)
+      fj_vertex_1       = 3895 | (1720 << 16)
+      fj_vertex_2       = 3905 | (1720 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1900
+      fj_box_top        = 2750
+      fj_box_right      = 1910
+      fj_box_bottom     = 2760
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1905 | (2760 << 16)
+      fj_vertex_1       = 1900 | (2750 << 16)
+      fj_vertex_2       = 1910 | (2750 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #4
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1240
+      fj_box_top        = 3130
+      fj_box_right      = 1250
+      fj_box_bottom     = 3140
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1245 | (3140 << 16)
+      fj_vertex_1       = 1240 | (3130 << 16)
+      fj_vertex_2       = 1250 | (3130 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger4
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #5
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2060
+      fj_box_top        = 570
+      fj_box_right      = 2070
+      fj_box_bottom     = 580
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2065 | (580 << 16)
+      fj_vertex_1       = 2060 | (570 << 16)
+      fj_vertex_2       = 2070 | (570 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger5
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar1100.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Government (AR1000) ***
+COPY_EXISTING ~ar1000.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2530
+      fj_box_top        = 420
+      fj_box_right      = 2540
+      fj_box_bottom     = 430
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2535 | (430 << 16)
+      fj_vertex_1       = 2530 | (420 << 16)
+      fj_vertex_2       = 2540 | (420 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 3570
+      fj_box_top        = 1170
+      fj_box_right      = 3580
+      fj_box_bottom     = 1180
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 3575 | (1180 << 16)
+      fj_vertex_1       = 3585 | (1170 << 16)
+      fj_vertex_2       = 3580 | (1170 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2430
+      fj_box_top        = 2430
+      fj_box_right      = 2440
+      fj_box_bottom     = 2440
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2435 | (2440 << 16)
+      fj_vertex_1       = 2430 | (2430 << 16)
+      fj_vertex_2       = 2440 | (2430 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar1000.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Waukeen's Promenade (AR0700) ***
+COPY_EXISTING ~ar0700.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 880
+      fj_box_top        = 1150
+      fj_box_right      = 890
+      fj_box_bottom     = 1160
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 885 | (1160 << 16)
+      fj_vertex_1       = 880 | (1150 << 16)
+      fj_vertex_2       = 890 | (1150 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1840
+      fj_box_top        = 2780
+      fj_box_right      = 1850
+      fj_box_bottom     = 2790
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1845 | (2790 << 16)
+      fj_vertex_1       = 1840 | (2780 << 16)
+      fj_vertex_2       = 1850 | (2780 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 3630
+      fj_box_top        = 3500
+      fj_box_right      = 3640
+      fj_box_bottom     = 3510
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 3635 | (3510 << 16)
+      fj_vertex_1       = 3630 | (3500 << 16)
+      fj_vertex_2       = 3640 | (3500 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar0700.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Bridge (AR0500) ***
+COPY_EXISTING ~ar0500.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 3000
+      fj_box_top        = 1080
+      fj_box_right      = 3010
+      fj_box_bottom     = 1090
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 3005 | (1090 << 16)
+      fj_vertex_1       = 3000 | (1080 << 16)
+      fj_vertex_2       = 3010 | (1080 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1640
+      fj_box_top        = 2690
+      fj_box_right      = 1650
+      fj_box_bottom     = 2700
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1645 | (2700 << 16)
+      fj_vertex_1       = 1640 | (2690 << 16)
+      fj_vertex_2       = 1650 | (2690 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar0500.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Slums (AR0400) ***
+COPY_EXISTING ~ar0400.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 1740
+      fj_box_top        = 550
+      fj_box_right      = 1750
+      fj_box_bottom     = 560
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 1745 | (560 << 16)
+      fj_vertex_1       = 1740 | (550 << 16)
+      fj_vertex_2       = 1750 | (550 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 430
+      fj_box_top        = 1220
+      fj_box_right      = 440
+      fj_box_bottom     = 1230
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 435 | (1230 << 16)
+      fj_vertex_1       = 430 | (1220 << 16)
+      fj_vertex_2       = 440 | (1220 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2800
+      fj_box_top        = 2460
+      fj_box_right      = 2810
+      fj_box_bottom     = 2470
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2805 | (2470 << 16)
+      fj_vertex_1       = 2800 | (2460 << 16)
+      fj_vertex_2       = 2810 | (2460 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar0400.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** Docks (AR0300) ***
+COPY_EXISTING ~ar0300.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2230
+      fj_box_top        = 490
+      fj_box_right      = 2240
+      fj_box_bottom     = 500
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2235 | (500 << 16)
+      fj_vertex_1       = 2230 | (490 << 16)
+      fj_vertex_2       = 2240 | (490 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #2
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 4040
+      fj_box_top        = 850
+      fj_box_right      = 4050
+      fj_box_bottom     = 860
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 4045 | (860 << 16)
+      fj_vertex_1       = 4040 | (850 << 16)
+      fj_vertex_2       = 4050 | (850 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger2
+      fj_reg_script     = A7Q2TRIG
+    END
+
+    // Trigger #3
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 2410
+      fj_box_top        = 2680
+      fj_box_right      = 2420
+      fj_box_bottom     = 2690
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 2415 | (2690 << 16)
+      fj_vertex_1       = 2410 | (2680 << 16)
+      fj_vertex_2       = 2420 | (2680 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger3
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar0300.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// *** City Gates (AR0020) ***
+COPY_EXISTING ~ar0020.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // Trigger #1
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0      // proximiy trigger
+      fj_box_left       = 610
+      fj_box_top        = 580
+      fj_box_right      = 620
+      fj_box_bottom     = 590
+      fj_cursor_idx     = 0      // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1      // is trapped
+      fj_vertex_0       = 615 | (590 << 16)
+      fj_vertex_1       = 610 | (580 << 16)
+      fj_vertex_2       = 620 | (580 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q2Trigger1
+      fj_reg_script     = A7Q2TRIG
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar0020.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END

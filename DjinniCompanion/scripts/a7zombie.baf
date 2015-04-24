@@ -1,0 +1,22 @@
+// Script for zombiefied (ex-)party members
+
+IF
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  EquipMostDamagingMelee()
+  Enemy()
+  Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  AttackReevaluate(NearestEnemyOf(Myself), 30)
+END
+
+IF
+  AttackedBy([ANYONE], DEFAULT)
+THEN RESPONSE #100
+  Attack(LastAttackerOf(Myself))
+END
+

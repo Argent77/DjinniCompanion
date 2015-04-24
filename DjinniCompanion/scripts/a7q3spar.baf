@@ -1,0 +1,189 @@
+// Sparring trigger for party members
+
+IF
+  OR(4)
+    Allegiance("A7Q3DR01", ENEMY)
+    Allegiance("A7Q3DR02", ENEMY)
+    Dead("A7Q3DR01")
+    Dead("A7Q3DR02")
+  Global("A7FightLearnedFromP1", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightLearnedFromP1", "MYAREA", 2)
+  SetGlobal("A7FightLearnedFromP2", "MYAREA", 2)
+  SetGlobal("A7FightLearnedFromP3", "MYAREA", 2)
+  SetGlobal("A7FightLearnedFromP4", "MYAREA", 2)
+  SetGlobal("A7FightLearnedFromP5", "MYAREA", 2)
+  SetGlobal("A7FightLearnedFromP6", "MYAREA", 2)
+END
+
+// Party member enters sparring range
+IF
+  Range(Player1, 10)
+  Global("A7FightObserveP1", "MYAREA", 0)
+  Global("A7FightLearnedFromP1", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP1", "MYAREA", 1)
+  SetGlobalTimer("A7WatchFightTimerP1", "MYAREA", 120)
+END
+
+IF
+  Range(Player2, 10)
+  Global("A7FightObserveP2", "MYAREA", 0)
+  Global("A7FightLearnedFromP2", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP2", "MYAREA", 1)
+  SetGlobalTimer("A7WatchFightTimerP2", "MYAREA", 120)
+END
+
+IF
+  Range(Player3, 10)
+  Global("A7FightObserveP3", "MYAREA", 0)
+  Global("A7FightLearnedFromP3", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP3", "MYAREA", 1)
+  SetGlobalTimer("A7WatchFightTimerP3", "MYAREA", 120)
+END
+
+IF
+  Range(Player4, 10)
+  Global("A7FightObserveP4", "MYAREA", 0)
+  Global("A7FightLearnedFromP4", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP4", "MYAREA", 1)
+  SetGlobalTimer("A7WatchFightTimerP4", "MYAREA", 120)
+END
+
+IF
+  Range(Player5, 10)
+  Global("A7FightObserveP5", "MYAREA", 0)
+  Global("A7FightLearnedFromP5", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP5", "MYAREA", 1)
+  SetGlobalTimer("A7WatchFightTimerP5", "MYAREA", 120)
+END
+
+IF
+  Range(Player6, 10)
+  Global("A7FightObserveP6", "MYAREA", 0)
+  Global("A7FightLearnedFromP6", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP6", "MYAREA", 1)
+  SetGlobalTimer("A7WatchFightTimerP6", "MYAREA", 120)
+END
+
+
+// Party member leaves sparring range
+IF
+  !Range(Player1, 10)
+  Global("A7FightObserveP1", "MYAREA", 1)
+  Global("A7FightLearnedFromP1", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP1", "MYAREA", 0)
+END
+
+IF
+  !Range(Player2, 10)
+  Global("A7FightObserveP2", "MYAREA", 1)
+  Global("A7FightLearnedFromP2", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP2", "MYAREA", 0)
+END
+
+IF
+  !Range(Player3, 10)
+  Global("A7FightObserveP3", "MYAREA", 1)
+  Global("A7FightLearnedFromP3", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP3", "MYAREA", 0)
+END
+
+IF
+  !Range(Player4, 10)
+  Global("A7FightObserveP4", "MYAREA", 1)
+  Global("A7FightLearnedFromP4", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP4", "MYAREA", 0)
+END
+
+IF
+  !Range(Player5, 10)
+  Global("A7FightObserveP5", "MYAREA", 1)
+  Global("A7FightLearnedFromP5", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP5", "MYAREA", 0)
+END
+
+IF
+  !Range(Player6, 10)
+  Global("A7FightObserveP6", "MYAREA", 1)
+  Global("A7FightLearnedFromP6", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightObserveP6", "MYAREA", 0)
+END
+
+
+// Party members learned something from the duergar match
+IF
+  !Allegiance("A7Q3DR01", ENEMY)
+  !Allegiance("A7Q3DR02", ENEMY)
+  !Dead("A7Q3DR01")
+  !Dead("A7Q3DR02")
+  GlobalTimerExpired("A7WatchFightTimerP1", "MYAREA")
+  Global("A7FightObserveP1", "MYAREA", 1)
+  Global("A7FightLearnedFromP1", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightLearnedFromP1", "MYAREA", 1)
+  AddXPObject(Player1, 20000)
+  DisplayString(Player1, @3980) // <PLAYER1> has learned something after watching the duergars sparring for a while.
+END
+
+IF
+  GlobalTimerExpired("A7WatchFightTimerP2", "MYAREA")
+  Global("A7FightObserveP2", "MYAREA", 1)
+  Global("A7FightLearnedFromP2", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightLearnedFromP2", "MYAREA", 1)
+  AddXPObject(Player2, 20000)
+  DisplayString(Player2, @3981) // <PLAYER2> has learned something after watching the duergars sparring for a while.
+END
+
+IF
+  GlobalTimerExpired("A7WatchFightTimerP3", "MYAREA")
+  Global("A7FightObserveP3", "MYAREA", 1)
+  Global("A7FightLearnedFromP3", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightLearnedFromP3", "MYAREA", 1)
+  AddXPObject(Player3, 20000)
+  DisplayString(Player3, @3982) // <PLAYER3> has learned something after watching the duergars sparring for a while.
+END
+
+IF
+  GlobalTimerExpired("A7WatchFightTimerP4", "MYAREA")
+  Global("A7FightObserveP4", "MYAREA", 1)
+  Global("A7FightLearnedFromP4", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightLearnedFromP4", "MYAREA", 1)
+  AddXPObject(Player4, 20000)
+  DisplayString(Player4, @3983) // <PLAYER4> has learned something after watching the duergars sparring for a while.
+END
+
+IF
+  GlobalTimerExpired("A7WatchFightTimerP5", "MYAREA")
+  Global("A7FightObserveP5", "MYAREA", 1)
+  Global("A7FightLearnedFromP5", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightLearnedFromP5", "MYAREA", 1)
+  AddXPObject(Player5, 20000)
+  DisplayString(Player5, @3984) // <PLAYER5> has learned something after watching the duergars sparring for a while.
+END
+
+IF
+  GlobalTimerExpired("A7WatchFightTimerP6", "MYAREA")
+  Global("A7FightObserveP6", "MYAREA", 1)
+  Global("A7FightLearnedFromP6", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FightLearnedFromP6", "MYAREA", 1)
+  AddXPObject(Player6, 20000)
+  DisplayString(Player6, @3985) // <PLAYER6> has learned something after watching the duergars sparring for a while.
+END
+

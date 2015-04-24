@@ -1,0 +1,769 @@
+// *** Modifying lots of cutscenes, scripts and dialogs to support Afaaq ***
+
+// *** Cutscene: Thieves Guild - Watching thieves training ***
+<<<<<<<< djinnicompanion/inlined/cut27a.baf
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  MoveToPointNoInterrupt([2101.1052])
+  Face(0)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~cut27a.bcs~ ~djinnicompanion/inlined/cut27a.baf~
+
+
+// *** Cutscene: Imoen dream (dream #1) ***
+COPY_EXISTING ~cut28a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Rest())\)~ ~\1 ActionOverride("A7Afaaq",Rest())~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR0011","",\[.+\..+\],.+))\)~ ~\1 MoveGlobal("AR0011","A7Afaaq",[620.1720])~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ApplySpell(Player6,SURE_SLEEP)\)~ ~\1 ApplySpell("A7Afaaq",SURE_SLEEP)~
+  END BUT_ONLY
+
+
+// *** Cutscene: Bard's Stronghold ***
+COPY_EXISTING ~cut31q.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR0523","",\[.+\..+\],6))\)~ ~\1 ActionOverride("A7Afaaq",LeaveAreaLUA("AR0523","",[648.632],11))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Mage's Stronghold graduation ceremony ***
+/* TODO: Check whether this cutscene is necessary
+COPY_EXISTING ~cut33a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,JumpToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([1237.1444]))~
+  END BUT_ONLY
+*/
+
+// *** Cutscene: Trademeet Hero announcement ***
+COPY_EXISTING ~cut37a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,JumpToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([461.628]))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Face(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",Face(\2))~
+  END BUT_ONLY
+
+
+// *** Spellhold Irenicus: Afaaq will be temporarily removed ***
+COPY_EXISTING ~ppjon.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(StartCutSceneMode()\)~ ~ActionOverride("A7Afaaq",RemoveFamiliar()) ChangeEnemyAlly("A7Afaaq",NEUTRAL) \1~
+  END BUT_ONLY
+
+<<<<<<<< djinnicompanion/inlined/ppireni1.d
+REPLACE_ACTION_TEXT PPIRENI1 
+  ~\(StartCutSceneMode()\)~ ~ActionOverride("A7Afaaq",RemoveFamiliar()) ChangeEnemyAlly("A7Afaaq",NEUTRAL) \1~
+  UNLESS ~ActionOverride("A7Afaaq",RemoveFamiliar())~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/ppireni1.d~
+
+
+// *** Cutscene: Party is teleported to the Asylum dungeon ***
+COPY_EXISTING ~cut41j.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR1512","",\[.+\..+\],.+))\)~ 
+      ~\1 
+       MoveGlobal("AR1512","A7Afaaq",[1614.1471]) 
+       ChangeEnemyAlly("A7Afaaq",FAMILIAR) 
+       ActionOverride("A7Afaaq",AddFamiliar()) 
+       SetGlobal("A7AfaaqSummoned","GLOBAL",1) 
+       ActionOverride("A7Afaaq",SetGlobal("initialize","LOCALS",1)) 
+       ActionOverride("A7Afaaq",ApplySpellRES("A7REST",Myself)) 
+       ActionOverride("A7Afaaq",SetSequence(SEQ_READY))
+       ActionOverride("A7Afaaq",Face(10))~
+  END BUT_ONLY
+
+// Failsave mechanism if the above script portion isn't called
+<<<<<<<< djinnicompanion/inlined/ar1512_afaaq.baf
+IF
+  Allegiance("A7Afaaq", NEUTRAL)
+  Global("A7AfaaqJoined", "AR1512", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqJoined", "AR1512", 1)
+  MoveGlobal("AR1512", "A7Afaaq", [1614.1471])
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)
+  ActionOverride("A7Afaaq", AddFamiliar())
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  ActionOverride("A7Afaaq", SetGlobal("initialize", "LOCALS", 1))
+  ActionOverride("A7Afaaq", ApplySpellRES("A7REST", Myself))
+  ActionOverride("A7Afaaq", SetSequence(SEQ_READY))
+END
+>>>>>>>>
+EXTEND_BOTTOM ~ar1512.bcs~ ~djinnicompanion/inlined/ar1512_afaaq.baf~
+
+
+// *** Cutscene: Party arrives in Sahuagin City ***
+COPY_EXISTING ~cut41r.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR2300","",\[.+\..+\],\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",LeaveAreaLUA("AR2300","",[1194.433],\2))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Party is ambushed when entering Mindflayer city ***
+COPY_EXISTING ~cut44aa.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride("udmind.+",ReallyForceSpell(Player6,\(.+\)))\)~ ~\1 Wait(1) ActionOverride("udmind01",ReallyForceSpell("A7Afaaq",\2))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Party is ambushed when entering Mindflayer city (continued) ***
+COPY_EXISTING ~cut44d.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ApplySpell(Player6,\(.+\))\)~ ~\1 ApplySpell("A7Afaaq",\2)~
+  END BUT_ONLY
+
+
+// *** Cutscene: Mindflayer City - Party is brought back into their prison ***
+COPY_EXISTING ~cut44f.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+  END BUT_ONLY
+
+
+// *** Cutscene: Drow City - House Despana summons the demon lord ***
+COPY_EXISTING ~cut44q.bcs~ ~override~
+        ~cut44t.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,JumpToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([906.232]))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Elven War Camp at the Underdark Entrance ***
+<<<<<<<< djinnicompanion/inlined/cut47a.baf
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  MoveToPoint([1341.1176])
+END
+>>>>>>>>
+EXTEND_BOTTOM ~cut47a.bcs~ ~djinnicompanion/inlined/cut47a.baf~
+
+
+// *** Cutscene: Imoen dream after Irenicus took CHARNAME's soul ***
+COPY_EXISTING ~cut49a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Rest())\)~ ~\1 ActionOverride("A7Afaaq",Rest())~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR0013","",\[.+\..+\],.+))\)~ ~\1 MoveGlobal("AR0013","A7Afaaq",[1294.382])~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ApplySpell(Player6,SURE_SLEEP)\)~ ~\1 ApplySpell("A7Afaaq",SURE_SLEEP) ~
+  END BUT_ONLY
+
+
+// *** Cutscene: Party teleports to Jarlaxle after Deirex Lich casts imprisonment ***
+COPY_EXISTING ~cut52a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+  END BUT_ONLY
+
+
+// *** Cutscene: Party has defeated Irenicus at Tree of Life ***
+COPY_EXISTING ~cut57c.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(SetGlobal("KillPartySlowly","AR2806",2)\)~ ~\1 ApplySpellRES("A7MISTC","A7Afaaq")~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~ 
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,PlayDead(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",PlayDead(\2))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ApplySpell(Player6,CLERIC_RESURRECTION)\)~ ~\1 ApplySpellRES("A7REST","A7Afaaq")~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Rest())\)~ ~\1 ActionOverride("A7Afaaq",Rest())~
+  END BUT_ONLY
+
+
+// *** Cutscene: Party defeats Irenicus in Hell and welcoming ceremony after defeating Irenicus in Elven Temple ***
+COPY_EXISTING ~cut59a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ApplySpell(Player6,CLERIC_RESURRECTION)\)~ ~\1 ApplySpellRES("A7REST","A7Afaaq")~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ApplySpellRES("cdpr417",Player6)\)~ ~\1 ApplySpellRES("cdpr417","A7Afaaq")~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR2812","",\[.+\..+\],.+))\)~ ~\1 MoveGlobal("AR2812","A7Afaaq",[495.316])~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Face(7))\)~ ~\1 ActionOverride("A7Afaaq",Face(8))~
+  END BUT_ONLY
+
+COPY_EXISTING ~cut59b.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Face(.+))\)~ ~\1 ActionOverride("A7Afaaq",Face(8))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Irenicus dream (dream #2) ***
+COPY_EXISTING ~cut67a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Rest())\)~ ~\1 ActionOverride("A7Afaaq",Rest())~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR0084","",\[.+\..+\],.+))\)~ ~\1 MoveGlobal("AR0084","A7Afaaq",[644.715]) ActionOverride("A7Afaaq", Face(7))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ApplySpell(Player6,SURE_SLEEP)\)~ ~\1 ApplySpell("A7Afaaq",SURE_SLEEP)~
+  END BUT_ONLY
+
+
+// *** Cutscene: Ellesime dream ***
+COPY_EXISTING ~cut68a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Rest())\)~ ~\1 ActionOverride("A7Afaaq",Rest())~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR0085","",\[.+\..+\],.+))\)~ ~\1 MoveGlobal("AR0085","A7Afaaq",[0.0])~
+  END BUT_ONLY
+
+
+// *** Cutscene: Irenicus dream (dream #3) ***
+// Note: causes incompatibilities with the unsummoned state of the djinni
+// COPY_EXISTING ~cut69a.bcs~ ~override~
+  // DECOMPILE_AND_PATCH BEGIN
+    // REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      // ~\(ActionOverride(Player6,Rest())\)~ ~\1 ActionOverride("A7Afaaq",Rest())~
+    // REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      // ~\(ActionOverride(Player6,LeaveAreaLUA("AR0084","",\[.+\..+\],.+))\)~ ~\1 MoveGlobal("AR0084","A7Afaaq",[1522.1349]) ActionOverride("A7Afaaq",Face(7))~
+    // REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      // ~\(ActionOverride(Player6,PlayDead(45))\)~ ~\1 ActionOverride("A7Afaaq",PlayDead(45))~
+  // END BUT_ONLY
+
+
+// *** Cutscene: Hell - Irenicus appears from the sealed Hell Door ***
+<<<<<<<< djinnicompanion/inlined/cut85b.baf
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  SmallWait(8)
+  Wait(3)
+  ForceSpellPoint([1955.658],BEHOLDER_BLAST_VISUAL2)
+  Wait(1)
+  CreateVisualEffect("SPFIREPI",[1955.658])
+  SmallWait(4)
+  JumpToPoint([1955.658])
+END
+>>>>>>>>
+EXTEND_BOTTOM ~cut85b.bcs~ ~djinnicompanion/inlined/cut85b.baf~
+
+
+// *** Cutscene: Watcher's Keep - Intro to Carsten the Mad ***
+<<<<<<<< djinnicompanion/inlined/cut207c.baf
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  Wait(4)
+  MoveToPoint([3167.2372])
+END
+>>>>>>>>
+EXTEND_BOTTOM ~cut207c.bcs~ ~djinnicompanion/inlined/cut207c.baf~
+
+
+// *** Cutscene: Watcher's Keep - Warrior Test ***
+COPY_EXISTING ~scut01.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,MakeUnselectable(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",MakeUnselectable(\2))~
+    END BUT_ONLY
+
+COPY_EXISTING ~scut14.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,MakeUnselectable(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",MakeUnselectable(\2))~
+    END BUT_ONLY
+
+
+// *** Cutscene: Solar Dreams #1 ***
+COPY_EXISTING ~cut217a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ApplySpell(Player6,\(.+\))\)~ ~\1 ApplySpell("A7Afaaq",\2)~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,PlayDeadInterrupt.+(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",PlayDeadInterruptible(\2))~
+  END BUT_ONLY
+
+
+COPY_EXISTING ~cut217f.bcs~ ~override~
+              ~cut217g.bcs~ ~override~
+              ~cut234c.bcs~ ~override~
+              ~cut234d.bcs~ ~override~
+              ~cut234e.bcs~ ~override~
+              ~cut234f.bcs~ ~override~
+              ~cut235c.bcs~ ~override~
+              ~cut235d.bcs~ ~override~
+              ~cut235e.bcs~ ~override~
+              ~cut235f.bcs~ ~override~
+              ~cut243e.bcs~ ~override~
+              ~cut243f.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,PlayDeadInterrupt.+(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",PlayDeadInterruptable(\2))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Old Bhaal Temple: Gorion Shade appears ***
+<<<<<<<< djinnicompanion/inlined/cut218a.baf
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  MoveToPoint([1617.1597])
+  Face(6)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~cut218a.bcs~ ~djinnicompanion/inlined/cut218a.baf~
+
+
+// *** Cutscene: Old Bhaal Temple: Gorion Shade - play dead ***
+<<<<<<<< djinnicompanion/inlined/cut218e.baf
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("A7Afaaq")
+    PlayDead(35)
+END
+>>>>>>>>
+EXTEND_BOTTOM ~cut218e.bcs~ ~djinnicompanion/inlined/cut218e.baf~
+
+
+// *** Cutscene: Party arrives in Saradush - Melissa and peasants argue with Gromnir's soldiers ***
+COPY_EXISTING ~cut220a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,ApplySpellRES("jwtrue",Myself))\)~ ~\1 ActionOverride("A7Afaaq",ApplySpellRES("jwtrue",Myself))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Party arrives in Saradush - Meet Melissa ***
+<<<<<<<< djinnicompanion/inlined/cut220b.baf
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  Wait(1)
+  CreateVisualEffect("SPDISPMA",[2073.1274])
+  JumpToPoint([2073.1274])
+END
+>>>>>>>>
+EXTEND_BOTTOM ~cut220b.bcs~ ~djinnicompanion/inlined/cut220b.baf~
+
+
+// *** Cutscene: Party enters Gromnir's Headquarter ***
+COPY_EXISTING ~cut225a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,MoveToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",MoveToPoint([778.686]))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Face(.+))\)~ ~\1 ActionOverride("A7Afaaq",Face(4))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Gromnir's Headquarter - Party aproaches Gromnir ***
+COPY_EXISTING ~cut225b.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,MoveToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",MoveToPoint([622.728]))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Face(.+))\)~ ~\1 ActionOverride("A7Afaaq",Face(6))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Duel between Sendai Lieutenant and Player1 ***
+COPY_EXISTING ~cut232a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Face(.+))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([878.770])) ActionOverride("A7Afaaq",Face(7))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,MakeUnselectable(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",MakeUnselectable(\2))~
+  END BUT_ONLY
+
+COPY_EXISTING ~cut232f.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player5,Face(.+))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([878.770])) ActionOverride("A7Afaaq",Face(7))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player5,MakeUnselectable(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",MakeUnselectable(\2))~
+  END BUT_ONLY
+
+COPY_EXISTING ~cut232g.bcs~ ~override~
+              ~cut232i.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,MakeUnselectable(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",MakeUnselectable(\2))~
+  END BUT_ONLY
+
+
+// *** Cutscene: The Throne of Bhaal - Battle with Amelyssan is decided and Solar appears ***
+COPY_EXISTING ~cut233g.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,JumpToPoint(\[.+\..+\]))\)~
+      ~\1 MoveGlobalObject("A7Afaaq",Player1) Deactivate("A7Afaaq") SetGlobal("A7AfaaqSummoned","GLOBAL",1) SetGlobal("A7AfaaqGaseous","GLOBAL",0)
+          ActionOverride("A7Afaaq",SetGlobal("initialize","LOCALS",1)) ActionOverride("A7Afaaq",ApplySpellRES("A7MISTC",Myself))
+          ActionOverride("A7Afaaq",ApplySpellRES("A7REST",Myself)) ActionOverride("A7Afaaq",Activate(Myself)) ActionOverride("A7Afaaq",SetSequence(SEQ_READY))
+          ChangeEnemyAlly("A7Afaaq",FAMILIAR) Wait(1) ActionOverride("A7Afaaq",JumpToPoint([1402.1216])) ActionOverride("A7Afaaq",FaceObject(Player1))~
+  END BUT_ONLY
+
+// Ascension specific
+ACTION_IF (FILE_EXISTS_IN_GAME ~cut233ga.bcs~ && FILE_EXISTS_IN_GAME ~cut233gb.bcs~) BEGIN
+  COPY_EXISTING ~cut233ga.bcs~ ~override~
+                ~cut233gb.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(ActionOverride(Player6,JumpToPoint(\[.+\..+\]))\)~
+        ~\1 MoveGlobalObject("A7Afaaq",Player1) Deactivate("A7Afaaq") SetGlobal("A7AfaaqSummoned","GLOBAL",1) SetGlobal("A7AfaaqGaseous","GLOBAL",0)
+            ActionOverride("A7Afaaq",SetGlobal("initialize","LOCALS",1)) ActionOverride("A7Afaaq",ApplySpellRES("A7MISTC",Myself))
+            ActionOverride("A7Afaaq",ApplySpellRES("A7REST",Myself)) ActionOverride("A7Afaaq",Activate(Myself)) ActionOverride("A7Afaaq",SetSequence(SEQ_READY))
+            ChangeEnemyAlly("A7Afaaq",FAMILIAR) Wait(1) ActionOverride("A7Afaaq",JumpToPoint([1402.1216])) ActionOverride("A7Afaaq",FaceObject(Player1))~
+    END BUT_ONLY
+END
+
+// *** Cutscene: Solar Dreams #2 ***
+COPY_EXISTING ~cut234a.bcs~ ~override~
+              ~cut235a.bcs~ ~override~
+              ~cut243a.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR4500","",\[.+\..+\],.+))\)~ ~\1 ActionOverride("A7Afaaq",LeaveAreaLUA("AR4500","",[1512.1200],13))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,PlayDeadInterrupt.+(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",PlayDeadInterruptable(\2))~
+  END BUT_ONLY
+
+
+// *** Cutscene: Saemon leads the party into Balthazar's Fortress ***
+COPY_EXISTING ~cut241b.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,MoveToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",MoveToPoint([923.1489]))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,JumpToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([1272.730]))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Face(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",Face(\2))~
+  END BUT_ONLY
+
+
+// *** Cutscene: ToB Hell Trial 4 ***
+COPY_EXISTING ~cutch4b.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,JumpToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([2480.1599]))~
+  END BUT_ONLY
+
+
+// *** Cutscene: ToB Hell Trial 4 (continued) ***
+COPY_EXISTING ~cutch4c.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,JumpToPoint(\[.+\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([3148.2321]))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+  END BUT_ONLY
+
+
+// *** Creature Script: Battle against Irenicus in Asylum laboratory ***
+COPY_EXISTING ~ppjon.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(CreateCreatureObjectCopy("\(.+\)",Player6,0,0,0)\)~ ~\1 CreateCreatureObjectCopy("\2","A7Afaaq",0,0,0)~
+  END BUT_ONLY
+
+
+// *** Area Script: Mage Stronghold ***
+COPY_EXISTING ~ar0411.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~ActionOverride(Player6,JumpToPoint(\[....\..+\]))~ ~ActionOverride(Player6,JumpToPoint([2904.2751])) ActionOverride("A7Afaaq",JumpToPoint([2984.2799]))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,JumpToPoint(\[...\..+\]))\)~ ~\1 ActionOverride("A7Afaaq",JumpToPoint([494.1216]))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,Wait(\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",Wait(\2))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ActionOverride(Player6,LeaveAreaLUA("AR0400","",\[.+\..+\],2))\)~ ~\1 ActionOverride("A7Afaaq",LeaveAreaLUA("AR0400","",[321.702],4))~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+  END BUT_ONLY
+
+
+// *** Area Script: Druid Enclave ***
+COPY_EXISTING ~ar1901.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(FakeEffectExpiryCheck(Player6,\(.+\))\)~ ~\1 FakeEffectExpiryCheck("A7Afaaq",\2)~
+  END BUT_ONLY
+
+
+// *** Area Script: Mindflayer City ***
+COPY_EXISTING ~ar2400.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+  END BUT_ONLY
+
+
+// *** Area Script: Pocket Plane ***
+COPY_EXISTING ~ar4500.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(CreateVisualEffectObject("SPSTRENH",Player6)\)~ ~\1 CreateVisualEffectObject("SPSTRENH","A7Afaaq")~
+  END BUT_ONLY
+
+
+// *** Dialog: Genie in Spellhold maze ***
+<<<<<<<< djinnicompanion/inlined/ppdjinn.d
+  REPLACE_TRANS_ACTION PPDJINN BEGIN 0 END BEGIN 0 END
+    ~GiveItemCreate("\(.+\)",LastTalkedToBy,0,0,0)~ ~GiveItemCreate("\1",Player1,0,0,0)~
+    UNLESS ~GiveItemCreate(".+",Player1,0,0,0)~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/ppdjinn.d~
+
+
+// *** Dialog: Apparition judging the mental state of CHARNAME in Spellhold dungeon ***
+<<<<<<<< djinnicompanion/inlined/elearb.d
+  REPLACE_TRANS_ACTION ELEARB01 BEGIN 4 6 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB01 BEGIN 4 6 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEARB02 BEGIN 3 5 6 10 11 12 13 14 15 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB02 BEGIN 3 5 6 10 11 12 13 14 15 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEARB03 BEGIN 3 5 6 10 11 12 13 14 15 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB03 BEGIN 4 6 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEARB04 BEGIN 4 5 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB04 BEGIN 4 5 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEARB06 BEGIN 1 3 5 7 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB06 BEGIN 1 3 5 7 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEARB07 BEGIN 2 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB07 BEGIN 2 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEARB08 BEGIN 2 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB08 BEGIN 2 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEARB09 BEGIN 2 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB09 BEGIN 2 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEARB10 BEGIN 3 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEARB10 BEGIN 3 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/elearb.d~
+
+<<<<<<<< djinnicompanion/inlined/elepuz.d
+  REPLACE_TRANS_ACTION ELEPUZ01 BEGIN 6 7 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEPUZ01 BEGIN 6 7 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEPUZ02 BEGIN 3 8 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEPUZ02 BEGIN 3 8 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+
+  REPLACE_TRANS_ACTION ELEPUZ04 BEGIN 3 END BEGIN 0 END
+    ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    UNLESS ~CreateVisualEffectObject(".+","A7Afaaq")~
+  REPLACE_TRANS_ACTION ELEPUZ04 BEGIN 3 END BEGIN 0 END
+    ~\(ActionOverride(Player6,CreateVisualEffectObject("\(.+\)",Myself))\)~ ~\1 ActionOverride("A7Afaaq",CreateVisualEffectObject("\2",Myself))~
+    UNLESS ~ActionOverride("A7Afaaq",CreateVisualEffectObject(".+",Myself))~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/elepuz.d~
+
+
+// *** Dialog: Machine of Lum ***
+<<<<<<<< djinnicompanion/inlined/gorlum.d
+  REPLACE_TRANS_ACTION GORLUM BEGIN 27 END BEGIN 0 END
+    ~\(ReallyForceSpell(Player6,\(.+\))\)~ ~\1 ReallyForceSpell("A7Afaaq",\2)~
+    UNLESS ~ReallyForceSpell("A7Afaaq",.+)~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/gorlum.d~
+
+
+// *** Dialog: Hendak in Copper Coronet ***
+<<<<<<<< djinnicompanion/inlined/hendak.d
+  REPLACE_TRANS_ACTION HENDAK BEGIN 17 END BEGIN 0 END
+    ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+    UNLESS ~ClearActions("A7Afaaq")~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/hendak.d~
+
+
+// *** Dialog: Despana Matron Mother ***
+<<<<<<<< djinnicompanion/inlined/udardul.d
+  REPLACE_TRANS_ACTION UDARDUL BEGIN 56 END BEGIN 0 END
+    ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+    UNLESS ~ClearActions("A7Afaaq")~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/udardul.d~
+
+
+// *** Dialog: Ogre in Mindflayer City ***
+<<<<<<<< djinnicompanion/inlined/udogre.d
+  REPLACE_TRANS_ACTION UDOGRE BEGIN 6 11 END BEGIN 0 END
+    ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+    UNLESS ~ClearActions("A7Afaaq")~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/udogre.d~
+
+
+// *** Dialog: Silver Dragon ***
+<<<<<<<< djinnicompanion/inlined/udsilver.d
+  REPLACE_TRANS_ACTION UDSILVER BEGIN 46 END BEGIN 0 END
+    ~\(ClearActions(Player6)\)~ ~\1 ClearActions("A7Afaaq")~
+    UNLESS ~ClearActions("A7Afaaq")~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/udsilver.d~
+
+
+// *** Dialog: Wish Genie ***
+<<<<<<<< djinnicompanion/inlined/wish.d
+  REPLACE_TRANS_ACTION WISH BEGIN 17 20 END BEGIN 0 END
+    ~\(ActionOverride(Player6,ReallyForceSpell(Myself,\(.+\)))\)~ ~\1 ActionOverride("A7Afaaq",ReallyForceSpell(Myself,\2))~
+    UNLESS ~ActionOverride("A7Afaaq",ReallyForceSpell(Myself,.+))~
+>>>>>>>>
+COMPILE ~djinnicompanion/inlined/wish.d~
+
+
+// *** BG2EE cutscenes ***
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  // Dorn
+  COPY_EXISTING ~ohdcut11.bcs~ ~override~
+                ~ohdcut13.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ 
+        ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    END BUT_ONLY
+
+
+  // Hexxat
+  COPY_EXISTING ~ohhcut09.bcs~ ~override~
+                ~ohhcut10.bcs~ ~override~
+                ~ohhcut11.bcs~ ~override~
+                ~ohhcut25.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ 
+        ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    END BUT_ONLY
+
+  COPY_EXISTING ~ohhcut12.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(ActionOverride(Player5,MoveToPoint(\[.+\..+\]))\)~ 
+        ~\1 ActionOverride("A7Afaaq",MoveToPoint([440.1648]))~
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(ActionOverride(Player5,FaceObject("hexxat"))\)~ 
+        ~\1 ActionOverride("A7Afaaq",FaceObject("hexxat"))~
+    END BUT_ONLY
+
+
+  // Neera
+  COPY_EXISTING ~ohncut02.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(ActionOverride(Player6,MoveToPoint(\[.+\..+\]))\)~ 
+        ~\1 ActionOverride("A7Afaaq",MoveToPoint([502.690]))~
+    END BUT_ONLY
+
+  COPY_EXISTING ~ohncut32.bcs~ ~override~
+                ~ohncut33.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ 
+        ~\1 CreateVisualEffectObject("\2","A7Afaaq")~
+    END BUT_ONLY
+
+
+  // Rasaad
+  COPY_EXISTING ~ohrcut17.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(ActionOverride(Player6,MoveToPoint(\[.+\..+\]))\)~ 
+        ~\1 ActionOverride("A7Afaaq",MoveToPoint([1414.2427]))~
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(ActionOverride(Player6,Face(W))\)~ 
+        ~\1 ActionOverride("A7Afaaq",Face(W))~
+    END BUT_ONLY
+
+  COPY_EXISTING ~ohrcut21.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(ActionOverride(Player6,MoveToPoint(\[.+\..+\]))\)~ 
+        ~\1 ActionOverride("A7Afaaq",MoveToPoint([2144.1665]))~
+    END BUT_ONLY
+
+  COPY_EXISTING ~ohrcut22.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE 
+        ~\(ActionOverride(Player6,MoveToPoint(\[.+\..+\]))\)~ 
+        ~\1 ActionOverride("A7Afaaq",MoveToPoint([535.1730]))~
+    END BUT_ONLY
+
+END

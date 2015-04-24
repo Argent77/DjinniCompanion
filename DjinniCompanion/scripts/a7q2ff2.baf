@@ -1,0 +1,32 @@
+// *** Trigger for inner forcefield in map A77004 (Jungle of Chult) ***
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 20)
+THEN RESPONSE #100
+  DisplayString(Myself, @2926)    // A second barrier blocks your way. You have to find a way to deactivate it first.
+END
+
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger, 20)
+THEN RESPONSE #100
+  DisplayString(Myself, @2925)    // You are too far away to examine it closely.
+END
+
+// Break the inner barrier in slayer form
+IF
+  GlobalGT("PassWards", "A77004", 0)
+  Range(Player1, 12)
+  Global("Slayer10", "GLOBAL", 2)
+  OR(2)
+    Global("WS3Set", "A77004", 0)
+    Global("WS4Set", "A77004", 0)
+  Global("SlayerPass2", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("SlayerPass2", "A77004", 1)
+  SetGlobal("WardstoneFound", "A77004", 1)
+  SetGlobal("WS3Set", "A77004", 1)
+  SetGlobal("WS4Set", "A77004", 1)
+  SetGlobal("SerpentRiddle", "A77004", 2)
+END

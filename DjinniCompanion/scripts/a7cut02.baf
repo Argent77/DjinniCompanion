@@ -1,0 +1,11 @@
+// *** Cutscene: Finish the game ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  FadeToColor([45.0], 0)
+  Wait(3)
+  EndCutSceneMode()
+  EndCredits()
+END

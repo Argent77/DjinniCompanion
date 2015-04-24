@@ -1,0 +1,28 @@
+// *** Cutscene: Malik and party move to the prison ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Malik")
+  FadeToColor([30.0], 0)
+  Wait(2)
+  JumpToPoint([2264.1125])
+  Face(12)
+  ActionOverride(Player1, JumpToPoint([2290.1178]))
+  ActionOverride(Player1, Face(10))
+  ActionOverride(Player2, JumpToPoint([2238.1180]))
+  ActionOverride(Player2, Face(11))
+  ActionOverride(Player3, JumpToPoint([2210.1138]))
+  ActionOverride(Player3, Face(12))
+  ActionOverride(Player4, JumpToPoint([2178.1180]))
+  ActionOverride(Player4, Face(11))
+  ActionOverride(Player5, JumpToPoint([2154.1138]))
+  ActionOverride(Player5, Face(12))
+  ActionOverride(Player6, JumpToPoint([2120.1180]))
+  ActionOverride(Player6, Face(11))
+  MultiPlayerSync()
+  MoveViewPoint([2264.1125], INSTANT)
+  FadeFromColor([30.0], 0)
+  Wait(2)
+  StartDialogueNoSet(Player1)
+END

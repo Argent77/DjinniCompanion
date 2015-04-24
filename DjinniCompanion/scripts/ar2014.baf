@@ -1,0 +1,10 @@
+// *** Area script for Dao genie tent in Trademeet ***
+
+// registering that Khaan Zahraa has been imprisoned
+IF
+  CheckStat("trgeni01", 167, A7SCRIPTINGSTATE1)
+  Global("A7Q1DaoTrapped", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7Q1DaoTrapped", "GLOBAL", 2)
+  Continue()
+END

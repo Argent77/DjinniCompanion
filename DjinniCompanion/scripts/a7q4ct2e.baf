@@ -1,0 +1,14 @@
+// *** Cutscene: Party and Afaaq are positioned before the Greed Genie again - Part 2 ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("HELLGEN")
+  ActionOverride("A7Afaaq", JumpToPoint([385.842]))
+  ActionOverride("A7Afaaq", FaceObject("HELLGEN"))
+  MultiPlayerSync()
+  MoveViewPoint([385.842], INSTANT)
+  FadeFromColor([30.0], 0)
+  SmallWait(30)
+  StartDialogueNoSet(Player1)
+END

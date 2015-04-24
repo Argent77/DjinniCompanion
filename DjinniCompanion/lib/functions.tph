@@ -1,0 +1,49 @@
+// *** Collection of macros and functions ***
+
+// Sets the banter intervals for the PC to the specified value
+DEFINE_ACTION_FUNCTION ~BanterAccelerator~
+  INT_VAR
+  pc_interval   = 3600    // PC banter interval (in seconds)
+//  npc_interval  = (2 * pc_interval) - (pc_interval / 3)     // NPC banter interval (in seconds)
+BEGIN
+  COMPILE ~DjinniCompanion/scripts/a7afqtlk.baf~
+    SET afq_banter_interval_pc  = pc_interval
+//    SET afq_banter_interval_npc = npc_interval
+    EVALUATE_BUFFER
+END
+
+
+// Decompresses MBC to MOS and TBC to TIS.
+DEFINE_ACTION_FUNCTION ~TileConv~
+  INT_VAR
+    compressMos = 0           // set to 1 to create compressed MOS (MOSC) from MBC files
+    verbose     = 0           // enable verbose text output (0=disabled, 1=enabled)
+  STR_VAR
+    srcFilePath = ~~          // the source filename with path
+    dstFileName = ~~          // the destination filename without path!
+    dstFolder   = ~override~  // the destination path, defaults to the "override" folder
+BEGIN
+  // setting options
+  ACTION_IF (compressMos != 0) BEGIN
+    OUTER_TEXT_SPRINT optionMosc ~-z~
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT optionMosc ~~
+  END
+  ACTION_IF (verbose != 0) BEGIN
+    OUTER_TEXT_SPRINT optionVerbose ~-v~
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT optionVerbose ~~
+  END
+  // generating command line for converting
+  ACTION_IF "%WEIDU_OS%" STRING_EQUAL_CASE "win32" BEGIN    // Windows
+    OUTER_TEXT_SPRINT cmd ~DjinniCompanion/tools/win32/tileconv.exe %optionVerbose% %optionMosc% -o "DjinniCompanion/tools/%dstFileName%" "%srcFilePath%"~
+  END ELSE ACTION_IF ("%WEIDU_OS%" STRING_EQUAL_CASE "osx") BEGIN   // Mac OS X
+    OUTER_TEXT_SPRINT cmd ~DjinniCompanion/tools/macosx/tileconv %optionVerbose% %optionMosc% -o "DjinniCompanion/tools/%dstFileName%" "%srcFilePath%"~
+  END ELSE BEGIN    // Linux
+    OUTER_TEXT_SPRINT cmd ~DjinniCompanion/tools/linux/tileconv %optionVerbose% %optionMosc% -o "DjinniCompanion/tools/%dstFileName%" "%srcFilePath%"~
+  END
+  PRINT ~%cmd%~
+  AT_NOW ~%cmd%~
+  COPY ~DjinniCompanion/tools/%dstFileName%~ ~%dstFolder%/%dstFileName%~
+  DELETE + ~DjinniCompanion/tools/%dstFileName%~
+END

@@ -1,0 +1,40 @@
+// Cutscene: Party activates Anchor Stone and teleports with Tathas to House Arabani
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  ActionOverride("A7Q3ANCH", DestroySelf())
+  ChangeEnemyAlly("A7Tathas", NEUTRAL)
+  CreateVisualEffectObject("A7Q3CT3", "A7Tathas")    // some flashy effects
+  Wait(1)
+  DisplayStringHead("A7Tathas", @3921)    // Wha..what is happening?!
+  Wait(1)
+  CreateVisualEffectObject("SPDIMNDR", Myself)
+  CreateVisualEffectObject("SPDIMNDR", Player2)
+  CreateVisualEffectObject("SPDIMNDR", Player3)
+  CreateVisualEffectObject("SPDIMNDR", Player4)
+  CreateVisualEffectObject("SPDIMNDR", Player5)
+  CreateVisualEffectObject("SPDIMNDR", Player6)
+  CreateVisualEffectObject("SPDIMNDR", "A7Afaaq")
+  CreateVisualEffectObject("SPDIMNDR", "A7Tathas")
+  SmallWait(20)
+  FadeToColor([30.0], 0)
+  SmallWait(25)
+  ActionOverride("A7Tathas", MoveBetweenAreas("A77007", [1323.769], 10))
+  SmallWait(1)
+  LeaveAreaLUAPanic("A77007", "", [1392.800], 8)
+  LeaveAreaLUA("A77007", "", [1392.800], 8)
+  ActionOverride(Player2, LeaveAreaLUA("A77007", "", [1381.851], 8))
+  ActionOverride(Player3, LeaveAreaLUA("A77007", "", [1324.844], 9))
+  ActionOverride(Player4, LeaveAreaLUA("A77007", "", [1439.856], 7))
+  ActionOverride(Player5, LeaveAreaLUA("A77007", "", [1338.902], 9))
+  ActionOverride(Player6, LeaveAreaLUA("A77007", "", [1401.908], 8))
+  ActionOverride("A7Afaaq", LeaveAreaLUA("A77007", "", [1461.800], 6))
+  MoveViewPoint([1392.800], INSTANT)
+  MultiPlayerSync()
+  FadeFromColor([30.0], 0)
+  SmallWait(30)
+  ActionOverride("A7ARAB01", DestroyItem("A7MISC4"))    // not needed anymore
+  ActionOverride("A7ARAB01", StartDialogueNoSet("A7Tathas"))
+END

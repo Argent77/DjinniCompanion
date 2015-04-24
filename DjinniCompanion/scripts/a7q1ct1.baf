@@ -1,0 +1,27 @@
+// *** Cutscene: Rakshasa map - Party is brought before the leader ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Mahel")
+  FadeToColor([30.0], 0)
+  Wait(2)
+  ActionOverride(Player1, JumpToPoint([1208.1203]))
+  ActionOverride(Player1, Face(8))
+  ActionOverride(Player2, JumpToPoint([1168.1226]))
+  ActionOverride(Player2, Face(8))
+  ActionOverride(Player3, JumpToPoint([1250.1226]))
+  ActionOverride(Player3, Face(8))
+  ActionOverride(Player4, JumpToPoint([1208.1248]))
+  ActionOverride(Player4, Face(8))
+  ActionOverride(Player5, JumpToPoint([1154.1276]))
+  ActionOverride(Player5, Face(8))
+  ActionOverride(Player6, JumpToPoint([1258.1276]))
+  ActionOverride(Player6, Face(8))
+  MoveViewPoint([1208.1203], INSTANT)
+  Wait(1)
+  MultiPlayerSync()
+  FadeFromColor([30.0], 0)
+  Wait(2)
+  StartDialogNoSet(Player1)
+END

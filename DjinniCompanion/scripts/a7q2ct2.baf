@@ -1,0 +1,38 @@
+// *** Cutscene: Teleport party to map A77004 ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  //ActionOverride("A7Q2TEL1", DestroySelf())
+  Wait(3)
+  StorePartyLocations()              // save current party location
+  CreateVisualEffectObject("ICRMPARI", Player1)
+  CreateVisualEffectObject("ICRMPARI", Player2)
+  CreateVisualEffectObject("ICRMPARI", Player3)
+  CreateVisualEffectObject("ICRMPARI", Player4)
+  CreateVisualEffectObject("ICRMPARI", Player5)
+  CreateVisualEffectObject("ICRMPARI", Player6)
+  FadeToColor([30.0], 0)
+  SmallWait(30)
+  // teleport to map A77004
+  LeaveAreaLUAPanic("A77004", "", [2166.324], 2)
+  LeaveAreaLUA("A77004", "", [2166.324], 2)
+  ActionOverride(Player2, LeaveAreaLUA("A77004", "", [2183.291], 2))
+  ActionOverride(Player3, LeaveAreaLUA("A77004", "", [2201.257], 2))
+  ActionOverride(Player4, LeaveAreaLUA("A77004", "", [2222.214], 2))
+  ActionOverride(Player5, LeaveAreaLUA("A77004", "", [2175.195], 2))
+  ActionOverride(Player6, LeaveAreaLUA("A77004", "", [2276.235], 2))
+  MultiPlayerSync()
+  //AmbientActivate("A704MS1", FALSE)
+  //SoundActivate("portal", FALSE)
+  //TriggerActivation("ToOrigin", FALSE)
+  //TriggerActivation("ToOriginBlocked", TRUE)
+  Wait(1)
+  FadeFromColor([30.0],0)
+  SmallWait(30)
+  EraseJournalEntry(@2800)
+  AddJournalEntry(@2801, QUEST)
+  EndCutSceneMode()
+END
+

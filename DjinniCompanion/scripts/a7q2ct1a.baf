@@ -1,0 +1,74 @@
+// *** Cutscene: Rakshasa party arrives, one of them snatches the lamp and teleports away (Part 1) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Q2RK3")
+  MoveViewObject(Player1, INSTANT)
+  SmallWait(10)
+  // pre-generate creatures (are invisible) and let them face Player1
+  MoveViewObject(Myself, VERY_FAST)
+  CreateCreatureObjectOffset("A7Q2RK4", Myself, [-50.-30])
+  CreateCreatureObjectOffset("A7Q2RK5", Myself, [-50.30])
+  CreateCreatureObjectOffset("A7Q2RK6", Myself, [50.-30])
+  CreateCreatureObjectOffset("A7Q2RK7", Myself, [50.30])
+  ActionOverride("A7Q2RK4", FaceObject(Player1))
+  ActionOverride("A7Q2RK5", FaceObject(Player1))
+  ActionOverride("A7Q2RK6", FaceObject(Player1))
+  ActionOverride("A7Q2RK7", FaceObject(Player1))
+  // Show teleport effect and let the rakshasa appear
+  CreateVisualEffectObject("ICRMPARI", Myself)
+  SmallWait(10)
+  DestroyItem("A7RING01")                  // make Myself visible
+  CreateVisualEffectObject("ICRMPARI", "A7Q2RK4")
+  SmallWait(2)
+  CreateVisualEffectObject("ICRMPARI", "A7Q2RK5")
+  SmallWait(2)
+  CreateVisualEffectObject("ICRMPARI", "A7Q2RK6")
+  SmallWait(2)
+  CreateVisualEffectObject("ICRMPARI", "A7Q2RK7")
+  SmallWait(4)
+  ActionOverride("A7Q2RK4", DestroyItem("A7RING01"))    // make Rakshasa 4 visible
+  SmallWait(2)
+  ActionOverride("A7Q2RK5", DestroyItem("A7RING01"))    // make Rakshasa 5 visible
+  SmallWait(2)
+  ActionOverride("A7Q2RK6", DestroyItem("A7RING01"))    // make Rakshasa 6 visible
+  SmallWait(2)
+  ActionOverride("A7Q2RK7", DestroyItem("A7RING01"))    // make Rakshasa 7 visible
+  SmallWait(10)
+  ActionOverride(Player1, FaceObject("A7Q2RK3"))
+  // A short series of overhead lines
+  DisplayStringHead(Myself, @2400)    // You are a slippery one, but we have finally tracked you down.
+  Wait(6)
+  DisplayStringHead(Myself, @2401)    // Did you really think we have forgotten your theft of our precious lamp?
+  Wait(6)
+  DisplayStringHead(Myself, @2402)    // I will take that from you...
+  SmallWait(25)
+  SetSequence(SEQ_CAST)
+  SmallWait(5)
+  // rakshasa steals the lamp from Player1
+  CreateVisualEffectObject("A7SHWTR", Player1)
+  TakePartyItem("A7DJLMP")
+  SmallWait(8)
+  CreateVisualEffectObject("A7SHAIR", Myself)
+  Wait(3)
+  // Another short series of overhead lines
+  FaceObject("A7Q2RK4")
+  SmallWait(1)
+  DisplayStringHead(Myself, @2403)    // Attack, my brothers. Fight for the glory of Ravanna!
+  ActionOverride("A7Q2RK4", FaceObject("A7Q2RK3"))
+  SmallWait(2)
+  ActionOverride("A7Q2RK5", FaceObject("A7Q2RK3"))
+  ActionOverride("A7Q2RK6", FaceObject("A7Q2RK3"))
+  SmallWait(2)
+  ActionOverride("A7Q2RK7", FaceObject("A7Q2RK3"))
+  Wait(4)
+  DisplayStringHead(Myself, @2404)    // I will deliver our prize to the master.
+  Wait(4)
+  // First rakshasa teleports away
+  CreateVisualEffectObject("ICRMPARI", Myself)
+  SmallWait(10)
+  Deactivate(Myself)
+  DestroySelf()
+  StartCutScene("A7Q2ct1b")
+END

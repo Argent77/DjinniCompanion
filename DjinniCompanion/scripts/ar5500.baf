@@ -1,0 +1,17 @@
+// *** script additions to area script of Amkethran (Quest 5) ***
+
+// Unlock the last story about Afaaq's past
+IF
+  Global("A7TalkAboutAncientTimes", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7TalkAboutAncientTimes", "GLOBAL", 1)
+  Continue()
+END
+
+// Make the result of the cleric-monk fight global
+IF
+  Global("AMTemplePlotFight", "AR5500", 2)
+  Global("A7TemplePlotFight", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7TemplePlotFight", "GLOBAL", 2)
+END

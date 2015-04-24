@@ -1,0 +1,160 @@
+// -*- coding: cp1252 -*- 
+// *** Strings related to Quest 4: "The Gift of Freedom" (index 4000...4999)
+
+// dialog lines (vanilla game)
+@4000 = ~So... let me get this straight.  The sword Blackrazor is the key to your release, and Afaaq's, too?~
+@4001 = ~So if I were to give you Blackrazor, you would be able to release Afaaq from his enchantment?  And that would also release you from your punishment?~
+@4002 = ~I will not support your decision, <CHARNAME>. You have to do it without me.~
+@4003 = ~But I see that you are already familiar with such a fate, as I sense someone in a situation not unlike my own in your ranks.~
+@4004 = ~Yes, Afaaq is his name and he is bound to a magical lamp.~
+@4005 = ~I am curious about what has brought him into this predicament.~
+@4006 = ~Greetings, Afaaq. I welcome you to my little prison. It would seem that our kind is fated to endure the whims of greater powers.~ [A7SLNT_S]
+@4007 = ~You are right. Yet my prison allows me more freedom, as I am bound to a lamp which <CHARNAME> has with <PRO_HIMHER>.~
+@4008 = ~Yes, I see...  This might open a path to your freedom though.~
+@4009 = ~There is nothing I desire more, but how is this possible?~
+@4010 = ~The Child of Bhaal holds power in this realm. Possibly enough power to overcome the enchantments which bind you to the lamp.~
+@4011 = ~He appears to be bound to an artifact of power. Hmm...  this might open a path to his freedom.~
+@4012 = ~You hold power in this realm. Possibly enough power to overcome the enchantments which bind him to the lamp.~
+@4013 = ~But there are certain... conditions which hold me here. Unless they are met, I can do nothing.~
+@4014 = ~And what conditions might those be?~
+@4015 = ~It shall, indeed.  You have been given the key which allows you to end my life... and that, too, is a release.~
+@4016 = ~No, my <PRO_LADYLORD>, do not do this. There must be another way.~
+@4017 = ~It is your decision, my <PRO_LADYLORD>.~
+@4018 = ~Maybe I was too hasty in my decision. There must be another way to release you. Why are you bound to this place?~
+@4019 = ~I have made my decision. Prepare to die!~
+@4020 = ~I welcome death... should you prove able.~
+@4021 = ~Maybe I was too hasty in my decision. There must be another way to release you. Could you please repeat the riddle again?~
+@4022 = ~As you have helped me, I will help your companion in turn.~
+@4023 = ~Breaking an enchantment of that kind is no simple task. Do you have anything in your possession which may support my attempt to do so?~
+@4024 = ~Yes, I have found a magical crystal which contains the sealed powers of Afaaq.~
+@4025 = ~I'm afraid not. But you told me of my own powers in this realm...~
+@4026 = ~That is exactly what I was looking for! With direct access to his spiritual essence I am able to break the enchantments of the lamp.~
+@4027 = ~The casting will take only a moment...~
+@4028 = ~Yes... you are closely linked to this place. In a way, this place is part of you.~
+@4029 = ~But without the means to access Afaaq's spiritual essence directly, there may be significant risks involved.~
+@4030 = ~What risk? What are you trying to do?~
+@4031 = ~I will take the risk. Begin your incantations!~
+@4032 = ~Your link to the divine will act as a catalyst to overcome the enchantments of Afaaq's magical prison. If the lamp is guarded by additional enchantments however, they will be projected back to you.~
+@4033 = ~Although I am reasonably sure it will cause no lethal damage, you should be prepared for anything.~
+@4034 = ~You ask too much from me. I won't risk my life while I am still looking for my own soul.~
+@4035 = ~This is a difficult decision. Please give me a moment, I still need time to think about it.~
+@4036 = ~Are you sure, my <PRO_LADYLORD>? There will be no second chance once I depart from this place.~
+@4037 = ~Yes. My decision is definite.~
+@4038 = ~Maybe I have to think it over again. Could you give me a moment to decide?~
+@4039 = ~As you will. I am free and wish you well in whatever trials you are to face.~
+@4040 = ~I will stay as long as you don't leave this part of the realm. But make a decision soon.~
+@4041 = ~Did you come to a decision yet, my <PRO_LADYLORD>?~ [A7SLNT_S]
+@4042 = ~I have found this magical crystal which contains the sealed powers of Afaaq. Would this be useful for your spell?~
+@4043 = ~Yes I did...  I have to turn down your offer. My own well-being is too important to me.~
+@4044 = ~Please give me a moment, I still need time to think about it.~
+@4045 = ~I do not see Afaaq's magical prison in your possession. Without it I can do nothing for him.~
+@4046 = ~I must have misplaced it. Please wait a moment while I look for it.~
+@4047 = ~Very good. Let me prepare the spell.~
+@4048 = ~I will begin the casting...~ [A7SLNT_S]
+@4049 = ~Very good. I will begin the casting...~
+@4050 = ~It is done.~ [A7SLNT_S]
+@4051 = ~I thank you again for my release. Good luck in whatever trials you are to face, my <PRO_LADYLORD>. And may your future shine brightly, Afaaq.~
+@4052 = ~It is done and you even survived it relatively unscathed.~ [A7SLNT_S]
+
+
+// dialog lines (QuestPack's Hell Trials installed)
+@4100 = ~So... let me get this straight.  The sword Blackrazor is the key to your release, and Afaaq's, too?~
+@4101 = ~So if I were to give you Blackrazor, you would be able to release Afaaq from his enchantment?  And that would also release you from your punishment?~
+@4102 = ~It is done, my <PRO_LADYLORD>.~
+@4103 = ~I will not support your decision, <CHARNAME>. You have to do it without me.~
+@4104 = ~I wish you luck in whatever trials you are to face.  Until we meet again.~
+@4105 = ~But I see that you are already familiar with such a fate, as I sense someone in a situation not unlike my own in your ranks.~
+@4106 = ~Yes, Afaaq is his name and he is bound to a magical lamp.~
+@4107 = ~I am curious about what has brought him into this predicament.~
+@4108 = ~Greetings, Afaaq. I welcome you to my little prison. It would seem that our kind is fated to endure the whims of greater powers.~ [A7SLNT_S]
+@4109 = ~You are right. Yet my prison allows me more freedom, as I am bound to a lamp which <CHARNAME> has with <PRO_HIMHER>.~
+@4110 = ~Yes, I see...  This might open a path to your freedom though.~
+@4111 = ~There is nothing I desire more, but how is this possible?~
+@4112 = ~The Child of Bhaal holds power in this realm. Possibly enough power to overcome the enchantments which bind you to the lamp.~
+@4113 = ~He appears to be bound to an artifact of power. Hmm...  this might open a path to his freedom.~
+@4114 = ~You hold power in this realm. Possibly enough power to overcome the enchantments which bind him to the lamp.~
+@4115 = ~But there are certain... conditions which hold me here. Unless they are met, I can do nothing.~
+@4116 = ~And what conditions might those be?~
+@4117 = ~It shall, indeed.  You have been given the key which allows you to end my life... and that, too, is a release.~
+@4118 = ~No, my <PRO_LADYLORD>, do not do this. There must be another way.~
+@4119 = ~It is your decision, my <PRO_LADYLORD>.~
+@4120 = ~Maybe I was too hasty in my decision. There must be another way to release you. Why are you bound to this place?~
+@4121 = ~I have made my decision. Prepare to die!~
+@4122 = ~I welcome death... should you prove able.~
+@4123 = ~Maybe I was too hasty in my decision. There must be another way to release you. Could you please repeat the riddle again?~
+@4124 = ~As you have helped me, I will help your companion in turn.~
+@4125 = ~Breaking an enchantment of that kind is no simple task. Do you have anything in your possession which may support my attempt to do so?~
+@4126 = ~Yes, I have found a magical crystal which contains the sealed powers of Afaaq.~
+@4127 = ~I'm afraid not. But you told me of my own powers in this realm...~
+@4128 = ~That is exactly what I was looking for! With direct access to his spiritual essence I am able to break the enchantments of the lamp.~
+@4129 = ~The casting will take only a moment...~
+@4130 = ~Yes... you are closely linked to this place. In a way, this place is part of you.~
+@4131 = ~But without the means to access Afaaq's spiritual essence directly, there may be significant risks involved.~
+@4132 = ~What risk? What are you trying to do?~
+@4133 = ~I will take the risk. Begin your incantations!~
+@4134 = ~Your link to the divine will act as a catalyst to overcome the enchantments of Afaaq's magical prison. If the lamp is guarded by additional enchantments however, they will be projected back to you.~
+@4135 = ~Although I am reasonably sure it will cause no lethal damage, you should be prepared for anything.~
+@4136 = ~You ask too much from me. I won't risk my life while I am still looking for my own soul.~
+@4137 = ~This is a difficult decision. Please give me a moment, I still need time to think about it.~
+@4138 = ~Are you sure, my <PRO_LADYLORD>? There will be no second chance once I depart from this place.~
+@4139 = ~Yes. My decision is definite.~
+@4140 = ~Maybe I have to think it over again. Could you give me a moment to decide?~
+@4141 = ~As you will. I am free and wish you well in whatever trials you are to face.~
+@4142 = ~As you will. I wish you well in whatever trials you are to face. Until we meet again.~
+@4143 = ~I will stay as long as you don't leave this part of the realm. But make a decision soon.~
+@4144 = ~I will stay here for a while. But I would suggest to make a decision soon.~
+@4145 = ~Did you come to a decision yet, my <PRO_LADYLORD>?~ [A7SLNT_S]
+@4146 = ~I have found this magical crystal which contains the sealed powers of Afaaq. Would this be useful for your spell?~
+@4147 = ~Yes I did...  I have to turn down your offer. My own well-being is too important to me.~
+@4148 = ~Please give me a moment, I still need time to think about it.~
+@4149 = ~I do not see Afaaq's magical prison in your possession. Without it I can do nothing for him.~
+@4150 = ~I must have misplaced it. Please wait a moment while I look for it.~
+@4151 = ~But I will need Blackrazor temporarily, to cast the spell. Without it I am powerless in this realm.~
+@4152 = ~Very good. Let me prepare the spell.~
+@4153 = ~I will begin the casting...~ [A7SLNT_S]
+@4154 = ~Very good. I will begin the casting...~
+@4155 = ~It is done.~ [A7SLNT_S]
+@4156 = ~It is done and you even survived it relatively unscathed.~ [A7SLNT_S]
+@4157 = ~I thank you again for my release. Good luck in whatever trials you are to face, my <PRO_LADYLORD>. And may your future shine brightly, Afaaq.~
+
+// dialog lines (special)
+@4200 = ~I will not help you. This is your fight alone, <CHARNAME>.~
+@4201 = ~You have killed the genie and missed my only chance to be free from my prison? I can not stand this anymore!~
+@4202 = ~The genie of your Greed Trial had the power to release me from my prison and you have not taken the chance to do so?~
+@4203 = ~You are indeed a selfish creature. I can not stand this anymore!~
+@4204 = ~I give up! In my present form I am unable to accomplish anything. You have won and I will heed your commands.~
+
+
+// journal entries
+@4800 = ~The Gift of Freedom
+
+I have decided to keep Blackrazor and kill the genie instead. Obviously Afaaq wasn't amused by my decision and refused his cooperation.~
+
+@4801 = ~The Gift of Freedom
+
+The genie of one of my hell trials offered his help to free Afaaq from his imprisonment. However, he has to channel his magic through my spiritual essence which might have adverse effects on me.~
+
+@4802 = ~The Gift of Freedom
+
+Afaaq is finally free! He is overjoyed and I can see his eagerness to return to his home at long last. However, he promised to stay with me until I have reclaimed my soul from Irenicus.~
+
+
+@4825 = ~The Gift of Freedom
+
+Afaaq is finally free! He is overjoyed by his regained freedom and promised to accompany me on my journey as long as I wish.~
+
+@4826 = ~The Gift of Freedom
+
+Afaaq's anger about my decision resulted in a fight between us. In the end I was victorious and Afaaq accepted my authority once and for all.~
+
+@4827 = ~The Gift of Freedom
+
+Afaaq was true to his word and helped me reclaim my soul from Irenicus. However, now that he has fulfilled his promise, I've granted his wish to return home.~
+
+@4828 = ~The Gift of Freedom
+
+Afaaq was true to his word and helped me reclaim my soul from Irenicus. However, seeing his usefulness in battle, I've refused his request to leave my presence. After a fight between us he accepted my authority once and for all.~
+
+
+// Misc. strings
+@4900 = ~Enslaved Djinni~

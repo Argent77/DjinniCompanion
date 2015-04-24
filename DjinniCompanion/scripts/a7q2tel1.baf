@@ -1,0 +1,57 @@
+// *** Triggers the teleporting sequence to map A77004 (Quest 2) ***
+
+// Don't trigger when in combat mode
+IF
+  Global("Teleported", "LOCALS", 0)
+  ActuallyInCombat()
+THEN RESPONSE #100
+  DisplayStringHead(LastSummonerOf(Myself), @2407)    // The ongoing battle makes it impossible for you to concentrate on the orb's powers.
+  DestroySelf()
+END
+
+// When Quest 2 has started and the Rakshasa Orb has been used, teleport the party to a new area
+IF
+  Global("A7Quest2", "GLOBAL", 1)
+  Global("Teleported", "LOCALS", 0)
+  !ActuallyInCombat()
+  !GlobalTimerExpired("A7Quest2Timer", "GLOBAL")
+THEN RESPONSE #100
+  SetGlobal("Teleported", "LOCALS", 1)
+  ClearAllActions()
+  MoveViewObject(LastSummonerOf(Myself), VERY_FAST)
+  DisplayStringHead(LastSummonerOf(Myself), @2408)    // The Jade Orb begins to glow and you are being wrapped into a gleaming light...
+  TakePartyItem("A7MISC3")
+  StartCutSceneMode()
+  StartCutScene("A7Q2ct2")
+END
+
+// also Quest 2, but the timer has run out
+IF
+  Global("A7Quest2", "GLOBAL", 1)
+  Global("Teleported", "LOCALS", 0)
+  !ActuallyInCombat()
+  GlobalTimerExpired("A7Quest2Timer", "GLOBAL")
+THEN RESPONSE #100
+  SetGlobal("A7Quest2", "GLOBAL", 9)      // Quest 2 has been cancelled
+  TakePartyItem("A7MISC3")
+  DisplayStringHead(LastSummonerOf(Myself), @2409)    // The Jade Orb flickers shortly and disintegrates into a cloud of dust. It looks like ...
+  EraseJournalEntry(@2800)
+  DestroySelf()
+END
+
+// Cheating not allowed
+IF
+  Global("Teleported", "LOCALS", 0)
+  !Global("A7Quest2", "GLOBAL", 1)
+THEN RESPONSE #100
+  DisplayStringHead(LastSummonerOf(Myself), @2410)    // The orb does nothing.
+  TakePartyItem("A7MISC3")
+  DestroySelf()
+END
+
+
+IF
+  True()
+THEN RESPONSE #100
+  DestroySelf()
+END

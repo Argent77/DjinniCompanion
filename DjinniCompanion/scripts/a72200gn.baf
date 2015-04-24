@@ -1,0 +1,37 @@
+// Proximity trigger in Ust Natha: Trigger talk about tortured genie
+
+// Trigger lamp talk when detecting the tortured genie
+IF
+  Delay(6)
+  HasItem("A7DJLMP", Player1)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Range([PC], 25)
+  Detect([PC])
+  !Dead("dagenie")
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7AfaaqMet", "GLOBAL", 1)
+  Global("DrowCityHostile", "GLOBAL", 0)
+  Global("A7DrowGenie", "AR2200", 0)
+THEN RESPONSE #100
+  SetGlobal("A7LampTalk", "GLOBAL", 1)
+  SetGlobal("A7DrowGenie", "AR2200", 2)
+  ActionOverride(Player1, StartDialogOverrideItem("A7DJLMP", Myself, 0, 0, 1))
+END
+
+// Trigger lamp talk after the tortured genie has been released
+IF
+  Delay(6)
+  HasItem("A7DJLMP", Player1)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect([PC])
+  Dead("dagenie")
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7AfaaqMet", "GLOBAL", 1)
+  Global("DrowCityHostile", "GLOBAL", 0)
+  GlobalLT("A7DrowGenie", "AR2200", 4)
+THEN RESPONSE #100
+  SetGlobal("A7LampTalk", "GLOBAL", 1)
+  SetGlobal("A7DrowGenie", "AR2200", 4)
+  ActionOverride(Player1, StartDialogOverrideItem("A7DJLMP", Myself, 0, 0, 1))
+END
+

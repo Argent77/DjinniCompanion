@@ -1,0 +1,70 @@
+// *** Cutscene: Malik drains a soul piece out of CHARNAME (Quest 5) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Malik")
+  FadeToColor([30.0], 0)
+  Wait(2)
+  FadeFromColor([30.0], 0)
+  Face(3)
+  Wait(3)
+  ForceSpellRES("A7Q5DRN", Player1)
+  ScreenShake([8.8], 10)
+  Wait(5)
+  StartDialogueNoSet(Player1)
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  Wait(2)
+  JumpToPoint([2440.1468])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player2)
+  Wait(2)
+  JumpToPoint([2378.1516])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player3)
+  Wait(2)
+  JumpToPoint([2518.1440])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player4)
+  Wait(2)
+  JumpToPoint([2272.1624])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player5)
+  Wait(2)
+  JumpToPoint([2208.1666])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player6)
+  Wait(2)
+  JumpToPoint([2168.1610])
+  FaceObject("A7Malik")
+END

@@ -1,0 +1,11 @@
+// *** Cutscene: Afaaq is powering up (part 2) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  ApplySpellRES("A7REST", Myself)
+  ApplySpellRES("A7UNSEL1",Myself)
+  SmallWait(30)
+  EndCutSceneMode()
+END

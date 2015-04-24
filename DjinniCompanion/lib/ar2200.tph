@@ -1,0 +1,654 @@
+// *** Area AR2200: Ust Natha ***
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/bg2ee/a7clamp.bmp"
+  OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/bg2ee/a7afaaqs.bmp"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/a7clamp.bam"
+  OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/a7afaaqs.bmp"
+END
+
+COPY ~DjinniCompanion/areas/a7q3ent1.bam~ ~override~
+
+COPY_EXISTING ~ar2200.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    // deactivating second Jae'llat entrance
+    READ_SHORT 0x5a regions_count
+    READ_LONG  0x5c regions_ofs
+    FOR (i = 0 ; i < regions_count ; i += 1) BEGIN
+      READ_ASCII (regions_ofs + i*0xc4) region_name (32) NULL
+      PATCH_IF (~%region_name%~ STRING_EQUAL_CASE ~Tran2209b~) BEGIN
+        READ_LONG (regions_ofs + i*0xc4 + 0x60) region_flags
+        WRITE_LONG (regions_ofs + i*0xc4 + 0x60) (region_flags | (1 << 8))    // deactivate region
+        i = regions_count
+      END
+    END
+
+    // Proximity trigger: for tortured genie
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0         // proximity trigger
+      fj_box_left       = 1930
+      fj_box_top        = 3180
+      fj_box_right      = 1936
+      fj_box_bottom     = 3186
+      fj_cursor_idx     = 0         // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1         // is trapped
+      fj_vertex_0       = 1930 + (3180 << 16)
+      fj_vertex_1       = 1936 + (3180 << 16)
+      fj_vertex_2       = 1936 + (3186 << 16)
+      fj_vertex_3       = 1930 + (3186 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7AfqGenie
+      fj_reg_script     = A72200GN
+    END
+
+    // Background animation: House Arabani entrance overlay
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 1697
+      fj_loc_y          = 1588
+      fj_flags          = (1 << 0) | (1 << 6) | (1 << 8) | (1 << 12)  // [Is shown, Not covered by wall, Draw as background, Don't remove in combat]
+      STR_VAR
+      fj_structure_type = animation
+      fj_name           = A7Q3Entry1
+      fj_bam_resref     = A7Q3ENT1
+    END
+
+    // Travel region: to House Arabani area
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 2         // travel trigger
+      fj_box_left       = 3459
+      fj_box_top        = 1309
+      fj_box_right      = 3511
+      fj_box_bottom     = 1401
+      fj_flags          = (1 << 2)  // [Party required]
+      fj_cursor_idx     = 28        // stairs cursor
+      fj_loc_x          = 3485
+      fj_loc_y          = 1380
+      fj_vertex_0       = 3459 + (1401 << 16)
+      fj_vertex_1       = 3466 + (1351 << 16)
+      fj_vertex_2       = 3477 + (1320 << 16)
+      fj_vertex_3       = 3486 + (1309 << 16)
+      fj_vertex_4       = 3496 + (1309 << 16)
+      fj_vertex_5       = 3504 + (1321 << 16)
+      fj_vertex_6       = 3507 + (1333 << 16)
+      fj_vertex_7       = 3510 + (1351 << 16)
+      fj_vertex_8       = 3511 + (1369 << 16)
+      STR_VAR
+      fj_structure_type   = region
+      fj_name             = A7Q3House1
+      fj_destination_area = AR2200
+      fj_destination_name = A7Q3Exit2
+    END
+
+    // Entrance: to House Arabani area
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 3495
+      fj_loc_y          = 1397
+      fj_orientation    = 14    // southeast
+      STR_VAR
+      fj_structure_type = entrance
+      fj_name           = A7Q3Exit1
+    END
+
+    // Info region: House Arabani (used for both information and travel)
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 1       // info trigger
+      fj_box_left       = 1697
+      fj_box_top        = 1587
+      fj_box_right      = 1769
+      fj_box_bottom     = 1660
+      fj_cursor_idx     = 30      // entrance cursor
+      fj_trap_active    = 1
+      fj_vertex_0       = 1697 + (1660 << 16)
+      fj_vertex_1       = 1702 + (1620 << 16)
+      fj_vertex_2       = 1709 + (1605 << 16)
+      fj_vertex_3       = 1728 + (1587 << 16)
+      fj_vertex_4       = 1739 + (1587 << 16)
+      fj_vertex_5       = 1752 + (1598 << 16)
+      fj_vertex_6       = 1764 + (1623 << 16)
+      fj_vertex_7       = 1769 + (1660 << 16)
+      STR_VAR
+      fj_structure_type   = region
+      fj_name             = A7Q3House2a
+      fj_reg_script       = A7Q3A007
+    END
+
+    // Entrance: House Arabani
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 1734
+      fj_loc_y          = 1683
+      fj_orientation    = 0     // south
+      STR_VAR
+      fj_structure_type = entrance
+      fj_name           = A7Q3Exit3
+    END
+
+    // Travel region: to main area
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 2       // travel trigger
+      fj_box_left       = 1797
+      fj_box_top        = 1591
+      fj_box_right      = 1884
+      fj_box_bottom     = 1687
+      fj_loc_x          = 1839
+      fj_loc_y          = 1645
+      fj_flags          = (1 << 2)  // [Party required]
+      fj_cursor_idx     = 28      // stairs cursor
+      fj_vertex_0       = 1797 + (1643 << 16)
+      fj_vertex_1       = 1844 + (1591 << 16)
+      fj_vertex_2       = 1884 + (1646 << 16)
+      fj_vertex_3       = 1839 + (1687 << 16)
+      STR_VAR
+      fj_structure_type   = region
+      fj_name             = A7Q3House3
+      fj_destination_area = AR2200
+      fj_destination_name = A7Q3Exit1
+    END
+
+    // Entrance: to main area
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 1790
+      fj_loc_y          = 1680
+      fj_orientation    = 3     // west-southwest
+      STR_VAR
+      fj_structure_type = entrance
+      fj_name           = A7Q3Exit2
+    END
+
+    // Info region: no entrance to lower city
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 1       // info trigger
+      fj_box_left       = 1869
+      fj_box_top        = 1700
+      fj_box_right      = 1932
+      fj_box_bottom     = 1790
+      fj_cursor_idx     = 22      // info cursor
+      fj_info_point_strref  = RESOLVE_STR_REF(@3971)    // This passage leads to the lower parts of the city. The amount of debris and cobwebs suggests that it has been abandoned a long time ago.
+      fj_vertex_0       = 1869 + (1733 << 16)
+      fj_vertex_1       = 1932 + (1700 << 16)
+      fj_vertex_2       = 1932 + (1785 << 16)
+      fj_vertex_3       = 1885 + (1790 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7Q3House4
+    END
+
+    // Automap note: House Arabani
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 1734
+      fj_loc_y          = 1590
+      fj_note_strref    = RESOLVE_STR_REF(@3972)    // House Arabani
+      STR_VAR
+      fj_structure_type = note
+    END
+
+    // Automap note: Passage to House Arabani
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x          = 3550
+      fj_loc_y          = 1336
+      fj_note_strref    = RESOLVE_STR_REF(@3973)    // Passage to House Arabani
+      STR_VAR
+      fj_structure_type = note
+    END
+
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar2200.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// patching AR2200 height map
+OUTER_SET file_valid = 0
+COPY_EXISTING ~AR2200HT.BMP~ ~override~
+  // sanity check
+  READ_LONG 0x12 bmp_width
+  READ_LONG 0x16 bmp_height
+  READ_SHORT 0x1c bmp_bpp
+  PATCH_IF (bmp_width == 320 && bmp_height == 320 && bmp_bpp == 4) BEGIN
+    // created by: weidu.exe --cmp-from AR2200HT_old.BMP --cmp-to AR2200HT_new.BMP
+    file_valid = 1
+    WRITE_BYTE 0x708f 200 // 0xc8
+    WRITE_BYTE 0x712e 139 // 0x8b
+    WRITE_BYTE 0x712f 222 // 0xde
+    WRITE_BYTE 0x71ce 189 // 0xbd
+    WRITE_BYTE 0x71cf 238 // 0xee
+    WRITE_BYTE 0x71d0 248 // 0xf8
+    WRITE_BYTE 0x726d 139 // 0x8b
+    WRITE_BYTE 0x726e 222 // 0xde
+    WRITE_BYTE 0x726f 239 // 0xef
+    WRITE_BYTE 0x7270 255 // 0xff
+    WRITE_BYTE 0x730e 238 // 0xee
+    WRITE_BYTE 0x730f 255 // 0xff
+    WRITE_BYTE 0x7310 255 // 0xff
+    WRITE_BYTE 0x7311 248 // 0xf8
+    WRITE_BYTE 0x73ae 239 // 0xef
+    WRITE_BYTE 0x73af 255 // 0xff
+    WRITE_BYTE 0x73b0 255 // 0xff
+    WRITE_BYTE 0x73b1 248 // 0xf8
+    WRITE_BYTE 0x744e 143 // 0x8f
+    WRITE_BYTE 0x744f 255 // 0xff
+    WRITE_BYTE 0x7450 255 // 0xff
+    WRITE_BYTE 0x74ef 255 // 0xff
+    WRITE_BYTE 0x74f0 254 // 0xfe
+    WRITE_BYTE 0x758f 143 // 0x8f
+    WRITE_BYTE 0x7590 232 // 0xe8
+  END
+ACTION_IF (file_valid == 0) BEGIN
+  // Fallback solution
+  COPY ~DjinniCompanion/areas/ar2200ht.bmp~ ~override~
+END
+
+// patching AR2200 light map
+OUTER_SET file_valid = 0
+COPY_EXISTING ~AR2200LM.BMP~ ~override~
+  // sanity check
+  READ_LONG 0x12 bmp_width
+  READ_LONG 0x16 bmp_height
+  READ_SHORT 0x1c bmp_bpp
+  PATCH_IF (bmp_width == 320 && bmp_height == 320 && bmp_bpp == 8) BEGIN
+    // created by: weidu.exe --cmp-from AR2200LM_old.BMP --cmp-to AR2200LM_new.BMP
+    file_valid = 1
+    WRITE_BYTE 0xd7ec 6 // 0x06
+    WRITE_BYTE 0xd7ed 6 // 0x06
+    WRITE_BYTE 0xd928 6 // 0x06
+    WRITE_BYTE 0xd929 17 // 0x11
+    WRITE_BYTE 0xd92a 17 // 0x11
+    WRITE_BYTE 0xd92b 132 // 0x84
+    WRITE_BYTE 0xd92c 132 // 0x84
+    WRITE_BYTE 0xd92d 132 // 0x84
+    WRITE_BYTE 0xd92e 132 // 0x84
+    WRITE_BYTE 0xd92f 6 // 0x06
+    WRITE_BYTE 0xda66 17 // 0x11
+    WRITE_BYTE 0xda67 132 // 0x84
+    WRITE_BYTE 0xda68 132 // 0x84
+    WRITE_BYTE 0xda69 139 // 0x8b
+    WRITE_BYTE 0xda6a 141 // 0x8d
+    WRITE_BYTE 0xda6b 148 // 0x94
+    WRITE_BYTE 0xda6c 148 // 0x94
+    WRITE_BYTE 0xda6d 148 // 0x94
+    WRITE_BYTE 0xda6e 141 // 0x8d
+    WRITE_BYTE 0xda6f 132 // 0x84
+    WRITE_BYTE 0xdba3 6 // 0x06
+    WRITE_BYTE 0xdba4 17 // 0x11
+    WRITE_BYTE 0xdba5 132 // 0x84
+    WRITE_BYTE 0xdba6 139 // 0x8b
+    WRITE_BYTE 0xdba7 145 // 0x91
+    WRITE_BYTE 0xdba8 148 // 0x94
+    WRITE_BYTE 0xdba9 150 // 0x96
+    WRITE_BYTE 0xdbaa 157 // 0x9d
+    WRITE_BYTE 0xdbab 157 // 0x9d
+    WRITE_BYTE 0xdbac 154 // 0x9a
+    WRITE_BYTE 0xdbad 154 // 0x9a
+    WRITE_BYTE 0xdbae 150 // 0x96
+    WRITE_BYTE 0xdbaf 139 // 0x8b
+    WRITE_BYTE 0xdbb0 6 // 0x06
+    WRITE_BYTE 0xdce1 9 // 0x09
+    WRITE_BYTE 0xdce2 133 // 0x85
+    WRITE_BYTE 0xdce3 132 // 0x84
+    WRITE_BYTE 0xdce4 139 // 0x8b
+    WRITE_BYTE 0xdce5 148 // 0x94
+    WRITE_BYTE 0xdce6 150 // 0x96
+    WRITE_BYTE 0xdce7 157 // 0x9d
+    WRITE_BYTE 0xdce8 154 // 0x9a
+    WRITE_BYTE 0xdce9 154 // 0x9a
+    WRITE_BYTE 0xdcea 154 // 0x9a
+    WRITE_BYTE 0xdceb 154 // 0x9a
+    WRITE_BYTE 0xdcec 154 // 0x9a
+    WRITE_BYTE 0xdced 154 // 0x9a
+    WRITE_BYTE 0xdcee 157 // 0x9d
+    WRITE_BYTE 0xdcef 139 // 0x8b
+    WRITE_BYTE 0xdcf0 9 // 0x09
+    WRITE_BYTE 0xde1e 9 // 0x09
+    WRITE_BYTE 0xde1f 133 // 0x85
+    WRITE_BYTE 0xde20 134 // 0x86
+    WRITE_BYTE 0xde21 144 // 0x90
+    WRITE_BYTE 0xde22 141 // 0x8d
+    WRITE_BYTE 0xde23 148 // 0x94
+    WRITE_BYTE 0xde24 150 // 0x96
+    WRITE_BYTE 0xde25 157 // 0x9d
+    WRITE_BYTE 0xde26 159 // 0x9f
+    WRITE_BYTE 0xde27 154 // 0x9a
+    WRITE_BYTE 0xde28 154 // 0x9a
+    WRITE_BYTE 0xde29 154 // 0x9a
+    WRITE_BYTE 0xde2a 154 // 0x9a
+    WRITE_BYTE 0xde2b 154 // 0x9a
+    WRITE_BYTE 0xde2c 154 // 0x9a
+    WRITE_BYTE 0xde2d 159 // 0x9f
+    WRITE_BYTE 0xde2e 150 // 0x96
+    WRITE_BYTE 0xde2f 144 // 0x90
+    WRITE_BYTE 0xde30 9 // 0x09
+    WRITE_BYTE 0xdf5d 160 // 0xa0
+    WRITE_BYTE 0xdf5e 134 // 0x86
+    WRITE_BYTE 0xdf5f 146 // 0x92
+    WRITE_BYTE 0xdf60 146 // 0x92
+    WRITE_BYTE 0xdf61 151 // 0x97
+    WRITE_BYTE 0xdf62 156 // 0x9c
+    WRITE_BYTE 0xdf63 159 // 0x9f
+    WRITE_BYTE 0xdf64 159 // 0x9f
+    WRITE_BYTE 0xdf65 159 // 0x9f
+    WRITE_BYTE 0xdf66 159 // 0x9f
+    WRITE_BYTE 0xdf67 159 // 0x9f
+    WRITE_BYTE 0xdf68 159 // 0x9f
+    WRITE_BYTE 0xdf69 154 // 0x9a
+    WRITE_BYTE 0xdf6a 159 // 0x9f
+    WRITE_BYTE 0xdf6b 157 // 0x9d
+    WRITE_BYTE 0xdf6c 157 // 0x9d
+    WRITE_BYTE 0xdf6d 150 // 0x96
+    WRITE_BYTE 0xdf6e 145 // 0x91
+    WRITE_BYTE 0xdf6f 134 // 0x86
+    WRITE_BYTE 0xe09c 15 // 0x0f
+    WRITE_BYTE 0xe09d 162 // 0xa2
+    WRITE_BYTE 0xe09e 166 // 0xa6
+    WRITE_BYTE 0xe09f 167 // 0xa7
+    WRITE_BYTE 0xe0a0 167 // 0xa7
+    WRITE_BYTE 0xe0a1 155 // 0x9b
+    WRITE_BYTE 0xe0a2 155 // 0x9b
+    WRITE_BYTE 0xe0a3 159 // 0x9f
+    WRITE_BYTE 0xe0a4 159 // 0x9f
+    WRITE_BYTE 0xe0a5 159 // 0x9f
+    WRITE_BYTE 0xe0a6 159 // 0x9f
+    WRITE_BYTE 0xe0a7 159 // 0x9f
+    WRITE_BYTE 0xe0a8 157 // 0x9d
+    WRITE_BYTE 0xe0a9 157 // 0x9d
+    WRITE_BYTE 0xe0aa 150 // 0x96
+    WRITE_BYTE 0xe0ab 148 // 0x94
+    WRITE_BYTE 0xe0ac 145 // 0x91
+    WRITE_BYTE 0xe0ad 144 // 0x90
+    WRITE_BYTE 0xe0ae 160 // 0xa0
+    WRITE_BYTE 0xe1dc 168 // 0xa8
+    WRITE_BYTE 0xe1dd 166 // 0xa6
+    WRITE_BYTE 0xe1de 180 // 0xb4
+    WRITE_BYTE 0xe1df 180 // 0xb4
+    WRITE_BYTE 0xe1e0 180 // 0xb4
+    WRITE_BYTE 0xe1e1 214 // 0xd6
+    WRITE_BYTE 0xe1e2 180 // 0xb4
+    WRITE_BYTE 0xe1e3 214 // 0xd6
+    WRITE_BYTE 0xe1e4 180 // 0xb4
+    WRITE_BYTE 0xe1e5 180 // 0xb4
+    WRITE_BYTE 0xe1e6 159 // 0x9f
+    WRITE_BYTE 0xe1e7 166 // 0xa6
+    WRITE_BYTE 0xe1e8 151 // 0x97
+    WRITE_BYTE 0xe1e9 146 // 0x92
+    WRITE_BYTE 0xe1ea 144 // 0x90
+    WRITE_BYTE 0xe1eb 134 // 0x86
+    WRITE_BYTE 0xe1ec 162 // 0xa2
+    WRITE_BYTE 0xe1ed 133 // 0x85
+    WRITE_BYTE 0xe31c 174 // 0xae
+    WRITE_BYTE 0xe31d 167 // 0xa7
+    WRITE_BYTE 0xe31e 215 // 0xd7
+    WRITE_BYTE 0xe31f 215 // 0xd7
+    WRITE_BYTE 0xe320 215 // 0xd7
+    WRITE_BYTE 0xe321 215 // 0xd7
+    WRITE_BYTE 0xe322 182 // 0xb6
+    WRITE_BYTE 0xe323 182 // 0xb6
+    WRITE_BYTE 0xe324 167 // 0xa7
+    WRITE_BYTE 0xe325 178 // 0xb2
+    WRITE_BYTE 0xe326 166 // 0xa6
+    WRITE_BYTE 0xe327 163 // 0xa3
+    WRITE_BYTE 0xe328 162 // 0xa2
+    WRITE_BYTE 0xe329 160 // 0xa0
+    WRITE_BYTE 0xe32a 15 // 0x0f
+    WRITE_BYTE 0xe45c 174 // 0xae
+    WRITE_BYTE 0xe45d 179 // 0xb3
+    WRITE_BYTE 0xe45e 215 // 0xd7
+    WRITE_BYTE 0xe45f 215 // 0xd7
+    WRITE_BYTE 0xe460 215 // 0xd7
+    WRITE_BYTE 0xe461 215 // 0xd7
+    WRITE_BYTE 0xe462 182 // 0xb6
+    WRITE_BYTE 0xe463 186 // 0xba
+    WRITE_BYTE 0xe464 215 // 0xd7
+    WRITE_BYTE 0xe465 215 // 0xd7
+    WRITE_BYTE 0xe466 178 // 0xb2
+    WRITE_BYTE 0xe467 166 // 0xa6
+    WRITE_BYTE 0xe468 163 // 0xa3
+    WRITE_BYTE 0xe469 169 // 0xa9
+    WRITE_BYTE 0xe59c 175 // 0xaf
+    WRITE_BYTE 0xe59d 186 // 0xba
+    WRITE_BYTE 0xe59e 215 // 0xd7
+    WRITE_BYTE 0xe59f 215 // 0xd7
+    WRITE_BYTE 0xe5a0 215 // 0xd7
+    WRITE_BYTE 0xe5a1 215 // 0xd7
+    WRITE_BYTE 0xe5a2 182 // 0xb6
+    WRITE_BYTE 0xe5a3 186 // 0xba
+    WRITE_BYTE 0xe5a4 215 // 0xd7
+    WRITE_BYTE 0xe5a5 215 // 0xd7
+    WRITE_BYTE 0xe5a6 215 // 0xd7
+    WRITE_BYTE 0xe5a7 182 // 0xb6
+    WRITE_BYTE 0xe5a8 179 // 0xb3
+    WRITE_BYTE 0xe5a9 177 // 0xb1
+    WRITE_BYTE 0xe5aa 172 // 0xac
+    WRITE_BYTE 0xe5ab 49 // 0x31 == 1
+    WRITE_BYTE 0xe6dc 70 // 0x46 == F
+    WRITE_BYTE 0xe6dd 175 // 0xaf
+    WRITE_BYTE 0xe6de 186 // 0xba
+    WRITE_BYTE 0xe6df 186 // 0xba
+    WRITE_BYTE 0xe6e0 182 // 0xb6
+    WRITE_BYTE 0xe6e1 215 // 0xd7
+    WRITE_BYTE 0xe6e2 215 // 0xd7
+    WRITE_BYTE 0xe6e3 215 // 0xd7
+    WRITE_BYTE 0xe6e4 215 // 0xd7
+    WRITE_BYTE 0xe6e5 215 // 0xd7
+    WRITE_BYTE 0xe6e6 215 // 0xd7
+    WRITE_BYTE 0xe6e7 182 // 0xb6
+    WRITE_BYTE 0xe6e8 215 // 0xd7
+    WRITE_BYTE 0xe6e9 179 // 0xb3
+    WRITE_BYTE 0xe6ea 176 // 0xb0
+    WRITE_BYTE 0xe6eb 51 // 0x33 == 3
+    WRITE_BYTE 0xe81d 83 // 0x53 == S
+    WRITE_BYTE 0xe81e 175 // 0xaf
+    WRITE_BYTE 0xe81f 185 // 0xb9
+    WRITE_BYTE 0xe820 186 // 0xba
+    WRITE_BYTE 0xe821 215 // 0xd7
+    WRITE_BYTE 0xe822 215 // 0xd7
+    WRITE_BYTE 0xe823 215 // 0xd7
+    WRITE_BYTE 0xe824 182 // 0xb6
+    WRITE_BYTE 0xe825 186 // 0xba
+    WRITE_BYTE 0xe826 186 // 0xba
+    WRITE_BYTE 0xe827 182 // 0xb6
+    WRITE_BYTE 0xe828 182 // 0xb6
+    WRITE_BYTE 0xe829 182 // 0xb6
+    WRITE_BYTE 0xe82a 185 // 0xb9
+    WRITE_BYTE 0xe82b 79 // 0x4f == O
+    WRITE_BYTE 0xe95d 84 // 0x54 == T
+    WRITE_BYTE 0xe95e 84 // 0x54 == T
+    WRITE_BYTE 0xe95f 175 // 0xaf
+    WRITE_BYTE 0xe960 186 // 0xba
+    WRITE_BYTE 0xe961 215 // 0xd7
+    WRITE_BYTE 0xe962 215 // 0xd7
+    WRITE_BYTE 0xe963 215 // 0xd7
+    WRITE_BYTE 0xe964 186 // 0xba
+    WRITE_BYTE 0xe965 186 // 0xba
+    WRITE_BYTE 0xe966 186 // 0xba
+    WRITE_BYTE 0xe967 186 // 0xba
+    WRITE_BYTE 0xe968 182 // 0xb6
+    WRITE_BYTE 0xe969 182 // 0xb6
+    WRITE_BYTE 0xe96a 185 // 0xb9
+    WRITE_BYTE 0xe96b 97 // 0x61 == a
+    WRITE_BYTE 0xea9f 83 // 0x53 == S
+    WRITE_BYTE 0xeaa0 185 // 0xb9
+    WRITE_BYTE 0xeaa1 182 // 0xb6
+    WRITE_BYTE 0xeaa2 215 // 0xd7
+    WRITE_BYTE 0xeaa3 182 // 0xb6
+    WRITE_BYTE 0xeaa4 186 // 0xba
+    WRITE_BYTE 0xeaa5 175 // 0xaf
+    WRITE_BYTE 0xeaa6 185 // 0xb9
+    WRITE_BYTE 0xeaa7 186 // 0xba
+    WRITE_BYTE 0xeaa8 182 // 0xb6
+    WRITE_BYTE 0xeaa9 186 // 0xba
+    WRITE_BYTE 0xeaaa 185 // 0xb9
+    WRITE_BYTE 0xeaab 102 // 0x66 == f
+    WRITE_BYTE 0xebdf 93 // 0x5d == ]
+    WRITE_BYTE 0xebe0 175 // 0xaf
+    WRITE_BYTE 0xebe1 186 // 0xba
+    WRITE_BYTE 0xebe2 186 // 0xba
+    WRITE_BYTE 0xebe3 186 // 0xba
+    WRITE_BYTE 0xebe4 175 // 0xaf
+    WRITE_BYTE 0xebe5 89 // 0x59 == Y
+    WRITE_BYTE 0xebe6 89 // 0x59 == Y
+    WRITE_BYTE 0xebe7 185 // 0xb9
+    WRITE_BYTE 0xebe8 186 // 0xba
+    WRITE_BYTE 0xebe9 185 // 0xb9
+    WRITE_BYTE 0xebea 189 // 0xbd
+    WRITE_BYTE 0xebeb 107 // 0x6b == k
+    WRITE_BYTE 0xed20 93 // 0x5d == ]
+    WRITE_BYTE 0xed21 175 // 0xaf
+    WRITE_BYTE 0xed22 175 // 0xaf
+    WRITE_BYTE 0xed23 175 // 0xaf
+    WRITE_BYTE 0xed24 89 // 0x59 == Y
+    WRITE_BYTE 0xed27 102 // 0x66 == f
+    WRITE_BYTE 0xed28 189 // 0xbd
+    WRITE_BYTE 0xed29 189 // 0xbd
+    WRITE_BYTE 0xed2a 107 // 0x6b == k
+    WRITE_BYTE 0xee60 93 // 0x5d == ]
+    WRITE_BYTE 0xee61 93 // 0x5d == ]
+    WRITE_BYTE 0xee62 93 // 0x5d == ]
+    WRITE_BYTE 0xee63 89 // 0x59 == Y
+    WRITE_BYTE 0xee68 94 // 0x5e == ^
+    WRITE_BYTE 0xee69 121 // 0x79 == y
+  END
+ACTION_IF (file_valid == 0) BEGIN
+  // Fallback solution
+  COPY ~DjinniCompanion/areas/ar2200lm.bmp~ ~override~
+END
+
+// patching AR2200 search map
+OUTER_SET file_valid = 0
+COPY_EXISTING ~AR2200SR.BMP~ ~override~
+  // sanity check
+  READ_LONG 0x12 bmp_width
+  READ_LONG 0x16 bmp_height
+  READ_SHORT 0x1c bmp_bpp
+  PATCH_IF (bmp_width == 320 && bmp_height == 320 && bmp_bpp == 4) BEGIN
+    // created by: weidu.exe --cmp-from AR2200SR_old.BMP --cmp-to AR2200SR_new.BMP
+    file_valid = 1
+    WRITE_BYTE 0x6873 141 // 0x8d
+    WRITE_BYTE 0x6913 221 // 0xdd
+    WRITE_BYTE 0x69b3 216 // 0xd8
+    WRITE_BYTE 0x6a53 216 // 0xd8
+    WRITE_BYTE 0x6af2 141 // 0x8d
+    WRITE_BYTE 0x6af3 216 // 0xd8
+    WRITE_BYTE 0x6b90 68 // 0x44 == D
+    WRITE_BYTE 0x6b92 141 // 0x8d
+    WRITE_BYTE 0x6c2e 132 // 0x84
+    WRITE_BYTE 0x6c2f 68 // 0x44 == D
+    WRITE_BYTE 0x6c30 68 // 0x44 == D
+    WRITE_BYTE 0x6c32 141 // 0x8d
+    WRITE_BYTE 0x6ccd 132 // 0x84
+    WRITE_BYTE 0x6cce 68 // 0x44 == D
+    WRITE_BYTE 0x6ccf 68 // 0x44 == D
+    WRITE_BYTE 0x6cd0 68 // 0x44 == D
+    WRITE_BYTE 0x6cd2 141 // 0x8d
+    WRITE_BYTE 0x6d6c 68 // 0x44 == D
+    WRITE_BYTE 0x6d6d 68 // 0x44 == D
+    WRITE_BYTE 0x6d6e 68 // 0x44 == D
+    WRITE_BYTE 0x6d6f 68 // 0x44 == D
+    WRITE_BYTE 0x6d70 72 // 0x48 == H
+    WRITE_BYTE 0x6d72 141 // 0x8d
+    WRITE_BYTE 0x6e0b 132 // 0x84
+    WRITE_BYTE 0x6e0c 68 // 0x44 == D
+    WRITE_BYTE 0x6e0d 68 // 0x44 == D
+    WRITE_BYTE 0x6e0e 68 // 0x44 == D
+    WRITE_BYTE 0x6e0f 68 // 0x44 == D
+    WRITE_BYTE 0x6e10 72 // 0x48 == H
+    WRITE_BYTE 0x6e12 141 // 0x8d
+    WRITE_BYTE 0x6eaa 132 // 0x84
+    WRITE_BYTE 0x6eab 68 // 0x44 == D
+    WRITE_BYTE 0x6eac 68 // 0x44 == D
+    WRITE_BYTE 0x6ead 68 // 0x44 == D
+    WRITE_BYTE 0x6eae 72 // 0x48 == H
+    WRITE_BYTE 0x6eb2 141 // 0x8d
+    WRITE_BYTE 0x6f4a 68 // 0x44 == D
+    WRITE_BYTE 0x6f4b 68 // 0x44 == D
+    WRITE_BYTE 0x6f4c 68 // 0x44 == D
+    WRITE_BYTE 0x6f4d 72 // 0x48 == H
+    WRITE_BYTE 0x6f4e 141 // 0x8d
+    WRITE_BYTE 0x6f4f 221 // 0xdd
+    WRITE_BYTE 0x6f50 221 // 0xdd
+    WRITE_BYTE 0x6f51 216 // 0xd8
+    WRITE_BYTE 0x6f52 141 // 0x8d
+    WRITE_BYTE 0x6fea 68 // 0x44 == D
+    WRITE_BYTE 0x6feb 68 // 0x44 == D
+    WRITE_BYTE 0x6fec 68 // 0x44 == D
+    WRITE_BYTE 0x6fed 68 // 0x44 == D
+    WRITE_BYTE 0x6fee 72 // 0x48 == H
+    WRITE_BYTE 0x6fef 141 // 0x8d
+    WRITE_BYTE 0x6ff0 221 // 0xdd
+    WRITE_BYTE 0x6ff1 221 // 0xdd
+    WRITE_BYTE 0x6ff2 141 // 0x8d
+    WRITE_BYTE 0x708a 132 // 0x84
+    WRITE_BYTE 0x708b 68 // 0x44 == D
+    WRITE_BYTE 0x708c 68 // 0x44 == D
+    WRITE_BYTE 0x708d 68 // 0x44 == D
+    WRITE_BYTE 0x708e 68 // 0x44 == D
+    WRITE_BYTE 0x708f 72 // 0x48 == H
+    WRITE_BYTE 0x7090 221 // 0xdd
+    WRITE_BYTE 0x7091 221 // 0xdd
+    WRITE_BYTE 0x7092 221 // 0xdd
+    WRITE_BYTE 0x712b 68 // 0x44 == D
+    WRITE_BYTE 0x712c 68 // 0x44 == D
+    WRITE_BYTE 0x712d 68 // 0x44 == D
+    WRITE_BYTE 0x712e 68 // 0x44 == D
+    WRITE_BYTE 0x712f 68 // 0x44 == D
+    WRITE_BYTE 0x7130 141 // 0x8d
+    WRITE_BYTE 0x7131 221 // 0xdd
+    WRITE_BYTE 0x7132 216 // 0xd8
+    WRITE_BYTE 0x71cb 68 // 0x44 == D
+    WRITE_BYTE 0x71cc 68 // 0x44 == D
+    WRITE_BYTE 0x71cd 68 // 0x44 == D
+    WRITE_BYTE 0x71ce 68 // 0x44 == D
+    WRITE_BYTE 0x71cf 68 // 0x44 == D
+    WRITE_BYTE 0x71d1 221 // 0xdd
+    WRITE_BYTE 0x71d2 216 // 0xd8
+    WRITE_BYTE 0x726b 132 // 0x84
+    WRITE_BYTE 0x726c 68 // 0x44 == D
+    WRITE_BYTE 0x726d 132 // 0x84
+    WRITE_BYTE 0x726e 68 // 0x44 == D
+    WRITE_BYTE 0x726f 68 // 0x44 == D
+    WRITE_BYTE 0x7271 141 // 0x8d
+    WRITE_BYTE 0x7272 216 // 0xd8
+    WRITE_BYTE 0x730c 72 // 0x48 == H
+    WRITE_BYTE 0x730e 68 // 0x44 == D
+    WRITE_BYTE 0x730f 72 // 0x48 == H
+    WRITE_BYTE 0x7311 221 // 0xdd
+    WRITE_BYTE 0x73ae 132 // 0x84
+    WRITE_BYTE 0x73b0 141 // 0x8d
+    WRITE_BYTE 0x73b1 216 // 0xd8
+    WRITE_BYTE 0x7450 221 // 0xdd
+    WRITE_BYTE 0x74ef 141 // 0x8d
+    WRITE_BYTE 0x74f0 216 // 0xd8
+    WRITE_BYTE 0x758f 141 // 0x8d
+    WRITE_BYTE 0x762f 221 // 0xdd
+    WRITE_BYTE 0x76cf 216 // 0xd8
+    WRITE_BYTE 0x776f 216 // 0xd8
+    WRITE_BYTE 0x780b 221 // 0xdd
+    WRITE_BYTE 0x780c 221 // 0xdd
+    WRITE_BYTE 0x780f 216 // 0xd8
+    WRITE_BYTE 0x78aa 141 // 0x8d
+    WRITE_BYTE 0x78ab 221 // 0xdd
+    WRITE_BYTE 0x78ac 221 // 0xdd
+    WRITE_BYTE 0x78ad 216 // 0xd8
+    WRITE_BYTE 0x794a 141 // 0x8d
+    WRITE_BYTE 0x794b 221 // 0xdd
+    WRITE_BYTE 0x794c 221 // 0xdd
+    WRITE_BYTE 0x794d 221 // 0xdd
+    WRITE_BYTE 0x79ea 221 // 0xdd
+    WRITE_BYTE 0x79ed 141 // 0x8d
+  END
+ACTION_IF (file_valid == 0) BEGIN
+  // Fallback solution
+  COPY ~DjinniCompanion/areas/ar2200sr.bmp~ ~override~
+END

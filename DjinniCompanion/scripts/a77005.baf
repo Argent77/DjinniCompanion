@@ -1,0 +1,59 @@
+// *** Area script for "Secret Underdark Passage" ***
+
+// Mark area as abandoned when quest has been finished
+IF
+  OnCreation()
+  Global("Quest3Finished", "A77005", 1)
+  Global("AreaAbandoned", "A77005", 0)
+THEN RESPONSE #100
+  SetGlobal("AreaAbandoned", "A77005", 1)
+  AmbientActivate("A705MS1", FALSE)
+  Continue()
+END
+
+
+// Reaction when entering the cave the first time
+IF
+  GlobalLT("A7Quest3", "GLOBAL", 2)
+  Global("DrowCityHostile", "GLOBAL", 0)
+  GlobalLT("udDrowPlot", "GLOBAL", 10)
+  Global("PlayerLooksLikeDrow", "GLOBAL", 1)
+  Global("FirstTime", "A77005", 0)
+THEN RESPONSE #100
+  SetGlobal("FirstTime", "A77005", 0)
+  EraseJournalEntry(@3801)
+  AddJournalEntry(@3802, QUEST)    // The passage looks abandoned...
+END
+
+// Quest cancelled if entered too late
+IF
+  OR(3)
+    Global("DrowCityHostile", "GLOBAL", 1)
+    GlobalGT("udDrowPlot", "GLOBAL", 9)
+    Global("PlayerLooksLikeDrow", "GLOBAL", 0)
+  GlobalLT("A7Quest3", "GLOBAL", 2)
+  Global("FirstTime", "A77005", 0)
+  Global("Quest3Finished", "A77005", 0)
+THEN RESPONSE #100
+  SetGlobal("FirstTime", "A77005", 1)
+  SetGlobal("Quest3Finished", "A77005", 1)
+  SetGlobal("A7Quest3", "GLOBAL", 10)
+  EraseJournalEntry(@3800)
+  EraseJournalEntry(@3801)
+  EraseJournalEntry(@3802)
+  EraseJournalEntry(@3803)
+  EraseJournalEntry(@3804)
+  EraseJournalEntry(@3805)
+  EraseJournalEntry(@3806)
+  EraseJournalEntry(@3807)
+  AddJournalEntry(@3828, QUEST_DONE)    // Quest is over before it has begun...
+END
+
+// Mark Quest as finished after leaving Underdark
+IF
+  GlobalGT("Chapter", "GLOBAL", 5)
+  Global("Quest3Finished", "A77005", 0)
+THEN RESPONSE #100
+  SetGlobal("Quest3Finished", "A77005", 1)
+  SetGlobal("A7Quest3", "GLOBAL", 10)
+END

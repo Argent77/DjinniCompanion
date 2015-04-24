@@ -1,0 +1,26 @@
+// *** Area script for "Forest of Tethir" ***
+
+// Check whether a new TOB-only game has started (obsolete)
+/*
+IF
+  !PartyHasItem("A7DJLMP")
+  !PartyHasItem("A7DJLMPA")
+  Global("A7AfaaqMet", "GLOBAL", 0)
+  Global("A7AfaaqTOBOnly", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqTOBOnly", "GLOBAL", 1)
+  Continue()
+END
+*/
+
+// First-time creation of the djinni
+IF
+  Global("A7AfaaqCreated", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqCreated", "GLOBAL", 1)
+  SetGlobal("A7AfaaqTOBOnly", "GLOBAL", 1)
+  CreateCreature("A7Afaaq", [0.0], 0)
+  ActionOverride("A7Afaaq", MakeGlobal())
+  ActionOverride("A7Afaaq", DestroySelf())
+  Continue()
+END

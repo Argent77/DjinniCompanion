@@ -1,0 +1,38 @@
+// *** Cutscene: Party and Afaaq (if summoned) are brought before the Greed Genie ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("HELLGEN")
+  FadeToColor([30.0], 0)
+  SmallWait(30)
+  ActionOverride(Player1, JumpToPoint([464.827]))
+  ActionOverride(Player2, JumpToPoint([413.771]))
+  ActionOverride(Player3, JumpToPoint([533.781]))
+  ActionOverride(Player4, JumpToPoint([588.766]))
+  ActionOverride(Player5, JumpToPoint([603.820]))
+  ActionOverride(Player6, JumpToPoint([561.717]))
+  SmallWait(5)
+  ActionOverride(Player1, Face(2))
+  ActionOverride(Player2, Face(2))
+  ActionOverride(Player3, Face(2))
+  ActionOverride(Player4, Face(2))
+  ActionOverride(Player5, Face(2))
+  ActionOverride(Player6, Face(2))
+  MultiPlayerSync()
+  MoveViewPoint([464.827], INSTANT)
+  FadeFromColor([30.0], 0)
+  SmallWait(30)
+  StartDialogueNoSet(Player1)
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  SmallWait(33)
+  JumpToPoint([480.776])
+  SetGlobal("A7AfaaqGaseous", "GLOBAL", 0)
+  ApplySpellRES("A7MISTC", Myself)
+  Face(2)
+END

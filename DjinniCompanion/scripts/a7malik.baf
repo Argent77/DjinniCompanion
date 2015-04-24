@@ -1,0 +1,24 @@
+// *** Quest-specific script for Malik (Quest 5) ***
+
+// First time conversation
+IF
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  See(Player1)
+  !Allegiance(Myself, ENEMY)
+  Global("A7Quest5", "GLOBAL", 4)
+  NumTimesTalkedTo(0)
+THEN RESPONSE #100
+  StartDialogueNoSet(Player1)
+END
+
+
+// Short outburst before attacking
+IF
+  Detect([PC])
+  Global("A7Quest5", "GLOBAL", 9)
+  Global("AttackParty", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("AttackParty", "LOCALS", 1)
+  StartDialogueNoSet([PC])
+END
+

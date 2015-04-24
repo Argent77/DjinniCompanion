@@ -1,0 +1,72 @@
+// *** Shout script for efreets and allies (except salamanders) (Quest 5) ***
+
+// Remove creature from map if quest has been cancelled
+IF
+  Global("A7Quest5", "GLOBAL", 11)
+THEN RESPONSE #100
+  DestroySelf()
+END
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  Global("A7Q5EfreetiAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  Heard([ANYONE], %shout_efreeti_attack%)
+  Global("A7Q5EfreetiAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  Global("A7Q5EfreetiAttacked", "GLOBAL", 1)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Enemy()
+END
+
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Shout(%shout_efreeti_attack%)
+  Enemy()
+END
+
+IF
+  HitBy([GOODCUTOFF], CRUSHING)
+THEN RESPONSE #100
+  Shout(%shout_efreeti_attack%)
+  Continue()
+END
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  Allegiance(Myself, ENEMY)
+  ActionListEmpty()
+THEN RESPONSE #100
+  Shout(%shout_efreeti_attack%)
+  Continue()
+END
+
+IF
+  Heard([ANYONE], %shout_efreeti_attack%)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Enemy()
+  MoveToObject(LastHeardBy(Myself))
+END
+
+IF
+  Heard([ANYONE], %shout_efreeti_attack%)
+  !See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  MoveToObject(LastHeardBy(Myself))
+  Continue()
+END

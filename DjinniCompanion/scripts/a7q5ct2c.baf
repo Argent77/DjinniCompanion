@@ -1,0 +1,21 @@
+// *** Short cutscene: Priest of Waukeen casts protection spell ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("AMCLER02")
+  ForceSpellRES("A7Q5SFX1", Myself)
+  CreateVisualEffectObject("A7Q5HEAT", Player1)
+  CreateVisualEffectObject("A7Q5HEAT", Player2)
+  CreateVisualEffectObject("A7Q5HEAT", Player3)
+  CreateVisualEffectObject("A7Q5HEAT", Player4)
+  CreateVisualEffectObject("A7Q5HEAT", Player5)
+  CreateVisualEffectObject("A7Q5HEAT", Player6)
+  Wait(1)
+  SetGlobal("A7Q5Protection", "GLOBAL", 1)
+  SetGlobal("A7Q5ProtectionWarn", "GLOBAL", 0)
+  SetGlobalTimer("A7Q5ProtectionTimer", "GLOBAL", EIGHT_HOURS)
+  SetGlobalTimer("A7Q5ProtectionWarnTimer", "GLOBAL", SIX_HOURS)
+  DisplayStringNoName(Player1, @6831)    // Protected from Infernal Heat
+  EndCutSceneMode()
+END

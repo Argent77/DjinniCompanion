@@ -1,0 +1,37 @@
+// *** Area A77006 (Inside the djinni lamp) ***
+
+//COPY_LARGE ~DjinniCompanion/areas/a77006.tis~ ~override~
+COPY ~DjinniCompanion/areas/a77006.are~   ~override~
+     ~DjinniCompanion/areas/a77006.wed~   ~override~
+     ~DjinniCompanion/areas/a77006ht.bmp~ ~override~
+     ~DjinniCompanion/areas/a77006lm.bmp~ ~override~
+     ~DjinniCompanion/areas/a77006sr.bmp~ ~override~
+
+// Clone of CHARNAME
+COPY ~DjinniCompanion/creatures/a7q6copy.cre~ ~override~
+
+// Regeneration effect for Afaaq
+COPY ~DjinniCompanion/spells/a7q6cure.spl~ ~override~
+
+// Translucency effect for party members
+COPY ~DjinniCompanion/spells/a7q6fad1.spl~ ~override~
+  SAY NAME1 ~Translucent~
+
+
+COPY_EXISTING ~am0601.wav~   ~override~
+              ~am0601a1.wav~ ~override~
+              ~am0601a2.wav~ ~override~
+              ~am0601a3.wav~ ~override~
+              ~am0601a4.wav~ ~override~
+              ~am0601a5.wav~ ~override~
+              ~am0601a6.wav~ ~override~
+              ~am0601a7.wav~ ~override~
+
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a77006.baf~
+  ~DjinniCompanion/scripts/a7cut01a.baf~
+  ~DjinniCompanion/scripts/a7cut01b.baf~
+  ~DjinniCompanion/scripts/a7cut01c.baf~
+  ~DjinniCompanion/scripts/a7cut01d.baf~
+  ~DjinniCompanion/scripts/a7cut01e.baf~
+  ~DjinniCompanion/scripts/a7q6copy.baf~

@@ -1,0 +1,50 @@
+// Scripts for Aerie
+
+// Initializing Aerie's banter timer
+IF
+  Global("A7AerieBanterNPCTimer", "GLOBAL", 0)
+THEN RESPONSE #100
+  RealSetGlobalTimer("A7AerieBanterNPCTimer", "GLOBAL", 3600)
+END
+
+// Keep delaying first banter until after Afaaq's party introduction
+IF
+  OR(2)
+    Global("A7BanterIntro", "GLOBAL", 0)
+    Global("A7AfaaqSummoned", "GLOBAL", 0)
+  RealGlobalTimerExpired("A7AerieBanterNPCTimer", "GLOBAL")
+THEN RESPONSE #100
+  RealSetGlobalTimer("A7AerieBanterNPCTimer", "GLOBAL", 3600)
+END
+
+// Triggering banters
+// IF
+  // Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself)
+  // !ActuallyInCombat() !Detect([ENEMY])
+  // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AerieBanterNPCTimer", "GLOBAL")
+  // OR(2)
+    // Global("A7BanterAerie", "GLOBAL", 0)
+    // Global("A7BanterAerie", "GLOBAL", 4)
+// THEN RESPONSE #100
+  // IncrementGlobal("A7BanterAerie", "GLOBAL", 1)
+  // RealSetGlobalTimer("A7AerieBanterNPCTimer", "GLOBAL", 3600)
+  // StartDialogNoSet("A7Afaaq")
+// END
+
+
+// Aerie reacts to CHARNAME talking to the djinni lamp repeatedly
+// IF
+  // RandomNum(20, 1)
+  // !StateCheck(Myself, CD_STATE_NOTVALID)
+  // !StateCheck(Player1, CD_STATE_NOTVALID)
+  // See(Player1)
+  // !See([ENEMY])
+  // !ActuallyInCombat()
+  // AreaType(CITY)
+  // GlobalGT("A7TalkedToLamp", "MYAREA", 2)
+  // Global("A7AerieLampTalk", "LOCALS", 0)
+// THEN RESPONSE #100
+  // SetGlobal("A7AerieLampTalk", "LOCALS", 1)
+  // Interact(Player1)
+// END

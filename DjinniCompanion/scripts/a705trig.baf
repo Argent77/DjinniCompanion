@@ -1,0 +1,26 @@
+// Proximity trigger to trigger the first talk with Tathas Melarn
+
+// If Quest 3 has been triggered and Drow Quest isn't finished yet
+IF
+  OR(3)
+    Range([PC], 15)
+    Range([FAMILIAR], 15)
+    Range([CONTROLLED], 15)
+  GlobalGT("A7Quest3", "GLOBAL", 0)
+  Global("DrowCityHostile", "GLOBAL", 0)
+  GlobalLT("udDrowPlot", "GLOBAL", 10)
+  Global("PlayerLooksLikeDrow", "GLOBAL", 1)
+  Global("DrowTriggered", "A77005", 0)
+THEN RESPONSE #100
+  SetGlobal("DrowTriggered", "A77005", 1)
+  ClearAllActions()
+  ApplySpellRES("A7SIGHT", Player1)
+  ApplySpellRES("A7SIGHT", Player2)
+  ApplySpellRES("A7SIGHT", Player3)
+  ApplySpellRES("A7SIGHT", Player4)
+  ApplySpellRES("A7SIGHT", Player5)
+  ApplySpellRES("A7SIGHT", Player6)
+  ApplySpellRES("A7SIGHT", "A7Afaaq")
+  StartCutSceneMode()
+  StartCutScene("A7Q3ct1")
+END

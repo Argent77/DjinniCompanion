@@ -1,0 +1,13 @@
+// Jaheira comments the new jungle location
+
+IF
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  AreaCheck("A77004")
+  Global("A7Q2JungleComment", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q2JungleComment", "LOCALS", 1)
+  StartDialogueNoSet(Player1)
+END

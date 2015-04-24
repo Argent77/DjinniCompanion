@@ -1,0 +1,383 @@
+// *** Special combat script: Malik (Quest 5) ***
+
+// *** If no party ally is around ***
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  !Detect(NearestEnemyOf(Myself))
+THEN 
+  RESPONSE #25
+    MoveToObject(Player1)
+  RESPONSE #25
+    RandomWalk()
+  RESPONSE #50
+    Continue()
+END
+
+
+// *** Combat actions ***
+IF
+  Detect(NearestEnemyOf(Myself))
+  Global("Prep", "LOCALS", 0)
+  !StateCheck(Myself, STATE_REALLY_DEAD)
+THEN RESPONSE #100
+  SetGlobal("Prep", "LOCALS", 1)
+  DisplayString(Myself, 31247) // Tattoo of Power - Spell Immunity
+  ApplySpell(Myself, WIZARD_SPELL_IMMUNITY_ABJURATION)
+  ApplySpell(Myself, WIZARD_STONE_SKIN)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  Global("SpellTrigger", "LOCALS", 0)
+  !StateCheck(Myself, STATE_REALLY_DEAD)
+THEN 
+  RESPONSE #50
+    DisplayString(Myself, 39968)  // Spell Trigger - Fired
+    DisplayString(Myself, 43046)  // Spell Trigger - Mislead
+    ReallyForceSpell(Myself, WIZARD_MISLEAD)
+    DisplayString(Myself, 2469)  // Spell Trigger - Protection from Magical Weapons
+    ApplySpell(Myself, WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    DisplayString(Myself, 40245)  // Spell Trigger - Globe of Invulnerability
+    ReallyForceSpell(Myself, WIZARD_GLOBE_OF_INVULNERABILITY)
+    SetGlobal("SpellTrigger", "LOCALS", 1)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  TookDamage()
+  Global("Prep2", "LOCALS", 0)
+  !StateCheck(Myself, STATE_REALLY_DEAD)
+THEN RESPONSE #100
+  DisplayString(Myself, 43050)  // Chain Contingency - Improved Mantle
+  ApplySpell(Myself, WIZARD_IMPROVED_MANTLE)
+  DisplayString(Myself, 73812)  // Chain Contingency - Stoneskins
+  ApplySpell(Myself, WIZARD_STONE_SKIN)
+  DisplayString(Myself, 3302)  // Chain Contingency - Spell Turning
+  ApplySpell(Myself, WIZARD_SPELL_TURNING)
+  SetGlobal("Prep2", "LOCALS", 1)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  TookDamage()
+  Global("Prep2", "LOCALS", 1)
+  !StateCheck(Myself, STATE_REALLY_DEAD)
+THEN RESPONSE #100
+  SetGlobal("Prep2", "LOCALS", 2)
+  DisplayString(Myself, 40252)  // Contingency - Protection from Magical Weapons
+  ApplySpell(Myself, WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_INVISIBLE)
+  GlobalLT("EfreetiInvisibility", "LOCALS", 3)
+THEN 
+  RESPONSE #50
+    IncrementGlobal("EfreetiInvisibility", "LOCALS", 1)
+    ForceSpell(Myself, WIZARD_INVISIBILITY)
+    Wait(1)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_SPELL_TRAP)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_SPELL_TRAP)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  TookDamage()
+  HaveSpell(WIZARD_ABSOLUTE_IMMUNITY)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_ABSOLUTE_IMMUNITY)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  TookDamage()
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  StateCheck(Myself, STATE_SILENCED)
+THEN RESPONSE #100
+  ForceSpell(Myself, WIZARD_VOCALIZE)
+END
+
+IF
+  Allegiance(Myself, ENEMY)
+  !See(NearestEnemyOf(Myself))
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_TRUE_SIGHT)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_TRUE_SIGHT)
+END
+
+IF
+  !HasBounceEffects(Myself)
+  !HasImmunityEffects(Myself)
+  HaveSpell(WIZARD_SPELL_TURNING)
+  Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_SPELL_TURNING)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DISPEL_MAGIC)
+  Global("dispel", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("dispel", "LOCALS", 1)
+  Spell(LastSeenBy(Myself), WIZARD_DISPEL_MAGIC)
+END
+
+IF
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  HaveSpell(WIZARD_SPELL_STRIKE)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself), WIZARD_SPELL_STRIKE)
+END
+
+IF
+  See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+  !CheckStat(LastSeenBy(Myself), 0, STONESKINS)
+  HaveSpell(WIZARD_BREACH)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_BREACH)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOfType([0.0.0.DRUID_ALL]))
+  !CheckStat(LastSeenBy(Myself), 0, STONESKINS)
+  HaveSpell(WIZARD_BREACH)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_BREACH)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOfType([0.0.0.BARD_ALL]))
+  !CheckStat(LastSeenBy(Myself), 0, STONESKINS)
+  HaveSpell(WIZARD_BREACH)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_BREACH)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_TIME_STOP)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_TIME_STOP)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_GREATER_MALISON)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself), WIZARD_GREATER_MALISON)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_EMOTION_HOPELESSNESS)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_EMOTION_HOPELESSNESS)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_METEOR_SWARM)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself), WIZARD_METEOR_SWARM)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_NPC_SYMBOL_FEAR)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_NPC_SYMBOL_FEAR)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_NPC_SYMBOL_STUN)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_NPC_SYMBOL_STUN)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpellRES("A7SPWI02")
+  Global("summon", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("summon", "LOCALS", 1)
+  StartTimer("elem", 30)
+  SpellRES("A7SPWI02", LastSeenBy(Myself))
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpellRES("A7SPWI02")
+  TimerExpired("elem")
+THEN RESPONSE #100
+  StartTimer("elem", 30)
+  SpellRES("A7SPWI02", LastSeenBy(Myself))
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_COMET)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself), WIZARD_COMET)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself), WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DISINTEGRATE)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself), WIZARD_DISINTEGRATE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_IMPLOSION)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_IMPLOSION)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  HaveSpell(CLERIC_IMPLOSION)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_IMPLOSION)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_FLAME_STRIKE)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_FLAME_STRIKE)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DISPEL_MAGIC)
+  Global("dispel", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("dispel", "LOCALS", 2)
+  Spell(LastSeenBy(Myself), WIZARD_DISPEL_MAGIC)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 15)
+  HaveSpell(WIZARD_DELAYED_BLAST_FIREBALL)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_DELAYED_BLAST_FIREBALL)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_NPC_SYMBOL_DEATH)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself), WIZARD_NPC_SYMBOL_DEATH)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_SUN_FIRE)
+THEN
+  RESPONSE #50
+    Spell(Myself, WIZARD_SUN_FIRE)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FIREBALL)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_FIREBALL)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  OR(3)
+    See(SecondNearestEnemyOf(Myself))
+    See(ThirdNearestEnemyOf(Myself))
+    See(FourthNearestEnemyOf(Myself))
+  HaveSpell(WIZARD_AGANNAZAR_SCORCHER)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_AGANNAZAR_SCORCHER)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FLAME_ARROW)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_FLAME_ARROW)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN 
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+  RESPONSE #50
+    Continue()
+END
+

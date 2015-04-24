@@ -1,0 +1,24 @@
+// *** Helper creature: Applies fire protection to all party members (Quest 5) ***
+
+IF
+  Detect([PC])
+THEN RESPONSE #100
+  SetGlobal("A7Q5Protection", "GLOBAL", 1)
+  SetGlobal("A7Q5ProtectionWarn", "GLOBAL", 0)
+  SetGlobalTimer("A7Q5ProtectionTimer", "GLOBAL", EIGHT_HOURS)
+  SetGlobalTimer("A7Q5ProtectionWarnTimer", "GLOBAL", SIX_HOURS)
+  CreateVisualEffectObject("A7Q5HEAT", Player1)
+  CreateVisualEffectObject("A7Q5HEAT", Player2)
+  CreateVisualEffectObject("A7Q5HEAT", Player3)
+  CreateVisualEffectObject("A7Q5HEAT", Player4)
+  CreateVisualEffectObject("A7Q5HEAT", Player5)
+  CreateVisualEffectObject("A7Q5HEAT", Player6)
+  DisplayStringNoName(Player1, @6831)    // Protected from Infernal Heat
+  Continue()
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  DestroySelf()
+END

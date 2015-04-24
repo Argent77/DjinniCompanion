@@ -1,0 +1,12 @@
+// *** Cutscene: Edwin attempts to bring Afaaq under his control (Part 2, if Afaaq is outside of his lamp) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  ScreenShake([4.4], 45)
+  MoveViewObject(Myself, FAST)
+  Wait(6)
+  ActionOverride("A7Afaaq", FaceObject(Player1))
+  EndCutSceneMode()
+END

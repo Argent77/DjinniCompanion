@@ -1,0 +1,43 @@
+// *** Trigger for outer forcefield in map A77004 (Jungle of Chult) ***
+
+// When clicked the first time
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 20)
+  Global("PassWards", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("PassWards", "A77004", 1)
+  DisplayString(Myself, @2924)    // Your path is blocked by an invisible barrier which appears to be impenetrable. You have to find a way to deactivate it first.
+  AddJournalEntry(@2802, QUEST)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 20)
+  GlobalGT("PassWards", "A77004", 0)
+THEN RESPONSE #100
+  DisplayString(Myself, @2924)    // Your path is blocked by an invisible barrier which appears to be impenetrable. You have to find a way to deactivate it first.
+END
+
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger, 20)
+THEN RESPONSE #100
+  DisplayString(Myself, @2925)    // You are too far away to examine it closely.
+END
+
+// Break the outer barrier in slayer form
+IF
+  GlobalGT("PassWards", "A77004", 0)
+  Range(Player1, 7)
+  Global("Slayer10", "GLOBAL", 2)
+  OR(2)
+    Global("WS1Set", "A77004", 0)
+    Global("WS2Set", "A77004", 0)
+  Global("SlayerPass1", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("SlayerPass1", "A77004", 1)
+  SetGlobal("WardstoneFound", "A77004", 1)
+  SetGlobal("WS1Set", "A77004", 1)
+  SetGlobal("WS2Set", "A77004", 1)
+END

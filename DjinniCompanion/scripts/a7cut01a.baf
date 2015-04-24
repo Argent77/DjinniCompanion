@@ -1,0 +1,29 @@
+// *** Cutscene: Afaaq and party enter the djinni lamp together (registering clone globally) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  CreateVisualEffectObject("A7AFQLMP", "A7Afaaq")
+  CreateVisualEffectObject("A7AFQLMP", Myself)
+  SmallWait(5)
+  ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
+  SmallWait(10) 
+  FadeToColor([30.0], 0)
+  Wait(2)
+  StorePartyLocations()
+  LeaveAreaLUAPanic("A77006", "", [250.292], 12)
+  LeaveAreaLUA("A77006", "", [250.292], 12)
+  ActionOverride(Player2, LeaveAreaLUA("A77006", "", [218.340], 13))
+  ActionOverride(Player3, LeaveAreaLUA("A77006", "", [296.254], 14))
+  ActionOverride(Player4, LeaveAreaLUA("A77006", "", [204.396], 12))
+  ActionOverride(Player5, LeaveAreaLUA("A77006", "", [356.226], 15))
+  ActionOverride(Player6, LeaveAreaLUA("A77006", "", [216.456], 11))
+  MoveGlobal("A77006", "A7Afaaq", [434.368])
+  MultiPlayerSync()
+  CreateCreatureCopyPoint("A7Q6COPY", Player1, [504.404])
+  ActionOverride("A7Q6COPY", MakeGlobal())
+  ActionOverride("A7Q6COPY", ChangeEnemyAlly(Myself, FAMILIAR))
+  ActionOverride("A7Q6COPY", AddFamiliar())
+  StartCutScene("A7cut01c")
+END

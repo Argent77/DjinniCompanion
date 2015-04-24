@@ -1,0 +1,156 @@
+// *** Shout script for fire salamanders (Quest 5) ***
+
+// Remove creature from map if quest has been cancelled
+IF
+  Global("A7Quest5", "GLOBAL", 11)
+THEN RESPONSE #100
+  DestroySelf()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("A7Q5EfreetiAttacked", "GLOBAL", 1)
+  Global("A7Q5SalamanderAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5SalamanderAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  Global("A7Q5SalamanderAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5SalamanderAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  Global("A7Q5EfreetiAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  Heard([ANYONE], %shout_salamander_attack%)
+  Global("A7Q5SalamanderAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5SalamanderAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Heard([ANYONE], %shout_efreeti_attack%)
+  Global("A7Q5EfreetiAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  Global("A7Q5SalamanderAttacked", "GLOBAL", 1)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Enemy()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("A7Q5EfreetiAttacked", "GLOBAL", 1)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Enemy()
+END
+
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 0)
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Shout(%shout_salamander_attack%)
+  Enemy()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Shout(%shout_efreeti_attack%)
+  Enemy()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 0)
+  HitBy([GOODCUTOFF], CRUSHING)
+THEN RESPONSE #100
+  Shout(%shout_salamander_attack%)
+  Continue()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  HitBy([GOODCUTOFF], CRUSHING)
+THEN RESPONSE #100
+  Shout(%shout_efreeti_attack%)
+  Continue()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 0)
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  Allegiance(Myself, ENEMY)
+  ActionListEmpty()
+THEN RESPONSE #100
+  Shout(%shout_salamander_attack%)
+  Continue()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  Allegiance(Myself, ENEMY)
+  ActionListEmpty()
+THEN RESPONSE #100
+  Shout(%shout_efreeti_attack%)
+  Continue()
+END
+
+IF
+  Heard([ANYONE], %shout_salamander_attack%)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Enemy()
+  MoveToObject(LastHeardBy(Myself))
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Heard([ANYONE], %shout_efreeti_attack%)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Enemy()
+  MoveToObject(LastHeardBy(Myself))
+END
+
+IF
+  Heard([ANYONE], %shout_salamander_attack%)
+  !See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  MoveToObject(LastHeardBy(Myself))
+  Continue()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Heard([ANYONE], %shout_efreeti_attack%)
+  !See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  MoveToObject(LastHeardBy(Myself))
+  Continue()
+END
+

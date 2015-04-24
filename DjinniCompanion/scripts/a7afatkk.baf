@@ -1,0 +1,124 @@
+// *** Afaaq's battle script when fighting Korgan ***
+
+// Pre-buffing
+IF
+  !StateCheck(Myself, STATE_INVISIBLE)
+  Global("A7KorganDuel", "GLOBAL", 3)
+  Global("KorganFightInit", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("KorganFightInit", "LOCALS", 1)
+  StartTimer(167, 6)
+  EquipMostDamagingMelee()
+  SpellRES("A7SPIN1", Myself)    // Invisibility
+END
+
+// Pre-buffing #2
+IF
+  StateCheck(Myself, STATE_INVISIBLE)
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+  TimerExpired(167)
+  Global("A7KorganDuel", "GLOBAL", 3)
+  GlobalLT("KorganFightInit", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("KorganFightInit", "LOCALS", 2)
+  StartTimer(167, 6)
+  Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+IF
+  !HaveSpell(WIZARD_MIRROR_IMAGE)
+  GlobalLT("KorganFightInit", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("KorganFightInit", "LOCALS", 2)
+  Continue()
+END
+
+// Dispel illusions
+IF
+  HaveSpell(WIZARD_DETECT_INVISIBILITY)
+  !See("Korgan")
+  Detect("Korgan")
+  TimerExpired(167)
+  Global("A7KorganDuel", "GLOBAL", 3)
+  GlobalGT("KorganFightInit", "LOCALS", 1)
+THEN RESPONSE #100
+  StartTimer(167, 6)
+  Spell(Myself, WIZARD_DETECT_INVISIBILITY)
+END
+
+// Renewing protections when hit
+IF
+  !HP(Myself, 1)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  TookDamage()
+  TimerExpired(167)
+  Global("A7KorganDuel", "GLOBAL", 3)
+  GlobalGT("KorganFightInit", "LOCALS", 1)
+THEN RESPONSE #100
+  StartTimer(167, 6)
+  SpellRES("A7SPIN1", Myself)    // Invisibility
+  RunAwayFrom("Korgan", 30)
+END
+
+// Renewing protections if possible
+IF
+  !HP(Myself, 1)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  TimerExpired(167)
+  Global("A7KorganDuel", "GLOBAL", 3)
+  GlobalGT("KorganFightInit", "LOCALS", 1)
+THEN RESPONSE #100
+  StartTimer(167, 6)
+  SpellRES("A7SPIN1", Myself)    // Invisibility
+  RunAwayFrom("Korgan", 15)
+END
+
+// Casting offensive spells when possible (only in invisible state to minimize spell interrupting)
+IF
+  StateCheck(Myself, STATE_INVISIBLE)
+  See("Korgan")
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+  TimerExpired(167)
+  Global("A7KorganDuel", "GLOBAL", 3)
+  GlobalGT("KorganFightInit", "LOCALS", 1)
+THEN RESPONSE #100
+  StartTimer(167, 6)
+  Spell("Korgan", WIZARD_MAGIC_MISSILE)
+  Continue()
+END
+
+IF
+  StateCheck(Myself, STATE_INVISIBLE)
+  Range("Korgan", 10)
+  See("Korgan")
+  HaveSpell(WIZARD_SHOCKING_GRASP)
+  TimerExpired(167)
+  Global("A7KorganDuel", "GLOBAL", 3)
+  GlobalGT("KorganFightInit", "LOCALS", 1)
+THEN RESPONSE #100
+  StartTimer(167, 6)
+  Spell("Korgan", WIZARD_SHOCKING_GRASP)
+  Continue()
+END
+
+// Plain melee attack
+IF
+  StateCheck(Myself, STATE_INVISIBLE)
+  !HaveSpell(WIZARD_SHOCKING_GRASP)
+  !HaveSpell(WIZARD_MAGIC_MISSILE)
+  See("Korgan")
+  Global("A7KorganDuel", "GLOBAL", 3)
+  GlobalGT("KorganFightInit", "LOCALS", 1)
+THEN RESPONSE #100
+  AttackOneRound("Korgan")
+END
+
+IF
+  !StateCheck(Myself, STATE_INVISIBLE)
+  See("Korgan")
+  Global("A7KorganDuel", "GLOBAL", 3)
+  GlobalGT("KorganFightInit", "LOCALS", 1)
+THEN RESPONSE #100
+  AttackOneRound("Korgan")
+END
+

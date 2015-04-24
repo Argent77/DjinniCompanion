@@ -1,0 +1,85 @@
+// *** Script for water pool in Smuggler Cave (Quest 5) ***
+
+// Quest 5 has started and CHARNAME has permission from Carras and heat protection applied
+IF
+  WalkedToTrigger([ANYONE])
+  GlobalGT("A7Quest5", "GLOBAL", 0)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Permission", "GLOBAL", 1)
+  Global("A7Q5Protection", "GLOBAL", 1)
+  Global("A7Q5EnterHotSpring", "AR5504", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5EnterHotSpring", "AR5504", 1)
+  SaveGame(0)
+  ClearAllActions()
+  StartCutSceneMode()
+  DisplayStringNoNameHead(LastTrigger, @6813)    // You take a deep breath and jump into the boiling pool of water. With your heat protection in place you dive into nearest tunnel as fast as you can.
+  Wait(5)
+  FadeToColor([30.0], 0)
+  Wait(2)
+  ActionOverride(Player1, LeaveAreaLUAPanic("A77002", "", [618.724], 8))
+  ActionOverride(Player1, LeaveAreaLUA("A77002", "", [618.724], 8))
+  ActionOverride(Player2, LeaveAreaLUA("A77002", "", [548.728], 8))
+  ActionOverride(Player3, LeaveAreaLUA("A77002", "", [690.732], 8))
+  ActionOverride(Player4, LeaveAreaLUA("A77002", "", [620.790], 8))
+  ActionOverride(Player5, LeaveAreaLUA("A77002", "", [619.850], 8))
+  ActionOverride(Player6, LeaveAreaLUA("A77002", "", [618.910], 8))
+  EndCutSceneMode()
+END
+
+IF
+  WalkedToTrigger([ANYONE])
+  GlobalGT("A7Quest5", "GLOBAL", 0)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Permission", "GLOBAL", 1)
+  Global("A7Q5Protection", "GLOBAL", 1)
+  Global("A7Q5EnterHotSpring", "AR5504", 1)
+THEN RESPONSE #100
+  SaveGame(0)
+  ActionOverride(Player1, LeaveAreaLUAPanic("A77002", "", [618.724], 8))
+  ActionOverride(Player1, LeaveAreaLUA("A77002", "", [618.724], 8))
+  ActionOverride(Player2, LeaveAreaLUA("A77002", "", [548.728], 8))
+  ActionOverride(Player3, LeaveAreaLUA("A77002", "", [690.732], 8))
+  ActionOverride(Player4, LeaveAreaLUA("A77002", "", [620.790], 8))
+  ActionOverride(Player5, LeaveAreaLUA("A77002", "", [619.850], 8))
+  ActionOverride(Player6, LeaveAreaLUA("A77002", "", [618.910], 8))
+END
+
+
+// Quest 5 has ended
+IF
+  WalkedToTrigger([ANYONE])
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5EnterCoolSpring", "AR5504", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5EnterCoolSpring", "AR5504", 1)
+  SaveGame(0)
+  ClearAllActions()
+  StartCutSceneMode()
+  DisplayStringNoNameHead(LastTrigger, @6814)    // You take a deep breath and jump into the pool of water. As fast as you can you dive into the nearest tunnel.
+  Wait(4)
+  ActionOverride(Player1, LeaveAreaLUAPanic("A77002", "", [618.724], 8))
+  ActionOverride(Player1, LeaveAreaLUA("A77002", "", [618.724], 8))
+  ActionOverride(Player2, LeaveAreaLUA("A77002", "", [548.728], 8))
+  ActionOverride(Player3, LeaveAreaLUA("A77002", "", [690.732], 8))
+  ActionOverride(Player4, LeaveAreaLUA("A77002", "", [620.790], 8))
+  ActionOverride(Player5, LeaveAreaLUA("A77002", "", [619.850], 8))
+  ActionOverride(Player6, LeaveAreaLUA("A77002", "", [618.910], 8))
+  EndCutSceneMode()
+END
+
+
+IF
+  WalkedToTrigger([ANYONE])
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5EnterCoolSpring", "AR5504", 1)
+THEN RESPONSE #100
+  SaveGame(0)
+  ActionOverride(Player1, LeaveAreaLUAPanic("A77002", "", [618.724], 8))
+  ActionOverride(Player1, LeaveAreaLUA("A77002", "", [618.724], 8))
+  ActionOverride(Player2, LeaveAreaLUA("A77002", "", [548.728], 8))
+  ActionOverride(Player3, LeaveAreaLUA("A77002", "", [690.732], 8))
+  ActionOverride(Player4, LeaveAreaLUA("A77002", "", [620.790], 8))
+  ActionOverride(Player5, LeaveAreaLUA("A77002", "", [619.850], 8))
+  ActionOverride(Player6, LeaveAreaLUA("A77002", "", [618.910], 8))
+END

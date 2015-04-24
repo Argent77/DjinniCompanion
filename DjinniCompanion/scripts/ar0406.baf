@@ -1,0 +1,34 @@
+// *** Area script for the Copper Coronet ***
+
+// Triggered after freeing Hendak and the slaves if Afaaq didn't meet Charname yet
+IF
+  Global("A7AfaaqMet", "GLOBAL", 0)
+  Global("HendakReleased", "AR0406", 4)
+  Global("A7SlaverHendak", "AR0406", 0)
+THEN RESPONSE #100
+  SetGlobal("A7SlaverHendak", "AR0406", 2)
+END
+
+// Trigger after freeing Hendak and the slaves from the compound
+IF
+  Global("HendakReleased", "AR0406", 4)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7SlaverHendak", "AR0406", 0)
+  Global("A7SlaverHendakTimer", "AR0406", 0)
+THEN RESPONSE #100
+  SetGlobalTimer("A7SlaverHendakTimer", "AR0406", 2)
+END
+
+IF
+  HasItem("A7DJLMP", Player1)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7AfaaqMet", "GLOBAL", 1)
+  Global("HendakReleased", "AR0406", 4)
+  GlobalTimerExpired("A7SlaverHendakTimer", "AR0406")
+  Global("A7SlaverHendak", "AR0406", 0)
+THEN RESPONSE #100
+  SetGlobal("A7LampTalk", "GLOBAL", 1)
+  SetGlobal("A7SlaverHendak", "AR0406", 1)
+  ActionOverride(Player1, StartDialogOverrideItem("A7DJLMP", Myself, 0, 0, 1))
+END

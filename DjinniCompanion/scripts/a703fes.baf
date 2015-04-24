@@ -1,0 +1,10 @@
+// *** Proximity trigger: prevent the Salamander's fire elemental to leave the area ***
+
+IF 
+  IsOverMe("A7Q5FES")
+  GlobalLT("A7Quest5", "GLOBAL", 8)
+  Global("A7Q5FESDeny", "A77003", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5FESDeny", "A77003", 1)
+  ActionOverride("A7Q5FES", StartDialogueNoSet([PC]))
+END

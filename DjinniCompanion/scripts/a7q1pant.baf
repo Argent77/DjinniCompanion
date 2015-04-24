@@ -1,0 +1,49 @@
+// *** Specific actions for the rakshasa panther ***
+
+// when attacked
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  SetGlobal("A7RakAttacked", "A77001", 1)
+  Enemy()
+END
+
+IF
+  !Allegiance(Myself, ENEMY)
+  Global("A7RakAttacked", "A77001", 1)
+THEN RESPONSE #100
+  Enemy()
+END
+
+// prepare for the fight
+IF
+  See([PC])
+  Allegiance(Myself, ENEMY)
+  Global("prepared", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("prepared", "LOCALS", 1)
+  ApplySpell(Myself, WIZARD_BLUR)
+  ReallyForceSpell(Myself, GOLEM_HASTE)
+END
+
+// teleport away
+IF
+  Global("A7RakTeleport", "A77001", 1)
+  Global("RakTeleport", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("RakTeleport", "LOCALS", 1)
+  ReallyForceSpell(Myself, DRYAD_TELEPORT)
+  SetInterrupt(TRUE)
+END
+
+// Her master reacts to the death
+IF
+  Die()
+THEN RESPONSE #100
+  SetGlobal("A7RakAttacked", "A77001", 1)
+  ActionOverride("A7Mahel", DisplayStringHead(Myself, @1200))    // Nooo!! My loyal Narantaka!
+  ActionOverride("A7Mahel", Enemy())
+  ActionOverride("A7Mahel", AttackReevaluate(LastAttackerOf(Myself), 30))
+END

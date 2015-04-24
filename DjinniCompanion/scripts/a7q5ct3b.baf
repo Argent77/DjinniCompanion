@@ -1,0 +1,15 @@
+// *** Cutscene: Efreeti Summoner summons a fire elemental (Quest 5) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Q5EF06")
+  ForceSpellRES("A7Q5FES", Myself)
+  CreateCreatureObject("A7Q5FES", LastTalkedToBy, 0, 0, 0)
+  CreateVisualEffectObject("SPPORTAL", "A7Q5FES")
+  SmallWait(20)
+  ActionOverride("A7Q5FES", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Q5FES", DestroyItem("A7RING01"))
+  Wait(2)
+  StartDialogueNoSet([PC])
+END

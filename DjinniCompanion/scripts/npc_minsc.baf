@@ -1,0 +1,50 @@
+// Scripts for Minsc
+
+// Initializing Minsc's banter timer
+IF
+  Global("A7MinscBanterNPCTimer", "GLOBAL", 0)
+THEN RESPONSE #100
+  RealSetGlobalTimer("A7MinscBanterNPCTimer", "GLOBAL", 3600)
+END
+
+// Keep delaying first banter until after Afaaq's party introduction
+IF
+  OR(2)
+    Global("A7BanterIntro", "GLOBAL", 0)
+    Global("A7AfaaqSummoned", "GLOBAL", 0)
+  RealGlobalTimerExpired("A7MinscBanterNPCTimer", "GLOBAL")
+THEN RESPONSE #100
+  RealSetGlobalTimer("A7MinscBanterNPCTimer", "GLOBAL", 3600)
+END
+
+// Triggering banters
+// IF
+  // Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself)
+  // !ActuallyInCombat() !Detect([ENEMY])
+  // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7MinscBanterNPCTimer", "GLOBAL")
+  // OR(2)
+    // Global("A7BanterMinsc", "GLOBAL", 0)
+    // Global("A7BanterMinsc", "GLOBAL", 4)
+// THEN RESPONSE #100
+  // IncrementGlobal("A7BanterMinsc", "GLOBAL", 1)
+  // RealSetGlobalTimer("A7MinscBanterNPCTimer", "GLOBAL", 3600)
+  // StartDialogNoSet("A7Afaaq")
+// END
+
+
+
+// Minsc reacts to CHARNAME talking to the djinni lamp repeatedly
+// IF
+  // RandomNum(20, 2)
+  // !StateCheck(Myself, CD_STATE_NOTVALID)
+  // !StateCheck(Player1, CD_STATE_NOTVALID)
+  // See(Player1)
+  // !See([ENEMY])
+  // !ActuallyInCombat()
+  // GlobalGT("A7TalkedToLamp", "MYAREA", 1)
+  // Global("A7MinscLampTalk", "LOCALS", 0)
+// THEN RESPONSE #100
+  // SetGlobal("A7MinscLampTalk", "LOCALS", 1)
+  // Interact(Player1)
+// END

@@ -1,0 +1,156 @@
+// *** Initial script for upgraded Afaaq to bring his levels on par with CHARNAME ***
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqUpgraded", "GLOBAL", 1)
+  SetGlobal("AfaaqLight", "LOCALS", 1)
+  MakeGlobal()
+  ChangeEnemyAlly(Myself, FAMILIAR)
+  AddFamiliar()
+  ApplySpellRES("A7REST", Myself)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 3500000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 14)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP2", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 2)
+  IncrementGlobal("A7AfaaqTHAC0", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 4000000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 15)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP3", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  ApplySpellRES("A7spAC1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 3)
+  IncrementGlobal("A7AfaaqTHAC0", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqAC", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 4500000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 16)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP2", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 2)
+  IncrementGlobal("A7AfaaqTHAC0", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 5000000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 17)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP3", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  ApplySpellRES("A7spAC1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 3)
+  IncrementGlobal("A7AfaaqTHAC0", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqAC", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 5500000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 18)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP2", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 2)
+  IncrementGlobal("A7AfaaqTHAC0", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 6000000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 19)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP3", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  ApplySpellRES("A7spAC1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 3)
+  IncrementGlobal("A7AfaaqTHAC0", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqAC", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 6500000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 20)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP2", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 2)
+  IncrementGlobal("A7AfaaqTHAC0", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 7000000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 21)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP3", Myself)
+  ApplySpellRES("A7spAC1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 3)
+  IncrementGlobal("A7AfaaqAC", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 7500000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 22)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP2", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 2)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  XPGT(Player1, 8000000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+  Global("A7AfaaqLevel", "GLOBAL", 23)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP3", Myself)
+  ApplySpellRES("A7spAC1", Myself)
+  IncrementGlobal("A7AfaaqHP", "GLOBAL", 3)
+  IncrementGlobal("A7AfaaqAC", "GLOBAL", -1)
+  IncrementGlobal("A7AfaaqLevel", "GLOBAL", 1)
+END
+
+IF
+  CheckStat(Player1, 0, LEVELDRAIN)
+THEN RESPONSE #100
+  SetTokenGlobal("A7AfaaqLevel", "GLOBAL", "A7AFQ_LVL")
+  SetTokenGlobal("A7AfaaqHP", "GLOBAL", "A7AFQ_HP")
+  SetTokenGlobal("A7AfaaqTHAC0", "GLOBAL", "A7AFQ_THAC0")
+  SetTokenGlobal("A7AfaaqAC", "GLOBAL", "A7AFQ_AC")
+  ChangeAIScript("A7AFQLVL", RACE)
+END

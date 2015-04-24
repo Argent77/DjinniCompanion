@@ -1,0 +1,274 @@
+// *** Area script for "Jungle of Chult" ***
+
+// One-time initialization of the map
+IF
+  Global("InitArea", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("InitArea", "A77004", 1)
+  ContainerEnable("Ward3", FALSE)
+  ContainerEnable("Ward4", FALSE)
+  ContainerEnable("Altar1", FALSE)
+END
+
+// You pick up a wardstone the first time (before reaching the barrier)
+IF
+  OR(3)
+    PartyHasItem("A7Q2WS1")
+    PartyHasItem("A7Q2WS2")
+    PartyHasItem("A7Q2WS3")
+  Global("WardstoneFound", "A77004", 0)
+  Global("PassWards", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("WardstoneFound", "A77004", 1)
+  AddJournalEntry(@2803, QUEST)
+END
+
+// You pick up a wardstone the first time (after reaching the barrier)
+IF
+  OR(3)
+    PartyHasItem("A7Q2WS1")
+    PartyHasItem("A7Q2WS2")
+    PartyHasItem("A7Q2WS3")
+  Global("WardstoneFound", "A77004", 0)
+  Global("PassWards", "A77004", 1)
+THEN RESPONSE #100
+  SetGlobal("WardstoneFound", "A77004", 1)
+  AddJournalEntry(@2804, QUEST)
+END
+
+// Wardstone 3 will not trigger a journal entry because there is already one from the serpent statue
+IF
+  PartyHasItem("A7Q2WS3")
+  Global("WardstoneFound", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("WardstoneFound", "A77004", 1)
+END
+
+// Trigger WS1 trap
+IF
+  Global("WS1Trap", "A77004", 1)
+THEN RESPONSE #100
+  SetGlobal("WS1Trap", "A77004", 2)
+  CreateVisualEffect("SPMONSUM", [608.1150])    // ani: creature 1
+  SmallWait(10)
+  CreateVisualEffect("SPMONSUM", [452.1150])    // ani: creature 2
+  SmallWait(10)
+  CreateVisualEffect("SPMONSUM", [618.1010])    // ani: creature 3
+  SmallWait(10)
+  CreateCreature("A7Q2WS1A", [608.1150], 15)    // create: creature 1
+  SmallWait(10)
+  CreateCreature("A7Q2WS1B", [452.1150], 12)    // create: creature 2
+  CreateVisualEffect("SPMONSUM", [462.1020])    // ani: creature 4
+  SmallWait(10)
+  CreateCreature("A7Q2WS1C", [618.1010], 0)    // create: creature 3
+  SmallWait(20)
+  CreateCreature("A7Q2WS1D", [462.1020], 13)    // create: creature 4
+END
+
+// Trigger WS2 trap
+IF
+  Global("WS2Trap", "A77004", 1)
+THEN RESPONSE #100
+  SetGlobal("WS2Trap", "A77004", 2)
+  CreateVisualEffect("SPMONSUM", [947.1283])    // ani: creature 1
+  SmallWait(10)
+  CreateVisualEffect("SPMONSUM", [1084.1195])    // ani: creature 2
+  SmallWait(10)
+  CreateVisualEffect("SPMONSUM", [981.1049])    // ani: creature 3
+  SmallWait(10)
+  CreateCreature("A7Q2WS2A", [947.1283], 4)    // create: creature 1
+  SmallWait(10)
+  CreateCreature("A7Q2WS2B", [1084.1195], 4)    // create: creature 2
+  CreateVisualEffect("SPMONSUM", [1102.1326])    // ani: creature 4
+  SmallWait(10)
+  CreateCreature("A7Q2WS2C", [981.1049], 2)    // create: creature 3
+  SmallWait(20)
+  CreateCreature("A7Q2WS2D", [1102.1326], 6)    // create: creature 4
+END
+
+// Trigger WS3 trap
+// Face: 0-South, 4-West, 8-North, 12-East
+IF
+  Global("WS3Trap", "A77004", 1)
+THEN RESPONSE #100
+  SetGlobal("WS3Trap", "A77004", 2)
+  CreateVisualEffect("SPPLANAR", [667.1222])    // ani: creature 1
+  SmallWait(10)
+  CreateVisualEffect("SPPLANAR", [798.1277])    // ani: creature 2
+  SmallWait(10)
+  CreateVisualEffect("SPPLANAR", [765.1142])    // ani: creature 3
+  SmallWait(10)
+  CreateCreature("A7Q2WS3A", [667.1222], 0)    // create: creature 1
+  SmallWait(10)
+  CreateCreature("A7Q2WS3B", [798.1277], 3)    // create: creature 2
+  CreateVisualEffect("SPPLANAR", [917.1165])    // ani: creature 4
+  SmallWait(10)
+  CreateCreature("A7Q2WS3C", [765.1142], 1)    // create: creature 3
+  SmallWait(20)
+  CreateCreature("A7Q2YU04", [917.1165], 2)    // create: creature 4
+END
+
+
+// When the first two wardstones have been placed correctly
+IF
+  Dead("A7Q2WS1A")
+  Dead("A7Q2WS1B")
+  Dead("A7Q2WS1C")
+  Dead("A7Q2WS1D")
+  Dead("A7Q2WS2A")
+  Dead("A7Q2WS2B")
+  Dead("A7Q2WS2C")
+  Dead("A7Q2WS2D")
+  Global("FField1Passed", "A77004", 0)
+  Global("SlayerPass1", "A77004", 0)
+  Global("WS1Set", "A77004", 1)
+  Global("WS2Set", "A77004", 1)
+THEN RESPONSE #100
+  SetGlobal("FField1Passed", "A77004", 1)
+  Wait(1)
+  DisplayString("FField1_I", @2931)    // As the last creature falls to the ground, you hear a high pitched sound and register a slight flicker in the air. The barrier is gone.
+  SmallWait(10)
+  ContainerEnable("WARD3", TRUE)
+  ContainerEnable("WARD4", TRUE)
+  OpenDoor("FField2_D")
+  TriggerActivation("FField2_I", TRUE)
+  CreateVisualEffect("A7SHAIR", [650.1346])
+  SmallWait(2)
+  CreateVisualEffect("A7SHAIR", [630.1337])
+  SmallWait(2)
+  CreateVisualEffect("A7SHAIR", [670.1355])
+  CloseDoor("FField1_D")
+  TriggerActivation("FField1_I", FALSE)
+END
+
+// Slayer Change: Outer barrier falls
+IF
+  Global("SlayerPass1", "A77004", 1)
+  Global("FField1Passed", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("FField1Passed", "A77004", 1)
+  Wait(1)
+  DisplayString("FField1_I", @2932)    // You hear a high pitched sound and register a slight flicker in the air. The outer barrier is gone.
+  SmallWait(10)
+  ContainerEnable("WARD3", TRUE)
+  ContainerEnable("WARD4", TRUE)
+  OpenDoor("FField2_D")
+  TriggerActivation("FField2_I", TRUE)
+  CreateVisualEffect("A7SHAIR", [650.1346])
+  SmallWait(3)
+  CreateVisualEffect("A7SHAIR", [630.1337])
+  SmallWait(3)
+  CreateVisualEffect("A7SHAIR", [670.1355])
+  CloseDoor("FField1_D")
+  TriggerActivation("FField1_I", FALSE)
+  AddXP2DA("A7Q2SLR")
+END
+
+
+// When the last two wardstones have been placed correctly
+IF
+  Dead("A7Q2WS3A")
+  Dead("A7Q2WS3B")
+  Dead("A7Q2WS3C")
+  Dead("A7Q2WS3D")
+  Global("FField2Passed", "A77004", 0)
+  Global("SlayerPass2", "A77004", 0)
+  Global("WS3Set", "A77004", 1)
+  Global("WS4Set", "A77004", 1)
+THEN RESPONSE #100
+  SetGlobal("FField2Passed", "A77004", 1)
+  SetGlobal("RakTalk", "A77004", 2)
+  DisplayString("FField2_I", @2933)    // When you place the last wardstone into the slot, you register a slight flicker in the air and ...
+  CreateVisualEffect("A7SHAIR", [590.1396])
+  SmallWait(3)
+  CreateVisualEffect("A7SHAIR", [566.1386])
+  SmallWait(3)
+  CreateVisualEffect("A7SHAIR", [613.1406])
+  CloseDoor("FField2_D")
+  TriggerActivation("FField2_I", FALSE)
+  ContainerEnable("Altar1", TRUE)
+  ClearAllActions()
+  CreateCreatureImpassable("observe", [433.1532], 0)    // clear fog around the temple altar for 12 seconds
+  SetGlobal("ClearFogAltar", "A77004", 1)
+  SetGlobalTimer("ClearFogTimer", "A77004", TWO_ROUNDS)
+  StartCutSceneMode()
+  StartCutScene("A7Q2ct3")
+END
+
+// Slayer Change: Inner barrier falls
+IF
+  Global("SlayerPass2", "A77004", 1)
+  Global("FField2Passed", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("FField2Passed", "A77004", 1)
+  SetGlobal("RakTalk", "A77004", 2)
+  DisplayString("FField2_I", @2934)    // You register a slight flicker in the air and the disappearing inner barrier slowly reveals the true scenery before you. You are not alone in this place.
+  CreateVisualEffect("A7SHAIR", [566.1386])
+  CreateVisualEffect("A7SHAIR", [590.1396])
+  CreateVisualEffect("A7SHAIR", [613.1406])
+  CloseDoor("FField2_D")
+  TriggerActivation("FField2_I", FALSE)
+  AddXP2DA("A7Q2SLR")
+  ContainerEnable("Altar1", TRUE)
+  ClearAllActions()
+  CreateCreatureImpassable("observe", [433.1532], 0)    // clear fog around the temple altar for 12 seconds
+  SetGlobal("ClearFogAltar", "A77004", 1)
+  SetGlobalTimer("ClearFogTimer", "A77004", TWO_ROUNDS)
+  StartCutSceneMode()
+  StartCutScene("A7Q2ct3")
+END
+
+// Unlock the temple altar and teleporter
+IF
+  Dead("A7Q2RKPR")
+  Global("AltarUnlocked", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("AltarUnlocked", "A77004", 1)
+  SetGlobal("A7Quest2", "GLOBAL", 2)
+  Wait(1)
+  DisplayString("Altar1", @2935)    // With the defeat of the Rakshasa High Priest vanishes the protective field around the altar.
+  Unlock("Altar1")
+  TriggerActivation("ToOriginBlocked", FALSE)
+  AmbientActivate("A704MS1", TRUE)
+  SoundActivate("portal", TRUE)
+  TriggerActivation("ToOrigin", TRUE)
+  AddJournalEntry(@2807, QUEST)
+END
+
+// Disabling the wizard eye effect at the temple altar
+IF
+  Global("ClearFogAltar", "A77004", 1)
+  !GlobalTimerNotExpired("ClearFogTimer", "A77004")
+THEN RESPONSE #100
+  SetGlobal("ClearFogAltar", "A77004", 2)
+  ActionOverride("observe", DestroySelf())
+END
+
+
+// Initiate lamp talk after rescuing Afaaq
+IF
+  HasItem("A7DJLMP", Player1)
+  Global("AfaaqRescued", "A77004", 0)
+THEN RESPONSE #100
+  SetGlobal("AfaaqRescued", "A77004", 1)
+  SetGlobalTimer("AfaaqRescuedTimer", "A77004", 8)
+END
+
+IF
+  HasItem("A7DJLMP", Player1)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  !ActuallyInCombat()
+  !GlobalTimerNotExpired("AfaaqRescuedTimer", "A77004")
+  OR(2)
+    Global("A7Quest2", "GLOBAL", 2)
+    Global("A7Quest2", "GLOBAL", 10)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7Quest2Grateful", "GLOBAL", 0)
+  Global("AfaaqRescued", "A77004", 1)
+THEN RESPONSE #100
+  SetGlobal("A7LampTalk", "GLOBAL", 1)
+  SetGlobal("A7Quest2Grateful", "GLOBAL", 1)
+  SetGlobal("A7TalkAboutRakshasa", "GLOBAL", 1)
+  SetGlobal("A7TalkAboutDrow", "GLOBAL", 1)
+  ActionOverride(Player1, StartDialogOverrideItem("A7DJLMP", Myself, 0, 0, 1))
+END

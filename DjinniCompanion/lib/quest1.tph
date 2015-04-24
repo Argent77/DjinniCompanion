@@ -1,0 +1,64 @@
+// *** Quest 1-specific ***
+
+INCLUDE ~DjinniCompanion/lib/ar1902.tph~
+INCLUDE ~DjinniCompanion/lib/a77001.tph~
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT ITEM_CMISC1 "DjinniCompanion/items/bg2ee/a7cmisc1.bmp"
+  OUTER_TEXT_SPRINT ITEM_IMISC1 "DjinniCompanion/items/bg2ee/a7imisc1.bam"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT ITEM_CMISC1 "DjinniCompanion/items/a7cmisc1.bam"
+  OUTER_TEXT_SPRINT ITEM_IMISC1 "DjinniCompanion/items/a7imisc1.bam"
+END
+
+// Adding XP rewards for Quest 1
+COPY_EXISTING ~xplist.2da~ ~override~
+  INSERT_2DA_ROW 0 43 ~A7Q1MQ1  A7_Q1_MainQuest_1          P_50000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+
+// items
+COPY ~DjinniCompanion/items/a7misc1.itm~ ~override~
+  SAY NAME1 @1602     // Dao Genie Trap
+  SAY NAME2 @1602     // Dao Genie Trap
+  SAY UNIDENTIFIED_DESC @1603     // This unusually heavy box radiates strong magic which allows you to trap the targeted creature. The rakshasa leader has told you to use it only on Khan Zahraa.
+COPY ~DjinniCompanion/items/a7misc1a.itm~ ~override~
+  SAY NAME1 @1602     // Dao Genie Trap
+  SAY NAME2 @1602     // Dao Genie Trap
+  SAY UNIDENTIFIED_DESC @1604     // This unusually heavy box radiates strong magic which contains the essence of the creature you have trapped within.
+COPY ~DjinniCompanion/items/a7daoimp.eff~ ~override~
+     ~DjinniCompanion/items/a7daoglb.eff~ ~override~
+     ~%ITEM_CMISC1%~                      ~override~
+     ~%ITEM_IMISC1%~                      ~override~
+     ~DjinniCompanion/spells/a7misc1.spl~ ~override~
+
+// dialogs
+COMPILE ~DjinniCompanion/dialogs/trademeet.d~
+
+COPY_EXISTING ~ar2014.are~ ~override~
+  READ_ASCII 0x94 ar2014_script
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~%ar2014_script%.bcs~) BEGIN
+  // append to existing script
+  EXTEND_TOP ~%ar2014_script%.bcs~ ~djinnicompanion/scripts/ar2014.baf~
+END ELSE BEGIN
+  // create and set new script
+  COMPILE ~djinnicompanion/scripts/ar2014.baf~
+  COPY_EXISTING ~ar2014.are~ ~override~
+    WRITE_ASCII 0x94 ~AR2014~ #8
+END
+
+
+// Khan Zahraa reacts to Afaaq's presence
+<<<<<<<< djinnicompanion/inlined/trgeni_append.baf
+IF
+  Name("trgeni01", Myself)
+  Detect("A7Afaaq")
+  See([PC])
+  !Allegiance(Myself, ENEMY)
+  Global("A7AfaaqDetected", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqDetected", "LOCALS", 1)
+  StartDialogNoSet(LastSeenBy(Myself))
+END
+>>>>>>>>
+EXTEND_BOTTOM ~TRGENI.BCS~ ~djinnicompanion/inlined/trgeni_append.baf~

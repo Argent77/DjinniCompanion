@@ -1,0 +1,64 @@
+// *** Cutscene: Malik drains a soul piece out of Imoen (Quest 5) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Malik")
+  FadeToColor([30.0], 0)
+  SmallWait(35)
+  StartCutScene("A7Q5ct6e")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  Wait(2)
+  JumpToPoint([2378.1516])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player2)
+  Wait(2)
+  JumpToPoint([2440.1468])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player3)
+  Wait(2)
+  JumpToPoint([2518.1440])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player4)
+  Wait(2)
+  JumpToPoint([2272.1624])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player5)
+  Wait(2)
+  JumpToPoint([2208.1666])
+  FaceObject("A7Malik")
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player6)
+  Wait(2)
+  JumpToPoint([2168.1610])
+  FaceObject("A7Malik")
+END

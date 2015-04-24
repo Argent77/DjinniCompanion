@@ -1,0 +1,76 @@
+// *** Helper creature used for managing the duel between Korgan and Afaaq ***
+
+// Refreshing Korgan's lifesaver
+IF
+  Delay(3)
+  Global("A7KorganDuel", "GLOBAL", 3)
+THEN RESPONSE #100
+  ApplySpellRES("A7MINHP", "Korgan")
+  Continue()
+END
+
+// If Afaaq has been defeated
+IF
+  HP("A7Afaaq", 1)
+  Global("A7KorganDuel", "GLOBAL", 3)
+THEN RESPONSE #100
+  SetGlobal("A7KorganDuel", "GLOBAL", 4)    // 4: Afaaq defeated, 5: Korgan defeated
+  ClearActions("Korgan")
+  ClearActions("A7Afaaq")
+  StartCutSceneMode()
+  ApplySpellRES("A7DISPEL", "Korgan")
+  // Afaaq rejoins
+  ApplySpellRES("A7DISPEL", "A7Afaaq")
+  SetGlobal("AfaaqPassive", "LOCALS", 0)
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFAAQ", OVERRIDE))
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFQTLK", CLASS))
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFQLVL", RACE))
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFATK", DEFAULT))
+  ActionOverride("A7Afaaq", AddFamiliar())
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)
+  DisplayStringHead("A7Afaaq", @60000)    // Ahh, no! Help me!
+  Wait(1)
+  // Afaaq dies
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 0)
+  SetGlobalTimer("A7AfaaqDeathTimer", "GLOBAL", EIGHT_HOURS)
+  SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
+  ActionOverride("A7Afaaq", ApplySpellRES("A7DIE", Myself))
+  ActionOverride("A7Afaaq", DisplayString(Myself, 14026))    // Death
+  ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
+  SmallWait(25)
+  ActionOverride("A7Afaaq", DestroySelf())
+  EndCutSceneMode()
+  // Korgan triggers dialog with Player1
+END
+
+// If Korgan has been defeated
+IF
+  HPPercentLT("Korgan", 20)
+  Global("A7KorganDuel", "GLOBAL", 3)
+THEN RESPONSE #100
+  SetGlobal("A7KorganDuel", "GLOBAL", 5)    // 4: Afaaq defeated, 5: Korgan defeated
+  ClearActions("Korgan")
+  ClearActions("A7Afaaq")
+  StartCutSceneMode()
+  ApplySpellRES("A7DISPEL", "Korgan")
+  DisplayStringHead("Korgan", @20500)    // Argh! Stop it, I give up!
+  // Afaaq rejoins
+  ApplySpellRES("A7REST3", "A7Afaaq")
+  SetGlobal("AfaaqPassive", "LOCALS", 0)
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFAAQ", OVERRIDE))
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFQTLK", CLASS))
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFQLVL", RACE))
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFATK", DEFAULT))
+  ActionOverride("A7Afaaq", AddFamiliar())
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)
+  Wait(2)
+  ActionOverride("A7Afaaq", StartDialogNoSet("Korgan"))
+END
+
+
+// Destroys itself after the fight is over
+IF
+  GlobalGT("A7KorganDuel", "GLOBAL", 3)
+THEN RESPONSE #100
+  DestroySelf()
+END

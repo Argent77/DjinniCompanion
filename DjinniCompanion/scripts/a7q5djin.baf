@@ -1,0 +1,84 @@
+// *** Helper creature: Call djinnis with whistle (Quest 5) ***
+
+// Summon djinnis
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  AreaCheck("A77003")
+THEN RESPONSE #100
+  SetGlobal("A7Q5DjinniSummoned", "GLOBAL", 1)
+  ActionOverride(LastSummonerOf(Myself), PlaySound("M_FLUTE"))
+  TakePartyItem("A7FLUTE")
+  CreateCreatureObjectOffset("A7Karim", LastSummonerOf(Myself), [80.-32])
+  CreateVisualEffectObject("SPPORTAL", "A7Karim")
+  CreateCreatureObjectOffset("A7Q5DJ01", LastSummonerOf(Myself), [80.32])
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ01")
+  CreateCreatureObjectOffset("A7Q5DJ02", LastSummonerOf(Myself), [0.64])
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ02")
+  CreateCreatureObjectOffset("A7Q5DJ03", LastSummonerOf(Myself), [-80.32])
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ03")
+  CreateCreatureObjectOffset("A7Q5DJ04", LastSummonerOf(Myself), [-80.-32])
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ04")
+  CreateCreatureObjectOffset("A7Q5DJ05", LastSummonerOf(Myself), [0.-64])
+  CreateVisualEffectObject("SPPORTAL", "A7Q5DJ05")
+  Continue()
+END
+
+// apply corrections when Afaaq is one of the djinnis
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 2)
+  AreaCheck("A77003")
+THEN RESPONSE #100
+  ActionOverride("A7Q5DJ05", SetName(@60001))    // Afaaq
+  ActionOverride("A7Q5DJ05", ApplySpellRES("A7Q5PIC1", Myself))
+  ActionOverride("A7Q5DJ05", SetGlobal("Afaaq", "LOCALS", 1))
+  Continue()
+END
+
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  AreaCheck("A77003")
+THEN RESPONSE #100
+  SmallWait(15)
+  ChangeEnemyAlly("A7Karim", GOODBUTBLUE)
+  ActionOverride("A7Karim", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Karim", DestroyItem("A7RING01"))
+  ChangeEnemyAlly("A7Q5DJ01", GOODBUTBLUE)
+  ActionOverride("A7Q5DJ01", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Q5DJ01", DestroyItem("A7RING01"))
+  ChangeEnemyAlly("A7Q5DJ02", GOODBUTBLUE)
+  ActionOverride("A7Q5DJ02", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Q5DJ02", DestroyItem("A7RING01"))
+  ChangeEnemyAlly("A7Q5DJ03", GOODBUTBLUE)
+  ActionOverride("A7Q5DJ03", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Q5DJ03", DestroyItem("A7RING01"))
+  ChangeEnemyAlly("A7Q5DJ04", GOODBUTBLUE)
+  ActionOverride("A7Q5DJ04", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Q5DJ04", DestroyItem("A7RING01"))
+  ChangeEnemyAlly("A7Q5DJ05", GOODBUTBLUE)
+  ActionOverride("A7Q5DJ05", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Q5DJ05", DestroyItem("A7RING01"))
+  SmallWait(30)
+  Continue()
+END
+
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  AreaCheck("A77003")
+THEN RESPONSE #100
+  DestroySelf()
+END
+
+
+// no summoning
+IF
+  True()
+THEN RESPONSE #100
+  ActionOverride(LastSummonerOf(Myself), PlaySound("M_FLUTE"))
+  DisplayStringHead(LastSummonerOf(Myself), @6818)    // You play the whistle but nothing happens.
+  DestroySelf()
+END

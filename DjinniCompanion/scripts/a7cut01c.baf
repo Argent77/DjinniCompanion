@@ -1,0 +1,32 @@
+// *** Cutscene: Afaaq and party enter the djinni lamp together (continued) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  ActionOverride(Player1, MakeUnselectable(999999))
+  ActionOverride(Player2, MakeUnselectable(999999))
+  ActionOverride(Player3, MakeUnselectable(999999))
+  ActionOverride(Player4, MakeUnselectable(999999))
+  ActionOverride(Player5, MakeUnselectable(999999))
+  ActionOverride(Player6, MakeUnselectable(999999))
+  ActionOverride(Player1, ReallyForceSpell(Myself, HOLD_PARTY))
+  ActionOverride(Player2, ReallyForceSpell(Myself, HOLD_PARTY))
+  ActionOverride(Player3, ReallyForceSpell(Myself, HOLD_PARTY))
+  ActionOverride(Player4, ReallyForceSpell(Myself, HOLD_PARTY))
+  ActionOverride(Player5, ReallyForceSpell(Myself, HOLD_PARTY))
+  ActionOverride(Player6, ReallyForceSpell(Myself, HOLD_PARTY))
+  ApplySpellRES("A7Q6FAD1", Player1)
+  ApplySpellRES("A7Q6FAD1", Player2)
+  ApplySpellRES("A7Q6FAD1", Player3)
+  ApplySpellRES("A7Q6FAD1", Player4)
+  ApplySpellRES("A7Q6FAD1", Player5)
+  ApplySpellRES("A7Q6FAD1", Player6)
+  ActionOverride("A7Q6COPY", FaceObject("A7Afaaq")
+  FaceObject("A7Q6COPY")
+  SetSequence(SEQ_AWAKE)
+  PlaySound("EFF_M110")
+  FadeFromColor([30.0], 0)
+  Wait(2)
+  EndCutSceneMode()
+END

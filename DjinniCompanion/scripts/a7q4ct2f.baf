@@ -1,0 +1,23 @@
+// *** Cutscene: Party is positioned before the Greed Genie again, Afaaq is summoned again - Part 2 ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("HELLGEN")
+  MultiPlayerSync()
+  MoveViewPoint([385.842], INSTANT)
+  FadeFromColor([30.0], 0)
+  // Summon Afaaq
+  MoveGlobal("AR2903", "A7Afaaq", [385.842])
+  Deactivate("A7Afaaq")
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  ActionOverride("A7Afaaq", SetGlobal("initialize", "LOCALS", 1))
+  ActionOverride("A7Afaaq", ApplySpellRES("A7REST", Myself))
+  ActionOverride("A7Afaaq", Activate(Myself))
+  ActionOverride("A7Afaaq", FaceObject("HELLGEN"))
+  ActionOverride("A7Afaaq", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Afaaq", CreateVisualEffectObject("A7AFQSUM", Myself))
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)  // restoring player control
+  SmallWait(45)
+  StartDialogueNoSet(Player1)
+END

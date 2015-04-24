@@ -1,0 +1,38 @@
+// *** Trigger for the serpent statue in map A77004 (Jungle of Chult) ***
+
+// When not yet searching for wardstones
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 15)
+  Global("PassWards", "A77004", 0)
+THEN RESPONSE #100
+  DisplayString(Myself, @2900)    // The serpent head looks almost alive and you have a feeling...
+END
+
+// initiate dialog with the serpent statue when in search for wardstones
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 15)
+  GlobalGT("PassWards", "A77004", 0)
+  GlobalLT("SerpentRiddle", "A77004", 2)
+THEN RESPONSE #100
+  ActionOverride("A7Q2SERP", StartDialogueNoSet(LastTrigger("Statue_1")))
+END
+
+// Message when you have solved the riddle
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 15)
+  GlobalGT("SerpentRiddle", "A77004", 1)
+THEN RESPONSE #100
+  DisplayString(Myself, @2901)    // The serpent head remains silent.
+END
+
+// Message when you are too far away
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger, 15)
+THEN RESPONSE #100
+  DisplayString(Myself, 14702)    // You are too far away to use that.
+END
+

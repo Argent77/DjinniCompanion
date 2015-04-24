@@ -1,0 +1,32 @@
+// Battle script for Arabani's Umber Hulks in Quest 3  
+
+IF
+  OR(2)
+    See([0.0.0.0.%specific_tathas%])
+    See(NearestEnemyOf(Myself))
+  !StateCheck(LastSeenBy(Myself), STATE_CONFUSED)
+  Global("firstUse", "LOCALS", 0)
+THEN RESPONSE #100
+  ForceSpell(LastSeenBy(Myself), HULK_CONFUSION)
+  SetGlobal("firstUse", "LOCALS", 1)
+  StartTimer("confus", 12)
+END
+
+IF
+  TimerExpired("confus")
+  OR(2)
+    See([0.0.0.0.%specific_tathas%])
+    See(NearestEnemyOf(Myself))
+  !StateCheck(LastSeenBy(Myself), STATE_CONFUSED)
+THEN
+  RESPONSE #25
+    ForceSpell(LastSeenBy(Myself), HULK_CONFUSION)
+    StartTimer("confus", 12)
+  RESPONSE #25
+    StartTimer("confus", 12)
+  RESPONSE #25
+    ForceSpell(LastSeenBy(Myself), HULK_CONFUSION)
+    StartTimer("confus", 18)
+  RESPONSE #25
+    StartTimer("confus", 18)
+END

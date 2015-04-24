@@ -1,0 +1,311 @@
+// *** Quest-specific script for the fire elemental summoned for the fire salamanders (Quest 5) ***
+
+// *** Following party to the salamanders ***
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 0)
+  Global("FESFollow", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("FESFollow", "LOCALS", 0)
+  MoveToObjectFollow(LastTalkedToBy)
+END
+
+IF
+  Global("FESWait", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("FESWait", "LOCALS", 0)
+  NoAction()
+END
+
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 0)
+  Global("A7Q5FESDeny", "A77003", 1)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  MoveToPointNoInterrupt([1925.1050])
+  Face(8)
+  SetGlobal("A7Q5FESDeny", "A77003", 0)
+  SetInterrupt(TRUE)
+END
+
+
+// *** taking over the role of salamander #6 ***
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  Global("A7Q5SalamandersTakeOver", "A77003", 0)
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("MyRound", "LOCALS", 0)
+THEN RESPONSE #100
+  RESPONSE #75
+    MoveToPoint([1872.2070])
+    Wait(1)
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(5)
+    ActionOverride("A7Q5FS01", FaceObject("A7Q5FES"))
+    SmallWait(2)
+    ActionOverride("A7Q5FS02", FaceObject("A7Q5FES"))
+    Wait(2)
+    DisplayStringHead("A7Q5FS01", @6865)    // Another glass of wine please.
+    Wait(3)
+    FaceObject("A7Q5FS02")
+    Wait(1)
+    DisplayStringHead(Myself, @6866)    // And what about you?
+    Wait(2)
+    DisplayStringHead("A7Q5FS02", @6867)    // Give me something strong.
+    Wait(3)
+    ActionOverride("A7Q5FS01", FaceObject("A7Q5FS02"))
+    ActionOverride("A7Q5FS02", FaceObject("A7Q5FS01"))
+    SetGlobal("MyRound", "LOCALS", 1)
+  RESPONSE #25
+    MoveToPoint([1872.2070])
+    Wait(7)
+    SetGlobal("MyRound", "LOCALS", 1)
+END
+
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  Global("A7Q5SalamandersTakeOver", "A77003", 0)
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("MyRound", "LOCALS", 1)
+THEN
+  RESPONSE #75
+    MoveToPoint([1935.2066])
+    Face(15)
+    Wait(1)
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(5)
+    ActionOverride("A7Q5FS04", FaceObject("A7Q5FES"))
+    ActionOverride("A7Q5FS05", FaceObject("A7Q5FES"))
+    ActionOverride("A7Q5FS06", FaceObject("A7Q5FES"))
+    Wait(2)
+    DisplayStringHead("A7Q5FS04", @6868)    // Maybe another mug of ale.
+    Wait(1)
+    DisplayStringHead("A7Q5FS05", @6869)    // Me too!
+    Wait(1)
+    DisplayStringHead("A7Q5FS06", @6870)    // And me too!
+    Wait(3)
+    ActionOverride("A7Q5FS04", FaceObject("A7Q5FS05"))
+    ActionOverride("A7Q5FS05", FaceObject("A7Q5FS04"))
+    ActionOverride("A7Q5FS06", Face(0))
+    SetGlobal("MyRound", "LOCALS", 2)
+  RESPONSE #25
+    MoveToPoint([1935.2066])
+    Face(15)
+    Wait(7)
+    SetGlobal("MyRound", "LOCALS", 2)
+END
+
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  Global("A7Q5SalamandersTakeOver", "A77003", 0)
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("MyRound", "LOCALS", 2)
+THEN
+  RESPONSE #75
+    MoveToPoint([2045.2063])
+    Face(12)
+    Wait(1)
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    Wait(1)
+    ActionOverride("A7Q5FS03", FaceObject("A7Q5FES"))
+    DisplayStringHead("A7Q5FS03", @6871)    // No thanks. I'm still enjoying my cup of tea.
+    Wait(4)
+    ActionOverride("A7Q5FS03", Face(12))
+    SetGlobal("MyRound", "LOCALS", 3)
+  RESPONSE #25
+    MoveToPoint([2045.2063])
+    Face(12)
+    Wait(7)
+    SetGlobal("MyRound", "LOCALS", 3)
+END
+
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  Global("A7Q5SalamandersTakeOver", "A77003", 0)
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("MyRound", "LOCALS", 3)
+THEN
+  RESPONSE #75
+    MoveToPoint([1960.2000])
+    Face(8)
+    DisplayStringHead(Myself, @6872)    // Welcome to the 'Flaming Wand'
+    Wait(4)
+    DisplayStringHead(Myself, @6873)    // We offer hot meals and cold drinks.
+    Wait(5)
+    SetGlobal("MyRound", "LOCALS", 0)
+  RESPONSE #25
+    SetGlobal("MyRound", "LOCALS", 0)
+END
+
+
+// *** Making his rounds #2 ***
+IF
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("A7Q5SalamandersTakeOver", "A77003", 1)
+  Global("MoveOutOfTheWay", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("MoveOutOfTheWay", "LOCALS", 1)
+  MoveToPoint([1960.2000])
+  Face(8)
+END
+
+// Wait until all salamanders have taken their new positions
+IF
+  Global("FS01TookOver", "A77003", 2)
+  Global("FS02TookOver", "A77003", 2)
+  Global("FS03TookOver", "A77003", 2)
+  Global("FS04TookOver", "A77003", 2)
+  Global("FS05TookOver", "A77003", 2)
+  Global("FS06TookOver", "A77003", 2)
+  Global("A7Q5SalamandersTakeOver", "A77003", 1)
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("SalamandersInPosition", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("SalamandersInPosition", "LOCALS", 1)
+END
+
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  Global("A7Q5SalamandersTakeOver", "A77003", 1)
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("SalamandersInPosition", "LOCALS", 1)
+  Global("MyRound2", "LOCALS", 0)
+THEN 
+  RESPONSE #40
+    MoveToPoint([1918.1994])
+    MoveToPoint([1930.1730])
+    MoveToPoint([2404.1598])
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(5)
+    ActionOverride("A7Q5FS03", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS03", @6874)    // Yes, another cup of tea please.
+    Wait(2)
+    ActionOverride("A7Q5FS03", Face(3))
+    MoveToPoint([1930.1730])
+    MoveToPoint([1918.1994])
+    MoveToPoint([1884.2070])
+    FaceObject("A7Q5FS02")
+    SmallWait(5)
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(10)
+    ActionOverride("A7Q5FS02", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS02", @6867)    // Give me something strong.
+    Wait(2)
+    ActionOverride("A7Q5FS02", Face(9))
+    MoveToPoint([2020.2080])
+    FaceObject("A7Q5FS06")
+    SmallWait(3)
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(10)
+    ActionOverride("A7Q5FS06", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS06", @6875)    // Bring me your best wine.
+    Wait(2)
+    ActionOverride("A7Q5FS06", Face(12))
+  RESPONSE #30
+    MoveToPoint([1918.1994])
+    MoveToPoint([1887.1764])
+    MoveToPoint([1416.1912])
+    MoveToPoint([1341.2000])
+    SmallWait(5)
+    MoveToPoint([1091.1888])
+    MoveToPoint([1091.1386])
+    MoveToPoint([1311.1147])
+    MoveToPoint([1638.1106])
+    FaceObject("A7Q5FS01")
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(5)
+    ActionOverride("A7Q5FS01", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS01", @6876)    // Just someone who will listen to my stories.
+    Wait(2)
+    ActionOverride("A7Q5FS01", Face(14))
+    MoveToPoint([1311.1147])
+    MoveToPoint([1091.1386])
+    MoveToPoint([1091.1888])
+    MoveToPoint([1341.2000])
+    MoveToPoint([1416.1912])
+    MoveToPoint([1887.1764])
+    MoveToPoint([1918.1994])
+    MoveToPoint([1884.2070])
+    FaceObject("A7Q5FS02")
+    SmallWait(3)
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(10)
+    ActionOverride("A7Q5FS02", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS02", @6877)    // (snore...zzz)
+    Wait(2)
+    ActionOverride("A7Q5FS02", Face(9))
+    MoveToPoint([2020.2080])
+    FaceObject("A7Q5FS06")
+    SmallWait(3)
+    DisplayStringHead(Myself, @6864)    // Do you need something.
+    SmallWait(10)
+    ActionOverride("A7Q5FS06", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS06", @6865)    // Another glass of wine please.
+    Wait(2)
+    ActionOverride("A7Q5FS06", Face(12))
+  RESPONSE #30
+    MoveToPoint([1918.1994])
+    MoveToPoint([1887.1764])
+    MoveToPoint([1416.1912])
+    MoveToPoint([1341.2000])
+    SmallWait(5)
+    MoveToPoint([1091.1888])
+    MoveToPoint([1091.1386])
+    MoveToPoint([1311.1147])
+    MoveToPoint([1638.1106])
+    FaceObject("A7Q5FS01")
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(5)
+    ActionOverride("A7Q5FS01", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS01", @6878)    // Another beer please.
+    Wait(2)
+    ActionOverride("A7Q5FS01", Face(14))
+    MoveToPoint([1311.1147])
+    MoveToPoint([1091.1386])
+    MoveToPoint([1091.1888])
+    MoveToPoint([1341.2000])
+    MoveToPoint([1416.1912])
+    MoveToPoint([1416.1912])
+    MoveToPoint([2404.1598])
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(5)
+    ActionOverride("A7Q5FS03", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS03", @6879)    // Another cup of tea please.
+    Wait(2)
+    ActionOverride("A7Q5FS03", Face(3))
+    MoveToPoint([1930.1730])
+    MoveToPoint([1918.1994])
+    MoveToPoint([1884.2070])
+    FaceObject("A7Q5FS02")
+    SmallWait(3)
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(10)
+    ActionOverride("A7Q5FS02", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS02", @6880)    // I needsh some (urkh) ale... (hic)
+    Wait(2)
+    ActionOverride("A7Q5FS02", Face(9))
+    MoveToPoint([2020.2080])
+    FaceObject("A7Q5FS06")
+    SmallWait(3)
+    DisplayStringHead(Myself, @6864)    // Do you need something?
+    SmallWait(10)
+    ActionOverride("A7Q5FS06", FaceObject("A7Q5FES"))
+    Wait(1)
+    DisplayStringHead("A7Q5FS06", @6881)    // Some wine, bread, cheese and fireberry syrup please.
+    Wait(3)
+    ActionOverride("A7Q5FS06", Face(12))
+END
+

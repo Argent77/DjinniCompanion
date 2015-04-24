@@ -1,0 +1,215 @@
+// *** Quest 3-specific ***
+
+INCLUDE ~DjinniCompanion/lib/ar2100.tph~
+INCLUDE ~DjinniCompanion/lib/a77005.tph~
+INCLUDE ~DjinniCompanion/lib/a77007.tph~
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT ITEM_CMISC4 "DjinniCompanion/items/bg2ee/a7cmisc4.bmp"
+  OUTER_TEXT_SPRINT PORTRAIT_ARABS "DjinniCompanion/portraits/bg2ee/a7arabs.bmp"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT ITEM_CMISC4 "DjinniCompanion/items/a7cmisc4.bam"
+  OUTER_TEXT_SPRINT PORTRAIT_ARABS "DjinniCompanion/portraits/a7arabs.bmp"
+END
+
+// Adding XP rewards for Quest 3
+COPY_EXISTING ~xplist.2da~ ~override~
+  INSERT_2DA_ROW 0 43 ~A7Q3AFQ  A7_Q3_Afaaq_Soulcage       P_10000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q3MQ3  A7_Q3_MainQuest_3          P_20000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q3MQ2  A7_Q3_MainQuest_2          P_35000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q3MQ1  A7_Q3_MainQuest_1          P_50000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+
+// Specific IDs used in scripts and on creatures
+OUTER_SET specific_tathas = 167
+OUTER_SET specific_arabani = 168
+// shout IDs used in scripts
+OUTER_SET shout_helpme_tathas = 167
+OUTER_SET shout_helpme_arabani = 168
+OUTER_SET shout_help_tathas = 169
+OUTER_SET shout_help_arabani = 170
+
+// Modifying Arabani creatures
+// Xunvrae d'Arabani
+COPY ~DjinniCompanion/creatures/a7arab01.cre~ ~override~
+  SAY NAME1 @3974   // Xunvrae d'Arabani
+  SAY NAME2 @3974   // Xunvrae d'Arabani
+  WRITE_BYTE 0x274 %specific_arabani%   // new specific
+COPY ~%PORTRAIT_ARABS%~ ~override~
+
+// Riltana d'Arabani
+COPY ~DjinniCompanion/creatures/a7arab02.cre~ ~override~
+  SAY NAME1 @3975   // Riltana d'Arabani
+  SAY NAME2 @3975   // Riltana d'Arabani
+  WRITE_BYTE 0x274 %specific_arabani%   // new specific
+
+// Vlonyrr d'Arabani
+COPY ~DjinniCompanion/creatures/a7arab03.cre~ ~override~
+  SAY NAME1 @3976   // Vlonyrr d'Arabani
+  SAY NAME2 @3976   // Vlonyrr d'Arabani
+  WRITE_BYTE 0x274 %specific_arabani%   // new specific
+
+// Arabani Guard
+COPY ~DjinniCompanion/creatures/a7arab04.cre~ ~override~
+  SAY NAME1 @3977   // Arabani Guard
+  SAY NAME2 @3977   // Arabani Guard
+  WRITE_BYTE 0x274 %specific_arabani%   // new specific
+
+// Arabani Wizard
+COPY ~DjinniCompanion/creatures/a7arab05.cre~ ~override~
+  SAY NAME1 @3978   // Arabani Wizard
+  SAY NAME2 @3978   // Arabani Wizard
+  WRITE_BYTE 0x274 %specific_arabani%   // new specific
+
+// Arabani Priestess
+COPY ~DjinniCompanion/creatures/a7arab06.cre~ ~override~
+  SAY NAME1 @3979   // Arabani Priestess
+  SAY NAME2 @3979   // Arabani Priestess
+  WRITE_BYTE 0x274 %specific_arabani%   // new specific
+
+// Stone Golem
+COPY ~DjinniCompanion/creatures/a7arab07.cre~ ~override~
+  WRITE_BYTE 0x274 %specific_arabani%   // new specific
+
+// Umber Hulk
+COPY ~DjinniCompanion/creatures/a7arab08.cre~ ~override~
+  WRITE_BYTE 0x274 %specific_arabani%   // new specific
+
+
+// Xunvrae d'Arabani's House Insignia
+COPY ~DjinniCompanion/items/a7misc4.itm~ ~override~
+  SAY NAME1 @3903     // Arabani House Insignia
+  SAY NAME2 @3903     // Arabani House Insignia
+  SAY UNIDENTIFIED_DESC @3904    // This small adamantine amulet has a a delicate etching on its surface which...
+COPY ~DjinniCompanion/items/a7imisc4.bam~ ~override~
+     ~%ITEM_CMISC4%~ ~override~
+
+// Tathas' soulcage collection
+COPY ~DjinniCompanion/items/a7misc5.itm~ ~override~
+  SAY NAME1 @3909     // Soulcage collection
+  SAY NAME2 @3909     // Soulcage collection
+  SAY UNIDENTIFIED_DESC @3910    // The crystals are unusually heavy and seem to be shrouded in a dark aura. On closer examination...
+  SAY IDENTIFIED_DESC @3911    // These crystals contain the spiritual or magical essences of the extraplanar beings which Tathas Melarn...
+
+// Afaaq's soulcage
+COPY ~DjinniCompanion/items/a7misc6.itm~ ~override~
+  SAY NAME1 @3912     // Afaaq's Soulcage
+  SAY NAME2 @3912     // Afaaq's Soulcage
+  SAY UNIDENTIFIED_DESC @3913    // This magical crystal contains the spiritual essence of Afaaq. Although...
+COPY ~DjinniCompanion/items/a7imisc6.bam~ ~override~
+
+// Jae'llat wardstone
+COPY_EXISTING ~miscbf.itm~ ~override~
+  SAY UNIDENTIFIED_DESC @3970   // This is the wardstone that will allow you access to the House Jae'llat and allied Houses...
+
+// Anchor Stone
+COPY ~DjinniCompanion/items/a7misc7.itm~ ~override~
+  SAY NAME1 @3914     // Arabani Anchor Stone
+  SAY NAME2 @3914     // Arabani Anchor Stone
+  SAY UNIDENTIFIED_DESC @3915    // The anchor stone of the House Arabani allows you to enter their home at...
+COPY ~DjinniCompanion/items/a7q3anch.eff~ ~override~
+     ~DjinniCompanion/creatures/a7q3anch.cre~ ~override~
+
+// Ring of Elemental Control
+COPY ~DjinniCompanion/items/a7ring02.itm~ ~override~
+  SAY NAME2 @3925     // Ring of Elemental Control
+  SAY IDENTIFIED_DESC @3926    // This relatively unadorned ring is engraved with magical runes and the embedded star-shaped crystal...
+COPY ~DjinniCompanion/items/a7cmelem.eff~ ~override~
+     ~DjinniCompanion/items/a7cmmeph.eff~ ~override~
+     ~DjinniCompanion/items/a7iring2.bam~ ~override~
+
+// spells
+COPY ~DjinniCompanion/spells/a7q3sfx1.spl~ ~override~
+     ~DjinniCompanion/spells/a7q3sfx2.spl~ ~override~
+     ~DjinniCompanion/spells/a7q3sfx3.spl~ ~override~
+
+// misc
+COPY ~DjinniCompanion/spells/a7q3ct3.vef~ ~override~    // visual effect for Tathas to be confined (cave)
+     ~DjinniCompanion/spells/a7q3ct4.vef~ ~override~    // visual effect for Tathas to be confined (Arabani home)
+     ~DjinniCompanion/spells/a7q3ct5.vef~ ~override~    // visual effect for Tathas to break the enchantments
+
+// scripts
+EXTEND_BOTTOM ~ar2100.bcs~ ~DjinniCompanion/scripts/ar2100.baf~
+COMPILE EVALUATE_BUFFER
+  ~djinnicompanion/scripts/a7q3a007.baf~
+  ~djinnicompanion/scripts/a7q3trsr.baf~
+  ~djinnicompanion/scripts/a7q3afq1.baf~
+  ~DjinniCompanion/scripts/a7wtastt.baf~
+  ~DjinniCompanion/scripts/a7wtasta.baf~
+  ~DjinniCompanion/scripts/a7q3tran.baf~
+  ~DjinniCompanion/scripts/a7q3anch.baf~
+  ~DjinniCompanion/scripts/a7q3ct1.baf~
+  ~DjinniCompanion/scripts/a7q3ct2.baf~
+  ~DjinniCompanion/scripts/a7q3ct3.baf~
+  ~DjinniCompanion/scripts/a7q3ct4.baf~
+  ~DjinniCompanion/scripts/a7q3ct5.baf~
+  ~DjinniCompanion/scripts/a7q3ct6.baf~
+  ~DjinniCompanion/scripts/a7q3um.baf~
+  ~DjinniCompanion/scripts/a7q3uma.baf~
+  ~DjinniCompanion/scripts/a7q3sp.baf~
+  ~DjinniCompanion/scripts/a7q3o01.baf~
+  ~DjinniCompanion/scripts/a7q3o02.baf~
+  ~DjinniCompanion/scripts/a7q3o03.baf~
+  ~DjinniCompanion/scripts/a7q3dr01.baf~
+  ~DjinniCompanion/scripts/a7q3dr02.baf~
+  ~DjinniCompanion/scripts/a7q3dr03.baf~
+  ~DjinniCompanion/scripts/a7q3dr04.baf~
+  ~DjinniCompanion/scripts/a7q3dr05.baf~
+  ~DjinniCompanion/scripts/a7q3dr06.baf~
+  ~DjinniCompanion/scripts/a7q3dr07.baf~
+  ~DjinniCompanion/scripts/a7q3dr08.baf~
+  ~DjinniCompanion/scripts/a7q3tath.baf~
+  ~DjinniCompanion/scripts/a7q3gent.baf~
+  ~DjinniCompanion/scripts/a7q3arab.baf~
+  ~DjinniCompanion/scripts/a7q3gena.baf~
+  ~DjinniCompanion/scripts/a7q3gola.baf~
+  ~DjinniCompanion/scripts/a7mag10t.baf~
+  ~DjinniCompanion/scripts/a7mag10a.baf~
+  ~DjinniCompanion/scripts/a7mag20t.baf~
+  ~DjinniCompanion/scripts/a7pri14t.baf~
+  ~DjinniCompanion/scripts/a7pri14a.baf~
+  ~DjinniCompanion/scripts/a7pri18t.baf~
+  ~DjinniCompanion/scripts/a7pri18a.baf~
+  ~DjinniCompanion/scripts/a7q3spar.baf~
+
+// Modifying the entrance script to Jae'llat home
+COPY_EXISTING ~tran2209.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE
+      ~\([^!]PartyHas.+("MISCBF".+\)~ 
+      ~\1 Global("A7JaellatEntered","AR2200",0)~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE
+      ~Take.+"MISCBF".+~ 
+      ~SetGlobal("A7JaellatEntered","AR2200",1)~
+    REPLACE_TEXTUALLY CASE_INSENSITIVE
+      ~Display.+57372.+~ 
+      ~DisplayString(Myself,@3968)~
+  END
+  BUT_ONLY
+EXTEND_TOP ~tran2209.bcs~ ~DjinniCompanion/scripts/tran2209.baf~
+
+// dialogs
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/dialogs/udduergars.d~
+  ~DjinniCompanion/dialogs/A7Tathas.d~
+  ~DjinniCompanion/dialogs/A7Q3dhm.d~
+  ~DjinniCompanion/dialogs/A7Q3dcpt.d~
+  ~DjinniCompanion/dialogs/A7Q3dm.d~
+  ~DjinniCompanion/dialogs/A7Q3dp.d~
+  ~DjinniCompanion/dialogs/A7Q3dr.d~
+  ~DjinniCompanion/dialogs/A7Q3dr01.d~
+  ~DjinniCompanion/dialogs/A7Q3dr02.d~
+  ~DjinniCompanion/dialogs/A7Q3dr03.d~
+  ~DjinniCompanion/dialogs/A7Q3dr04.d~
+  ~DjinniCompanion/dialogs/A7Q3dr05.d~
+  ~DjinniCompanion/dialogs/A7Q3dwf.d~
+  ~DjinniCompanion/dialogs/A7Q3dwm.d~
+  ~DjinniCompanion/dialogs/A7Q3o.d~
+  ~DjinniCompanion/dialogs/A7Q3or.d~
+  ~DjinniCompanion/dialogs/A7Arab01.d~
+  ~DjinniCompanion/dialogs/A7Arab02.d~
+  ~DjinniCompanion/dialogs/A7Arab03.d~
+  ~DjinniCompanion/dialogs/A7Arab04.d~
+  // TODO: create dialogs for Arabani wizards and priestesses?
+  // ~DjinniCompanion/dialogs/A7Arab05.d~
+  // ~DjinniCompanion/dialogs/A7Arab06.d~

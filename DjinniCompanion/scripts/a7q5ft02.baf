@@ -1,0 +1,29 @@
+// *** Quest-specific script for Fire Troll #2 (Quest 5) ***
+
+IF
+  !Allegiance(Myself, ENEMY)
+  RandomNum(5, 1)
+  Global("MyRound", "LOCALS", 0)
+THEN RESPONSE #100
+  Wait(2)
+  MoveToPoint([1241.1995])
+  Wait(1)
+  MoveToPoint([1422.2035])
+  Wait(5)
+  SetGlobal("MyRound", "LOCALS", 1)
+END
+
+IF
+  !Allegiance(Myself, ENEMY)
+  RandomNum(5, 1)
+  Global("MyRound", "LOCALS", 1)
+THEN RESPONSE #100
+  Wait(2)
+  MoveToPoint([1241.1995])
+  Wait(1)
+  MoveToPoint([1016.2000])
+  Wait(2)
+  Face(12)
+  Wait(3)
+  SetGlobal("MyRound", "LOCALS", 0)
+END

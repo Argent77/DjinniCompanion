@@ -1,0 +1,28 @@
+// *** Cutscene: Efreeti Guard guides party to first commander (Quest 5) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Q5EF01")
+  FadeToColor([30.0], 0)
+  Wait(3)
+  ActionOverride(Player1, JumpToPoint([2330.1582]))
+  ActionOverride(Player2, JumpToPoint([2368.1532]))
+  ActionOverride(Player3, JumpToPoint([2290.1634]))
+  ActionOverride(Player4, JumpToPoint([2406.1580]))
+  ActionOverride(Player5, JumpToPoint([2374.1630]))
+  ActionOverride(Player6, JumpToPoint([2230.1622]))
+  ActionOverride(Player1, FaceObject("A7Q5EF01"))
+  ActionOverride(Player2, FaceObject("A7Q5EF01"))
+  ActionOverride(Player3, FaceObject("A7Q5EF01"))
+  ActionOverride(Player4, FaceObject("A7Q5EF01"))
+  ActionOverride(Player5, FaceObject("A7Q5EF01"))
+  ActionOverride(Player6, FaceObject("A7Q5EF01"))
+  MultiPlayerSync()
+  Wait(1)
+  MoveViewPoint([2330.1582], INSTANT)
+  Wait(1)
+  FadeFromColor([30.0], 0)
+  Wait(3)
+  StartDialogueNoSet(Player1)
+END

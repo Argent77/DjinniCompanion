@@ -1,0 +1,20 @@
+// *** Cutscene: The Greed Genie will break the enchantment (continued from A7Q4ct3a and A7Q4ct3b) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("HELLGEN")
+  MoveViewObject(Myself, VERY_FAST)
+  TakePartyItem("A7DJLMP")
+  Wait(2)
+  StartDialogueNoSet(Player1)
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)
+  ApplySpellRES("A7REST", Myself)
+  SetGlobal("A7AfaaqUpgraded", "GLOBAL", 1)
+END

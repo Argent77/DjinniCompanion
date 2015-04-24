@@ -1,0 +1,42 @@
+// *** Script for water pool in Smuggler Cave (Quest 5) ***
+
+// Before starting or when cancelled Quest 5
+IF
+  Clicked([ANYONE])
+  OR(2)
+    Global("A7Quest5", "GLOBAL", 0)
+    GlobalGT("A7Quest5", "GLOBAL", 10)
+THEN RESPONSE #100
+  DisplayStringNoNameHead(Myself, @6810)    // Steam is rising from this pool of water which has turned the cave into a natural sauna.
+END
+
+// Quest 5 has started, CHARNAME has no heat protection
+IF
+  Clicked([ANYONE])
+  GlobalGT("A7Quest5", "GLOBAL", 0)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Protection", "GLOBAL", 0)
+THEN RESPONSE #100
+  DisplayStringNoNameHead(Myself, @6811)    // The steam rising from this hot spring makes it impossible to enter the cave system deep below the water surface.
+END
+
+// Quest 5 has started, CHARNAME has no permission from Carras
+IF
+  Clicked([ANYONE])
+  GlobalGT("A7Quest5", "GLOBAL", 0)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Permission", "GLOBAL", 0)
+  Global("A7Q5Protection", "GLOBAL", 1)
+THEN RESPONSE #100
+  DisplayStringNoNameHead(Myself, @6838)    // With your heat protection in place you may be able to enter the pool, but that would likely anger the smugglers.
+END
+
+// Quest 5 has ended
+IF
+  Clicked([ANYONE])
+  Global("A7Quest5", "GLOBAL", 10)
+THEN RESPONSE #100
+  DisplayStringNoNameHead(Myself, @6812)    // The water is cool to the touch and you see several tunnels deep below which connect this pool to an extensive cave system.
+  TriggerActivation("A7InfoWater_1", FALSE)
+  TriggerActivation("A7InfoWater_2", TRUE)
+END

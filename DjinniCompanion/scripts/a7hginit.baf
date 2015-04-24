@@ -1,0 +1,14 @@
+// *** Race script for the Greed Genie (Quest 4) ***
+
+IF
+  OR(2)
+    Detect([PC])
+    Detect("A7Afaaq")
+  Allegiance(Myself, NEUTRAL)
+  NumTimesTalkedTo(0)
+THEN RESPONSE #100
+  SetGlobal("A7Quest4", "GLOBAL", 1)
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("A7Q4ct1")
+END

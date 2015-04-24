@@ -1,0 +1,10 @@
+// *** Area script for the Planar Prison ***
+
+// Disable Afaaq's remark after the warden's death if he didn't meet Charname yet
+IF
+  Global("A7AfaaqMet", "GLOBAL", 0)
+  Dead("pwarden")
+  Global("A7PlanarPrisonLiberated", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7PlanarPrisonLiberated", "GLOBAL", 2)
+END

@@ -1,0 +1,28 @@
+// *** Cutscene: Rakshasa party arrives, one of them snatches the lamp and teleports away (Part 2) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  ActionOverride("A7Q2RK4", FaceObject(Player1))
+  DisplayStringHead("A7Q2RK4", @2405)    // For the glory of Ravanna!
+  SmallWait(5)
+  ActionOverride("A7Q2RK7", FaceObject(Player1))
+  DisplayStringHead("A7Q2RK7", @2405)    // For the glory of Ravanna!
+  SmallWait(1)
+  ActionOverride("A7Q2RK6", FaceObject(Player1))
+  DisplayStringHead("A7Q2RK6", @2406)    // For Ravanna!
+  SmallWait(3)
+  ActionOverride("A7Q2RK5", FaceObject(Player1))
+  DisplayStringHead("A7Q2RK5", @2406)    // For Ravanna!
+  Wait(1)
+  // remaining rakshasa attack
+  ActionOverride("A7Q2RK4", Enemy())
+  ActionOverride("A7Q2RK5", Enemy())
+  ActionOverride("A7Q2RK6", Enemy())
+  ActionOverride("A7Q2RK7", Enemy())
+  SetGlobalTimer("A7Quest2Timer", "GLOBAL", THREE_DAYS)      // set limit to three days to start the next phase of Quest 2
+  ActionOverride("A7Afaaq", SetGlobal("unsummoning", "LOCALS", 1))    // Force the djinni into the lamp
+  AddJournalEntry(@2800, QUEST)
+  EndCutSceneMode()
+END

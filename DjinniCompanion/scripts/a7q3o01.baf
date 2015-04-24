@@ -1,0 +1,40 @@
+// Specific script for Orc 1 in map A77005
+
+// First-time initialization
+IF
+  Global("init", "LOCALS", 0)
+THEN
+  RESPONSE #25
+    SetGlobal("init", "LOCALS", 1)
+    StartTimer("noaction", 3)
+  RESPONSE #25
+    SetGlobal("init", "LOCALS", 1)
+    StartTimer("noaction", 6)
+  RESPONSE #25
+    SetGlobal("init", "LOCALS", 1)
+    StartTimer("noaction", 9)
+  RESPONSE #25
+    SetGlobal("init", "LOCALS", 1)
+    StartTimer("noaction", 12)
+END
+
+// Randomly walk around
+IF
+  TimerExpired("noaction")
+THEN
+  RESPONSE #10
+    StartTimer("noaction", 12)
+    MoveToPoint([507.1643])
+  RESPONSE #10
+    StartTimer("noaction", 12)
+    MoveToPoint([682.1855])
+  RESPONSE #10
+    StartTimer("noaction", 12)
+    MoveToPoint([685.1739])
+  RESPONSE #10
+    StartTimer("noaction", 12)
+    MoveToPoint([553.1453])
+  RESPONSE #60
+    StartTimer("noaction", 12)
+    ClearActions(Myself)
+END

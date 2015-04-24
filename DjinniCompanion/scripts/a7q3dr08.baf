@@ -1,0 +1,53 @@
+// Script of the duergar 3 in the left corner
+
+IF
+  Global("appear", "LOCALS", 1)
+  Global("duel", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("duel", "LOCALS", 1)
+END
+
+IF
+  Delay(6)
+  !Allegiance(Myself, ENEMY)
+  Global("duel", "LOCALS", 1)
+  OR(3)
+    Detect([PC])
+    Detect([FAMILIAR])
+    Detect([CONTROLLED])
+THEN
+  RESPONSE #10
+    Wait(1)
+    Face(2)
+    DisplayStringNoNameHead(Myself, @3949)    // *CRUNCH-CRUNCH*
+  RESPONSE #10
+    Wait(1)
+    Face(2)
+    DisplayStringNoNameHead(Myself, @3950)    // *CRUNCH-SLURP*
+  RESPONSE #10
+    Wait(1)
+    Face(2)
+    DisplayStringNoNameHead(Myself, @3963)    // *hic*
+  RESPONSE #10
+    Wait(1)
+    Face(2)
+    DisplayStringNoNameHead(Myself, @3964)    // *sigh*
+  RESPONSE #10
+    Wait(1)
+    Face(2)
+    DisplayStringNoNameHead(Myself, @3951)    // *BURP*
+  RESPONSE #10
+    Wait(1)
+    Face(2)
+    DisplayStringNoNameHead(Myself, @3965)    // Of course...
+  RESPONSE #10
+    Wait(1)
+    Face(2)
+    DisplayStringNoNameHead(Myself, @3966)    // I dunno...
+  RESPONSE #10
+    Wait(1)
+    Face(2)
+    DisplayStringNoNameHead(Myself, @3967)    // Maybe we...
+  RESPONSE #40
+    Face(2)
+END

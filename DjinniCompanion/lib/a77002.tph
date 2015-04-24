@@ -1,0 +1,21 @@
+// *** Area A77002 (Underground cavern below Smuggler's Cave) ***
+
+COPY ~DjinniCompanion/areas/a77002.are~ ~override~
+  READ_LONG 0x5c "region_ofs"
+  SAY (region_ofs + (0xc4 * 1) + 0x64) @6800      // You can feel a tremendous heat emanating from that chasm. Without an effective protection it is best advised to stay away from it.
+  SAY (region_ofs + (0xc4 * 2) + 0x64) @6800      // You can feel a tremendous heat emanating from that chasm. Without an effective protection it is best advised to stay away from it.
+  SAY (region_ofs + (0xc4 * 7) + 0x64) @6830      // The underground stream is too hot to enter without an effective heat protection.
+
+//COPY_LARGE ~DjinniCompanion/areas/a77002.tis~ ~override~
+COPY ~DjinniCompanion/areas/a77002.wed~   ~override~
+     ~DjinniCompanion/areas/a77002ht.bmp~ ~override~
+     ~DjinniCompanion/areas/a77002lm.bmp~ ~override~
+     ~DjinniCompanion/areas/a77002sr.bmp~ ~override~
+     ~DjinniCompanion/areas/a7am02a.wav~  ~override~
+     ~DjinniCompanion/areas/a7ambfl1.wav~ ~override~
+     ~DjinniCompanion/areas/a7amlva1.wav~ ~override~
+
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a77002.baf~
+  ~DjinniCompanion/scripts/a702heat.baf~
+  ~DjinniCompanion/scripts/a702flee.baf~

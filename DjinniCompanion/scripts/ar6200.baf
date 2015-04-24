@@ -1,0 +1,55 @@
+// *** Afaaq Epilogue after defeating Amelyssan ***
+// (Displayed only if Afaaq had been released from his lamp)
+
+// If CHARNAME rejects godhood (non-evil)
+IF
+  !Alignment(Player1, MASK_EVIL)
+  Global("StartEndBios", "AR6200", 1)
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+  Global("PlayerChoseEssence", "GLOBAL", 0)
+  OR(2)
+    PartyHasItem("A7DJLMP")
+    PartyHasItem("A7DJLMPA")
+  Global("A7AfaaqBio", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqBio", "GLOBAL", 1)
+  TextScreen("A7AFQND1")
+  SmallWait(1)
+  Continue()
+END
+
+// If CHARNAME rejects godhood (evil)
+IF
+  Alignment(Player1, MASK_EVIL)
+  Global("StartEndBios", "AR6200", 1)
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+  Global("PlayerChoseEssence", "GLOBAL", 0)
+  OR(2)
+    PartyHasItem("A7DJLMP")
+    PartyHasItem("A7DJLMPA")
+  Global("A7AfaaqBio", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqBio", "GLOBAL", 1)
+  TextScreen("A7AFQND2")
+  SmallWait(1)
+  Continue()
+END
+
+// If CHARNAME accepts godhood
+IF
+  Global("StartEndBios", "AR6200", 1)
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+  Global("PlayerChoseEssence", "GLOBAL", 1)
+  OR(2)
+    PartyHasItem("A7DJLMP")
+    PartyHasItem("A7DJLMPA")
+  Global("A7AfaaqBio", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqBio", "GLOBAL", 1)
+  TextScreen("A7AFQND3")
+  SmallWait(1)
+  Continue()
+END

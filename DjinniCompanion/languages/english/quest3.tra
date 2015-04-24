@@ -1,0 +1,475 @@
+// -*- coding: cp1252 -*- 
+// *** Strings related to Quest 3: "An unexpected encounter" (index 3000...3999)
+
+// Dialog lines: duergar merchants in map AR2100
+@3000 = ~And I'd advise you to avoid the passage behind us. We've accidentally stumbled upon a camp of drow warriors not long ago.~
+@3001 = ~They've barred the way to non-drow now, I guess they want to be left alone.~
+@3002 = ~A drow war party? Do you know why they are here?~
+@3003 = ~Thanks for the warning, but we have no business with the drow.~
+@3004 = ~I'm afraid not. Drow aren't known to share their knowledge with outsiders.~
+@3005 = ~Ahh, you are back. Please forgive us, but we are a bit jumpy right now.~
+@3006 = ~We accidentally stumbled upon a camp of drow warriors not long ago. There in the passage behind our back.~
+@3007 = ~Do you require a look at my wares now, or is there something else I can do?~
+@3008 = ~When want to enter passage in our back, we clear way for you.~
+@3009 = ~Tell me about this passage and be quick about it.~
+@3010 = ~Of course malla C'rintri. We found camp of drow many days back, in tunnel behind. They ask about affairs in region here.~
+@3011 = ~But they have locked tunnel now. We can not enter, but you may.~
+@3012 = ~That's all I wanted to know. I leave you your life. Good bye.~
+@3013 = ~Been pretty busy these last few days. You come through; those other two; and the drow encampment in the back... bad sign, it is.~
+@3014 = ~Other than the imprisoned mage and the drow encampment I have not seen anything unusual.~
+
+
+// Dialog lines: Tathas Melarn
+@3100 = ~What have we here?~
+@3101 = ~You come from the city of Ust Natha, no?~
+@3102 = ~Identify yourself!~
+@3103 = ~My name is Veldrin. I hail from Ched Nasad and arrived in Ust Natha several days ago.~
+@3104 = ~My name is <GABBER> and I come from Adalon's lair.~
+@3105 = ~I am your death if you don't let us go.~
+@3106 = ~(Let me take care of it, <CHARNAME>, I have seen his house insignia somewhere before.)~
+@3107 = ~We are agents of House Maerret from Ched Nasad, led by our commander Veldrin. You would be well advised not to dig deeper in this matter, Malla Qu'el'faeruk, even if you are an ally of our house.~
+@3108 = ~So, you come from Ched Nasad? I don't see your insignia, which house do you belong to?~
+@3109 = ~I don't belong to any house. I'm a rogue drow.~
+@3110 = ~I hail from House Do'Urden.~
+@3111 = ~I am a member of House Maerret.~
+@3112 = ~I am not allowed to speak about it while I'm working for Ust Natha.~
+@3113 = ~I'm on a mission of secrecy and may not even tell a distinguished member of Sorcere about it.~
+@3114 = ~I refuse to be interrogated by you or anyone else.~
+@3115 = ~You are a rogue drow? Don't tell me such a simplistic lie, wael. You wouldn't have left Ched Nasad alive without the support of a house.~
+@3116 = ~If you knew anything about life as a drow, you wouldn't have told me such nonsense. I guess you aren't even drow to begin with, or what do you say, noble Iraedril...~
+@3117 = ~You are perceptive as always. My divinations reveal this creature is a surface <PRO_RACE>.~
+@3118 = ~So, you are a Nasadran of House Do'Urden. I bet next time you tell me your real name is Drizzt?~
+@3119 = ~There is no House Do'Urden in Ched Nasad. You are either exceptionally dimwitted or not even a drow to begin with. What do you say, noble Iraedril...~
+@3120 = ~A member of House Maerret then. I greet you, Veldrin Maerret. My name is Tathas of House Melarn, and a high-standing member of Sorcere...~
+@3121 = ~If I may interrupt you. My divinations have revealed <PRO_HISHER> true identity.~
+@3122 = ~The creature before you is a surface <PRO_RACE>.~
+@3123 = ~I commend you for your obedience to your house.~
+@3124 = ~Your lack of persuasiveness, however, suggests that you may be too inexperienced for your duties.~
+@3125 = ~Then I will respect your decision for now. My name is Tathas of House Melarn, a high-standing member of Sorcere...~
+@3126 = ~It is as I thought. Only a surface creature shows such moronic behavior.~
+@3127 = ~But you are cleverly disguised as a drow, which means a powerful mind guides your actions. You may be useful to me after all.~
+@3128 = ~You are a <PRO_RACE>? That explains your unrefined manners.~
+@3129 = ~But your true identity hasn't been discovered yet, which is promising. You may be useful to me after all.~
+@3130 = ~Is that so? This is unexpected. You have deceived me cleverly, which speaks well of you.~
+@3131 = ~If you continue to play your part so well, you may have some use for me.~
+@3132 = ~I and my entourage have arrived from Ched Nasad not long ago.~
+@3133 = ~We have learned that Ust Natha is preparing for war with the surface elves. A war of this scale has not happened for a long time in this region of the Underdark, so we will take advantage of this opportunity and expand our influence a little bit.~
+@3134 = ~Our house had ties with House Arabani a long time ago, before even Ched Nasad was founded. I want to... revive those ties and you may help me realize that aim.~
+@3135 = ~It will be profitable for you as well. I sensed a familiar presence when you entered and the djinni standing before me proved it.~
+@3136 = ~How are you doing, Afaaq? Do you enjoy your stay on the prime material plane so far?~
+@3137 = ~You should know that better than anyone else. My life since has been a never-ending nightmare of loss and torment, and I owe it all to you.~
+@3138 = ~But I am not surprised to see you again. You were always driven by your desire for power and influence, and a situation like this is a tempting opportunity for the likes of you.~
+@3139 = ~You are still as boring as you were ages ago. That's why I didn't bother to track you down.~
+@3140 = ~You sense it, don't you? Your essence is still part of my collection.~
+@3141 = ~It will be profitable for you as well. I can sense a familiar presence in your possession which I haven't felt in ages.~
+@3142 = ~You have an old "acquaintance" of mine with you, haven't you? Yes, I sense the djinni Afaaq somewhere around.~
+@3143 = ~Yes, he is bound to a magical lamp which I have in my possession.~
+@3144 = ~That doesn't concern you, Tathas.~
+@3145 = ~You will profit from it too. As a member of Sorcere I have access to powerful and unique magic spells. I may share a copy or two with you.~
+@3146 = ~That is... unique. Whether you believe me or not, he was in my company ages ago, before I lost sight of him.~
+@3147 = ~Most of his powers are in my possession still, which I've made use of once in a while.~
+@3148 = ~You don't need to tell me anything, but my senses have never led me wrong.~
+@3149 = ~He was in my company ages ago, before I lost sight of him. The greater part of his power is still in my possession, which I've made use of once in a while.~
+@3150 = ~I will reward you with Afaaq's soulcage if you agree to do some work for me, Veldrin. Have I piqued your interest?~
+@3151 = ~I'd like to know what is required of me, first.~
+@3152 = ~Yes, I'll work for you.~
+@3153 = ~You have enslaved Afaaq for ages! I'll never work for you.~
+@3154 = ~Please give me a while to think about it.~
+@3155 = ~Have I piqued your interest?~
+@3156 = ~Yes, I agree to your offer.~
+@3157 = ~No, I'm not interested in playing a part in your schemes.~
+@3158 = ~I need some time to think it over.~
+@3159 = ~That I cannot do before you pledge yourself to us. I have told you enough of my plans already. Are you interested?~
+@3160 = ~No, I'm not interested in working for you.~
+@3161 = ~What a disappointment you turn out to be. Let's dispose of you quickly, I have more important things to do.~
+@3162 = ~Greetings Veldrin, we meet again. Seeing that you are still alive, have you come to a decision yet?~
+@3163 = ~I still need time to think it over.~
+@3164 = ~I'll still be here for a short while, but don't take too long to decide.~
+@3165 = ~That is unfortunate. It also means that you've become an obstacle to my plans. Don't worry, this will be short and painful.~
+@3166 = ~You are undoubtedly a dimwitted moron, telling me of your true background while disguised as one of us.~
+@3167 = ~I'll do you a favor and release you from your pathetic life. Believe me, this is for the best for us all.~
+@3168 = ~You have made a wise decision. This is my plan, so listen closely.~
+@3169 = ~Being disguised as one of us for such a short time, you likely don't have close ties to the great houses of Ust Natha yet.~
+@3170 = ~Find a way to pass the protective wards of the Arabani House. It will likely be guarded, but you look strong enough to deal with them.~
+@3171 = ~Once you have passed the wards, find the residing Matron Mother Xunvrae d'Arabani and kill her. Return with her House Insignia and receive your reward.~
+@3172 = ~Do you know where I might find her House Insignia?~
+@3173 = ~I will do it at once.~
+@3174 = ~On second thought, I have decided to refuse your offer.~
+@3175 = ~If I knew where it was, I wouldn't ask you to retrieve the item. It is likely somewhere in her immediate vicinity, or secured in her private chambers.~
+@3176 = ~Very good. Don't fail me, Veldrin, or no power of any house will protect you from the the wrath of House Melarn.~
+@3177 = ~The sooner you are back, the sooner you will have your reward.~
+@3178 = ~Do you still have questions about your task?~
+@3179 = ~Could you please repeat your task for me again?~
+@3180 = ~No, I will carry it out immediately.~
+@3181 = ~On second thought, I've decided to break our partnership.~
+@3182 = ~You should really take note when I tell you something as important as this.~
+@3183 = ~Yes, do that and I will be pleased.~
+@3184 = ~It is likely somewhere in her immediate vicinity, or secured in her private chambers.~
+@3185 = ~Welcome back, Veldrin. Do you have good news to report?~
+@3186 = ~Yes, I have brought you the Insignia of House Arabani.~
+@3187 = ~I still need some time to acquire the insignia.~
+@3188 = ~Welcome back, <GABBER>. Do you have good news to report?~
+@3189 = ~Yes, I have brought back the Insignia of House Arabani.~
+@3190 = ~Make haste! We cannot afford to stay in this place for too long or we will be discovered sooner or later.~
+@3191 = ~This is very good news indeed. May I have it?~
+@3192 = ~You have been very useful to me, but I regret that my hospitality comes to an end now.~
+@3193 = ~I cannot allow you to walk free and talk to everyone about our business. Don't worry, this will be short and painful.~
+@3194 = ~I think so. I was able to convince Xunvrae d'Arabani to give me an anchor stone of her house which I was ordered to use on you. It is yours to do with as you please.~
+@3195 = ~You have done well. With it I will advance even faster than I have anticipated. Give it to me.~
+@3196 = ~Yes, I feel its enchantments...~
+@3197 = ~I think I can use it to my advantage. The venerable matron mother of House Arabani will receive her prize, but it will be on my terms, hehe.~
+@3198 = ~I greet you, Matron Mother Xunvrae d'Arabani. I am Tathas Melarn.~
+@3199 = ~WHAT? How did you get past my wards?~
+@3200 = ~Ah, I see. You have warped my enchantments on the anchor stone. But you will not succeed.~
+@3201 = ~We shall see.~
+@3202 = ~I'm a little busy right now.~
+@3203 = ~Please, don't interrupt my concentration.~
+@3204 = ~I would like to speak to Veldrin.~
+@3205 = ~It is done, Veldrin.~
+@3206 = ~Without your help, it would have taken much more time and resources to overthrow House Arabani.~
+@3207 = ~Therefore you may have the first spoils of my little operation.~
+@3208 = ~This is a ring which I have used regularly in the past. It will temporarily bring any creature of elemental origin under your control. It is yours now.~
+@3209 = ~You may continue your business in this city, I care not. As long as you do not breathe a word about this incident.~
+@3210 = ~This is a powerful scroll which only respected members of Sorcere have access to. It is yours now.~
+@3211 = ~I sensed it already during our last battle. You have an old... acquaintance of mine with you.~
+@3212 = ~How are you doing, Afaaq?~
+@3213 = ~You should know that better than anyone else. My life has been a never-ending nightmare of loss and torment, and I owe it all to you.~
+@3214 = ~Yes, I haven't forgotten. And you have felt it already, haven't you?~
+@3215 = ~I still have your soulcage in my possession. It is yours now.~
+@3216 = ~I will give you Afaaq's soulcage as a reward. It's a powerful item, and it is up to you how to use it.~
+@3217 = ~This is a ring which I have used regularly in the past. It will temporarily bring any creature of elemental origin under your control. Here is also a little money for your help in the last battle.~
+@3218 = ~These are powerful scrolls which only respected members of Sorcere have access to. They are yours now.~
+@3219 = ~I still have your soulcage in my possession. It is yours now. And for your aid in the last battle I will add a little bonus to it.~
+@3220 = ~I will give you Afaaq's soulcage as a reward. It's a powerful item, and it is up to you how to use it. And for your aid in the last battle I will also add a little bonus to it.~
+@3221 = ~I am busy right now. Please talk to me later.~
+@3222 = ~Good day to you. How are you doing?~
+@3223 = ~We are still busy removing all traces of the Arabani family.~
+@3224 = ~This is unexpected, Veldrin. You are more resourceful than even I imagined.~
+@3225 = ~May I have it?~
+
+// Dialog lines: Melarn entourage
+@3300 = ~Greetings <MALEFEMALE>. I am the first captain under Tathas' command.~
+@3301 = ~I apologize for my lack of manners, but until you have decided to work for us I can offer you nothing.~
+@3302 = ~As a hireling of our commander, you can make use of my services. I offer a safe place to rest and a small selection of weapons and armor for sale.~
+@3303 = ~I greet you again, <MALEFEMALE>. But unless you have agreed to the commander's offer, I can't do anything for you.~
+@3304 = ~I greet you again, Veldrin.~
+@3305 = ~I greet you again, <GABBER>.~
+@3306 = ~Do you need any of my services?~
+@3307 = ~I'd like to rest for a while.~
+@3308 = ~I'd like see what you have for sale.~
+@3309 = ~Not at the moment.~
+@3310 = ~Maybe another time.~
+@3311 = ~I'm a little busy right now.~
+@3312 = ~You have potential, <MALEFEMALE>. If you want to join our house, I would support your request.~
+@3313 = ~The Arabani had no chance against us.~
+@3314 = ~You would have a future in our house.~
+@3320 = ~Do not speak to me, worm.~
+@3321 = ~You dare to talk to me? Begone!~
+@3322 = ~The drow rule supreme. And I am their best.~
+@3323 = ~Cower before the Spider Queen.~
+@3324 = ~Don't interrupt me in my work, <MALEFEMALE>.~
+@3325 = ~You are allowed to live another day, <MALEFEMALE>. Be thankful for it.~
+@3330 = ~Leave me be, <MALEFEMALE>. I am working on my formulas and you are interrupting my concentration.~
+@3331 = ~I am here because of our master's command.~
+@3332 = ~You should direct your questions to our commander.~
+@3333 = ~I'm a little busy right now.~
+@3334 = ~You would be a promising candidate for Sorcere, why don't you join?~
+@3335 = ~Thanks to you, our house has a foothold in this city.~
+@3340 = ~Do not address me, <MALEFEMALE>. You are an outsider and only tolerated for the moment.~
+@3341 = ~Don't interrupt me in my work, <MALEFEMALE>.~
+@3342 = ~You would be a worthy addition to our house.~
+@3350 = ~*BURP*~
+@3351 = ~*CRUNCH-CRUNCH*~
+@3352 = ~*CRUNCH-SLURP*~
+@3353 = ~Aha, and then...~
+@3354 = ~Sure, but...~
+@3355 = ~Will ya stop pestering us?~
+@3356 = ~Go away!~
+@3357 = ~Talk to someone else!~
+@3360 = ~Stop distracting me! Can't ye see I'm busy?~
+@3361 = ~No time to talk, busy fighting.~
+@3362 = ~Don't pester me.~
+@3363 = ~I'll win for sure!~
+@3364 = ~T'is is the life.~
+@3365 = ~He doesn't stand a chance!~
+@3366 = ~Talk to someone else, will ya?~
+@3367 = ~Pay attention to the fight and you will learn something.~
+@3368 = ~Haegar is useless in battle, don't ya think?~
+@3369 = ~This fight is great!~
+@3370 = ~*BURP*~
+@3371 = ~Wanna fight too?~
+@3372 = ~This fight is great!~
+@3373 = ~*BURP*~
+@3374 = ~Wanna fight too?~
+@3380 = ~I lead the forces of my House when it is required.  You would be nothing but fodder in such a battle.~
+@3381 = ~You are an outsider, <MALEFEMALE>. I have nothing to say to you.~
+@3382 = ~I am eager to prove my skills against our enemies.~
+@3383 = ~I'm a little busy right now.~
+@3384 = ~The Arabani had no chance against us.~
+@3385 = ~You would have a future in our house.~
+@3390 = ~If you meet a priestess of Lolth, lower your eyes and do not address them.  You are nothing to them, just as you are nothing to a Matron Mother.~
+@3391 = ~I am eager to prove my skills against our enemies.~
+@3392 = ~We are ready to strike as soon as our commander gives the word.~
+@3393 = ~Our commander is invincible in battle. His magics have even felled an Elder Orb, most powerful of the dreaded eye tyrants.~
+@3394 = ~I'm a little busy right now.~
+@3395 = ~The Arabani had no chance against us.~
+@3396 = ~You would have a future in our house.~
+@3400 = ~No hurt me, please.~
+@3401 = ~I work harder. I promise.~
+@3402 = ~I not allowed to speak to stranger.~
+@3403 = ~Talk to master if you want something.~
+@3404 = ~You go no further.~
+@3405 = ~Tunnel behind us is blocked.~
+@3406 = ~Is dangerous in tunnel behind us.~
+
+
+// Dialog lines: House Arabani
+@3500 = ~Who are you? How dare you address a Matron Mother uninvited? Speak quickly!~
+@3501 = ~My name is Veldrin, a favorite of House Despana. I need to discuss a matter of highest urgency.~
+@3502 = ~My name is Veldrin, venerable Matron Mother. I come to warn you about Tathas of House Melarn. I have learned that he will attack you soon while your armies are preoccupied elsewhere.~
+@3503 = ~My name is Veldrin and I come with knowledge about an old enemy of your house. Tathas Melarn has ambitions to expand his influence in this city while your armies are preoccupied in the war with the hated surface elves.~
+@3504 = ~Hand over your House Insignia and I will spare your life!~
+@3505 = ~I am your doom. Defend yourself!~
+@3506 = ~You are not in a position to demand anything from me, <MALEFEMALE>. But I am generous today, tell me about your 'urgent' matter and I will think about it.~
+@3507 = ~I want to speak with you about a possible attack on your house in the near future.~
+@3508 = ~I need to warn you about Tathas of House Melarn. He is on his way to attack your home.~
+@3509 = ~I'd expected an assassin, but you look more like a simpleton. (chuckle)  You will see that we are anything but helpless. Guards, take care of this fool!~
+@3510 = ~Bah.  I won't suffer fools in my home. Guards, attack them!~
+@3511 = ~My house is always a target of threats and assassination attempts. What is your real purpose, Veldrin? To learn about our weaknesses?~
+@3512 = ~Our house is strong. Stronger than any house in the city. Whatever your plan may be, it will fail. Guards, attack these spies!~
+@3513 = ~House Melarn... I know about it. They are strong in Ched Nasad, aren't they?~
+@3514 = ~What do they want? Tell me everything!~
+@3515 = ~They plan to use the turmoil of war to their advantage and want to take over your house. Their army stands ready and will take actions soon.~
+@3516 = ~Tathas Melarn desires your House Insignia for his plans. He assigned me to fetch it, but I don't want to do it.~
+@3517 = ~What an honest <MALEFEMALE> you are. I really appreciate it.~
+@3518 = ~I will take matters in my own hands. First I will deal with you however, or you may be tempted to reveal my plans to anyone you come across. Guards, help me dispatch this fool!~
+@3519 = ~This is dire news indeed. My army takes part in the war too, and my home is more vulnerable then usual.~
+@3520 = ~You seem to know about him already, so I propose a deal. I will give you an item which you will use in Tathas Melarn's close proximity. This will incapacitate him and bring him to me.~
+@3521 = ~Do this and I will reward you generously. House Arabani is a prosperous house.~
+@3522 = ~I accept your offer. Tathas Melarn won't be free much longer.~
+@3523 = ~I don't want to be involved in this matter anymore. I have to decline your offer.~
+@3524 = ~Good. This is an anchor stone. It will enable you to pass the wards as long as you have it in your possession.~
+@3525 = ~It will also take care of Tathas Melarn when you use it in his proximity. I expect results quickly. Good luck.~
+@3526 = ~You are already involved, whether you like it or not. I'll accept your decision, but I can not allow you to walk freely while you know about us.~
+@3527 = ~Guards, help me dispatch them quickly!~
+@3528 = ~Have you made any progress in your task?~
+@3529 = ~Not yet, Matron Mother.~
+@3530 = ~You dare to steal from me? Guards, attack!~
+@3531 = ~I demand results. Be quick!~
+@3532 = ~Welcome to my home. I assume you are Tathas Melarn. But I am sure that we will get to know each other much better in the near future.~
+@3533 = ~Veldrin, you have betrayed me? I will destroy you! AND I WILL DESTROY HOUSE ARABANI AS WELL!!!~
+@3534 = ~You will do nothing but obey my commands. I am sure your... cooperation will prove to be useful.~
+@3535 = ~Ah, and I will take that from you. Those crystals will be priceless in the right hands.~
+@3536 = ~You have been very useful to me. With Tathas Melarn under my influence our house will rule supreme. But now to your reward.~
+@3537 = ~Do not think I have forgotten the destruction of Deirex, a respected ally of our house.~
+@3538 = ~You will pay for your impudence. Guards, attack them!~
+@3539 = ~The fight is over and House Arabani is victorious as ever.~
+@3540 = ~The fight is over and with your help House Arabani is victorious.~
+@3541 = ~But your treachery has brought us unnecessary trouble. And I have not forgotten the destruction of Deirex, a respected ally of our house.~
+@3542 = ~You will pay with your life. Guards, attack then!~
+@3543 = ~Do not think your attack on House Jae'llat has gone unnoticed. Deirex and Matron Mother Hindra were respected allies of our house.~
+@3544 = ~But your treachery has brought us unnecessary trouble. Do not assume that that your attack on House Jae'llat has gone unnoticed.~
+@3545 = ~Deirex and Matron Mother Hindra were respected allies of our house.~
+
+@3560 = ~Who are you? How did you pass the wards?!  They must be assassins. Attack them!~
+@3568 = ~You may enter our home freely as long as you possess the anchor stone.~
+@3569 = ~Remember, you are under close observation while you are here.~
+
+@3580 = ~Intruders have entered our building. Attack them!~
+@3581 = ~Whoever you are, you have to speak to the Matron Mother first. She will decide what is to be done with you.~
+@3582 = ~I do not trust you. But I will obey the Matron Mother's command.~
+@3583 = ~I have no reason to talk to you.~
+
+@3590 = ~How did you pass the wards? Intruders have entered, attack them!~
+@3591 = ~How did you pass the wards? You have to speak to the Matron Mother immediately. She will decide what is to be done with you.~
+@3592 = ~Remember, you are under close observation while you are here.~
+@3593 = ~Don't make any wrong move or it will be your last!~
+@3594 = ~Speak to the Matron Mother if you want something.~
+@3595 = ~We protect the Matron Mother with our lives, if need be.~
+
+
+// journal entries
+@3800 = ~An unexpected encounter
+
+A group of duergar merchants mentioned a warded secret passage behind their back which leads to an encampment of a drow party.~
+
+@3801 = ~An unexpected encounter
+
+As the duergars told me, the southern passage is warded against non-drow. I have to think of a way to pass it.~
+
+@3802 = ~An unexpected encounter
+
+As unlikely as it sounds, my magical disguise as a member of drow society allowed me to pass the wards. The passage looks abandoned, but with drow involved anything could happen.~
+
+@3803 = ~An unexpected encounter
+
+The drow surprised me and have taken me to their commander, Tathas Melarn. He asked me to work for him and promised powerful spells as reward for doing his dirty work.~
+
+@3804 = ~An unexpected encounter
+
+The drow surprised me and have taken me to their commander Tathas Melarn. He asked me to work for him and promised the soulcage with the sealed power of Afaaq as reward for doing his dirty work.~
+
+@3805 = ~An unexpected encounter
+
+I have agreed to work for Tathas Melarn. My orders are to enter the House Arabani and assassinate their Matron Mother Xunvrae d'Arabani. When she is dead, I have to return to Tathas with her House Insignia. I hope he is true to his word and rewards us appropriately for such a dark deed.~
+
+@3806 = ~An unexpected encounter
+
+After giving the Anchor Stone to Tathas, he teleported me back to House Arabani in an attempt to take it over.~
+
+@3807 = ~An unexpected encounter
+
+I have revealed Tathas' plans to the Matron Mother of House Arabani. She offered me a reward if I could entrap Tathas Melarn with an anchor stone which she had given me. The stone also allows me to enter House Arabani any time.~
+
+@3820 = ~An unexpected encounter
+
+Tathas Melarn and his drow retinue turned hostile and attacked me when I refused my cooperation.~
+
+@3821 = ~An unexpected encounter
+
+I have refused to work for Tathas Melarn. He was understandably upset and our conversation ended in violence.~
+
+@3822 = ~An unexpected encounter
+
+The drow commander found out that I was not a drow and attacked me.~
+
+@3823 = ~An unexpected encounter
+
+Unfortunately Tathas Melarn wasn't true to his word. Instead of a reward for my efforts he turned hostile and attacked me.~
+
+@3824 = ~An unexpected encounter
+
+My association with House Melarn turned out profitable in the end. Tathas rewarded me generously. Hopefully the other houses of Ust Natha don't learn anything about it or my path to Irenicus will be all the more difficult.~
+
+@3825 = ~An unexpected encounter
+
+My association with House Melarn turned out profitable in the end. Tathas rewarded me with Afaaq's soulcage. Hopefully the other houses of Ust Natha don't learn anything about it or my path to Irenicus will be all the more difficult.~
+
+@3826 = ~An unexpected encounter
+
+Xunvrae d'Arabani has betrayed me. Instead of giving me a reward, she turned hostile and attacked me.~
+
+@3827 = ~An unexpected encounter
+
+Xunvrae d'Arabani wasn't amused by my decision to betray her. She turned hostile as soon as Tathas Melarn and his war party had been defeated.~
+
+@3828 = ~An unexpected encounter
+
+The underdark passage behind the duergar merchants looks as if it has been abandoned for some time. Whoever was here, I can find no traces of them.~
+
+@3850 = ~An unexpected encounter
+
+The soulcage collection turned out to be very important for Afaaq. He was able to single out his own soulcage. I don't know yet how to use it, but he was very relieved when he found it.~
+
+@3851 = ~An unexpected encounter
+
+Tathas Melarn rewarded me with Afaaq's soulcage. I don't know yet how to use it, but Afaaq seems to be relieved that it has come into our possession.~
+
+
+
+// Misc. strings
+@3900 = ~Duergar encampment and Southern Passage~
+@3901 = ~The entrance to this passage is blocked. The magical runes on the floor tell you that only drow may pass.~
+@3902 = ~This tunnel leads deeper into the underdark, but it is half-buried in debris and looks too dangerous to enter.~
+@3903 = ~Arabani House Insignia~
+@3904 = ~This small adamantine amulet has a a delicate etching on its surface which shimmers slightly. The symbol is that of House Arabani. There are also some unidentifiable markings which probably refer to a specific member of the house.~
+@3905 = ~Tathas Melarn~
+@3906 = ~Iraedril Do'ndar~
+@3907 = ~Drow Captain~
+@3908 = ~Duergar Warrior~
+@3909 = ~Soulcage collection~
+@3910 = ~The crystals are unusually heavy and seem to be shrouded in a dark aura. On closer examination they appear to absorb the surrounding light which make them look darker than they originally are.~
+@3911 = ~This collection of crystals contains the essences of the extraplanar beings which Tathas Melarn has enslaved in his life. One of them contains the elemental essence of Afaaq, but I have yet to determine the right one.~
+@3912 = ~Afaaq's Soulcage~
+@3913 = ~This magical crystal contains the elemental essence of Afaaq. Although it is now in my possession, I have yet to find out how to release the energies confined within.~
+@3914 = ~Arabani Anchor Stone~
+@3915 = ~The anchor stone of the House Arabani allows you to enter their home at any time. 
+
+This particular stone also contains another enchantment. If it is used in Tathas Melarn's close proximity, it will entrap and teleport him into the immediate vicinity of Xunvrae d'Arabani.~
+
+@3916 = ~The Anchor Stone glows briefly and you are able to enter the building.~
+@3917 = ~Here we go!~
+@3918 = ~You are drow!~
+@3919 = ~Are you spies from nearby Ust Natha?~
+@3920 = ~Whoever you are, you will follow us to our commander.~
+@3921 = ~Wha... what is happening?!~
+@3922 = ~NOOOO!!!~
+@3923 = ~I will break the enchantment.~
+@3924 = ~You have triggered an alarm.~
+@3925 = ~Ring of Elemental Control~
+@3926 = ~This ring had been created with a single purpose in mind, to enslave elementals of all kinds. The previous owner Tathas Melarn enhanced its capabilities even more and added the ability to enslave numerous elemental-related beings too.
+
+Special Abilities:
+Charms the following creatures (3x/day):
+  - Air Elementals
+  - Earth Elementals
+  - Fire Elementals
+  - Djinns
+  - Daos
+  - Efreets
+  - Mephits (all kinds)
+The enchantment lasts for five turns.~
+@3927 = ~The item flashes for a moment and vanishes from your backpack.~
+@3928 = ~Tathas Melarn is too far away for this to be effective.~
+@3929 = ~*Hhrrg*~
+@3930 = ~*Hnnn*~
+@3931 = ~*Hhrnnn*~
+@3932 = ~*Nff*~
+@3933 = ~I'm exhausted.~
+@3934 = ~*Groan*~
+@3935 = ~AARRGH!~
+@3936 = ~HAAAAH!!~
+@3937 = ~Come on!~
+@3938 = ~Move your feet!~
+@3939 = ~Yes, come on!~
+@3940 = ~You can beat him!~
+@3941 = ~More to the left!~
+@3942 = ~Pay attention to your right flank!~
+@3943 = ~What a fight.~
+@3944 = ~Yeah, come on!~
+@3945 = ~Come on!  Come on!~
+@3946 = ~*clap*~
+@3947 = ~*cheer*~
+@3948 = ~Yeah!~
+@3949 = ~*CRUNCH-CRUNCH*~
+@3950 = ~*CRUNCH-SLURP*~
+@3951 = ~*BURP*~
+@3952 = ~Hmm-hm-hmm.~
+@3953 = ~Yeah...~
+@3954 = ~So, what did he...~
+@3955 = ~Ah yes.~
+@3956 = ~I never...~
+@3957 = ~*Yaaaawn*~
+@3958 = ~*Yawn*~
+@3959 = ~*Snore*~
+@3960 = ~What?!~
+@3961 = ~Sure, I...~
+@3962 = ~Whatever.~
+@3963 = ~*hic*~
+@3964 = ~*sigh*~
+@3965 = ~Of course...~
+@3966 = ~I dunno...~
+@3967 = ~Maybe we...~
+@3968 = ~The Wardstone glows briefly and you are able to enter the building.~
+@3969 = ~The wardstone doesn't appear to work on this barrier anymore. There is no way to enter the building again.~
+@3970 = ~This is the wardstone that will allow you access to the House Jae'llat and allied Houses. Without the stone, the wards make the places impenetrable.
+
+STATISTICS:
+
+Weight: 1~
+@3971 = ~This passage leads to the lower parts of the city. The amount of debris and cobwebs suggests that it had been abandoned long time ago.~
+@3972 = ~House Arabani~
+@3973 = ~Passage to House Arabani~
+@3974 = ~Xunvrae d'Arabani~
+@3975 = ~Riltana d'Arabani~
+@3976 = ~Vlonyrr d'Arabani~
+@3977 = ~Arabani Guard~
+@3978 = ~Arabani Wizard~
+@3979 = ~Arabani Priestess~
+@3980 = ~<PLAYER1> has learned something after watching the duergars sparring for a while.~
+@3981 = ~<PLAYER2> has learned something after watching the duergars sparring for a while.~
+@3982 = ~<PLAYER3> has learned something after watching the duergars sparring for a while.~
+@3983 = ~<PLAYER4> has learned something after watching the duergars sparring for a while.~
+@3984 = ~<PLAYER5> has learned something after watching the duergars sparring for a while.~
+@3985 = ~<PLAYER6> has learned something after watching the duergars sparring for a while.~
+@3986 = ~The door is magically warded. To step through it would mean instant death. You'll need to find the wardstone of House Arabani or its allied Houses if you wish to enter.~

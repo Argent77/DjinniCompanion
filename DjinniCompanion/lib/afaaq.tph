@@ -1,0 +1,549 @@
+// *** Stuff related to the djinni Afaaq ***
+
+INCLUDE ~DjinniCompanion/lib/functions.tph~
+INCLUDE ~DjinniCompanion/lib/afaaq_cut.tph~
+INCLUDE ~DjinniCompanion/lib/ar0300.tph~
+INCLUDE ~DjinniCompanion/lib/ar2200.tph~
+INCLUDE ~DjinniCompanion/lib/ar2402.tph~
+INCLUDE ~DjinniCompanion/lib/ar4000.tph~
+INCLUDE ~DjinniCompanion/lib/a77006.tph~
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/bg2ee/a7clamp.bmp"
+  OUTER_TEXT_SPRINT ITEM_ILAMP "DjinniCompanion/items/bg2ee/a7ilamp.bam"
+  OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/bg2ee/a7afaaqs.bmp"
+  OUTER_TEXT_SPRINT DIALOG_BANTER_INTRO "DjinniCompanion/dialogs/bg2ee/A7AfaaqBanter_CHARNAME_Intro.d"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/a7clamp.bam"
+  OUTER_TEXT_SPRINT ITEM_ILAMP "DjinniCompanion/items/a7ilamp.bam"
+  OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/a7afaaqs.bmp"
+  OUTER_TEXT_SPRINT DIALOG_BANTER_INTRO "DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME_Intro.d"
+END
+
+// Sounds
+COPY ~DjinniCompanion/misc/a7afq01.wav~ ~override~
+
+// Djinni Afaaq
+COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
+  SAY NAME1 @60001    // Afaaq
+  SAY NAME2 @60001    // Afaaq
+  SAY CRITICAL_MISS @60032    // Oh?
+  SAY SELECT_COMMON1 @60033   // [Djinni laughter]
+  SAY SELECT_COMMON2 @60034   // [Silence]
+  SAY SELECT_COMMON3 @60034   // [Silence]
+  SAY SELECT_COMMON4 @60033   // [Djinni laughter]
+  SAY SELECT_COMMON5 @60034   // [Silence]
+  SAY SELECT_COMMON6 @60034   // [Silence]
+  REMOVE_KNOWN_SPELLS
+  REMOVE_MEMORIZED_SPELLS
+  ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
+  ADD_KNOWN_SPELL ~SPWI114~ #0 ~wizard~     // Shield
+  ADD_KNOWN_SPELL ~SPWI115~ #0 ~wizard~     // Shocking Grasp
+  ADD_KNOWN_SPELL ~SPWI203~ #1 ~wizard~     // Detect Invisibility
+  ADD_KNOWN_SPELL ~SPWI206~ #1 ~wizard~     // Invisibility
+  ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
+  ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
+  ADD_KNOWN_SPELL ~SPWI307~ #2 ~wizard~     // Invisibility 10' radius
+  ADD_KNOWN_SPELL ~SPWI308~ #2 ~wizard~     // Lightning Bolt
+  ADD_KNOWN_SPELL ~SPWI405~ #3 ~wizard~     // Improved Invisibility
+  ADD_KNOWN_SPELL ~SPWI406~ #3 ~wizard~     // Minor Globe of Invulnerability
+  ADD_KNOWN_SPELL ~SPWI419~ #3 ~wizard~     // Secret Word
+  ADD_KNOWN_SPELL ~SPWI508~ #4 ~wizard~     // Chaos
+  ADD_KNOWN_SPELL ~SPWI513~ #4 ~wizard~     // Breach
+  ADD_KNOWN_SPELL ~SPWI522~ #4 ~wizard~     // Minor Spell Turning
+  ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
+  ADD_KNOWN_SPELL ~A7SPIN2~ #0 ~innate~     // Whirlwind
+  ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI203~ #1 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI206~ #1 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI307~ #2 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI419~ #3 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI406~ #3 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI405~ #3 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~wizard~
+  ADD_MEMORIZED_SPELL ~A7SPIN2~ #0 ~innate~ ( 3 )
+  ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
+
+COPY ~DjinniCompanion/creatures/a7afaaq2.cre~ ~override~
+  SAY NAME1 @60001    // Afaaq
+  SAY NAME2 @60001    // Afaaq
+  SAY CRITICAL_MISS @60032    // Oh?
+  SAY SELECT_COMMON1 @60033   // [Djinni laughter]
+  SAY SELECT_COMMON2 @60034   // [Silence]
+  SAY SELECT_COMMON3 @60034   // [Silence]
+  SAY SELECT_COMMON4 @60033   // [Djinni laughter]
+  SAY SELECT_COMMON5 @60034   // [Silence]
+  SAY SELECT_COMMON6 @60034   // [Silence]
+  REMOVE_KNOWN_SPELLS
+  REMOVE_MEMORIZED_SPELLS
+  ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
+  ADD_KNOWN_SPELL ~SPWI114~ #0 ~wizard~     // Shield
+  ADD_KNOWN_SPELL ~SPWI115~ #0 ~wizard~     // Shocking Grasp
+  ADD_KNOWN_SPELL ~SPWI203~ #1 ~wizard~     // Detect Invisibility
+  ADD_KNOWN_SPELL ~SPWI206~ #1 ~wizard~     // Invisibility
+  ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
+  ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
+  ADD_KNOWN_SPELL ~SPWI307~ #2 ~wizard~     // Invisibility 10' radius
+  ADD_KNOWN_SPELL ~SPWI308~ #2 ~wizard~     // Lightning Bolt
+  ADD_KNOWN_SPELL ~SPWI405~ #3 ~wizard~     // Improved Invisibility
+  ADD_KNOWN_SPELL ~SPWI406~ #3 ~wizard~     // Minor Globe of Invulnerability
+  ADD_KNOWN_SPELL ~SPWI419~ #3 ~wizard~     // Secret Word
+  ADD_KNOWN_SPELL ~SPWI508~ #4 ~wizard~     // Chaos
+  ADD_KNOWN_SPELL ~SPWI513~ #4 ~wizard~     // Breach
+  ADD_KNOWN_SPELL ~SPWI522~ #4 ~wizard~     // Minor Spell Turning
+  ADD_KNOWN_SPELL ~SPWI615~ #5 ~wizard~     // Chain Lightning
+  ADD_KNOWN_SPELL ~SPWI609~ #5 ~wizard~     // True Sight
+  ADD_KNOWN_SPELL ~A7SPWI01~ #6 ~wizard~    // Conjure Air Elemental
+  ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
+  ADD_KNOWN_SPELL ~A7SPIN3~ #0 ~innate~     // Haste
+  ADD_KNOWN_SPELL ~A7SPIN4~ #0 ~innate~     // Air Shield
+  ADD_KNOWN_SPELL ~A7SPIN5~ #0 ~innate~     // Greater Whirlwind
+  ADD_KNOWN_SPELL ~A7SPIN6~ #0 ~innate~     // Control Air Elemental
+  ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI203~ #1 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI206~ #1 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI307~ #2 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI419~ #3 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI406~ #3 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI405~ #3 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~ ( 2 )
+  ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI609~ #5 ~wizard~
+  ADD_MEMORIZED_SPELL ~SPWI615~ #5 ~wizard~
+  ADD_MEMORIZED_SPELL ~A7SPWI01~ #6 ~wizard~
+  ADD_MEMORIZED_SPELL ~A7SPIN6~ #0 ~innate~ ( 3 )
+  ADD_MEMORIZED_SPELL ~A7SPIN5~ #0 ~innate~ ( 3 )
+  ADD_MEMORIZED_SPELL ~A7SPIN4~ #0 ~innate~ ( 2 )
+  ADD_MEMORIZED_SPELL ~A7SPIN3~ #0 ~innate~
+  ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
+
+// Portraits
+COPY ~%PORTRAIT_AFAAQS%~                      ~override~
+     ~DjinniCompanion/portraits/a7afaaql.bmp~ ~override~
+
+// Djinni's gaseous form
+COPY ~DjinniCompanion/creatures/a7gasfrm.cre~ ~override~
+  SAY NAME1 @60002    // Afaaq's Gaseous Form
+  SAY NAME2 @60002    // Afaaq's Gaseous Form
+
+// Djinni Lamp (with bound genie)
+COPY ~DjinniCompanion/items/a7djlmp.itm~ ~override~
+  SAY NAME1 @60003    // Magic lamp
+  SAY NAME2 @60004    // Afaaq's djinni lamp
+  SAY UNIDENTIFIED_DESC @60005    // This lamp radiates a strange magic. It...
+  SAY IDENTIFIED_DESC @60006      // This lamp contains the essence of the djinni...
+
+// Djinni Lamp (with released genie)
+COPY ~DjinniCompanion/items/a7djlmpa.itm~ ~override~
+  SAY NAME1 @60003    // Magic lamp
+  SAY NAME2 @60004    // Afaaq's djinni lamp
+  SAY UNIDENTIFIED_DESC @60005    // This lamp radiates a strange magic. It...
+  SAY IDENTIFIED_DESC @60007      // This lamp was once the prison for the djinni...
+
+// Adding conversation entries for the conversable items
+COPY_EXISTING ~itemdial.2da~ ~override~
+  INSERT_2DA_ROW 0 3 ~A7DJLMPA      5689   A7DJLMP~
+  INSERT_2DA_ROW 0 3 ~A7DJLMP       5689   A7DJLMP~
+
+// Afaaq's Quick Menu item
+COPY ~DjinniCompanion/items/a7qmenu.itm~ ~override~
+  SAY NAME1 @60008    // Quick Menu
+  SAY NAME2 @60008    // Quick Menu
+COPY_EXISTING ~tooltip.2da~ ~override~
+  SET quickmenu = RESOLVE_STR_REF(@60008)     // Quick Menu
+  INSERT_2DA_ROW 1 3 ~A7QMENU           %quickmenu%        -1          -1~
+
+// Djinni weapons
+COPY ~DjinniCompanion/items/a7sw1h1.itm~ ~override~
+  SAY NAME1 @60009    // Thunder Spark +2
+  SAY NAME2 @60009    // Thunder Spark +2
+
+COPY ~DjinniCompanion/items/a7sw1h2.itm~ ~override~
+  SAY NAME1 @60010    // Thunder and Lightning +4
+  SAY NAME2 @60010    // Thunder and Lightning +4
+
+// registering names of the different selectable weapon levels
+COPY_EXISTING ~tooltip.2da~ ~override~
+  SET sw1a = RESOLVE_STR_REF(@60009)    // Thunder Spark +2
+  SET sw1b = RESOLVE_STR_REF(@60087)    // Scimitar +2
+  SET sw2a = RESOLVE_STR_REF(@60010)    // Thunder and Lightning +4
+  SET sw2b = RESOLVE_STR_REF(@60088)    // Thunder +4
+  SET sw2c = RESOLVE_STR_REF(@60089)    // Scimitar +4
+  INSERT_2DA_ROW 1 3 ~A7SW1H1           %sw1a%        %sw1b%       -1~
+  INSERT_2DA_ROW 2 3 ~A7SW1H2           %sw2a%        %sw2b%       %sw2c%~
+
+// MinHP1 item (for a controlled death)
+COPY ~DjinniCompanion/items/a7minhp1.itm~ ~override~
+
+// Effect Items (give weapon proficiencies, etc. to the djinni)
+COPY ~DjinniCompanion/items/a7afqfx1.itm~ ~override~
+     ~DjinniCompanion/items/a7afqfx2.itm~ ~override~
+
+// Placeholder item to work-around engine limitations
+COPY ~DjinniCompanion/items/a7dummy.itm~ ~override~
+
+// Afaaq's store
+COPY ~DjinniCompanion/misc/a7afqinv.sto~ ~override~
+  SAY NAME2 @60090    // Afaaq's inventory
+
+// Helper creatures for Afaaq
+COPY ~DjinniCompanion/creatures/a7afqctl.cre~ ~override~
+     ~DjinniCompanion/creatures/a7afqhlp.cre~ ~override~
+     ~DjinniCompanion/items/a7glamp.bam~ ~override~
+     ~%ITEM_ILAMP%~ ~override~
+     ~%ITEM_CLAMP%~ ~override~
+     ~DjinniCompanion/items/a7afqqm.bam~ ~override~
+     ~DjinniCompanion/items/a7djnrel.eff~ ~override~
+     ~DjinniCompanion/items/a7afqhlp.eff~ ~override~
+     ~DjinniCompanion/items/a7afqqm.eff~ ~override~
+     // Helper creature handling the duel between Korgan and Afaaq
+     ~DjinniCompanion/creatures/a7kduel.cre~ ~override~
+
+/*
+<<<<<<<< djinnicompanion/inlined/baldur.baf
+// Spawning a control creature
+IF
+  !Exists("A7AFQCTL")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+THEN RESPONSE #100
+  CreateCreatureImpassableAllowOverlap("A7AFQCTL", [0.0], 14)
+  Continue()
+END
+>>>>>>>>
+EXTEND_TOP ~baldur.bcs~ ~djinnicompanion/inlined/baldur.baf~
+EXTEND_TOP ~baldur25.bcs~ ~djinnicompanion/inlined/baldur.baf~
+*/
+
+// Helper creature handling wishes and potions
+COPY ~DjinniCompanion/creatures/a7afqhlp.cre~ ~override/a7afqwsh.cre~
+  WRITE_ASCII 0x248 ~A7AFQWSH~ #8
+  WRITE_ASCII 0x280 ~A7AFQWSH~ #32
+
+// Helper creature handling Afaaq's Quick Menu
+COPY ~DjinniCompanion/creatures/a7afqhlp.cre~ ~override/a7afqqm.cre~
+  WRITE_ASCII 0x248 ~A7AFQQM~ #8
+  WRITE_ASCII 0x280 ~A7AFQQM~ #32
+
+COMPILE ~DjinniCompanion/scripts/a7ctldef.baf~
+        ~DjinniCompanion/scripts/a7afqhlp.baf~
+        ~DjinniCompanion/scripts/a7afqwsh.baf~
+        ~DjinniCompanion/scripts/a7afqqm.baf~
+        ~DjinniCompanion/scripts/a7kduel.baf~
+
+
+// Innate Ability: Invisibility
+COPY ~DjinniCompanion/spells/a7spin1.spl~  ~override~
+  SAY UNIDENTIFIED_DESC @60081    // This spell causes Afaaq to vanish from sight and...
+
+// Innate Ability: Whirlwind
+COPY ~DjinniCompanion/spells/a7spin2.spl~  ~override~
+  SAY NAME1 @60014    // Whirlwind
+  SAY UNIDENTIFIED_DESC @60082    // Afaaq's close connection to the Elemental Plane of Air enables him to raise and control whirlwinds...
+  PATCH_IF (GAME_IS ~bg2ee~) BEGIN
+    WRITE_ASCII 0x3a ~A7SPIN2C~ #8
+    READ_LONG 0x64 ability_ofs
+    WRITE_ASCII (ability_ofs + 4) ~A7SPIN2B~ #8
+  END
+COPY ~DjinniCompanion/spells/a7whirl.vvc~  ~override~
+     ~DjinniCompanion/spells/a7whirl.pro~  ~override~
+     ~DjinniCompanion/spells/a7whirl.bam~  ~override~
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  COPY ~DjinniCompanion/spells/bg2ee/a7spin2b.bam~  ~override~
+       ~DjinniCompanion/spells/bg2ee/a7spin2c.bam~  ~override~
+END ELSE BEGIN
+  COPY ~DjinniCompanion/spells/a7spin2.bam~  ~override~
+END
+
+ADD_PROJECTILE ~DjinniCompanion/spells/a7whirl.pro~
+COPY ~DjinniCompanion/spells/a7spin2a.spl~ ~override~
+  SAY NAME1 @60014    // Whirlwind
+  SAY UNIDENTIFIED_DESC @60016    // -innate ability-
+  WRITE_SHORT 0x98 ~%a7whirl%~
+
+// Innate Ability: Greater Whirlwind
+COPY ~DjinniCompanion/spells/a7spin5.spl~    ~override~
+  SAY NAME1 @60024    // Greater Whirlwind
+  SAY UNIDENTIFIED_DESC @60083    // Afaaq's close connection to the Elemental Plane of Air enables him to raise and control whirlwinds...
+  PATCH_IF (GAME_IS ~bg2ee~) BEGIN
+    WRITE_ASCII 0x3a ~A7SPIN5C~ #8
+    READ_LONG 0x64 ability_ofs
+    WRITE_ASCII (ability_ofs + 4) ~A7SPIN5B~ #8
+  END
+COPY ~DjinniCompanion/creatures/a7spin5.cre~ ~override~
+  SAY NAME1 @60014    // Whirlwind
+  SAY NAME2 @60014    // Whirlwind
+COPY ~DjinniCompanion/spells/a7spin5.eff~    ~override~
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  COPY ~DjinniCompanion/spells/bg2ee/a7spin5b.bam~ ~override~
+       ~DjinniCompanion/spells/bg2ee/a7spin5c.bam~ ~override~
+END ELSE BEGIN
+  COPY ~DjinniCompanion/spells/a7spin5.bam~ ~override~
+END
+COPY ~DjinniCompanion/items/a7spin5.itm~ ~override~
+  SAY NAME1 ~Whirlwind Effect~
+  SAY NAME2 ~Whirlwind Effect~
+COMPILE ~DjinniCompanion/scripts/a7spin5.baf~
+
+// Innate Ability: Haste
+COPY ~DjinniCompanion/spells/a7spin3.spl~  ~override~
+  SAY UNIDENTIFIED_DESC @60084    // This spell enables Afaaq to move at about double his normal movement rate...
+
+// Innate Ability: Air Shield
+COPY ~DjinniCompanion/spells/a7spin4.spl~  ~override~
+     ~DjinniCompanion/spells/a7spin4a.spl~ ~override~
+  SAY NAME1 @60015    // Air Shield
+  SAY UNIDENTIFIED_DESC @60085    // The Air Shield grants Afaaq immunity to electricity damage, as well as...
+  PATCH_IF (GAME_IS ~bg2ee~) BEGIN
+    WRITE_ASCII 0x3a ~A7SPIN4C~ #8
+    READ_LONG 0x64 ability_ofs
+    WRITE_ASCII (ability_ofs + 4) ~A7SPIN4B~ #8
+  END
+COPY ~DjinniCompanion/spells/a7airsd.vvc~ ~override~
+     ~DjinniCompanion/spells/a7airsd.bam~ ~override~
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  COPY ~DjinniCompanion/spells/bg2ee/a7spin4b.bam~ ~override~
+       ~DjinniCompanion/spells/bg2ee/a7spin4c.bam~ ~override~
+END ELSE BEGIN
+  COPY ~DjinniCompanion/spells/a7spin4.bam~ ~override~
+END
+
+// Innate Ability: Control Air Elemental
+COPY ~DjinniCompanion/spells/a7spin6.spl~  ~override~
+  SAY NAME1 @60027    // Control Air Elemental
+  SAY UNIDENTIFIED_DESC @60086    // This spell allows Afaaq to take control over any kind of Air Elemental...
+COPY ~DjinniCompanion/spells/a7spin6a.eff~ ~override~
+     ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
+
+// Innate Ability: Gaseous Form (used by script)
+COPY ~DjinniCompanion/spells/a7mista.spl~ ~override~
+  SAY NAME1 ~Polymorph into Gaseous Cloud~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7djngas.eff~ ~override~
+
+COPY ~DjinniCompanion/spells/a7mistb.spl~ ~override~
+  SAY NAME1 ~Recover from Polymorph~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7mistc.spl~ ~override~
+  SAY NAME1 ~Recover from Polymorph No Effect~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+
+// Spell: Restoration (used by script)
+COPY ~DjinniCompanion/spells/a7rest.spl~ ~override~
+  SAY NAME1 ~Full Restoration~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7rest2.spl~ ~override~
+  SAY NAME1 ~Full Restoration and Rest~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7rest3.spl~ ~override~
+  SAY NAME1 ~Partial Restoration~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7dispel.spl~ ~override~
+  SAY NAME1 ~Dispel All Effects~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+
+// Spell: Summon (used in dialog)
+COPY ~DjinniCompanion/spells/a7afqsmn.spl~ ~override~
+  SAY NAME1 ~Summon Afaaq~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+
+// Spell: Unsummon (used by script)
+COPY ~DjinniCompanion/spells/a7unsum.spl~ ~override~
+  SAY NAME1 ~Unsummon Afaaq~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7unsum.vvc~ ~override~
+
+// Spell: Die (used by script)
+COPY ~DjinniCompanion/spells/a7die.spl~ ~override~
+  SAY NAME1 ~Afaaq dies~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+
+// Spells to increase his HP, THAC0 and AC at simulated level up
+COPY ~DjinniCompanion/spells/a7sphp2.spl~ ~override~
+     ~DjinniCompanion/spells/a7sphp3.spl~ ~override~
+     ~DjinniCompanion/spells/a7sphp8.spl~ ~override~
+  SAY NAME1 ~HP bonus~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7spth1.spl~ ~override~
+     ~DjinniCompanion/spells/a7spth2.spl~ ~override~
+  SAY NAME1 ~THAC0 bonus~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7spac1.spl~ ~override~
+     ~DjinniCompanion/spells/a7spac2.spl~ ~override~
+  SAY NAME1 ~AC bonus~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+
+// Visual effects
+COPY ~DjinniCompanion/spells/a7afqsum.vvc~ ~override~     // Afaaq summoning effect
+     ~DjinniCompanion/spells/a7afqlmp.vvc~ ~override~     // Magical effect when entering the djinni lamp
+
+// Installing soundtrack for conversation with CHARNAME
+COPY_LARGE ~DjinniCompanion/misc/a7afqmus.wav~ ~override~
+
+// Spirit Khalid
+COPY ~DjinniCompanion/misc/a7khald1.wav~ ~override~
+COPY ~DjinniCompanion/creatures/a7khalid.cre~ ~override~
+  SAY INITIAL_MEETING @60078    // WHA . . . . y-yes?
+<<<<<<<< DjinniCompanion/inlined/a7khalid.baf
+IF
+  NumTimesTalkedToGT(0)
+THEN RESPONSE #100
+  DestroySelf()
+END
+>>>>>>>>
+COMPILE ~DjinniCompanion/inlined/a7khalid.baf~
+
+
+// Scripts
+COMPILE ~DjinniCompanion/scripts/a7afaaq.baf~
+        ~DjinniCompanion/scripts/a7afqini.baf~
+        ~DjinniCompanion/scripts/a7afqin2.baf~
+        ~DjinniCompanion/scripts/a7afqin3.baf~
+        ~DjinniCompanion/scripts/a7afqlvl.baf~
+        ~DjinniCompanion/scripts/a7afatk.baf~
+        ~DjinniCompanion/scripts/a7afatk2.baf~
+        ~DjinniCompanion/scripts/a7afatkg.baf~
+        ~DjinniCompanion/scripts/a7afatkx.baf~
+        ~DjinniCompanion/scripts/a7afqup1.baf~
+        ~DjinniCompanion/scripts/a7afqup2.baf~
+        ~DjinniCompanion/scripts/a7cut02.baf~
+        // Edwin's attempt to steal the lamp
+        ~DjinniCompanion/scripts/a7cut03a.baf~
+        ~DjinniCompanion/scripts/a7cut03b.baf~
+        ~DjinniCompanion/scripts/a7cut03c.baf~
+        ~DjinniCompanion/scripts/a7cut03d.baf~
+        // Fight with Korgan
+        ~DjinniCompanion/scripts/a7afatkk.baf~
+        ~DjinniCompanion/scripts/a7korgan.baf~
+        // Jaheira and Khalid
+        ~DjinniCompanion/scripts/a7cut04a.baf~
+        ~DjinniCompanion/scripts/a7cut04b.baf~
+        // Afaaq comes out of his lamp and is about to leave CHARNAME
+        ~DjinniCompanion/scripts/a7cut05.baf~
+
+// Banter-related scripts
+LAF BanterAccelerator END
+// TODO
+// EXTEND_TOP ~aerie.bcs~      ~DjinniCompanion/scripts/npc_aerie.baf~
+// EXTEND_TOP ~aeri25.bcs~     ~DjinniCompanion/scripts/npc_aerie.baf~
+// EXTEND_TOP ~anomen.bcs~     ~DjinniCompanion/scripts/npc_anomen.baf~
+// EXTEND_TOP ~anom25.bcs~     ~DjinniCompanion/scripts/npc_anomen.baf~
+// EXTEND_TOP ~cernd.bcs~      ~DjinniCompanion/scripts/npc_cernd.baf~
+// EXTEND_TOP ~cern25.bcs~     ~DjinniCompanion/scripts/npc_cernd.baf~
+// EXTEND_TOP ~edwin.bcs~      ~DjinniCompanion/scripts/npc_edwin.baf~
+// EXTEND_TOP ~edwi25.bcs~     ~DjinniCompanion/scripts/npc_edwin.baf~
+// EXTEND_TOP ~haerdali.bcs~   ~DjinniCompanion/scripts/npc_haerdalis.baf~
+// EXTEND_TOP ~haer25.bcs~     ~DjinniCompanion/scripts/npc_haerdalis.baf~
+// EXTEND_TOP ~imoen2.bcs~     ~DjinniCompanion/scripts/npc_imoen.baf~
+// EXTEND_TOP ~imoen25.bcs~    ~DjinniCompanion/scripts/npc_imoen.baf~
+// EXTEND_TOP ~jaheira.bcs~    ~DjinniCompanion/scripts/npc_jaheira.baf~
+// EXTEND_TOP ~jahe25.bcs~     ~DjinniCompanion/scripts/npc_jaheira.baf~
+// EXTEND_TOP ~jan.bcs~        ~DjinniCompanion/scripts/npc_jan.baf~
+// EXTEND_TOP ~jan25.bcs~      ~DjinniCompanion/scripts/npc_jan.baf~
+// EXTEND_TOP ~keldorn.bcs~    ~DjinniCompanion/scripts/npc_keldorn.baf~
+// EXTEND_TOP ~keld25.bcs~     ~DjinniCompanion/scripts/npc_keldorn.baf~
+// EXTEND_TOP ~korgan.bcs~     ~DjinniCompanion/scripts/npc_korgan.baf~
+// EXTEND_TOP ~korg25.bcs~     ~DjinniCompanion/scripts/npc_korgan.baf~
+// EXTEND_TOP ~mazzy.bcs~      ~DjinniCompanion/scripts/npc_mazzy.baf~
+// EXTEND_TOP ~mazz25.bcs~     ~DjinniCompanion/scripts/npc_mazzy.baf~
+// EXTEND_TOP ~minsc.bcs~      ~DjinniCompanion/scripts/npc_minsc.baf~
+// EXTEND_TOP ~mins25.bcs~     ~DjinniCompanion/scripts/npc_minsc.baf~
+// EXTEND_TOP ~nalia.bcs~      ~DjinniCompanion/scripts/npc_nalia.baf~
+// EXTEND_TOP ~nali25.bcs~     ~DjinniCompanion/scripts/npc_nalia.baf~
+// EXTEND_TOP ~sarev25.bcs~    ~DjinniCompanion/scripts/npc_sarevok.baf~
+// EXTEND_TOP ~valygar.bcs~    ~DjinniCompanion/scripts/npc_valygar.baf~
+// EXTEND_TOP ~valy25.bcs~     ~DjinniCompanion/scripts/npc_valygar.baf~
+// EXTEND_TOP ~viconia.bcs~    ~DjinniCompanion/scripts/npc_viconia.baf~
+// EXTEND_TOP ~vico25.bcs~     ~DjinniCompanion/scripts/npc_viconia.baf~
+EXTEND_TOP ~yoshimo.bcs~    ~DjinniCompanion/scripts/npc_yoshimo.baf~
+
+// Lamp talks
+COMPILE ~DjinniCompanion/scripts/a72200gn.baf~    // Tortured djinni in Ust Natha
+EXTEND_BOTTOM ~ar1008.bcs~ ~DjinniCompanion/scripts/ar1008.baf~     // Twisted Rune
+EXTEND_BOTTOM ~ar0406.bcs~ ~DjinniCompanion/scripts/ar0406.baf~     // Copper Coronet
+EXTEND_BOTTOM ~ar0516.bcs~ ~DjinniCompanion/scripts/ar0516.baf~     // Planar Prison
+EXTEND_BOTTOM ~ar2400.bcs~ ~DjinniCompanion/scripts/ar2400.baf~     // Illithid Lair (Underdark)
+
+// djinni lamp dialog
+COMPILE ~DjinniCompanion/dialogs/A7djlmp.d~
+
+// Afaaq's dialog files
+COMPILE ~DjinniCompanion/dialogs/A7Afaaq.d~
+        ~DjinniCompanion/dialogs/A7AfaaqGreed.d~
+        ~DjinniCompanion/dialogs/A7AfaaqEnslaved.d~
+        ~DjinniCompanion/dialogs/A7AfaaqQuickMenu.d~
+
+// Afaaq's interjections and more
+COMPILE ~DjinniCompanion/dialogs/A7AfaaqInterjections.d~
+        ~DjinniCompanion/dialogs/A7AfaaqTownsfolk.d~
+
+// Afaaq's banter files for CHARNAME (Order of compilation is important!)
+COMPILE ~DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME_Specific.d~
+COMPILE ~%DIALOG_BANTER_INTRO%~
+COMPILE ~DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME.d~
+
+// Afaaq's banter files for Bio NPCs
+// TODO
+COMPILE 
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Aerie.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Keldorn.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Mazzy.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Imoen.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Valygar.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Minsc.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Nalia.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Anomen.d~
+        ~DjinniCompanion/dialogs/A7AfaaqBanter_Yoshimo.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Jaheira.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Cernd.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_HaerDalis.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Jan.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Edwin.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Viconia.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Korgan.d~
+        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Sarevok.d~
+
+// Afaaq's default dialog file (generic) for friendship path
+COMPILE ~DjinniCompanion/dialogs/A7afaaq_generic.d~
+  TEXT_SPRINT "afq_dialog" ~A7AFAAQ~
+  EVALUATE_BUFFER
+
+// Afaaq's default dialog file (generic) for enslaved djinni
+COMPILE ~DjinniCompanion/dialogs/A7afaaq_generic.d~
+  TEXT_SPRINT "afq_dialog" ~A7AFAAQX~
+  EVALUATE_BUFFER
+
+// Afaaq's default dialog file (generic) for djinni lamp
+COMPILE ~DjinniCompanion/dialogs/A7afaaq_generic.d~
+  TEXT_SPRINT "afq_dialog" ~A7DJLMP~
+  EVALUATE_BUFFER
+
+
+// Afaaq's Epilogue
+COPY ~DjinniCompanion/misc/a7afqnd.2da~ ~override/a7afqnd1.2da~
+   SET afqend = RESOLVE_STR_REF(@64090)     // Text: released djinni, PC rejected godhood (non-evil alignment)
+   EVALUATE_BUFFER
+COPY ~DjinniCompanion/misc/a7afqnd.2da~ ~override/a7afqnd2.2da~
+   SET afqend = RESOLVE_STR_REF(@64091)     // Text: released djinni, PC rejected godhood (evil alignment)
+   EVALUATE_BUFFER
+COPY ~DjinniCompanion/misc/a7afqnd.2da~ ~override/a7afqnd3.2da~
+   SET afqend = RESOLVE_STR_REF(@64092)     // Text: released djinni, PC chose godhood
+   EVALUATE_BUFFER
+EXTEND_TOP ~ar6200.bcs~ ~DjinniCompanion/scripts/ar6200.baf~
+
+
+// Make Raissa in Trademeet recognize Afaaq's version of curing her
+EXTEND_TOP ~trskin01.bcs~ ~DjinniCompanion/scripts/trskin01.baf~

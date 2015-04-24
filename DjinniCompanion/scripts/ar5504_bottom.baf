@@ -1,0 +1,216 @@
+// *** Bottom script portion for map AR5504 (Smuggler Cave in Amkethran) ***
+
+
+// Introduction scene - when Afaaq is NOT around
+IF
+  Global("A7Q5Intro", "AR5504", 0)
+  Global("A7Quest5", "GLOBAL", 0)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 0)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  PartyHasItem("A7DJLMPA")
+  !Global("Enclave", "GLOBAL", 2)
+THEN RESPONSE #100
+  SetGlobal("A7Q5Intro", "AR5504", 1)
+  CreateCreature("A7Karim", [481.920], 12)
+  ActionOverride("A7Karim", FaceObject("AMCARRAS"))
+  ActionOverride("A7Karim", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ01", [518.830], 14)
+  ActionOverride("A7Q5DJ01", SetDialogue("A7Q5DJ01"))
+  ActionOverride("A7Q5DJ01", FaceObject("AMCARRAS"))
+  ActionOverride("A7Q5DJ01", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ05", [424.850], 13)
+  ActionOverride("A7Q5DJ05", SetDialogue("A7Q5DJ05"))
+  ActionOverride("A7Q5DJ05", FaceObject("AMCARRAS"))
+  ActionOverride("A7Q5DJ05", DestroyItem("A7RING01"))
+  ActionOverride("AMCARRAS", FaceObject("A7Karim"))
+  Wait(2)
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("A7Q5ct1a")
+END
+
+// Introduction scene - when Afaaq is around
+IF
+  Global("A7Q5Intro", "AR5504", 0)
+  Global("A7Quest5", "GLOBAL", 0)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 0)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  PartyHasItem("A7DJLMPA")
+  !Global("Enclave", "GLOBAL", 2)
+THEN RESPONSE #100
+  SetGlobal("A7Q5Intro", "AR5504", 1)
+  CreateCreature("A7Karim", [481.920], 12)
+  ActionOverride("A7Karim", FaceObject("AMCARRAS"))
+  ActionOverride("A7Karim", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ01", [518.830], 14)
+  ActionOverride("A7Q5DJ01", SetDialogue("A7Q5DJ01"))
+  ActionOverride("A7Q5DJ01", FaceObject("AMCARRAS"))
+  ActionOverride("A7Q5DJ01", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ05", [424.850], 13)
+  ActionOverride("A7Q5DJ05", SetDialogue("A7Q5DJ05"))
+  ActionOverride("A7Q5DJ05", FaceObject("AMCARRAS"))
+  ActionOverride("A7Q5DJ05", DestroyItem("A7RING01"))
+  ActionOverride("AMCARRAS", FaceObject("A7Karim"))
+  Wait(2)
+  ActionOverride("A7Karim", StartDialogueNoSet("AMCARRAS"))
+END
+
+// Introduction scene - when Afaaq is enslaved
+IF
+  Global("A7Q5Intro", "AR5504", 0)
+  Global("A7Quest5", "GLOBAL", 0)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 0)
+  Global("A7AfaaqEnslaved", "GLOBAL", 1)
+  OR(2)
+    PartyHasItem("A7DJLMP")
+    PartyHasItem("A7DJLMPA")
+  !Global("Enclave", "GLOBAL", 2)
+THEN RESPONSE #100
+  SetGlobal("A7Q5Intro", "AR5504", 1)
+  CreateCreature("A7Karim", [481.920], 12)
+  ActionOverride("A7Karim", FaceObject("AMCARRAS"))
+  ActionOverride("A7Karim", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ01", [518.830], 14)
+  ActionOverride("A7Q5DJ01", SetDialogue("A7Q5DJ01"))
+  ActionOverride("A7Q5DJ01", FaceObject("AMCARRAS"))
+  ActionOverride("A7Q5DJ01", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ05", [424.850], 13)
+  ActionOverride("A7Q5DJ05", SetDialogue("A7Q5DJ05"))
+  ActionOverride("A7Q5DJ05", FaceObject("AMCARRAS"))
+  ActionOverride("A7Q5DJ05", DestroyItem("A7RING01"))
+  ActionOverride("AMCARRAS", FaceObject("A7Karim"))
+  Wait(2)
+  ActionOverride("A7Karim", StartDialogueNoSet("AMCARRAS"))
+END
+
+// Introduction scene - when Afaaq has left CHARNAME at the beginning of ToB
+IF
+  Global("A7Q5Intro", "AR5504", 0)
+  Global("A7Quest5", "GLOBAL", 0)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 1)
+  !Global("Enclave", "GLOBAL", 2)
+THEN RESPONSE #100
+  SetGlobal("A7Q5Intro", "AR5504", 1)
+  SetGlobal("A7Q5AfaaqAppears", "GLOBAL", 2)
+  CreateCreature("A7Karim", [481.920], 12)
+  ActionOverride("A7Karim", FaceObject("AMCARRAS"))
+  ActionOverride("A7Karim", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ01", [518.830], 14)
+  ActionOverride("A7Q5DJ01", SetDialogue("A7Q5DJ01"))
+  ActionOverride("A7Q5DJ01", FaceObject("AMCARRAS"))
+  ActionOverride("A7Q5DJ01", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ05", [424.850], 13)
+  ActionOverride("A7Q5DJ05", SetDialogue("A7Q5DJ05"))
+  ActionOverride("A7Q5DJ05", FaceObject("AMCARRAS"))
+  ActionOverride("A7Q5DJ05", DestroyItem("A7RING01"))
+  ActionOverride("A7Q5DJ05", SetName(@60001))    // Afaaq
+  ActionOverride("A7Q5DJ05", ApplySpellRES("A7Q5PIC1", Myself))
+  ActionOverride("A7Q5DJ05", SetGlobal("Afaaq", "LOCALS", 1))
+  ActionOverride("AMCARRAS", FaceObject("A7Karim"))
+  Wait(2)
+  ActionOverride("A7Karim", StartDialogueNoSet("AMCARRAS"))
+END
+
+// If none of the above is matched, then cancel the quest
+IF
+  Global("A7Q5Intro", "AR5504", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5Intro", "AR5504", 1)
+  SetGlobal("A7Quest5", "GLOBAL", 11)
+END
+
+
+// Enable pool travel when heat protection is active
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 0)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Permission", "GLOBAL", 1)
+  Global("A7Q5Protection", "GLOBAL", 1)
+  Global("A7EnablePool", "AR5504", 0)
+THEN RESPONSE #100
+  SetGlobal("A7EnablePool", "AR5504", 1)
+  TriggerActivation("A7InfoWater_1", FALSE)
+  TriggerActivation("A7InfoWater_2", TRUE)
+END
+
+// Disable pool travel when heat protection is missing
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 0)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Permission", "GLOBAL", 1)
+  Global("A7Q5Protection", "GLOBAL", 0)
+  Global("A7EnablePool", "AR5504", 1)
+THEN RESPONSE #100
+  SetGlobal("A7EnablePool", "AR5504", 0)
+  TriggerActivation("A7InfoWater_2", FALSE)
+  TriggerActivation("A7InfoWater_1", TRUE)
+END
+
+// One-time finalization when Quest 5 is completed
+IF
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Finalized", "AR5504", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Finalized", "AR5504", 1)
+  AmbientActivate("A7Bubbles_1", FALSE)
+  AmbientActivate("A7Bubbles_2", FALSE)
+  AmbientActivate("A7Bubbles_3", FALSE)
+  AmbientActivate("A7Bubbles_4", FALSE)
+  AmbientActivate("A7Bubbles_5", FALSE)
+  AmbientActivate("A7Steam_1", FALSE)
+  AmbientActivate("A7Steam_2", FALSE)
+  AmbientActivate("A7Steam_3", FALSE)
+  AmbientActivate("A7Steam_4", FALSE)
+  AmbientActivate("A7Steam_5", FALSE)
+  TriggerActivation("A7InfoWater_2", FALSE)
+  TriggerActivation("A7InfoWater_1", TRUE)
+END
+
+// Permission to use the pool is given automatically when Carras is dead
+IF
+  Dead("AMCARRAS")
+  Global("A7Q5Permission", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5Permission", "GLOBAL", 1)
+END
+
+// Suspending Smuggler-Monks-Plot
+IF
+  Global("A7Quest5", "GLOBAL", 0)
+  GlobalLT("MONKSPAWNEDSMUGGLERPLOT", "GLOBAL", 3)
+THEN RESPONSE #100
+  SetGlobal("MONKSPAWNEDSMUGGLERPLOT", "GLOBAL", 3)
+END
+
+// Reactivating Smuggler-Monks-Plot
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 1)
+  Global("MONKSPAWNEDSMUGGLERPLOT", "GLOBAL", 3)
+THEN RESPONSE #100
+  SetGlobal("MONKSPAWNEDSMUGGLERPLOT", "GLOBAL", 0)
+END
+
+// Heat protection ends
+IF
+  Global("A7Q5Protection", "GLOBAL", 1)
+  !GlobalTimerNotExpired("A7Q5ProtectionWarnTimer", "GLOBAL")
+  !GlobalTimerNotExpired("A7Q5ProtectionTimer", "GLOBAL")
+THEN RESPONSE #100
+  SetGlobal("A7Q5Protection", "GLOBAL", 0)
+  SetGlobal("A7Q5ProtectionWarn", "GLOBAL", 1)
+END
+
+
+// Tremors once in a while as long as Quest 5 hasn't been solved
+IF
+  !Global("A7Quest5", "GLOBAL", 10)
+  RealGlobalTimerExpired("A7Q5TremorTimer", "AR5504")
+  RandomNum(50, 1)
+THEN RESPONSE #100
+  RealSetGlobalTimer("A7Q5TremorTimer", "AR5504", ONE_TURN)
+  PlaySound("EFF_P92")
+  ScreenShake([5.5], 30)
+END
+

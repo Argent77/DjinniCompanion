@@ -1,0 +1,10 @@
+// Proximity trigger for Fire Salamander #5: Final position after efreets have left the cave
+
+IF
+  Range("A7Q5FS06", 2)
+  Global("A7Q5SalamandersTakeOver", "A77003", 1)
+  Global("A7Q5SalamanderAllied", "A77003", 1)
+  Global("FS06TookOver", "A77003", 0)
+THEN RESPONSE #100
+  SetGlobal("FS06TookOver", "A77003", 1)
+END

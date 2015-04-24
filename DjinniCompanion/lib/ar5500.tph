@@ -1,0 +1,31 @@
+// *** Area AR5500: Amkethran main area ***
+
+// Entering Temple of Waukeen: Party required
+COPY_EXISTING ~ar5500.are~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    READ_ASCII 0x94 "scrpt"       // area script
+    READ_SHORT 0x5a "trig_num"    // number of triggers
+    READ_LONG 0x5c "trig_ofs"     // offset of first trigger
+    FOR (trig_idx = 0; trig_idx < trig_num; trig_idx += 1) BEGIN
+      READ_ASCII %trig_ofs% "trig_name" ( 32 ) NULL   // trigger name
+      READ_SHORT (%trig_ofs% + 32) "trig_type"        // trigger type
+      PATCH_IF ((~%trig_name%~ STRING_EQUAL ~Tran5503~) && (%trig_type% = 2)) BEGIN
+        READ_LONG (%trig_ofs% + 96) "trig_flags"
+        trig_flags = %trig_flags% BOR 0x4         // enable "Party required" flag
+        WRITE_LONG (%trig_ofs% + 96) %trig_flags%
+        trig_idx = %trig_num%     // finish the FOR-loop
+      END
+      trig_ofs += 0xc4
+    END
+    PATCH_IF ("%scrpt%" STRING_EQUAL_CASE ~~ OR "%scrpt%" STRING_EQUAL_CASE ~NONE~ OR !FILE_EXISTS_IN_GAME ~%scrpt%.BCS~) BEGIN
+      TEXT_SPRINT scrpt ~ar5500~
+      WRITE_ASCIIE 0x94 "%scrpt%" #8
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar5500.are~
+    TEXT_SPRINT restype ~Area~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// scripts
+EXTEND_BOTTOM ~%scrpt%.BCS~ ~DjinniCompanion/scripts/ar5500.baf~

@@ -1,0 +1,34 @@
+// *** Quest-specific script for Fire Elementals (Quest 5) ***
+
+// Rally around the efreeti commander
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  Allegiance(Myself, ENEMY)
+  !See([GOODCUTOFF])
+  !Dead("A7Q5EF01")
+  !See("A7Q5EF01")
+THEN 
+  RESPONSE #25
+    MoveToObject("A7Q5EF01")
+  RESPONSE #25
+    RandomWalk()
+  RESPONSE #50
+    Continue()
+END
+
+// Rally around the Malik
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  Allegiance(Myself, ENEMY)
+  !See([GOODCUTOFF])
+  Dead("A7Q5EF01")
+  InMyArea("A7Malik")
+  !See("A7Malik")
+THEN 
+  RESPONSE #25
+    MoveToObject("A7Malik")
+  RESPONSE #25
+    RandomWalk()
+  RESPONSE #50
+    Continue()
+END

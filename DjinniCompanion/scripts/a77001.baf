@@ -1,0 +1,47 @@
+// *** Area script for "Rakshasa Meeting Place" ***
+
+// First-time creation of the djinni (moved into djinni lamp helper creature)
+// IF
+  // Global("A7AfaaqCreated", "GLOBAL", 0)
+// THEN RESPONSE #100
+  // SetGlobal("A7AfaaqCreated", "GLOBAL", 1)
+  // CreateCreature("A7Afaaq", [0.0], 0)
+  // ActionOverride("A7Afaaq", MakeGlobal())
+  // ActionOverride("A7Afaaq", DestroySelf())
+  // Continue()
+// END
+
+// First time entered
+IF
+  Global("A7FirstTime", "A77001", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FirstTime", "A77001", 1)
+  Wait(1)
+  EraseJournalEntry(@1800)
+  AddJournalEntry(@1801, QUEST)    // I have entered the portal which appeared after I attacked the disguised rakshasa in the druid grove. ...
+  DisplayStringNoNameHead(Player1, @1606)    // You step out of the teleporter and feel a dark and menacing aura which emanates from the magic circle. You are quite sure, whoever put that magic in place might already know you are here.
+END
+
+// Djinni lamp stolen?
+IF
+  !HasItem("A7djlmp", "A7Mahel")
+  PartyHasItem("A7djlmp")
+  !Dead("A7Mahel")
+  GlobalLT("A7Quest1", "GLOBAL", 9)
+THEN RESPONSE #100
+  SetGlobal("A7Quest1", "GLOBAL", 9)
+  SetGlobalTimer("A7TriggerQuest2", "GLOBAL", THREE_DAYS)    // enable trigger for Quest 2
+  AddJournalEntry(@1811, QUEST)    // I have managed to steal a magic lamp from the rakshasa leader. I'm really curious what it might contain.
+END
+
+// Djinni lamp taken from leader's corpse
+IF
+  PartyHasItem("A7djlmp")
+  Dead("A7Mahel")
+  GlobalLT("A7Quest1", "GLOBAL", 9)
+THEN RESPONSE #100
+  SetGlobal("A7Quest1", "GLOBAL", 9)
+  SetGlobalTimer("A7TriggerQuest2", "GLOBAL", THREE_DAYS)    // enable trigger for Quest 2
+  AddJournalEntry(@1812, QUEST)    // After defeating the rakshasa leader I have found a magic lamp in his possession. I'm really curious what it might contain.
+END
+

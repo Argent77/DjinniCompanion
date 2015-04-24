@@ -1,0 +1,249 @@
+// *** General actions for the genie Afaaq ***
+
+// Spawning a control creature
+IF
+  !Exists("A7AFQCTL")
+THEN RESPONSE #100
+  CreateCreatureImpassableAllowOverlap("A7AFQCTL", [0.0], 14)
+  Continue()
+END
+
+
+// In case of a scripted Kill() action
+IF
+  Die()
+THEN RESPONSE #100
+  // work-around a scripted death
+  SetInterrupt(FALSE)
+  DisplayString(Myself, @60020)    // The djinni's binding to the magical lamp prevents his death.
+  ApplySpellRES("A7REST3", Myself)
+  MakeGlobal()
+  ChangeEnemyAlly(Myself, FAMILIAR)
+  AddFamiliar()
+  SetInterrupt(TRUE)
+END
+
+
+// Djinni wanders around aimlessly in his gaseous form
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 1)
+  GlobalTimerNotExpired("GaseousTimer", "LOCALS")
+THEN RESPONSE #100
+  RandomWalkContinuous()
+  Continue()
+END
+
+
+// Djinni returns from his gaseous state
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 1)
+  GlobalTimerExpired("GaseousTimer", "LOCALS")
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqGaseous", "GLOBAL", 0)
+  ClearActions(Myself)
+  SetInterrupt(FALSE)
+  DisplayString(Myself, @60037)    // recovers from gaseous form
+  ApplySpellRES("A7MISTB", Myself)
+  ChangeEnemyAlly(Myself, FAMILIAR)
+  SetInterrupt(TRUE)
+END
+
+
+// Djinni returns into his lamp
+IF
+  !AreaCheck("A77006")
+  HPGT(Myself, 3)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("unsummoning", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("unsummoning", "LOCALS", 0)
+  SetInterrupt(FALSE)
+  ChangeEnemyAlly(Myself, NEUTRAL)    // to prevent interupting the unsummoning
+  ApplySpellRES("A7UNSUM", Myself)    // triggers visual and sound effects, make the djinni unselectable
+  SmallWait(5)
+  SetSequence(SEQ_DIE)
+  SmallWait(25)
+  ChangeEnemyAlly(Myself, FAMILIAR)
+  SetInterrupt(TRUE)
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 0)
+  SetGlobalTimer("A7AfaaqHealTimer", "GLOBAL", ONE_TURN)
+  SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
+  DestroySelf()
+END
+
+
+// Triggers summoning animation and activates the djinni (after less than one turn rest)
+IF
+  GlobalTimerNotExpired("A7AfaaqHealTimer", "GLOBAL")
+  GlobalTimerNotExpired("A7AfaaqRestTimer", "GLOBAL")
+  Global("summoning", "LOCALS", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  IncrementGlobal("A7AfaaqBanterTimer", "GLOBAL", 360)    // delay possible banters
+  IncrementGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 540) // delay possible banters
+  SetGlobal("summoning", "LOCALS", 0)
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  SetGlobal("initialize", "LOCALS", 1)
+  Activate(Myself)
+  SetSequence(SEQ_AWAKE)
+  MoveToOffset([0.0])
+  CreateVisualEffectObject("A7AFQSUM", Myself)
+  ChangeEnemyAlly(Myself, FAMILIAR)  // restoring player control
+  Wait(1)
+  SetInterrupt(TRUE)
+END
+
+
+// Triggers summoning animation and activates the djinni (after one turn rest)
+IF
+  !GlobalTimerNotExpired("A7AfaaqHealTimer", "GLOBAL")
+  GlobalTimerNotExpired("A7AfaaqRestTimer", "GLOBAL")
+  Global("summoning", "LOCALS", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  IncrementGlobal("A7AfaaqBanterTimer", "GLOBAL", 360)    // delay possible banters
+  IncrementGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 540) // delay possible banters
+  SetGlobal("summoning", "LOCALS", 0)
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  SetGlobal("initialize", "LOCALS", 1)
+  ApplySpellRES("A7REST", Myself)    // Cures effects and restores health
+  Activate(Myself)
+  SetSequence(SEQ_AWAKE)
+  MoveToOffset([0.0])
+  CreateVisualEffectObject("A7AFQSUM", Myself)
+  ChangeEnemyAlly(Myself, FAMILIAR)  // restoring player control
+  Wait(1)
+  SetInterrupt(TRUE)
+END
+
+
+// Triggers summoning animation and activates the djinni (after more than 8 hours rest)
+IF
+  !GlobalTimerNotExpired("A7AfaaqRestTimer", "GLOBAL")
+  Global("summoning", "LOCALS", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  IncrementGlobal("A7AfaaqBanterTimer", "GLOBAL", 360)    // delay possible banters
+  IncrementGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 540) // delay possible banters
+  SetGlobal("summoning", "LOCALS", 0)
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  SetGlobal("initialize", "LOCALS", 1)
+  ApplySpellRES("A7REST2", Myself)    // Cures effects, restores health and memorized spells
+  Activate(Myself)
+  SetSequence(SEQ_AWAKE)
+  MoveToOffset([0.0])
+  CreateVisualEffectObject("A7AFQSUM", Myself)
+  ChangeEnemyAlly(Myself, FAMILIAR)  // restoring player control
+  Wait(1)
+  SetInterrupt(TRUE)
+END
+
+
+// One-time check for correct battle script after genie upgrade
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("AfaaqPassive", "LOCALS", 0)
+  Global("ScriptCheck", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("ScriptCheck", "LOCALS", 1)
+  ChangeAIScript("A7AFATK", DEFAULT)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("AfaaqPassive", "LOCALS", 1)
+  Global("ScriptCheck", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("ScriptCheck", "LOCALS", 1)
+  ChangeAIScript("A7AFATK2", DEFAULT)
+END
+
+
+// Reaction to Dead Magic Zones
+IF
+  OR(2)
+    AreaCheck("AR3004")
+    AreaCheck("AR3008")
+  Global("unsummoning", "LOCALS", 0)
+  Global("A7AntiMagicZone", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AntiMagicZone", "MYAREA", 1)
+  SetGlobal("unsummoning", "LOCALS", 1)
+  DisplayStringHead(Myself, @60025)    // Help! My magic is being sucked away...
+END
+
+
+// Reaction to Dead Magic Zones (no shout)
+IF
+  OR(2)
+    AreaCheck("AR3004")
+    AreaCheck("AR3008")
+  Global("unsummoning", "LOCALS", 0)
+  Global("A7AntiMagicZone", "MYAREA", 1)
+THEN RESPONSE #100
+  SetGlobal("unsummoning", "LOCALS", 1)
+END
+
+
+// Reaction to Wild Magic Zones in WK
+IF
+  OR(2)
+    AreaCheck("AR3005")
+    AreaCheck("AR3009")
+  Global("A7WildMagicZone", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7WildMagicZone", "MYAREA", 1)
+  DisplayStringHead(Myself, @60026)    // Be careful! Magic is running wild in this room.
+END
+
+
+// Party members attacking Afaaq
+IF
+  HitBy(Player1, 0)
+  Global("A7FriendlyFire1", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FriendlyFire1", "LOCALS", 1)
+  DisplayStringHead(Myself, @60091)   // Please refrain from hitting me, my <PRO_LADYLORD>.
+END
+
+IF
+  OR(5)
+    HitBy(Player2, 0)
+    HitBy(Player3, 0)
+    HitBy(Player4, 0)
+    HitBy(Player5, 0)
+    HitBy(Player6, 0)
+  Global("A7FriendlyFire2", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7FriendlyFire2", "LOCALS", 1)
+  DisplayStringHead(Myself, @60092)   // Please stop attacking me!
+END
+
+IF
+  HitBy(Player1, 0)
+  !Global("A7FriendlyFire1", "LOCALS", 0)
+THEN
+  RESPONSE #80
+    Continue()
+  RESPONSE #20
+    DisplayStringHead(Myself, @60093)   // Please stop attacking me, my <PRO_LADYLORD>!
+END
+
+IF
+  OR(5)
+    HitBy(Player2, 0)
+    HitBy(Player3, 0)
+    HitBy(Player4, 0)
+    HitBy(Player5, 0)
+    HitBy(Player6, 0)
+  !Global("A7FriendlyFire2", "LOCALS", 0)
+THEN
+  RESPONSE #80
+    Continue()
+  RESPONSE #20
+    DisplayStringHead(Myself, @60094)   // Please stop attacking me!
+END

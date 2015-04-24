@@ -1,0 +1,13 @@
+// *** Cutscene: Afaaq is powering up (part 1) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  MoveViewObject(Myself, VERY_FAST)
+  CreateVisualEffectObject("A7Q4CT3A", Myself)
+  Wait(3)
+  ChangeAnimation("A7AFAAQ2")
+  ActionOverride("A7Afaaq", MakeGlobal())
+  StartCutScene("A7afqup2")
+END

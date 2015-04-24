@@ -1,0 +1,31 @@
+// *** Cutscene: Karim teleports party back to the surface ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  ActionOverride("A7Karim", ForceSpellRES("A7Q5SFX1", Myself))
+  CreateVisualEffectObject("SPPLANAR", Myself)
+  // PlaySound("EFF_M09")
+  CreateVisualEffectObject("SPPLANAR", Player2)
+  // ActionOverride(Player2, PlaySound("EFF_M09"))
+  CreateVisualEffectObject("SPPLANAR", Player3)
+  // ActionOverride(Player3, PlaySound("EFF_M09"))
+  CreateVisualEffectObject("SPPLANAR", Player4)
+  // ActionOverride(Player4, PlaySound("EFF_M09"))
+  CreateVisualEffectObject("SPPLANAR", Player5)
+  // ActionOverride(Player5, PlaySound("EFF_M09"))
+  CreateVisualEffectObject("SPPLANAR", Player6)
+  // ActionOverride(Player6, PlaySound("EFF_M09"))
+  Wait(2)
+  LeaveAreaLUAPanic("AR5504", "", [760.1032], 0)
+  LeaveAreaLUA("AR5504", "", [760.1032], 0)
+  ActionOverride(Player2, LeaveAreaLUA("AR5504", "", [760.974], 0))
+  ActionOverride(Player3, LeaveAreaLUA("AR5504", "", [696.974], 0))
+  ActionOverride(Player4, LeaveAreaLUA("AR5504", "", [824.974], 0))
+  ActionOverride(Player5, LeaveAreaLUA("AR5504", "", [638.940], 0))
+  ActionOverride(Player6, LeaveAreaLUA("AR5504", "", [890.945], 0)) 
+  MultiPlayerSync()
+  EndCutSceneMode()
+END
+

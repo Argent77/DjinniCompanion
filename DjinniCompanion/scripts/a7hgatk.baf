@@ -1,0 +1,251 @@
+// *** Battle script of the Greed Genie (Quest 4) ***
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("A7Prep", "LOCALS", 0)
+THEN RESPONSE #100
+  DisplayString(Myself,39968)    // Spell Trigger - Fired
+  ApplySpell(Myself, WIZARD_MIRROR_IMAGE)
+  ApplySpell(Myself, WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  ApplySpell(Myself, WIZARD_PROTECTION_FROM_NORMAL_MISSILES)
+  SetGlobal("A7Prep", "LOCALS", 1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_VOCALIZE)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_VOCALIZE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpellRES("A7SPIN4")
+  Global("A7Prep", "LOCALS", 1)
+THEN RESPONSE #100
+  SpellRES("A7SPIN4", Myself)
+  SetGlobal("A7Prep", "LOCALS", 2)
+END
+
+IF
+  TookDamage()
+  !StateCheck(Myself,STATE_REALLY_DEAD)
+  Global("A7Prep", "LOCALS", 1)
+THEN RESPONSE #100
+  DisplayString(Myself, 40252) // Contingency - Protection from Magical Weapons
+  ApplySpell(Myself, WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  SetGlobal("A7Prep", "LOCALS",2)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  TookDamage()
+  HaveSpell(WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatGT(LastSeenBy(Myself), 0, DETECTILLUSIONS)
+  TookDamage()
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DISPEL_MAGIC)
+THEN
+  RESPONSE #25
+    Spell(NearestEnemyOf(Myself), WIZARD_DISPEL_MAGIC)
+  RESPONSE #75
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatGT(LastSeenBy(Myself), 0, DETECTILLUSIONS)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  !StateCheck(Myself, STATE_IMPROVEDINVISIBILITY)
+  HaveSpell(WIZARD_SHADOW_DOOR)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_SHADOW_DOOR)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatGT(LastSeenBy(Myself), 0, DETECTILLUSIONS)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  !StateCheck(Myself, STATE_IMPROVEDINVISIBILITY)
+  HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_IMPROVED_INVISIBILITY)
+END
+
+IF
+  Detect([PC])
+  Allegiance(Myself, ENEMY)
+  !See(LastSeenBy(Myself))
+  HaveSpell(WIZARD_TRUE_SIGHT)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_TRUE_SIGHT)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !HasBounceEffects(Myself)
+  !HasImmunityEffects(Myself)
+  !StateCheck(Myself, STATE_REALLY_DEAD)
+  HaveSpell(WIZARD_SPELL_TURNING)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_SPELL_TURNING)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_TIME_STOP)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_TIME_STOP)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpellRES("A7SPIN2")
+THEN
+  RESPONSE #50
+    SpellRES("A7SPIN2", Myself)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_NPC_SYMBOL_FEAR)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_NPC_SYMBOL_FEAR)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_NPC_SYMBOL_STUN)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_NPC_SYMBOL_STUN)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpellRES("A7SPWI01")
+THEN RESPONSE #100
+  SpellRES("A7SPWI01", NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpellRES("A7SPIN2")
+THEN RESPONSE #100
+  SpellRES("A7SPIN2", Myself)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHAIN_LIGHTNING)
+  HaveSpell(WIZARD_LIGHTNING_BOLT)
+THEN 
+  RESPONSE #75
+    Spell(NearestEnemyOf(Myself), WIZARD_CHAIN_LIGHTNING)
+  RESPONSE #25
+    Spell(NearestEnemyOf(Myself), WIZARD_LIGHTNING_BOLT)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHAIN_LIGHTNING)
+  !HaveSpell(WIZARD_LIGHTNING_BOLT)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_CHAIN_LIGHTNING)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+  HaveSpell(WIZARD_LIGHTNING_BOLT)
+THEN
+  RESPONSE #50
+    Spell(NearestEnemyOf(Myself), WIZARD_MAGIC_MISSILE)
+  RESPONSE #50
+    Spell(NearestEnemyOf(Myself), WIZARD_LIGHTNING_BOLT)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !HaveSpell(WIZARD_MAGIC_MISSILE)
+  HaveSpell(WIZARD_LIGHTNING_BOLT)
+THEN RESPONSE #100
+    Spell(NearestEnemyOf(Myself), WIZARD_LIGHTNING_BOLT)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+  !HaveSpell(WIZARD_LIGHTNING_BOLT)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_MAGIC_MISSILE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DISPEL_MAGIC)
+THEN
+  RESPONSE #25
+    Spell(NearestEnemyOf(Myself), WIZARD_DISPEL_MAGIC)
+  RESPONSE #75
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(NearestEnemyOf(Myself), STATE_INVISIBLE)
+  !StateCheck(NearestEnemyOf(Myself), STATE_IMPROVEDINVISIBILITY)
+  CheckStatGT(NearestEnemyOf(Myself), 0, STONESKINS)
+  HaveSpell(WIZARD_BREACH)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_BREACH)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(SecondNearestEnemyOf(Myself), STATE_INVISIBLE)
+  !StateCheck(SecondNearestEnemyOf(Myself), STATE_IMPROVEDINVISIBILITY)
+  CheckStatGT(SecondNearestEnemyOf(Myself), 0, STONESKINS)
+  HaveSpell(WIZARD_BREACH)
+THEN RESPONSE #100
+  Spell(SecondNearestEnemyOf(Myself), WIZARD_BREACH)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DISPEL_MAGIC)
+THEN
+  RESPONSE #25
+    Spell(NearestEnemyOf(Myself), WIZARD_DISPEL_MAGIC)
+  RESPONSE #75
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_HASTE)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_HASTE)
+  Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+

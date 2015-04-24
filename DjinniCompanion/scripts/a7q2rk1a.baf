@@ -1,0 +1,18 @@
+// *** Quest-specific actions for the talkative rakshasa near the teleporter in Quest 2 ***
+
+IF
+  See([PC])
+  NumTimesTalkedTo(0)
+  Global("RakTalk", "A77004", 0)
+THEN RESPONSE #100
+  StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+  OR(2)
+    AttackedBy([GOODCUTOFF], DEFAULT)
+    GlobalGT("RakTalk", "A77004", 0)
+  !Allegiance(Myself, ENEMY) 
+THEN RESPONSE #100
+  Enemy()
+END

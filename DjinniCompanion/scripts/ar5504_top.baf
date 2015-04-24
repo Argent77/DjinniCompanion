@@ -1,0 +1,35 @@
+// *** Top script portion for map AR5504 (Smuggler Cave in Amkethran) ***
+
+IF
+  Global("A7FirstTime", "AR5504", 0)
+  !Global("Enclave", "GLOBAL", 2)
+THEN RESPONSE #100
+  SetGlobal("A7FirstTime", "AR5504", 1)
+  FadeToColor([1.0], 0)
+  RealSetGlobalTimer("A7Q5TremorTimer", "AR5504", ONE_TURN)
+  SmallWait(1)
+  FadeFromColor([30.0], 0)
+  Continue()
+END
+
+IF
+  Global("A7FirstTime", "AR5504", 0)
+  Global("Enclave", "GLOBAL", 2)
+THEN RESPONSE #100
+  SetGlobal("A7FirstTime", "AR5504", 1)
+  Continue()
+END
+
+// Force Afaaq to appear
+IF
+  Global("A7Quest5", "GLOBAL", 0)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 0)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  !InActiveArea("A7Afaaq")
+THEN RESPONSE #100
+  Deactivate("A7Afaaq")
+  MoveGlobalObject("A7Afaaq", Player1)
+  Activate("A7Afaaq")
+  Continue()
+END

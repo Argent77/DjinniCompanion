@@ -1,0 +1,21 @@
+// *** Afaaq is leaving CHARNAME in ToB: If Afaaq is inside his lamp ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  MoveGlobalObject("A7Afaaq", Myself)
+  Deactivate("A7Afaaq")
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  ActionOverride("A7Afaaq", SetGlobal("initialize", "LOCALS", 1))
+  ActionOverride("A7Afaaq", ApplySpellRES("A7REST", Myself))
+  ActionOverride("A7Afaaq", Activate(Myself))
+  ActionOverride("A7Afaaq", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Afaaq", CreateVisualEffectObject("A7AFQSUM", Myself))
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)  // restoring player control
+  Wait(2)
+  ActionOverride("A7Afaaq", FaceObject(Player1))
+  Wait(1)
+  SetGlobal("A7AfaaqLeaveParty", "GLOBAL", 2)
+  ActionOverride("A7Afaaq", StartDialogNoSet(Player1))
+END

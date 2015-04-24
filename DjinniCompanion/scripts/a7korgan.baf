@@ -1,0 +1,97 @@
+// *** Korgan's battle script when fighting Afaaq ***
+
+// After Korgan won the fight against Afaaq
+IF
+  InMyArea(Player1)
+  !Detect(Player1)
+  Global("A7KorganDuel", "GLOBAL", 4)
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+IF
+  Delay(1)
+  Detect(Player1)
+  Global("A7KorganDuel", "GLOBAL", 4)
+THEN RESPONSE #100
+  StartDialogNoSet(Player1)
+END
+
+
+// Reaction to Afaaq's invisibility
+IF
+  Detect("A7Afaaq")
+  !See("A7Afaaq")
+  Global("A7KorganDuel", "GLOBAL", 3)
+  Global("A7DuelInvisible", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7DuelInvisible", "LOCALS", 1)
+  Wait(1)
+  DisplayStringHead(Myself, @20501)    // Show yerself, Afaaq!
+END
+
+IF
+  Detect("A7Afaaq")
+  !See("A7Afaaq")
+  Global("A7KorganDuel", "GLOBAL", 3)
+  Global("A7DuelInvisible", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("A7DuelInvisible", "LOCALS", 3)
+  Wait(1)
+  DisplayStringHead(Myself, @20502)    // Where are ye?
+END
+
+IF
+  Detect("A7Afaaq")
+  !See("A7Afaaq")
+  Global("A7KorganDuel", "GLOBAL", 3)
+  Global("A7DuelInvisible", "LOCALS", 4)
+THEN RESPONSE #100
+  SetGlobal("A7DuelInvisible", "LOCALS", 5)
+  Wait(1)
+  DisplayStringHead(Myself, @20503)    // Don't hide, ye coward!
+END
+
+IF
+  Detect("A7Afaaq")
+  !See("A7Afaaq")
+  Global("A7KorganDuel", "GLOBAL", 3)
+  Global("A7DuelInvisible", "LOCALS", 4)
+THEN RESPONSE #100
+  SetGlobal("A7DuelInvisible", "LOCALS", 5)
+  Wait(1)
+  DisplayStringHead(Myself, @20504)    // Come on, ye bloody bastard!
+END
+
+IF
+  Detect("A7Afaaq")
+  !See("A7Afaaq")
+  Global("A7KorganDuel", "GLOBAL", 3)
+  Global("A7DuelInvisible", "LOCALS", 6)
+THEN RESPONSE #100
+  SetGlobal("A7DuelInvisible", "LOCALS", 7)
+  Wait(1)
+  DisplayStringHead(Myself, @20505)    // Argh, ye're gettin' on me nerves!
+END
+
+IF
+  See("A7Afaaq")
+  OR(4)
+    Global("A7DuelInvisible", "LOCALS", 1)
+    Global("A7DuelInvisible", "LOCALS", 3)
+    Global("A7DuelInvisible", "LOCALS", 5)
+    Global("A7DuelInvisible", "LOCALS", 7)
+THEN RESPONSE #100
+  IncrementGlobal("A7DuelInvisible", "LOCALS", 1)
+  Continue()
+END
+
+
+// Plain melee attack
+IF
+  See("A7Afaaq")
+  Global("A7KorganDuel", "GLOBAL", 3)
+THEN RESPONSE #100
+  EquipMostDamagingMelee()
+  AttackReevaluate("A7Afaaq", 30)
+END

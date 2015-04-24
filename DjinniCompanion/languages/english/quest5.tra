@@ -1,0 +1,1237 @@
+// -*- coding: cp1252 -*- 
+// *** Strings related to Quest 5: "Playing with fire" (index 5000...7999)
+
+// Dialog lines:
+// Karim
+@5000 = ~Greetings, Afaaq. It is good to see you safe and sound. You should visit us sometime when our current problems have been solved.~
+@5001 = ~Hello, <GABBER>. I'd prefer to discuss our task with <CHARNAME> if possible.~
+@5002 = ~I don't have the time to talk to strangers.~
+@5003 = ~But you are not listening. The threat we have perceived clearly has its origin below your little cave.~
+@5004 = ~We've used the tunnel system for a long time and never found anything suspicious. How do I know you aren't merely playing games with me?~
+@5005 = ~Do not address our esteemed leader in such a disrespectful manner.~
+@5006 = ~There are many clues to the observing eye that something is not right.~
+@5007 = ~The dramatic rise of the water temperature and the periodically occurring tremors should be sufficient proof that we are serious.~
+@5008 = ~You will profit from it too. If you allow us to investigate we will find a way to stop the threat.~
+@5009 = ~I have to consult our leader first before I can give you any answer.~
+@5010 = ~Very well. But do not delay your decision for too long.~
+@5011 = ~Let us return to...~
+@5012 = ~...~
+@5013 = ~Visitors?~
+@5014 = ~Hmm, I sense one of our kind in your midst. Am I right?~
+@5015 = ~Yes, he is bound to a magical lamp we have found in one of our adventures.~
+@5016 = ~That doesn't concern you. I have business with the smugglers.~
+@5017 = ~What an unexpected encounter. I am honored to meet you, Afaaq.~
+@5018 = ~I greet you, my lord. I am the honored one to be remembered by my superiors.~
+@5019 = ~I still remember you being in the service of Caliph Hasib. It appears that is not the case anymore.~
+@5020 = ~I had left his presence a while ago and roamed this plane for a time.~
+@5021 = ~I sense a grave matter is weighing upon your shoulders. May I ask you to share it with us? <CHARNAME> is an able adventurer and I trust <PRO_HIMHER> to be discreet when necessary.~
+@5022 = ~May I interrupt you, my lord? I might have a solution to our problem.~
+@5023 = ~Welcome, <CHARNAME>! I am glad to meet you so soon again. As always you have the gift to be in the right place at the right time.~
+@5024 = ~We are currently in need of assistance and I would be grateful if you could help us in an important matter.~
+@5025 = ~I am glad to see you too. How are you doing, Afaaq?~
+@5026 = ~What matter are you referring to?~
+@5027 = ~I really don't have time at the moment. Maybe another time.~
+@5028 = ~Thanks to you I am able to enjoy my freedom once more.~
+@5029 = ~Soon after our parting I encountered friends from my past and joined their cause. We have only arrived two days ago and now you are appearing.~
+@5030 = ~It appears we are fated to work together again and we are indeed in need of help in a matter of utmost importance.~
+@5031 = ~It is best to let our leader explain it himself...~
+@5032 = ~You really disappoint my expectations in you. Will you not reconsider?~
+@5033 = ~Maybe it doesn't hurt to hear you out.~
+@5034 = ~No, my decision is definite.~
+@5035 = ~Thank you, <CHARNAME>. This matter is of great importance to me.~
+@5036 = ~I will not force you if you are not determined to help us, otherwise you may do more harm than good.~
+@5037 = ~Farewell, <CHARNAME>. And may your future shine brightly.~
+@5038 = ~Interesting, but not unusual. Do you have business with us, <PRO_RACE>?~
+@5039 = ~I couldn't help overhearing your discussion with the smugglers. Is there something I can do to help you?~
+@5040 = ~No, I merely wanted to talk to the smugglers.~
+@5041 = ~I do not question your willingness to help us, but I doubt you will be of much use to us without magical assistance.~
+@5042 = ~As you have noticed, the entrance to the tunnel system below this cave has become dangerous to enter, especially for mortals like you.~
+@5043 = ~Are your really aware of the dangers involved when you accept to help us?~
+@5044 = ~Yes, I am. Please tell me of your problems.~
+@5045 = ~Come to think about it, I don't really want to be involved in your affairs.~
+@5046 = ~Then let me introduce myself. I am Karim, the first sharif at the court of Caliph Azhar, high above the northern borders of Calimshan.~
+@5047 = ~Some time ago our wise ruler sensed an unknown power probing our defenses, despite their effort to conceal their actions from us. The activities have increased over time and our protective shield is now more or less openly attacked.~
+@5048 = ~Our divinations revealed that the source of the attacks originates from somewhere below the settlement you call Amkethran. You have witnessed our dealings with the current residents of the cave. They appear to be a suspicious lot. Maybe you have more luck in dealing with them.~
+@5049 = ~We will leave for the moment. If you find a way to safely enter the tunnel system, we will surely meet again.~
+@5050 = ~Very well. Let us return home for the time being, my brothers.~
+@5051 = ~We meet again, <CHARNAME>.  Since you are here, I assume that you have decided to help us. Then I will tell you what we have found out so far.~
+@5052 = ~This cavern leads to a deeper and much bigger cave. You will need an effective protection from the heat which is emanating from the depths. It even penetrates our innate resistances. We are unable to tell you more because our attempts to scan this region more thoroughly have been magically blocked.~
+@5053 = ~Your task is to gather as much information as possible about the threat and report back to me, so that we can discuss our next steps.~
+@5054 = ~Take this whistle with you. If you are confronted with hostility and are in dire need of assistance, you may use it to call us for help. We can only survive for a short while down there, so use it only in an emergency.~
+@5055 = ~May you be successful in your task.~
+@5056 = ~(You tell Karim everything you have learned from the efreeti commander.)~
+@5057 = ~Thank you, <GABBER>, this information is invaluable to us.~
+@5058 = ~I'd advise you to continue your work for the efreet. They will see your actions as a means to earn their respect. Please inform us as soon as you learn anything else.~
+@5059 = ~(You tell Karim everything you have learned from the efreeti warlord Malik.)~
+@5060 = ~I don't know how Malik came by his knowledge about the artifact, but he is right. We do have the "Crown of Qadeej" securely kept within our fortress.~
+@5061 = ~It is one of our most precious artifacts and a remnant of the Dawn War era. Surrendering it to our enemies is out of question.~
+@5062 = ~Do you have an alternative solution on how to deal with the efreet peacefully?~
+@5063 = ~I could always solve your problem by defeating the efreet...~
+@5064 = ~Then I'll come up with something on my own.~
+@5065 = ~Yes, you could do that, but it will be a difficult battle. The efreet are prepared for war and have brought lots of allies and slaves with them.~
+@5066 = ~If you are serious about it, then I will repeat my offer to help you in your fight. You have already received our whistle, use it when you attack the efreet and we will appear.~
+@5067 = ~Maybe I should try to find a peaceful solution first. Do you have any advice for me?~
+@5068 = ~Alright, I'll keep that in mind.~
+@5069 = ~Very well, I will accept your decision and wish you well in your dealings with the efreet.~
+@5070 = ~On second thought, I'd prefer to find a peaceful solution first. Do you have any advice?~
+@5071 = ~Thanks. I'll return to Lord Malik at once.~
+@5072 = ~Maybe I have.~
+@5073 = ~From what I know about the nature of the artifact, I believe that Malik could be persuaded to accept an equally powerful substitute.~
+@5074 = ~The only comparable artifacts which spring to my mind are the phylacteries of powerful demiliches, undamaged hearts of demon lords or the sealed essences of divine beings.~
+@5075 = ~What are phylacteries of powerful demiliches?~
+@5076 = ~Please tell me more about the hearts of demon lords.~
+@5077 = ~What can you tell me about the sealed essences of divine beings?~
+@5078 = ~I'd prefer to defeat the efreet.~
+@5079 = ~That sounds far too complicated to me. I will come up with something on my own.~
+@5080 = ~Demiliches share a permanent connection with the negative energy plane using their phylacteries, which are basically repositories used to store their souls.~
+@5081 = ~They are usually merged with their remaining body parts, that's why it is highly likely that the remains of a defeated demilich will still contain their spiritual essences.~
+@5082 = ~As a matter of fact, we already have the remnants of a demilich in our possession.~
+@5083 = ~I don't know about demilich lairs in the vicinity, but I will investigate in this matter. Maybe I can tell you more if you return to me later.~
+@5084 = ~Please tell me about the hearts of demon lords.~
+@5085 = ~Please tell me about the sealed essences of divine beings.~
+@5086 = ~Thanks, I will ask Lord Malik if he settles on one of the alternatives you have mentioned.~
+@5087 = ~Thanks, I will ask Lord Malik if he settles on a demilich phylactery as a substitute.~
+@5088 = ~I am impressed, <CHARNAME>. You appear to be more powerful than even I imagined. I suggest you return to Malik and offer it to him as an equal substitute. He will surely accept it.~
+@5089 = ~Thanks, I will ask Malik if he settles on a demilich phylactery as a substitute.~
+@5090 = ~Demon lords are in control over one or more layers of the Abyss. If you manage to destroy a demon lord while leaving his heart intact, you could offer it to Malik as another substitute.~
+@5091 = ~The heart contains much of the demon lord's power and, more importantly, still shares a connection to the demon's layer of the Abyss.~
+@5092 = ~Coincidentally, we already have a heart of a demon lord in our possession.~
+@5093 = ~I know of only a few places within Faerûn which harbor demons. The most famous place is Ascalhorn, also known as Hellgate Keep, but it is too far away to be of use.~
+@5094 = ~I suggest that you look for ancient sites linked to myths and stories about extraplanar involvements. Other possibilities to find powerful demons are demonic cults, but they usually practice in secret and would be even more difficult to find.~
+@5095 = ~Please tell me more about the phylacteries of powerful demiliches.~
+@5096 = ~Thanks, I will ask Lord Malik if he settles on the heart of a demon lord as a substitute.~
+@5097 = ~I'm relieved to hear about that. I have felt a sinister aura surrounding your party, but I couldn't find the reason for it.~
+@5098 = ~You should offer the heart to Malik, he will surely accept it as an alternative.~
+@5099 = ~Unfortunately, I don't know much in that regard. However, I do know that during the Time of Troubles several gods were destroyed. Some parts of their essences might have be sealed away in magical artifacts. If you need to know more about it, you should find other sources of knowledge.~
+@5100 = ~My own soul contains the divine essences of the dead god Bhaal. Maybe that could be another alternative to Lord Malik.~
+@5101 = ~You continue to surprise me, <CHARNAME>. However, you should be aware of the dangers if you actually tell Malik about it. It might be more than you can handle.~
+@5102 = ~But I believe it is a valid option for Malik, nonetheless.~
+@5103 = ~Thanks for the warning, but I will ask Lord Malik if he accepts one of the alternatives you have mentioned.~
+@5104 = ~Thanks for the warning, but I will ask Lord Malik if he accepts the use of parts of my divine soul.~
+@5105 = ~This is surprising news, Imoen. However, you should be aware of the dangers if you actually tell Malik about it. It might be more than you can handle.~
+@5106 = ~Thanks for the warning, but I will ask Lord Malik if he accepts the use of parts of Imoen's or my divine soul.~
+@5107 = ~A mysterious power infiltrates one of the fabled djinn fortresses?  This is the kind of adventure I've always wanted to see.  C'mon <CHARNAME>, you must help those poor genies.~
+@5108 = ~Hey, <CHARNAME>. Aren't divine powers sealed within your soul? Why don't you share a bit? This will save us a lot of trouble.~
+@5109 = ~Not to mention your divine soul...~
+@5110 = ~Oh, come on. Yours fits the bill much better. I'm still drained from my last sacrifice.~
+@5111 = ~Oh, come on. Yours fits the bill much better. You have already a lot more experience in this matter than me, hehe.~
+@5112 = ~You have to find a way into the underground cave, <CHARNAME>. I can't stand by and see Afaaq's friends suffer.~
+@5113 = ~I'm more worried about the increasing strength of the tremors and their effect on Amkethran. The people are already oppressed by the monastic order and can't cope with yet another disaster. If you decide to help the djinns, you could also find a way to stop the quakes.~
+@5114 = ~I would take care and look before you leap.  I know, I know, that doesn't sound like myself. But the last time I heard about genies attacked by someone underground, it turned out to be a small clan of gully dwarves who were fed up by the big folk in the clouds always blowing fresh air into their homes.~
+@5115 = ~You don't want to deal with gully dwarves, believe me. Their stench will follow you forever. Just think about your future, <CHARNAME>. What would the other gods think of a young godling who permanently smells like death and decay?  Well, it doesn't help much that you'll also inherit the realm of a god of death and decay, but that's beside the point.~
+@5116 = ~Ye don't really consider t' help those weaklings, do ye?  If they can't solve 'eir petty problems by themselves, then they deserve to be wiped out.~
+@5117 = ~Agreed. You should return to Malik at once. I wish you success in your dealings with him, <CHARNAME>.~
+@5118 = ~(You tell Karim of Lord Malik's response to his suggestions.)~
+@5119 = ~I feared he would ask for something like that, but you are in luck. Fortunately our investigation came up with a first clue.~
+@5120 = ~Our sources tell of an ancient fortress which contains an unknown evil of great power. The vague details of our scriptures *might* be interpreted to mean that a powerful undead creature has taken residence there. The fortress had also been used as a hideout by many different cults and sects over time. It is likely that the structure still contains remnants of their tomes and scriptures, maybe even the cults themselves.~
+@5121 = ~The fortress is called Watcher's Keep and lies somewhere on the southern borders of Amn.~
+@5122 = ~Thanks for your information. I will go there and look for the scriptures and any demilich crossing my path.~
+@5123 = ~Thanks for the information, but I already know about the keep. I have yet to explore its depths however.~
+@5124 = ~Thanks for the information, but I've been there already and defeated a demilich. Unfortunately I don't have its skull anymore.~
+@5125 = ~Thanks for the information, but I've been there already. All I found was an ancient demon lord, who I defeated.~
+@5126 = ~Thanks for the information. I will go there and look for further clues.~
+@5127 = ~I think this is too much trouble. I'll find another solution on my own.~
+@5128 = ~I wish you success, <CHARNAME>. You seem to know already what you'll need for Malik.~
+@5129 = ~I wish you success in your quest, <CHARNAME>.~
+@5130 = ~I suggest you look for the demilich in the darker places of the fortress. Good luck in your quest, <CHARNAME>.~
+@5131 = ~You must find the artifact quickly. It could be devastating in the wrong hands.~
+@5132 = ~Very well, I will accept your decision. But you should know that the alternatives are possibly even more dangerous.~
+@5133 = ~I wish you success in your search for the heart of a demon lord, <CHARNAME>.~
+@5134 = ~This is an impressive deed, <CHARNAME>. Did you manage to extract its heart?~
+@5135 = ~Yes, I have a demon heart in my possession.~
+@5136 = ~No, I don't have a demon heart.~
+@5137 = ~Very good. You should offer it to Malik. It might be as useful to him as the undead artifact.~
+@5138 = ~I suggest you find the heart of a demon lord or an undead artifact of equal power as soon as possible.~
+@5139 = ~Then I wish you success in your next steps.~
+@5140 = ~Can I help you, <GABBER>?~
+@5141 = ~Could you tell me again what you have found out so far?~
+@5142 = ~Can you tell me again what options I have to deal with Lord Malik?~
+@5143 = ~Can you help me somehow in my task?~
+@5144 = ~Please take me back to the surface.~
+@5145 = ~Not at the moment.~
+@5146 = ~Of course.~
+@5147 = ~This cavern leads to a deeper and much bigger cave. You will need an effective protection from the heat which is emanating from the depths, as it even penetrates our innate resistances.~
+@5148 = ~We are unable to tell you more because our attempts to scan this region more thoroughly are magically blocked.~
+@5149 = ~Your task is to gather as much information as you can about the threat towards our stronghold and, if possible, find a way to neutralize it.~
+@5150 = ~From what you have told me, we are targeted by an army of efreet, accompanied by fire trolls, elementals, and salamanders.~
+@5151 = ~From what you have told me, we are targeted by an army of efreet lead by the warlord Malik, accompanied by fire trolls, elementals and salamanders.~
+@5152 = ~Malik's goal is to steal the "Crown of Qadeej" from us. That artifact is a very important part of our culture and a remnant of the ancient Dawn War.~
+@5153 = ~Judging by the nature of the artifact, he might consider an artifact of equal power.~
+@5154 = ~Other than that, you can always try to defeat him and his army. It will be a difficult battle however, because he is already prepared for a war.~
+@5155 = ~I have already given you the means to call us in a time of need. Other than that we have prepared a few items you might find useful in the cabinet by the wall.~
+@5156 = ~You can look for the phylacteries of powerful demiliches.~
+@5157 = ~You could try to find or summon a powerful demon lord to this plane.~
+@5158 = ~You may decide to offer parts of Imoen's or your divine soul to Malik.~
+@5159 = ~It will enable Malik to make use of it in a similar way as he would use our "Crown of Qadeej". However, you should be aware of the dangers. It might be more than you or Imoen could handle.~
+@5160 = ~You may decide to offer parts of your divine soul to Malik.~
+@5161 = ~It will enable Malik to make use of it in a similar way as he would use our "Crown of Qadeej". However, you should be aware of the dangers. It might be more than you could handle.~
+@5162 = ~There is always the option to defeat Malik and his efreet in battle. If you decide to attack him, I will repeat my offer to help you. Use the whistle I have already given you and we will appear.~
+@5163 = ~Surrendering our precious artifact to the efreet is out of question, that's why their defeat is the only viable option I can give you.~
+@5164 = ~Very well. Remember that you can safely rest here if you need to.~
+@5165 = ~As you wish.~
+@5166 = ~Attack, my brothers. For a bright future!~
+@5167 = ~I would like to chat with you, but I'm a little busy at the moment.~
+@5168 = ~Victory is ours. We will return to the upper cave.~
+@5169 = ~Please talk to us there.~
+@5170 = ~You are back safe and sound? We have worried for your safety.~
+@5171 = ~The efreet are gone and the threat against our stronghold has been averted.~
+@5172 = ~For that we thank you.~
+@5173 = ~As a token of appreciation I reward you with this magical ring. It grants you protective powers of the genie kind.~
+@5174 = ~As a token of appreciation I present to you Cloud Slasher, a powerful scimitar, forged by the master smith of the Grand Caliph himself.~
+@5175 = ~I wanted to present you with a token of my appreciation, but it appears you have already helped yourself.~
+@5176 = ~We will return to our home. May your future shine brightly and be assured that we will not forget what you have done for us.~
+
+// Karim's djinns
+@5200 = ~It is good to see you again, my <PRO_LADYLORD>. Unfortunately I am of limited help to you in this matter.~
+@5201 = ~Why is that?~
+@5202 = ~Whatever has made its home down there will surely react with hostility to any djinn intrusion.~
+@5203 = ~All we can do at the moment is guard this place and watch out for unusual activities in the region.~
+@5204 = ~We have prepared for you a small selection of items that will help you survive in the cave below.~
+@5205 = ~This place is safe. You can rest here anytime you want.~
+@5206 = ~If you have trouble getting to the surface, our leader will most certainly help you.~
+@5207 = ~The attacks on our stronghold have lessened. Could this mean the enemy already knows about us?~
+@5208 = ~I wish I could join you in your task, but our leader is right. Entering the enemy's territory openly would do more harm than good.~
+@5209 = ~Sharif Karim is a wise and experienced leader. Without him we would have taken much more time to find the source of the attacks.~
+@5210 = ~I am busy at the moment.~
+@5211 = ~We thank you for defeating Malik and his army. Regrettably Karim has left this plane prematurely.~
+@5212 = ~We will return back to our home. May your future shine brightly, <CHARNAME>.~
+@5213 = ~We are victorious! But I think you should talk to our leader first.~
+@5214 = ~Please talk to our leader if you want something.~
+
+// Malik
+@5300 = ~Who dares to attack us? You will pay with your life!~
+@5301 = ~You dare to turn on us? I'll make short work of you!~
+@5302 = ~Don't presume to talk to me, djinni. I would slay you without hesitation if we weren't honor-bound by our agreements with your master.~
+@5303 = ~Leave my presence, <RACE>. I will only speak to your leader.~
+@5304 = ~Greetings, mortal. I am Lord Malik, the leader of our army. And you are the brave <PRO_RACE> who has helped us so much in our preparations for the upcoming mission?~
+@5305 = ~You can not fool me, <CHARNAME>. I know about you and your employers. I should kill you here and now for deceiving my subordinates.~
+@5306 = ~However, you have worked for us too. It would tarnish our honor if we didn't recognize the deeds you have done for us as well.~
+@5307 = ~No, I think there is a better way to deal with you. Your connection to those djinns might settle our little dispute peacefully, <PRO_RACE>. I'm sure your employers would like that.~
+@5308 = ~Despite what those djinns have told you, I'm not particularly eager to conquer their fortress. I am more interested in a single artifact that is currently in their possession.~
+@5309 = ~The artifact is called the "Crown of Qadeej" and its unique powers are suitable for my needs. I'm offering you the chance to earn more of our respect, and maybe even a small compensation for your troubles, if you return to your employers and convince them to surrender their artifact to me. What do you say, <CHARNAME>?~
+@5310 = ~Very well, I will return to the djinns and tell them your offer.~
+@5311 = ~I have a better plan. You could capture the djinns and use their powers to conquer their fortress.~
+@5312 = ~No, I don't want to be part of your schemes, Malik.~
+@5313 = ~That is an intriguing thought. Please, tell me more, <CHARNAME>.~
+@5314 = ~I have a whistle which enables me to summon the djinns at will. I could use it to lure the djinns to their doom.~
+@5315 = ~That is exactly what I needed. You are quite a bold <PRO_RACE>, <CHARNAME>. I think it'll work best near the prison in the north...~
+@5316 = ~There we are. While I'm busy preparing the prison for our guest, you will call the djinns.~
+@5317 = ~Greetings Karim, I welcome you and your brothers to our domain. Unfortunately our hospitality will be somewhat limited as I need your services very soon.~
+@5318 = ~A trap? What did you do to us, efreet!~
+@5319 = ~Oh, nothing special. You can thank our good friend <CHARNAME> for your current inconveniences.~
+@5320 = ~How could you stab us in the back, <CHARNAME>? Do not think this will be the end. You have made a dangerous enemy today!~
+@5321 = ~I despise you, <CHARNAME>. Your actions are many times worse than the humiliations I have suffered in the past. May your life find a gruesome end.~
+@5322 = ~I'm afraid that your reunion with <CHARNAME> is a short one. Brace yourself, you have hard times before you.~
+@5323 = ~And now to you, <CHARNAME>. You have saved us a lot of time and effort. That's why I reward you with a valuable gift which grants you some powers of the efreet kind.~
+@5324 = ~That is unfortunate. I fear that our hospitality will come to end now. Prepare yourself!~
+@5325 = ~Yes, do that. I will eagerly await your return.~
+@5326 = ~Yes, <CHARNAME>? Do you have something else to say?~
+@5327 = ~Yes, I have. I don't want to be part of your schemes, Malik.~
+@5328 = ~Not at the moment. I will talk to the djinns at once.~
+@5329 = ~Then make haste and don't bother me with your meaningless chatter.~
+@5330 = ~And one last point. I know that you are accompanied by the djinni Afaaq, <CHARNAME>. I will tolerate his presence within our domain, as long as you keep his actions under control.~
+@5331 = ~Welcome back, <CHARNAME>. Were you successful in your dealings with the djinns?~
+@5332 = ~Yes, in a sense. After discussing your offer extensively, we have found a solution to satisfy both sides in this conflict. I'd like to offer you an artifact of comparable power.~
+@5333 = ~Yes, maybe. I'd like to offer you a part of my soul. It contains the divine essence of the dead god Bhaal and may provide you with the same powers as the artifact you seek.~
+@5334 = ~Yes, maybe. I'd like to offer you a part of my or Imoen's soul. It contains the divine essence of the dead god Bhaal and may provide you with the same powers as the artifact you seek.~
+@5335 = ~No, I don't want to be part of your schemes anymore, Malik.~
+@5336 = ~Not yet. I still need some time to convince them.~
+@5337 = ~You are back, <CHARNAME>? Do you have something of interest to me?~
+@5338 = ~Maybe I have. I'd like offer you the phylactery of a powerful demilich instead of the "Crown of Qadeej".~
+@5339 = ~I'd like to talk about the phylactery of a demilich.~
+@5340 = ~Maybe I have. I'd like to offer you the heart of a powerful demon lord in place of the "Crown of Qadeej".~
+@5341 = ~I'd like to talk about the heart of a demon lord.~
+@5342 = ~Not yet. I still need some time.~
+@5343 = ~Please hurry, <CHARNAME>. My patience is beginning to wear thin.~
+@5344 = ~I knew the djinns would be disagreeable. I have asked you to return with the "Crown of Qadeej" and you come back empty-handed?~
+@5345 = ~Please hear me out. I'd like to offer you the phylactery of a powerful demilich. It provides similar powers as the artifact you seek.~
+@5346 = ~Please hear me out. I'd like to offer you the heart of a mighty demon lord. It contains comparable powers to the artifact you seek.~
+@5347 = ~Yes... yes, that might work. But can you also provide me with the knowledge of how to tap its powers?~
+@5348 = ~You may be in luck. I came across a curious tome about undead rituals the other day which might explain what you want to know.~
+@5349 = ~I don't know anything about it, but I promise to find the knowledge you seek.~
+@5350 = ~Very well. When you've found everything I need, I will accept your offer.~
+@5351 = ~Let me see it...  Yes, this looks promising. Do you have the artifact as well?~
+@5352 = ~Yes, of course. Here it is.~
+@5353 = ~Yes, of course. Unfortunately the item is cursed and is causing us a bit of trouble.~
+@5354 = ~Not yet. I'm still searching, but I will return as soon as I have found it.~
+@5355 = ~Thank you, <CHARNAME>, I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore.~
+@5356 = ~Haha, so you have played with fire and burned yourself. However, that doesn't hinder me in taking it from you.~
+@5357 = ~I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore.~
+@5358 = ~Have you found everything I need?~
+@5359 = ~I have found the skull of a demilich. It still contains much of its power.~
+@5360 = ~I came across a curious tome about undead rituals the other day which might explain what you want to know.~
+@5361 = ~Not yet. I'm still searching, but I will return as soon as I have found what you need.~
+@5362 = ~Demons are always a potent source of power. I would gladly accept such an artifact if you are capable of retrieving it. Demon lords are unimaginably powerful even on this plane and you will encounter their kind very rarely.~
+@5363 = ~There is no need to look for them, because I have already encountered one and collected his heart.~
+@5364 = ~Nevertheless, I will make the attempt to find one and return with his heart.~
+@5365 = ~I admire your courage and wait for your return.~
+@5366 = ~That was an impressive deed, <CHARNAME>. Even I would think twice before attacking a ruler of the demonic races.~
+@5367 = ~Thank you, I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore.~
+@5368 = ~Did you find a heart already?~
+@5369 = ~Yes, I have defeated a powerful demon lord and collected his heart.~
+@5370 = ~Not yet, but I will return as soon as I have found one.~
+@5371 = ~This is unexpected, but what you tell me must be true. I can sense traces of divine power within you.~
+@5372 = ~I'd consider sacrificing a part of my soul if you promise to cease your attacks on the djinn fortress.~
+@5373 = ~If you promise to cease your attacks on the djinn fortress, one of us would consider sacrificing a part of our soul.~
+@5374 = ~If you are really determined to do it, then I will accept your offer. However, the ritual I have in mind won't be painless.~
+@5375 = ~Very well, I will sacrifice myself.~
+@5376 = ~Your sacrifice will not be forgotten, Imoen.~
+@5377 = ~That sounds very dangerous. Please let me think about it some more.~
+@5378 = ~This is a selfless act you do for the djinns, but I won't complain. Brace yourself, <CHARNAME>!~
+@5379 = ~You have survived, <CHARNAME>, and I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore.~
+@5380 = ~This is a selfless act you do for the djinns, but I won't complain. Brace yourself, Imoen!~
+@5381 = ~You have survived, Imoen, and I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore.~
+@5382 = ~Now that's really nice of you to decide over my head, <CHARNAME>.~
+@5383 = ~Please do it, Imoen. It is for the good of dear friends.~
+@5384 = ~Do it, Imoen! Don't forget who saved you from the clutches of Irenicus.~
+@5385 = ~I know, I know.  I... will do it.~
+@5386 = ~I guess you have sacrificed enough in the past. But don't expect much from me for the rest of our journey.~
+@5387 = ~Thank you, Imoen. That really means a lot to me.~
+@5388 = ~Don't worry about that. I had planned to leave you in the safety of my pocket plane anyway.~
+@5389 = ~Don't yell at me, <CHARNAME>. You are always so pushy when you want something from me. Sheesh.~
+@5390 = ~Go ahead, do your stupid ritual and take my soul. I'll probably be twiddling my thumbs for the rest of our journey anyway.~
+@5391 = ~No way, <CHARNAME>. Have you already forgotten that I have sacrificed myself for Sarevok?~
+@5392 = ~Please do it one more time.~
+@5393 = ~Very well, I understand. I will do it.~
+@5394 = ~I have to think about it some more.~
+@5395 = ~Oh no! Now it's your turn. Good luck!~
+
+// Malik's commander
+@5450 = ~I'd like to talk to your leader in person.~
+@5451 = ~Please let me talk to your leader.~
+@5452 = ~A <RACE> dares to enter our domain? I'm surprised that you could persuade our guards to let you through.~
+@5453 = ~And now you stand before me. However, I don't know yet about your purpose. Why are you here, mortal?~
+@5454 = ~My name is <GABBER>, an adventurer from above. I come in peace.~
+@5455 = ~There is no special reason. I have found this cavern by chance.~
+@5456 = ~I have been looking for the cause of the mysterious earthquakes which plague the town above for some time.~
+@5457 = ~I've been hired by the djinns to find out who is behind the attacks on their stronghold.~
+@5458 = ~I'm your death. Prepare yourself!~
+@5459 = ~Yes, yes. I already know your name. I am more interested in why you are here?~
+@5460 = ~I refuse to be questioned any further by the likes of you.~
+@5461 = ~Hmm, I don't know whether you speak the truth or falsehood. You are lucky that I'm in a generous mood today.~
+@5462 = ~That's why I will give you the chance to earn our respect. If you prove your worth to us, you may even become useful to our lord.~
+@5463 = ~Who is your lord?~
+@5464 = ~What do you have in mind?~
+@5465 = ~No, I don't want to work for your kind.~
+@5466 = ~If you wanted to impress me with your answer, then I have to disappoint you, <RACE>.~
+@5467 = ~You are fortunate that I'm in a generous mood today, so I will let it pass. But don't sputter such nonsense again or you won't find me as forgiving as I am now.~
+@5468 = ~I will give you the chance to earn our respect. If you prove your worth to us, you may even become useful to our lord.~
+@5469 = ~That isn't for you to know yet.~
+@5470 = ~Are you ready to do some chores for us?~
+@5471 = ~Sure, why not? What do you have in mind?~
+@5472 = ~Prove to us that you are willing to invest both your time and strength in our cause, no matter how insignificant the task.~
+@5473 = ~I have a small problem concerning a group of salamanders who have settled in recently.~
+@5474 = ~They didn't show any interest in our proposal to join us and I'm getting tired of it.~
+@5475 = ~Although the matter is too small for my personal attention, it is perfectly suited to show me your talents.~
+@5476 = ~Who are they and where can I find them?~
+@5477 = ~You don't leave me much choice. Alright, I'll see what I can do.~
+@5478 = ~Let me think about it.~
+@5479 = ~This is quickly sounding like it's beneath me. Find another lackey to do your menial tasks.~
+@5480 = ~That's the spirit!~
+@5481 = ~You should seriously work on your motivation.~
+@5482 = ~Here, take this contract. Your task is to return it to me, signed by their "boss". You will find them in one of the structures to the south.~
+@5483 = ~Good luck. You will need it.~
+@5484 = ~Very well, we will talk again when you have found the courage to work for us.~
+@5485 = ~You return? Are you now ready to deal with the salamanders?~
+@5486 = ~Yes, I am. Who are they and where can I find them?~
+@5487 = ~I need more time to decide.~
+@5488 = ~I'm not interested. Find another lackey to do your menial tasks.~
+@5489 = ~Did you make any progress, <GABBER>?~
+@5490 = ~Not yet. I'm still working on it.~
+@5491 = ~Could you please repeat my task again?~
+@5492 = ~The salamanders don't want to sign the contract unless I provide them with a fire elemental.~
+@5493 = ~I can't find the summoner.~
+@5494 = ~I need to find mephit blood. Do you have any?~
+@5495 = ~This task is more trouble than it's worth. Find another lackey to do your menial tasks.~
+@5496 = ~Please hurry, I'm waiting for results.~
+@5497 = ~Once again.~
+@5498 = ~Take the contract I have given you to the salamanders and convince their leader to sign it. Return the signed contract back to me and your task is done.~
+@5499 = ~They are such an annoying bunch. I honestly don't know why our lord places so much value on bringing them into our service.~
+@5500 = ~You should seek out our summoner, he can probably help you.~
+@5501 = ~Do you have nothing better to do than pestering me with trivial questions?~
+@5502 = ~Look for a building to the south and east. He's probably surrounded by his summoned creatures.~
+@5503 = ~If you need reagents for our summoner then you have to discuss it with himself.~
+@5504 = ~I can't solve all of your petty problems myself.~
+@5505 = ~Do you return with the signed contract?~
+@5506 = ~Yes, it's right here.~
+@5507 = ~I'm sorry to say that the salamanders have refused to join your army.~
+@5508 = ~Not yet.~
+@5509 = ~Congratulations for a job well done. You have shown persistence and wit in your dealings with the salamanders.~
+@5510 = ~I should have seen that coming. They are a treacherous pack.~
+@5511 = ~You did your best, for that I commend you.~
+@5512 = ~You don't lie very well. I know that you are to blame.~
+@5513 = ~I hope that you can improve yourself a bit or there will be... consequences.~
+@5514 = ~There is still another problem which you can solve for us. It is a direct order from our lord.~
+@5515 = ~Let me explain. As you've probably seen for yourself we have amassed a great number of fighters for our upcoming mission. Unlike ourselves, they lack certain abilities which limit their effectiveness in hostile environments.~
+@5516 = ~The biggest problem is their lack of elemental resistances. Although we are perfectly capable of protecting them temporarily, this will only distract us needlessly in the heat of battle.~
+@5517 = ~Fortunately you came along. I know that your kind has the ability to produce all kinds of magical potions.~
+@5518 = ~I'll need you to provide us with at least twelve potions of cold resistance and six potions of electricity protection.~
+@5519 = ~I'm sure you know better than I where to get those.~
+@5520 = ~It is as good as done, commander.~
+@5521 = ~Very well, but I hope this is the last errand I have to do.~
+@5522 = ~Another menial task? I'm getting tired of it.~
+@5523 = ~Splendid. I'll be waiting for good news.~
+@5524 = ~Don't worry, your effort isn't in vain. Our lord has already taken notice of you.~
+@5525 = ~I'll be waiting for good news.~
+@5526 = ~Do you give up so easily?~
+@5527 = ~No, you are right. I will do it for you and your lord.~
+@5528 = ~Yes, I'm fed up working as a slave.~
+@5529 = ~Do you have the potions?~
+@5530 = ~I'm still looking for the potions you require.~
+@5531 = ~I can give you twelve potions of cold resistance and six potions of absorption.~
+@5532 = ~I can give you twelve potions of cold resistance, a potion of insulation and five potions of absorption.~
+@5533 = ~I can give you twelve potions of cold resistance, two potions of insulation and four potions of absorption.~
+@5534 = ~I can give you twelve potions of cold resistance, three potions of insulation and three potions of absorption.~
+@5535 = ~I can give you twelve potions of cold resistance, four potions of insulation and two potions of absorption.~
+@5536 = ~I can give you twelve potions of cold resistance, five potions of insulation and a potion of absorption.~
+@5537 = ~I can give you twelve potions of cold resistance and six potions of insulation.~
+@5538 = ~Please hurry. This is a very important task.~
+@5539 = ~Very good. This will be a great help in our mission.~
+@5540 = ~You have performed surprisingly well for a mortal and earned our respect.~
+@5541 = ~Our lord is very interested in the <RACE> who helped us so much. He wants to talk to you in person.~
+@5542 = ~You have met our expectations, mortal. Maybe you are useful to us after all.~
+@5543 = ~There is yet another matter which has to be solved. This one is very important, that's why our lord will talk to you about it in person.~
+@5544 = ~You seek to challenge us? Why not, there is always time for a bit of fun.~
+@5545 = ~That's too bad. Then you will experience the frightful power of the efreet firsthand.~
+@5546 = ~I gave you the chance to earn our respect, instead you have earned our wrath.~
+@5547 = ~You may address Lord Malik directly if you need something.~
+
+// Malik's efreet summoner
+@5570 = ~Please don't disturb my work.~
+@5571 = ~The fire elementals guarding our base have been further enhanced by my magic. Don't even think about taking them on.~
+@5572 = ~You appear to be somewhat knowledgeable in the arcane lore. But without the art of conjuration you'll never be able to attain real power.~
+@5573 = ~You will agree with me that our school of magic is more useful than others.~
+@5574 = ~What use is a limited number of destruction spells when you can call forth an endless supply of creatures throwing themselves into the battle.~
+@5575 = ~I think it's a bad idea to rely on inferior creatures such as trolls or salamanders. My elementals are much more efficient.~
+@5576 = ~Why do you disturb my work, <RACE>?~
+@5577 = ~I'm in need of a fire elemental for the salamanders.~
+@5578 = ~Please excuse me, I will leave you alone.~
+@5579 = ~That is much better.~
+@5580 = ~Are they out of their minds? I have never seen such disrespectful salamanders as them. I hope Lord Malik knows what he is doing by letting them join us.~
+@5581 = ~Well, if you want a fire elemental, you have to earn it. I'm short of certain materials for my conjuration rituals.~
+@5582 = ~Bring me at least three vials of mephit blood and I will summon your elemental.~
+@5583 = ~Where do I find mephits?~
+@5584 = ~Alright, that shouldn't be too difficult.~
+@5585 = ~I've already collected some mephit blood.~
+@5586 = ~It shouldn't be difficult to find some of them in this cave. They are drawn to fiery places like this.~
+@5587 = ~Very good.~
+@5588 = ~I'll prepare the conjuring spell in the meantime.~
+@5589 = ~Really? Let me see!~
+@5590 = ~Have you found some mephit blood yet?~
+@5591 = ~Yes, I have it right here.~
+@5592 = ~Not yet. I'm still looking for it.~
+@5593 = ~Take your time.~
+@5594 = ~Yes, this will do.~
+@5595 = ~Let me begin the casting...~
+@5596 = ~Guide it to the salamanders. It is able to understand simple verbal commands.~
+@5597 = ~And now please leave me to my work.~
+@5598 = ~Do you want something else?~
+@5599 = ~I'm sorry, but our elemental has met an untimely end.~
+@5600 = ~I'm sorry, but our elemental has met an untimely end... again.~
+@5601 = ~I'm sorry, but our elementals seem to drop like flies. Do you have another one?~
+@5602 = ~No, I'm just stopping by.~
+@5603 = ~Don't make a habit of doing that. Goodbye.~
+@5604 = ~Why were you so careless and let it die?~
+@5605 = ~Luckily for you, I still have a spare vial of mephit blood to summon another one.~
+@5606 = ~You are a cruel lot to have it die so often.~
+@5607 = ~I'll summon you another one, but make sure that it reaches the salamanders this time. There will be no more elementals for you.~
+@5608 = ~I have warned you the last time. No more fire elementals for you. I guess our commander won't be pleased to hear that, but this is your problem.~
+@5609 = ~Won't you reconsider? I have brought you even more mephit blood for your conjurations.~
+@5610 = ~Now leave me to my work.~
+@5611 = ~No, I won't. And now leave me to my work.~
+
+// Malik's efreet apprentice
+@5620 = ~(grumble) So much to do and so little time...~
+@5621 = ~Please stop disturbing me. I have to concentrate on that ritual or my master will punish me again.~
+@5622 = ~Learning the art of summoning is exciting but it needs a lot of patience to master all the intricacies.~
+@5623 = ~I had miscast a conjuration once. The summoned mephit caused a real mess before my master could banish it back to the elemental planes.~
+@5624 = ~My punishment was... never mind. But now I'm an expert in mephit conjurations.~
+@5625 = ~Do you need something?~
+@5626 = ~Where can I get a fire elemental for the salamanders?~
+@5627 = ~Not at the moment.~
+@5628 = ~As you wish.~
+@5629 = ~You need to talk to my master. He's in the back working on his formulas.~
+@5630 = ~I can't help you. Talk to my master in the back.~
+
+// Malik's efreet guard
+@5640 = ~Stop!~
+@5641 = ~Who enters our domain uninvited?~
+@5642 = ~My name is <GABBER>, an adventurer from above. I come in peace.~
+@5643 = ~My name is not important. Who are you and what do you do here?~
+@5644 = ~I've been hired by the djinns to find out who is behind the attacks on their stronghold.~
+@5645 = ~I am your death if you don't let me pass.~
+@5646 = ~I can't let you pass as long as you don't identify yourself. So I ask again, who are you?~
+@5647 = ~You are a mortal from the surface? This is rather unexpected. Why did you come down to this place?~
+@5648 = ~I have been looking for the cause of the mysterious earthquakes which plague the town above for some time.~
+@5649 = ~I'd rather talk about it with your leader.~
+@5650 = ~It is a matter of utmost importance which I'd like to discuss with your leader face to face.~
+@5651 = ~I refuse to be questioned any further by the likes of you.~
+@5652 = ~Hmm, very well. You strike me as a trustworthy <RACE>. I will guide you to our first commander. He will decide what to do with you.~
+@5653 = ~Your manners leave a lot to be desired, <RACE>. You are a guest in our domain and should act accordingly.~
+@5654 = ~Unless you give me a good reason why you are here, I won't let you pass.~
+@5655 = ~So our presence here has already been detected? I will guide you to our first commander. He will decide how to deal with your lot.~
+@5656 = ~Don't make any wrong move and do not tarry. You are closely watched while you're here.~
+@5657 = ~The enemy has found us out? Our commander must know about this immediately.~
+@5658 = ~Servants, attack the intruders!~
+@5659 = ~The stupidity of you mortals never ceases to amaze me.~
+@5660 = ~Your hostile attitude will only lead to a quick death. I ask you one last time, why did you intrude into our domain?~
+@5661 = ~I call your bluff. Give me your best shot!~
+@5662 = ~Our commander has given you the opportunity to earn our respect. Don't waste this chance.~
+@5663 = ~You are free to explore our domain if you like. But watch out for the beasts that make it their home.~
+@5664 = ~Our fire elementals will take care of anyone they perceive as a threat. I'm here to deal with the ambiguous cases like you.~
+
+// Malik's efreet guard
+@5680 = ~Please talk to our commander first, mortal.~
+@5681 = ~It is highly unusual that you are tolerated by our commander.~
+@5682 = ~You are a <RACE>, aren't you? I haven't seen many of your kind yet.~
+@5683 = ~I was told that mortals cannot survive in hot environments like these. You must be a powerful spellcaster.~
+@5684 = ~The commander wants to ensure your loyalty? This is a sensible precaution.~
+@5685 = ~The salamanders slipped through the portal unnoticed shortly after we arrived. Since then they have taken up residence in one of the southern buildings.~
+@5686 = ~You have quite a task before you, <RACE>. We didn't have much success to recruit the salamanders for our mission.~
+@5687 = ~Mephits are quick to occupy any places which provide environments similar to their elemental origin.~
+@5688 = ~Don't worry about killing any mephit you encounter in this place. They are too unreliable to be used in combat anyway.~
+@5689 = ~Mephits usually attack in groups, because of their cowardly nature. This will make your hunt for their blood easier.~
+@5690 = ~Very good, very good. The sooner you have delivered the elemental, the sooner we have ensured their loyalty... and yours.~
+@5691 = ~Our commander will be delighted to hear news of your success.~
+@5692 = ~I commend you, <RACE>. Persuading the salamanders to join our mission was surely no easy task.~
+@5693 = ~The salamanders are as untrustworthy as I thought. The commander will be displeased.~
+@5694 = ~Trolls make good front-liners. They are tough and won't die easily. Unfortunately they have their weaknesses, too.~
+@5695 = ~You ask why you can't talk to our elementals? They are barely sentient parts of our home plane and are controlled directly by our commander.~
+@5696 = ~Unless the summoner enables verbal communication, they will only follow telepathic commands.~
+@5697 = ~The salamanders will be a useful addition to our army. Unfortunately the price for their loyalty is always high.~
+@5698 = ~We do have the means to protect ourselves from the elemental forces, but we cannot be distracted needlessly in the heat of battle.~
+@5699 = ~Seizing the djinn stronghold is an important milestone towards our goal. But I shouldn't say more about it.~
+@5700 = ~What goal?~
+@5701 = ~No, this isn't for you to know, <RACE>.~
+@5702 = ~Lord Malik has proven his outstanding tactical qualities many times already. This mission will be an easy one.~
+@5703 = ~I took part in Lord Malik's campaign against the gold dragons of the Orsraun Mountains. Although the odds were against us, Lord Malik's brilliant tactical maneuvers saved the day.~
+@5704 = ~It is highly unusual that Lord Malik shares his plans with outsiders, but I trust in his judgement.~
+
+// Fire Elemental
+@5720 = ~What are your orders, master?~
+@5721 = ~Wait here!~
+@5722 = ~Follow me!~
+@5723 = ~I will wait here.~
+@5724 = ~I will follow you.~
+@5725 = ~I am not allowed to leave the area.~
+@5726 = ~The fire elemental ignores you completely.~
+
+// Fire Salamanders
+@5730 = ~This cave looks just like home. I think I'll stay for a while.~
+@5731 = ~I wish the efreet would move on quickly. They are always so single-minded about duty and honor.~
+@5732 = ~Are you a guest? Take a seat and relax for a while.~
+@5733 = ~Luckily the efreet haven't approached us yet. I have better things to do than taking part in their stupid battles.~
+@5734 = ~I miss my brothers in the planes. But it is unlikely they will join us soon because the efreet have strengthened their guard near the portal.~
+@5735 = ~Did you come to see my enchanted spear too? It must be legendary indeed if even mortals from far and wide arrive to admire its splendor.~
+@5736 = ~No, I've come here on behalf of the efreet and wanted to invite you to join their campaign.~
+@5737 = ~Yes, of course. The tales of your mighty spear have reached even the most distant parts of our lands.~
+@5738 = ~Are you daft? I've come here to demand that you join the efreet campaign.~
+@5739 = ~You again? What do you want from me this time?~
+@5740 = ~Are you join the efreet now or not?~
+@5741 = ~I'd like to apologize for my recent behavior. I have realized that it wasn't quite appropriate to yell at you.~
+@5742 = ~If you are really sorry, I will forgive you.~
+@5743 = ~Thank you. Nevertheless, I'd like to ask you again to join the campaign of the efreet.~
+@5744 = ~I've told you that I don't want to talk to you. Begone!~
+@5745 = ~I thought so. It is so good to meet like-minded individuals who can appreciate the truly important things in life.~
+@5746 = ~You have probably heard many tales about how I have defeated hordes of monsters with this particular spear. If not I would gladly share them with you.~
+@5747 = ~I'll gladly listen to your tales about your great spear... and you of course.~
+@5748 = ~Unfortunately I haven't the time for this. I have come on behalf of the efreet and wanted to invite you to join their campaign.~
+@5749 = ~Don't even bother. I've come here to demand that you join the efreet campaign.~
+@5750 = ~You are really something. It has been so long that any of my brothers had the patience to sit down and listen to me. Hmm, where do I start...~
+@5751 = ~Please take your time. In the meantime I'd like to invite you to take part in the efreet's campaign.~
+@5752 = ~On second thought, I don't have the patience as well. By the way, I'd like to offer you a part in the campaign of the efreet.~
+@5753 = ~The efreet? What a disappointment. I have told them many times before that I'm not interested in their wars.~
+@5754 = ~They weren't even interested in my tales about my jewelled spear, can you imagine? Only our servant has shown any interest in my stories lately...~
+@5755 = ~I tell you what. If you can bring me a replacement for our servant, I'll consider their offer. Maybe one of their fire elementals will do. I'm sure they have one to spare, because I can see more than enough of them running around the cave doing nothing.~
+@5756 = ~I will try, but I can't promise anything.~
+@5757 = ~You are asking too much. Is there no other way I can convince you?~
+@5758 = ~No, there isn't. If the efreet are seriously interested in our cooperation, they should happily spare one of their servants to our cause.~
+@5759 = ~Very well. I will try, but I can't promise anything.~
+@5760 = ~How dare you? You are even worse than the efreet. Begone, I don't want to talk to you.~
+@5761 = ~You are very persistent about this matter. Let me think...~
+@5762 = ~I might consider joining their army if you can bring me one of their elemental servants.~
+@5763 = ~I don't care how you do it. But I won't sign any contract as long as I don't see my very own fire elemental.~
+@5764 = ~You are back? Did you bring me my fire elemental?~
+@5765 = ~Not yet, I'm still working on it.~
+@5766 = ~I have decided that it's too tedious to meet your demands.~
+@5767 = ~Take your time.~
+@5768 = ~Are you sure? I can imagine your employers will be less than thrilled by your decision.~
+@5769 = ~Yes, absolutely!~
+@5770 = ~Maybe I was too hasty in my decision. I'll try harder.~
+@5771 = ~It's your decision. I wish you good luck in your further dealings with the efreet, <RACE>.~
+@5772 = ~Ah, do I see a fire elemental following your trail?~
+@5773 = ~You have fulfilled your part of our deal. Now it's time to fullfill mine. Where is your contract?~
+@5774 = ~There it is. Please sign here and here... and here too.~
+@5775 = ~Please wait a moment. I seem to have misplaced it.~
+@5776 = ~The efreet and their complicated contracts... it is done. I suggest you bring it to your master as soon as possible.~
+@5777 = ~Thank you again for the elemental. Have you found your contract?~
+@5778 = ~Yes, of course. Please sign here and here... and here too.~
+@5779 = ~Not yet. Please wait a moment longer.~
+@5780 = ~Hello again, <RACE>. Your elemental is doing well.~
+@5781 = ~I'm a little irritated right now. I was looking forward to telling our former servant stories about my magnificent spear, but he seems to have lost interest in it.~
+@5782 = ~I'm still hoping the efreet lose interest in their little war. This is such a cozy place I don't want to leave for a while.~
+@5783 = ~Welcome to my realm, <RACE>. I would give you a tour, but I'm busy right now supervising our fire elemental servant. He has displayed such erratic behavior lately.~
+@5784 = ~Wonderful! We don't have to share the cave with the efreet anymore.~
+@5785 = ~It's too bad that the portal has been closed. How do we find new servants now?~
+@5786 = ~Didn't you mention a settlement on the surface above our cave?~
+@5787 = ~Don't even think about it.~
+@5788 = ~Yes, and it's full of hard-working people who are used to the heat.~
+@5789 = ~I was just kidding. Mortals don't make good servants anyway.~
+@5790 = ~I almost wish the efreet would come back. It's been so quiet lately.~
+@5791 = ~Now that the efreet are gone, it has become pretty boring around here.~
+
+@5800 = ~Wait your turn. I'll serve you when I have finished my rounds.~
+@5801 = ~I'll be with you in a moment.~
+@5802 = ~I don't have the time to chat with you. Can't you see I'm busy?~
+@5803 = ~(sigh) So much to do and so little time.~
+@5804 = ~I'm busy at the moment. Talk to our boss if you need something.~
+@5805 = ~Who is your boss?~
+@5806 = ~Ask someone else, I have to finish my rounds.~
+@5807 = ~Are you a guest? Take a seat and relax for a while.~
+@5808 = ~Ah, I can finally relax.~
+@5809 = ~I guess I have you to thank for my well-earned break.~
+@5810 = ~But for some reason our boss wants to talk about his boring spear with me.~
+@5811 = ~(grumble) Now I have to walk all over the place to serve my brothers.~
+@5812 = ~My feet are killing me. Don't you want to take over?~
+@5813 = ~Sure, why not? If it pays well?~
+@5814 = ~No, thank you.~
+@5815 = ~I'm just kidding.~
+@5816 = ~Wonderful! We don't have to share the cave with the efreet anymore.~
+@5817 = ~I'm glad to be relieved of work. Our elemental is much better suited for doing all the dirty work.~
+
+@5830 = ~This cave looks just like home. I think I'll stay for a while.~
+@5831 = ~I wish the efreet would move on quickly. They are always so single-minded about duty and honor.~
+@5832 = ~Are you a guest? Take a seat and relax for a while.~
+@5833 = ~Luckily the efreet haven't approached us yet. I have better things to do than taking part in their stupid battles.~
+@5834 = ~I miss my brothers in the planes. But it is unlikely they will join us soon because the efreet have strengthened their guard near the portal.~
+@5835 = ~If you have business with us then talk to our boss. He's easy to recognize because of his jewelled spear he's always showing around.~
+@5836 = ~You want us to join the efreet's war? That's a good joke.~
+@5837 = ~You are serious about it? Well, talk to our boss. He is the one who makes the decisions around here.~
+@5838 = ~Talk to our boss if you have business with us.~
+@5839 = ~Where can I find your boss?~
+@5840 = ~Just look out for a crowd. He'll most likely be at the center, showing off his jewelled spear, as usual.~
+@5841 = ~I'd never imagined our boss would even consider working for the efreet. You must be a good negotiator.~
+@5842 = ~I'd rather sit here and enjoy my drinks instead of fighting a war.~
+@5843 = ~Our new elemental is quite effective. I was so tired of listening to the complaints of our former servant.~
+@5844 = ~I guess we have to thank *you* for having to play a part in that stupid war of the efreet.~
+@5845 = ~Wonderful! We don't have to share the cave with the efreet anymore.~
+@5846 = ~It's too bad that the portal has been closed. How do we find new servants now?~
+@5847 = ~Didn't you mention a settlement on the surface above our cave?~
+@5848 = ~Don't even think about it.~
+@5849 = ~Yes, and it's full of hard-working people who are used to the heat.~
+@5850 = ~I was just kidding. Mortals don't make good servants anyway.~
+@5851 = ~I almost wish the efreet would come back. It's been so quiet lately.~
+@5852 = ~Now that the efreet are gone, it has become pretty boring around here.~
+
+// Fire Trolls
+@5870 = ~I only obey efreet master.~
+@5871 = ~You look funny. So small and pale.~
+@5872 = ~Do not disturb. I train with brothers for battle.~
+
+// WK Archivist
+@5880 = ~Could you tell me again where you have seen the ritual tome?~
+@5881 = ~I'm looking for a tome of undead rituals. Do you have something like that in your library?~
+@5882 = ~May I ask you a question?~
+@5883 = ~Who are you? Did you come from the outside world?~
+@5884 = ~My name is <GABBER>. I'm looking for a specific tome.~
+@5885 = ~Greetings, I'm looking for a tome of undead rituals.~
+@5886 = ~A tome... yes we have many tomes and scriptures. But I am the only one left to take care of them.~
+@5887 = ~They have become so dusty and cold... so cold. Oh how I long for a warm fire. It has become so cold in these halls lately.~
+@5888 = ~About the tome...~
+@5889 = ~So cold...~
+@5890 = ~We have a wide variety of tomes and scriptures in our library. Unfortunately I am the only one left to take care of them.~
+@5891 = ~But I think I can help you. Not too long ago I came across a tome about rituals. Maybe you could have a look for yourself, I think it was somewhere near the entrance.~
+@5892 = ~But I think I can help you. Not too long ago I came across a tome about rituals. Maybe you could have a look for yourself, I think it was somewhere in the western wing of our library.~
+@5893 = ~But I think I can help you. Not too long ago I came across a tome about rituals. Maybe you could have a look for yourself, I think it was somewhere in the exhibition room.~
+@5894 = ~But I think I can help you. Not too long ago I came across a tome about rituals. Maybe you could have a look for yourself. It was in the kitchen if I remember correctly.~
+@5895 = ~But I think I can help you. Not too long ago I came across a tome about rituals. Maybe you could have a look for yourself, I think it was even in my own private chambers.~
+@5896 = ~But I think I can help you. Not too long ago I came across a tome about rituals. Maybe you could have a look for yourself, I think it was somewhere in the eastern wing of our library.~
+@5897 = ~But I think I can help you. Not too long ago I came across a tome about rituals. Maybe you could have a look for yourself, I think it was in the antechamber of the study to the south.~
+@5898 = ~But I think I can help you. Not too long ago I came across a tome about rituals. Maybe you could have a look for yourself, I think it was in the study to the south.~
+@5899 = ~Of course. It was in one of the bookshelves near the entrance, if I remember right.~
+@5900 = ~Thank you, again.~
+@5901 = ~Of course. It was somewhere in the western wing of our library, if I remember right.~
+@5902 = ~Of course. It was somewhere in the exhibition room, if I remember right.~
+@5903 = ~Of course. It was in the kitchen, if I remember right.~
+@5904 = ~Of course. It was somewhere in my private chambers, if I remember right.~
+@5905 = ~Of course. It was somewhere in the eastern wing of our library, if I remember right.~
+@5906 = ~Of course. It was in the antechamber of the study to the south, if I remember right.~
+@5907 = ~Of course. It was in in the study to the south, if I remember right.~
+
+// Amkethran smuggler Carras
+@5920 = ~I'd like to use the tunnel system below your cave.~
+@5921 = ~I wish to speak to you about the tunnel system again.~
+@5922 = ~Do you know where I can find some protection from heat?~
+@5923 = ~This is a very unusual request. Maybe you should discuss it with our leader Esamon. He isn't here at the moment but if you stay for a couple of days...~
+@5924 = ~I cannot wait that long. Is there nothing you can do?~
+@5925 = ~Our leader goes by many names, but I assure you I do not know his current whereabouts. If you are willing to wait a few days, however, he is bound to come back sooner or later.~
+@5926 = ~I don't know...  I cannot decide something like this over Esamon's head without giving him a good explanation, you understand?~
+@5927 = ~Would you change your mind for 1000 gold?~
+@5928 = ~Are 2000 gold pieces a good enough reason for you?~
+@5929 = ~I'm willing to offer 4000 gold! No questions asked.~
+@5930 = ~Don't play your games with me or I'll throw you into the pool myself!~
+@5931 = ~I can think of no good reason at the moment.~
+@5932 = ~Well, have you found a good reason to convince me yet?~
+@5933 = ~I doubt this will impress him much. Don't you have a better reason for me?~
+@5934 = ~I can think of no reason at the moment.~
+@5935 = ~Yes, this is good enough! You have convinced me of your sincerity.~
+@5936 = ~WHAT?! You wouldn't do that to a harmless... merchant, would you?~
+@5937 = ~Ahem, under these circumstances I will make an exception.~
+@5938 = ~You may use the pool, but I have to warn you. There are lots of deep and very long tunnels, and many of them are dead ends.~
+@5939 = ~You will also need some kind of protection from the heat, but this is up to you.~
+@5940 = ~Do you know where I can get some protection?~
+@5941 = ~I've taken care of it already.~
+@5942 = ~Thank you. I'll be going now.~
+@5943 = ~Ask a mage or something about it. I'm only a simple trader.~
+@5944 = ~Our business is concluded. If fortunes permit, perhaps we shall meet again.~
+@5945 = ~Sorry, I cannot help you there. Maybe one of the mages in this village knows more about this.~
+
+// Lazarus Librarus
+@5960 = ~I'm in need of a way to protect myself from great heat, like that of boiling water. Can you help me?~
+@5961 = ~I'd like to talk about your item of heat protection again.~
+@5962 = ~Can you recharge my Wand of Heat Protection?~
+@5963 = ~Sorry, but I am far too busy recreating my spell collections. If you are really desperate, you could try the mercenary mage in the tavern. I've met him briefly and he appeared to be an able mage.~
+@5964 = ~This is a request I'm not asked every day. But you are in luck, <GABBER>.~
+@5965 = ~Thanks to your help in Saradush I have some spare materials left to create an item for you which fits your need.~
+@5966 = ~I have to ask for a moderate fee of 3000 gold, however. Creating such an item is no easy task.~
+@5967 = ~Very well, I will pay your price.~
+@5968 = ~No, this is too expensive for me. Maybe another time.~
+@5969 = ~As you wish. If you change your mind, you can always come back to me.~
+@5970 = ~Very good. This won't take long...~
+@5971 = ~Your wand is ready.~
+@5972 = ~It possesses at least ten charges which enable you and your companions to endure great heat for an extended period of time.~
+@5973 = ~If you need it recharged, come back and see me again.~
+@5974 = ~So, have you changed your mind? For only 3000 gold I am willing to create it for you.~
+@5975 = ~Yes, this will be no problem. It will cost you 2000 gold, however.~
+@5976 = ~(The mage closes his eyes and mutters some words.) Your wand is recharged, use it well.~
+
+// Amkethran cleric
+@5990 = ~I've heard you are skilled in casting protection spells. Can you protect us from great heat like boiling water?~
+@5991 = ~Can you cast your spell of heat protection on my party?~
+@5992 = ~Can you cast your spell of heat protection on my party again?~
+@5993 = ~Yes I can, but why do you need such protection?~
+@5994 = ~I want to find out the reason for the tremors and heated water in the smuggler cave. But I need to get to the bottom of the problem, literally, if I want to solve it.~
+@5995 = ~You are a very brave person if you risk your life to help another. But you are right. I can cast a spell to protect you from any heat but fire itself.~
+@5996 = ~For the fair price of 300 gold I will cast a protection spell on your party which lasts for eight hours.~
+@5997 = ~Very well, cast your spell.~
+@5998 = ~Not at the moment. I will return later.~
+@5999 = ~For the fair price of 200 gold I will cast a protection spell on your party which lasts for eight hours.~
+@6000 = ~I've heard you helped defend one of my brothers outside. That was very noble of you. Therefore I offer you my help free of charge. I will cast a protection spell on your party which lasts for eight hours.~
+@6001 = ~You may come back whenever you want.~
+@6002 = ~Please stand still for a moment...~
+@6003 = ~Of course, my <SONDAUGHTER>.~
+
+// Amkethran mercenary wizard
+@6010 = ~Are you one of the newly recruited mercenaries? I don't recognize you.~
+@6011 = ~No, I'm in need of a way to protect myself from great heat, like that of boiling water. Can you help me?~
+@6012 = ~So, you are the one in need of a mage I have heard about. It must be very important indeed, if you make such a ruckus.~
+@6013 = ~Yes, I'm in need of a way to protect myself from great heat, like that of boiling water. Can you help me?~
+@6014 = ~You wouldn't ask me that if you'd known a simple spell like Protection from Fire would solve your problems.~
+@6015 = ~Let me think...  I could devise a spell similar to fire protection which will shield you from any kind of heat. Maybe an item with a limited number of charges, so you can use it without learning the arts of magic.~
+@6016 = ~But this will take a while. And I need to be compensated for my time and effort I have to put into this.~
+@6017 = ~It will cost you 8000 gold. Are you still interested?~
+@6018 = ~Very well, I will pay your price.~
+@6019 = ~No, this is too expensive for me. Maybe another time.~
+@6020 = ~As you wish. I'll be still here, if you change your mind or until Balthazar finally gives us new orders.~
+@6021 = ~Very good. This won't take long...~
+@6022 = ~Whew! That was harder than I thought... *ahem* I mean, it is done.~
+@6023 = ~Take this wand. It possesses at least ten charges which enable you and your companions to endure great heat for an extended period of time.~
+@6024 = ~If you need it recharged, come and see me.~
+@6025 = ~Greetings. Are you still in need of some heat protection? For 8000 gold I can solve your problem.~
+@6026 = ~No, not at the moment.~
+@6027 = ~Greetings, <GABBER>. Do you need something? I can recharge your wand for a small fee, if needed.~
+@6028 = ~Could you recharge my wand?~
+@6029 = ~No, I don't need something at the moment.~
+@6030 = ~Sure, for the small fee of 5000 gold I can recharge the wand to its limit.~
+@6031 = ~(The mage closes his eyes and mutters some words.) Your wand is recharged, use it well.~
+
+// Amkethran townsfolk
+@6050 = ~What do you want from me, citizen?~
+@6051 = ~Do you know where I can find some protection from heat?~
+@6052 = ~Yeah, the heat is killing me too. I'd rather be chilling in the tavern than practicing my marksman skills over and over again.~
+@6053 = ~No, I meant some kind of magical protection.~
+@6054 = ~Why don't you ask the priests in the temple about it. They are in charge of that kind of thing.~
+@6055 = ~Do I look like a mage to you? Ask someone else about it.~
+@6056 = ~No, wait. I've heard, the monks hired wizards from the Twisted Rune. Ask around the tavern, they are a lazy bunch.~
+@6057 = ~What is it, citizen? Don't you see I am busy?~
+@6058 = ~Why does everyone always come to me when complaining about one thing or another?~
+@6059 = ~Can you help me or not?.~
+@6060 = ~I'm sorry, I won't bother you anymore.~
+@6061 = ~I always send my men to the local cleric when they complain about sunburns and heatstrokes. Why don't you go there, too, instead of bothering me further.~
+@6062 = ~Begone, I am here to drink and don't want to talk to you folk.~
+@6063 = ~Why don't you talk to my friend here. He is a wizard and knows about stuff like that.~
+@6064 = ~Will you please let me drink in peace?~
+@6065 = ~Ho, friends. How do you like this dust mote of a village.~
+@6066 = ~Protection from heat? Why don't you stay here in the tavern all day. It's the perfect place to chill out.~
+@6067 = ~No, I'm more interested in some kind of magical protection.~
+@6068 = ~Why didn't you say so in the first place? Ask my friend here. He's a mage and knows that sort of stuff.~
+@6069 = ~Are you a customer? You may speak to Carras while our leader is busy elsewhere.~
+@6070 = ~Hmm...  I'm no mage, but maybe Carras can help you with it. He always has a variety of items and scrolls to sell.~
+@6071 = ~Other than that, I know of a mage in this village. His name is Lazarus Librarus and he has settled in just recently. Maybe he could help you in this matter.~
+@6072 = ~I've heard that there are some mercenary wizards around. Do you know about them?~
+@6073 = ~Not used to the hot climate we have here, are you?~
+@6074 = ~Maybe our local priest of the Waukeen Temple can help you. He is specialized in all sorts of protections.~
+@6075 = ~Yes, of course. They are frequent visitors of my tavern.~
+@6076 = ~But I wouldn't bother talking to them. They are very rude to non-wizard folk.~
+@6077 = ~Welcome traveller. If you have an order, you'll have to give it to Zakee.~
+@6078 = ~I'm too busy right now, sorry. Talk to Zakee if you have any questions.~
+@6079 = ~Hmm? Are you the new serving wench? Get me another round of ale, please!~
+@6080 = ~Watch your tongue! I just want to ask you something.~
+@6081 = ~No? That's too bad. What can I do for you then, my <GIRLBOY>?~
+@6082 = ~Come, sit with me for a while. Can I help you in some way, my <GIRLBOY>?~
+@6083 = ~Hmm? You don't look like the serving wench. What do you want from me?~
+@6084 = ~The heat is no problem to you if you stay in the tavern all day. The drinks are great and the company is friendly... well, most of the time.~
+@6085 = ~Are you one of the mercenaries? What do you want from me?~
+@6086 = ~If you are bothered by the heat so much, why don't you stay indoors during the days then?~
+@6087 = ~I'm just a simple woman. What would I know about magic?~
+@6088 = ~Maybe our local cleric can help you. He cured our son once when he burned himself on the kettle.~
+@6089 = ~Hello darling. Are you new in town? You certainly don't look like one of the mercenaries. Do you need something from me?~
+@6090 = ~Are you new the town? You certainly don't look like one of the mercenaries. Do you need something from me?~
+@6091 = ~Sorry, I can't help you with that.~
+@6092 = ~Are you one of the mercenaries Balthazar has hired? We already have enough of you here.~
+@6093 = ~No, we are not.~
+@6094 = ~Yes, and I want to ask you something.~
+@6095 = ~Well, what do you want then?~
+@6096 = ~What protection? The summer's almost over and you still complain about the heat?~
+@6097 = ~I need it to enter a boiling pool of water.~
+@6098 = ~Are you serious about that?~
+@6099 = ~Hmm, there was this mage coming to our village a couple of days ago. I think he has set up his shop in one of the upper buildings over there atop the hillside.~
+@6100 = ~His name was Lazarus Library or something. Maybe he can help you.~
+@6101 = ~Please don't hurt me. I don't have anything you need.~
+@6102 = ~I want to ask you something.~
+@6103 = ~You aren't one of those mercenaries then? They come and hurt me when they are in the mood.~
+@6104 = ~No, I'm not a mercenary. Do you know where I can find some protection from heat?~
+@6105 = ~What if I would be one of them?~
+@6106 = ~I always go to our local priest in the Temple of Waukeen if I have a problem. Maybe he can help you too.~
+@6107 = ~Is that all?~
+@6108 = ~Yes, that's all I wanted to know.~
+@6109 = ~Well, you could give me all your money before I decide to hurt you.~
+@6110 = ~Aah, please don't kill me!~
+
+// Afaaq's dialog (special)
+@6150 = ~You have done something very noble, my <PRO_LADYLORD>. I would not have thought you would risk your life for my kind.~
+@6151 = ~Now that sharif Karim has returned home, I am free to pursue my own goals. I would be honored if I could join your adventures once more.~
+@6152 = ~I would be glad if you could share our company again.~
+@6153 = ~I'm sorry, but I'm not interested in you anymore.~
+@6154 = ~Thank you, <CHARNAME>. I look forward to fighting on your side.~
+@6155 = ~Please take my lamp. I am still bound to it, so that I can enter the heat of battle without the risk of being permanently destroyed.~
+@6156 = ~That is a pity. I wish you well in your adventures, however, and may your future shine brightly, <CHARNAME>.~
+
+// Dialog lines related to purifying the demilich skull
+@6200 = ~I have an odd request. I carry with me a cursed skull of a demilich. Is it possible to purify it?~
+@6201 = ~Can you purify this cursed skull of a demilich?~
+@6202 = ~I felt its evil even before you entered the temple.~
+@6203 = ~Yes, I can do it. Do you have the 5000 gold and a vial of Elven Holy Water?~
+@6204 = ~Yes, please do it. Here is the money and a vial of holy water.~
+@6205 = ~I don't have anything you need with me right now. Maybe another time.~
+@6206 = ~Unfortunately I don't have enough money for the ritual. Maybe another time.~
+@6207 = ~I don't have any Elven Holy Water in my possession. Maybe another time.~
+@6208 = ~I have changed my mind. I don't want to do it now.~
+@6209 = ~I see that you have already chained yourself to its necromantic powers. There is nothing I can do for you in this state.~
+@6210 = ~If you want to break the link to the artifact, you can make use of my services which includes removing curses.~
+@6211 = ~Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of Good however, so I will make an exception.~
+@6212 = ~To neutralize an evil of this scale I need a vial of potent Elven Holy Water. The ritual itself is very draining, so I have to ask for a modest fee of 5000 gold as well. Are you still interested?~
+@6213 = ~Powerful artifacts such as this can do much damage if you succumbed to its evil. I cannot and will not, in good conscience, do what you want from me.~
+@6214 = ~If you can prove to me your good intentions I might change my mind however.~
+@6215 = ~As a priest I can offer you to destroy this evil artifact instead. Do you want to leave it in my care? I promise you to take care of it and make your selfless act known to the people.~
+@6216 = ~Sure. Take it.~
+@6217 = ~No, I'm not interested.~
+@6218 = ~That is a wise decision. I will destroy its evil immediately.~
+@6219 = ~Then let us begin.~
+@6220 = ~(Sister Farielle takes the skull as well as the money and the vial of holy water and starts making preparations for the ritual.)~
+@6221 = ~(The skull is placed onto the altar and after an initial prayer she pours holy water over it, repeatedly interrupted by more prayers.)~
+@6222 = ~(After a long time that felt like an eternity you see a sudden flash of bright light that blinds your eyes and hear a faint scream coming from the skull. When you can see again, you have the impression that the skull has lost some of its dark glow.)~
+@6223 = ~It is done. The evil has been sealed away. It should be safe now to make use of its remaining powers.~
+@6224 = ~(The priest takes the skull as well as the money and the vial of holy water and starts making preparations for the ritual.)~
+@6225 = ~(The skull is placed onto the altar and after an initial prayer he pours the holy water over it, repeatedly interrupted by more prayers.)~
+
+
+// journal entries
+@6500 = ~Playing with fire
+
+I have encountered a group of djinns, led by the sharif Karim, who were arguing with the local smugglers of Amkethran. They told me that their home is threatened by an unknown force and found the source of the attacks somewhere below this settlement.
+First I have to find a way to safely enter the tunnel system below the smuggler base, if I want to help them in their task.~
+@6501 = ~Playing with fire
+
+I have met Karim and his djinns again who have established a camp in a small subterranean cave just below the smuggler base. He told me that the threat can be found in a deeper and much bigger cave which can be accessed from their base.
+He asked me to gather as much information as I can about the threat and report back to him regularly. He also gave me a whistle which I can use to call them for help in emergency situations.~
+@6502 = ~Playing with fire
+
+I have discovered a secret base of efreet in a huge magma cavern. They fortunately didn't attack me on sight and their guards escorted me to their commander for further questionings.~
+@6503 = ~Playing with fire
+
+I have discovered a secret base of efreet in a huge magma cavern. Unfortunately they attacked me as soon as they found out that I've been working for the djinns.~
+@6504 = ~Playing with fire
+
+I have discovered a secret base of efreet in a huge magma cavern. They turned hostile as soon as I told them my reason for being here.~
+@6505 = ~Playing with fire
+
+I have told Karim about the efreet and their commander. He suggested that I should continue pretending to work for them to gain their trust. I should also report back as soon as I have found out more.~
+@6506 = ~Playing with fire
+
+The efreeti commander pointed out that I should work for them, if I wanted to stay in their domain. He already had a task for me which I accepted.
+I have to convince the local group of salamanders to join their campaign. He gave me a contract which I have to return signed by their "boss".~
+@6507 = ~Playing with fire
+
+The efreeti commander pointed out that I should work for them, if I wanted to stay in their domain. I haven't accepted yet, but I can already see the suspicious eyes following my movements.~
+@6508 = ~Playing with fire
+
+I have insulted the leader of the salamanders somehow and he doesn't want to talk to me anymore.~
+@6509 = ~Playing with fire
+
+The salamanders aren't really eager to work for the efreet. However, I was able to make a deal with their leader. If I can provide him with a fire elemental, he will sign the contract.~
+@6510 = ~Playing with fire
+
+The demands of the salamanders were too high and I refused to deal with them anymore. That means, however, that I have failed my task for the efreet. I hope their commander is in a forgiving mood.~
+@6511 = ~Playing with fire
+
+I have delivered the fire elemental to the salamander leader as promised and he happily signed the contract.~
+@6512 = ~Playing with fire
+
+The efreeti summoner wasn't thrilled about the demands of the salamanders. However, he will conjure up a fire elemental for them if I can bring him at least three vials of mephit blood for his spell.~
+@6513 = ~Playing with fire
+
+The efreeti summoner has summoned a fire elemental. My task is now to escort it back to the salamanders.~
+@6514 = ~Playing with fire
+
+I went too far by continuously slaying the fire elementals meant for the salamanders. The efreeti summoner refused to provide me with another creature. I guess I have to deliver the bad news to the efreeti commander.~
+@6515 = ~Playing with fire
+
+The efreeti commander was impressed by my persistence and wit in dealing with the salamanders.~
+@6516 = ~Playing with fire
+
+Fortunately I could convince the efreeti commander that the salamanders were to blame for my failure to complete my task.~
+@6517 = ~Playing with fire
+
+The efreeti commander didn't buy my excuses and was understandably upset by my failure to make a deal with the salamanders.~
+@6518 = ~Playing with fire
+
+My next task for the efreeti commander is to fetch at least twelve potions of cold resistance and six potions which provide electrical resistance. Maybe I can find those at one of the local merchants.~
+@6519 = ~Playing with fire
+
+The efreeti commander thanked me for providing him with the requested potions and told me that his lord wants to talk to me.~
+@6520 = ~Playing with fire
+
+I have insulted the efreet somehow and they turned hostile.~
+@6521 = ~Playing with fire
+
+I have finally met the leader of the efreet army. His name is Lord Malik and his true goal is an ancient artifact, called the "Crown of Qadeej", which is jealously guarded by the djinns.
+He already knew about my connection to the djinns and offered me an alternative to war. If I am able to convince the djinns to surrender their precious artifact to him freely, he promised to return home without further attacking the djinn fortress.~
+@6522 = ~Playing with fire
+
+I have finally met the leader of the efreet army. His name is Lord Malik and his true goal is an ancient artifact, called the "Crown of Qadeej", which is jealously guarded by the djinns.
+He already knew about my connection to the djinns and offered me an alternative to war. If I am able to convince the djinns to surrender their precious artifact to him freely, he promised to return home without further attacking the djinn fortress.
+He also knew about Afaaq and promised that he will tolerate his presence within his domain as long as I can keep the djinni under control.~
+@6523 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of question to surrender the "Crown of Qadeej" to the efreet.
+I suggested fighting the efreet, as this will most surely end the threat to the djinns. Karim supports my decision, but tells me that it will be difficult because the efreet are already well prepared for war.~
+@6524 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+I volunteered to find a solution on my own.~
+@6525 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. As unlikely as it sounds, Bhaal's divine essence within Imoen's and my soul may be a valid alternative for him.~
+@6526 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. The powers of mighty demon lords, sealed within their hearts, could be a valid alternative for him.~
+@6527 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. He told me of two valid alternatives I could offer to him: the heart of a mighty demon lord and, as unlikely as it sounds, Bhaal's divine essence within Imoen's or my soul.~
+@6528 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. The mysterious powers of mighty undead creatures like demiliches might be a valid alternative for him.~
+@6529 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. He told me of two valid alternatives I could offer to him: the remains of a powerful undead creature like a demilich and, as unlikely as it sounds, Bhaal's divine essence within Imoen's or my soul.~
+@6530 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. He told me of two valid alternatives I could offer to him: the remains of a powerful undead creature like a demilich and the heart of a mighty demon lord.~
+@6531 = ~Playing with fire
+
+I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. He told me of three valid alternatives I could offer to him: the remains of a powerful undead creature like a demilich, the heart of a mighty demon lord and, as unlikely as it sounds, Bhaal's divine essence within Imoen's or my soul.~
+@6532 = ~Playing with fire
+
+I was able to persuade Lord Malik to settle on a powerful undead artifact instead of the "Crown of Qadeej". However, he also demands knowledge of how to tap its powers. Maybe Karim can help me again.~
+@6533 = ~Playing with fire
+
+I was able to persuade Lord Malik to settle on the heart of a powerful demon lord instead of the "Crown of Qadeej". All I need to do now is to find a ruler of the Abyss somewhere on Faerûn and defeat it.~
+@6534 = ~Playing with fire
+
+Karim told me that his sources tell of a fortress which contains an unknown evil. Its name is Watcher's Keep and it is situated on the southern border of Amn. I might even find some tome or script about undead rituals there, as the keep was also home to many sects and cults of the darker arts.~
+@6535 = ~Playing with fire
+
+Karim told me that the remains of the demilich I destroyed in Watcher's Keep will be the artifact of power which Lord Malik is looking for. I should backtrace my path and retrieve it as quickly as possible.~
+@6536 = ~Playing with fire
+
+I have told Karim that I want to deal with Lord Malik my way.~
+@6537 = ~Playing with fire
+
+Karim didn't offer much help on how or where to find or defeat a demon lord. That's why I have no other option but to look for it myself.~
+@6538 = ~Playing with fire
+
+Karim suggests I should offer the heart of the demon lord in my possession to Lord Malik.~
+@6539 = ~Playing with fire
+
+Karim told me that the heart of Demogorgon, whom I destroyed in the depths of Watcher's Keep would have been the perfect offer for Lord Malik.~
+@6540 = ~Playing with fire
+
+After telling Karim of Lord Malik's response, he wished me good luck in my next steps.~
+@6541 = ~Playing with fire
+
+I have brought Lord Malik both an undead artifact and a tome of knowledge. He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
+@6542 = ~Playing with fire
+
+I have brought Lord Malik the heart of a demon lord. He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
+@6543 = ~Playing with fire
+
+I have sacrificed a substantial portion of my divine essence to Lord Malik. He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
+@6544 = ~Playing with fire
+
+I was able to convince Imoen to sacrifice a substantial portion of her divine essence to Lord Malik. He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
+@6545 = ~Playing with fire
+
+After telling Lord Malik that I didn't want to work for him anymore, he and his army turned hostile.~
+@6546 = ~Playing with fire
+
+I tried to talk to the temple archivist of the ancient library in Watcher's Keep. However, he was too distracted to answer my questions.~
+@6547 = ~Playing with fire
+
+The temple archivist of the ancient library in Watcher's Keep told me that he came across the tome I seek not too long ago. I should follow his hints and look for the book.~
+@6548 = ~Playing with fire
+
+I have found a tome of undead rituals in the ancient library of Watcher's Keep.~
+
+@6590 = ~Playing with fire
+
+I have betrayed Karim and his djinns and lured them into a trap. Lord Malik was pleased with my cooperation and rewarded me with a powerful magical wand before he and his army teleported away.~
+@6591 = ~Playing with fire
+
+The efreet have been defeated. Unfortunately, all the djinns who came to my help died in the battle. However, with the efreet threat gone, their fortress should be safe once more.~
+@6592 = ~Playing with fire
+
+My actions caused the djinns to turn hostile. I am sure their enemies in the lower cavern will hear about it quickly and attack the djinn fortress soon.~
+@6593 = ~Playing with fire
+
+Karim and his djinns were grateful that I was able to prevent the assault on their fortress and rewarded me richly before they returned to their home.~
+@6594 = ~Playing with fire
+
+Unfortunately Karim died in the battle with the efreet, but the surviving djinns were grateful that I was able to prevent the assault on their fortress and returned to their home.~
+
+
+// misc. strings
+@6800 = ~You can feel a tremendous heat emanating from that chasm. Without an effective protection it is best advised to stay away from it.~
+@6801 = ~Back to the Smuggler's Cave~
+@6802 = ~To the upper cave~
+@6803 = ~This wooden bridge appears to be very old. How it was able to withstand the tremendous heat of this cavern for such a long time will always be a mystery.~
+@6804 = ~You hear a rumbling and have barely time to jump back...~
+@6805 = ~The rumbling dies off a while later and you see a mass of rocks barring your way.~
+@6806 = ~The portal radiates waves of magical heat which even your protection is powerless against. There is no way to enter it.~
+@6807 = ~To the Elemental Plane of Fire~
+@6808 = ~Wand of Heat Protection~
+@6809 = ~This magical wand has a limited number of charges which enables you and your party to withstand the tremendous heat coming from lava or similar heat sources. It does NOT protect against the burning effects of direct contact with fire.
+
+STATISTICS:
+
+Special:  Protects against heat
+Range:  Whole party
+Duration:  8 hours
+Usable by:
+ Anyone~
+@6810 = ~Steam is rising from this pool of water which has turned the cave into a natural sauna.~
+@6811 = ~The steam rising from this hot spring is a very clear indication not to enter the pool without some kind of heat protection.~
+@6812 = ~The water is cool to the touch and you see several tunnels deep below which connect this pool to an extensive cave system.~
+@6813 = ~You take a deep breath and jump into the boiling pool of water. With your heat protection in place you dive into the nearest tunnel as fast as you can.~
+@6814 = ~You take a deep breath and jump into the pool of water. As fast as you can you dive into the nearest tunnel.~
+@6815 = ~It is already over six hours ago since you applied protection from heat on your party.~
+@6816 = ~Protection from Heat has run out.~
+@6817 = ~With Lord Malik's death the link between this cave and the Elemental Plane of Fire ceases to exist and the gate collapses in a massive explosion.~
+@6818 = ~You play the whistle but nothing happens.~
+@6819 = ~Mephit Blood~
+@6820 = ~A vial filled with blood from a mephit.~
+@6821 = ~Wand of Inferno~
+@6822 = ~This wand looks like it will burst into flames any moment. The lower part looks metallic and feels very organic to the touch. Its upper part appears to burn but doesn't emit any heat.
+
+Special Abilities (ten charges each):
+
+ Aura of Flaming Death
+    Duration: one turn
+ Conjure Fire Elemental
+    Summons a 24 hit dice fire elemental
+    Duration: 4 hours
+ Comet
+    Stuns 1D4 rounds and deals 10D10 fire damage to enemies in 30' radius
+
+Unusable by:
+ Wizardslayer~
+@6823 = ~Djinni Whistle~
+@6824 = ~The whistle is intricately carved from fine wood and is almost humming on its own when you set it to your mouth.~
+@6825 = ~Ring of Elemental Protection~
+@6826 = ~This excellent piece of workmanship contains very powerful enchantments which no mortal is capable of producing anymore. When equipped it enables the wearer not only to be protected from the elemental powers of the world, it will also project parts of the damage back to the attackers.
+
+Special Abilities:
+
+ Fireshield (Red)
+ Duration: two turns
+ Cast three times/day
+ 
+ Fireshield (Blue)
+ Duration: two turns
+ Cast three times/day
+ 
+ Airshield
+ Duration: two turns
+ Cast twice per day
+
+Unusable by:
+ Wizardslayer~
+
+@6827 = ~Cloud Slasher +4~
+@6828 = ~The scimitar crackles with energy when you hold it in your hand and each strike appears to slash the air itself.
+
+STATISTICS:
+
+Special Abilities:
+   50% electrical resistance while equipped.
+   Protects against stun while equipped.
+
+Combat Abilities:
+   Lightning Strike
+   (each hit stuns the target for two rounds, Save vs. Death)
+   Electrocution
+   (10% chance each hit that target must make a saving throw vs. death or die permanently)
+
+Damage: 1D8 +4, +2D8 electrical damage
+THAC0: +4
+Damage type: slashing
+Weight: 2
+Speed Factor: 1
+Proficiency Type: Scimitar
+Type:  1-handed
+Requires: 8 Strength
+Not Usable By:
+ Cleric
+ Mage~
+
+@6829 = ~Karim~
+@6830 = ~The underground stream is too hot to enter without effective heat protection.~
+@6831 = ~Protected from Infernal Heat~
+@6832 = ~Malik~
+@6833 = ~Efreeti Commander~
+@6834 = ~Efreeti Guard~
+@6835 = ~Salamander Servant~
+@6836 = ~Greater Hell Hound~
+@6837 = ~You are too far away to enter the underground stream.~
+@6838 = ~With your heat protection in place you may be able to enter the pool, but that would likely anger the smugglers.~
+@6839 = ~Efreet Contract~
+@6840 = ~This very heavy and bulky stone tablet contains a contract written in a language you don't recognize.~
+@6841 = ~Signed Efreet Contract~
+@6842 = ~This very heavy and bulky stone tablet contains a contract written in a language you don't recognize.
+
+The signature of the fire salamander looks rather clumsy compared to the writings of the efreet.~
+@6843 = ~Skull of a demi-lich~
+@6844 = ~A skull salvaged from the destroyed body of a demi-lich.~
+@6845 = ~The skull radiates an overwhelming aura of menace and you have the feeling that it is still possessed by the spirit of the demi-lich itself.
+
+STATISTICS:
+
+*CURSED*
+
+Special Abilities (three times per day): 
+ Absorb Life Force:
+ Drains three levels and causes 3d8 +8 damage to the victim while healing the caster at the same time.
+ Range: 40 yards
+
+Equipped Abilities:
+ Undead's Blessing:
+ The wearer obtains both the curses and the blessings of the undead for a short time. 
+ This includes:
+   - Immunity to death magic, 
+     level drain and panic
+   - Increased resistance to 
+     physical and cold damage
+   - Vulnerability to fire
+   - Slow decay of body and mind
+   - And more...
+
+Not Usable By:
+ Paladin
+ Wizard Slayer~
+@6846 = ~Efreeti Summoner~
+@6847 = ~Efreeti Apprentice~
+@6848 = ~Wrapped Orb~
+@6849 = ~Skull Detonator~
+@6850 = ~This small but unusually heavy orb lies comfortably in the hand and has a piece of string attached to it.~
+@6851 = ~A small clan of dwarves invented a strange substance which, if mixed correctly, could shatter even the hardest stone. It soon was developed into a tool to help digging tunnels and caves. Unfortunately, a deposit of this highly hazardous substance exploded within the city, wiping out the whole clan.
+
+The instructions on how to produce the substance survived however. A nearby party of derro scouts discovered the destroyed city and salvaged some of the substance, and also the recipe on how to create it. Being a cruel and evil race, they soon discovered its full potential and created a weapon out of it. When activated it explodes after a short delay and deals out fire damage to all creatures in the close vicinity. Later, a derro cleric of Diirinka perfected this weapon by adding a magical proximity trigger. When activated the weapon will stay in place and detonate only if a creature comes close to it.
+
+STATISTICS:
+
+Effect: Exploding Fire Trap
+Damage: 6D6 fire damage
+Trigger: Entering 20 ft radius around trap
+Damage: Everyone within 30 ft radius
+
+Usable by:
+ Anyone~
+@6852 = ~Absorb Life Force~
+@6853 = ~Demogorgon's Heart~
+@6854 = ~Heart of a Demon Lord~
+@6855 = ~Larloch's treatise on necromantic rituals~
+@6856 = ~This tome is a transcription of a much older document which dates back to the Shadowed Age of Netheril.
+
+Most of the text is written in languages you haven't seen before. However, now and then you discover old yet decipherable passages in common. They speak of dark rituals to summon powerful undead or establish links to the Negative Energy Plane itself.~
+@6857 = ~The djinns are attacking. To arms!~
+@6858 = ~It's your turn now, <CHARNAME>.~
+@6859 = ~*whistle*~
+@6860 = ~The boiling water rushing towards the surface will surely burn you. It is your only chance to leave this cave, however.~
+@6861 = ~You enter the stream and expect the worst. Hopefully you have prepared some healing or resurrection spells.~
+@6862 = ~Aaargh!!~
+@6863 = ~transforms into a zombie...~
+@6864 = ~Do you need something?~
+@6865 = ~Another glass of wine please.~
+@6866 = ~And what about you?~
+@6867 = ~Give me something strong.~
+@6868 = ~Maybe another mug of ale.~
+@6869 = ~Me too!~
+@6870 = ~And me too!~
+@6871 = ~No thanks. I'm still enjoying my cup of tea.~
+@6872 = ~Welcome to the 'Flaming Wand'~
+@6873 = ~We offer hot meals and cold drinks.~
+@6874 = ~Yes, another cup of tea please.~
+@6875 = ~Bring me your best wine.~
+@6876 = ~Just someone who will listen to my stories.~
+@6877 = ~(snore...zzz)~
+@6878 = ~Another beer please.~
+@6879 = ~Another cup of tea please.~
+@6880 = ~I needsh some (urkh) ale... (hic)~
+@6881 = ~Some wine, bread, cheese and fireberry syrup please.~
+@6882 = ~Do you need something, boss?~
+@6883 = ~Retired Salamander Servant~
+@6884 = ~Purified Skull of a demi-lich~
+@6885 = ~The power of this skull has been slightly weakened by the purification ritual. Nevertheless, it still contains much of its former power.
+
+STATISTICS:
+
+Equipped Abilities:
+ Undead's Blessing:
+ The wearer obtains both blessings and some of the curses of the undead.
+ This includes:
+   - Immunity to death magic, 
+     level drain and panic
+   - Increased resistance to 
+     physical and cold damage
+   - Immunity to haste
+   - Vulnerability to fire
+
+Not Usable By:
+ Wizard Slayer~

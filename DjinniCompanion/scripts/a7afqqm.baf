@@ -1,0 +1,15 @@
+// *** Helper creature used to access Afaaq's quick menu ***
+
+IF
+  !StateCheck("A7Afaaq", CD_STATE_NOTVALID)
+THEN RESPONSE #100
+  ActionOverride("A7Afaaq", StartDialogue("A7AfqQM", "A7Afaaq"))
+  ActionOverride("A7Afaaq", SetDialogue("A7Afaaq"))
+  DestroySelf()
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  DestroySelf()
+END

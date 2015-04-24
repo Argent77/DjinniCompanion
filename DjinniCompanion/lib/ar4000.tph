@@ -1,0 +1,4 @@
+// *** Area AR4000: Forest of Tethir (ToB starting area) ***
+
+// trigger Afaaq's goodbye scene
+EXTEND_BOTTOM ~ar4000.bcs~ ~DjinniCompanion/scripts/ar4000_bottom.baf~

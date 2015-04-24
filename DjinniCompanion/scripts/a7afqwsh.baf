@@ -1,0 +1,968 @@
+// *** Helper creature used for wishes and healing ("A7AFQWSH") ***
+
+
+// Assisting Afaaq with healing potions
+IF
+  HasItem("POTN08", Player1)
+  Global("HealingPotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("HealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN08", 1)
+  DestroyItem("POTN08")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))    // stupid workaround for a buggy CreateItem() action
+  ActionOverride("A7Afaaq", CreateItem("POTN08", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN08", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))        // stupid workaround, part 2
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 1))
+  DestroySelf()
+END
+
+// Assisting Afaaq with extra healing potions
+IF
+  HasItem("POTN52", Player1)
+  Global("ExtraHealingPotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("ExtraHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN52", 1)
+  DestroyItem("POTN52")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN52", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN52", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 2))
+  DestroySelf()
+END
+
+// Assisting Afaaq with superior healing potions
+IF
+  HasItem("POTN55", Player1)
+  Global("SuperiorHealingPotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("SuperiorHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN55", 1)
+  DestroyItem("POTN55")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN55", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN55", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 4))
+  DestroySelf()
+END
+
+// Assisting Afaaq with antidote potions
+IF
+  HasItem("POTN20", Player1)
+  Global("CurePotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("CurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN20", 1)
+  DestroyItem("POTN20")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN20", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN20", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 1))
+  DestroySelf()
+END
+
+// Assisting Afaaq with extra antidote potions
+IF
+  HasItem("POTN17", Player1)
+  Global("ExtraCurePotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("ExtraCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN17", 1)
+  DestroyItem("POTN17")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN17", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN17", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 2))
+  DestroySelf()
+END
+
+
+// *** Transfer healing potions to Afaaq ***
+IF
+  Global("GiveHealingPotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("GiveHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN08", 1)
+  DestroyItem("POTN08")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN08", 1, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 1))
+  DisplayString("A7Afaaq", @60039)    // received one healing potion
+  DestroySelf()
+END
+
+IF
+  Global("GiveHealingPotion", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("GiveHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN08", 2)
+  DestroyItem("POTN08")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN08", 2, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 2))
+  DisplayString("A7Afaaq", @60040)    // received two healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveHealingPotion", "LOCALS", 3)
+THEN RESPONSE #100
+  SetGlobal("GiveHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN08", 3)
+  DestroyItem("POTN08")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN08", 3, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 3))
+  DisplayString("A7Afaaq", @60041)    // received three healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveHealingPotion", "LOCALS", 4)
+THEN RESPONSE #100
+  SetGlobal("GiveHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN08", 4)
+  DestroyItem("POTN08")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN08", 4, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 4))
+  DisplayString("A7Afaaq", @60042)    // received four healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveHealingPotion", "LOCALS", 5)
+THEN RESPONSE #100
+  SetGlobal("GiveHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN08", 5)
+  DestroyItem("POTN08")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN08", 5, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 5))
+  DisplayString("A7Afaaq", @60043)    // received five healing potions
+  DestroySelf()
+END
+
+
+// *** Transfer extra healing potions to Afaaq ***
+IF
+  Global("GiveExtraHealingPotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN52", 1)
+  DestroyItem("POTN52")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN52", 1, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 2))
+  DisplayString("A7Afaaq", @60044)    // received one extra healing potion
+  DestroySelf()
+END
+
+IF
+  Global("GiveExtraHealingPotion", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN52", 2)
+  DestroyItem("POTN52")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN52", 2, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 4))
+  DisplayString("A7Afaaq", @60045)    // received two extra healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveExtraHealingPotion", "LOCALS", 3)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN52", 3)
+  DestroyItem("POTN52")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN52", 3, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 6))
+  DisplayString("A7Afaaq", @60046)    // received three extra healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveExtraHealingPotion", "LOCALS", 4)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN52", 4)
+  DestroyItem("POTN52")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN52", 4, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 8))
+  DisplayString("A7Afaaq", @60047)    // received four extra healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveExtraHealingPotion", "LOCALS", 5)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN52", 5)
+  DestroyItem("POTN52")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN52", 5, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 10))
+  DisplayString("A7Afaaq", @60048)    // received five extra healing potions
+  DestroySelf()
+END
+
+
+// *** Transfer superior healing potions to Afaaq ***
+IF
+  Global("GiveSuperHealingPotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("GiveSuperHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN55", 1)
+  DestroyItem("POTN55")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN55", 1, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 4))
+  DisplayString("A7Afaaq", @60049)    // received one superior healing potion
+  DestroySelf()
+END
+
+IF
+  Global("GiveSuperHealingPotion", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("GiveSuperHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN55", 2)
+  DestroyItem("POTN55")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN55", 2, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 8))
+  DisplayString("A7Afaaq", @60050)    // received two superior healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveSuperHealingPotion", "LOCALS", 3)
+THEN RESPONSE #100
+  SetGlobal("GiveSuperHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN55", 3)
+  DestroyItem("POTN55")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN55", 3, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 12))
+  DisplayString("A7Afaaq", @60051)    // received three superior healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveSuperHealingPotion", "LOCALS", 4)
+THEN RESPONSE #100
+  SetGlobal("GiveSuperHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN55", 4)
+  DestroyItem("POTN55")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN55", 4, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 16))
+  DisplayString("A7Afaaq", @60052)    // received four superior healing potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveSuperHealingPotion", "LOCALS", 5)
+THEN RESPONSE #100
+  SetGlobal("GiveSuperHealingPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN55", 5)
+  DestroyItem("POTN55")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN55", 5, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 20))
+  DisplayString("A7Afaaq", @60053)    // received five superior healing potions
+  DestroySelf()
+END
+
+
+// *** Transfer antidote potions to Afaaq ***
+IF
+  Global("GiveCurePotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("GiveCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN20", 1)
+  DestroyItem("POTN20")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN20", 1, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 1))
+  DisplayString("A7Afaaq", @60054)    // received one antidote potion
+  DestroySelf()
+END
+
+IF
+  Global("GiveCurePotion", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("GiveCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN20", 2)
+  DestroyItem("POTN20")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN20", 2, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 2))
+  DisplayString("A7Afaaq", @60055)    // received two antidote potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveCurePotion", "LOCALS", 3)
+THEN RESPONSE #100
+  SetGlobal("GiveCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN20", 3)
+  DestroyItem("POTN20")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN20", 3, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 3))
+  DisplayString("A7Afaaq", @60056)    // received three antidote potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveCurePotion", "LOCALS", 4)
+THEN RESPONSE #100
+  SetGlobal("GiveCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN20", 4)
+  DestroyItem("POTN20")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN20", 4, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 4))
+  DisplayString("A7Afaaq", @60057)    // received four antidote potions
+  DestroySelf()
+END
+
+IF
+  Global("GiveCurePotion", "LOCALS", 5)
+THEN RESPONSE #100
+  SetGlobal("GiveCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN20", 5)
+  DestroyItem("POTN20")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN20", 5, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 5))
+  DisplayString("A7Afaaq", @60058)    // received five antidote potions
+  DestroySelf()
+END
+
+
+// *** Transfer Elixirs of Help to Afaaq ***
+IF
+  Global("GiveExtraCurePotion", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN17", 1)
+  DestroyItem("POTN17")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN17", 1, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 2))
+  DisplayString("A7Afaaq", @60059)    // received one Elixir of Help
+  DestroySelf()
+END
+
+IF
+  Global("GiveExtraCurePotion", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN17", 2)
+  DestroyItem("POTN17")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN17", 2, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 4))
+  DisplayString("A7Afaaq", @60060)    // received two Elixirs of Help
+  DestroySelf()
+END
+
+IF
+  Global("GiveExtraCurePotion", "LOCALS", 3)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN17", 3)
+  DestroyItem("POTN17")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN17", 3, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 6))
+  DisplayString("A7Afaaq", @60061)    // received three Elixirs of Help
+  DestroySelf()
+END
+
+IF
+  Global("GiveExtraCurePotion", "LOCALS", 4)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN17", 4)
+  DestroyItem("POTN17")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN17", 4, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 8))
+  DisplayString("A7Afaaq", @60062)    // received four Elixirs of Help
+  DestroySelf()
+END
+
+IF
+  Global("GiveExtraCurePotion", "LOCALS", 5)
+THEN RESPONSE #100
+  SetGlobal("GiveExtraCurePotion", "LOCALS", 0)
+  TakePartyItemNum("POTN17", 5)
+  DestroyItem("POTN17")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN17", 5, 0, 0))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 10))
+  DisplayString("A7Afaaq", @60063)    // received five Elixirs of Help
+  DestroySelf()
+END
+
+
+// *** Wishes ***
+IF
+  Global("Wish_Power01", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power01", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish26", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power02", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power02", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish27", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power03", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power03", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish28", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power04", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power04", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish29", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power05", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power05", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish30", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power06", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power06", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish31", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power07", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power07", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish32", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power08", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power08", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish33", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power09", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power09", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish34", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power10", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power10", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish35", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power11", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power11", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish36", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power12", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power12", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish37", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power13", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power13", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish38", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power14", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power14", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish46", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power15", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power15", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish08", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power16", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power16", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish10", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power17", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power17", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish11", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power18", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power18", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish12", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power19", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power19", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish14", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power20", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power20", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish13", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power21", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power21", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("SpWish16", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power22", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power22", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish17", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power23", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power23", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish39", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power24", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power24", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish40", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power25", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power25", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish18", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power26", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power26", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish19", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power27", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power27", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish20", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power28", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power28", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish21", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power29", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power29", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish22", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power30", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power30", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish23", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power31", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power31", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish24", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power32", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power32", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish41", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power33", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power33", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish42", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power34", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power34", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish43", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power35", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power35", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish44", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power36", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power36", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish45", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power37", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power37", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish25", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power38", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power38", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish09", Myself))
+  DestroySelf()
+END
+
+IF
+  Global("Wish_Power39", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_Power39", "LOCALS", 0)
+  ActionOverride(Player1, ForceSpellRES("spwish15", Myself))
+  DestroySelf()
+END
+
+
+// *** One-time limited wishes ***
+IF
+  Global("WishO_Rich", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Rich", "LOCALS", 0)
+  SetGlobal("wishRich", "GLOBAL", 1)
+  GiveItemCreate("misc38", Player1, 0, 0, 0)
+  GiveItemCreate("misc36", Player1, 0, 0, 0)
+  GiveItemCreate("misc35", Player1, 0, 0, 0)
+  GiveItemCreate("misc43", Player1, 0, 0, 0)
+  GiveGoldForce(2000)
+  DestroySelf()
+END
+
+IF
+  Global("WishO_Armor", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Armor", "LOCALS", 0)
+  SetGlobal("wishArmor", "GLOBAL", 1)
+  GiveItemCreate("plat19", Player1, 0, 0, 0)
+  DestroySelf()
+END
+
+IF
+  Global("WishO_XP", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_XP", "LOCALS", 0)
+  SetGlobal("wishXP", "GLOBAL", 1)
+  CreateCreatureObjectEffect("golada01", "SPDIMNDR", Player1)
+  CreateCreatureObjectEffect("golsan01", "SPDIMNDR", Player1)
+  CreateCreatureObjectEffect("goljug01", "SPDIMNDR", Player1)
+  DestroySelf()
+END
+
+IF
+  Global("WishO_Glasses", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Glasses", "LOCALS", 0)
+  SetGlobal("wishGlasses", "GLOBAL", 1)
+  GiveItemCreate("misc3p", Player1, 3, 0, 0)
+  DestroySelf()
+END
+
+IF
+  Global("WishO_Time", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Time", "LOCALS", 0)
+  SetGlobal("wishTime", "GLOBAL", 1)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WIZARD_TIME_STOP))
+  DestroySelf()
+END
+
+IF
+  Global("WishO_Shape", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Shape", "LOCALS", 0)
+  SetGlobal("wishShape", "GLOBAL", 1)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WIZARD_SHAPECHANGE))
+  DestroySelf()
+END
+
+IF
+  Global("WishO_Contigency", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Contigency", "LOCALS", 0)
+  SetGlobal("wishContigency", "GLOBAL", 1)
+  ActionOverride(Player1, ForceSpell(Myself, WIZARD_CHAIN_CONTINGENCY))
+  DestroySelf()
+END
+
+IF
+  Global("WishO_Wail", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Wail", "LOCALS", 0)
+  SetGlobal("wishWail", "GLOBAL", 1)
+  ActionOverride(Player1, ForceSpell(Myself, WIZARD_WAIL_OF_THE_BANSHEE))
+  DestroySelf()
+END
+
+IF
+  Global("WishO_Quest", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Quest", "LOCALS", 0)
+  SetGlobal("wishQuest", "GLOBAL", 1)
+  GiveItemCreate("wishscrl", Player1, 0, 0, 0)
+  DisplayStringHead(Myself, 3089)    // You cast the spell and for a moment, nothing happens. Something bumps your foot...
+  DestroySelf()
+END
+
+IF
+  Global("WishO_Raissa", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Raissa", "LOCALS", 0)
+  SetGlobal("A7WishRestoreRaissa", "GLOBAL", 1)
+  ReallyForceSpell("trskin01", CLERIC_LESSER_RESTORATION)
+  DestroySelf()
+END
+
+
+// *** Repeatable limited wishes ***
+IF
+  Global("WishR_Heal", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_Heal", "LOCALS", 0)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WISH_HEAL_PARTY))
+  DestroySelf()
+END
+
+IF
+  Global("WishR_DieWounds", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_DieWounds", "LOCALS", 0)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WISH_POISON))
+  DestroySelf()
+END
+
+IF
+  Global("WishR_SpellMemorize", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_SpellMemorize", "LOCALS", 0)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WISH_MEMORIZE))
+  DestroySelf()
+END
+
+IF
+  Global("WishR_SpellLose", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_SpellLose", "LOCALS", 0)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WISH_LOSE_SPELL))
+  DestroySelf()
+END
+
+IF
+  Global("WishR_Invulnerable", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_Invulnerable", "LOCALS", 0)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WISH_GLOBE)) 
+  ActionOverride(Player2, ReallyForceSpell(Myself, WISH_GLOBE)) 
+  ActionOverride(Player3, ReallyForceSpell(Myself, WISH_GLOBE)) 
+  ActionOverride(Player4, ReallyForceSpell(Myself, WISH_GLOBE)) 
+  ActionOverride(Player5, ReallyForceSpell(Myself, WISH_GLOBE)) 
+  ActionOverride(Player6, ReallyForceSpell(Myself, WISH_GLOBE))
+  DestroySelf()
+END
+
+IF
+  Global("WishR_MagicFail", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_MagicFail", "LOCALS", 0)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WISH_SPELL_FAILURE))
+  DestroySelf()
+END
+
+IF
+  Global("WishR_Horde", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_Horde", "LOCALS", 0)
+  ActionOverride(Player1, ReallyForceSpell(Myself, WISH_RABBIT))
+  DestroySelf()
+END
+
+IF
+  Global("WishR_ProtUndead", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_ProtUndead", "LOCALS", 0)
+  ActionOverride(Player1, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player2, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player3, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player4, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player5, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player6, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION))
+  DestroySelf()
+END
+
+IF
+  TimeLT(23)
+  TimeGT(4)
+  Global("WishR_ProtUndeadSum", "LOCALS", 1)
+THEN RESPONSE #100
+  DayNight(MIDNIGHT)
+  Continue()
+END
+
+IF
+  Global("WishR_ProtUndeadSum", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("WishR_ProtUndeadSum", "LOCALS", 0)
+  SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS)
+  ActionOverride(Player1, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player2, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player3, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player4, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player5, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION)) 
+  ActionOverride(Player6, ReallyForceSpell(Myself, CLERIC_NEGATIVE_PLANE_PROTECTION))
+  CreateCreatureObjectEffect("vamanc01", "SPDIMNDR", Player1) 
+  CreateCreatureObjectEffect("vamver01", "SPDIMNDR", Player1) 
+  CreateCreatureObjectEffect("vamold01", "SPDIMNDR", Player1) 
+  CreateCreatureObjectEffect("vammat01", "SPDIMNDR", Player1) 
+  CreateCreatureObjectEffect("vammat01", "SPDIMNDR", Player1) 
+  CreateCreatureObjectEffect("vammat01", "SPDIMNDR", Player1)
+  DestroySelf()
+END
+
+
+// If none of the above actions have been triggered
+IF
+  True()
+THEN RESPONSE #100
+  DestroySelf()
+END

@@ -1,0 +1,18 @@
+// *** Quest-specific actions for the rakshasa near the temple in Quest 2 ***
+
+IF
+  See([PC])
+  NumTimesTalkedTo(0)
+  GlobalLT("RakTalk", "A77004", 2)
+THEN RESPONSE #100
+  StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+  OR(2)
+    AttackedBy([GOODCUTOFF], DEFAULT)
+    Global("RakTalk", "A77004", 2)
+  !Allegiance(Myself, ENEMY) 
+THEN RESPONSE #100
+  Enemy()
+END

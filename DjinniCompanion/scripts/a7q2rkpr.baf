@@ -1,0 +1,180 @@
+// *** Specific battle actions for Rakshasa High Priest in Quest 2 ***
+
+// Prepare for battle once: apply Stoneskin
+IF
+  See(NearestEnemyOf(Myself))
+  Global("Prepare", "LOCALS", 0)
+THEN RESPONSE #100
+  ApplySpell(Myself, WIZARD_STONE_SKIN)
+  SetGlobal("Prepare", "LOCALS", 1)
+END
+
+// Fire up Spell Trigger next round, once
+IF
+  See(NearestEnemyOf(Myself))
+  Global("SpellTrigger", "LOCALS", 0)
+  Global("Prepare", "LOCALS", 1)
+THEN RESPONSE #100
+  DisplayString(Myself, 39968)    // Spell Trigger - Fired
+  DisplayString(Myself, 43046)    // Spell Trigger - Mislead
+  ReallyForceSpell(Myself, WIZARD_MISLEAD)
+  DisplayString(Myself, 2469)    // Spell Trigger - Protection from Magical Weapons
+  ReallyForceSpell(Myself, WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  SetGlobal("SpellTrigger", "LOCALS", 1)
+END
+
+// Reapply Stoneskin if necessary
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_STONE_SKIN)
+  CheckStatLT(Myself, 1, STONESKINS)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_STONE_SKIN)
+END
+
+IF
+  HPPercentLT(Myself, 50)
+  !GlobalTimerNotExpired("DrankPotionTimer", "LOCALS")
+  HasItem("POTN52", Myself) // Potion of Extra Healing
+THEN RESPONSE #100
+  SetGlobalTimer("DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN52", Myself) // Potion of Extra Healing
+  Continue()
+END
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  !GlobalTimerNotExpired("DrankPotionTimer", "LOCALS")
+  CheckStatLT(Myself, 1, STONESKINS)
+  HasItem("POTN11", Myself) // Potion of Invulnerability
+THEN RESPONSE #100
+  SetGlobalTimer("DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN11", Myself) // Potion of Invulnerability
+  Continue()
+END
+
+// Cast Remove Fear on allies
+IF
+  Allegiance(Myself, ENEMY)
+  OR(2)
+    MoraleLT("A7Q2YU03", 6)
+    MoraleLT("A7Q2YU01", 6)
+  HaveSpell(CLERIC_REMOVE_FEAR)
+THEN RESPONSE #100
+  SpellPoint([461.1507], CLERIC_REMOVE_FEAR)
+END
+
+// Cast True Sight if enemy is invisible
+IF
+  Allegiance(Myself, ENEMY)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+  HaveSpell(CLERIC_TRUE_SIGHT)
+THEN RESPONSE #100
+  Spell(Myself, CLERIC_TRUE_SIGHT)
+END
+
+// Cast Unholy Blight on good-aligned enemies
+IF
+  See([GOODCUTOFF.0.0.0.0.0.MASK_GOOD])
+  Range(LastSeenBy(Myself), 20)
+  HaveSpell(CLERIC_UNHOLY_BLIGHT)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself), CLERIC_UNHOLY_BLIGHT)
+END
+
+// Cast Doom on one enemy
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_DOOM)
+  Global("CastDoom", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("CastDoom", "LOCALS", 1)
+  Spell(NearestEnemyOf(Myself), CLERIC_DOOM)
+END
+
+// Cast Miscast Magic on nearest magic user
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself), 20)
+  OR(15)
+    Class(NearestEnemyOf(Myself), BARD)
+    Class(NearestEnemyOf(Myself), CLERIC)
+    Class(NearestEnemyOf(Myself), CLERIC_MAGE)
+    Class(NearestEnemyOf(Myself), CLERIC_RANGER)
+    Class(NearestEnemyOf(Myself), CLERIC_THIEF)
+    Class(NearestEnemyOf(Myself), FIGHTER_CLERIC)
+    Class(NearestEnemyOf(Myself), FIGHTER_DRUID)
+    Class(NearestEnemyOf(Myself), FIGHTER_MAGE)
+    Class(NearestEnemyOf(Myself), FIGHTER_MAGE_CLERIC)
+    Class(NearestEnemyOf(Myself), FIGHTER_MAGE_THIEF)
+    Class(NearestEnemyOf(Myself), MAGE)
+    Class(NearestEnemyOf(Myself), MAGE_THIEF)
+    Class(NearestEnemyOf(Myself), PALADIN)
+    Class(NearestEnemyOf(Myself), RANGER)
+    Class(NearestEnemyOf(Myself), SORCERER)
+  HaveSpell(CLERIC_MISCAST_MAGIC)
+  Global("CastMiscast", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("CastMiscast", "LOCALS", 1)
+  Spell(NearestEnemyOf(Myself), CLERIC_MISCAST_MAGIC)
+END
+
+// Cast Death Spell when summoned creatures are in sight
+IF
+  See(NearestEnemyOf(Myself))
+  See([GOODCUTOFF.0.0.0.0.SUMMONED])
+  HaveSpell(WIZARD_DEATH_SPELL)
+  Global("Summon", "LOCALS", 0)
+THEN RESPONSE #100
+  FaceObject(LastSeenBy(Myself))
+  Spell(LastSeenBy(Myself), WIZARD_DEATH_SPELL)
+  SetGlobal("Summon", "LOCALS", 1)
+END
+
+
+// *** Cast one offensive spell after another ***
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHAIN_LIGHTNING)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_CHAIN_LIGHTNING)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FLAME_ARROW)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_FLAME_ARROW)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MELF_ACID_ARROW)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_MELF_ACID_ARROW)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHROMATIC_ORB)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_CHROMATIC_ORB)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself), WIZARD_MAGIC_MISSILE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  EquipMostDamagingMelee()
+  AttackReevaluate(NearestEnemyOf(Myself), 30)
+END

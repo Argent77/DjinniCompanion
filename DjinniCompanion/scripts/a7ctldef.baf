@@ -1,0 +1,77 @@
+// *** Control creature for Afaaq: Generic actions ***
+
+// Called once each game session (used for non-persistent initializations)
+IF
+  OnCreation()
+  Global("A7AfaaqMet", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetTokenGlobal("A7AfaaqLevel", "GLOBAL", "A7AFQ_LVL")
+  SetTokenGlobal("A7AfaaqHP", "GLOBAL", "A7AFQ_HP")
+  SetTokenGlobal("A7AfaaqTHAC0", "GLOBAL", "A7AFQ_THAC0")
+  SetTokenGlobal("A7AfaaqAC", "GLOBAL", "A7AFQ_AC")
+  Continue()
+END
+
+// Fix Afaaq's allegiance if necessary (work-around for a bug in the Infinity Engine)
+IF
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Allegiance("A7Afaaq", GOODCUTOFF)
+  !Allegiance("A7Afaaq", GOODBUTBLUE)
+  !Allegiance("A7Afaaq", FAMILIAR)
+THEN RESPONSE #100
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)
+END
+
+// Djinni transforms into his gaseous state if heavily wounded
+IF
+  !AreaCheckObject("A77006", "A7Afaaq")
+  HPPercentLT("A7Afaaq", 20)
+  HPGT("A7Afaaq", 3)
+  Global("A7AfaaqInvincible", "GLOBAL", 0)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7AfaaqHostile", "GLOBAL", 0)
+  !Allegiance("A7Afaaq", ENEMY)
+THEN RESPONSE #100
+  ApplySpellRES("A7DISPEL", "A7Afaaq")
+  ActionOverride("A7Afaaq", SetInterrupt(FALSE))
+  ActionOverride("A7Afaaq", ClearActions(Myself))    // Cancel all remaining actions
+  ActionOverride("A7Afaaq", ChangeEnemyAlly(Myself, NEUTRAL))
+  ActionOverride("A7Afaaq", ApplySpellRES("A7MISTA", Myself))
+  ActionOverride("A7Afaaq", DisplayString("A7Afaaq", @60038))    // turns into gaseous form
+  ActionOverride("A7Afaaq", SetGlobalTimer("GaseousTimer", "LOCALS", 29))
+  Wait(1)
+  ActionOverride("A7Afaaq", SetInterrupt(TRUE))
+  SetGlobal("A7AfaaqGaseous", "GLOBAL", 2)
+END
+
+// Djinni dies and has to stay in his lamp for at least eight hours
+IF
+  !AreaCheckObject("A77006", "A7Afaaq")
+  HPLT("A7Afaaq", 4)
+  !StateCheck("A7Afaaq", STATE_REALLY_DEAD)    // Prevent dying in scripted death situations
+  Global("A7AfaaqInvincible", "GLOBAL", 0)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7AfaaqHostile", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 0)
+  SetGlobalTimer("A7AfaaqDeathTimer", "GLOBAL", EIGHT_HOURS)
+  SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
+  ApplySpellRES("A7DISPEL", "A7Afaaq")
+  ActionOverride("A7Afaaq", SetInterrupt(FALSE))
+  ActionOverride("A7Afaaq", ApplySpellRES("A7DIE", Myself))    // make the djinni unselectable
+  ActionOverride("A7Afaaq", DisplayString(Myself, 14026))    // Death
+  ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
+  SmallWait(25)
+  ActionOverride("A7Afaaq", SetInterrupt(TRUE))
+  ActionOverride("A7Afaaq", DestroySelf())
+END
+
+// Remove the control creature when the djinni is in his lamp
+IF
+  Delay(6)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+THEN RESPONSE #100
+  DestroySelf()
+END

@@ -1,0 +1,16 @@
+// *** Quest-specific override script for Fire Salamander #2 (Quest 5) ***
+
+// *** After taking over the cavern ***
+IF
+  GlobalGT("FS01TookOver", "A77003", 0)
+  Global("FS02TookOver", "A77003", 0)
+THEN RESPONSE #100
+  MoveToPoint([1822.2054])
+END
+
+IF
+  Global("FS02TookOver", "A77003", 1)
+THEN RESPONSE #100
+  SetGlobal("FS02TookOver", "A77003", 2)
+  Face(10)
+END

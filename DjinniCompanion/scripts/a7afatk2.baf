@@ -1,0 +1,25 @@
+// *** Battle actions for the djinni Afaaq in passive mode ***
+
+// Reset help shout
+IF
+  OR(2)
+    HPPercentGT(Myself, 50)
+    Global("A7AfaaqGaseous", "GLOBAL", 1)
+  Global("hurt33", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("hurt33", "LOCALS", 0)
+END
+
+// When hurt then shout for help
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  See([EVILCUTOFF])
+  HPPercentLT(Myself, 33)
+  HPPercentGT(Myself, 19)
+  Global("hurt33", "LOCALS", 0)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("hurt33", "LOCALS", 1)
+  DisplayStringHead(Myself, @60000)    // Ahh, no! Help me!
+  Help()
+END

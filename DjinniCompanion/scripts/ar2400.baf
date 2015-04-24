@@ -1,0 +1,10 @@
+// *** Area script Illithid Lair (Underdark) ***
+
+// Disable Afaaq's remark if he didn't meet Charname yet
+IF
+  Global("A7AfaaqMet", "GLOBAL", 0)
+  Global("ByeByeSlaves", "AR2400", 2)
+  Global("A7IllithidSlaves", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7IllithidSlaves", "GLOBAL", 2)
+END

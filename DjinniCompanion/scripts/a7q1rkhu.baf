@@ -1,0 +1,135 @@
+// *** Rakshasa hunter script ***
+
+// Reaction when target has been killed
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  Killed([ANYONE])
+THEN
+  RESPONSE #10
+    SetGlobalTimer("VictoryTimer", "LOCALS", TWO_ROUNDS)
+    NoAction()
+  RESPONSE #50
+    SetGlobalTimer("VictoryTimer", "LOCALS", TWO_ROUNDS)
+    DisplayStringHead(Myself, @1100)    // That was easy.
+  RESPONSE #50
+    SetGlobalTimer("VictoryTimer", "LOCALS", TWO_ROUNDS)
+    DisplayStringHead(Myself, @1101)    // Yeah!
+  RESPONSE #50
+    SetGlobalTimer("VictoryTimer", "LOCALS", TWO_ROUNDS)
+    DisplayStringHead(Myself, @1102)    // That was all?
+END
+
+
+// No target in sight
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  OR(2)
+    GlobalTimerNotExpired("VictoryTimer", "LOCALS")
+    !See([0.ANIMAL.0.0.0.0.0])
+THEN
+  RESPONSE #100
+    RandomWalk()
+  RESPONSE #10
+    MoveToPoint([2044.711])
+    Wait(12)
+  RESPONSE #10
+    MoveToPoint([2780.1752])
+    Wait(12)
+  RESPONSE #10
+    MoveToPoint([405.812])
+    Wait(12)
+END
+
+
+// Action when target is in (near) sight
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  See([0.ANIMAL.0.0.0.0.0])
+  Range(LastSeenBy(Myself), 10)
+  !GlobalTimerNotExpired("VictoryTimer", "LOCALS")
+  GlobalTimerNotExpired("CastingTimer", "LOCALS")
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself), 30)
+  RESPONSE #10
+    NoAction()
+  RESPONSE #10
+    RandomWalk()
+END
+
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  See([0.ANIMAL.0.0.0.0.0])
+  Range(LastSeenBy(Myself), 10)
+  !GlobalTimerNotExpired("VictoryTimer", "LOCALS")
+  !GlobalTimerNotExpired("CastingTimer", "LOCALS")
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself), 30)
+  RESPONSE #30
+    SetGlobalTimer("CastingTimer", "LOCALS", ONE_ROUND)
+    ForceSpell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+  RESPONSE #20
+    SetGlobalTimer("CastingTimer", "LOCALS", ONE_ROUND)
+    ForceSpell(LastSeenBy(Myself), WIZARD_MELF_ACID_ARROW)
+  RESPONSE #10
+    SetGlobalTimer("CastingTimer", "LOCALS", ONE_ROUND)
+    ForceSpell(LastSeenBy(Myself), WIZARD_CHROMATIC_ORB)
+  RESPONSE #10
+    SetGlobalTimer("CastingTimer", "LOCALS", ONE_ROUND)
+    ForceSpell(LastSeenBy(Myself), WIZARD_FLAME_ARROW)
+  RESPONSE #10
+    RandomWalk()
+  RESPONSE #10
+    NoAction()
+END
+
+
+// Action when target is in (far) sight
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  See([0.ANIMAL.0.0.0.0.0])
+  Range(LastSeenBy(Myself), 30)
+  !GlobalTimerNotExpired("VictoryTimer", "LOCALS")
+  GlobalTimerNotExpired("CastingTimer", "LOCALS")
+THEN 
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself), 30)
+  RESPONSE #10
+    RandomWalk()
+  RESPONSE #10
+    NoAction()
+END
+
+IF
+  Detect([PC])
+  !Allegiance(Myself, ENEMY)
+  See([0.ANIMAL.0.0.0.0.0])
+  Range(LastSeenBy(Myself), 30)
+  !GlobalTimerNotExpired("VictoryTimer", "LOCALS")
+  !GlobalTimerNotExpired("CastingTimer", "LOCALS")
+THEN
+  RESPONSE #30
+    AttackReevaluate(LastSeenBy(Myself), 30)
+  RESPONSE #10
+    RandomWalk()
+  RESPONSE #10
+    NoAction()
+  RESPONSE #80
+    SetGlobalTimer("CastingTimer", "LOCALS", ONE_ROUND)
+    ForceSpell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+  RESPONSE #40
+    SetGlobalTimer("CastingTimer", "LOCALS", ONE_ROUND)
+    ForceSpell(LastSeenBy(Myself), WIZARD_MELF_ACID_ARROW)
+  RESPONSE #20
+    SetGlobalTimer("CastingTimer", "LOCALS", ONE_ROUND)
+    ForceSpell(LastSeenBy(Myself), WIZARD_CHROMATIC_ORB)
+  RESPONSE #20
+    SetGlobalTimer("CastingTimer", "LOCALS", ONE_ROUND)
+    ForceSpell(LastSeenBy(Myself), WIZARD_FLAME_ARROW)
+END

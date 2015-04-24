@@ -1,0 +1,184 @@
+// *** Rakshasa Maharajah battle script ***
+
+IF
+  !GlobalTimerNotExpired("A7AoETimer", "LOCALS")
+  GlobalGT("A7RakCloud", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7RakCloud", "MYAREA", 0)
+END
+
+IF
+  OR(4)
+    !See(NearestEnemyOf(Myself))
+    StateCheck(NearestEnemyOf(Myself), STATE_INVISIBLE)
+    StateCheck(NearestEnemyOf(Myself), STATE_IMPROVEDINVISIBILITY)
+    StateCheck(NearestEnemyOf(Myself), STATE_MIRRORIMAGE)
+  Detect(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_TRUE_SIGHT)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+THEN RESPONSE #100
+  SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+  Spell(Myself, WIZARD_TRUE_SIGHT)
+  Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CLOUDKILL)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+  Global("A7RakCloud", "MYAREA", 0)
+THEN 
+  RESPONSE #33
+    SetGlobal("A7RakCloud", "MYAREA", 1)
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    SetGlobalTimer("A7AoETimer", "LOCALS", 30)
+    Spell(NearestEnemyOf(Myself), WIZARD_CLOUDKILL)
+    Continue()
+  RESPONSE #66
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_DEATH_FOG)
+  DifficultyGT(EASY)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+  Global("A7RakCloud", "MYAREA", 0)
+THEN 
+  RESPONSE #33
+    SetGlobal("A7RakCloud", "MYAREA", 1)
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    SetGlobalTimer("A7AoETimer", "LOCALS", 30)
+    Spell(NearestEnemyOf(Myself), WIZARD_DEATH_FOG)
+    Continue()
+  RESPONSE #66
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_ICE_STORM)
+  DifficultyGT(NORMAL)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+  Global("A7RakCloud", "MYAREA", 0)
+THEN 
+  RESPONSE #100
+    SetGlobal("A7RakCloud", "MYAREA", 1)
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    SetGlobalTimer("A7AoETimer", "LOCALS", 30)
+    Spell(NearestEnemyOf(Myself), WIZARD_ICE_STORM)
+    Continue()
+  RESPONSE #100
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHAIN_LIGHTNING)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+  DifficultyGT(EASY)
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    Spell(NearestEnemyOf(Myself), WIZARD_CHAIN_LIGHTNING)
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MELF_METEOR)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    Spell(NearestEnemyOf(Myself), WIZARD_MELF_METEOR)
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FIREBALL)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    Spell(NearestEnemyOf(Myself),WIZARD_FIREBALL)
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FLAME_ARROW)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    Spell(NearestEnemyOf(Myself),WIZARD_FLAME_ARROW)
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MELF_ACID_ARROW)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    Spell(NearestEnemyOf(Myself),WIZARD_MELF_ACID_ARROW)
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHROMATIC_ORB)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    Spell(NearestEnemyOf(Myself),WIZARD_CHROMATIC_ORB)
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_LIGHTNING_BOLT)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    Spell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+  !GlobalTimerNotExpired("A7SpellTimer", "LOCALS")
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("A7SpellTimer", "LOCALS", 6)
+    Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  AttackOneRound(NearestEnemyOf(Myself))
+END

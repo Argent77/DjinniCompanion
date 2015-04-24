@@ -1,0 +1,1030 @@
+// *** Actions for interaction with party members for the genie Afaaq ***
+
+// Initiate first-time dialog to CHARNAME
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  See(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  Global("A7AfaaqMet", "GLOBAL", 0)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqUpgradeRefused", "GLOBAL", 0)    // needed in case Afaaq introduced himself AFTER the Greed Trial
+  FaceObject(Player1)
+  PlaySong(0) PlaySound("A7AFQMUS")
+  SmallWait(5)
+  StartDialogNoSet(Player1)
+END
+
+// Initiate first-time dialog to other than CHARNAME
+IF
+  NumTimesTalkedTo(0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  See([PC])
+  !See(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  Global("A7AfaaqMet", "GLOBAL", 0)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  FaceObject(LastSeenBy(Myself))
+  SmallWait(5)
+  StartDialogNoSet(LastSeenBy(Myself))
+END
+
+
+// Initiate talk after party rescued Afaaq from the rakshasa high priest in the jungle region (Quest 2)
+IF
+  Delay(6)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  OR(2)
+    Global("A7Quest2", "GLOBAL", 2)
+    Global("A7Quest2", "GLOBAL", 10)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7Quest2Grateful", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Quest2Grateful", "GLOBAL", 1)
+  SetGlobal("A7TalkAboutRakshasa", "GLOBAL", 1)
+  SetGlobal("A7TalkAboutDrow", "GLOBAL", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Initiate talk when Afaaq senses his sealed spiritual essence somewhere nearby (Quest 3)
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !ActuallyInCombat()
+  AreaCheck("AR2100")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  GlobalLT("A7Quest3", "GLOBAL", 2)
+  Global("A7Q3AfaaqEssence", "AR2100", 1)
+THEN RESPONSE #100
+  SetGlobal("A7Q3AfaaqEssence", "AR2100", 2)
+  StartDialogNoSet(Player1)
+END
+
+// Remind Charname (again) about his sealed spiritual essence somewhere nearby (Quest 3)
+IF
+  Delay(10)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  AreaCheck("AR2100")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("MatronJob", "GLOBAL", 2)
+  GlobalLT("A7Quest3", "GLOBAL", 2)
+  Global("A7Q3AfaaqEssence2", "AR2100", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q3AfaaqEssence2", "AR2100", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Initiate talk after Edwin failed to bring him under control
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  !Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7EdwinTakesControl", "GLOBAL", 2)
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7EdwinTakesControl", "GLOBAL", 2)
+THEN RESPONSE #100
+  SetGlobal("A7EdwinTakesControl", "GLOBAL", 3)
+  StartDialogNoSet(Player1)
+END
+
+
+// Initiate talk when CHARNAME's reputation reaches 19
+IF
+  Delay(6)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  ReputationGT(Player1, 18)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7Reputation19", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Reputation19", "GLOBAL", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Initiate talk #2 when sensing Kangaxx nearby in the small room with enemies (talk #1 is triggered in .../inline/A70300t1.baf)
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  AreaCheck("AR0330")
+  !Dead("hldemi")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("KangaxxQuest", "GLOBAL", 0)
+  GlobalLT("KangaxxSensed", "LOCALS", 3)
+THEN RESPONSE #100
+  StartDialogNoSet(Player1)
+END
+
+
+// Initiate talk #3 when sensing Kangaxx nearby in the crypt below the Docks District
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  AreaCheck("AR0331")
+  !Dead("hldemi")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("KangaxxQuest", "GLOBAL", 0)
+  GlobalLT("KangaxxSensed", "LOCALS", 4)
+THEN RESPONSE #100
+  StartDialogNoSet(Player1)
+END
+
+
+// Initiate talk when entering the Twisted Rune
+IF
+  Delay(2)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  AreaCheck("AR1008")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("ShangalarMove", "AR1008", 0)
+  Global("A7Shangalar", "AR1008", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Shangalar", "AR1008", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Slaver Quest: Initiate talk after releasing both Hendak and the slaves in the slaver's compound
+IF
+  Delay(4)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  AreaCheck("AR0406")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("HendakReleased", "AR0406", 4)
+  Global("A7SlaverHendak", "AR0406", 0)
+THEN RESPONSE #100
+  SetGlobal("A7SlaverHendak", "AR0406", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Initiate talk in the Planar Prison, after the warden has died
+IF
+  Delay(4)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  AreaCheck("AR0516")
+  Dead("pwarden")
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7PlanarPrisonLiberated", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7PlanarPrisonLiberated", "GLOBAL", 1)
+  StartDialogNoSet(Player1)
+END
+
+IF
+  !AreaCheck("AR0516")
+  Dead("pwarden")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7PlanarPrisonLiberated", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7PlanarPrisonLiberated", "GLOBAL", 2)
+  IncrementGlobal("A7AfaaqFriendship", "GLOBAL", 1)
+  DisplayStringNoName(Player1, @60028)    // Afaaq's respect for <CHARNAME> has grown.
+END
+
+
+// Initiate talk after releasing the slaves from the Illithid Lair in the Underdark
+IF
+  Delay(2)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  AreaCheck("AR2400")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("ByeByeSlaves", "AR2400", 2)
+  Global("A7IllithidSlaves", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7IllithidSlaves", "GLOBAL", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Initiate talk when detecting tortured genie in Ust Natha
+IF
+  Delay(3)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  See("dagenie")
+  AreaCheck("AR2200")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7DrowGenie", "AR2200", 0)
+  Global("DrowCityHostile", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7DrowGenie", "AR2200", 2)
+  StartDialogNoSet(Player1)
+END
+
+
+// If detecting tortured genie, but no CHARNAME, initiate talk with CHARNAME as soon as possible
+IF
+  !Detect(Player1)
+  See("dagenie")
+  AreaCheck("AR2200")
+  Global("A7DrowGenie", "AR2200", 0)
+  Global("DrowCityHostile", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7DrowGenie", "AR2200", 1)
+END
+
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7DrowGenie", "AR2200", 1)
+  Global("DrowCityHostile", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7DrowGenie", "AR2200", 2)
+  StartDialogNoSet(Player1)
+END
+
+
+// Afaaq initiates talk after the tortured genie in Ust Natha has been released
+IF
+  Delay(4)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  Dead("dagenie")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  GlobalLT("A7DrowGenie", "AR2200", 4)
+THEN RESPONSE #100
+  SetGlobal("A7DrowGenie", "AR2200", 4)
+  StartDialogNoSet(Player1)
+END
+
+
+// Quest 3: Initiate talk after party acquired and identified the soulcage collection from Tathas
+IF
+  Delay(4)
+  PartyHasItemIdentified("A7MISC5")
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  GlobalGT("A7Quest3", "GLOBAL", 0)
+  Global("Q3CollectionFound", "LOCALS", 0)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("Player1Greed", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("Q3CollectionFound", "LOCALS", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Quest 3: Initiate talk after party received Afaaq's soulcage from Tathas
+IF
+  Delay(4)
+  PartyHasItem("A7MISC6")
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  Global("A7Quest3", "GLOBAL", 10)
+  Global("Q3CollectionFound", "LOCALS", 0)
+  Global("Q3SoulcageRewarded", "LOCALS", 0)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("Q3SoulcageRewarded", "LOCALS", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Quest 5: Warn CHARNAME of his own presence before entering the Magma Cavern
+IF
+  AreaCheck("A77002")
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  GlobalGT("TellAboutCave", "A77002", 0)
+  Global("WarnEfreetReaction", "A77002", 0)
+  Global("WarnEfreetReactionTimer", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobalTimer("WarnEfreetReactionTimer", "A77002", 6)
+END
+
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  GlobalTimerExpired("WarnEfreetReactionTimer", "A77002")
+  Global("WarnEfreetReaction", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobal("WarnEfreetReaction", "A77002", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// Quest 5: Afaaq is enraged after CHARNAME betrayed Karim and friends to the efreets
+IF
+  Delay(6)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 1)
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 0)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5ChallengePC", "GLOBAL", 1)
+  StartDialogNoSet(Player1)
+END
+
+
+// First talk after Afaaq has been upgraded
+IF
+  Delay(3)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Detect(Player1)
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  GlobalLT("UpgradeTalk", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("UpgradeTalk", "LOCALS", 2)
+  SetGlobal("A7TalkAboutCalimshan", "GLOBAL", 1)
+  FaceObject(Player1)
+  SmallWait(5)
+  StartDialogNoSet(Player1)
+END
+
+IF
+  Delay(3)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !Detect(Player1)
+  See([PC])
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("UpgradeTalk", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("UpgradeTalk", "LOCALS", 1)
+  SetGlobal("A7TalkAboutCalimshan", "GLOBAL", 1)
+  FaceObject(LastSeenBy(Myself))
+  SmallWait(5)
+  StartDialogNoSet(LastSeenBy(Myself))
+END
+
+
+// Initiate talk when CHARNAME refused to upgrade Afaaq
+IF
+  Delay(4)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Range(Player1, 15)
+  OR(2)
+    Global("A7AfaaqUpgradeRefused", "GLOBAL", 1)
+    Global("A7GreedWaitForDecision", "GLOBAL", 3)
+  Global("GreedAfaaqMad", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("GreedAfaaqMad", "LOCALS", 1)
+  ChangeAIScript("", CLASS)
+  ChangeAIScript("A7AFATKG", DEFAULT)
+  StartDialog("A7AFAAQG", Player1)
+END
+
+IF
+  !Range(Player1, 15)
+  OR(2)
+    Global("A7AfaaqUpgradeRefused", "GLOBAL", 1)
+    Global("A7GreedWaitForDecision", "GLOBAL", 3)
+  Global("GreedAfaaqMad", "LOCALS", 0)
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+
+// Initiate talk after CHARNAME has defeated the greed genie and Afaaq was not around
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  See(Player1)
+  Range(Player1, 15)
+  Global("Player1Greed", "GLOBAL", 2)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("GreedAfaaqMad", "LOCALS", 1)
+  ChangeAIScript("", CLASS)
+  ChangeAIScript("A7AFATKG", DEFAULT)
+  ChangeEnemyAlly(Myself, NEUTRAL)
+  StartDialog("A7AFAAQG", Player1)
+END
+
+IF
+  See(Player1)
+  !Range(Player1, 15)
+  Global("Player1Greed", "GLOBAL", 2)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+
+// Wait a while before talking to CHARNAME
+IF
+  Global("InToB", "GLOBAL", 1)
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("A7AfaaqLeaveParty", "GLOBAL", 1)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+  Global("DecisionToLeave", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("DecisionToLeave", "LOCALS", 1)
+  SetGlobalTimer("DecisionToLeaveTimer", "LOCALS", THREE_ROUNDS)
+END
+
+
+// Initiate talk after CHARNAME has gotten his/her soul back (when not staying)
+IF
+  Detect(Player1)
+  Range(Player1, 10)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  Global("DecisionToLeave", "LOCALS", 1)
+  GlobalTimerExpired("DecisionToLeaveTimer", "LOCALS")
+  Global("InToB", "GLOBAL", 1)
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("A7AfaaqLeaveParty", "GLOBAL", 1)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqLeaveParty", "GLOBAL", 2)
+  StartDialogNoSet(Player1)
+END
+
+IF
+  Detect(Player1)
+  !Range(Player1, 10)
+  !Detect([ENEMY])
+  !ActuallyInCombat()
+  Global("DecisionToLeave", "LOCALS", 1)
+  GlobalTimerExpired("DecisionToLeaveTimer", "LOCALS")
+  Global("InToB", "GLOBAL", 1)
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("A7AfaaqLeaveParty", "GLOBAL", 1)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+IF
+  AreaCheck("A77006")
+  Global("LampInvitation", "LOCALS", 1)
+THEN RESPONSE #100
+  StartDialogNoSet("A7Q6COPY")
+END
+
+
+// PC specific banter: Afaaq asks about the reason for CHARNAME's hunt for Irenicus
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  GlobalGT("BanterPCHeritage", "LOCALS", 1) Global("BanterPCIrenicusHunt", "LOCALS", 0) GlobalLT("Chapter", "GLOBAL", 4)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCIrenicusHunt", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%) IncrementGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 3000)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC specific banter: Introduction to Imoen
+IF
+  InParty("Imoen2")
+  GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterIntroImoen", "GLOBAL", 0) Global("BanterImoenTimer", "LOCALS", 0)
+THEN RESPONSE #100
+  RealSetGlobalTimer("BanterImoenTimer", "LOCALS", 30)
+END
+
+IF
+  Detect("Imoen2") See(Player1)
+  !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck("Imoen2", CD_STATE_NOTVALID) InParty("Imoen2")
+  !ActuallyInCombat() !Detect([ENEMY])
+  GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterIntroImoen", "GLOBAL", 0)
+  RealGlobalTimerExpired("BanterImoenTimer", "LOCALS")
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("A7BanterIntroImoen", "GLOBAL", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%) IncrementGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 3000)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC specific banter: After defeating Firkraag
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("BanterPCDragons", "LOCALS", 0) Dead("firkra02")
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCDragons", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%) IncrementGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 3000)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC specific banter: Afaaq rejoined CHARNAME after Quest 5
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("BanterPCRejoined", "LOCALS", 0) Global("A7Quest5", "GLOBAL", 10) Global("A7Q5AfaaqAppears", "GLOBAL", 2)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCRejoined", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%) IncrementGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 3000)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+
+// PC banter: Introduction to party members
+IF
+  See(Player1) !StateCheck(Myself, CD_STATE_NOTVALID) 
+  !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Player2, CD_STATE_NOTVALID) !StateCheck(Player3, CD_STATE_NOTVALID) 
+  !StateCheck(Player4, CD_STATE_NOTVALID) !StateCheck(Player5, CD_STATE_NOTVALID) !StateCheck(Player6, CD_STATE_NOTVALID) 
+  !ActuallyInCombat() !Detect([ENEMY]) !AreaCheck("AR6200")
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  Global("A7BanterIntro", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("A7BanterIntro", "GLOBAL", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banters: Afaaq.Rakshasa
+IF
+  See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  Global("A7Q1AfaaqRewarded", "GLOBAL", 0) Global("A7Quest2", "GLOBAL", 10) GlobalGT("BanterPCHeritage", "GLOBAL", 0) Global("BanterPCRakshasa", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCRakshasa", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banters: Heritage #1
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("BanterPCHeritage", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCHeritage", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banters: Heritage #2
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  Global("BanterPCHeritage", "LOCALS", 2)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCHeritage", "LOCALS", 3)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banters: Heritage #3
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  Global("BanterPCHeritage", "LOCALS", 4)
+THEN RESPONSE #75
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCHeritage", "LOCALS", 5)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banter: Heritage #4
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  GlobalGT("Chapter", "GLOBAL", 4) Global("BanterPCHeritage", "LOCALS", 6)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCHeritage", "LOCALS", 7)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banter: StolenSoul
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  GlobalGT("Chapter", "GLOBAL", 4) GlobalLT("Chapter", "GLOBAL", 7) Global("PCToldAboutHeritage", "LOCALS", 1) GlobalLT("A7Quest3", "GLOBAL", 10) Global("BanterPCSoul", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCSoul", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banter: Heritage #5
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  Global("Chapter", "GLOBAL", 5) Global("PCToldAboutHeritage", "LOCALS", 1) Global("BanterIrenicusPlans", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterIrenicusPlans", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banters: Afaaq.TathasMelarn
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  Global("A7Quest3", "GLOBAL", 10) GlobalGT("BanterPCHeritage", "LOCALS", 0) Global("BanterPCTathasMelarn", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCTathasMelarn", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banter: Afaaq.AboutGenies
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  GlobalGT("BanterPCHeritage", "LOCALS", 7) Global("BanterPCAboutGenies", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCAboutGenies", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banter: Heritage #6
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  GlobalGT("Chapter", "GLOBAL", 7) Global("BanterPCHeritage", "LOCALS", 8)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCHeritage", "LOCALS", 9)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banters: Afaaq.TrueAge
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  GlobalGT("BanterPCHeritage", "LOCALS", 9) Global("BanterPCTrueAge", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCTrueAge", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+// PC banter: Afaaq.Calim #1
+// TODO
+// IF
+  // Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  // Global("BanterPCTrueAge", "LOCALS", 2) Global("BanterPCCalim", "LOCALS", 0)
+// THEN RESPONSE #100
+  // SetInterrupt(FALSE)
+  // SetGlobal("BanterPCCalim", "LOCALS", 1)
+  // RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  // PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  // SetInterrupt(TRUE)
+// END
+
+// PC banter: Afaaq.Calim #2
+// TODO
+// IF
+  // Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  // Global("BanterPCTrueAge", "LOCALS", 2) Global("BanterPCCalim", "LOCALS", 2)
+// THEN RESPONSE #100
+  // SetInterrupt(FALSE)
+  // SetGlobal("BanterPCCalim", "LOCALS", 3)
+  // RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  // PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  // SetInterrupt(TRUE)
+// END
+
+// PC banter: Future plans
+IF
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
+  // Global("BanterPCCalim", "LOCALS", 4) 
+  GlobalGT("TalkedToSolar", "GLOBAL", 5) Global("BanterPCPlans", "LOCALS", 0)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("BanterPCPlans", "LOCALS", 1)
+  RealSetGlobalTimer("A7AfaaqBanterTimer", "GLOBAL", %afq_banter_interval_pc%)
+  PlaySong(0) PlaySound("A7AFQMUS") SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player1) SetGlobal("BanterActive", "LOCALS", 0)
+  SetInterrupt(TRUE)
+END
+
+
+// First-time initialization of the NPC banter timer (randomly chosen between 12 min. .. 39 min.)
+IF
+  GlobalGT("A7BanterIntro", "GLOBAL", 0)
+  Global("NPCBanterTimerInit", "LOCALS", 0)
+THEN
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 720)
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 900)
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 1080)
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 1260)
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 1440)
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 1620)
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 1800)
+  RESPONSE #10
+    SetGlobal("NPCBanterTriggered", "LOCALS", 0)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 1980)
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 2160)
+  RESPONSE #10
+    SetGlobal("NPCBanterTimerInit", "LOCALS", 1)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 2340)
+END
+
+// Triggering banter with Player2
+IF
+  See(Player2) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player2, CD_STATE_NOTVALID) InPartySlot([PC], 1)
+  !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
+  RandomNum(5, 1)
+THEN
+  RESPONSE #75
+    SetInterrupt(FALSE)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+    SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player2) SetGlobal("BanterActive", "LOCALS", 0)
+    SetInterrupt(TRUE)
+  RESPONSE #25
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+END
+
+// Triggering banter with Player3
+IF
+  See(Player3) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player3, CD_STATE_NOTVALID) InPartySlot([PC], 2)
+  !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
+  RandomNum(5, 2)
+THEN
+  RESPONSE #75
+    SetInterrupt(FALSE)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+    SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player3) SetGlobal("BanterActive", "LOCALS", 0)
+    SetInterrupt(TRUE)
+  RESPONSE #25
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+END
+
+// Triggering banter with Player4
+IF
+  See(Player4) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player4, CD_STATE_NOTVALID) InPartySlot([PC], 3)
+  !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
+  RandomNum(5, 3)
+THEN
+  RESPONSE #75
+    SetInterrupt(FALSE)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+    SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player4) SetGlobal("BanterActive", "LOCALS", 0)
+    SetInterrupt(TRUE)
+  RESPONSE #25
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+END
+
+// Triggering banter with Player5
+IF
+  See(Player5) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player5, CD_STATE_NOTVALID) InPartySlot([PC], 4)
+  !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
+  RandomNum(5, 4)
+THEN
+  RESPONSE #75
+    SetInterrupt(FALSE)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+    SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player5) SetGlobal("BanterActive", "LOCALS", 0)
+    SetInterrupt(TRUE)
+  RESPONSE #25
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+END
+
+// Triggering banter with Player6
+IF
+  See(Player6) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player6, CD_STATE_NOTVALID) InPartySlot([PC], 5)
+  !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
+  RandomNum(5, 5)
+THEN
+  RESPONSE #75
+    SetInterrupt(FALSE)
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+    SetGlobal("BanterActive", "LOCALS", 1) StartDialogNoSet(Player6) SetGlobal("BanterActive", "LOCALS", 0)
+    SetInterrupt(TRUE)
+  RESPONSE #25
+    RealSetGlobalTimer("A7AfaaqBanterNPCTimer", "GLOBAL", 3600)
+END
+
+
+// Increasing/Decreasing friendship points when reaching a certain reputation
+IF
+  ReputationGT(Player1, 15)
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  Global("AfaaqInitialized", "LOCALS", 1)
+  Global("Reputation16", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Reputation16", "LOCALS", 1)
+  IncrementGlobal("A7AfaaqFriendship", "GLOBAL", 1)
+  DisplayStringNoName(Player1, @60028)    // Afaaq's respect for <CHARNAME> has grown.
+  Continue()
+END
+
+IF
+  ReputationGT(Player1, 16)
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  Global("AfaaqInitialized", "LOCALS", 1)
+  Global("Reputation17", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Reputation17", "LOCALS", 1)
+  IncrementGlobal("A7AfaaqFriendship", "GLOBAL", 1)
+  DisplayStringNoName(Player1, @60028)    // Afaaq's respect for <CHARNAME> has grown.
+  Continue()
+END
+
+IF
+  ReputationGT(Player1, 17)
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  Global("AfaaqInitialized", "LOCALS", 1)
+  Global("Reputation18", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Reputation18", "LOCALS", 1)
+  IncrementGlobal("A7AfaaqFriendship", "GLOBAL", 2)
+  DisplayStringNoName(Player1, @60029)    // Afaaq's respect for <CHARNAME> has grown significantly.
+  Continue()
+END
+
+IF
+  ReputationLT(Player1, 6)
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  Global("AfaaqInitialized", "LOCALS", 1)
+  Global("Reputation5", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Reputation5", "LOCALS", 1)
+  IncrementGlobal("A7AfaaqFriendship", "GLOBAL", -1)
+  DisplayStringNoName(Player1, @60030)    // Afaaq's respect for <CHARNAME> has waned.
+  Continue()
+END
+
+IF
+  ReputationLT(Player1, 5)
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  Global("AfaaqInitialized", "LOCALS", 1)
+  Global("Reputation4", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Reputation4", "LOCALS", 1)
+  IncrementGlobal("A7AfaaqFriendship", "GLOBAL", -1)
+  DisplayStringNoName(Player1, @60030)    // Afaaq's respect for <CHARNAME> has waned.
+  Continue()
+END
+
+IF
+  ReputationLT(Player1, 4)
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  Global("AfaaqInitialized", "LOCALS", 1)
+  Global("Reputation3", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Reputation3", "LOCALS", 1)
+  IncrementGlobal("A7AfaaqFriendship", "GLOBAL", -2)
+  DisplayStringNoName(Player1, @60031)    // Afaaq's respect for <CHARNAME> has waned significantly.
+  Continue()
+END
+
+
+// Converting number of Healing Potion offered by CHARNAME into friendship points
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  GlobalGT("AfaaqPotions", "LOCALS", 9)
+  GlobalLT("AfaaqPotionsLimit", "LOCALS", 3)    // max. 3 friendship points for potion donations
+THEN RESPONSE #100
+  IncrementGlobal("AfaaqPotions", "LOCALS", -10)
+  IncrementGlobal("AfaaqPotionsLimit", "LOCALS", 1)
+  IncrementGlobal("A7AfaaqFriendship", "GLOBAL", 1)
+  DisplayStringNoName(Player1, @60028)    // Afaaq's respect for <CHARNAME> has grown.
+END
+

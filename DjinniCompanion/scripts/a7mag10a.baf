@@ -1,0 +1,198 @@
+// modified MAGE10C.BCS for Quest 3 (for Arabani group)
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  HaveSpell(WIZARD_STONE_SKIN)
+  Global("Prep","LOCALS",0)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  ApplySpell(Myself,WIZARD_STONE_SKIN)
+  Spell(Myself,WIZARD_MIRROR_IMAGE)
+  SetGlobal("Prep","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_STONE_SKIN)
+  Global("Prep","LOCALS",0)
+THEN RESPONSE #100
+  ApplySpell(Myself,WIZARD_STONE_SKIN)
+  Spell(Myself,WIZARD_MIRROR_IMAGE)
+  SetGlobal("Prep","LOCALS",1)
+END
+
+
+IF
+  HasItem("POTN52", Myself)
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  HPPercentLT(Myself, 50)
+  !GlobalTimerNotExpired("DrankPotionTimer", "LOCALS")
+THEN RESPONSE #100
+  SetGlobalTimer("DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN52", Myself)
+  Continue()
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  HaveSpell(WIZARD_FIRE_SHIELD_RED)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(Myself,WIZARD_FIRE_SHIELD_RED)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHAOS)
+  HaveSpell(WIZARD_FIRE_SHIELD_RED)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+  Spell(Myself,WIZARD_FIRE_SHIELD_RED)
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  HaveSpell(WIZARD_TELEPORT_FIELD)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(Myself,WIZARD_TELEPORT_FIELD)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_TELEPORT_FIELD)
+THEN RESPONSE #100
+  Spell(Myself,WIZARD_TELEPORT_FIELD)
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CONFUSION)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_CONFUSION)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(WIZARD_LIGHTNING_BOLT)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),WIZARD_LIGHTNING_BOLT)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_LIGHTNING_BOLT)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  HaveSpell(WIZARD_HOLD_PERSON)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),WIZARD_HOLD_PERSON)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  HaveSpell(WIZARD_HOLD_PERSON)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_HOLD_PERSON)
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  !Range(LastSeenBy(Myself), 15)
+  HaveSpell(WIZARD_WEB)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),WIZARD_WEB)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_WEB)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_WEB)
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  HaveSpell(WIZARD_STONE_SKIN)
+  CheckStatLT(Myself,1,STONESKINS)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(Myself,WIZARD_STONE_SKIN)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_STONE_SKIN)
+  CheckStatLT(Myself,1,STONESKINS)
+THEN RESPONSE #100
+  Spell(Myself,WIZARD_STONE_SKIN)
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  StateCheck(Myself,STATE_SILENCED)
+  HaveSpell(WIZARD_VOCALIZE)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(Myself,WIZARD_VOCALIZE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself,STATE_SILENCED)
+  HaveSpell(WIZARD_VOCALIZE)
+THEN RESPONSE #100
+  Spell(Myself,WIZARD_VOCALIZE)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(WIZARD_CHROMATIC_ORB)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),WIZARD_CHROMATIC_ORB)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_CHROMATIC_ORB)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_CHROMATIC_ORB)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),WIZARD_MAGIC_MISSILE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+END

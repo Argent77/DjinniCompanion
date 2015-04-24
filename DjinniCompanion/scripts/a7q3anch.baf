@@ -1,0 +1,41 @@
+// *** Helper creature script to trigger the Anchor Stone's power in Quest 3 ***
+
+// Trigger teleportation sequence
+IF
+  GlobalLT("udDrowPlot", "GLOBAL", 10) 
+  Global("A7Quest3", "GLOBAL", 3)
+  Global("A7ArabaniAttacked", "GLOBAL", 0)
+  Range("A7Tathas", 10)
+  Global("Teleported", "LOCALS", 0)
+THEN RESPONSE #100
+  ClearAllActions()
+  StartCutSceneMode()
+  SetGlobal("Teleported", "LOCALS", 1)
+  SetGlobal("A7Quest3", "GLOBAL", 4)
+  MoveViewObject("A7Tathas", VERY_FAST)
+  TakePartyItem("A7MISC7")
+  StartCutScene("A7Q3ct3")
+END
+
+// Remove item when quest is over or Arabani is invalid
+IF
+  OR(2)
+    GlobalGT("A7Quest3", "GLOBAL", 3)
+    Global("A7ArabaniAttacked", "GLOBAL", 1)
+THEN RESPONSE #100
+  DisplayStringHead(LastSummonerOf(Myself), @3927)    // The item flashes for a moment and vanishes from your backpack.
+  CreateVisualEffectObject("SPGFLSH1", LastSummonerOf(Myself))
+  TakePartyItem("A7MISC7")
+  DestroySelf()
+END
+
+// Do nothing if not near Tathas
+IF
+  Global("A7Quest3", "GLOBAL", 3)
+  Global("A7ArabaniAttacked", "GLOBAL", 0)
+  !Range("A7Tathas", 10)
+THEN RESPONSE #100
+  DisplayStringHead(LastSummonerOf(Myself), @3928)    // Tathas Melarn is too far away to be effective.
+  DestroySelf()
+END
+

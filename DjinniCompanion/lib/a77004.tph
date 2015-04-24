@@ -1,0 +1,197 @@
+// *** Area A77004 (Jungle of Chult) ***
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT PORTRAIT_RAKPRS "DjinniCompanion/portraits/bg2ee/a7rakprs.bmp"
+  OUTER_TEXT_SPRINT ITEM_CWS1 "DjinniCompanion/items/bg2ee/a7q2cws1.bmp"
+  OUTER_TEXT_SPRINT ITEM_CWS2 "DjinniCompanion/items/bg2ee/a7q2cws2.bmp"
+  OUTER_TEXT_SPRINT ITEM_CWS3 "DjinniCompanion/items/bg2ee/a7q2cws3.bmp"
+  OUTER_TEXT_SPRINT ITEM_CWS4 "DjinniCompanion/items/bg2ee/a7q2cws4.bmp"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT PORTRAIT_RAKPRS "DjinniCompanion/portraits/a7rakprs.bmp"
+  OUTER_TEXT_SPRINT ITEM_CWS1 "DjinniCompanion/items/a7q2cws1.bam"
+  OUTER_TEXT_SPRINT ITEM_CWS2 "DjinniCompanion/items/a7q2cws2.bam"
+  OUTER_TEXT_SPRINT ITEM_CWS3 "DjinniCompanion/items/a7q2cws3.bam"
+  OUTER_TEXT_SPRINT ITEM_CWS4 "DjinniCompanion/items/a7q2cws4.bam"
+END
+
+COPY ~DjinniCompanion/areas/a77004.are~   ~override~
+  // Adding autonotes to the map
+  READ_LONG 0xc4 "autonote_ofs"
+  SAY (autonote_ofs + (0x34 * 0) + 0x04) @2902    // Magical Portal
+  SAY (autonote_ofs + (0x34 * 1) + 0x04) @2903    // Temple
+  // Setting info region strings
+  READ_LONG 0x5c "trigger_ofs"
+  // ToOriginBlocked
+  SAY (trigger_ofs + (0xc4 * 0) + 0x64) @2927     // The portal doesn't appear to work. You have to find a way to activate it first.
+  // Temple_1:
+  SAY (trigger_ofs + (0xc4 * 1) + 0x64) @2921     // The entrance to the temple is shielded by an impenetrable forcefield.
+  // Monument_1:
+  SAY (trigger_ofs + (0xc4 * 2) + 0x64) @2922     // This structure appears to be the living quarters for the inhabitants of this jungle. You see nothing of interest there.
+  // Monument_2:
+  SAY (trigger_ofs + (0xc4 * 6) + 0x64) @2923     // This ancient stone altar looks to be hundreds of years old. It seems to have been used recently,...
+  // Monument_3:
+  SAY (trigger_ofs + (0xc4 * 9) + 0x64) @2922     // This structure appears to be the living quarters for the inhabitants of this jungle. You see nothing of interest there.
+
+//COPY_LARGE ~DjinniCompanion/areas/a77004.tis~   ~override~
+COPY_LARGE ~DjinniCompanion/areas/a7am04_n.wav~ ~override~
+COPY ~DjinniCompanion/areas/a77004.wed~   ~override~
+     ~DjinniCompanion/areas/a77004ht.bmp~ ~override~
+     ~DjinniCompanion/areas/a77004lm.bmp~ ~override~
+     ~DjinniCompanion/areas/a77004sr.bmp~ ~override~
+     ~DjinniCompanion/areas/a704ms1.bam~  ~override~
+     ~DjinniCompanion/areas/a7am04.wav~   ~override~
+     ~DjinniCompanion/areas/a7am04a.wav~  ~override~
+     ~DjinniCompanion/areas/a7am04b1.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04b2.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04b3.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04b4.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04b5.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04b6.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04b7.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04ba.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04bb.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04bc.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04bd.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04be.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04bf.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04bg.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04bh.wav~ ~override~
+     ~DjinniCompanion/areas/a7am04d.wav~  ~override~
+
+
+// items
+COPY ~DjinniCompanion/items/a7q2ws1.itm~ ~override~
+  SAY NAME1 @2904     // Yuan-Ti Wardstone 1
+  SAY NAME2 @2904     // Yuan-Ti Wardstone 1
+  SAY UNIDENTIFIED_DESC @2905   // This stone is unnaturally cool to the touch and has an etching on it which you don't recognise.
+  SAY IDENTIFIED_DESC @2905     // This stone is unnaturally cool to the touch and has an etching on it which you don't recognise.
+
+COPY ~DjinniCompanion/items/a7q2ws2.itm~ ~override~
+  SAY NAME1 @2907     // Yuan-Ti Wardstone 2
+  SAY NAME2 @2907     // Yuan-Ti Wardstone 2
+  SAY UNIDENTIFIED_DESC @2908   // Although this stone looks roughly cut, it has some intricate etchings on it which you don't recognise.
+  SAY IDENTIFIED_DESC @2908     // Although this stone looks roughly cut, it has some intricate etchings on it which you don't recognise.
+
+COPY ~DjinniCompanion/items/a7q2ws3.itm~ ~override~
+  SAY NAME1 @2910     // Yuan-Ti Wardstone 3
+  SAY NAME2 @2910     // Yuan-Ti Wardstone 3
+  SAY UNIDENTIFIED_DESC @2911   // This unexpectedly heavy stone has been made from a material you don't recognize...
+  SAY IDENTIFIED_DESC @2911     // This unexpectedly heavy stone has been made from a material you don't recognize...
+
+COPY ~DjinniCompanion/items/a7q2ws4.itm~ ~override~
+  SAY NAME1 @2913     // Yuan-Ti Wardstone 4
+  SAY NAME2 @2913     // Yuan-Ti Wardstone 4
+  SAY UNIDENTIFIED_DESC @2914   // At first glance this stone looks like any other, but you can see small markings which emit...
+  SAY IDENTIFIED_DESC @2914     // At first glance this stone looks like any other, but you can see small markings which emit...
+
+COPY ~DjinniCompanion/items/a7q2key1.itm~ ~override~
+  SAY NAME1 @2917     // Yuan-Ti Key
+  SAY NAME2 @2917     // Yuan-Ti Key
+  SAY UNIDENTIFIED_DESC @2918   // This key was found on the body of a yuan-ti mage.
+  SAY IDENTIFIED_DESC @2918     // This key was found on the body of a yuan-ti mage.
+
+// Invisibility Ring (internally used) for rakshasa
+COPY ~DjinniCompanion/items/a7ring01.itm~ ~override~
+  SAY NAME1 #6835     // Ring of Invisibility
+
+
+COPY ~%ITEM_CWS1%~ ~override~
+     ~%ITEM_CWS2%~ ~override~
+     ~%ITEM_CWS3%~ ~override~
+     ~%ITEM_CWS4%~ ~override~
+     ~DjinniCompanion/items/a7q2iws1.bam~ ~override~
+     ~DjinniCompanion/items/a7q2iws2.bam~ ~override~
+     ~DjinniCompanion/items/a7q2iws3.bam~ ~override~
+     ~DjinniCompanion/items/a7q2iws4.bam~ ~override~
+     ~DjinniCompanion/items/a7q2gws.bam~ ~override~
+
+
+// creatures
+COPY ~DjinniCompanion/creatures/a7q2serp.cre~ ~override~
+  SAY NAME1 @2916    // Serpent Statue
+  SAY NAME2 @2916    // Serpent Statue
+
+COPY ~DjinniCompanion/creatures/a7q2yu01.cre~ ~override~    // Yuan-Ti
+     ~DjinniCompanion/creatures/a7q2yu02.cre~ ~override~    // Greater Yuan-Ti
+     ~DjinniCompanion/creatures/a7q2yu03.cre~ ~override~    // Yuan-Ti mage
+     ~DjinniCompanion/creatures/a7q2yu05.cre~ ~override~    // (unique) Yuan-Ti mage
+     ~DjinniCompanion/creatures/a7q2snak.cre~ ~override~    // Giant Snake
+     ~DjinniCompanion/creatures/a7q2ws1a.cre~ ~override~    // Summoned snake
+     ~DjinniCompanion/creatures/a7q2ws1b.cre~ ~override~    // Summoned snake
+     ~DjinniCompanion/creatures/a7q2ws1c.cre~ ~override~    // Summoned snake
+     ~DjinniCompanion/creatures/a7q2ws1d.cre~ ~override~    // Summoned boss snake
+     ~DjinniCompanion/creatures/a7q2ws2a.cre~ ~override~    // Summoned spider
+     ~DjinniCompanion/creatures/a7q2ws2b.cre~ ~override~    // Summoned spider
+     ~DjinniCompanion/creatures/a7q2ws2c.cre~ ~override~    // Summoned spider
+     ~DjinniCompanion/creatures/a7q2ws2d.cre~ ~override~    // Summoned boss spider
+     ~DjinniCompanion/creatures/a7q2ws3a.cre~ ~override~    // Summoned Yuan-Ti
+     ~DjinniCompanion/creatures/a7q2ws3b.cre~ ~override~    // Summoned Yuan-Ti
+     ~DjinniCompanion/creatures/a7q2ws3c.cre~ ~override~    // Summoned Yuan-Ti
+     ~DjinniCompanion/creatures/a7q2rk1a.cre~ ~override~    // Rakshasa 1 (near the teleporter)
+     ~DjinniCompanion/creatures/a7q2rk1b.cre~ ~override~    // Rakshasa 2 (near the teleporter)
+     ~DjinniCompanion/creatures/a7q2rk2.cre~ ~override~     // Rakshasa (near the temple)
+     ~DjinniCompanion/creatures/a7q2rk3.cre~ ~override~     // Triggered Rakshasa
+     ~DjinniCompanion/creatures/a7q2rk4.cre~ ~override~     // Triggered Rakshasa
+     ~DjinniCompanion/creatures/a7q2rk5.cre~ ~override~     // Triggered Rakshasa
+     ~DjinniCompanion/creatures/a7q2rk6.cre~ ~override~     // Triggered Rakshasa
+     ~DjinniCompanion/creatures/a7q2rk7.cre~ ~override~     // Triggered Rakshasa
+
+// Summoned Yuan-Ti Champion
+COPY ~DjinniCompanion/creatures/a7q2yu04.cre~ ~override~
+  SAY NAME1 @2919     // Yuan-Ti Champion
+  SAY NAME2 @2919     // Yuan-Ti Champion
+
+// Ak'chazar High Priest
+COPY ~DjinniCompanion/creatures/a7q2rkpr.cre~ ~override~
+  SAY NAME1 @2920     // Ak'chazar High Priest
+  SAY NAME2 @2920     // Ak'chazar High Priest
+
+// portraits 
+COPY ~%PORTRAIT_RAKPRS%~ ~override~
+
+// scripts
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a77004.baf~
+  ~DjinniCompanion/scripts/a7q2ff1.baf~
+  ~DjinniCompanion/scripts/a7q2ff2.baf~
+  ~DjinniCompanion/scripts/a7q2wsx1.baf~
+  ~DjinniCompanion/scripts/a7q2wsx2.baf~
+  ~DjinniCompanion/scripts/a7q2wsx3.baf~
+  ~DjinniCompanion/scripts/a7q2wsx4.baf~
+  ~DjinniCompanion/scripts/a7q2serp.baf~
+  ~DjinniCompanion/scripts/a7q2mar1.baf~
+  ~DjinniCompanion/scripts/a7q2mar2.baf~
+  ~DjinniCompanion/scripts/a7q2mar3.baf~
+  ~DjinniCompanion/scripts/a7q2mar4.baf~
+  ~DjinniCompanion/scripts/a7q2mar5.baf~
+  ~DjinniCompanion/scripts/a7q2yu04.baf~
+  ~DjinniCompanion/scripts/a7q2rk.baf~
+  ~DjinniCompanion/scripts/a7q2rk1a.baf~
+  ~DjinniCompanion/scripts/a7q2rk1b.baf~
+  ~DjinniCompanion/scripts/a7q2rk2.baf~
+  ~DjinniCompanion/scripts/a7q2atk1.baf~
+  ~DjinniCompanion/scripts/a7q2rkpr.baf~
+  ~DjinniCompanion/scripts/a7q2ct1a.baf~
+  ~DjinniCompanion/scripts/a7q2ct1b.baf~
+  ~DjinniCompanion/scripts/a7q2ct2.baf~
+  ~DjinniCompanion/scripts/a7q2ct3.baf~
+  ~DjinniCompanion/scripts/a7q2trig.baf~
+  ~DjinniCompanion/scripts/a7q2trav.baf~
+  ~DjinniCompanion/scripts/a7q2trp1.baf~
+EXTEND_BOTTOM ~cernd.bcs~ ~DjinniCompanion/scripts/cernd_quest2.baf~
+EXTEND_BOTTOM ~jaheira.bcs~ ~DjinniCompanion/scripts/jaheira_quest2.baf~
+
+// dialogs
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/dialogs/A7Q2serp.d~
+  ~DjinniCompanion/dialogs/A7Q2rk1a.d~
+  ~DjinniCompanion/dialogs/A7Q2rk2.d~
+  ~DjinniCompanion/dialogs/A7Q2rkpr.d~
+  ~DjinniCompanion/dialogs/A7Q2NPCs.d~
+
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  EXTEND_BOTTOM ~hexxat.bcs~ ~DjinniCompanion/scripts/hexxat_quest2.baf~
+  COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/dialogs/bg2ee/A7Q2NPCs_ee.d~
+END

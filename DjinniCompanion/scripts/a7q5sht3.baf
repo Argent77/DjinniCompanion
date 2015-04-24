@@ -1,0 +1,89 @@
+// *** Shout script for djinnis (Quest 5) ***
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  !AreaCheck("A77003")
+  Global("A7Q5DjinniAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5DjinniAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  Heard([ANYONE], %shout_djinni_attack%)
+  !AreaCheck("A77003")
+  Global("A7Q5DjinniAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5DjinniAttacked", "GLOBAL", 1)
+  Continue()
+END
+
+IF
+  Global("A7Q5DjinniAttacked", "GLOBAL", 1)
+  !AreaCheck("A77003")
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Enemy()
+END
+
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  !AreaCheck("A77003")
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Shout(%shout_djinni_attack%)
+  Enemy()
+END
+
+IF
+  HitBy([GOODCUTOFF], CRUSHING)
+  !AreaCheck("A77003")
+THEN RESPONSE #100
+  Shout(%shout_djinni_attack%)
+  Continue()
+END
+
+IF
+  HitBy([EVILCUTOFF], CRUSHING)
+  AreaCheck("A77003")
+THEN RESPONSE #100
+  Shout(%shout_djinni_attack%)
+  Continue()
+END
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT)
+  !AreaCheck("A77003")
+  Allegiance(Myself, ENEMY)
+  ActionListEmpty()
+THEN RESPONSE #100
+  Shout(%shout_djinni_attack%)
+  Continue()
+END
+
+IF
+  AttackedBy([EVILCUTOFF], DEFAULT)
+  AreaCheck("A77003")
+  ActionListEmpty()
+THEN RESPONSE #100
+  Shout(%shout_djinni_attack%)
+  Continue()
+END
+
+IF
+  Heard([ANYONE], %shout_djinni_attack%)
+  !AreaCheck("A77003")
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  Enemy()
+  MoveToObject(LastHeardBy(Myself))
+END
+
+IF
+  Heard([ANYONE], %shout_djinni_attack%)
+  !See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  MoveToObject(LastHeardBy(Myself))
+  Continue()
+END

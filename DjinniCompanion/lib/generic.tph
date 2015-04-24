@@ -1,0 +1,32 @@
+// *** general stuff not fitting elsewhere ***
+
+// needed in a couple of scripts
+APPEND ~state.ids~ ~0x00000FC0 STATE_REALLY_DEAD~ UNLESS ~STATE_REALLY_DEAD~
+APPEND ~state.ids~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
+
+APPEND ~stats.ids~ ~166 A7SCRIPTINGSTATE1~ UNLESS ~A7SCRIPTINGSTATE1~
+
+APPEND ~gtimes.ids~ ~6 ONE_ROUND~ UNLESS ~ONE_ROUND~
+APPEND ~gtimes.ids~ ~12 TWO_ROUNDS~ UNLESS ~TWO_ROUNDS~
+APPEND ~gtimes.ids~ ~18 THREE_ROUNDS~ UNLESS ~THREE_ROUNDS~
+APPEND ~gtimes.ids~ ~24 FOUR_ROUNDS~ UNLESS ~FOUR_ROUNDS~
+APPEND ~gtimes.ids~ ~30 FIVE_ROUNDS~ UNLESS ~FIVE_ROUNDS~
+APPEND ~gtimes.ids~ ~60 ONE_TURN~ UNLESS ~ONE_TURN~
+APPEND ~gtimes.ids~ ~300 ONE_HOUR~ UNLESS ~ONE_HOUR~
+APPEND ~gtimes.ids~ ~600 TWO_HOURS~ UNLESS ~TWO_HOURS~
+APPEND ~gtimes.ids~ ~1800 SIX_HOURS~ UNLESS ~SIX_HOURS~
+APPEND ~gtimes.ids~ ~2400 EIGHT_HOURS~ UNLESS ~EIGHT_HOURS~
+
+APPEND ~shoutids.ids~ ~111 WARNALARM~ UNLESS ~WARNALARM~
+APPEND ~shoutids.ids~ ~151 HELP_ME_GROUP151~ UNLESS ~HELP_ME_GROUP151~
+
+
+// enable unused actions
+APPEND ~action.ids~ ~293 StartDialogOverrideItem(S:DialogFile*,O:Target*,I:Unused,I:Unused,I:ConverseAsItem)~
+  UNLESS ~StartDialogOverrideItem(S:.+\*,O:.+\*,I:.+,I:.+,I:.+)~
+CLEAR_IDS_MAP
+
+
+// very short silent sound file for generic use
+COPY ~DjinniCompanion/misc/a7slnt_s.wav~ ~override~
+

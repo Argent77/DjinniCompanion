@@ -1,0 +1,109 @@
+// Generic script for all creatures in Tathas' war party (Quest 3)
+
+// Remove initial invisibility after talking to Tathas
+IF
+  Global("appear", "LOCALS", 0)
+  Global("TathasMet", "A77005", 1)
+  HasItem("A7RING01", Myself)
+THEN RESPONSE #100
+  SetGlobal("appear", "LOCALS", 1)
+  DestroyItem("A7RING01")
+END
+
+// Disappear forever
+IF
+  Global("Quest3Finished", "A77005", 1)
+THEN RESPONSE #100
+  DestroySelf()
+END
+
+// show health during the fight Arabani <-> Tathas
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  Global("A7TathasAttacked", "GLOBAL", 0)
+  Allegiance(Myself, NEUTRAL)
+  AreaCheck("A77007")
+THEN RESPONSE #100
+  ChangeEnemyAlly(Myself, GOODBUTBLUE)
+  Continue()
+END
+
+// hide health after the fight Arabani <-> Tathas
+IF
+  GlobalGT("A7Quest3", "GLOBAL", 6)
+  Global("A7TathasAttacked", "GLOBAL", 0)
+  Allegiance(Myself, GOODBUTBLUE)
+  AreaCheck("A77007")
+THEN RESPONSE #100
+  ChangeEnemyAlly(Myself, NEUTRAL)
+  Continue()
+END
+
+// Become hostile when attacked
+IF
+  OR(5)
+    AttackedBy([PC], DEFAULT)
+    AttackedBy([FAMILIAR], DEFAULT)
+    AttackedBy([ALLY], DEFAULT)
+    AttackedBy([CONTROLLED], DEFAULT)
+    AttackedBy([CHARMED], DEFAULT)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  SetGlobal("A7TathasAttacked", "GLOBAL", 1)
+  Enemy()
+END
+
+IF
+  !Allegiance(Myself, ENEMY)
+  Global("A7TathasAttacked", "GLOBAL", 1)
+THEN RESPONSE #100
+  Enemy()
+END
+
+// If Tathas dies and Arabani is hostile, Tathas' group becomes hostile too
+IF
+  !Allegiance(Myself, ENEMY)
+  Global("A7ArabaniAttacked", "GLOBAL", 1)
+  Dead("A7Tathas")
+THEN RESPONSE #100
+  Enemy()
+END
+
+// If Tathas AND Xunvrae d'Arabani die both parties become hostile
+IF
+  !Allegiance(Myself, ENEMY)
+  Dead("A7ARAB01")
+  Dead("A7Tathas")
+THEN RESPONSE #100
+  Enemy()
+END
+
+
+// Check for surviving Arabani members
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  Detect([0.0.0.0.%specific_arabani%])
+  Global("A7ArabaniDetected", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDetected", "MYAREA", 1)
+  SetGlobalTimer("ArabaniDetectTimer", "MYAREA", ONE_HOUR)
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  !Detect([0.0.0.0.%specific_arabani%])
+  Global("A7ArabaniDetected", "MYAREA", 1)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDetected", "MYAREA", 0)
+  SetGlobalTimer("ArabaniDetectTimer", "MYAREA", ONE_ROUND)
+END
+
+IF
+  GlobalGT("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  Global("A7ArabaniDetected", "MYAREA", 1)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDetected", "MYAREA", 0)
+END

@@ -1,0 +1,99 @@
+// The same as A7Q3genA.BCS, but including additional triggers for Xunvrae d'Arabani (Quest 3)
+
+// Initiate dialog when first entered
+IF
+  //NumTimesTalkedTo(0)
+  See([PC])
+  GlobalLT("A7Quest3", "GLOBAL", 3)
+  Global("A7Q3FirstTalk", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q3FirstTalk", "MYAREA", 1)
+  StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+// show health during the fight Arabani <-> Tathas
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  Global("A7ArabaniAttacked", "GLOBAL", 0)
+  Allegiance(Myself, NEUTRAL)
+THEN RESPONSE #100
+  ChangeEnemyAlly(Myself, GOODBUTBLUE)
+  Continue()
+END
+
+// Become hostile when attacked
+IF
+  OR(5)
+    AttackedBy([PC], DEFAULT)
+    AttackedBy([FAMILIAR], DEFAULT)
+    AttackedBy([ALLY], DEFAULT)
+    AttackedBy([CONTROLLED], DEFAULT)
+    AttackedBy([CHARMED], DEFAULT)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniAttacked", "GLOBAL", 1)
+  Enemy()
+END
+
+IF
+  !Allegiance(Myself, ENEMY)
+  Global("A7ArabaniAttacked", "GLOBAL", 1)
+THEN RESPONSE #100
+  Enemy()
+END
+
+// Check for surviving Tathas members
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  Detect([0.0.0.0.%specific_tathas%])
+  Global("A7TathasDetected", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7TathasDetected", "MYAREA", 1)
+  SetGlobalTimer("A7TathasDetectTimer", "MYAREA", ONE_HOUR)
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  !Detect([0.0.0.0.%specific_tathas%])
+  Global("A7TathasDetected", "MYAREA", 1)
+THEN RESPONSE #100
+  SetGlobal("A7TathasDetected", "MYAREA", 0)
+  SetGlobalTimer("A7TathasDetectTimer", "MYAREA", ONE_ROUND)
+END
+
+IF
+  GlobalGT("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  Global("A7TathasDetected", "MYAREA", 1)
+THEN RESPONSE #100
+  SetGlobal("A7TathasDetected", "MYAREA", 0)
+END
+
+// Xunvrae d'Arabani needs to speak with Player1 after the battle with Tathas <- 1. preparation
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  !Allegiance(Myself, ENEMY)
+  !ActuallyInCombat()
+  AreaCheck("A77007")
+  GlobalTimerExpired("A7TathasDetectTimer", "MYAREA")
+  Global("A7TathasDetected", "MYAREA", 0)
+  Global("A7TathasDefeated", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7TathasDefeated", "MYAREA", 1)
+  SetGlobal("A7Quest3", "GLOBAL", 7)
+  Continue()
+END
+
+// 3. Talk to Player1
+IF
+  !Allegiance(Myself, ENEMY)
+  Global("A7TathasDefeated", "MYAREA", 1)
+  See([PC])
+THEN RESPONSE #100
+  SetGlobal("A7TathasDefeated", "MYAREA", 2)
+  ApplySpellRES("A7REST", Myself)
+  Wait(1)
+  StartDialogueNoSet([PC])
+END

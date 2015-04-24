@@ -1,0 +1,8 @@
+// Web trap in area A77002
+
+IF
+  Entered([GOODCUTOFF])
+THEN RESPONSE #100
+  DisplayString(LastTrigger, 14381)   // Trap Srung
+  ReallyForceSpell(LastTrigger, WIZARD_WEB)
+END

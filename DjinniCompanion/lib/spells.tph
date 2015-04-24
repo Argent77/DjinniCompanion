@@ -1,0 +1,23 @@
+// *** Spells (not fitting elsewhere) ***
+
+// Spell: Conjure Air/Fire Elemental
+COPY ~DjinniCompanion/spells/a7spwi01.spl~ ~override~
+     ~DjinniCompanion/spells/a7spwi02.spl~ ~override~
+
+// Spell for cutscene: Edwin attemps to steal djinni lamp and is imprisoned
+COPY ~DjinniCompanion/spells/a7cut03.spl~  ~override~
+     ~DjinniCompanion/spells/a7spimp1.vvc~  ~override~
+     ~DjinniCompanion/spells/a7cut03.vef~  ~override~
+
+// Spell for cutscene: Afaaq calls Khalid from his resting place
+COPY ~DjinniCompanion/spells/a7conj1.spl~  ~override~
+  SAY NAME1 @60079      // Calling forth Khalid
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7spimp2.vvc~  ~override~
+     ~DjinniCompanion/spells/a7cut04.vef~  ~override~
+
+// Spell for situation: Korgan duels Afaaq
+COPY ~DjinniCompanion/spells/a7minhp.spl~  ~override~
+  SAY NAME1 ~MinHP~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+

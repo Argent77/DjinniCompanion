@@ -1,0 +1,62 @@
+// *** Area script for "Adratha's cottage" ***
+
+// Initializations
+IF
+  Global("A7RakPortal", "AR1902", 0)      // 0=uninitialized
+THEN RESPONSE #100
+  SetGlobal("A7RakPortal", "AR1902", 1)
+  TriggerActivation("A7Info01", FALSE)
+  TriggerActivation("A7Tran01", FALSE)
+  AmbientActivate("A7dimndr1", FALSE)
+  AmbientActivate("A7dimndr2", FALSE)
+  Continue()
+END
+
+// Teleport in Ihtafeer's brothers and activate teleporter
+IF
+  Global("A7RakPortal", "AR1902", 1)      // 1=initialized, but not activated
+  OR(2)
+    Global("A7Attacked", "AR1902", 1)
+    Dead("trrak01")
+THEN RESPONSE #100
+  SetGlobal("A7RakPortal", "AR1902", 2)
+  CreateCreatureDoor("trrak03", [451.256], 8)  // Jalaal
+  AmbientActivate("A7dimndr1", TRUE)      // enable teleporter opening animation
+  SmallWait(28)
+  AmbientActivate("A7dimndr2", TRUE)      // enable permanent teleporter animation
+  CreateCreature("trrak02", [244.384], 8)    // Saadat
+  SmallWait(2)
+  AmbientActivate("A7dimndr1", FALSE)      // disable teleporter opening animation
+  TriggerActivation("A7Info01", TRUE)      // Info trigger activated
+  Continue()
+END
+
+IF
+  Global("A7RakPortal", "AR1902", 2)      // 2=activated but not yet usable
+  Dead("trrak01")
+  Dead("trrak02")
+  Dead("trrak03")
+THEN RESPONSE #100
+  SetGlobal("A7RakPortal", "AR1902", 3)
+  SetGlobal("A7Quest1", "GLOBAL", 1)    // Quest started
+  TriggerActivation("A7Info01", FALSE)    // Info trigger deactivated
+  TriggerActivation("A7Tran01", TRUE)      // Teleport trigger activated
+  AddJournalEntry(@1800, QUEST)        // Set first journal entry
+  Continue()
+END
+
+IF
+  Global("A7Quest1", "GLOBAL", 9)      // rakshasa quest has ended
+THEN RESPONSE #100
+  SetGlobal("A7Quest1", "GLOBAL", 10)    // quest has ended and teleporter has been deactivated
+  TriggerActivation("A7Tran01", FALSE)    // Teleport trigger deactivated
+  Wait(1)
+  AmbientActivate("A7dimndr3", TRUE)      // enable teleporter closing animation
+  AmbientActivate("A7dimndr2", FALSE)      // disable teleporter main animation
+  SmallWait(7)
+  AmbientActivate("A7dimndr3", FALSE)      // disable teleporter closing animation
+  // removing orphaned journal entries
+  EraseJournalEntry(@1803)
+  EraseJournalEntry(@1804)
+  Continue()
+END

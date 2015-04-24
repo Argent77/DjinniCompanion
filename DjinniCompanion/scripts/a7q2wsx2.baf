@@ -1,0 +1,12 @@
+// *** Trigger for wardstone #2 slot in map A77004 (Jungle of Chult) ***
+
+// When correct wardstone has been placed
+IF
+  Global("WS2Set", "A77004", 0)
+  Contains("A7Q2WS2", Myself)
+THEN RESPONSE #100
+  SetGlobal("WS2Set", "A77004", 1)
+  SetGlobal("WS2Trap", "A77004", 1)    // trigger a trap
+  DestroyItem("A7Q2WS2")
+  DisplayStringNoName(Myself, @2928)    // When you place the right wardstone into the slot, it begins to emit a purple glow and you hear some noise behind you...
+END

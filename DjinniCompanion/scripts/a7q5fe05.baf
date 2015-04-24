@@ -1,0 +1,55 @@
+// *** Quest-specific script for Fire Elemental #5 (Quest 5) ***
+
+// makes his rounds...
+IF
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  MoveToPoint([1960.1915])
+  Wait(4)
+  MoveToPoint([1890.1915])
+  SmallWait(5)
+  MoveToPoint([1890.1370])
+  SmallWait(5)
+  MoveToPoint([1540.1370])
+  Wait(5)
+  MoveToPoint([1890.1370])
+  SmallWait(5)
+  MoveToPoint([1890.853])
+  Wait(2)
+  MoveToPoint([1960.853])
+  Face(0)
+  Wait(2)
+END
+
+// Rally around the efreeti commander
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  Allegiance(Myself, ENEMY)
+  !See([GOODCUTOFF])
+  !Dead("A7Q5EF01")
+  !See("A7Q5EF01")
+THEN 
+  RESPONSE #25
+    MoveToObject("A7Q5EF01")
+  RESPONSE #25
+    RandomWalk()
+  RESPONSE #50
+    Continue()
+END
+
+// Rally around the Malik
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  Allegiance(Myself, ENEMY)
+  !See([GOODCUTOFF])
+  Dead("A7Q5EF01")
+  InMyArea("A7Malik")
+  !See("A7Malik")
+THEN 
+  RESPONSE #25
+    MoveToObject("A7Malik")
+  RESPONSE #25
+    RandomWalk()
+  RESPONSE #50
+    Continue()
+END

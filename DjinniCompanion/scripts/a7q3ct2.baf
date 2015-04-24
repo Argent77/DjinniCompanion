@@ -1,0 +1,28 @@
+// Cutscene: Party is brough before Xunvrae d'Arabani
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7ARAB01")
+  FadeToColor([25.0], 0)
+  SmallWait(25)
+  ActionOverride(Player1, JumpToPoint([1392.800]))
+  ActionOverride(Player1, FaceObject("A7ARAB01"))
+  ActionOverride(Player2, JumpToPoint([1381.851]))
+  ActionOverride(Player2, FaceObject("A7ARAB01"))
+  ActionOverride(Player3, JumpToPoint([1324.844]))
+  ActionOverride(Player3, FaceObject("A7ARAB01"))
+  ActionOverride(Player4, JumpToPoint([1439.856]))
+  ActionOverride(Player4, FaceObject("A7ARAB01"))
+  ActionOverride(Player5, JumpToPoint([1338.902]))
+  ActionOverride(Player5, FaceObject("A7ARAB01"))
+  ActionOverride(Player6, JumpToPoint([1401.908]))
+  ActionOverride(Player6, FaceObject("A7ARAB01"))
+  ActionOverride("A7Afaaq", JumpToPoint([1461.800]))
+  ActionOverride("A7Afaaq", FaceObject("A7ARAB01"))
+  MultiPlayerSync()
+  MoveViewPoint([1392.800], INSTANT)
+  FadeFromColor([25.0], 0)
+  SmallWait(25)
+  StartDialogNoSet(Player1)
+END

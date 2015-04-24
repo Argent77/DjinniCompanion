@@ -1,0 +1,127 @@
+// *** Controls the Teleport in map A77004 AFTER the Rakshasa High Priest is dead ***
+
+IF
+  NumInParty(1)
+  WalkedToTrigger([ANYONE])
+  !Range(Player1, 30)
+THEN RESPONSE #100
+  DisplayStringNoName(Myself, 16484)    // You must gather your party before venturing forth.
+END
+
+IF
+  NumInParty(2)
+  WalkedToTrigger([ANYONE])
+  OR(2)
+    !Range(Player1, 30)
+    !Range(Player2, 30)
+THEN RESPONSE #100
+  DisplayStringNoName(Myself, 16484)    // You must gather your party before venturing forth.
+END
+
+IF
+  NumInParty(3)
+  WalkedToTrigger([ANYONE])
+  OR(3)
+    !Range(Player1, 30)
+    !Range(Player2, 30)
+    !Range(Player3, 30)
+THEN RESPONSE #100
+  DisplayStringNoName(Myself, 16484)    // You must gather your party before venturing forth.
+END
+
+IF
+  NumInParty(4)
+  WalkedToTrigger([ANYONE])
+  OR(4)
+    !Range(Player1, 30)
+    !Range(Player2, 30)
+    !Range(Player3, 30)
+    !Range(Player4, 30)
+THEN RESPONSE #100
+  DisplayStringNoName(Myself, 16484)    // You must gather your party before venturing forth.
+END
+
+IF
+  NumInParty(5)
+  WalkedToTrigger([ANYONE])
+  OR(5)
+    !Range(Player1, 30)
+    !Range(Player2, 30)
+    !Range(Player3, 30)
+    !Range(Player4, 30)
+    !Range(Player5, 30)
+THEN RESPONSE #100
+  DisplayStringNoName(Myself, 16484)    // You must gather your party before venturing forth.
+END
+
+IF
+  NumInPartyGT(5)
+  WalkedToTrigger([ANYONE])
+  OR(6)
+    !Range(Player1, 30)
+    !Range(Player2, 30)
+    !Range(Player3, 30)
+    !Range(Player4, 30)
+    !Range(Player5, 30)
+    !Range(Player6, 30)
+THEN RESPONSE #100
+  DisplayStringNoName(Myself, 16484)    // You must gather your party before venturing forth.
+END
+
+
+// Party returns from the jungle
+IF
+  WalkedToTrigger([ANYONE])
+  Global("A7Q2PortalUsed", "MYAREA", 0)
+THEN RESPONSE #100
+  SaveGame(0)
+  SetGlobal("A7Q2PortalUsed", "MYAREA", 1)
+  SetGlobal("A7Quest2", "GLOBAL", 10)
+  ClearAllActions()
+  StartCutSceneMode()
+  MoveViewObject(Myself, VERY_FAST)
+  FadeToColor([30.0], 0)
+  SmallWait(40)
+  RestorePartyLocations()    // move to previously saved party location
+  MultiPlayerSync()
+  Wait(1)
+  FadeFromColor([30.0], 0)
+  SmallWait(20)
+  EndCutSceneMode()
+  // updating journal
+  EraseJournalEntry(@2800)
+  EraseJournalEntry(@2801)
+  EraseJournalEntry(@2802)
+  EraseJournalEntry(@2803)
+  EraseJournalEntry(@2804)
+  EraseJournalEntry(@2805)
+  EraseJournalEntry(@2806)
+  EraseJournalEntry(@2807)
+  AddJournalEntry(@2810, QUEST_DONE)
+END
+
+// Failsafe-mechanism for the unlikely case the stored party location has been made invalid by an interfering script
+IF
+  WalkedToTrigger([ANYONE])
+  GlobalGT("A7Q2PortalUsed", "MYAREA", 0)
+THEN RESPONSE #100
+  SaveGame(0)
+  ClearAllActions()
+  StartCutSceneMode()
+  MoveViewObject(Myself, VERY_FAST)
+  FadeToColor([30.0], 0)
+  SmallWait(40)
+  // Teleporting to the lower left side of Athkatla's Slums
+  ActionOverride(Player1, LeaveAreaLUAPanic("AR0400", "", [634.2732], 2))
+  ActionOverride(Player1, LeaveAreaLUA("AR0400", "", [634.2732], 2))
+  ActionOverride(Player2, LeaveAreaLUA("AR0400", "", [610.2675], 2))
+  ActionOverride(Player3, LeaveAreaLUA("AR0400", "", [694.2712], 2))
+  ActionOverride(Player4, LeaveAreaLUA("AR0400", "", [673.2651], 2))
+  ActionOverride(Player5, LeaveAreaLUA("AR0400", "", [629.2612], 2))
+  ActionOverride(Player6, LeaveAreaLUA("AR0400", "", [736.2666], 2))
+  MultiPlayerSync()
+  Wait(1)
+  FadeFromColor([30.0], 0)
+  SmallWait(20)
+  EndCutSceneMode()
+END

@@ -1,0 +1,198 @@
+// modified PRIES14A.BCS for Quest 3 (Tathas group)
+
+IF
+  See([0.0.0.0.%specific_arabani%])
+  See(NearestMyGroupOfType)
+  Global("A7Prep","LOCALS",0)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  SetGlobal("A7Prep","LOCALS",1)
+  ReallyForceSpell(LastSeenBy(Myself),CLERIC_CHANT)
+  ReallyForceSpell(LastSeenBy(Myself),CLERIC_STRENGTH_OF_ONE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  See(NearestMyGroupOfType)
+  Global("A7Prep","LOCALS",0)
+THEN RESPONSE #100
+  SetGlobal("A7Prep","LOCALS",1)
+  ReallyForceSpell(LastSeenBy(Myself),CLERIC_CHANT)
+  ReallyForceSpell(LastSeenBy(Myself),CLERIC_STRENGTH_OF_ONE)
+END
+
+
+IF
+  HasItem("POTN14", Myself)
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("A7DrankPotionTimer", "LOCALS")
+  Global("A7SpeedPotion", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7SpeedPotion", "LOCALS", 1)
+  SetGlobalTimer("A7DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN14", Myself)
+  Continue()
+END
+
+IF
+  HasItem("POTN11", Myself)
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("A7DrankPotionTimer", "LOCALS")
+  Global("A7InvulPotion", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7InvulPotion", "LOCALS", 1)
+  SetGlobalTimer("A7DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN11", Myself)
+  Continue()
+END
+
+IF
+  HasItem("POTN52", Myself)
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  HPPercentLT(Myself, 50)
+  !GlobalTimerNotExpired("A7DrankPotionTimer", "LOCALS")
+THEN RESPONSE #100
+  SetGlobalTimer("A7DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN52", Myself)
+  Continue()
+END
+
+
+IF
+  See([0.0.0.0.%specific_arabani%])
+  HaveSpell(CLERIC_FLAME_STRIKE)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_FLAME_STRIKE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_FLAME_STRIKE)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),CLERIC_FLAME_STRIKE)
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_CLOAK_OF_FEAR)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_CLOAK_OF_FEAR)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_arabani%]))
+  HaveSpell(CLERIC_HOLD_PERSON)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_HOLD_PERSON)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),CLERIC_HOLD_PERSON)
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_CONFUSION)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),CLERIC_CONFUSION)
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  See(NearestMyGroupOfType)
+  HPPercentLT(LastSeenBy(Myself),60)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  See(NearestMyGroupOfType)
+  HPPercentLT(LastSeenBy(Myself),60)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+
+IF
+  See([0.0.0.0.%specific_arabani%])
+  See(NearestMyGroupOfType)
+  HPPercentLT(LastSeenBy(Myself),20)
+  HaveSpell(CLERIC_HEAL)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_HEAL)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  See(NearestMyGroupOfType)
+  HPPercentLT(LastSeenBy(Myself),20)
+  HaveSpell(CLERIC_HEAL)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_HEAL)
+END
+
+
+IF
+  See([0.0.0.0.%specific_arabani%])
+  !Range(LastSeenBy(Myself),4)
+  HPPercentLT(Myself,60)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself),4)
+  HPPercentLT(Myself,60)
+  HaveSpell(CLERIC_CURE_SERIOUS_WOUNDS)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+
+IF
+  See([0.0.0.0.%specific_arabani%])
+  !Range(LastSeenBy(Myself),4)
+  HPPercentLT(Myself,10)
+  HaveSpell(CLERIC_HEAL)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_HEAL)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself),4)
+  HPPercentLT(Myself,10)
+  HaveSpell(CLERIC_HEAL)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_HEAL)
+END
+

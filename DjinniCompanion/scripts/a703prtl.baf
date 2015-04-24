@@ -1,0 +1,28 @@
+// *** Portal script (Quest 5) ***
+
+// Trigger closing the fire portal
+IF
+  Dead("A7Malik")
+  Global("PortalDisable", "A77003", 0)
+THEN RESPONSE #100
+  SetGlobal("PortalDisable", "A77003", 1)
+  ScreenShake([8.8], 45)
+  CreateVisualEffect("SPFIREPI", [2510.1470])
+  SmallWait(10)
+  CreateVisualEffect("SPFIREPI", [2385.1610])
+  SmallWait(5)
+  RemoveMapNote([2508.1560], @6807)    // To the Elemental Plane of Fire
+  TriggerActivation("Firegate", FALSE)
+  OpenDoor("PORTAL")
+  AmbientActivate("Portal_A", FALSE)
+  AmbientActivate("Portal_B", FALSE)
+  CreateVisualEffect("A703GATE", [2506.1544])
+  CreateVisualEffect("A703GAT2", [2506.1544])
+  SmallWait(5)
+  CreateVisualEffect("SPFIREPI", [2500.1560])
+  SmallWait(15)
+  CreateVisualEffect("A7COMET1", [2506.1575])
+  CreateVisualEffect("A7COMET2", [2506.1575])
+  ReallyForceSpellPointRES("A7Q5BLST", [2506.1575])
+  DisplayStringNoNameHead(Myself, @6817)    // With Lord Malik's death the link between this cave and the Elemental Plane of Fire ceases to exist...
+END

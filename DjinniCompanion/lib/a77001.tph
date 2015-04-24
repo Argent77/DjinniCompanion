@@ -1,0 +1,108 @@
+// *** Area A77001 (Rakshasa Encampment) ***
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT PORTRAIT_MAHELS "DjinniCompanion/portraits/bg2ee/a7mahels.bmp"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT PORTRAIT_MAHELS "DjinniCompanion/portraits/a7mahels.bmp"
+END
+
+COPY ~DjinniCompanion/areas/a77001.are~ ~override~
+  READ_LONG 0xc4 "autonote_ofs"
+  SAY (autonote_ofs + (0x34 * 0) + 0x04) @1605      // Magical Portal
+
+COPY ~DjinniCompanion/areas/a77001sr.bmp~ ~override~
+
+COPY_EXISTING ~ar2700.wed~ ~override/a77001.wed~
+  PATCH_IF (SOURCE_SIZE > 0x1f) BEGIN
+    READ_LONG 0x08 "overlay_num"
+    READ_LONG 0x10 "overlay_ofs"
+    PATCH_IF (overlay_num > 1) BEGIN
+      WRITE_ASCII (overlay_ofs + (0x18 * 0) + 0x04) "A77001" #8
+      WRITE_ASCII (overlay_ofs + (0x18 * 1) + 0x04) "WTPOOL" #8
+    END ELSE BEGIN
+      PATCH_WARN @32      // Warning: Unable to patch AR2700.WED (Reason: Number of overlay entries is too small)
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~ar2700.wed~
+    TEXT_SPRINT restype ~WED~
+    PATCH_FAIL @30        // Error: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// recycling existing resources
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  COPY_EXISTING ~ar2700.tis~   ~override/a77001.tis~
+                ~a270000.pvrz~ ~override/a700100.pvrz~
+                ~a270001.pvrz~ ~override/a700101.pvrz~
+                ~a270002.pvrz~ ~override/a700102.pvrz~
+                ~a270003.pvrz~ ~override/a700103.pvrz~
+                ~a270004.pvrz~ ~override/a700104.pvrz~
+                ~a270005.pvrz~ ~override/a700105.pvrz~
+                ~a270006.pvrz~ ~override/a700106.pvrz~
+                ~a270007.pvrz~ ~override/a700107.pvrz~
+                ~a270008.pvrz~ ~override/a700108.pvrz~
+                ~a270009.pvrz~ ~override/a700109.pvrz~
+                ~a270010.pvrz~ ~override/a700110.pvrz~
+                ~a270011.pvrz~ ~override/a700111.pvrz~
+                ~a270012.pvrz~ ~override/a700112.pvrz~
+                ~a270013.pvrz~ ~override/a700113.pvrz~
+                ~a270014.pvrz~ ~override/a700114.pvrz~
+                ~a270015.pvrz~ ~override/a700115.pvrz~
+                ~ar2700ht.bmp~ ~override/a77001ht.bmp~
+                ~ar2700lm.bmp~ ~override/a77001lm.bmp~
+END ELSE BEGIN
+  COPY_EXISTING ~ar2700.tis~   ~override/a77001.tis~
+                ~ar2700ht.bmp~ ~override/a77001ht.bmp~
+                ~ar2700lm.bmp~ ~override/a77001lm.bmp~
+END
+COPY_EXISTING ~am2700.wav~   ~override/a7am01.wav~
+              ~am2700a1.wav~ ~override/a7am01a1.wav~
+              ~am2700a2.wav~ ~override/a7am01a2.wav~
+              ~am2700a3.wav~ ~override/a7am01a3.wav~
+              ~am2700a4.wav~ ~override/a7am01a4.wav~
+              ~am2700n.wav~  ~override/a7am01n.wav~
+              ~am2700o1.wav~ ~override/a7am01o1.wav~
+              ~am2700o2.wav~ ~override/a7am01o2.wav~
+              ~am2700o3.wav~ ~override/a7am01o3.wav~
+
+// creatures
+COPY ~DjinniCompanion/creatures/a7mahel.cre~ ~override~
+  SAY NAME1 @1607     // Mahel
+  SAY NAME2 @1607     // Mahel
+COPY ~DjinniCompanion/creatures/a7q1rkhu.cre~ ~override~
+  SAY NAME1 @1608     // Rakshasa Hunter
+  SAY NAME2 @1608     // Rakshasa Hunter
+COPY ~DjinniCompanion/creatures/a7q1pant.cre~ ~override~
+  SAY NAME1 @1609     // Narantaka
+  SAY NAME2 @1609     // Narantaka
+COPY ~DjinniCompanion/creatures/a7q1rkm1.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q1rkr1.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q1rk1.cre~ ~override~
+
+// portraits 
+COPY ~%PORTRAIT_MAHELS%~ ~override~
+
+// items
+COPY ~DjinniCompanion/items/a7misc2.itm~ ~override~
+  SAY NAME1 @1600     // Adratha's corpse
+  SAY NAME2 @1600     // Adratha's corpse
+  SAY UNIDENTIFIED_DESC @1601     // You suspect that this body belongs to Adratha, the real herbalist of the druid grove.
+COPY ~DjinniCompanion/items/a7gmisc2.bam~ ~override~
+
+// scripts
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a77001.baf~
+  ~DjinniCompanion/scripts/a7q1pant.baf~
+  ~DjinniCompanion/scripts/a7q1rkhu.baf~
+  ~DjinniCompanion/scripts/a7q1rk1.baf~
+  ~DjinniCompanion/scripts/a7q1rkm1.baf~
+  ~DjinniCompanion/scripts/a7q1rkr1.baf~
+  ~DjinniCompanion/scripts/a7q1rk.baf~
+  ~DjinniCompanion/scripts/a7mahel.baf~
+  ~DjinniCompanion/scripts/a7q1ct1.baf~
+
+// dialogs
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/dialogs/A7Q1rkg1.d~
+  ~DjinniCompanion/dialogs/A7Mahel.d~
+

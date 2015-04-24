@@ -1,0 +1,12 @@
+// *** Short cutscene: Mercenary Mage: FadeOut/FadeIn ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("AMCST04")
+  FadeToColor([45.0], 0)
+  Wait(4)
+  FadeFromColor([45.0], 0)
+  Wait(3)
+  StartDialogueNoSet([PC])
+END

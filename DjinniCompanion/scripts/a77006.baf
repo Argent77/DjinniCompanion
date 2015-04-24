@@ -1,0 +1,24 @@
+// *** Area script for Djinni Lamp Interior ***
+
+// Refreshing translucency effect for disabled party members
+IF
+  AreaCheckObject("A77006", Player1)
+  !GlobalTimerNotExpired("FadeTimer", "A77006")
+THEN RESPONSE #100
+  SetGlobalTimer("FadeTimer", "A77006", 3)
+  ApplySpellRES("A7Q6FAD1", Player1)
+  ApplySpellRES("A7Q6FAD1", Player2)
+  ApplySpellRES("A7Q6FAD1", Player3)
+  ApplySpellRES("A7Q6FAD1", Player4)
+  ApplySpellRES("A7Q6FAD1", Player5)
+  ApplySpellRES("A7Q6FAD1", Player6)
+END
+
+
+// Afaaq regenerates HP much faster while in his lamp
+IF
+  !GlobalTimerNotExpired("AfaaqHealTimer", "A77006")
+THEN RESPONSE #100
+  SetGlobalTimer("AfaaqHealTimer", "A77006", 3)
+  ApplySpellRES("A7Q6CURE", "A7Afaaq")
+END

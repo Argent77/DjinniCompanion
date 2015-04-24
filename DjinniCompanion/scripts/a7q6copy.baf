@@ -1,0 +1,12 @@
+// *** Script for the spectral projection of CHARNAME in Afaaq's djinni lamp ***
+
+// For the unlikely case that the clone dies
+IF
+  Die()
+THEN RESPONSE #100
+  ApplySpellRES("A7REST", Myself)
+  MakeGlobal()
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("A7cut01d")
+END

@@ -1,0 +1,15 @@
+// *** Cutscene: Party leaves the djinni lamp (continued) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  RestorePartyLocations()
+  MoveGlobalObject("A7Afaaq", Player1)
+  MultiPlayerSync()
+  ActionOverride("A7Afaaq", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Afaaq", CreateVisualEffectObject("A7AFQSUM", Myself))
+  FadeFromColor([30.0], 0)
+  Wait(2)
+  EndCutSceneMode()
+END

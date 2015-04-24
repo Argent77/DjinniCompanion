@@ -1,0 +1,58 @@
+// Sparring script of the left duelling duergar
+
+IF
+  Heard([ANYONE], HELP_ME_GROUP151)
+  InMyGroup(LastHeardBy(Myself))
+  Allegiance(LastHeardBy(Myself), ENEMY)
+THEN RESPONSE #100
+  ClearActions(Myself)
+  Enemy()
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("attacked","LOCALS",0)
+THEN RESPONSE #100
+  SetGlobal("attacked", "LOCALS", 1)
+  DestroyItem("MINHP60")
+  DestroyItem("A7Q3AX1")
+  EquipMostDamagingMelee()
+  Continue()
+END
+
+IF
+  !Allegiance(Myself, ENEMY)
+  OR(3)
+    Detect([PC])
+    Detect([FAMILIAR])
+    Detect([CONTROLLED])
+THEN
+  RESPONSE #10
+    DisplayStringNoNameHead(Myself, @3929)    // *Hhrrg*
+    Continue()
+  RESPONSE #10
+    DisplayStringNoNameHead(Myself, @3930)    // *Hnnn*
+    Continue()
+  RESPONSE #10
+    DisplayStringNoNameHead(Myself, @3931)    // *Hhrnnn*
+    Continue()
+  RESPONSE #10
+    DisplayStringNoNameHead(Myself, @3932)    // *Nff*
+    Continue()
+  RESPONSE #10
+    DisplayStringNoNameHead(Myself, @3933)    // I'm exhausted.
+    Continue()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  !Allegiance(Myself, ENEMY)
+  See("A7Q3DR02")
+  OR(3)
+    Detect([PC])
+    Detect([FAMILIAR])
+    Detect([CONTROLLED])
+THEN RESPONSE #100
+  AttackOneRound("A7Q3DR02")
+END

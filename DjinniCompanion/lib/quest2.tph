@@ -1,0 +1,46 @@
+// *** Quest 2-specific ***
+
+INCLUDE ~DjinniCompanion/lib/a77004.tph~
+INCLUDE ~DjinniCompanion/lib/quest2_triggers.tph~
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT ITEM_CHELM1 "DjinniCompanion/items/bg2ee/a7chelm1.bmp"
+  OUTER_TEXT_SPRINT ITEM_IMISC3 "DjinniCompanion/items/bg2ee/a7imisc3.bam"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT ITEM_CHELM1 "DjinniCompanion/items/a7chelm1.bam"
+  OUTER_TEXT_SPRINT ITEM_IMISC3 "DjinniCompanion/items/a7imisc3.bam"
+END
+
+// Adding XP rewards for Quest 2
+COPY_EXISTING ~xplist.2da~ ~override~
+  INSERT_2DA_ROW 0 43 ~A7Q2SRP  A7_Q2_Serpent_Riddle       P_10000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q2SLR  A7_Q2_Barrier_Slayer       P_5000     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q2MAR  A7_Q2_Marilith             P_8000     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+
+// Teleportation stone of the rakshasa
+COPY ~DjinniCompanion/items/a7misc3.itm~ ~override~
+  SAY NAME1 @2936     // Jade Orb
+  SAY NAME2 @2936     // Jade Orb
+  SAY UNIDENTIFIED_DESC @2937     // The orb which you have found on the body of the rakshasa is cool to the touch...
+COPY ~DjinniCompanion/items/a7q2tel1.eff~ ~override~
+     ~%ITEM_IMISC3%~                      ~override~
+
+COPY ~DjinniCompanion/items/a7helm1.itm~ ~override~
+  SAY NAME1 @2938     // Hat
+  SAY NAME2 @2939     // Pointy Hat
+  SAY UNIDENTIFIED_DESC @2940   // This hat glows slightly on the bluish side. It is surprisingly light and...
+  SAY IDENTIFIED_DESC @2941     // Centuries ago the mad wizard Harash Q'Lon commissioned a local gnomish enchanter to find a way how to...
+COPY ~DjinniCompanion/items/a7ihelm1.bam~ ~override~
+     ~%ITEM_CHELM1%~                      ~override~
+COPY_EXISTING ~tooltip.2da~ ~override~
+  INSERT_2DA_ROW 1 3 ~A7HELM1           55831        -1          -1~
+
+
+// Dummy creature which triggers the teleporter sequence to A77004
+COPY ~DjinniCompanion/creatures/a7q2tel1.cre~ ~override~
+COMPILE ~DjinniCompanion/scripts/a7q2tel1.baf~
+
+// *** 3D visual effects ***
+COPY ~DjinniCompanion/spells/a7shair.vvc~ ~override~
+     ~DjinniCompanion/spells/a7shwtr.vvc~ ~override~

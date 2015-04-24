@@ -1,0 +1,90 @@
+// *** Area A77005 (Secret Underdark passage) ***
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT PORTRAIT_TATHAS "DjinniCompanion/portraits/bg2ee/a7tathas.bmp"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT PORTRAIT_TATHAS "DjinniCompanion/portraits/a7tathas.bmp"
+END
+
+COPY ~DjinniCompanion/areas/a77005.are~   ~override~
+  READ_LONG 0x5c "trigger_ofs"
+  SAY (trigger_ofs + (0xc4 * 2) + 0x64) @3902     // This tunnel leads deeper into the underdark, but it is half-buried in debris and looks too dangerous to enter.
+
+//COPY_LARGE ~DjinniCompanion/areas/a77005.tis~ ~override~
+COPY ~DjinniCompanion/areas/a77005.wed~   ~override~
+     ~DjinniCompanion/areas/a77005ht.bmp~ ~override~
+     ~DjinniCompanion/areas/a77005lm.bmp~ ~override~
+     ~DjinniCompanion/areas/a77005sr.bmp~ ~override~
+     ~DjinniCompanion/areas/a705ms1.bam~  ~override~
+     ~DjinniCompanion/areas/a7am05a.wav~  ~override~
+     ~DjinniCompanion/areas/a7am05b.wav~  ~override~
+
+// creatures
+COPY ~DjinniCompanion/creatures/a7tathas.cre~ ~override~
+  SAY NAME1 @3905     // Tathas Melarn
+  SAY NAME2 @3905     // Tathas Melarn
+COPY ~%PORTRAIT_TATHAS%~ ~override~
+
+COPY ~DjinniCompanion/creatures/a7q3dhm.cre~ ~override~
+  SAY NAME1 @3906     // Iraedril Do'ndar
+  SAY NAME2 @3906     // Iraedril Do'ndar
+
+COPY ~DjinniCompanion/creatures/a7q3dcpt.cre~ ~override~
+  SAY NAME1 @3907     // Drow Captain
+  SAY NAME2 @3907     // Drow Captain
+
+COPY ~DjinniCompanion/creatures/a7q3dr01.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q3dr02.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q3dr03.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q3dr04.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q3dr05.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q3dr06.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q3dr07.cre~ ~override~
+   ~DjinniCompanion/creatures/a7q3dr08.cre~ ~override~
+  SAY NAME1 @3908     // Duergar Warrior
+  SAY NAME2 @3908     // Duergar Warrior
+
+COPY ~DjinniCompanion/creatures/a7q3dm01.cre~ ~override~    // Drow Wizard 1
+COPY ~DjinniCompanion/creatures/a7q3dm02.cre~ ~override~    // Drow Wizard 2
+     ~DjinniCompanion/creatures/a7q3dp01.cre~ ~override~    // Drow Priestess
+     ~DjinniCompanion/creatures/a7q3dw01.cre~ ~override~    // Drow Warrior (Female) 1
+     ~DjinniCompanion/creatures/a7q3dw02.cre~ ~override~    // Drow Warrior (Female) 2
+     ~DjinniCompanion/creatures/a7q3dw03.cre~ ~override~    // Drow Warrior (Male) 1
+     ~DjinniCompanion/creatures/a7q3dw04.cre~ ~override~    // Drow Warrior (Male) 2
+     ~DjinniCompanion/creatures/a7q3dw05.cre~ ~override~    // Drow Warrior (Male) 3
+     ~DjinniCompanion/creatures/a7q3dw06.cre~ ~override~    // Drow Warrior (Male) 4
+     ~DjinniCompanion/creatures/a7q3dw07.cre~ ~override~    // Drow Warrior (Male) 5
+     ~DjinniCompanion/creatures/a7q3dw08.cre~ ~override~    // Drow Warrior (Male) 6
+     ~DjinniCompanion/creatures/a7q3dw09.cre~ ~override~    // Drow Warrior (Male) 7
+     ~DjinniCompanion/creatures/a7q3dw10.cre~ ~override~    // Drow Warrior (Male) 8
+     ~DjinniCompanion/creatures/a7q3dw11.cre~ ~override~    // Drow Warrior (Male) 9
+     ~DjinniCompanion/creatures/a7q3o01.cre~ ~override~     // Orc 1
+     ~DjinniCompanion/creatures/a7q3o02.cre~ ~override~     // Orc 2
+     ~DjinniCompanion/creatures/a7q3o03.cre~ ~override~     // Orc 3
+     ~DjinniCompanion/creatures/a7q3or01.cre~ ~override~    // Orog 1
+     ~DjinniCompanion/creatures/a7q3or02.cre~ ~override~    // Orog 1
+     ~DjinniCompanion/creatures/a7q3sp01.cre~ ~override~    // Phase Spider
+     ~DjinniCompanion/creatures/a7q3sp02.cre~ ~override~    // Sword Spider
+     ~DjinniCompanion/creatures/a7q3sp03.cre~ ~override~    // Giant Spider 1
+     ~DjinniCompanion/creatures/a7q3sp04.cre~ ~override~    // Giant Spider 2
+     ~DjinniCompanion/creatures/a7q3um01.cre~ ~override~    // Umber Hulk 1
+     ~DjinniCompanion/creatures/a7q3um02.cre~ ~override~    // Umber Hulk 2
+     ~DjinniCompanion/creatures/a7q3dwx1.cre~ ~override~    // Cutscene Drow 1
+     ~DjinniCompanion/creatures/a7q3dwx2.cre~ ~override~    // Cutscene Drow 2
+     ~DjinniCompanion/creatures/a7q3dwx3.cre~ ~override~    // Cutscene Drow 3
+
+// items
+COPY ~DjinniCompanion/items/a7q3ax1.itm~ ~override~         // modified weapon for the duelling duergars
+
+// spells
+COPY ~DjinniCompanion/spells/a7sight.spl~ ~override~        // Remove invisibility without lighting effects
+
+// misc. stuff
+COPY ~DjinniCompanion/misc/a7q3ud1.sto~ ~override~          // Shop of the Drow Captain
+     ~DjinniCompanion/misc/a7q3ud2.sto~ ~override~          // Inn of the Drow Captain
+
+// scripts
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a77005.baf~
+  ~DjinniCompanion/scripts/a705trig.baf~

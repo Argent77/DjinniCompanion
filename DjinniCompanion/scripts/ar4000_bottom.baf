@@ -1,0 +1,14 @@
+// *** Bottom script portion for AR4000.BCS (Forest of Tethir) ***
+
+// If Afaaq will leave CHARNAME and is in his lamp
+IF
+  Global("A7AfaaqLeaveParty", "GLOBAL", 1)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  PartyHasItem("A7DJLMPA")
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+THEN RESPONSE #100
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("A7Cut05")
+END

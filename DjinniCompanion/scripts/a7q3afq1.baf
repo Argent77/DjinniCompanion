@@ -1,0 +1,25 @@
+// *** Afaaq senses his lost spiritual essence somewhere nearby (Quest 3) ***
+
+// If Afaaq is outside of his lamp
+IF
+  Entered("A7Afaaq")
+  !StateCheck("A7Afaaq", CD_STATE_NOTVALID)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("A7Q3AfaaqEssence", "AR2100", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q3AfaaqEssence", "AR2100", 1)
+END
+
+// If Afaaq is inside his lamp
+IF
+  Entered(Player1)
+  HasItem("A7DJLMP", Player1)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7Q3AfaaqEssence", "AR2100", 0)
+THEN RESPONSE #100
+  SetGlobal("A7LampTalk", "GLOBAL", 1)
+  SetGlobal("A7Q3AfaaqEssence", "AR2100", 1)
+  ActionOverride(Player1, StartDialogOverrideItem("A7DJLMP", Myself, 0, 0, 1))
+END

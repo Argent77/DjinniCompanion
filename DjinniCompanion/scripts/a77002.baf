@@ -1,0 +1,321 @@
+// *** Area script for Subterranean Cave below Smuggler Cave in Amkethran ***
+
+// *** called after Quest 5 has been finished and the party enters from A77003 ***
+IF
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  FadeToColor([1.0], 0)
+  // Removing "old" djinnis
+  ActionOverride("A7Karim", DestroySelf())
+  ActionOverride("A7Q5DJ01", DestroySelf())
+  ActionOverride("A7Q5DJ02", DestroySelf())
+  ActionOverride("A7Q5DJ03", DestroySelf())
+  ActionOverride("A7Q5DJ04", DestroySelf())
+  ActionOverride("A7Q5DJ05", DestroySelf())
+  Wait(1)
+  Continue()
+END
+
+// recreating new djinnis if the djinnis have teleported back from A77003
+IF
+  !Dead("A7Karim")
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
+  !Global("A7Q5DjinniSummoned", "GLOBAL", 1)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  CreateCreature("A7Karim", [475.547], 6)
+  ActionOverride("A7Karim", DestroyItem("A7RING01"))
+  Continue()
+END
+
+IF
+  !Dead("A7Karim")
+  !Dead("A7Q5DJ01")
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
+  !Global("A7Q5DjinniSummoned", "GLOBAL", 1)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  CreateCreature("A7Q5DJ01", [420.608], 8)
+  ActionOverride("A7Q5DJ01", DestroyItem("A7RING01"))
+  Continue()
+END
+
+IF
+  !Dead("A7Karim")
+  !Dead("A7Q5DJ02")
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
+  !Global("A7Q5DjinniSummoned", "GLOBAL", 1)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  CreateCreature("A7Q5DJ02", [556.518], 5)
+  ActionOverride("A7Q5DJ02", DestroyItem("A7RING01"))
+  Continue()
+END
+
+IF
+  !Dead("A7Karim")
+  !Dead("A7Q5DJ03")
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
+  !Global("A7Q5DjinniSummoned", "GLOBAL", 1)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  CreateCreature("A7Q5DJ03", [505.632], 7)
+  ActionOverride("A7Q5DJ03", DestroyItem("A7RING01"))
+  Continue()
+END
+
+IF
+  !Dead("A7Karim")
+  !Dead("A7Q5DJ04")
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
+  !Global("A7Q5DjinniSummoned", "GLOBAL", 1)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  CreateCreature("A7Q5DJ04", [560.590], 6)
+  ActionOverride("A7Q5DJ04", DestroyItem("A7RING01"))
+  Continue()
+END
+
+// if Afaaq isn't part of the djinni group
+IF
+  !Dead("A7Karim")
+  !Dead("A7Q5DJ05")
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
+  !Global("A7Q5AfaaqAppears", "GLOBAL", 2)
+  !Global("A7Q5DjinniSummoned", "GLOBAL", 1)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  CreateCreature("A7Q5DJ05", [580.664], 6)
+  ActionOverride("A7Q5DJ05", DestroyItem("A7RING01"))
+  Continue()
+END
+
+// if Afaaq is part of the djinni group
+IF
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 2)
+  !Global("A7Q5DjinniSummoned", "GLOBAL", 1)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  MoveGlobal("A77002", "A7Afaaq", [580.664])
+  ChangeEnemyAlly("A7Afaaq", GOODBUTBLUE)
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFQIN3", RACE))
+  ActionOverride("A7Afaaq", SetDialog("A7AFQQ5"))
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  ActionOverride("A7Afaaq", ApplySpellRES("A7REST2", Myself))
+  ActionOverride("A7Afaaq", Face(6))
+  Continue()
+END
+
+IF
+  Global("A7Quest5", "GLOBAL", 10)
+  // Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
+  Global("A7Q5Finished", "A77002", 0)
+THEN RESPONSE #100
+  ClearAllActions()
+  StartCutSceneMode()
+  FadeFromColor([30.0], 0)
+  Wait(2)
+  SetGlobal("A7Q5Finished", "A77002", 1)
+  SetGlobalTimer("A7Q5FinishedTimer", "A77002", 4)
+  EndCutSceneMode()
+END
+
+// Called if all djinnis died in the battle with the efreets
+IF
+  GlobalTimerExpired("A7Q5FinishedTimer", "A77002")
+  Global("A7Q5Finished", "A77002", 1)
+THEN RESPONSE #100
+  SetGlobal("A7Q5Finished", "A77002", 2)
+  EraseJournalEntry(@6501) EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) EraseJournalEntry(@6505) 
+  EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) EraseJournalEntry(@6509) EraseJournalEntry(@6510) 
+  EraseJournalEntry(@6511) EraseJournalEntry(@6512) EraseJournalEntry(@6513) EraseJournalEntry(@6514) EraseJournalEntry(@6515) 
+  EraseJournalEntry(@6516) EraseJournalEntry(@6517) EraseJournalEntry(@6518) EraseJournalEntry(@6519) EraseJournalEntry(@6520) 
+  EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) EraseJournalEntry(@6524) EraseJournalEntry(@6525) 
+  EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529) EraseJournalEntry(@6530) 
+  EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) 
+  EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) EraseJournalEntry(@6540) 
+  EraseJournalEntry(@6545) EraseJournalEntry(@6548) AddJournalEntry(@6591, QUEST_DONE)
+END
+
+
+// *** First-time entering the area ***
+IF
+  GlobalLT("A7Quest5", "GLOBAL", 2)
+THEN RESPONSE #100
+  FadeToColor([1.0], 0)
+  CreateCreature("A7Karim", [620.590], 0)
+  ActionOverride("A7Karim", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ01", [244.502], 13)
+  ActionOverride("A7Q5DJ01", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ02", [232.596], 12)
+  ActionOverride("A7Q5DJ02", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ03", [1004.440], 2)
+  ActionOverride("A7Q5DJ03", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ04", [1062.515], 4)
+  ActionOverride("A7Q5DJ04", DestroyItem("A7RING01"))
+  CreateCreature("A7Q5DJ05", [744.364], 2)
+  ActionOverride("A7Q5DJ05", DestroyItem("A7RING01"))
+  Continue()
+END
+
+IF
+  GlobalLT("A7Quest5", "GLOBAL", 2)
+  Global("A7Q5AfaaqAppears", "GLOBAL", 2)
+THEN RESPONSE #100
+  ActionOverride("A7Q5DJ05", SetName(@60001))    // Afaaq
+  ActionOverride("A7Q5DJ05", ApplySpellRES("A7Q5PIC1", Myself))
+  ActionOverride("A7Q5DJ05", SetGlobal("Afaaq", "LOCALS", 1))
+  Continue()
+END
+
+IF
+  GlobalLT("A7Quest5", "GLOBAL", 2)
+THEN RESPONSE #100
+  FadeFromColor([30.0], 0)
+  Wait(1)
+  SetGlobal("A7Quest5", "GLOBAL", 2)
+  Continue()
+END
+
+
+// Aborting quest if party attacks the djinns
+IF
+  OR(6)
+    Allegiance("A7KARIM", ENEMY)
+    Allegiance("A7Q5DJ01", ENEMY)
+    Allegiance("A7Q5DJ02", ENEMY)
+    Allegiance("A7Q5DJ03", ENEMY)
+    Allegiance("A7Q5DJ04", ENEMY)
+    Allegiance("A7Q5DJ05", ENEMY)
+  Global("A7Q5Cancelled", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5Cancelled", "A77002", 1)
+  SetGlobal("A7Quest5", "GLOBAL", 11)
+  EraseJournalEntry(@6501) EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) EraseJournalEntry(@6505) 
+  EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) EraseJournalEntry(@6509) EraseJournalEntry(@6510) 
+  EraseJournalEntry(@6511) EraseJournalEntry(@6512) EraseJournalEntry(@6513) EraseJournalEntry(@6514) EraseJournalEntry(@6515) 
+  EraseJournalEntry(@6516) EraseJournalEntry(@6517) EraseJournalEntry(@6518) EraseJournalEntry(@6519) EraseJournalEntry(@6520) 
+  EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) EraseJournalEntry(@6524) EraseJournalEntry(@6525) 
+  EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529) EraseJournalEntry(@6530) 
+  EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) 
+  EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) EraseJournalEntry(@6540) 
+  EraseJournalEntry(@6545) EraseJournalEntry(@6548) AddJournalEntry(@6592, QUEST_DONE)
+END
+
+
+// Afaaq warns CHARNAME of his presence while in his lamp
+IF
+  Delay(3)
+  OR(2)
+    HasItem("A7DJLMP", Player1)
+    HasItem("A7DJLMPA", Player1)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("A7AfaaqMet", "GLOBAL", 1)
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  GlobalGT("TellAboutCave", "A77002", 0)
+  Global("WarnEfreetReaction", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobal("A7LampTalk", "GLOBAL", 1)
+  SetGlobal("WarnEfreetReaction", "A77002", 1)
+  ActionOverride(Player1, StartDialogOverrideItem("A7DJLMP", Myself, 0, 0, 1))
+END
+
+
+// Disable exit to AR5504 when heat protection is off
+IF
+  GlobalLT("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Protection", "GLOBAL", 0)
+  Global("Exit5504Disabled", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobal("Exit5504Disabled", "A77002", 1)
+  TriggerActivation("Tran5504", FALSE)
+  TriggerActivation("Flee5504", FALSE)
+  TriggerActivation("Info5504", TRUE)
+  Continue()
+END
+
+// Enable emergency exit to AR5504 when heat protection is off and quest has been cancelled
+IF
+  Global("A7Quest5", "GLOBAL", 11)
+  Global("A7Q5Protection", "GLOBAL", 0)
+  Global("Exit5504Disabled", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobal("Exit5504Disabled", "A77002", 1)
+  TriggerActivation("Tran5504", FALSE)
+  TriggerActivation("Info5504", FALSE)
+  TriggerActivation("Flee5504", TRUE)
+  Continue()
+END
+
+// Enable exit to AR5504 when heat protection is on
+IF
+  Global("A7Q5Protection", "GLOBAL", 1)
+  Global("Exit5504Disabled", "A77002", 1)
+THEN RESPONSE #100
+  SetGlobal("Exit5504Disabled", "A77002", 0)
+  TriggerActivation("Info5504", FALSE)
+  TriggerActivation("Flee5504", FALSE)
+  TriggerActivation("Tran5504", TRUE)
+  Continue()
+END
+
+// Disable exit to A77003 when heat protection is off
+IF
+  Global("A7Q5Protection", "GLOBAL", 0)
+  Global("ExitA703Disabled", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobal("ExitA703Disabled", "A77002", 1)
+  TriggerActivation("TranAR03_1", FALSE)
+  TriggerActivation("InfoAR03_1", TRUE)
+  TriggerActivation("TranAR03_2", FALSE)
+  TriggerActivation("InfoAR03_2", TRUE)
+  Continue()
+END
+
+// Enable exit to A77003 when heat protection is on
+IF
+  Global("A7Q5Protection", "GLOBAL", 1)
+  Global("ExitA703Disabled", "A77002", 1)
+THEN RESPONSE #100
+  SetGlobal("ExitA703Disabled", "A77002", 0)
+  TriggerActivation("InfoAR03_1", FALSE)
+  TriggerActivation("TranAR03_1", TRUE)
+  TriggerActivation("InfoAR03_2", FALSE)
+  TriggerActivation("TranAR03_2", TRUE)
+  Continue()
+END
+
+
+// One-time finalization when Quest 5 is completed
+IF
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("Finalized", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobal("Finalized", "A77002", 1)
+  TriggerActivation("Info5504", FALSE)
+  TriggerActivation("Flee5504", FALSE)
+  TriggerActivation("Tran5504", TRUE)
+END
+
+
+// Heat protection ends
+IF
+  Global("A7Q5Protection", "GLOBAL", 1)
+  !GlobalTimerNotExpired("A7Q5ProtectionWarnTimer", "GLOBAL")
+  !GlobalTimerNotExpired("A7Q5ProtectionTimer", "GLOBAL")
+THEN RESPONSE #100
+  SetGlobal("A7Q5Protection", "GLOBAL", 0)
+  SetGlobal("A7Q5ProtectionWarn", "GLOBAL", 1)
+  DisplayStringNoName(Player1, @6816)    // Protection from Heat has run out.
+END
+

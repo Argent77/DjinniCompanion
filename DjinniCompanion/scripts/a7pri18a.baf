@@ -1,0 +1,398 @@
+// modified PRIES18B.BCS for Quest 3 (Arabani group)
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  See(NearestMyGroupOfType)
+  Global("A7Prep","LOCALS",0)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  SetGlobal("A7Prep","LOCALS",1)
+  ApplySpell(Myself,CLERIC_DEATH_WARD)
+  ReallyForceSpell(LastSeenBy(Myself),CLERIC_BLESS)
+  ReallyForceSpell(LastSeenBy(Myself),CLERIC_STRENGTH_OF_ONE)
+  Spell(LastSeenBy(Myself),CLERIC_DEFENSIVE_HARMONY)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  See(NearestMyGroupOfType)
+  Global("A7Prep","LOCALS",0)
+THEN RESPONSE #100
+  SetGlobal("A7Prep","LOCALS",1)
+  ApplySpell(Myself,CLERIC_DEATH_WARD)
+  ReallyForceSpell(LastSeenBy(Myself),CLERIC_BLESS)
+  ReallyForceSpell(LastSeenBy(Myself),CLERIC_STRENGTH_OF_ONE)
+  Spell(LastSeenBy(Myself),CLERIC_DEFENSIVE_HARMONY)
+END
+
+
+IF
+  HasItem("POTN14", Myself)
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("A7DrankPotionTimer", "LOCALS")
+  Global("A7SpeedPotion", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7SpeedPotion", "LOCALS", 1)
+  SetGlobalTimer("A7DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN14", Myself)
+  Continue()
+END
+
+IF
+  HasItem("POTN11", Myself)
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("A7DrankPotionTimer", "LOCALS")
+  Global("A7InvulPotion", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7InvulPotion", "LOCALS", 1)
+  SetGlobalTimer("A7DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN11", Myself)
+  Continue()
+END
+
+IF
+  HasItem("POTN52", Myself)
+  OR(2)
+    Global("A7Quest3", "GLOBAL", 6)
+    See(NearestEnemyOf(Myself))
+  HPPercentLT(Myself, 50)
+  !GlobalTimerNotExpired("A7DrankPotionTimer", "LOCALS")
+THEN RESPONSE #100
+  SetGlobalTimer("A7DrankPotionTimer", "LOCALS", ONE_ROUND)
+  DisplayStringHead(Myself, 46150) // quaffs a potion
+  UseItem("POTN52", Myself)
+  Continue()
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(WIZARD_NPC_SYMBOL_FEAR)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),WIZARD_NPC_SYMBOL_FEAR)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_NPC_SYMBOL_FEAR)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),WIZARD_NPC_SYMBOL_FEAR)
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  HaveSpell(CLERIC_PHYSICAL_MIRROR)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_PHYSICAL_MIRROR)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_PHYSICAL_MIRROR)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_PHYSICAL_MIRROR)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(CLERIC_BOLT_OF_GLORY)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_BOLT_OF_GLORY)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_BOLT_OF_GLORY)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),CLERIC_BOLT_OF_GLORY)
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("A7CastTrueSight", "LOCALS")
+  HaveSpell(CLERIC_TRUE_SIGHT)
+THEN RESPONSE #100
+  SetGlobalTimer("A7CastTrueSight", "LOCALS", ONE_TURN)
+  Spell(Myself,CLERIC_TRUE_SIGHT)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(CLERIC_SLAY_LIVING)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  SetGlobal("A7StartAttack","LOCALS",1)
+  Spell(Myself,CLERIC_SLAY_LIVING)
+END
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  GlobalLT("A7StartAttack","LOCALS",6)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  IncrementGlobal("A7StartAttack","LOCALS",1)
+  AttackOneRound(LastSeenBy(Myself))
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_SLAY_LIVING)
+THEN RESPONSE #100
+  SetGlobal("A7StartAttack","LOCALS",1)
+  Spell(Myself,CLERIC_SLAY_LIVING)
+END
+
+IF
+  GlobalLT("A7StartAttack","LOCALS",6)
+THEN RESPONSE #100
+  IncrementGlobal("A7StartAttack","LOCALS",1)
+  AttackOneRound(NearestEnemyOf(Myself))
+END
+
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(CLERIC_ENERGY_DRAIN)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_ENERGY_DRAIN)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_ENERGY_DRAIN)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),CLERIC_ENERGY_DRAIN)
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  See(NearestMyGroupOfType)
+  HaveSpell(CLERIC_FREE_ACTION)
+  StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_FREE_ACTION)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_FREE_ACTION)
+  See(NearestMyGroupOfType)
+  StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_FREE_ACTION)
+END
+
+
+IF
+  OR(2)
+    See(SecondNearest([0.0.0.MAGE_ALL.%specific_tathas%]))
+    See(SecondNearest([0.0.0.CLERIC_ALL.%specific_tathas%]))
+  HaveSpell(CLERIC_MISCAST_MAGIC)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_MISCAST_MAGIC)
+END
+
+IF
+  OR(2)
+    See(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+  HaveSpell(CLERIC_MISCAST_MAGIC)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_MISCAST_MAGIC)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(CLERIC_DOLOROUS_DECAY)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_DOLOROUS_DECAY)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_DOLOROUS_DECAY)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),CLERIC_DOLOROUS_DECAY)
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_CLOAK_OF_FEAR)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_CLOAK_OF_FEAR)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_ANIMATE_DEAD)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_ANIMATE_DEAD)
+END
+
+IF
+  HaveSpell(CLERIC_SILENCE_15_FOOT)
+  OR(2)
+    See(NearestEnemyOfType([GOODCUTOFF.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([GOODCUTOFF.0.0.CLERIC_ALL]))
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_SILENCE_15_FOOT)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_CHARM_PERSON)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),CLERIC_CHARM_PERSON)
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(CLERIC_CAUSE_CRITICAL_WOUNDS)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  SetGlobal("A7StartAttack2","LOCALS",1)
+  Spell(Myself,CLERIC_CAUSE_CRITICAL_WOUNDS)
+END
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  Global("A7Quest3", "GLOBAL", 6)
+  GlobalLT("A7StartAttack2","LOCALS",6)
+THEN RESPONSE #100
+  IncrementGlobal("A7StartAttack2","LOCALS",1)
+  AttackOneRound(LastSeenBy(Myself))
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_CAUSE_CRITICAL_WOUNDS)
+THEN RESPONSE #100
+  SetGlobal("A7StartAttack2","LOCALS",1)
+  Spell(Myself,CLERIC_CAUSE_CRITICAL_WOUNDS)
+END
+
+IF
+  GlobalLT("A7StartAttack2","LOCALS",6)
+THEN RESPONSE #100
+  IncrementGlobal("A7StartAttack2","LOCALS",1)
+  AttackOneRound(NearestEnemyOf(Myself))
+END
+
+
+IF
+  See(SecondNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(CLERIC_HOLD_PERSON)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  Global("A7Hold", "LOCALS", 0)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  SetGlobal("A7Hold", "LOCALS", 1)
+  Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_HOLD_PERSON)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  Global("A7Hold", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Hold", "LOCALS", 1)
+  Spell(NearestEnemyOf(Myself),CLERIC_HOLD_PERSON)
+END
+
+
+IF
+  See(ThirdNearest([0.0.0.0.%specific_tathas%]))
+  HaveSpell(CLERIC_HOLD_PERSON)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  Global("A7Hold", "LOCALS", 1)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  SetGlobal("A7Hold", "LOCALS", 2)
+  Spell(LastSeenBy(Myself),CLERIC_HOLD_PERSON)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  HaveSpell(CLERIC_HOLD_PERSON)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+  Global("A7Hold", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("A7Hold", "LOCALS", 2)
+  Spell(SecondNearestEnemyOf(Myself),CLERIC_HOLD_PERSON)
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  See(NearestMyGroupOfType)
+  HPPercentLT(LastSeenBy(Myself),20)
+  HaveSpell(CLERIC_HEAL)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_HEAL)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  See(NearestMyGroupOfType)
+  HPPercentLT(LastSeenBy(Myself),20)
+  HaveSpell(CLERIC_HEAL)
+THEN RESPONSE #100
+  Spell(LastSeenBy(Myself),CLERIC_HEAL)
+END
+
+
+IF
+  See([0.0.0.0.%specific_tathas%])
+  !Range(LastSeenBy(Myself),4)
+  HPPercentLT(Myself,20)
+  HaveSpell(CLERIC_HEAL)
+  Global("A7Quest3", "GLOBAL", 6)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_HEAL)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself),4)
+  HPPercentLT(Myself,20)
+  HaveSpell(CLERIC_HEAL)
+THEN RESPONSE #100
+  Spell(Myself,CLERIC_HEAL)
+END
+
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_MENTAL_DOMINATION)
+  !StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+THEN RESPONSE #100
+  Spell(NearestEnemyOf(Myself),CLERIC_MENTAL_DOMINATION)
+END
+

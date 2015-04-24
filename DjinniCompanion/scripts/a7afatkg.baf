@@ -1,0 +1,211 @@
+// *** Battle actions in Greed Trial: if CHARNAME chooses to fight the Greed Genie ***
+
+// During the battle with the greed genie
+IF
+  !Dead("HELLGEN")
+  Allegiance(Myself, NEUTRAL)
+  Detect(NearestEnemyOf(Player1))
+  Global("hellgenRunAway", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("hellgenRunAway", "LOCALS", 1)
+  DisplayStringHead(Myself, @60036)    // I refuse to fight!
+  MoveToPointNoInterrupt([945.570])
+END
+
+IF
+  !Dead("HELLGEN")
+  Allegiance(Myself, NEUTRAL)
+  See(NearestEnemyOf(Player1))
+THEN RESPONSE #100
+  RunAwayFromNoInterrupt(NearestEnemyOf(Player1), 30)
+END
+
+
+// After the greed genie died
+IF
+  Delay(1)
+  Dead("HELLGEN")
+  Range(Player1, 15)
+  Global("GreedAfaaqMad", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("GreedAfaaqMad", "LOCALS", 1)
+  ClearActions(Myself)
+  StartDialogueNoSet(Player1)
+END
+
+IF
+  Delay(2)
+  Dead("HELLGEN")
+  InMyArea(Player1)
+  !Range(Player1, 15)
+  Global("GreedAfaaqMad", "LOCALS", 0)
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+
+// Duel between Afaaq and CHARNAME
+// Variables:
+//  GreedAfaaqMad: (evaluated in this combat script and Afaaq's dialog: 1 = fighting CHARNAME, 2 = fight is over)
+//   AfaaqDuelLost: (evaluated in this combat script only: 1 = fight is over)
+IF
+  HP(Myself, 1)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("AfaaqDuelLost", "LOCALS", 1)
+  Continue()
+END
+
+IF
+  OR(2)
+    Global("AfaaqDuelLost", "LOCALS", 1)
+    HP(Myself, 1)
+  Range(Player1, 15)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("GreedAfaaqMad", "LOCALS", 2)
+  ClearAllActions()
+  ApplySpellRES("A7REST", Myself)
+  StartDialogueNoSet(Player1)
+END
+
+IF
+  OR(2)
+    Global("AfaaqDuelLost", "LOCALS", 1)
+    HP(Myself, 1)
+  !Range(Player1, 15)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+IF
+  OR(2)
+    See([PC])
+    ActuallyInCombat()
+  HasItem("POTN55", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 34)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+  DisplayString(Myself, 46150)    // quaffs a potion
+  UseItem("POTN55", Myself)
+END
+
+IF
+  OR(2)
+    See([PC])
+    ActuallyInCombat()
+  HasItem("POTN52", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 50)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+  DisplayString(Myself, 46150)    // quaffs a potion
+  UseItem("POTN52", Myself)
+END
+
+IF
+  OR(2)
+    See([PC])
+    ActuallyInCombat()
+  HasItem("POTN08", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 67)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+  DisplayString(Myself, 46150)    // quaffs a potion
+  UseItem("POTN08", Myself)
+END
+
+IF
+  See([PC])
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+  Global("AfaaqDuelPrep", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("AfaaqDuelPrep", "LOCALS", 1)
+  SpellRES("A7SPIN1", Myself)        // Invisibility
+END
+
+IF
+  Detect([PC])
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+  Global("AfaaqDuelPrep", "LOCALS", 1)
+  HaveSpellRES("A7SPIN2")
+THEN RESPONSE #100
+  SetGlobal("AfaaqDuelPrep", "LOCALS", 2)
+  SpellRES("A7SPIN2", Myself)        // Whirlwind
+END
+
+IF
+  See([PC])
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+  Global("AfaaqDuelPrep", "LOCALS", 3)
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN RESPONSE #100
+  SetGlobal("AfaaqDuelPrep", "LOCALS", 4)
+  Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+IF
+  See([PC])
+  !HasBounceEffects(Myself)
+  !HasImmunityEffects(Myself) 
+  HaveSpell(WIZARD_MINOR_SPELL_TURNING)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_MINOR_SPELL_TURNING)
+END
+
+IF
+  OR(2)
+    StateCheck(Player1, STATE_INVISIBLE)
+    StateCheck(Player1, STATE_IMPROVEDINVISIBILITY)
+  Detect(Player1)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+  Global("AfaaqDuelDetect", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("AfaaqDuelDetect", "LOCALS", 1)
+  ForceSpell(Myself, WIZARD_TRUE_SIGHT)
+END
+
+IF
+  !StateCheck(Player1, STATE_IMPROVEDINVISIBILITY)
+  See(Player1)
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+THEN
+  RESPONSE #50
+    Spell(Player1, WIZARD_MAGIC_MISSILE)
+  RESPONSE #50
+    AttackReevaluate(Player1, 30)
+END
+
+IF
+  AttackedBy([GOODCUTOFF], DEFAULT) 
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+THEN RESPONSE #100
+  AttackReevaluate(LastAttackerOf(Myself), 30)
+END
+
+IF
+  See(Player1)
+  Global("GreedAfaaqMad", "LOCALS", 1)
+  Global("AfaaqDuelLost", "LOCALS", 0)
+THEN RESPONSE #100
+  AttackReevaluate(Player1, 30)
+END

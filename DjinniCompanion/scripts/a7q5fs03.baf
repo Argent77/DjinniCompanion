@@ -1,0 +1,27 @@
+// *** Quest-specific override script for Fire Salamander #3 (Quest 5) ***
+
+// *** After taking over the cavern ***
+IF
+  Global("A7Q5SalamandersTakeOver", "A77003", 1)
+  Global("FS03TookOver", "A77003", 0)
+  Global("TookOverInit", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("TookOverInit", "LOCALS", 1)
+  SetGlobalTimer("PositionTimer", "LOCALS", 5)
+END
+
+IF
+  GlobalTimerExpired("PositionTimer", "LOCALS")
+  Global("FS03TookOver", "A77003", 0)
+  Global("TookOverInit", "LOCALS", 1)
+THEN RESPONSE #100
+  MoveToPoint([2468.1556])
+END
+
+IF
+  Global("FS03TookOver", "A77003", 1)
+THEN RESPONSE #100
+  SetGlobal("FS03TookOver", "A77003", 2)
+  SetGlobal("TookOverInit", "LOCALS", 2)
+  Face(3)
+END

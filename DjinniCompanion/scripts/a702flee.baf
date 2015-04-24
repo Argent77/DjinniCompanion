@@ -1,0 +1,28 @@
+// *** Trigger script in A77002: flee from the area after Quest 5 has been cancelled ***
+
+IF
+  Clicked([ANYONE])
+  Global("FleeWarning", "A77002", 0)
+THEN RESPONSE #100
+  SetGlobal("FleeWarning", "A77002", 1)
+  DisplayStringNoNameHead(Myself, @6860)    // The boiling water rushing towards the surface will surely burn you. It is your only chance to leave this cave, however.
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger, 10)
+  Global("FleeWarning", "A77002", 1)
+THEN RESPONSE #100
+  DisplayStringHead(LastTrigger, @6861)    // You enter the stream and expect the worst. Hopefully you have prepared some healing or resurrection spells.
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("A7Q5ct9")
+END
+
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger, 10)
+  Global("FleeWarning", "A77002", 1)
+THEN RESPONSE #100
+  DisplayString(Myself, @6837)    // You are too far away to enter the underground stream.
+END

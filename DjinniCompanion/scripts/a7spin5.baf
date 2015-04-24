@@ -1,0 +1,127 @@
+// *** Creature script for Greater Whirlwind dummy creature ***
+
+// Duration if Afaaq's level is less than 15
+IF
+  GlobalLT("A7AfaaqLevel", "GLOBAL", 15)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 60)
+END
+
+// Duration if Afaaq's level is 15
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 15)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 66)
+END
+
+// Duration if Afaaq's level is 16
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 16)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 72)
+END
+
+// Duration if Afaaq's level is 17
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 17)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 78)
+END
+
+// Duration if Afaaq's level is 18
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 18)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 84)
+END
+
+// Duration if Afaaq's level is 19
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 19)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 90)
+END
+
+// Duration if Afaaq's level is 20
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 20)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 96)
+END
+
+// Duration if Afaaq's level is 21
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 21)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 102)
+END
+
+// Duration if Afaaq's level is 22
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 22)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 108)
+END
+
+// Duration if Afaaq's level is 23
+IF
+  Global("A7AfaaqLevel", "GLOBAL", 23)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 114)
+END
+
+// Duration if Afaaq's level is over 23
+IF
+  GlobalGT("A7AfaaqLevel", "GLOBAL", 23)
+  Global("Spin5Death", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("Spin5Death", "LOCALS", 1)
+  SetGlobalTimer("Spin5DeathTimer", "LOCALS", 120)
+END
+
+
+// Unsummon the whirlwind
+IF
+  OR(4)
+    Global("A7AfaaqSummoned", "GLOBAL", 0)
+    !Global("A7AfaaqGaseous", "GLOBAL", 0)
+    StateCheck("A7Afaaq", CD_STATE_NOTVALID)
+    !GlobalTimerNotExpired("Spin5DeathTimer", "LOCALS")
+  Global("Spin5Death", "LOCALS", 1)
+THEN RESPONSE #100
+  CreateVisualEffectObject("SPGFLSH1", Myself)
+  SmallWait(5)
+  DisplayString(Myself, 14065)    // Unsummoned
+  DestroySelf()
+END
+
+
+// Cast periodic damage effect
+/*
+IF
+  !GlobalTimerNotExpired("Spin5TriggerTimer", "LOCALS")
+THEN RESPONSE #100
+  SetGlobalTimer("Spin5TriggerTimer", "LOCALS", 6)
+  ApplySpellRES("A7SPIN2A", Myself)
+END
+*/

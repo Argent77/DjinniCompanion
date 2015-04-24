@@ -1,0 +1,333 @@
+// The same as A7Q3genT.BCS, but including additional triggers for Tathas Melarn (Quest 3)
+
+// Remove initial invisibility after talking to Tathas
+IF
+  Global("appear", "LOCALS", 0)
+  Global("TathasMet", "A77005", 1)
+  HasItem("A7RING01", Myself)
+THEN RESPONSE #100
+  SetGlobal("appear", "LOCALS", 1)
+  DestroyItem("A7RING01")
+END
+
+// Disappear forever
+IF
+  Global("Quest3Finished", "A77005", 1)
+THEN RESPONSE #100
+  DestroySelf()
+END
+
+// show health during the fight Arabani <-> Tathas
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  Global("A7TathasAttacked", "GLOBAL", 0)
+  Allegiance(Myself, NEUTRAL)
+  AreaCheck("A77007")
+THEN RESPONSE #100
+  ChangeEnemyAlly(Myself, GOODBUTBLUE)
+  Continue()
+END
+
+// hide health after the fight Arabani <-> Tathas
+IF
+  GlobalGT("A7Quest3", "GLOBAL", 6)
+  Global("A7TathasAttacked", "GLOBAL", 0)
+  Allegiance(Myself, GOODBUTBLUE)
+  AreaCheck("A77007")
+THEN RESPONSE #100
+  ChangeEnemyAlly(Myself, NEUTRAL)
+  Continue()
+END
+
+// Become hostile when attacked
+IF
+  OR(5)
+    AttackedBy([PC], DEFAULT)
+    AttackedBy([FAMILIAR], DEFAULT)
+    AttackedBy([ALLY], DEFAULT)
+    AttackedBy([CONTROLLED], DEFAULT)
+    AttackedBy([CHARMED], DEFAULT)
+  !Allegiance(Myself, ENEMY)
+THEN RESPONSE #100
+  SetGlobal("A7TathasAttacked", "GLOBAL", 1)
+  Enemy()
+END
+
+IF
+  !Allegiance(Myself, ENEMY)
+  Global("A7TathasAttacked", "GLOBAL", 1)
+THEN RESPONSE #100
+  Enemy()
+END
+
+// Check for surviving Arabani members
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  Detect([0.0.0.0.%specific_arabani%])
+  Global("A7ArabaniDetected", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDetected", "MYAREA", 1)
+  SetGlobalTimer("ArabaniDetectTimer", "MYAREA", ONE_HOUR)
+END
+
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  !Detect([0.0.0.0.%specific_arabani%])
+  Global("A7ArabaniDetected", "MYAREA", 1)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDetected", "MYAREA", 0)
+  SetGlobalTimer("ArabaniDetectTimer", "MYAREA", ONE_ROUND)
+END
+
+IF
+  GlobalGT("A7Quest3", "GLOBAL", 6)
+  AreaCheck("A77007")
+  Global("A7ArabaniDetected", "MYAREA", 1)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDetected", "MYAREA", 0)
+END
+
+// Tathas needs to speak with Player1 after the battle with Arabani <- 1. preparation
+IF
+  Global("A7Quest3", "GLOBAL", 6)
+  !Allegiance(Myself, ENEMY)
+  !ActuallyInCombat()
+  AreaCheck("A77007")
+  GlobalTimerExpired("ArabaniDetectTimer", "MYAREA")
+  Global("A7ArabaniDetected", "MYAREA", 0)
+  Global("A7ArabaniDefeated", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 1)
+  SetGlobal("A7Quest3", "GLOBAL", 7)
+  Continue()
+END
+
+// 2. advance game time by one hour (need to check and set for each individual hour)
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(0)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(1)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(1)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(2)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(2)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(3)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(3)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(4)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(4)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(5)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(5)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(6)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(6)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(7)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(7)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(8)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(8)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(9)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(9)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(10)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(10)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(11)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(11)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(12)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(12)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(13)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(13)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(14)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(14)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(15)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(15)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(16)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(16)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(17)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(17)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(18)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(18)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(19)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(19)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(20)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(20)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(21)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(21)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(22)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(22)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(23)
+  Continue()
+END
+
+IF
+  Global("A7ArabaniDefeated", "MYAREA", 1)
+  Time(23)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 2)
+  DayNight(0)
+  Continue()
+END
+
+// 3. Talk to Player1
+IF
+  InMyArea(Player1)
+  Global("A7ArabaniDefeated", "MYAREA", 2)
+THEN RESPONSE #100
+  SetGlobal("A7ArabaniDefeated", "MYAREA", 3)
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("A7Q3ct6")
+END

@@ -1,0 +1,65 @@
+// *** Quest-specific script for Efreets (Quest 5) ***
+
+// Turning hostile when Afaaq has been seen
+IF
+  See("A7Afaaq")
+  GlobalLT("A7Quest5", "GLOBAL", 4)
+  Global("A7Q5EfreetiAttacked", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+  SetGlobal("A7Quest5", "GLOBAL", 8)
+  DisplayStringHead(Myself, @6857)    // The djinns are attacking. To arms!
+  Shout(%shout_efreeti_attack%)
+  Enemy()
+END
+
+
+// Efreeti Guard only: Initiate talk when first entering
+IF
+  Name("A7Q5EF08", Myself)
+  See(Player1)
+  Global("A7Q5MeetCommander", "A77003", 0)
+  NumTimesTalkedTo(0)
+THEN RESPONSE #100
+  StartDialogueNoSet(Player1)
+END
+
+IF
+  Name("A7Q5EF08", Myself)
+  See([PC])
+  Global("A7Q5MeetCommander", "A77003", 0)
+  NumTimesTalkedTo(0)
+THEN RESPONSE #100
+  StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+
+// Rally around the first commander
+IF
+  !Name("A7Q5EF01", Myself)
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  Allegiance(Myself, ENEMY)
+  !See([GOODCUTOFF])
+  !Dead("A7Q5EF01")
+  !See("A7Q5EF01")
+THEN 
+  RESPONSE #50
+    MoveToObject("A7Q5EF01")
+  RESPONSE #50
+    Continue()
+END
+
+// Rally around the Malik
+IF
+  GlobalGT("A7Quest5", "GLOBAL", 7)
+  Allegiance(Myself, ENEMY)
+  !See([GOODCUTOFF])
+  Dead("A7Q5EF01")
+  InMyArea("A7Malik")
+  !See("A7Malik")
+THEN 
+  RESPONSE #50
+    MoveToObject("A7Malik")
+  RESPONSE #50
+    Continue()
+END

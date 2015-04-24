@@ -1,0 +1,27 @@
+// Cutscene: Xunvrae d'Arabani imprisons Tathas magically
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Tathas")
+  FaceObject("A7ARAB01")
+  GiveItem("A7MISC5", "A7ARAB01")
+  CreateVisualEffectObject("A7Q3CT4", Myself)    // play some flashy effects on Tathas
+  Wait(2)
+  DisplayStringHead(Myself, @3922)    // NOOOO!!!
+  Wait(3)
+  SetGlobal("A7TathasAttacked", "GLOBAL", 1)
+  DestroySelf()
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7ARAB01")
+  SetGlobal("A7TathasImprisoned", "LOCALS", 1)
+  FaceObject("A7Tathas")
+  ForceSpellRES("A7Q3SFX3", "A7Tathas")    // spellcasting duration: 3s
+  Wait(4)
+  FaceObject(Player1)
+  StartDialogueNoSet(Player1)
+END

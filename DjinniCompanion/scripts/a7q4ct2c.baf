@@ -1,0 +1,23 @@
+// *** Cutscene: Party and Afaaq are positioned before the Greed Genie again ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("HELLGEN")
+  FadeToColor([30.0], 0)
+  SmallWait(30)
+  ApplySpellRES("A7MISTC", "A7Afaaq")
+  ActionOverride(Player1, JumpToPoint([464.827]))
+  ActionOverride(Player2, JumpToPoint([413.771]))
+  ActionOverride(Player3, JumpToPoint([533.781]))
+  ActionOverride(Player4, JumpToPoint([588.766]))
+  ActionOverride(Player5, JumpToPoint([603.820]))
+  ActionOverride(Player6, JumpToPoint([561.717]))
+  ActionOverride(Player1, Face(2))
+  ActionOverride(Player2, Face(2))
+  ActionOverride(Player3, Face(2))
+  ActionOverride(Player4, Face(2))
+  ActionOverride(Player5, Face(2))
+  ActionOverride(Player6, Face(2))
+  StartCutScene("A7Q4ct2e")
+END

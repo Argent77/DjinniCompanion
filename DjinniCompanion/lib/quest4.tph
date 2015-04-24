@@ -1,0 +1,147 @@
+// *** Quest 4-specific ***
+
+// Altering the Greed Genie
+COPY_EXISTING ~hellgen.cre~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    SAY NAME1 @4900               // Enslaved Djinni
+    SAY NAME2 @4900               // Enslaved Djinni
+    WRITE_LONG 0x28 32517         // Animation: DJINNI
+    WRITE_BYTE 0x59 50            // Fire Resistance
+    WRITE_BYTE 0x5a 25            // Cold Resistance
+    WRITE_BYTE 0x5b 100           // Electricity Resistance
+    WRITE_BYTE 0x5c 25            // Acid Resistance
+    WRITE_BYTE 0x5e 50            // Magic Fire Resistance
+    WRITE_ASCII 0x248 ~GENSHT01~ #8   // retain original override script
+    WRITE_ASCII 0x250 ~A7HGATK~ #8    // new class script
+    WRITE_ASCII 0x258 ~A7HGINIT~ #8   // new race script
+    WRITE_ASCII 0x260 ~~ #8           // clear general script
+    WRITE_ASCII 0x268 ~WTASIGHT~ #8   // retain original default script
+    WRITE_BYTE 0x273 1                // Class: Mage (for spell effects)
+    // Removing old spell selection
+    REMOVE_KNOWN_SPELLS
+    REMOVE_MEMORIZED_SPELLS
+    // Adding new spells
+    ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
+    ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
+    ADD_KNOWN_SPELL ~SPWI219~ #1 ~wizard~     // Vocalize
+    ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
+    ADD_KNOWN_SPELL ~SPWI308~ #2 ~wizard~     // Lightning Bolt
+    ADD_KNOWN_SPELL ~SPWI302~ #2 ~wizard~     // Remove Magic
+    ADD_KNOWN_SPELL ~SPWI405~ #3 ~wizard~     // Improved Invisibility
+    ADD_KNOWN_SPELL ~SPWI505~ #4 ~wizard~     // Shadow Door
+    ADD_KNOWN_SPELL ~SPWI513~ #4 ~wizard~     // Breach
+    ADD_KNOWN_SPELL ~SPWI609~ #5 ~wizard~     // True Sight
+    ADD_KNOWN_SPELL ~SPWI611~ #5 ~wizard~     // Protection from Magical Weapons
+    ADD_KNOWN_SPELL ~SPWI615~ #5 ~wizard~     // Chain Lightning
+    ADD_KNOWN_SPELL ~SPWI701~ #6 ~wizard~     // Spell Turning
+    ADD_KNOWN_SPELL ~A7SPWI01~ #6 ~wizard~    // Conjure Air Elemental
+    ADD_KNOWN_SPELL ~SPWI897~ #7 ~wizard~     // Symbol, Death
+    ADD_KNOWN_SPELL ~SPWI898~ #7 ~wizard~     // Symbol, Stun
+    ADD_KNOWN_SPELL ~SPWI899~ #7 ~wizard~     // Symbol, Fear
+    ADD_KNOWN_SPELL ~SPWI909~ #8 ~wizard~     // Time Stop
+    ADD_KNOWN_SPELL ~A7SPIN2~ #0 ~innate~     // Whirlwind
+    ADD_KNOWN_SPELL ~A7SPIN4~ #0 ~innate~     // Air Shield
+    ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 3 )
+    ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI219~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI302~ #2 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI405~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI505~ #4 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI609~ #5 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI611~ #5 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI615~ #5 ~wizard~ ( 3 )
+    ADD_MEMORIZED_SPELL ~SPWI701~ #6 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~A7SPWI01~ #6 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI897~ #7 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI898~ #7 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI899~ #7 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI909~ #8 ~wizard~
+    ADD_MEMORIZED_SPELL ~A7SPIN2~ #0 ~innate~
+    ADD_MEMORIZED_SPELL ~A7SPIN4~ #0 ~innate~
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~hellgen.cre~
+    TEXT_SPRINT restype ~Creature~
+    PATCH_FAIL @30    // Error: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// QuestPack-specific: Ensures consistency with the original genie
+ACTION_IF (FILE_EXISTS_IN_GAME ~hellgen2.cre~) BEGIN
+  COPY_EXISTING ~hellgen2.cre~ ~override~
+    SAY NAME1 @4900             // Enslaved Djinni
+    SAY NAME2 @4900             // Enslaved Djinni
+END
+
+// spells
+COPY ~DjinniCompanion/spells/a7q4sfx1.spl~ ~override~   // Casting effects (Afaaq only)
+     ~DjinniCompanion/spells/a7q4sfx2.spl~ ~override~   // Casting effects (Afaaq and Player1)
+     ~DjinniCompanion/spells/a7q4sfx3.spl~ ~override~   // Casting effects (random effect on Player1)
+
+// visual effects
+COPY ~DjinniCompanion/spells/a7q4ct3a.vef~ ~override~   // VFX (Genie on Afaaq)
+     ~DjinniCompanion/spells/a7q4ct3b.vef~ ~override~   // VFX (Genie on Player1)
+
+// scripts
+// make greed genie's offer invalid when leaving his domain (Bioware version)
+<<<<<<<< djinnicompanion/inlined/ar2900.baf
+IF
+  AreaCheckObject("AR2900", Player1)
+  Global("A7GreedWaitForDecision", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7GreedWaitForDecision", "GLOBAL", 3)
+END
+>>>>>>>>
+// make greed genie's offer invalid when leaving his domain (Questpack's version)
+<<<<<<<< djinnicompanion/inlined/ar2900_qp.baf
+IF
+  AreaCheckObject("AR2900", Player1)
+  Global("A7GreedWaitForDecision", "GLOBAL", 1)
+  GlobalLT("C7Geas","GLOBAL",3)
+THEN RESPONSE #100
+  SetGlobal("A7GreedWaitForDecision", "GLOBAL", 3)
+END
+>>>>>>>>
+
+
+EXTEND_BOTTOM ~ar2903.bcs~ ~DjinniCompanion/scripts/ar2903.baf~
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a7hginit.baf~
+  ~DjinniCompanion/scripts/a7hgatk.baf~
+  ~DjinniCompanion/scripts/a7q4ct1.baf~
+  ~DjinniCompanion/scripts/a7q4ct2a.baf~
+  ~DjinniCompanion/scripts/a7q4ct2b.baf~
+  ~DjinniCompanion/scripts/a7q4ct2c.baf~
+  ~DjinniCompanion/scripts/a7q4ct2d.baf~
+  ~DjinniCompanion/scripts/a7q4ct2e.baf~
+  ~DjinniCompanion/scripts/a7q4ct2f.baf~
+  ~DjinniCompanion/scripts/a7q4ct3a.baf~
+  ~DjinniCompanion/scripts/a7q4ct3b.baf~
+  ~DjinniCompanion/scripts/a7q4ct3c.baf~
+
+
+// scripts & dialogs
+COPY_EXISTING ~hellgen.dlg~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x33) BEGIN
+    READ_LONG 0x8 "numstates"
+  END ELSE BEGIN
+    SET numstates = 0
+    TEXT_SPRINT filename ~hellgen.dlg~
+    TEXT_SPRINT restype ~Dialog~
+    PATCH_WARN @29    // ~Warning: Unable to read %filename% (Reason: %restype% file is invalid)~
+  END
+
+ACTION_IF (MOD_IS_INSTALLED ~setup-d0questpack.tp2~ 8) BEGIN
+  PRINT @26    // Questpack's "Revised Hell Trials" has been found...adjusting component.
+  ACTION_IF (numstates < 27) BEGIN    // // very simple sanity check
+    FAIL @25    // The dialog file of the enslaved genie in the Greed Hell Trial isn't compatible with this mod. You have to uninstall the responsible mod before installing again.
+  END ELSE BEGIN
+    COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7hellgenie_questpack.d~
+  END
+  EXTEND_BOTTOM ~ar2900.bcs~ ~djinnicompanion/inlined/ar2900_qp.baf~
+END ELSE BEGIN
+  COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7hellgenie_default.d~
+  EXTEND_BOTTOM ~ar2900.bcs~ ~djinnicompanion/inlined/ar2900.baf~
+END
+

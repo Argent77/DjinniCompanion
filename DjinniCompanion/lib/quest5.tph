@@ -1,0 +1,407 @@
+// *** Quest 5-specific ***
+
+INCLUDE ~DjinniCompanion/lib/ar3001.tph~
+INCLUDE ~DjinniCompanion/lib/ar5500.tph~
+INCLUDE ~DjinniCompanion/lib/ar5503.tph~
+INCLUDE ~DjinniCompanion/lib/ar5504.tph~
+INCLUDE ~DjinniCompanion/lib/a77002.tph~
+INCLUDE ~DjinniCompanion/lib/a77003.tph~
+
+// BG2EE-specific stuff
+ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+  OUTER_TEXT_SPRINT ITEM_CFLUTE "DjinniCompanion/items/bg2ee/a7cflute.bmp"
+  OUTER_TEXT_SPRINT ITEM_CMISC8 "DjinniCompanion/items/bg2ee/a7cmisc8.bmp"
+  OUTER_TEXT_SPRINT ITEM_CMISCB "DjinniCompanion/items/bg2ee/a7cmiscb.bmp"
+  OUTER_TEXT_SPRINT ITEM_CWAND2 "DjinniCompanion/items/bg2ee/a7cwand2.bmp"
+  OUTER_TEXT_SPRINT PORTRAIT_KARIMS "DjinniCompanion/portraits/bg2ee/a7karims.bmp"
+  OUTER_TEXT_SPRINT PORTRAIT_MALIKS "DjinniCompanion/portraits/bg2ee/a7maliks.bmp"
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT ITEM_CFLUTE "DjinniCompanion/items/a7cflute.bam"
+  OUTER_TEXT_SPRINT ITEM_CMISC8 "DjinniCompanion/items/a7cmisc8.bam"
+  OUTER_TEXT_SPRINT ITEM_CMISCB "DjinniCompanion/items/a7cmiscb.bam"
+  OUTER_TEXT_SPRINT ITEM_CWAND2 "DjinniCompanion/items/a7cwand2.bam"
+  OUTER_TEXT_SPRINT PORTRAIT_KARIMS "DjinniCompanion/portraits/a7karims.bmp"
+  OUTER_TEXT_SPRINT PORTRAIT_MALIKS "DjinniCompanion/portraits/a7maliks.bmp"
+END
+
+// shout IDs used in scripts
+OUTER_SET shout_efreeti_attack = 167
+OUTER_SET shout_salamander_attack = 168
+OUTER_SET shout_djinni_attack = 169
+// specifics IDs used in scripts
+OUTER_SET specific_efreeti = 167
+OUTER_SET specific_djinni = 168
+
+// Adding XP rewards for Quest 5
+COPY_EXISTING ~xplist.2da~ ~override~
+  INSERT_2DA_ROW 0 43 ~A7Q5ADV2 A7_Q5_Karim_Advice2        P_30000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q5ADV1 A7_Q5_Karim_Advice1        P_10000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q5MQ5  A7_Q5_Karim_Reward         50000      -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q5MQ4  A7_Q5_Malik_Betrayal       P_50000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q5MQ3  A7_Q5_Malik_Imoen_Soul     P_50000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q5MQ2  A7_Q5_Malik_PC_Soul        P_50000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q5MQ1  A7_Q5_Malik_Artifact       50000      -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q5SQ2  A7_Q5_SubQuest2            P_20000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+  INSERT_2DA_ROW 0 43 ~A7Q5SQ1  A7_Q5_SubQuest1            P_20000    -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1     -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1          -1~
+
+// creatures
+// Djinnis
+COPY ~DjinniCompanion/creatures/a7karim.cre~ ~override~
+  SAY NAME1 @6829     // Karim
+  SAY NAME2 @6829     // Karim
+  WRITE_BYTE 0x274 %specific_djinni%
+COPY ~%PORTRAIT_KARIMS%~ ~override~
+
+COPY ~DjinniCompanion/creatures/a7q5dj01.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5dj02.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5dj03.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5dj04.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5dj05.cre~ ~override~
+  WRITE_BYTE 0x274 %specific_djinni%
+
+// Efreets
+COPY ~DjinniCompanion/creatures/a7malik.cre~ ~override~
+  SAY NAME1 @6832     // Malik
+  SAY NAME2 @6832     // Malik
+  WRITE_BYTE 0x274 %specific_efreeti%
+COPY ~%PORTRAIT_MALIKS%~ ~override~
+
+COPY ~DjinniCompanion/creatures/a7q5ef01.cre~ ~override~
+  SAY NAME1 @6833     // Efreeti Commander
+  SAY NAME2 @6833     // Efreeti Commander
+  WRITE_BYTE 0x274 %specific_efreeti%
+COPY ~DjinniCompanion/creatures/a7q5ef02.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5ef03.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5ef04.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5ef05.cre~ ~override~
+  WRITE_BYTE 0x274 %specific_efreeti%
+
+COPY ~DjinniCompanion/creatures/a7q5ef07.cre~ ~override~
+  SAY NAME1 @6847     // Efreeti Apprentice
+  SAY NAME2 @6847     // Efreeti Apprentice
+  WRITE_BYTE 0x274 %specific_efreeti%
+
+COPY ~DjinniCompanion/creatures/a7q5ef06.cre~ ~override~
+  SAY NAME1 @6846    // Efreeti Summoner
+  SAY NAME2 @6846    // Efreeti Summoner
+  WRITE_BYTE 0x274 %specific_efreeti%
+
+COPY ~DjinniCompanion/creatures/a7q5ef08.cre~ ~override~
+  SAY NAME1 @6834     // Efreeti Guard
+  SAY NAME2 @6834     // Efreeti Guard
+  WRITE_BYTE 0x274 %specific_efreeti%
+
+// Fire Salamanders
+COPY ~DjinniCompanion/creatures/a7q5fs01.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fs02.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fs03.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fs04.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fs05.cre~ ~override~
+COPY ~DjinniCompanion/creatures/a7q5fs06.cre~ ~override~
+  SAY NAME1 @6835     // Salamander Servant
+  SAY NAME2 @6835     // Salamander Servant
+
+// Fire Elementals
+COPY ~DjinniCompanion/creatures/a7q5fe01.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe02.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe03.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe04.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe05.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe06.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe07.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe08.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe09.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe10.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe11.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fe12.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5fes.cre~ ~override~
+  WRITE_BYTE 0x274 %specific_efreeti%
+
+// Fire Trolls
+COPY ~DjinniCompanion/creatures/a7q5ft01.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5ft02.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5ft03.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5ft04.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5ft05.cre~ ~override~
+     ~DjinniCompanion/creatures/a7q5ft06.cre~ ~override~
+  WRITE_BYTE 0x274 %specific_efreeti%
+  PATCH_IF (FILE_EXISTS_IN_GAME ~CDHGTRL.ITM~) BEGIN
+    // enabling troll death on condition effect for BG2EE v1.3 or higher
+    ADD_CRE_ITEM ~CDHGTRL~ #0 #0 #0 ~identified~ ~lring~
+    LPF ~DELETE_CRE_EFFECT~ INT_VAR opcode_to_delete = 98 END   // removing redundant regeneration effect
+  END
+
+// more creatures
+COPY ~DjinniCompanion/creatures/a7q5hh2.cre~ ~override~
+  SAY NAME1 @6836    // Greater Hell Hound
+  SAY NAME2 @6836    // Greater Hell Hound
+COPY ~DjinniCompanion/creatures/a7q5hh1.cre~ ~override~   // Hell Hound
+     ~DjinniCompanion/creatures/a7q5fm.cre~ ~override~    // Fire Mephit
+     ~DjinniCompanion/creatures/a7q5mm.cre~ ~override~    // Magma Mephit
+     ~DjinniCompanion/creatures/a7q5sm.cre~ ~override~    // Smoke Mephit
+ 
+
+
+// items
+COPY ~DjinniCompanion/items/a7wand1.itm~ ~override~
+  SAY NAME2 @6808     // Wand of Heat Protection
+  SAY IDENTIFIED_DESC @6809    // This magical wand has a limited number of charges which enable you and your party to withstand...
+COPY ~DjinniCompanion/items/a7iwand1.bam~ ~override~
+     ~DjinniCompanion/items/a7q5wand.eff~ ~override~
+     ~DjinniCompanion/creatures/a7q5wand.cre~ ~override~
+COMPILE ~DjinniCompanion/scripts/a7q5wand.baf~
+
+COPY ~DjinniCompanion/items/a7wand2.itm~ ~override~
+  SAY NAME2 @6821     // Wand of Inferno
+  SAY IDENTIFIED_DESC @6822    // This wand looks like it will burst into flames any moment. The lower part...
+COPY_EXISTING ~tooltip.2da~ ~override~
+  INSERT_2DA_ROW 1 3 ~A7WAND2           63842        15211       63580~
+COPY ~DjinniCompanion/items/a7iwand2.bam~ ~override~
+     ~%ITEM_CWAND2%~                      ~override~
+
+COPY ~DjinniCompanion/items/a7misc8.itm~ ~override~
+  SAY NAME2 @6839     // Efreeti Contract
+  SAY IDENTIFIED_DESC @6840    // This very heavy and bulky stone tablet contains a contract written in a language you don't recognize.
+COPY ~DjinniCompanion/items/a7misc8.itm~ ~override/a7misc8a.itm~
+  SAY NAME2 @6841     // Signed Efreeti Contract
+  SAY IDENTIFIED_DESC @6842    // This very heavy and bulky stone tablet contains a contract written in a language you don't recognize...
+COPY ~%ITEM_CMISC8%~                      ~override~
+     ~DjinniCompanion/items/a7imisc8.bam~ ~override~
+
+COPY ~DjinniCompanion/items/a7misc9.itm~ ~override~
+  SAY NAME2 @6819     // Mephit Blood
+  SAY IDENTIFIED_DESC @6820    // A vial of blood from a mephit.
+
+COPY ~DjinniCompanion/items/a7flute.itm~ ~override~
+  SAY NAME2 @6823     // Djinni Whistle
+  SAY IDENTIFIED_DESC @6824    // The whistle is intricately carved from fine woods and...
+COPY ~DjinniCompanion/items/a7iflute.bam~     ~override~
+     ~%ITEM_CFLUTE%~                          ~override~
+     ~DjinniCompanion/items/a7q5djin.eff~     ~override~
+     ~DjinniCompanion/creatures/a7q5djin.cre~ ~override~
+COMPILE ~DjinniCompanion/scripts/a7q5djin.baf~
+
+COPY ~DjinniCompanion/items/a7ring03.itm~ ~override~
+  SAY NAME2 @6825     // Ring of Elemental Protection
+  SAY IDENTIFIED_DESC @6826    // This excellent piece of workmanship contains very powerful enchantments which no mortal is capable to...
+COPY_EXISTING ~tooltip.2da~ ~override~
+  SET airshield = RESOLVE_STR_REF(@60015)    // Air Shield
+  INSERT_2DA_ROW 1 3 ~A7RING03          25880        12061       %airshield%~
+COPY ~DjinniCompanion/items/a7iring3.bam~ ~override~
+
+COPY ~DjinniCompanion/items/a7sw1h3.itm~ ~override~
+  SAY NAME2 @6827     // Cloud Slasher +4
+  SAY IDENTIFIED_DESC @6828    // The scimitar crackles with energy when you hold it in your hand and each strike appears to slash the air itself...
+COPY ~DjinniCompanion/items/a7isw1h3.bam~ ~override~
+
+COPY ~DjinniCompanion/items/a7q5hh.itm~ ~override~    // weapon for hell hounds
+
+// Skull of a demi-lich
+COPY_EXISTING ~tooltip.2da~ ~override~
+  SET a7skull = RESOLVE_STR_REF(@6852)    // Absorb Life Force
+  INSERT_2DA_ROW 1 3 ~A7SKULL           %a7skull%        -1          -1~
+COPY ~DjinniCompanion/items/a7skull.itm~ ~override~
+  SAY NAME2 @6843     // Skull of a demi-lich
+  SAY UNIDENTIFIED_DESC @6844   // A skull salvaged from the destroyed body of a demi-lich.
+  SAY IDENTIFIED_DESC @6845     // The skull radiates an overwhelming aura of menace and you have the feeling that it is still possessed by the spirit of the demi-lich himself...
+COPY ~DjinniCompanion/items/a7skull2.itm~ ~override~
+  SAY NAME2 @6884     // Purified Skull of a demi-lich
+  SAY UNIDENTIFIED_DESC @6885   // The power of this skull has been slightly weakened by the purification ritual...
+COPY ~DjinniCompanion/items/a7iskull.bam~ ~override~
+     ~DjinniCompanion/items/a7skull.eff~ ~override~
+     ~DjinniCompanion/creatures/a7skull.cre~ ~override~
+COMPILE ~DjinniCompanion/scripts/a7skull.baf~
+
+// Placing the demilich skull in WK's demilich and Kangaxx
+COPY_EXISTING ~demilich.cre~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    ADD_CRE_ITEM ~A7SKULL~ #3 #0 #0 ~UNSTEALABLE~ ~INV16 INV15 INV14 INV13 INV12 INV11 INV10 INV9 INV8~
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~demilich.cre~
+    TEXT_SPRINT restype ~Creature~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+COPY_EXISTING ~hldemi.cre~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    ADD_CRE_ITEM ~A7SKULL~ #3 #0 #0 ~UNSTEALABLE~ ~INV16 INV15 INV14 INV13 INV12 INV11 INV10 INV9 INV8~
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~hldemi.cre~
+    TEXT_SPRINT restype ~Creature~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+COPY ~DjinniCompanion/items/a7book01.itm~ ~override~
+  SAY NAME2 @6855    // Larloch's treatise on necromantic rituals
+  SAY IDENTIFIED_DESC @6856    // (This tome appears to be a transcription of a much older document found in the ruins of ancient Netheril...
+
+// Heart of a demon lord
+COPY ~DjinniCompanion/items/a7heart.itm~ ~override/a7heart1.itm~
+  SAY NAME1 @6853     // Demogorgon's Heart
+  SAY NAME2 @6853     // Demogorgon's Heart
+COPY_EXISTING ~demogor2.cre~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    ADD_CRE_ITEM ~A7HEART1~ #0 #0 #0 ~UNSTEALABLE~ ~INV16 INV15 INV14 INV13 INV12 INV11 INV10 INV9 INV8~
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~demogor2.cre~
+    TEXT_SPRINT restype ~Creature~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+COPY_EXISTING ~demogor2.bcs~ ~override~    // Make demogorgon drop his heart when dying
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY CASE_INSENSITIVE 
+      ~\(SetGlobal("SPRITE_IS_DEADDEMOGOR2","GLOBAL",1)\)~ ~\1 DropItem("A7HEART1", [-1.-1])~
+  END
+  BUT_ONLY
+
+COPY ~DjinniCompanion/items/a7heart.itm~ ~override/a7heart2.itm~
+  SAY NAME1 @6854     // Heart of a demon lord
+  SAY NAME2 @6854     // Heart of a demon lord
+COPY_EXISTING ~uddemon.cre~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    ADD_CRE_ITEM ~A7HEART2~ #0 #0 #0 ~UNSTEALABLE~ ~INV16 INV15 INV14 INV13 INV12 INV11 INV10 INV9 INV8~
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~uddemon.cre~
+    TEXT_SPRINT restype ~Creature~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// Skull Detonator
+COPY ~DjinniCompanion/items/a7miscb.itm~ ~override~
+  SAY NAME1 @6848     // Wrapped Orb
+  SAY NAME2 @6849     // Skull Detonator
+  SAY UNIDENTIFIED_DESC @6850   // This small but unusually heavy orb lies comfortably in the hand and has a piece of string attached to it.
+  SAY IDENTIFIED_DESC @6851     // A small clan of dwarves invented a strange substance which, if mixed correctly, could shatter...
+COPY ~DjinniCompanion/items/a7imiscb.bam~ ~override~
+     ~%ITEM_CMISCB%~                      ~override~
+
+
+// spells
+COPY ~DjinniCompanion/spells/a7q5pic1.spl~ ~override~   // portrait change
+     ~DjinniCompanion/spells/a7q5sfx1.spl~ ~override~   // casting animation (abjuration)
+     ~DjinniCompanion/spells/a7q5burn.spl~ ~override~   // burn damage when diving in boiling water
+     ~DjinniCompanion/spells/a7q5blst.spl~ ~override~   // blast effect when the fire portal is closing
+     ~DjinniCompanion/spells/a7q5drn.spl~ ~override~    // level drain cast by efreeti lord
+     ~DjinniCompanion/spells/a7q5fes.spl~ ~override~    // conjure a certain fire elemental
+     ~DjinniCompanion/spells/a7q5fes.eff~ ~override~    // effect file for fire elemental summoning
+
+
+// stores
+COPY_EXISTING ~amcler02.sto~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x9b) BEGIN
+    ADD_STORE_ITEM ~POTN31~ AFTER ~POTN55~ #1 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM ~POTN22~ AFTER ~POTN55~ #1 #0 #0 ~IDENTIFIED~ #10
+    ADD_STORE_ITEM ~POTN18~ AFTER ~POTN55~ #1 #0 #0 ~IDENTIFIED~ #5
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~amcler02.sto~
+    TEXT_SPRINT restype ~Store~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+COPY_EXISTING ~amsmug01.sto~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x9b) BEGIN
+    ADD_STORE_ITEM ~POTN31~ AFTER ~POTN14~ #1 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM ~POTN22~ AFTER ~POTN14~ #1 #0 #0 ~IDENTIFIED~ #10
+    ADD_STORE_ITEM + ~POTN18~ #1 #0 #0 ~IDENTIFIED~ #5
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~amsmug01.sto~
+    TEXT_SPRINT restype ~Store~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+COPY_EXISTING ~amsmug02.sto~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x9b) BEGIN
+    ADD_STORE_ITEM ~POTN31~ AFTER ~POTN14~ #1 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM ~POTN22~ AFTER ~POTN14~ #1 #0 #0 ~IDENTIFIED~ #10
+    ADD_STORE_ITEM + ~POTN18~ #1 #0 #0 ~IDENTIFIED~ #5
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~amsmug02.sto~
+    TEXT_SPRINT restype ~Store~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+COPY_EXISTING ~hgkar01.sto~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x9b) BEGIN
+    ADD_STORE_ITEM ~POTN31~ AFTER ~POTN14~ #1 #0 #0 ~IDENTIFIED~ #4
+    ADD_STORE_ITEM + ~POTN22~ #1 #0 #0 ~IDENTIFIED~ #8
+    ADD_STORE_ITEM ~POTN18~ AFTER ~POTN14~ #1 #0 #0 ~IDENTIFIED~ #4
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~hgkar01.sto~
+    TEXT_SPRINT restype ~Store~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  END
+
+// misc
+COPY ~DjinniCompanion/spells/a7q5heat.vef~ ~override~    // vfx for heat protection
+
+// scripts
+COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/scripts/a7q5ct1a.baf~
+    ~DjinniCompanion/scripts/a7q5ct1b.baf~
+    ~DjinniCompanion/scripts/a7q5ct2a.baf~
+    ~DjinniCompanion/scripts/a7q5ct2b.baf~
+    ~DjinniCompanion/scripts/a7q5ct2c.baf~
+    ~DjinniCompanion/scripts/a7q5ct3a.baf~
+    ~DjinniCompanion/scripts/a7q5ct3b.baf~
+    ~DjinniCompanion/scripts/a7q5ct3c.baf~
+    ~DjinniCompanion/scripts/a7q5ct4a.baf~
+    ~DjinniCompanion/scripts/a7q5ct6a.baf~
+    ~DjinniCompanion/scripts/a7q5ct6b.baf~
+    ~DjinniCompanion/scripts/a7q5ct6c.baf~
+    ~DjinniCompanion/scripts/a7q5ct6d.baf~
+    ~DjinniCompanion/scripts/a7q5ct6e.baf~
+    ~DjinniCompanion/scripts/a7q5ct7a.baf~
+    ~DjinniCompanion/scripts/a7q5ct9.baf~
+    ~DjinniCompanion/scripts/a7q5dj.baf~
+    ~DjinniCompanion/scripts/a7malik.baf~
+    ~DjinniCompanion/scripts/a7q5ef.baf~
+    ~DjinniCompanion/scripts/a7q5fe.baf~
+    ~DjinniCompanion/scripts/a7q5fe01.baf~
+    ~DjinniCompanion/scripts/a7q5fe02.baf~
+    ~DjinniCompanion/scripts/a7q5fe03.baf~
+    ~DjinniCompanion/scripts/a7q5fe04.baf~
+    ~DjinniCompanion/scripts/a7q5fe05.baf~
+    ~DjinniCompanion/scripts/a7q5fe06.baf~
+    ~DjinniCompanion/scripts/a7q5fes.baf~
+    ~DjinniCompanion/scripts/a7q5fs01.baf~
+    ~DjinniCompanion/scripts/a7q5fs02.baf~
+    ~DjinniCompanion/scripts/a7q5fs03.baf~
+    ~DjinniCompanion/scripts/a7q5fs04.baf~
+    ~DjinniCompanion/scripts/a7q5fs05.baf~
+    ~DjinniCompanion/scripts/a7q5fs06.baf~
+    ~DjinniCompanion/scripts/a7q5ft.baf~
+    ~DjinniCompanion/scripts/a7q5ft01.baf~
+    ~DjinniCompanion/scripts/a7q5ft02.baf~
+    ~DjinniCompanion/scripts/a7q5ft06.baf~
+    ~DjinniCompanion/scripts/a7q5sht1.baf~
+    ~DjinniCompanion/scripts/a7q5sht2.baf~
+    ~DjinniCompanion/scripts/a7q5sht3.baf~
+    ~DjinniCompanion/scripts/a7q5djc1.baf~
+    ~DjinniCompanion/scripts/a7q5djc2.baf~
+    ~DjinniCompanion/scripts/a7q5efc1.baf~
+    ~DjinniCompanion/scripts/a7q5efc2.baf~
+    ~DjinniCompanion/scripts/a7zombie.baf~
+    ~DjinniCompanion/scripts/a7troll.baf~
+
+
+// dialogs
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/dialogs/amcarras.d~
+  ~DjinniCompanion/dialogs/ampeople.d~
+  ~DjinniCompanion/dialogs/amcler02.d~
+  ~DjinniCompanion/dialogs/amcst04.d~
+  ~DjinniCompanion/dialogs/25spell.d~
+  ~DjinniCompanion/dialogs/A7SkullPurify.d~
+  ~DjinniCompanion/dialogs/A7Q5dj.d~
+  ~DjinniCompanion/dialogs/A7Q5dj01.d~
+  ~DjinniCompanion/dialogs/A7Q5dj05.d~
+  ~DjinniCompanion/dialogs/A7Karim.d~
+  ~DjinniCompanion/dialogs/A7Malik.d~
+  ~DjinniCompanion/dialogs/A7Q5ef.d~
+  ~DjinniCompanion/dialogs/A7Q5ef01.d~
+  ~DjinniCompanion/dialogs/A7Q5ef06.d~
+  ~DjinniCompanion/dialogs/A7Q5ef07.d~
+  ~DjinniCompanion/dialogs/A7Q5ef08.d~
+  ~DjinniCompanion/dialogs/A7Q5fes.d~
+  ~DjinniCompanion/dialogs/A7Q5fs.d~
+  ~DjinniCompanion/dialogs/A7Q5fs01.d~
+  ~DjinniCompanion/dialogs/A7Q5fs06.d~
+  ~DjinniCompanion/dialogs/A7Q5ft.d~
+  ~DjinniCompanion/dialogs/A7AfaaqQuest5.d~
+

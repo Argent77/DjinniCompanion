@@ -1,0 +1,202 @@
+BACKUP ~DjinniCompanion/backup~
+AUTHOR ~Argent77 at Spellhold Studios~
+VERSION ~v1.0 beta 4~
+
+ALWAYS
+  ACTION_DEFINE_ARRAY a7noconvert BEGIN setup bg2ee END
+  ACTION_DEFINE_ARRAY a7reload BEGIN afaaq misc quest1 quest2 quest3 quest4 quest5 END
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charset   = 1
+    STR_VAR
+      tra_path        = ~DjinniCompanion/languages~
+      noconvert_array = a7noconvert
+      reload_array    = a7reload
+  END
+
+  ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+    ACTION_IF (NOT (~%LANGUAGE%~ STRING_EQUAL_CASE ~english~)) BEGIN
+      LOAD_TRA ~DjinniCompanion/languages/english/bg2ee.tra~
+    END
+    LOAD_TRA ~DjinniCompanion/languages/%LANGUAGE%/bg2ee.tra~
+  END
+
+END
+
+README ~DjinniCompanion/readme/readme-%LANGUAGE%.html~
+       ~DjinniCompanion/readme/readme.html~
+
+LANGUAGE ~English~
+         ~english~ 
+         ~DjinniCompanion/languages/english/setup.tra~
+         ~DjinniCompanion/languages/english/misc.tra~
+         ~DjinniCompanion/languages/english/afaaq.tra~
+         ~DjinniCompanion/languages/english/quest1.tra~
+         ~DjinniCompanion/languages/english/quest2.tra~
+         ~DjinniCompanion/languages/english/quest3.tra~
+         ~DjinniCompanion/languages/english/quest4.tra~
+         ~DjinniCompanion/languages/english/quest5.tra~
+
+
+/////////////////////////////////////////
+// Afaaq - The Djinni (main component) //
+/////////////////////////////////////////
+BEGIN @2      // Full Version (includes quests, banters and more)
+  REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee~ @4      // This mod requires BG2:ToB or BG2:EE to be installed.
+  SUBCOMPONENT @1     // Afaaq, the Djinni Companion
+  DESIGNATED 0
+
+  // BG2EE-specific initializations
+  INCLUDE ~DjinniCompanion/lib/bg2ee.tph~
+
+  // Checking for incompatibilities
+  INCLUDE ~DjinniCompanion/lib/prereqs.tph~
+
+  // *** generic stuff first ***
+  INCLUDE ~DjinniCompanion/lib/generic.tph~
+
+  // *** Spells ***
+  INCLUDE ~DjinniCompanion/lib/spells.tph~
+
+  // *** Djinni Afaaq ***
+  INCLUDE ~DjinniCompanion/lib/afaaq.tph~
+
+  // *** Installing tilesets ***
+  INCLUDE ~DjinniCompanion/lib/tilesets.tph~
+
+  // *** Quest 1 specific stuff ***
+  INCLUDE ~DjinniCompanion/lib/quest1.tph~
+
+  // *** Quest 2 specific stuff ***
+  INCLUDE ~DjinniCompanion/lib/quest2.tph~
+
+  // *** Quest 3 specific stuff ***
+  INCLUDE ~DjinniCompanion/lib/quest3.tph~
+
+  // *** Quest 4 specific stuff ***
+  INCLUDE ~DjinniCompanion/lib/quest4.tph~
+
+  // *** Quest 5 specific stuff ***
+  INCLUDE ~DjinniCompanion/lib/quest5.tph~
+
+
+BEGIN @3      // Light Version (the djinni only)
+  REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee~ @4      // This mod requires BG2:ToB or BG2:EE to be installed.
+  SUBCOMPONENT @1     // Afaaq, the Djinni Companion
+  DESIGNATED 1
+
+  // BG2EE-specific initializations
+  INCLUDE ~DjinniCompanion/lib/bg2ee.tph~
+
+  // Checking for incompatibilities
+  INCLUDE ~DjinniCompanion/lib/prereqs.tph~
+
+  // *** generic stuff first ***
+  INCLUDE ~DjinniCompanion/lib/generic.tph~
+
+  // *** Djinni Afaaq ***
+  INCLUDE ~DjinniCompanion/lib/afaaqlight.tph~
+
+
+
+////////////////////////
+// Banter Accelerator //
+////////////////////////
+BEGIN @7      // 15 Minutes
+  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  GROUP @19     // Tweaks
+  DESIGNATED 101
+  INCLUDE ~DjinniCompanion/lib/functions.tph~
+  LAF BanterAccelerator INT_VAR pc_interval = 900 END
+
+BEGIN @8      // 30 Minutes
+  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  GROUP @19     // Tweaks
+  DESIGNATED 102
+  INCLUDE ~DjinniCompanion/lib/functions.tph~
+  LAF BanterAccelerator INT_VAR pc_interval = 1800 END
+
+BEGIN @9      // 45 Minutes
+  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  GROUP @19     // Tweaks
+  DESIGNATED 103
+  INCLUDE ~DjinniCompanion/lib/functions.tph~
+  LAF BanterAccelerator INT_VAR pc_interval = 2700 END
+
+BEGIN @10     // 90 Minutes
+  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  GROUP @19     // Tweaks
+  DESIGNATED 104
+  INCLUDE ~DjinniCompanion/lib/functions.tph~
+  LAF BanterAccelerator INT_VAR pc_interval = 5400 END
+
+BEGIN @11     // 120 Minutes
+  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  GROUP @19     // Tweaks
+  DESIGNATED 105
+  INCLUDE ~DjinniCompanion/lib/functions.tph~
+  LAF BanterAccelerator INT_VAR pc_interval = 7200 END
+
+
+
+//////////////////////////////
+// Remove banter soundtrack //
+//////////////////////////////
+BEGIN @15     // Remove Afaaq's banter soundtrack?
+  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  GROUP @19     // Tweaks
+  DESIGNATED 200
+  COPY_EXISTING ~A7AFQTLK.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE ~PlaySong(0)~ ~~
+      REPLACE_TEXTUALLY CASE_INSENSITIVE ~PlaySound("A7AFQMUS")~ ~~
+    END BUT_ONLY
+
+
+//////////////////////////////////////////////////////////////
+// Set alternate portrait (for both full and light version) //
+//////////////////////////////////////////////////////////////
+BEGIN @18    // Alternate djinni portrait by Ulb
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~a7afaaq.cre~ @17     // This component requires either the full version or the light version of the "Djinni Companion" to be installed.
+  GROUP @19     // Tweaks
+  DESIGNATED 300
+  
+  // BG2EE-specific stuff
+  ACTION_IF GAME_IS BG2EE BEGIN
+    OUTER_TEXT_SPRINT PORTRAIT_AFAAQS_V2 "DjinniCompanion/portraits/bg2ee/v2/a7afaaqs.bmp"
+  END ELSE BEGIN
+    OUTER_TEXT_SPRINT PORTRAIT_AFAAQS_V2 "DjinniCompanion/portraits/v2/a7afaaqs.bmp"
+  END
+
+  COPY ~DjinniCompanion/portraits/v2/a7afaaql.bmp~ ~override~
+       ~%PORTRAIT_AFAAQS_V2%~                      ~override~
+
+
+//////////////////////////////////
+// Infinity Animation creatures //
+//////////////////////////////////
+BEGIN @14     // Add Infinity Animation creatures?
+  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12         // This component requires the full version to be installed.
+  REQUIRE_COMPONENT ~setup-infinityanimations.tp2~ 0 @13      // This component requires Infinity Animation to be installed.
+  REQUIRE_COMPONENT ~setup-infinityanimations.tp2~ 50 @16     // This component requires Infinity Animation's subcomponent "Distinctive Genies" to be installed.
+  GROUP @19     // Tweaks
+  DESIGNATED 900
+
+  // Changing Efreets in Quest 5 to IA Efreeti animation
+  COPY_EXISTING ~a7malik.cre~ ~override~
+          ~a7q5ef01.cre~ ~override~
+          ~a7q5ef02.cre~ ~override~
+          ~a7q5ef03.cre~ ~override~
+          ~a7q5ef04.cre~ ~override~
+          ~a7q5ef05.cre~ ~override~
+          ~a7q5ef06.cre~ ~override~
+          ~a7q5ef07.cre~ ~override~
+          ~a7q5ef08.cre~ ~override~
+    WRITE_SHORT 0x28 0x5fbf     // EFREETI_LEGS
+    LPF DELETE_CRE_EFFECT INT_VAR opcode_to_delete = 51 END
+

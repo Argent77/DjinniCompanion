@@ -1,0 +1,43 @@
+// *** Area script added to Underdark main area (AR2100) ***
+
+// enable the entrance to the map A77005
+IF
+  Global("A7Quest3Entrance", "AR2100", 0)
+  GlobalGT("A7Quest3", "GLOBAL", 0)
+  Global("PlayerLooksLikeDrow", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7Quest3Entrance", "AR2100", 1)
+  SetGlobal("A7Q3TravelTrigger", "AR2100", 4)
+  TriggerActivation("A7Info05", FALSE)
+  TriggerActivation("A7Tran05", TRUE)
+  Continue()
+END
+
+// Activate map marker
+IF
+  OR(2)
+    Global("A7Q3TravelTrigger", "AR2100", 1)
+    Global("A7Q3TravelTrigger", "AR2100", 3)
+  Global("A7Q3MapMarker", "AR2100", 0)
+THEN RESPONSE #100
+  SetGlobal("A7Q3MapMarker", "AR2100", 1)
+  RemoveMapNote([1615.3718], 57200) 
+  AddMapNote([1615.3718], @3900)    // Duergar encampment and Southern Passage
+  Continue()
+END
+
+// Enable info trigger to map A77005
+IF
+  Global("A7Q3TravelTrigger", "AR2100", 1)
+THEN RESPONSE #100
+  SetGlobal("A7Q3TravelTrigger", "AR2100", 2)
+  TriggerActivation("A7Info05", TRUE)
+END
+
+// Enable travel trigger to map A77005
+IF
+  Global("A7Q3TravelTrigger", "AR2100", 3)
+THEN RESPONSE #100
+  SetGlobal("A7Q3TravelTrigger", "AR2100", 4)
+  TriggerActivation("A7Tran05", TRUE)
+END

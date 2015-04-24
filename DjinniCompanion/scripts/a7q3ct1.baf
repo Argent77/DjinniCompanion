@@ -1,0 +1,55 @@
+// *** Cutscene: Party is detected by drow watch and brought before Tathas Melarn ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Tathas")
+  MoveViewPoint([1840.675], INSTANT)
+  SmallWait(10)
+  CreateCreatureDoor("A7Q3DWX2", [1887.605], 12)
+  CreateCreatureDoor("A7Q3DWX3", [1900.725], 10)
+  SmallWait(10)
+  CreateCreatureDoor("A7Q3DWX1", [1840.675], 11)
+  ActionOverride("A7Q3DWX1", FaceObject(Nearest([PC])))
+  SmallWait(60)
+  DisplayStringHead("A7Q3DWX1", @3918)    // You are drow!
+  SmallWait(50)
+  DisplayStringHead("A7Q3DWX1", @3919)    // Are you spies from nearby Ust Natha?
+  SmallWait(70)
+  DisplayStringHead("A7Q3DWX1", @3920)    // Whoever you are, you will submit to the judgement of our commander.
+  SmallWait(60)
+  FadeToColor([30.0], 0)
+  SmallWait(30)
+  ActionOverride("A7Q3DWX3", DestroySelf())
+  ActionOverride("A7Q3DWX2", DestroySelf())
+  ActionOverride("A7Q3DWX1", DestroySelf())
+  
+  // remove invisibility from Tathas and company
+  DestroyItem("A7RING01")
+  ActionOverride("A7Q3DHM", DestroyItem("A7RING01"))
+  ActionOverride("A7Q3DP01", DestroyItem("A7RING01"))
+  ActionOverride("A7Q3DCPT", DestroyItem("A7RING01"))
+  ActionOverride("A7Q3DM01", DestroyItem("A7RING01"))
+  ActionOverride("A7Q3DM02", DestroyItem("A7RING01"))
+  
+  // move party and djinni before Tathas Melarn
+  //ActionOverride(Player1, JumpToPoint([2180.1887]))
+  ActionOverride(Player1, JumpToPoint([2208.1887]))
+  ActionOverride(Player1, FaceObject("A7Tathas"))
+  ActionOverride(Player2, JumpToPoint([2226.1942]))
+  ActionOverride(Player2, FaceObject("A7Tathas"))
+  ActionOverride(Player3, JumpToPoint([2165.1951]))
+  ActionOverride(Player3, FaceObject("A7Tathas"))
+  ActionOverride(Player4, JumpToPoint([2283.1930]))
+  ActionOverride(Player4, FaceObject("A7Tathas"))
+  ActionOverride(Player5, JumpToPoint([2173.2009]))
+  ActionOverride(Player5, FaceObject("A7Tathas"))
+  ActionOverride(Player6, JumpToPoint([2320.1980]))
+  ActionOverride(Player6, FaceObject("A7Tathas"))
+  ActionOverride("A7Afaaq", FaceObject("A7Tathas"))
+  MultiPlayerSync()
+  MoveViewPoint([2216.1910], INSTANT)
+  FadeFromColor([30.0], 0)
+  SmallWait(30)
+  StartDialogueNoSet(Player1)
+END

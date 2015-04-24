@@ -1,0 +1,24 @@
+// *** Cutscene: Edwin attempts to bring Afaaq under his control (Part 1, if Afaaq is inside his lamp) ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("Edwin")
+  LeaveParty()
+  MoveToObjectNoInterrupt(Player1)
+  TakePartyItem("A7DJLMP")
+  RunAwayFromNoInterrupt(Player1, 45)
+  MoveViewObject("Edwin", FAST)
+  SmallWait(15)
+  DisplayStringHead(Myself, @19500)    // Haha, the lamp is finally mine.
+  Wait(4)
+  DisplayStringHead(Myself, @19501)    // You will be MY plaything when the spell takes effect, Afaaq.
+  Wait(5)
+  ForceSpellRES("A7cut03", Myself)
+  SmallWait(10)
+  DisplayStringHead(Myself, @19502)    // No... it cannot be... Help me, <CHARNAME>!
+  DropItem("A7DJLMP", [-1.-1])
+  ChangeEnemyAlly(Myself, NEUTRAL)
+  CreateVisualEffectObject("A7CUT03", Myself)    // calls a VEF file
+  StartCutScene("A7cut03c")
+END

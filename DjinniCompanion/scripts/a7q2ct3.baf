@@ -1,0 +1,32 @@
+// *** Cutscene: Inner forcefield is breaking down, Rakshasa High Priest and guards are appearing ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId(Player1)
+  MoveViewPoint([642.1349], INSTANT)        // switch viewpoint to starting point
+  SmallWait(10)
+  MoveViewPoint([386.1602], VERY_FAST)      // slowly move viewpoint to Rakshasa High Priest
+  SmallWait(10)
+  CreateVisualEffect("SPFLESHS", [486.1429])    // Ani: Yuan-Ti 1
+  CreateVisualEffect("SPFLESHS", [563.1463])    // Ani: Yuan-Ti 2
+  SmallWait(10)
+  CreateVisualEffect("SPFLESHS", [483.1491])    // Ani: Yuan-Ti 3
+  SmallWait(5)
+  CreateCreature("A7Q2YU01", [486.1429], 10)    // Create: Yuan-Ti 1
+  CreateCreature("A7Q2YU01", [563.1463], 10)    // Create: Yuan-Ti 2
+  SmallWait(5)
+  CreateVisualEffect("SPFLESHS", [313.1466])    // Ani: Yuan-Ti mage 1
+  CreateVisualEffect("SPFLESHS", [595.1589])    // Ani: Yuan-Ti mage 2
+  SmallWait(5)
+  CreateCreature("A7Q2YU01", [483.1491], 10)    // Create: Yuan-Ti 3
+  SmallWait(5)
+  CreateVisualEffect("SPFLESHS", [386.1602])    // Ani: Rakshasa High Priest
+  SmallWait(5)
+  CreateCreature("A7Q2YU03", [313.1466], 11)    // Create: Yuan-Ti mage 1
+  CreateCreature("A7Q2YU03", [595.1589], 8)    // Create: Yuan-Ti mage 2
+  SmallWait(10)
+  CreateCreature("A7Q2RKPR", [386.1602], 10)    // Create: Rakshasa High Priest
+  SmallWait(20)
+  ActionOverride("A7Q2RKPR", StartDialogueNoSet([PC]))
+END

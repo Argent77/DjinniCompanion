@@ -1,0 +1,10 @@
+// *** Trigger for wardstone #3 slot in map A77004 (Jungle of Chult) ***
+
+// When correct wardstone has been placed
+IF
+  Global("WS4Set", "A77004", 0)
+  Contains("A7Q2WS4", Myself)
+THEN RESPONSE #100
+  SetGlobal("WS4Set", "A77004", 1)
+  DestroyItem("A7Q2WS4")
+END

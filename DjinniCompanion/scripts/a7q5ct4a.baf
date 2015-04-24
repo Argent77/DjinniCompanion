@@ -1,0 +1,16 @@
+// *** Cutscene: Malik enters the magma cavern in a friendly way ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Q5EF01")
+  SetGlobal("A7Q5MalikEntered", "A77003", 1)
+  MoveViewPoint([2433.1578], VERY_FAST)
+  Wait(2)
+  CreateVisualEffect("A703FIR1", [2433.1578])
+  Wait(1)
+  CreateCreature("A7Malik", [2433.1578], 2)
+  Wait(2)
+  EndCutSceneMode()
+  //ActionOverride("A7Malik", StartDialogueNoSet([PC]))
+END

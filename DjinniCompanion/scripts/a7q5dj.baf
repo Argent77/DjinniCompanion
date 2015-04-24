@@ -1,0 +1,106 @@
+// *** Quest-specific script for the djinnis (Quest 5) ***
+
+// Karim: initiate talk with party after first-time entering subterranean cave
+IF
+  Name("A7Karim", Myself)
+  Global("A7Quest5", "GLOBAL", 2)
+  Global("TellAboutCave", "A77002", 0)
+  AreaCheck("A77002")
+THEN RESPONSE #100
+  StartDialogueNoSet([PC])
+END
+
+// Karim: moves out of the way in subterranean cave after talking to CHARNAME
+IF
+  Name("A7Karim", Myself)
+  Global("TellAboutCave", "A77002", 1)
+THEN RESPONSE #100
+  SetGlobal("TellAboutCave", "A77002", 2)
+  MoveToPointNoInterrupt([1040.650])
+  Face(4)
+END
+
+// Karim: talks to the party when he and the djinnis have been summoned to help in the fight against the efreets
+IF
+  Name("A7Karim", Myself)
+  Global("A7Q5DjinniSummoned", "GLOBAL", 1)
+  Global("SummonedAndFighting", "LOCALS", 0)
+  AreaCheck("A77003")
+THEN RESPONSE #100
+  SetGlobal("SummonedAndFighting", "LOCALS", 1)
+  Wait(2)
+  StartDialogueNoSet([PC])
+END
+
+// After winning the fight against the efreets, the djinni will initiate talk and teleport away to A77002
+IF
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsHaveWon", "A77003", 0)
+  !Dead("A7Karim")
+  Name("A7Karim", Myself)
+  AreaCheck("A77003")
+  InMyArea(Player1) 
+  !See([PC])
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+IF
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsHaveWon", "A77003", 0)
+  !Dead("A7Karim")
+  Name("A7Karim", Myself)
+  AreaCheck("A77003")
+  InMyArea(Player1) 
+  See([PC])
+THEN RESPONSE #100
+  SetGlobal("A7Q5DjinnsHaveWon", "A77003", 1)
+  ClearActions(Myself)
+  StartDialogueNoSet([PC])
+END
+
+// If Karim died in the line of duty, the remaining djinni will initiate talk and teleport away forever
+IF
+  Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5DjinnsHaveWon", "A77003", 0)
+  Dead("A7Karim")
+  AreaCheck("A77003")
+  See([PC])
+THEN RESPONSE #100
+  SetGlobal("A7Q5DjinnsHaveWon", "A77003", 1)
+  StartDialogueNoSet([PC])
+END
+
+// Karim: after your party has made the efreets to go away (one way or another), initiate talk and discuss reward, etc.
+IF
+  Global("A7Q5Finished", "A77002", 1)
+  AreaCheck("A77002")
+  Name("A7Karim", Myself)
+THEN RESPONSE #100
+  StartDialogueNoSet(Player1)
+END
+
+
+// After the fight against the efreets, the djinni teleports away
+IF
+  Global("A7Q5TeleportAway", "A77003", 1)
+  AreaCheck("A77003")
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  CreateVisualEffectObject("SPPLANAR", Myself)
+  PlaySound("EFF_M09")
+  Wait(2)
+  DestroySelf()
+END
+
+// The djinni teleports away forever (when in subterranean cave after quest has finished)
+IF
+  Global("A7Q5Finished", "A77002", 2)
+  AreaCheck("A77002")
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  CreateVisualEffectObject("SPPLANAR", Myself)
+  PlaySound("EFF_M09")
+  Wait(2)
+  DestroySelf()
+END

@@ -1,0 +1,214 @@
+// *** Battle actions for the djinni Afaaq in active mode ***
+
+// Use antidote potions when poisoned
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  HasItem("POTN17", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  OR(2)
+    StateCheck(Myself, STATE_POISONED)
+    StateCheck(Myself, STATE_DISEASED)
+THEN RESPONSE #100
+  SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+  DisplayString(Myself, 46150)    // quaffs a potion
+  UseItem("POTN17", Myself)
+END
+
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  HasItem("POTN20", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  StateCheck(Myself, STATE_POISONED)
+THEN RESPONSE #50
+  SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+  DisplayString(Myself, 46150)    // quaffs a potion
+  UseItem("POTN20", Myself)
+END
+
+// Use healing potions when wounded
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  ActuallyInCombat()
+  HasItem("POTN55", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 34)
+THEN RESPONSE #100
+  SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+  DisplayString(Myself, 46150)    // quaffs a potion
+  UseItem("POTN55", Myself)
+END
+
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  ActuallyInCombat()
+  HasItem("POTN52", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 34)
+THEN RESPONSE #100
+  SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+  DisplayString(Myself, 46150)    // quaffs a potion
+  UseItem("POTN52", Myself)
+END
+
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  ActuallyInCombat()
+  HasItem("POTN08", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 34)
+THEN RESPONSE #100
+  SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+  DisplayString(Myself, 46150)    // quaffs a potion
+  UseItem("POTN08", Myself)
+END
+
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  ActuallyInCombat()
+  HasItem("POTN52", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 50)
+THEN 
+  RESPONSE #50
+    SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+    DisplayString(Myself, 46150)    // quaffs a potion
+    UseItem("POTN52", Myself)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  ActuallyInCombat()
+  HasItem("POTN08", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 50)
+THEN 
+  RESPONSE #75
+    SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+    DisplayString(Myself, 46150)    // quaffs a potion
+    UseItem("POTN08", Myself)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  ActuallyInCombat()
+  HasItem("POTN08", Myself)
+  !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
+  HPPercentLT(Myself, 67)
+THEN
+  RESPONSE #20
+    SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
+    DisplayString(Myself, 46150)    // quaffs a potion
+    UseItem("POTN08", Myself)
+  RESPONSE #80
+    Continue()
+END
+
+
+// Player1 has highest priority
+IF
+  Help(Player1)
+  HPPercentGT(Myself, 25)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  AttackReevaluate(LastAttackerOf(Player1), 60)
+END
+
+// Help remaining party members if needed
+IF
+  ActionListEmpty()
+  !Help(Player1)
+  Help([PC])
+  HPPercentGT(Myself, 50)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  AttackReevaluate(LastAttackerOf(LastHelp(Myself)), 60)
+END
+
+// Defend when attacked by evil
+IF
+  ActionListEmpty()
+  AttackedBy([ENEMY], DEFAULT)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  AttackOneRound(LastAttackerOf(Myself))
+END
+
+// Attack nearby enemies
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself), 15)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  AttackReevaluate(NearestEnemyOf(Myself), 30)
+END
+
+// Attack nearest enemy of CHARNAME
+IF
+  ActionListEmpty()
+  See(Player1)
+  See(NearestEnemyOf(Player1))
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN
+RESPONSE #100
+  AttackReevaluate(NearestEnemyOf(Player1), 30)
+END
+
+// Attack nearest enemy of party member
+IF
+  ActionListEmpty()
+  See([PC])
+  See(NearestEnemyOf([PC]))
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN
+RESPONSE #100
+  AttackReevaluate(NearestEnemyOf([PC]), 30)
+END
+
+// Attack enemies on sight
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN RESPONSE #100
+  AttackReevaluate(NearestEnemyOf(Myself), 30)
+END
+
+// Reset help shout
+IF
+  OR(2)
+    HPPercentGT(Myself, 50)
+    Global("A7AfaaqGaseous", "GLOBAL", 1)
+  Global("hurt33", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("hurt33", "LOCALS", 0)
+END
+
+// When hurt then do some protective actions
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  See([EVILCUTOFF])
+  HPPercentLT(Myself, 33)
+  HPPercentGT(Myself, 9)
+  Global("hurt33", "LOCALS", 0)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+THEN
+  RESPONSE #50    // do nothing
+    Continue()
+  RESPONSE #40    // hide and run
+    SetGlobal("hurt33", "LOCALS", 1)
+    ClearActions(Myself)
+    SpellRES("A7SPIN1", Myself)
+    Wait(1)
+    RunAwayFrom(LastAttackerOf(Myself), 120)
+  RESPONSE #10    // run only
+    SetGlobal("hurt33", "LOCALS", 1)
+    ClearActions(Myself)
+    DisplayStringHead(Myself, @60000)    // Ahh, no! Help me!
+    RunAwayFrom(LastAttackerOf(Myself), 120)
+END
+

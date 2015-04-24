@@ -1,0 +1,11 @@
+// *** Trap script in A77002: active around exit to A77003 ***
+
+// Heat damage to any person who enters the trap region
+IF
+  Delay(3)
+  IsOverMe([ANYONE])
+  !Global("A7Quest5", "GLOBAL", 10)
+  Global("A7Q5Protection", "GLOBAL", 0)
+THEN RESPONSE #100
+  ApplySpell(LastTrigger, TRAP_MUCK)
+END
