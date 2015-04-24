@@ -1,12 +1,288 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-  <title>Afaaq, the Djinni Companion</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
-<body>
-  <h2>Under construction...</h2>
-  <p>
-    Please visit the <a href="https://github.com/Argent77/DjinniCompanion">Djinni Companion Project Page</a> in the meantime.
-  </p>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>BALDUR'S GATE II MOD: Afaaq, the Djinni Companion</title>
+    <meta name="description" content="A WeiDU mod for Baldur's Gate II: SoA &amp; ToB. Contains the djinni Afaaq, interesting dialogs, interesting quests and new locations." />
+    <meta name="keywords" content="WeiDU, mod, Afaaq, djinni companion, Baldur's Gate II, BG2, BG2:EE" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <div><a name="top" id="top"></a></div>
+    <div id="wrap">
+      <div id="header">
+        <h1>Afaaq, the Djinni Companion</h1>
+        <strong>A mod for Baldur's Gate II: Throne of Bhaal and Baldur's Gate II: Enhanced Edition</strong>
+        <hr />
+        <p class="about"><strong>Author: Argent77</strong></p>
+        <p class="about">
+          <a href="https://github.com/Argent77/DjinniCompanion/">Project</a> &#8226;
+          <a href="https://argent77.github.io/DjinniCompanion/index.html">Website</a> &#8226;
+          Download (coming soon) &#8226;
+          <!--<a href="https://github.com/Argent77/DjinniCompanion/releases/latest">Download</a> &#8226;-->
+          Version: 1.0
+        </p>
+        <hr />
+        <p class="menu">
+          <a href="#intro">Introduction</a> &middot;
+          <a href="#installation">Installation</a> &middot;
+          <a href="#component">Mod Components</a> &middot;
+          <a href="#details">Details</a> &middot;
+          <a href="#faq">FAQ</a> &middot;
+          <a href="#trouble">Troubleshooting</a> &middot;
+          <a href="#credits">Credits</a> &middot;
+          <a href="#version">Version History</a>
+        </p>
+      </div>
+      <div id="maindiv">
+
+        <!-- ================== I N T R O D U C T I O N ================== -->
+        <a name="intro" id="intro"></a>
+        <div class="content">
+          <h2>Introduction</h2>
+          <span id="portrait"><img src="images/AfaaqPortrait.png" alt="Afaaq's portrait" width="130" height="199" /></span>
+          <p>Meet Afaaq! The djinni who will be your faithful companion in the course of your adventures throughout SoA and ToB.</p>
+          <p><big><strong>Contents</strong></big></p>
+          <ul style="margin-left: 160px">
+            <li>The djinni Afaaq who acts as your &quot;seventh party member&quot;</li>
+            <li>Extensive dialog content between Afaaq and the protagonist</li>
+            <li>Banters with each of the original Bioware/Beamdog NPCs (still in the works)</li>
+            <li>Interjections and commentaries</li>
+            <li>An extensive player-initiated dialog with Afaaq</li>
+            <li>Up to five new interesting quests</li>
+            <li>Six new areas</li>
+            <li>A couple of unique artifacts</li>
+            <li>Several easter eggs &#x1f609;</li>
+          </ul>
+          <hr class="floatfix" />
+          <!--<p>Visit the <a href="http://www.shsforums.net/topic/54083-mod-idea-a-djinni-companion/">SHS Forums</a> or the <a href="http://forum.baldursgate.com/discussion/33717/mod-djinni-companion-call-for-playtesters">Baldur's Gate Forums</a> if you have questions or download the <a href="https://github.com/Argent77/DjinniCompanion/releases/latest">latest version</a>.</p>-->
+          <address>
+            <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ================== I N S T A L L A T I O N ================== -->
+        <a name="installation" id="installation"></a>
+        <div class="content">
+          <h2>Installation</h2>
+          <p>This is a WeiDU mod, that means it is very easy to install. Simply unpack <em>&quot;djinnicompanion.7z&quot;</em> (<a href="http://www.7-zip.org/download.html">7-Zip</a>) into your Baldur's Gate II directory and run either <em>&quot;setup-DjinniCompanion.exe&quot;</em> (Windows) or <em>&quot;setup-DjinniCompanion&quot;</em> (Mac OS X). Follow the instructions and you are ready to start.</p>
+          <p>To uninstall, run <em>&quot;setup-DjinniCompanion.exe&quot;</em> again and follow the prompts.</p>
+          <h5>Compatibility and Installation Order</h5>
+          <p>The mod requires that you have either <em>Baldur's Gate II: Throne of Bhaal</em> or <em>Baldur's Gate II: Enhanced Edition</em> installed.</p>
+          <p>You can install this mod at any time in your game before you are doing the Trademeet quests, but I suggest to install it early on to raise the chance of a certain quest to trigger.</p>
+          <p>The following mods have to be installed BEFORE this mod, if you want to use them:</p>
+          <ul>
+            <li>Westley Weimer's <em>&quot;Ascension&quot;</em></li>
+            <li>DavidW's <em>&quot;Wheels of Prophecy&quot;</em></li>
+            <li>SimDing0's <em>Quest Pack</em> and its subcomponent <em>&quot;Revised Hell Trials&quot;</em></li>
+            <li><em>Infinity Animations</em> and its subcomponent <em>&quot;Distinctive Genies&quot;</em></li>
+          </ul>
+          <!--<p>The following mods have been reported to interfere with this mod:</p>
+          <ul>
+            <li>n/a</li>
+          </ul>-->
+          <p>The mod changes a number of original game resources. To ensure the highest compatibility with existing mods, it should be installed as late as possible. <!--If you do encounter a bug, please post it either on the <a href="http://www.shsforums.net/topic/54083-mod-idea-a-djinni-companion/">SHS Forums</a> or the <a href="http://forum.baldursgate.com/discussion/33717/mod-djinni-companion-call-for-playtesters">Baldur's Gate Forums</a>.--></p>
+          <address>
+            <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ================== C O M P O N E N T S ================== -->
+        <a name="component" id="component"></a>
+        <div class="content">
+          <h2>Mod Components</h2>
+          <hr class="floatfix" />
+          <ol style="margin-right: 50px">
+            <li>
+              The main component comes in two flavors:<br />
+              <strong>Full Version:</strong> (recommended) This component installs the djinni Afaaq together with quests, new maps, lots of interjections, commentaries and banters with the protagonist as well as all Bioware/Beamdog NPCs.<br />
+              <br />
+              <strong>Light Version:</strong> This component installs a stripped down version of the mod consisting only of the djinni Afaaq and his magical lamp. Choose this if you merely want additional fighting power in your adventures.<br /><br />
+            </li>
+            <li><strong>Banter accelerator:</strong> (Full Version only) Lets you control how often a conversation should be triggered by the djinni. Possible values range from 15 min. to 120 min. (Default is 60 minutes).<br /><em>Note: Only conversations between the djinni and the protagonist are affected.</em><br /><br /></li>
+            <li><strong>Remove Afaaq's banter soundtrack:</strong> (Full Version only) By default, a short oriental soundtrack will be played back whenever the djinni starts a conversation with the protagonist. This component disables the soundtrack.<br /><br /></li>
+            <li><strong>Alternate djinni portrait by Ulb:</strong> Choose this component if you want to replace the default portrait of the djinni Afaaq by an alternate version. (<a href="images/AfaaqAlternate.jpg" target="_blank">Preview</a>)<br /><br /></li>
+            <li><strong>Add Infinity Animation creatures:</strong> (Full Version only) This component will be triggered only if the mod &quot;Infinity Animations&quot; and its subcomponent &quot;Distinctive Genies&quot; have been installed. It replaces a couple of creature animations with more natural looking versions.</li>
+          </ol>
+          <address>
+            <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ================== D E T A I L S ================== -->
+        <a name="details" id="details"></a>
+        <div class="content">
+          <h2>Details</h2>
+          <p>Afaaq is a djinni &#150; a genie of the Elemental Plane of Air. He is very old even in genie terms. The numerous events he witnessed in his long life have left their marks on his personality. He appears somewhat reserved and radiates a melancholic, sometimes even gloomy aura. Afaaq is more serious than others of his kind and tends to talk in a rather long-winded and convoluted way. He respects wisdom and open-mindedness, but will also tolerate foolhardy behavior to a certain degree. Everything else he can tell you by himself.</p>
+          <p>When you first meet him, he is equipped with his favorite enchanted scimitar, has a small variety of spells and a couple of unusual innate abilities. The djinni gains experience much like a party member would do and levels up automatically. Depending on the choices you make during the course of the game, he may become even more useful later.</p>
+          <h5>Initial Statistics</h5>
+          <ul>
+            <li>Class: Fighter/Mage at level 10/11</li>
+            <li>Alignment: Chaotic Good</li>
+            <li>Strength: 15</li>
+            <li>Dexterity: 16</li>
+            <li>Constitution: 13</li>
+            <li>Intelligence: 15</li>
+            <li>Wisdom: 16</li>
+            <li>Charisma: 11</li>
+          </ul>
+          <p>If you want to know more, simply talk to him when he is around or in his magical lamp. He will be happy to answer most of your questions in detail.</p>
+          <address>
+            <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ================== F A Q ================== -->
+        <a name="faq" id="faq"></a>
+        <div class="content">
+          <h2>Frequently Asked Questions (Spoiler Alert!)</h2>
+          <p>
+            <span class="t3">Q:</span><strong>Where can I find the djinni?</strong><br />
+            <span class="t3">A:</span>You will find the djinni in the course of your Trademeet adventures.<br />
+            <br />
+            <span class="t3">Q:</span><strong>Could you be more specific where I can find the djinni?</strong><br />
+            <span class="t3">A:</span><em>(Full Version)</em> The quest to find the djinni will be triggered when you attack Adratha, the potion seller of the druid grove. To reach her, enter the druid grove and look for a cottage in the upper right part of the map. She is the rakshasa in disguise.<br />
+            <span class="t3">A:</span><em>(Light Version)</em> You can find the djinni after you have killed Adratha, the potion seller of the druid grove.<br />
+            <br />
+            <span class="t3">Q:</span><strong>What's the deal with the full version and the light version of Afaaq?</strong><br />
+            <span class="t3">A:</span>The full version contains everything I've advertised in the readme and this FAQ, which includes banters, interjections, comments and several quests. The light version is just a stripped down version of the djinni without additional content. I've merely added this option as a bonus for power gamers or people who already know him inside out.<br />
+            <br />
+            <span class="t3">Q:</span><strong>How useful is the djinni if he doesn't join like a regular party member?</strong><br />
+            <span class="t3">A:</span>Since he's rather tagging along than joining your party, you don't have access to his inventory or record screen. His spell selection is fixed as well, although it may expand at a certain point in the game. To compensate these limitations, I have given him many useful abilities and options how to interact with him. He also has an extensive PID menu, regardless whether he is inside or outside of his lamp. There is even more, but you should find it out by yourself. ;)<br />
+            <br />
+            <span class="t3">Q:</span><strong>Does he have a quest?</strong><br />
+            <span class="t3">A:</span><em>(Full Version only)</em> Not only one. In the course of the game you can take part in up to five quests related to the djinni, his nature and his past. Some quests are mandatory, others are optional or depend on how you solved a previous quest.<br />
+            <br />
+            <span class="t3">Q:</span><strong>Does he get along with evil characters?</strong><br />
+            <span class="t3">A:</span>Afaaq is generally tolerant towards characters of any alignment. He won't always agree, but unless you're acting very abusive towards him, it won't come to a clash. It might even be worthwhile to take him along with an evil party at least once, as certain quest options are only available to evil-aligned protagonists.<br />
+            <br />
+            <span class="t3">Q:</span><strong>Can you romance the djinni?</strong><br />
+            <span class="t3">A:</span>No, you can't. But there is a friendship path of sorts. While Afaaq shares your company, his respect for you might grow or wane, depending on how you deal with certain events in your path. This is very important for specific events later on.<br />
+            <br />
+            <span class="t3">Q:</span><strong>How does he get along with other NPCs?</strong><br />
+            <span class="t3">A:</span>Currently, there isn't much interaction with most of the NPCs, so he will get along with everyone just fine. That will change however in one of the coming releases. He will get along better with like-minded characters, but he will also tolerate some of the more evil NPCs. That doesn't mean there aren't any surprises if you've got Korgan, Edwin or some of the other evil Bioware/Beamdog NPCs in your party.<br />
+            <br />
+            <span class="t3">Q:</span><strong>Will there be crossmod content?</strong><br />
+            <span class="t3">A:</span>The banter system is designed to support crossmod content. So yes, it is possible with little restrictions. But my first priority is to add banters for all official NPCs.<br />
+            <br />
+            <span class="t3">Q:</span><strong>I want Afaaq to retreat into his lamp. How do I do that?</strong><br />
+            <span class="t3">A:</span>You can ask him to do it. Click on the &quot;Talk&quot; button (or press F1) and click on your djinni. He will initiate a dialog which presents you an option to return him into his lamp. Another way is to trigger his quick menu in Afaaq's item ability slot. You can also force him into the lamp when you click the lamp's conversation button.<br />
+            <br />
+            <span class="t3">Q:</span><strong>Afaaq is badly hurt. What are my options to heal him?</strong><br />
+            <span class="t3">A:</span>You can cast healing spells on him, like on regular party members. You can also offer your healing potions to him. If you want to do that, make sure you have any kind of healing potion in your inventory before initiating a conversation with the djinni. Select the appropriate dialog option and the djinni will quaff the potion almost immediately. The same procedure works if Afaaq is poisoned or diseased and you have any kind of remedy in your backpack.<br />
+            <br />
+            <span class="t3">Q:</span><strong>Sometimes I see strange messages in the game console which refer to Afaaq as familiar?</strong><br />
+            <span class="t3">A:</span>The messages are harmless and will only be shown whenever Afaaq tries to leave a map on his own or attempts to enter a store. Unfortunately they are hardcoded into the game itself and cannot be changed without patching the game executable.<br />
+            <br />
+            <span class="t3">Q:</span><strong>Will Afaaq become stronger later in the game?</strong><br />
+            <span class="t3">A:</span>Yes. He gains levels in the course of the game, similar to the level up process of your party members. To inspect his current strength, you can ask him to present his stats. One of his quests allows the djinni to become even stronger. He will gain a couple of new innate abilities and spells as well.<br />
+            <br />
+            <!--<span class="t3">Q:</span><strong>Afaaq told me that he will leave me as soon as I have my soul back from Irenicus. Isn't he supposed to accompany my party throughout the whole game?</strong><br />
+            <span class="t3">A:</span><em>(Full Version only)</em> Not necessarily, he has a mind of his own. If he doesn't like you enough, he may decide to leave your presence. Your actions throughout the game decide whether his respect for you grows.<br />
+            <br />-->
+            <span class="t3">Q:</span><strong>Afaaq picked a fight with me. How does it affect the game?</strong><br />
+            <span class="t3">A:</span><em>(Full Version only)</em> There are several points in the game where he may strongly disagree with the protagonist. Sometimes it even results in a fight. After you win the fight, he will be fully under your control. As a result, he won't banter with you and your party members anymore and it might affect future event. Everything else should work as usual.<br />
+            <br />
+            <span class="t3">Q:</span><strong>I want to start a ToB-only game. Where can I find the djinni?</strong><br />
+            <span class="t3">A:</span><em>(Full Version)</em> You can't. The mod is designed to be started in the SoA part of the game.<br />
+            <span class="t3">A:</span><em>(Light Version)</em> You can find the djinni after you have beaten Illasera.<br />
+          </p>
+          <address>
+            <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ================== T R O U B L E S H O O T I N G ================== -->
+        <a name="trouble" id="trouble"></a>
+        <div class="content">
+          <h2>Troubleshooting</h2>
+          <hr class="floatfix" />
+          <ol style="margin-right: 50px">
+            <li><strong>The unsummoning process of the djinni has failed. He has now a neutral circle and the mouse cursor doesn't change into a talk button when I move it over him.</strong><br />The unsummoning process might be interrupted in very specific situations, most likely due to interfering script actions. You can still talk to him if you manually select your talk button (or press F1). His dialog will be the one of the djinni lamp, however.<br />You can fix the issue if you ask him to come out of his lamp. This should replace the current djinni with a working one.<br />If that didn't work, you can initiate a dialog with the djinni and select "You are behaving oddly. Care to fix it?". This option is not always available though. Sometimes a save and reload is necessary for the game to recognize the changes.<br /><br /></li>
+            <li><strong>The djinni behaves abnormally. He doesn't seem to &quot;die&quot; anymore when critically wounded or the mouse cursor changes into the talk icon when you try to select him.</strong><br />These issues can also be caused by interrupted script actions or by saving the game in critical moments. You should be able to fix all of these issues by talking to the djinni and selecting the option "You are behaving oddly. Care to fix it?". Sometimes a save and reload is necessary for the game to recognize the changes.<br /><br /></li>
+            <li><strong><em>(Full Version only)</em> After attacking Adratha, the potion seller in the druid grove, nothing out of the ordinary is happening.</strong><br />In the normal course of the game, a permanent teleporter should appear as soon as Adratha becomes hostile or dies. There could be another mod interfering with the area script of Adratha's cottage. You have to find and uninstall the mod in question.<br /> <strong>Important:</strong> You have to use a saved game from BEFORE you've entered the cottage for the first time.<br /><br /></li>
+            <li><strong><em>(Full Version only)</em> Nothing out of the ordinary is happening when I enter the smuggler cave in Amkethran.</strong><br />That will happen in certain situations:<br /><br />
+            <ul>
+              <li>If you enter the cave for the first time without the djinni lamp in your possession.</li>
+              <li>If you enter the cave for the first time after you have already defeated both Abazigal and Sendai.<br /></li>
+            </ul><br />
+            If you are sure the above-mentioned conditions don't apply, another mod may interfere with the smuggler cave script. As always, try to find the responsible mod and uninstall it.<br /> <strong>Important:</strong> You have to use a saved game from BEFORE you've entered the cave for the first time.<br /><br /></li>
+            <li><strong>Afaaq's Whirlwind ability is going crazy when the game option "Auto-pause: Spell cast" is active.</strong><br />This is most likely caused by a bug in TobEx. The mod attempts to disable the offending TobEx option during installation, but it could have been activated manually by the user or another mod. To fix this issue, open the file "TobEx_ini/TobExCore.ini", look for the option <em>"Cast Spell On Condition Mod"</em> and set it to 0. If you don't see this option, you have to add the line <em>"Cast Spell On Condition Mod=0"</em> (without the quotes) manually into the section <em>"[Effect Opcodes]"</em>.</li>
+          </ol>
+          <address>
+            <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ================== C R E D I T S ================== -->
+        <a name="credits" id="credits"></a>
+        <div class="content">
+          <h2>Credits</h2>
+          <p><strong>Writing &amp; Coding:</strong> <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a></p>
+          <p><strong>English proofreading:</strong> Many thanks to <a href="http://www.shsforums.net/user/39857-snowshoes1818/">snowshoes1818</a> and <a href="http://www.shsforums.net/user/40147-thimblerig/">Thimblerig</a>.</p>
+          <p><strong>Alternate Afaaq portrait:</strong> provided by <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a></p>
+          <p><strong>Malik portrait:</strong> based on the Fire Genasi illustration by Jesper Ejsing (published under the Creative Commons license)</p>
+          <p><strong>Afaaq's Theme:</strong> based on the soundtrack &#132;Sa'aluni-n-Nass&#148; by Fairuz (published under the Creative Commons license)</p>
+          <p><strong>Serpent Statue riddles are coming from</strong></p>
+          <ul>
+            <li><a href="http://dragonslair.wetpaint.com/">Lair of the Dragon</a></li>
+            <li><a href="http://www.cloudkingdom.com/home.aspx">Cloud Kingdom Games</a></li>
+          </ul>
+          <p>Everything else is based on resources from Baldur's Gate, Baldur's Gate II, Icewind Dale, Icewind Dale II, Diablo II or Age of Wonders Shadow Magic.</p>
+          <hr class="floatfix" />
+          <h5>Programs/tools used in creation:</h5><br />
+          <ul>
+            <li><a href="http://www.weidu.org">WeiDU</a>, by Westley Weimer/Valerio Bigiani (the bigg)/Fredrik Lindgren (Wisp)</li>
+            <li><a href="http://www.shsforums.net/topic/45358-nearinfinity/?p=490464">Near Infinity</a>, by Jon Olav Hauglid</li>
+            <li><a href="http://forums.gibberlings3.net/index.php?showforum=137">DLTCEP</a>, by Avenger</li>
+            <li><a href="http://iesdp.gibberlings3.net">IESDP</a>, maintained by igi</li>
+            <li><a href="https://github.com/Argent77/tileconv/releases">TileConv</a>, by Argent77</li>
+            <li><a href="http://notepad-plus-plus.org/">Notepad++</a>, by Don Ho</li>
+            <li><a href="http://mh-nexus.de/en/hxd/">HxD Hex Editor</a>, by Ma&euml;l H&ouml;rz</li>
+            <li><a href="http://www.xnview.com/">XnView</a>, by Pierre Gougelet</li>
+            <li><a href="http://www.adobe.com/">Adobe Photoshop</a></li>
+            <li><a href="http://gimp-win.sourceforge.net/index.html">GIMP</a></li>
+          </ul>
+          <hr class="floatfix" />
+          <h5>Copyright Notice:</h5>
+          <div class="important">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />&quot;Afaaq, the Djinni Companion&quot; is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            <p>Baldur's Gate II: Enhanced Edition &copy; Beamdog Inc., Baldur's Gate and Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc., Icewind Dale and Icewind Dale II: &copy; Interplay Entertainment Corp., The BioWare Infinity Engine is &copy; BioWare Corp., Diablo II: &copy; Blizzard Entertainment, Age of Wonders Shadow Magic: &copy; Triumph Studios.</p>
+          </div>
+          <address>
+            <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- ================== V E R S I O N   H I S T O R Y ================== -->
+        <a name="version" id="version"></a>
+        <div class="content">
+          <h2>Version History</h2>
+          <h6>2015-??-?? - Version 1.0:</h6>
+          <ul>
+            <li>Initial release</li>
+          </ul>
+          <address>
+            <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
