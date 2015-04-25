@@ -1,6 +1,6 @@
 BACKUP ~DjinniCompanion/backup~
 AUTHOR ~Argent77 at Spellhold Studios~
-VERSION ~v1.0 beta 4~
+VERSION ~v1.0~
 
 ALWAYS
   ACTION_DEFINE_ARRAY a7noconvert BEGIN setup bg2ee END
