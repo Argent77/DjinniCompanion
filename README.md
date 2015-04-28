@@ -36,7 +36,7 @@ Meet Afaaq! The djinni who will be your faithful companion in the course of your
 
 3. **Remove Afaaq's banter soundtrack:** (Full Version only) By default, a short oriental soundtrack will be played back whenever the djinni starts a conversation with the protagonist. This component disables the soundtrack.
 
-4. **Alternate djinni portrait by Ulb:** Choose this component if you want to replace the default portrait of the djinni Afaaq by an alternate version. (Preview)
+4. **Alternate djinni portrait by Ulb:** Choose this component if you want to replace the default portrait of the djinni Afaaq by an alternate version. ([Preview](https://argent77.github.io/DjinniCompanion/images/AfaaqAlternate.jpg))
 
 5. **Add Infinity Animation creatures:** (Full Version only) This component will be triggered only if the mod "Infinity Animations" and its subcomponent "Distinctive Genies" have been installed. It replaces a couple of creature animations with more natural looking versions.
 
