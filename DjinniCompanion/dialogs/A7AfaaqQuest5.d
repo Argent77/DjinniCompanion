@@ -22,7 +22,7 @@ IF ~~ A7AFQQ5.2
       ChangeAIScript("A7AFAAQ", OVERRIDE)
       ChangeAIScript("A7AFQTLK", CLASS)
       ChangeAIScript("A7AFQLVL", RACE)
-      ChangeAIScript("A7AFQATK", DEFAULT)
+      ChangeAIScript("A7AFATK", DEFAULT)
       SetDialogue("A7AFAAQ")~ EXIT
 END
 
