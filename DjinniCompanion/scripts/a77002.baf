@@ -132,6 +132,7 @@ END
 // Called if all djinnis died in the battle with the efreets
 IF
   GlobalTimerExpired("A7Q5FinishedTimer", "A77002")
+  Global("A7Q5DjinnsTrapped", "GLOBAL", 0)
   Global("A7Q5Finished", "A77002", 1)
 THEN RESPONSE #100
   SetGlobal("A7Q5Finished", "A77002", 2)
