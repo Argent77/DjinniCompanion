@@ -330,6 +330,9 @@ COPY ~DjinniCompanion/spells/a7rest3.spl~ ~override~
 COPY ~DjinniCompanion/spells/a7dispel.spl~ ~override~
   SAY NAME1 ~Dispel All Effects~
   SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7immun.spl~ ~override~
+  SAY NAME1 ~Immunity for 1s~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
 
 // Spell: Summon (used in dialog)
 COPY ~DjinniCompanion/spells/a7afqsmn.spl~ ~override~

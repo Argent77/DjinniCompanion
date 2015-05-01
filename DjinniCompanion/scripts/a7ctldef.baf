@@ -34,6 +34,7 @@ IF
   !Allegiance("A7Afaaq", ENEMY)
 THEN RESPONSE #100
   ApplySpellRES("A7DISPEL", "A7Afaaq")
+  ApplySpellRES("A7IMMUN", "A7Afaaq")
   ActionOverride("A7Afaaq", SetInterrupt(FALSE))
   ActionOverride("A7Afaaq", ClearActions(Myself))    // Cancel all remaining actions
   ActionOverride("A7Afaaq", ChangeEnemyAlly(Myself, NEUTRAL))
@@ -59,6 +60,7 @@ THEN RESPONSE #100
   SetGlobalTimer("A7AfaaqDeathTimer", "GLOBAL", EIGHT_HOURS)
   SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
   ApplySpellRES("A7DISPEL", "A7Afaaq")
+  ApplySpellRES("A7IMMUN", "A7Afaaq")
   ActionOverride("A7Afaaq", SetInterrupt(FALSE))
   ActionOverride("A7Afaaq", ApplySpellRES("A7DIE", Myself))    // make the djinni unselectable
   ActionOverride("A7Afaaq", DisplayString(Myself, 14026))    // Death
