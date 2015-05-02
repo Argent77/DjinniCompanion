@@ -692,9 +692,9 @@ END
 // PC banter: StolenSoul
 IF
   Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
-  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
-  GlobalGT("Chapter", "GLOBAL", 4) GlobalLT("Chapter", "GLOBAL", 7) Global("PCToldAboutHeritage", "LOCALS", 1) GlobalLT("A7Quest3", "GLOBAL", 10) Global("BanterPCSoul", "LOCALS", 0)
+  GlobalGT("AsylumPlot", "GLOBAL", 55)  // after defeating Irenicus/talking to Saemon in Spellhold
+  GlobalLT("Chapter", "GLOBAL", 6) Global("PCToldAboutHeritage", "LOCALS", 1) GlobalLT("A7Quest3", "GLOBAL", 10) Global("BanterPCSoul", "LOCALS", 0)
 THEN RESPONSE #100
   SetInterrupt(FALSE)
   SetGlobal("BanterPCSoul", "LOCALS", 1)
