@@ -5,7 +5,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   See(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   Global("A7AfaaqMet", "GLOBAL", 0)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
@@ -24,7 +23,6 @@ IF
   !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
   See([PC])
   !See(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   Global("A7AfaaqMet", "GLOBAL", 0)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
@@ -41,7 +39,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   OR(2)
     Global("A7Quest2", "GLOBAL", 2)
@@ -79,7 +76,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   AreaCheck("AR2100")
   Global("A7AfaaqSummoned", "GLOBAL", 1)
@@ -98,7 +94,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   !Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   Global("A7AfaaqSummoned", "GLOBAL", 1)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
@@ -111,7 +106,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   Global("A7AfaaqSummoned", "GLOBAL", 1)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
@@ -128,7 +122,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   ReputationGT(Player1, 18)
   Global("A7AfaaqSummoned", "GLOBAL", 1)
@@ -145,7 +138,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   AreaCheck("AR0330")
   !Dead("hldemi")
@@ -197,7 +189,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   AreaCheck("AR0406")
   Global("A7AfaaqSummoned", "GLOBAL", 1)
@@ -218,7 +209,6 @@ IF
   Detect(Player1)
   AreaCheck("AR0516")
   Dead("pwarden")
-  !Detect([ENEMY])
   !ActuallyInCombat()
   Global("A7AfaaqSummoned", "GLOBAL", 1)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
@@ -324,7 +314,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   GlobalGT("A7Quest3", "GLOBAL", 0)
   Global("Q3CollectionFound", "LOCALS", 0)
@@ -344,7 +333,6 @@ IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   Detect(Player1)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   Global("A7Quest3", "GLOBAL", 10)
   Global("Q3CollectionFound", "LOCALS", 0)
@@ -502,7 +490,6 @@ END
 IF
   Detect(Player1)
   Range(Player1, 10)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   Global("DecisionToLeave", "LOCALS", 1)
   GlobalTimerExpired("DecisionToLeaveTimer", "LOCALS")
@@ -518,7 +505,6 @@ END
 IF
   Detect(Player1)
   !Range(Player1, 10)
-  !Detect([ENEMY])
   !ActuallyInCombat()
   Global("DecisionToLeave", "LOCALS", 1)
   GlobalTimerExpired("DecisionToLeaveTimer", "LOCALS")
@@ -540,8 +526,8 @@ END
 
 // PC specific banter: Afaaq asks about the reason for CHARNAME's hunt for Irenicus
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
-  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
+  OR(2) !AreaType(DUNGEON) InWatchersKeep()
   GlobalGT("BanterPCHeritage", "LOCALS", 1) Global("BanterPCIrenicusHunt", "LOCALS", 0) GlobalLT("Chapter", "GLOBAL", 4)
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
 THEN RESPONSE #100
@@ -557,13 +543,13 @@ IF
   InParty("Imoen2")
   GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterIntroImoen", "GLOBAL", 0) Global("BanterImoenTimer", "LOCALS", 0)
 THEN RESPONSE #100
-  RealSetGlobalTimer("BanterImoenTimer", "LOCALS", 30)
+  RealSetGlobalTimer("BanterImoenTimer", "LOCALS", 18)
 END
 
 IF
   Detect("Imoen2") See(Player1)
   !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck("Imoen2", CD_STATE_NOTVALID) InParty("Imoen2")
-  !ActuallyInCombat() !Detect([ENEMY])
+  !ActuallyInCombat()
   GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterIntroImoen", "GLOBAL", 0)
   RealGlobalTimerExpired("BanterImoenTimer", "LOCALS")
 THEN RESPONSE #100
@@ -576,8 +562,8 @@ END
 
 // PC specific banter: After defeating Firkraag
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
-  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
+  OR(2) !AreaType(DUNGEON) InWatchersKeep()
   GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("BanterPCDragons", "LOCALS", 0) Dead("firkra02")
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
 THEN RESPONSE #100
@@ -590,8 +576,8 @@ END
 
 // PC specific banter: Afaaq rejoined CHARNAME after Quest 5
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
-  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
+  !AreaCheck("AR6200") OR(4) !AreaType(DUNGEON) AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("BanterPCRejoined", "LOCALS", 0) Global("A7Quest5", "GLOBAL", 10) Global("A7Q5AfaaqAppears", "GLOBAL", 2)
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
 THEN RESPONSE #100
@@ -608,7 +594,7 @@ IF
   See(Player1) !StateCheck(Myself, CD_STATE_NOTVALID) 
   !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Player2, CD_STATE_NOTVALID) !StateCheck(Player3, CD_STATE_NOTVALID) 
   !StateCheck(Player4, CD_STATE_NOTVALID) !StateCheck(Player5, CD_STATE_NOTVALID) !StateCheck(Player6, CD_STATE_NOTVALID) 
-  !ActuallyInCombat() !Detect([ENEMY]) !AreaCheck("AR6200")
+  !ActuallyInCombat() !AreaCheck("AR6200")
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   Global("A7BanterIntro", "GLOBAL", 0)
 THEN RESPONSE #100
@@ -621,8 +607,8 @@ END
 
 // PC banters: Afaaq.Rakshasa
 IF
-  See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
-  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
+  OR(5) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   Global("A7Q1AfaaqRewarded", "GLOBAL", 0) Global("A7Quest2", "GLOBAL", 10) GlobalGT("BanterPCHeritage", "GLOBAL", 0) Global("BanterPCRakshasa", "LOCALS", 0)
 THEN RESPONSE #100
@@ -635,7 +621,7 @@ END
 
 // PC banters: Heritage #1
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("BanterPCHeritage", "LOCALS", 0)
@@ -649,7 +635,7 @@ END
 
 // PC banters: Heritage #2
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   Global("BanterPCHeritage", "LOCALS", 2)
@@ -663,7 +649,7 @@ END
 
 // PC banters: Heritage #3
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   Global("BanterPCHeritage", "LOCALS", 4)
@@ -677,7 +663,7 @@ END
 
 // PC banter: Heritage #4
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   GlobalGT("Chapter", "GLOBAL", 4) Global("BanterPCHeritage", "LOCALS", 6)
@@ -691,7 +677,7 @@ END
 
 // PC banter: StolenSoul
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   GlobalGT("AsylumPlot", "GLOBAL", 55)  // after defeating Irenicus/talking to Saemon in Spellhold
   GlobalLT("Chapter", "GLOBAL", 6) Global("PCToldAboutHeritage", "LOCALS", 1) GlobalLT("A7Quest3", "GLOBAL", 10) Global("BanterPCSoul", "LOCALS", 0)
@@ -705,7 +691,7 @@ END
 
 // PC banter: Heritage #5
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   Global("Chapter", "GLOBAL", 5) Global("PCToldAboutHeritage", "LOCALS", 1) Global("BanterIrenicusPlans", "LOCALS", 0)
@@ -719,7 +705,7 @@ END
 
 // PC banters: Afaaq.TathasMelarn
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   Global("A7Quest3", "GLOBAL", 10) GlobalGT("BanterPCHeritage", "LOCALS", 0) Global("BanterPCTathasMelarn", "LOCALS", 0)
@@ -733,7 +719,7 @@ END
 
 // PC banter: Afaaq.AboutGenies
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   GlobalGT("BanterPCHeritage", "LOCALS", 7) Global("BanterPCAboutGenies", "LOCALS", 0)
@@ -747,7 +733,7 @@ END
 
 // PC banter: Heritage #6
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   GlobalGT("Chapter", "GLOBAL", 7) Global("BanterPCHeritage", "LOCALS", 8)
@@ -761,7 +747,7 @@ END
 
 // PC banters: Afaaq.TrueAge
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   GlobalGT("BanterPCHeritage", "LOCALS", 9) Global("BanterPCTrueAge", "LOCALS", 0)
@@ -776,7 +762,7 @@ END
 // PC banter: Afaaq.Calim #1
 // TODO
 // IF
-  // Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  // Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   // Global("BanterPCTrueAge", "LOCALS", 2) Global("BanterPCCalim", "LOCALS", 0)
@@ -791,7 +777,7 @@ END
 // PC banter: Afaaq.Calim #2
 // TODO
 // IF
-  // Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  // Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   // Global("BanterPCTrueAge", "LOCALS", 2) Global("BanterPCCalim", "LOCALS", 2)
@@ -805,7 +791,7 @@ END
 
 // PC banter: Future plans
 IF
-  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat() !Detect([ENEMY])
+  Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
   // Global("BanterPCCalim", "LOCALS", 4) 
@@ -859,7 +845,7 @@ END
 // Triggering banter with Player2
 IF
   See(Player2) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player2, CD_STATE_NOTVALID) InPartySlot([PC], 1)
-  !ActuallyInCombat() !Detect([ENEMY])
+  !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
   RandomNum(5, 1)
@@ -876,7 +862,7 @@ END
 // Triggering banter with Player3
 IF
   See(Player3) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player3, CD_STATE_NOTVALID) InPartySlot([PC], 2)
-  !ActuallyInCombat() !Detect([ENEMY])
+  !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
   RandomNum(5, 2)
@@ -893,7 +879,7 @@ END
 // Triggering banter with Player4
 IF
   See(Player4) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player4, CD_STATE_NOTVALID) InPartySlot([PC], 3)
-  !ActuallyInCombat() !Detect([ENEMY])
+  !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
   RandomNum(5, 3)
@@ -910,7 +896,7 @@ END
 // Triggering banter with Player5
 IF
   See(Player5) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player5, CD_STATE_NOTVALID) InPartySlot([PC], 4)
-  !ActuallyInCombat() !Detect([ENEMY])
+  !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
   RandomNum(5, 4)
@@ -927,7 +913,7 @@ END
 // Triggering banter with Player6
 IF
   See(Player6) !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player6, CD_STATE_NOTVALID) InPartySlot([PC], 5)
-  !ActuallyInCombat() !Detect([ENEMY])
+  !ActuallyInCombat()
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterNPCTimer", "GLOBAL") Global("NPCBanterTimerInit", "LOCALS", 1)
   RandomNum(5, 5)
