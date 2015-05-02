@@ -55,7 +55,12 @@
 @4050 = ~It is done.~ [A7SLNT_S]
 @4051 = ~I thank you again for my release. Good luck in whatever trials you are to face, my <PRO_LADYLORD>. And may your future shine brightly, Afaaq.~
 @4052 = ~It is done and you even survived it relatively unscathed.~ [A7SLNT_S]
-
+// additional lines for the light version
+@4080 = ~As you have helped me, I will help you too.~
+@4081 = ~You appear to have one of my own kind in your midst. By sacrificing your sword of power for my freedom, you have also given me the power to free your djinn from his shackles.~
+@4082 = ~Let me prepare the spell...~
+@4083 = ~The casting will take only a moment...~ [A7SLNT_S]
+@4084 = ~It is done.~ [A7SLNT_S]
 
 // dialog lines (QuestPack's Hell Trials installed)
 @4100 = ~So... let me get this straight.  The sword Blackrazor is the key to your release, and Afaaq's, too?~
@@ -116,6 +121,16 @@
 @4155 = ~It is done.~ [A7SLNT_S]
 @4156 = ~It is done and you even survived it relatively unscathed.~ [A7SLNT_S]
 @4157 = ~I thank you again for my release. Good luck in whatever trials you are to face, my <PRO_LADYLORD>. And may your future shine brightly, Afaaq.~
+// additional lines for the light version
+@4180 = ~As you have helped me, I will help you too.~
+@4181 = ~You appear to have one of my own kind in your midst. By sacrificing your sword of power for my freedom, you have also given me the power to free your djinn from his shackles.~
+@4182 = ~It is done, my <PRO_LADYLORD>. Now that my freedom is guaranteed, I may help you too.~
+@4183 = ~You appear to have one of my own kind in your midst. If you lend me your sword of power for a moment, I can free your djinn from his shackles. Do not worry, the sword will not be damaged in the process.~
+@4184 = ~Let me prepare the spell...~
+@4185 = ~The casting will take only a moment...~ [A7SLNT_S]
+@4186 = ~It is done.~ [A7SLNT_S]
+@4187 = ~I thank you again for my release. Good luck in whatever trials you are to face, my <PRO_LADYLORD>. And may your future shine brightly, Afaaq.~
+@4188 = ~Good luck in whatever trials you are to face, my <PRO_LADYLORD>. And may your future shine brightly, Afaaq.~
 
 // dialog lines (special)
 @4200 = ~I will not help you. This is your fight alone, <CHARNAME>.~
