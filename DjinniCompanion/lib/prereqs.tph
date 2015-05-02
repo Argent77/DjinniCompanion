@@ -21,7 +21,7 @@ COPY_EXISTING ~finsol02.cre~ ~override~
 
 // fix a bug in TobEx by disabling a specific option
 ACTION_IF (FILE_EXISTS ~TobEx_ini/TobExTweak.ini~) BEGIN
-  COPY "TobEx_ini/TobExCore.ini" "TobEx_ini/TobExCore.ini"
+  COPY + "TobEx_ini/TobExCore.ini" "TobEx_ini/TobExCore.ini"
     REPLACE_TEXTUALLY "Cast Spell On Condition Mod=1" "Cast Spell On Condition Mod=0"
     BUT_ONLY_IF_IT_CHANGES
 END
