@@ -292,6 +292,7 @@ ACTION_IF (GAME_IS ~bg2ee~) BEGIN
        ~DjinniCompanion/spells/bg2ee/a7spin4c.bam~ ~override~
 END ELSE BEGIN
   COPY ~DjinniCompanion/spells/a7spin4.bam~ ~override~
+       ~DjinniCompanion/spells/a7spin4.bam~ ~override/a7spin4b.bam~
 END
 
 // Innate Ability: Control Air Elemental

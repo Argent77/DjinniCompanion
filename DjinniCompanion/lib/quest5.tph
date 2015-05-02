@@ -189,8 +189,13 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   INSERT_2DA_ROW 1 3 ~A7RING03          25880        12061       %airshield%~
 COPY ~DjinniCompanion/items/a7iring3.bam~ ~override~
 
+COPY_EXISTING - ~sw1h22.itm~ ~override~
+  READ_LONG NAME1 scimitar_name
+  READ_LONG UNIDENTIFIED_DESC scimitar_desc
 COPY ~DjinniCompanion/items/a7sw1h3.itm~ ~override~
+  WRITE_LONG NAME1 scimitar_name  // default name
   SAY NAME2 @6827     // Cloud Slasher +4
+  WRITE_LONG UNIDENTIFIED_DESC scimitar_desc  // default description
   SAY IDENTIFIED_DESC @6828    // The scimitar crackles with energy when you hold it in your hand and each strike appears to slash the air itself...
 COPY ~DjinniCompanion/items/a7isw1h3.bam~ ~override~
 
