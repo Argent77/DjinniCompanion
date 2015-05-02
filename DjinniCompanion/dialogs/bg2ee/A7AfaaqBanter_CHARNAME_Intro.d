@@ -4963,11 +4963,11 @@ END
     // IF ~Global("InToB", "GLOBAL", 0) InParty("Edwin") Global("A7BanterIntroEdwin", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Edwin
     // IF ~Global("InToB", "GLOBAL", 0) InParty("Viconia") Global("A7BanterIntroViconia", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Viconia
     // IF ~Global("InToB", "GLOBAL", 0) InParty("Korgan") Global("A7BanterIntroKorgan", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Korgan
-    // IF ~Global("InToB", "GLOBAL", 0) InParty("Dorn") Global("A7BanterIntroDorn", "GLOBAL", 0)~ + PCIntro.Party.Members.Dorn
-    // IF ~Global("InToB", "GLOBAL", 0) InParty("Neera") Global("A7BanterIntroNeera", "GLOBAL", 0)~ + PCIntro.Party.Members.Neera
-    // IF ~Global("InToB", "GLOBAL", 0) InParty("OHHFAK") Global("A7BanterIntroFakeHexxat", "GLOBAL", 0)~ + PCIntro.Party.Members.FakeHexxat
-    // IF ~Global("InToB", "GLOBAL", 0) InParty("Hexxat") Global("A7BanterIntroHexxat", "GLOBAL", 0)~ + PCIntro.Party.Members.Hexxat
-    // IF ~Global("InToB", "GLOBAL", 0) InParty("Rasaad") Global("A7BanterIntroRasaad", "GLOBAL", 0)~ + PCIntro.Party.Members.Rasaad
+    // IF ~Global("InToB", "GLOBAL", 0) InParty("Dorn") Global("A7BanterIntroDorn", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Dorn
+    // IF ~Global("InToB", "GLOBAL", 0) InParty("Neera") Global("A7BanterIntroNeera", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Neera
+    // IF ~Global("InToB", "GLOBAL", 0) InParty("OHHFAK") Global("A7BanterIntroFakeHexxat", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.FakeHexxat
+    // IF ~Global("InToB", "GLOBAL", 0) InParty("Hexxat") Global("A7BanterIntroHexxat", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Hexxat
+    // IF ~Global("InToB", "GLOBAL", 0) InParty("Rasaad") Global("A7BanterIntroRasaad", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Rasaad
     // IF ~NumInPartyAliveGT(2) Global("A7BanterIntroParty", "GLOBAL", 7)~ EXTERN A7AFAAQ PCIntro.Party.2
     // IF ~NumInPartyAlive(2) Global("A7BanterIntroParty", "GLOBAL", 7)~ EXTERN A7AFAAQ PCIntro.Party.3
   // END
