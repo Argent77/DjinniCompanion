@@ -21,11 +21,11 @@ THEN RESPONSE #100
   ApplySpellRES("A7DISPEL", "Korgan")
   // Afaaq rejoins
   ApplySpellRES("A7DISPEL", "A7Afaaq")
-  SetGlobal("AfaaqPassive", "LOCALS", 0)
+  SetGlobal("AfaaqActive", "LOCALS", 1)
   ActionOverride("A7Afaaq", ChangeAIScript("A7AFAAQ", OVERRIDE))
   ActionOverride("A7Afaaq", ChangeAIScript("A7AFQTLK", CLASS))
   ActionOverride("A7Afaaq", ChangeAIScript("A7AFQLVL", RACE))
-  ActionOverride("A7Afaaq", ChangeAIScript("A7AFATK", DEFAULT))
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFATK2", DEFAULT))
   ActionOverride("A7Afaaq", AddFamiliar())
   ChangeEnemyAlly("A7Afaaq", FAMILIAR)
   DisplayStringHead("A7Afaaq", @60000)    // Ahh, no! Help me!
@@ -56,11 +56,11 @@ THEN RESPONSE #100
   DisplayStringHead("Korgan", @20500)    // Argh! Stop it, I give up!
   // Afaaq rejoins
   ApplySpellRES("A7REST3", "A7Afaaq")
-  SetGlobal("AfaaqPassive", "LOCALS", 0)
+  SetGlobal("AfaaqActive", "LOCALS", 1)
   ActionOverride("A7Afaaq", ChangeAIScript("A7AFAAQ", OVERRIDE))
   ActionOverride("A7Afaaq", ChangeAIScript("A7AFQTLK", CLASS))
   ActionOverride("A7Afaaq", ChangeAIScript("A7AFQLVL", RACE))
-  ActionOverride("A7Afaaq", ChangeAIScript("A7AFATK", DEFAULT))
+  ActionOverride("A7Afaaq", ChangeAIScript("A7AFATK2", DEFAULT))
   ActionOverride("A7Afaaq", AddFamiliar())
   ChangeEnemyAlly("A7Afaaq", FAMILIAR)
   Wait(2)

@@ -146,7 +146,7 @@ END
 // One-time check for correct battle script after genie upgrade
 IF
   Global("A7AfaaqUpgraded", "GLOBAL", 1)
-  Global("AfaaqPassive", "LOCALS", 0)
+  Global("AfaaqActive", "LOCALS", 0)
   Global("ScriptCheck", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobal("ScriptCheck", "LOCALS", 1)
@@ -155,11 +155,20 @@ END
 
 IF
   Global("A7AfaaqUpgraded", "GLOBAL", 1)
-  Global("AfaaqPassive", "LOCALS", 1)
+  Global("AfaaqActive", "LOCALS", 1)
   Global("ScriptCheck", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobal("ScriptCheck", "LOCALS", 1)
   ChangeAIScript("A7AFATK2", DEFAULT)
+END
+
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("AfaaqActive", "LOCALS", 2)
+  Global("ScriptCheck", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("ScriptCheck", "LOCALS", 1)
+  ChangeAIScript("A7AFATK3", DEFAULT)
 END
 
 

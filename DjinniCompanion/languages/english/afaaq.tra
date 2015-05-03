@@ -476,6 +476,8 @@
 @10472 = ~Can you tell me about your skills?~
 @10473 = ~I am loath to tell outsiders of our culture or history. Maybe later when we know each other better.~
 @10474 = ~Soon you will have your quest, my <PRO_LADYLORD>.~
+@10475 = ~Please take care of yourself in battle.~
+@10476 = ~Sure, I will take care of myself if necessary.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~received Afaaq's blessing~
@@ -1799,7 +1801,7 @@ Since Afaaq is born out of the chaotic forces of air, he can haste himself anyti
 @60092 = ~Please stop attacking me!~
 @60093 = ~Please stop attacking me, my <PRO_LADYLORD>!~
 @60094 = ~Please stop attacking me!~
-
+@60095 = ~Select health-protective combat script~
 
 // Afaaq's Epilogues
 @64090 = ~Afaaq continued his journey with <CHARNAME> which took them halfway across Faerûn and back. They defeated raiding parties of sahuagin on the western borders of Tethyr and pushed back an invasion of frost giants threatening Luskan and the surrounding settlements.

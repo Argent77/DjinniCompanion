@@ -100,8 +100,9 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1)~ + @10019 /* Would you like to have healing potions for emergency situations? */ + TalkGeneric.StoreHealingPotions
 
     // Changing combat scripts
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("AfaaqPassive", "LOCALS", 0)~ + @10020 /* Please don't engage in battle. */ + TalkGeneric.BattlePassive
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("AfaaqPassive", "LOCALS", 1)~ + @10021 /* Please engage in battle again. */ + TalkGeneric.BattleActive
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 2)~ + @10475 /* Please take care of yourself in battle. */ + TalkGeneric.BattleSemiActive
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 1)~ + @10021 /* Please engage in battle again. */ + TalkGeneric.BattleActive
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 0)~ + @10020 /* Please don't engage in battle. */ + TalkGeneric.BattlePassive
 
     // Djinni returns into his lamp
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !PartyHasItem("A7DJLMP") !PartyHasItem("A7DJLMPA") !AreaCheck("A77006")~ + @10022 /* Please return into your lamp. */ + TalkGeneric.UnsummonDenied
@@ -151,8 +152,9 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1)~ + @10019 /* Would you like to have healing potions for emergency situations? */ + TalkGeneric.StoreHealingPotions
 
     // Changing combat scripts
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("AfaaqPassive", "LOCALS", 0)~ + @10020 /* Please don't engage in battle. */ + TalkGeneric.BattlePassive
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("AfaaqPassive", "LOCALS", 1)~ + @10021 /* Please engage in battle again. */ + TalkGeneric.BattleActive
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 2)~ + @10475 /* Please take care of yourself in battle. */ + TalkGeneric.BattleSemiActive
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 1)~ + @10021 /* Please engage in battle again. */ + TalkGeneric.BattleActive
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 0)~ + @10020 /* Please don't engage in battle. */ + TalkGeneric.BattlePassive
 
     // Djinni returns into his lamp
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !PartyHasItem("A7DJLMP") !PartyHasItem("A7DJLMPA") !AreaCheck("A77006")~ + @10022 /* Please return into your lamp. */ + TalkGeneric.UnsummonDenied
@@ -1815,12 +1817,17 @@ APPEND %afq_dialog%
   // *** Battle scripts ***
   IF ~~ TalkGeneric.BattlePassive
     SAY @10375 /* Alright, I will stay out of the action. */
-    IF ~~ DO ~SetGlobal("AfaaqPassive", "LOCALS", 1) ChangeAIScript("A7AFATK2", DEFAULT) ClearActions(Myself)~ EXIT
+    IF ~~ DO ~SetGlobal("AfaaqActive", "LOCALS", 0) ChangeAIScript("A7AFATK", DEFAULT) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.BattleActive
     SAY @10376 /* Sure, I will enter the heat of battle on my own. */
-    IF ~~ DO ~SetGlobal("AfaaqPassive", "LOCALS", 0) ChangeAIScript("A7AFATK", DEFAULT) ClearActions(Myself)~ EXIT
+    IF ~~ DO ~SetGlobal("AfaaqActive", "LOCALS", 1) ChangeAIScript("A7AFATK2", DEFAULT) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.BattleSemiActive
+    SAY @10476 /* Sure, I will take care of myself if necessary. */
+    IF ~~ DO ~SetGlobal("AfaaqActive", "LOCALS", 2) ChangeAIScript("A7AFATK3", DEFAULT) ClearActions(Myself)~ EXIT
   END
 
 

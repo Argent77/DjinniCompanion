@@ -27,9 +27,9 @@ IF ~Global("GreedAfaaqMad", "LOCALS", 2)~ AfqDuel.Lost.1
   SAY @4204 /* I give up! In my present form I am unable to accomplish anything. You have won and I will heed your commands. */
   IF ~~ DO ~SetGlobal("A7AfaaqHostile", "GLOBAL", 0)
       SetGlobal("A7AfaaqEnslaved", "GLOBAL", 1) 
-      SetGlobal("AfaaqPassive", "LOCALS", 0)
+      SetGlobal("AfaaqActive", "LOCALS", 1)
       ChangeAIScript("A7AFAAQ", OVERRIDE)
-      ChangeAIScript("A7AFATK", DEFAULT) 
+      ChangeAIScript("A7AFATK2", DEFAULT) 
       SetDialogue("A7AFAAQX") 
       ChangeEnemyAlly(Myself, FAMILIAR)
       AddFamiliar()

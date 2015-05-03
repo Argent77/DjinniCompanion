@@ -17,8 +17,9 @@ IF ~True()~ QuickMenu.1
   + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("POTN55", Myself) HPPercentLT(Myself, 100)~ + @60069 /* Quaff a Potion of Superior Healing */ DO ~UseItem("POTN55", Myself)~ EXIT
   
   // Change combat scripts
-  + ~Global("AfaaqPassive", "LOCALS", 1)~ + @60070 /* Select active combat script */ DO ~SetGlobal("AfaaqPassive", "LOCALS", 0) ChangeAIScript("A7AFATK", DEFAULT)~ EXIT
-  + ~Global("AfaaqPassive", "LOCALS", 0)~ + @60071 /* Select passive combat script */ DO ~SetGlobal("AfaaqPassive", "LOCALS", 1) ChangeAIScript("A7AFATK2", DEFAULT)~ EXIT
+  + ~!Global("AfaaqActive", "LOCALS", 2)~ + @60095 /* Select health-protective combat script */ DO ~SetGlobal("AfaaqActive", "LOCALS", 2) ChangeAIScript("A7AFATK3", DEFAULT)~ EXIT
+  + ~!Global("AfaaqActive", "LOCALS", 1)~ + @60070 /* Select active combat script */ DO ~SetGlobal("AfaaqActive", "LOCALS", 1) ChangeAIScript("A7AFATK2", DEFAULT)~ EXIT
+  + ~!Global("AfaaqActive", "LOCALS", 0)~ + @60071 /* Select passive combat script */ DO ~SetGlobal("AfaaqActive", "LOCALS", 0) ChangeAIScript("A7AFATK", DEFAULT)~ EXIT
 
   // Return into the lamp
   + ~OR(2) PartyHasItem("A7DJLMP") PartyHasItem("A7DJLMPA") !AreaCheck("A77006")~ + @60072 /* Return into the djinni lamp */ DO ~SetGlobal("unsummoning","LOCALS",1)~ EXIT
