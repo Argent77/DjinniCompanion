@@ -97,6 +97,8 @@ BEGIN @3      // Light Version (the djinni only)
   // *** Djinni Afaaq ***
   INCLUDE ~DjinniCompanion/lib/afaaqlight.tph~
 
+  // *** Installing tilesets ***
+  INCLUDE ~DjinniCompanion/lib/tilesets_light.tph~
 
 
 ////////////////////////

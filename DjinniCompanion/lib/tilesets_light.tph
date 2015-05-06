@@ -1,29 +1,29 @@
-// *** Installation of compressed TIS and MOS files (Full Version) ***
+// *** Installation of compressed TIS and MOS files (Light Version) ***
 
 ACTION_IF (GAME_IS ~bg2ee~) BEGIN
-  OUTER_TEXT_SPRINT script_mos ~install_mos_ee~
+  OUTER_TEXT_SPRINT script_mos ~install_light_mos_ee~
 END ELSE BEGIN
-  OUTER_TEXT_SPRINT script_mos ~install_mos~
+  OUTER_TEXT_SPRINT script_mos ~install_light_mos~
 END
 
 ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) BEGIN
-  AT_NOW ~DjinniCompanion/tools/install_tis-win32.bat~
+  AT_NOW ~DjinniCompanion/tools/install_light_tis-win32.bat~
   AT_NOW ~DjinniCompanion/tools/%script_mos%-win32.bat~
-  AT_INTERACTIVE_UNINSTALL ~DjinniCompanion/tools/uninstall-win32.bat~
+  AT_INTERACTIVE_UNINSTALL ~DjinniCompanion/tools/uninstall_light-win32.bat~
 END ELSE BEGIN
   ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~osx~) BEGIN
-    AT_NOW ~sh DjinniCompanion/tools/install_tis-osx.sh~
+    AT_NOW ~sh DjinniCompanion/tools/install_light_tis-osx.sh~
     AT_NOW ~sh DjinniCompanion/tools/%script_mos%-osx.sh~
   END ELSE ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~unix~) BEGIN
     ACTION_IF (~%WEIDU_ARCH%~ STRING_EQUAL_CASE ~amd64~) BEGIN
-      AT_NOW ~sh DjinniCompanion/tools/install_tis-linux64.sh~
+      AT_NOW ~sh DjinniCompanion/tools/install_light_tis-linux64.sh~
       AT_NOW ~sh DjinniCompanion/tools/%script_mos%-linux64.sh~
     END ELSE BEGIN
-      AT_NOW ~sh DjinniCompanion/tools/install_tis-linux32.sh~
+      AT_NOW ~sh DjinniCompanion/tools/install_light_tis-linux32.sh~
       AT_NOW ~sh DjinniCompanion/tools/%script_mos%-linux32.sh~
     END
   END ELSE BEGIN
     FAIL ~Unsupported or unrecognized operating system.~
   END
-  AT_INTERACTIVE_UNINSTALL ~sh DjinniCompanion/tools/uninstall-unix.sh~
+  AT_INTERACTIVE_UNINSTALL ~sh DjinniCompanion/tools/uninstall_light-unix.sh~
 END
