@@ -181,6 +181,16 @@ COPY ~DjinniCompanion/items/a7sw1h2.itm~ ~override~
   SAY NAME1 @60010    // Scimitar +4
   SAY NAME2 @60010    // Scimitar +4
 
+// registering names of the different selectable weapon levels
+COPY_EXISTING ~tooltip.2da~ ~override~
+  SET sw1a = RESOLVE_STR_REF(@60009)    // Thunder Spark +2
+  SET sw1b = RESOLVE_STR_REF(@60087)    // Scimitar +2
+  SET sw2a = RESOLVE_STR_REF(@60010)    // Thunder and Lightning +4
+  SET sw2b = RESOLVE_STR_REF(@60088)    // Thunder +4
+  SET sw2c = RESOLVE_STR_REF(@60089)    // Scimitar +4
+  INSERT_2DA_ROW 1 3 ~A7SW1H1           %sw1a%        %sw1b%       -1~
+  INSERT_2DA_ROW 2 3 ~A7SW1H2           %sw2a%        %sw2b%       %sw2c%~
+
 // MinHP1 item (for a controlled death)
 COPY ~DjinniCompanion/items/a7minhp1.itm~ ~override~
 
