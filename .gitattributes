@@ -1,6 +1,6 @@
 *.2da text
 *.baf text
-*.bat text
+*.bat text eol=crlf
 *.d text
 *.html text
 *.sh text eol=lf
