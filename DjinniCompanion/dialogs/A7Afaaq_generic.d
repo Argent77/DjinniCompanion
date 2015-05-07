@@ -2051,7 +2051,7 @@ APPEND %afq_dialog%
     SAY #58538 /* ~Choose wisely then, as I can perform each of these tasks once and once only. ~ */
     ++ #58539 /* ~Actually, I'd rather have a repeatable wish.~ */ + TalkGeneric.LimitedWish.12
     ++ #58540 /* ~I don't want a wish of any kind right now.~ */ + TalkGeneric.LimitedWish.22
-    + ~See("trskin01") Global("TrisLeave", "GLOBAL", 0) Global("A7WishRestoreRaissa","GLOBAL",0)~ + @11266 /* I wish Raissa's curse of the skin dancer to be removed. */ + TalkGeneric.LimitedWish.24
+    + ~Global("AfaaqLight", "LOCALS", 0) See("trskin01") Global("TrisLeave", "GLOBAL", 0) Global("A7WishRestoreRaissa","GLOBAL",0)~ + @11266 /* I wish Raissa's curse of the skin dancer to be removed. */ + TalkGeneric.LimitedWish.24
     + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishRich","GLOBAL",0)~ + #58541 /* ~I wish to be rich.~ */ + TalkGeneric.LimitedWish.3
     + ~CheckStatGT(LastTalkedToBy, 10, WIS) Global("wishArmor","GLOBAL",0)~ + #58542 /* ~I wish for a powerful magical item.~ */ + TalkGeneric.LimitedWish.6
     + ~CheckStatGT(LastTalkedToBy, 3, WIS) Global("wishXP","GLOBAL",0)~ + #58543 /* ~I wish to be more experienced.~ */ + TalkGeneric.LimitedWish.7
