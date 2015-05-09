@@ -181,7 +181,7 @@ COPY_EXISTING ~cut52a.bcs~ ~override~
 COPY_EXISTING ~cut57c.bcs~ ~override~
   DECOMPILE_AND_PATCH BEGIN
     REPLACE_TEXTUALLY CASE_INSENSITIVE 
-      ~\(SetGlobal("KillPartySlowly","AR2806",2)\)~ ~\1 ApplySpellRES("A7MISTC","A7Afaaq")~
+      ~\(SetGlobal("KillPartySlowly","AR2806",2)\)~ ~\1 SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) ActionOverride("A7Afaaq", ApplySpellRES("A7MISTC", Myself)) ChangeEnemyAlly("A7Afaaq", FAMILIAR)~
     REPLACE_TEXTUALLY CASE_INSENSITIVE 
       ~\(CreateVisualEffectObject("\(.+\)",Player6)\)~ ~\1 CreateVisualEffectObject("\2","A7Afaaq")~ 
     REPLACE_TEXTUALLY CASE_INSENSITIVE 
