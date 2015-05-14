@@ -2337,12 +2337,18 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.FixStates.1a
     SAY @10467 /* I will attempt to do so. Please wait a moment. */
     = @10468 /* ... */
-    IF ~~ DO ~SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) ChangeEnemyAlly(Myself, FAMILIAR)~ + TalkGeneric.FixStates.2
+    IF ~!IsActive("A7Afaaq")~ DO ~SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) ChangeEnemyAlly(Myself, FAMILIAR)~ + TalkGeneric.FixStates.2
+    IF ~IsActive("A7Afaaq")~ DO ~SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) ChangeEnemyAlly(Myself, FAMILIAR)~ + TalkGeneric.FixStates.2a
   END
 
   IF ~~ TalkGeneric.FixStates.2
     SAY @10469 /* It is done. If you still notice some odd behavior, you should tell my creator. */
     IF ~~ EXIT
+  END
+
+  IF ~~ TalkGeneric.FixStates.2a
+    SAY @10469 /* It is done. If you still notice some odd behavior, you should tell my creator. */
+    IF ~~ DO ~Deactivate(Myself)~ EXIT
   END
 
   // *** DEBUG: ***
