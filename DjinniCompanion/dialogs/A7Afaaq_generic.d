@@ -1660,10 +1660,10 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10341 /* Can you tell me more about your power to grant wishes? */ + TalkGeneric.AboutMe.Stats.Powers.LimitedWish
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10341 /* Can you tell me more about your power to grant wishes? */ + TalkGeneric.AboutMe.Stats.Powers.Wish
     ++ @10342 /* Can you tell me more about your innate power to turn invisible? */ + TalkGeneric.AboutMe.Stats.Powers.Invisibility
-    + ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10343 /* Can you tell me more about your whirlwind powers? */ + TalkGeneric.AboutMe.Stats.Powers.Whirlwind
-    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10343 /* Can you tell me more about your whirlwind powers? */ + TalkGeneric.AboutMe.Stats.Powers.GreaterWhirlwind
-    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10344 /* Can you tell me more about your ability to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
-    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10345 /* Can you tell me more about your Air Shield ability? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10349 /* Can you tell me more about your whirlwind power? */ + TalkGeneric.AboutMe.Stats.Powers.Whirlwind
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10349 /* Can you tell me more about your whirlwind power? */ + TalkGeneric.AboutMe.Stats.Powers.GreaterWhirlwind
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
