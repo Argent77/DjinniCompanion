@@ -1,16 +1,5 @@
 // *** Area script for "Rakshasa Meeting Place" ***
 
-// First-time creation of the djinni (moved into djinni lamp helper creature)
-// IF
-  // Global("A7AfaaqCreated", "GLOBAL", 0)
-// THEN RESPONSE #100
-  // SetGlobal("A7AfaaqCreated", "GLOBAL", 1)
-  // CreateCreature("A7Afaaq", [0.0], 0)
-  // ActionOverride("A7Afaaq", MakeGlobal())
-  // ActionOverride("A7Afaaq", DestroySelf())
-  // Continue()
-// END
-
 // First time entered
 IF
   Global("A7FirstTime", "A77001", 0)

@@ -12,6 +12,39 @@ THEN RESPONSE #100
   Continue()
 END
 
+// Reset Afaaq's removal timer
+IF
+  !Global("A7AfaaqSummoned", "GLOBAL", 0)
+  !Global("DestroyAfaaq", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("DestroyAfaaq", "LOCALS", 0)
+END
+
+// Remove Afaaq forcefully if his death sequence has been interrupted at some point (delayed by 3 seconds)
+IF
+  Global("A7AfaaqSummoned","GLOBAL",0)
+  Global("DestroyAfaaq","LOCALS",0)
+  IsActive("A7Afaaq")
+THEN
+  RESPONSE #100
+    SetGlobal("DestroyAfaaq","LOCALS",1)
+    SetGlobalTimer("DestroyAfaaqTimer","LOCALS",3)
+END
+
+IF
+  Global("A7AfaaqSummoned","GLOBAL",0)
+  Global("DestroyAfaaq","LOCALS",1)
+  GlobalTimerExpired("DestroyAfaaqTimer","LOCALS")
+  IsActive("A7Afaaq")
+THEN
+  RESPONSE #100
+    SetGlobal("DestroyAfaaq","LOCALS",0)
+    Deactivate("A7Afaaq")
+    ActionOverride("A7Afaaq",DestroySelf())
+END
+
+
 // Fix Afaaq's allegiance if necessary (work-around for a bug in the Infinity Engine)
 IF
   Global("A7AfaaqSummoned", "GLOBAL", 1)
@@ -35,15 +68,15 @@ IF
 THEN RESPONSE #100
   ApplySpellRES("A7DISPEL", "A7Afaaq")
   ApplySpellRES("A7IMMUN", "A7Afaaq")
-  ActionOverride("A7Afaaq", SetInterrupt(FALSE))
+  SetInterrupt(FALSE)
   ActionOverride("A7Afaaq", ClearActions(Myself))    // Cancel all remaining actions
   ActionOverride("A7Afaaq", ChangeEnemyAlly(Myself, NEUTRAL))
   ActionOverride("A7Afaaq", ApplySpellRES("A7MISTA", Myself))
   ActionOverride("A7Afaaq", DisplayString("A7Afaaq", @60038))    // turns into gaseous form
   ActionOverride("A7Afaaq", SetGlobalTimer("GaseousTimer", "LOCALS", 29))
   Wait(1)
-  ActionOverride("A7Afaaq", SetInterrupt(TRUE))
   SetGlobal("A7AfaaqGaseous", "GLOBAL", 2)
+  SetInterrupt(TRUE)
 END
 
 // Djinni dies and has to stay in his lamp for at least eight hours
@@ -61,19 +94,21 @@ THEN RESPONSE #100
   SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
   ApplySpellRES("A7DISPEL", "A7Afaaq")
   ApplySpellRES("A7IMMUN", "A7Afaaq")
-  ActionOverride("A7Afaaq", SetInterrupt(FALSE))
+  SetInterrupt(FALSE)
   ActionOverride("A7Afaaq", ApplySpellRES("A7DIE", Myself))    // make the djinni unselectable
   ActionOverride("A7Afaaq", DisplayString(Myself, 14026))    // Death
   ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
   SmallWait(25)
-  ActionOverride("A7Afaaq", SetInterrupt(TRUE))
+  Deactivate("A7Afaaq")
   ActionOverride("A7Afaaq", DestroySelf())
+  SetInterrupt(TRUE)
 END
 
 // Remove the control creature when the djinni is in his lamp
 IF
   Delay(6)
   Global("A7AfaaqSummoned", "GLOBAL", 0)
+  Global("DestroyAfaaq", "LOCALS", 0)
 THEN RESPONSE #100
   DestroySelf()
 END

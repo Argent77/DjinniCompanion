@@ -69,6 +69,7 @@ THEN RESPONSE #100
   SetGlobal("A7AfaaqSummoned", "GLOBAL", 0)
   SetGlobalTimer("A7AfaaqHealTimer", "GLOBAL", ONE_TURN)
   SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
+  Deactivate(Myself)
   DestroySelf()
 END
 

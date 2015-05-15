@@ -136,6 +136,7 @@ THEN RESPONSE #100
   SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
   Deactivate("A7Afaaq")
   MoveGlobalObject("A7Afaaq", Player1)
+  Deactivate("A7Afaaq")
   ActionOverride("A7Afaaq", DestroySelf())
   DestroySelf()
 END
