@@ -170,7 +170,9 @@ END
 
 // Permission to use the pool is given automatically when Carras is dead
 IF
-  Dead("AMCARRAS")
+  OR(2)
+    Global("Enclave", "GLOBAL", 2)
+    Dead("AMCARRAS")
   Global("A7Q5Permission", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("A7Q5Permission", "GLOBAL", 1)
