@@ -126,6 +126,7 @@ END
 IF
   ActionListEmpty()
   AttackedBy([ENEMY], DEFAULT)
+  See(LastAttackerOf(Myself))
   Global("A7AfaaqGaseous", "GLOBAL", 0)
 THEN RESPONSE #100
   AttackOneRound(LastAttackerOf(Myself))
