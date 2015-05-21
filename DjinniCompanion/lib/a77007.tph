@@ -6,5 +6,6 @@ COPY_EXISTING ~ar2204ht.bmp~ ~override/a77007ht.bmp~
               ~ar2204sr.bmp~ ~override/a77007sr.bmp~
               ~ar2204.mos~   ~override/a77007.mos~
 
-// COMPILE EVALUATE_BUFFER
-  // ~DjinniCompanion/scripts/a77007.baf~
+<<<<<<<< djinnicompanion/inlined/a77007.baf
+>>>>>>>> 
+COMPILE ~djinnicompanion/inlined/a77007.baf~
