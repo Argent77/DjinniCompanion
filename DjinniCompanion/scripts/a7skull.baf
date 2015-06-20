@@ -51,3 +51,10 @@ THEN RESPONSE #100
   EndCutSceneMode()
   DestroySelf()
 END
+
+// Fallback if script blocks above don't apply
+IF
+  True()
+THEN RESPONSE #100
+  DestroySelf()
+END
