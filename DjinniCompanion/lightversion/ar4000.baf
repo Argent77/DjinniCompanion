@@ -21,7 +21,6 @@ THEN RESPONSE #100
   SetGlobal("A7AfaaqTOBOnly", "GLOBAL", 1)
   CreateCreature("A7Afaaq", [0.0], 0)
   ActionOverride("A7Afaaq", MakeGlobal())
-  Deactivate("A7Afaaq")
   ActionOverride("A7Afaaq", DestroySelf())
   Continue()
 END
