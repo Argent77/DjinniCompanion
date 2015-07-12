@@ -7,6 +7,12 @@ END ELSE BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_MAHELS "DjinniCompanion/portraits/a7mahels.bmp"
 END
 
+// Adding tracking ability hints for the area
+COPY_EXISTING ~tracking.2da~ ~override~
+  // Inserted into strref #67807: You find signs of <CREATURE> in the area.
+  SET trackref = RESOLVE_STR_REF(@100)   // rakshasas and various woodland creatures
+  INSERT_2DA_ROW 0 3 ~A77001     %trackref%~
+
 COPY ~DjinniCompanion/areas/a77001.are~ ~override~
   READ_LONG 0xc4 "autonote_ofs"
   SAY (autonote_ofs + (0x34 * 0) + 0x04) @1605      // Magical Portal

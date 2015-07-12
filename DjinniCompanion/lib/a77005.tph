@@ -7,6 +7,12 @@ END ELSE BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_TATHAS "DjinniCompanion/portraits/a7tathas.bmp"
 END
 
+// Adding tracking ability hints for the area
+COPY_EXISTING ~tracking.2da~ ~override~
+  // Inserted into strref #67807: You find signs of <CREATURE> in the area.
+  SET trackref = RESOLVE_STR_REF(@103)   // spiders and umber hulks
+  INSERT_2DA_ROW 0 3 ~A77005     %trackref%~
+
 COPY ~DjinniCompanion/areas/a77005.are~   ~override~
   READ_LONG 0x5c "trigger_ofs"
   SAY (trigger_ofs + (0xc4 * 2) + 0x64) @3902     // This tunnel leads deeper into the underdark, but it is half-buried in debris and looks too dangerous to enter.

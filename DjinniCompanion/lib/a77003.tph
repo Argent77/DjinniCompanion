@@ -1,5 +1,11 @@
 // *** Area A77003 (Magma Cavern) ***
 
+// Adding tracking ability hints for the area
+COPY_EXISTING ~tracking.2da~ ~override~
+  // Inserted into strref #67807: You find signs of <CREATURE> in the area.
+  SET trackref = RESOLVE_STR_REF(@101)   // various fire resistant creatures, such as mephits, fire elementals or hell hounds
+  INSERT_2DA_ROW 0 3 ~A77003     %trackref%~
+
 // areas
 COPY ~DjinniCompanion/areas/a77003.are~ ~override~
   READ_LONG 0x5c "region_ofs"
