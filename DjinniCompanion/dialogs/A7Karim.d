@@ -227,7 +227,7 @@ APPEND A7KARIM
     + ~Global("A7Q5DemonHeart", "GLOBAL", 0)~ + @5076 /* Please tell me more about the hearts of demon lords. */ + Karim.Alternative.5
     + ~Global("A7Q5DivineEssence", "GLOBAL", 0)~ + @5077 /* What can you tell me about the sealed essences of divine beings? */ + Karim.Alternative.8
     + ~OR(2) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 1)~ + @5086 /* Thanks, I will ask Lord Malik if he settles on one of the alternatives you have mentioned. */ + Karim.Alternative.11
-    + ~Global("A7Q5DemonHeart", "GLOBAL", 0) Global("A7Q5DivineEssence", "GLOBAL", 0)~ + @5089 /* Thanks, I will ask Malik if he settles on a demilich phylactery as a substitute. */ + Karim.Alternative.11
+    + ~Global("A7Q5DemonHeart", "GLOBAL", 0) Global("A7Q5DivineEssence", "GLOBAL", 0)~ + @5087 /* Thanks, I will ask Lord Malik if he settles on a demilich phylactery as a substitute. */ + Karim.Alternative.11
   END
 
   IF ~~ Karim.Alternative.5

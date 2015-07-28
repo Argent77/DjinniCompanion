@@ -5,7 +5,6 @@
 @2001 = ~The eyes of the serpent statue begin to glow, and <GABBER> senses an alien presence in <HISHER> head. It speaks directly into <HISHER> mind with a powerful voice.~
 @2002 = ~YOU ARE NOT WORTHY OF MY PRESENCE. BEGONE!~
 @2003 = ~It retreats as quickly as it came and leaves a slightly shaken <GABBER>.~
-
 @2005 = ~The eyes of the serpent statue begin to glow, and you sense an alien presence in your head. You feel as if your mind is being probed... delicately at first, then with more insistence.~
 @2006 = ~Images of your childhood in Candlekeep as well as more recent memories flit before your eyes, occasionally mingled with a feeling of distant amusement. The images cease as quickly as they came. You begin to hear a voice resounding throughout your head.~
 @2007 = ~The eyes of the serpent statue begin to glow as your mind is probed by the presence once again.~
@@ -131,7 +130,7 @@ losing money might bring good luck.~
 @2209 = ~Thank you Cernd, but I'm currently not in the mood to discuss the wonders of nature. Don't forget we are here to rescue Afaaq.~
 @2210 = ~Don't you have anything better to do than lecturing me about trees and bushes? We are here to get back the djinni lamp from the rakshasas.~
 @2211 = ~It is never a waste of time to learn more about nature's beauty. But you are right, all in good time. We should move on carefully and remind the rakshasi about the value of balance.~
-@2212 = ~You may be right, Jaheira. I recognize some of the plants from my studies, and the sounds of the birds remind me of species I have observed during my visit to a druid grove to the south.~
+@2212 = ~You may be right, Jaheira. I recognize some of the plants from my studies, and the sounds of the birds remind me of species I have observed during my visit of a druid grove to the south.~
 // reserved: @2213 @2214
 
 

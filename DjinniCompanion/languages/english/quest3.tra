@@ -147,6 +147,7 @@
 @3224 = ~This is unexpected, Veldrin. You are more resourceful than even I imagined.~
 @3225 = ~May I have it?~
 
+
 // Dialog lines: Melarn entourage
 @3300 = ~Greetings <MALEFEMALE>. I am the first captain under Tathas' command.~
 @3301 = ~I apologize for my lack of manners, but until you have decided to work for us I can offer you nothing.~
@@ -364,7 +365,6 @@ The soulcage collection turned out to be very important for Afaaq. He was able t
 @3851 = ~An unexpected encounter
 
 Tathas Melarn rewarded me with Afaaq's soulcage. I don't know yet how to use it, but Afaaq seems to be relieved that it has come into our possession.~
-
 
 
 // Misc. strings

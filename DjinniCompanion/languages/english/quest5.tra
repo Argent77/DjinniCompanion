@@ -92,7 +92,6 @@
 @5086 = ~Thanks, I will ask Lord Malik if he settles on one of the alternatives you have mentioned.~
 @5087 = ~Thanks, I will ask Lord Malik if he settles on a demilich phylactery as a substitute.~
 @5088 = ~I am impressed, <CHARNAME>. You appear to be more powerful than even I imagined. I suggest you return to Malik and offer it to him as an equal substitute. He will surely accept it.~
-@5089 = ~Thanks, I will ask Malik if he settles on a demilich phylactery as a substitute.~
 @5090 = ~Demon lords are in control over one or more layers of the Abyss. If you manage to destroy a demon lord while leaving his heart intact, you could offer it to Malik as another substitute.~
 @5091 = ~The heart contains much of the demon lord's power and, more importantly, still shares a connection to the demon's layer of the Abyss.~
 @5092 = ~Coincidentally, we already have a heart of a demon lord in our possession.~
@@ -755,7 +754,7 @@
 @6056 = ~No, wait. I've heard, the monks hired wizards from the Twisted Rune. Ask around the tavern, they are a lazy bunch.~
 @6057 = ~What is it, citizen? Don't you see I am busy?~
 @6058 = ~Why does everyone always come to me when complaining about one thing or another?~
-@6059 = ~Can you help me or not?.~
+@6059 = ~Can you help me or not?~
 @6060 = ~I'm sorry, I won't bother you anymore.~
 @6061 = ~I always send my men to the local cleric when they complain about sunburns and heatstrokes. Why don't you go there, too, instead of bothering me further.~
 @6062 = ~Begone, I am here to drink and don't want to talk to you folk.~
@@ -1032,8 +1031,6 @@ Unfortunately Karim died in the battle with the efreet, but the surviving djinns
 @6801 = ~Back to the Smuggler's Cave~
 @6802 = ~To the upper cave~
 @6803 = ~This wooden bridge appears to be very old. How it was able to withstand the tremendous heat of this cavern for such a long time will always be a mystery.~
-@6804 = ~You hear a rumbling and have barely time to jump back...~
-@6805 = ~The rumbling dies off a while later and you see a mass of rocks barring your way.~
 @6806 = ~The portal radiates waves of magical heat which even your protection is powerless against. There is no way to enter it.~
 @6807 = ~To the Elemental Plane of Fire~
 @6808 = ~Wand of Heat Protection~
@@ -1071,7 +1068,7 @@ Special Abilities (ten charges each):
     Stuns 1D4 rounds and deals 10D10 fire damage to enemies in 30' radius
 
 Unusable by:
- Wizardslayer~
+ Wizard Slayer~
 @6823 = ~Djinni Whistle~
 @6824 = ~The whistle is intricately carved from fine wood and is almost humming on its own when you set it to your mouth.~
 @6825 = ~Ring of Elemental Protection~
@@ -1092,7 +1089,7 @@ Special Abilities:
  Cast twice per day
 
 Unusable by:
- Wizardslayer~
+ Wizard Slayer~
 
 @6827 = ~Cloud Slasher +4~
 @6828 = ~The scimitar crackles with energy when you hold it in your hand and each strike appears to slash the air itself.
@@ -1148,7 +1145,7 @@ STATISTICS:
 Special Abilities (three times per day): 
  Absorb Life Force:
  Drains three levels and causes 3d8 +8 damage to the victim while healing the caster at the same time.
- Range: 40 yards
+ Range: 40 feet
 
 Equipped Abilities:
  Undead's Blessing:
@@ -1158,6 +1155,7 @@ Equipped Abilities:
      level drain and panic
    - Increased resistance to 
      physical and cold damage
+   - Immunity to haste
    - Vulnerability to fire
    - Slow decay of body and mind
    - And more...
