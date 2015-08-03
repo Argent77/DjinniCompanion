@@ -1,0 +1,239 @@
+// -*- coding: utf-8 -*- 
+// *** BG2EE-specific strings ***
+
+// from afaaq.tra
+// *** Banter with Dorn (index 22000...22499) ***
+
+// *** Banter with Hexxat (index 22500...22999) ***
+
+// *** Banter with Neera (index 23000...23499) ***
+
+// *** Banter with Rasaad (index 23500...23999) ***
+
+
+// *** Party introductions ***
+@58485 = ~Mein einziger Gefährte auf meiner Reise ist Dorn.~
+@58486 = ~Das ist Dorn.~
+@58487 = ~Mein einzige Gefährtin auf meiner Reise ist Neera.~
+@58488 = ~Das ist Neera.~
+@58489 = ~Mein einzige Gefährtin auf meiner Reise ist Hexxat.~
+@58490 = ~Das ist Hexxat.~
+@58491 = ~Mein einziger Gefährte auf meiner Reise ist Rasaad.~
+@58492 = ~Das ist Rasaad.~
+@58493 = ~Mein einziger... Gefährte auf meiner Reise ist Wilson.~
+@58494 = ~Das ist Wilson.~
+@58495 = ~Mein einziger Gefährte auf meiner Reise ist Wilson.~
+@58496 = ~Und zu guter Letzt. This is Dorn. Er ist ein echter Teufelskerl und besitzt dazu einige unheilige Kräfte.~
+@58497 = ~Und zu guter Letzt. This is Dorn. Er ist ein mächtiger Finsterer Streiter und ein wertvolles Gruppenmitglied.~
+@58498 = ~Unser nächster Gefährte ist Dorn. Er ist ein echter Teufelskerl und besitzt dazu einige unheilige Kräfte.~
+@58499 = ~Unser nächster Gefährte ist Dorn. Er ist ein mächtiger Finsterer Streiter und ein wertvolles Gruppenmitglied.~
+@58500 = ~Unser dritter Gefährte ist Dorn. Er ist ein echter Teufelskerl und besitzt dazu einige unheilige Kräfte.~
+@58501 = ~Unser dritter Gefährte ist Dorn. Er ist ein mächtiger Finsterer Streiter und ein wertvolles Gruppenmitglied.~
+@58502 = ~Der nächste ist Dorn. Er ist ein echter Teufelskerl und besitzt dazu einige unheilige Kräfte.~
+@58503 = ~Der nächste ist Dorn. Er ist ein mächtiger Finsterer Streiter und ein wertvolles Gruppenmitglied.~
+@58504 = ~Er ist ein echter Teufelskerl und besitzt dazu einige unheilige Kräfte.~
+@58505 = ~Er ist ein mächtiger Finsterer Streiter und ein wertvolles Gruppenmitglied.~
+@58506 = ~Und zu guter Letzt. Dies ist Neera. Sie ist eine engagierte Halbelfin und hat eine Vorliebe für unbändige Magie.~
+@58507 = ~Und zu guter Letzt. Dies ist Neera. Sie ist eine fähige Hasardeurin und ein wertvolles Gruppenmitglied.~
+@58508 = ~Unsere nächste Gefährtin ist Neera. Sie ist eine engagierte Halbelfin und hat eine Vorliebe für unbändige Magie.~
+@58509 = ~Unsere nächste Gefährtin ist Neera. Sie ist eine fähige Hasardeurin und ein wertvolles Gruppenmitglied.~
+@58510 = ~Unsere dritte Gefährtin ist Neera. Sie ist eine engagierte Halbelfin und hat eine Vorliebe für unbändige Magie.~
+@58511 = ~Unsere dritte Gefährtin ist Neera. Sie ist eine fähige Hasardeurin und ein wertvolles Gruppenmitglied.~
+@58512 = ~Die nächste ist Neera. Sie ist eine engagierte Halbelfin und hat eine Vorliebe für unbändige Magie.~
+@58513 = ~Die nächste ist Neera. Sie ist eine fähige Hasardeurin und ein wertvolles Gruppenmitglied.~
+@58514 = ~Sie ist eine engagierte Halbelfin und hat eine Vorliebe für unbändige Magie.~
+@58515 = ~Sie ist eine fähige Hasardeurin und ein wertvolles Gruppenmitglied.~
+@58516 = ~Und zu guter Letzt. Dies ist Hexxat. Sie redet nicht viel über sich selbst, ist aber in der Lage, selbst das widerspenstigste Schloss zu knacken.~
+@58517 = ~Und zu guter Letzt. Dies ist Hexxat. Obwohl sich all ihre Gedanken nur um den nächsten Auftrag drehen, ist sie eine fähige Diebin und ein wertvolles Gruppenmitglied.~
+@58518 = ~Unsere nächste Gefährtin ist Hexxat. Sie redet nicht viel über sich selbst, ist aber in der Lage, selbst das widerspenstigste Schloss zu knacken.~
+@58519 = ~Unsere nächste Gefährtin ist Hexxat. Obwohl sich all ihre Gedanken nur um den nächsten Auftrag drehen, ist sie eine fähige Diebin und ein wertvolles Gruppenmitglied.~
+@58520 = ~Unsere dritte Gefährtin ist Hexxat. Sie redet nicht viel über sich selbst, ist aber in der Lage, selbst das widerspenstigste Schloss zu knacken.~
+@58521 = ~Unsere dritte Gefährtin ist Hexxat. Obwohl sich all ihre Gedanken nur um den nächsten Auftrag drehen, ist sie eine fähige Diebin und ein wertvolles Gruppenmitglied.~
+@58522 = ~Die nächste ist Hexxat. Sie redet nicht viel über sich selbst, ist aber in der Lage, selbst das widerspenstigste Schloss zu knacken.~
+@58523 = ~Die nächste ist Hexxat. Obwohl sich all ihre Gedanken nur um den nächsten Auftrag drehen, ist sie eine fähige Diebin und ein wertvolles Gruppenmitglied.~
+@58524 = ~Sie redet nicht viel über sich selbst, ist aber in der Lage, selbst das widerspenstigste Schloss zu knacken.~
+@58525 = ~Obwohl sich all ihre Gedanken nur um den nächsten Auftrag drehen, ist sie eine fähige Diebin und ein wertvolles Gruppenmitglied.~
+@58526 = ~Und zu guter Letzt. Dies ist Hexxat. Sie ist eine Vampirin aus Chult und eine mächtige Verbündete meiner Abenteuergruppe.~
+@58527 = ~Und zu guter Letzt. Dies ist Hexxat. Sie ist eine talentierte Diebin und ein wertvolles Gruppenmitglied.~
+@58528 = ~Unsere nächste Gefährtin ist Hexxat. Sie ist eine Vampirin aus Chult und eine mächtige Verbündete meiner Abenteuergruppe.~
+@58529 = ~Unsere nächste Gefährtin ist Hexxat. Sie ist eine talentierte Diebin und ein wertvolles Gruppenmitglied.~
+@58530 = ~Unsere dritte Gefährtin ist Hexxat. Sie ist eine Vampirin aus Chult und eine mächtige Verbündete meiner Abenteuergruppe.~
+@58531 = ~Unsere dritte Gefährtin ist Hexxat. Sie ist eine talentierte Diebin und ein wertvolles Gruppenmitglied.~
+@58532 = ~Die nächste ist Hexxat. Sie ist eine Vampirin aus Chult und eine mächtige Verbündete meiner Abenteuergruppe.~
+@58533 = ~Die nächste ist Hexxat. Sie ist eine talentierte Diebin und ein wertvolles Gruppenmitglied.~
+@58534 = ~Sie ist eine Vampirin aus Chult und eine mächtige Verbündete meiner Abenteuergruppe.~
+@58535 = ~Sie ist eine talentierte Diebin und ein wertvolles Gruppenmitglied.~
+@58536 = ~Und zu guter Letzt. Das ist Rasaad. Er ist ein Mönch, der an die Lehren Selûnes glaubt. Er ist gegenwärtig auf einer heiligen Mission, um den Tod seines Bruders zu rächen.~
+@58537 = ~Und zu guter Letzt. Das ist Rasaad. Er ist ein Sonnenseelen-Mönch und ein wertvolles Gruppenmitglied.~
+@58538 = ~Unser nächster Gefährte ist Rasaad. Er ist ein Mönch, der an die Lehren Selûnes glaubt. Er ist gegenwärtig auf einer heiligen Mission, um den Tod seines Bruders zu rächen.~
+@58539 = ~Unser nächster Gefährte ist Rasaad. Er ist ein Sonnenseelen-Mönch und ein wertvolles Gruppenmitglied.~
+@58540 = ~Unser dritter Gefährte ist Rasaad. Er ist ein Mönch, der an die Lehren Selûnes glaubt. Er ist gegenwärtig auf einer heiligen Mission, um den Tod seines Bruders zu rächen.~
+@58541 = ~Unser dritter Gefährte ist Rasaad. Er ist ein Sonnenseelen-Mönch und ein wertvolles Gruppenmitglied.~
+@58542 = ~Der nächste ist Rasaad. Er ist ein Mönch, der an die Lehren Selûnes glaubt. Er ist gegenwärtig auf einer heiligen Mission, um den Tod seines Bruders zu rächen.~
+@58543 = ~Der nächste ist Rasaad. Er ist ein Sonnenseelen-Mönch und ein wertvolles Gruppenmitglied.~
+@58544 = ~Er ist ein Mönch, der an die Lehren Selûnes glaubt. Er ist gegenwärtig auf einer heiligen Mission, um den Tod seines Bruders zu rächen.~
+@58545 = ~Er ist ein Sonnenseelen-Mönch und ein wertvolles Gruppenmitglied.~
+@58546 = ~Und zu guter Letzt. Das ist Wilson. Er ist ein eigensinniger, aber starker und loyaler Gefährte.~
+@58547 = ~Und zu guter Letzt. Das ist Wilson. Er ist so eigensinnig wie er stark ist, und ein wertvolles Gruppenmitglied.~
+@58548 = ~Unser nächster Gefährte ist Wilson. Er ist ein eigensinniger, aber starker und loyaler Gefährte.~
+@58549 = ~Unser nächster Gefährte ist Wilson. Er ist so eigensinnig wie er stark ist, und ein wertvolles Gruppenmitglied.~
+@58550 = ~Unser dritter Gefährte ist Wilson. Er ist ein eigensinniger, aber starker und loyaler Gefährte.~
+@58551 = ~Unser dritter Gefährte ist Wilson. Er ist so eigensinnig wie er stark ist, und ein wertvolles Gruppenmitglied.~
+@58552 = ~Der nächste ist Wilson. Er ist ein eigensinniger, aber starker und loyaler Gefährte.~
+@58553 = ~Der nächste ist Wilson. Er ist so eigensinnig wie er stark ist, und ein wertvolles Gruppenmitglied.~
+@58554 = ~Er ist ein eigensinniger, aber starker und loyaler Gefährte.~
+@58555 = ~Er ist so eigensinnig wie er stark ist, und ein wertvolles Gruppenmitglied.~
+@58556 = ~Ihr seid ungewöhnlich schwach für einen Dschinn. Ich fange bereits an zu zweifeln, ob Ihr all die Mühen wert seid, die uns <CHARNAME> euretwegen auferlegt hat.~
+@58557 = ~Der Stellenwert von Macht liegt immer im Auge des Betrachters. Rohe Gewalt und ein furchteinflößendes Auftreten sind nicht die einzigen Qualitäten, die eine Person ausmachen.~
+@58558 = ~Glaubt Ihr wirklich an diesen Unsinn? Ich habe bisher noch keinen einzigen Fall gesehen, wo unsere Gegenspieler allein durch die Güte unseres Herzens überwältigt wurden.~
+@58559 = ~Wenn Ihr anfangt, die Welt mit offenen Augen und Verstand wahrzunehmen, werdet Ihr früher oder später keine andere Wahl haben, als Eure Meinung zu ändern.~
+@58560 = ~Ich finde es großartig, mehr ungewöhnliche Menschen... äh, Dschinns bei uns zu haben. Ich meinte, noch ungewöhnlicher als ich. Und <CHARNAME>, natürlich.~
+@58561 = ~Jeder ist einzigartig auf ihre oder seine spezielle Art. Ich bin da keine Ausnahme, genauso wenig wie ihr, <CHARNAME> oder jeder andere.~
+@58562 = ~Verzeiht mir meine langatmigen Ausführungen. Ich bin sehr erfreut, Eure Bekanntschaft zu machen, Neera.~
+@58563 = ~Kein Problem. Wir können uns ja später weiter darüber unterhalten, wenn Ihr wollt.~
+@58564 = ~Ich bin mir sicher, dass wir dafür genügend Zeit auf der vor uns liegenden Reise finden werden.~
+@58565 = ~Ich muss Dragomirs Gruft erreichen.~
+@58566 = ~Ich bin erfreut... Eure Bekanntschaft zu machen. Darf ich fragen, warum Ihr Euch der Gruppe von <CHARNAME> angeschlossen habt?~
+@58567 = ~Dann scheint Eurer Pfad bereits vorgegeben zu sein. Ich wünsche Euch die nötige Stärke und Ausdauer, um Eurer Ziel zu erreichen.~
+@58568 = ~Afaaq, was geht hier vor?~
+@58569 = ~Keine Sorge, <PRO_LADYLORD>. Ich bin mir sicher, dass sich alles rechtzeitig aufklären wird.~
+@58570 = ~Wie entzückend, einen der sagenumwobenden Dschinns an unserer Seite zu haben. Wir sollten und auf jeden Fall besser kennenlernen, glaubst Du nicht?~
+@58571 = ~Ihr habt euch mit Leib und Seele der Dunkelheit hingegeben. Ich bezweifle, dass wir irgendetwas gemeinsam haben, worüber es sich zu reden lohnt, Vampir.~
+@58572 = ~Warum so voreingenommen, Afaaq? Es gibt bestimmt einem Funken Neugier in Euch, der mehr über mich erfahren möchte.~
+@58573 = ~Eure schönen Worte sind an mich verschwendet. Ich werde Eure Anwesenheit dulden, solange es der Wunsch von <CHARNAME> ist. Erwartet aber nicht mehr als das.~
+@58574 = ~Seid gegrüßt, Afaaq. Ich wünschte, wir hätten uns unter besseren Umständen getroffen. Niemand verdient, es so wie Ihr eingekerkert zu sein.~
+@58575 = ~Ich weiß Eure Worte wirklich zu schätzen. Eure eigene Situation scheint mir aber nicht weniger fatal zu sein. Ein Gefängnis aus Pflichtgefühl ist oftmals nicht weniger wirksam als eines, das aus Magie geformt wurde.~
+@58576 = ~Ihr habt wahrscheinlich Recht. Ich muss diesen Weg jedoch bis zum bitteren Ende beschreiten.~
+@58578 = ~Das Ende muss nicht zwangsweise bitter sein. Ich bin überzeugt, dass Ihr letztendlich Erfolg haben werdet.~
+@58579 = ~KNURR?~
+@58580 = ~Ihr habt Recht. Ich bin mir sicher, dass es <CHARNAME> schaffen wird.~
+@58581 = ~BRUMM!~
+@58582 = ~Das ist sehr scharfsinnig von Euch. Wenn es einer schafft, dann ist es <CHARNAME>.~
+@58583 = ~Und Ihr auch, mein Freund.~
+
+
+// from misc.tra
+
+
+// from quest2.tra
+@2213 = ~Dieser Urwald kommt mir bekannt vor, als hätte ich ihn in einem Traum oder einem vorherigen Leben schon einmal gesehen. Es würde mich nicht überraschen, wenn uns der Stein in den Dschungel von Chult oder den Schwarzen Dschungel teleportiert hat.~
+@2214 = ~Wie dem auch sei. Es ist auf jeden Fall eine nette Abwechslung. Meint Ihr nicht auch, <CHARNAME>?~
+
+@2940 = ~Der Hut strahlt in einem hellen blau. Er ist überraschend leicht und scheint für einen bestimmten Magier gefertigt worden zu sein.~
+
+@2941 = ~Vor vielen Jahrhunderten beauftragte der verrückte Magier Harash Matar einen gnomischen Zauberer der Gegend, einen Weg zu finden, um seine magischen Kräfte aufs Vollste ausnutzen zu können. Der Gnom wusste von der Geistesverfassung des Magiers und fertigte eine Kopfbedeckung, die die chaotischen Gedanken ihres Trägers in mächtige Zaubersprüche fließen lassen konnte.
+
+Der Hut erwieß sich als viel effektiver als er es sich vorstellen konnte. Schon bald nachdem der Gnom sein Meisterwerk ablieferte, rief der verrückte Magier in seiner Heimatstadt versehentlich eine Horde Dämonen herbei. Sie verwüsteten alles in ihrer Nähe und töteten alle Bewohner. Nur diese Kopfbedeckung überstand das Massaker.
+
+Der Hut zapft die chaotischen Kräfte des Geistes an und ermöglicht seinem Träger, Zauber zu wirken, die normalerweise jenseits seiner oder ihrer Fähigkeiten liegen. Wegen der speziellen Natur der Verzauberung können nur Personen, die sich dem Chaos hingeben, diesen Hut nutzen.
+
+EIGENSCHAFTEN:
+
+Chaosschild
+  Schützt den Träger etwas vor den gefährlichen Nebenwirkungen, wenn ein Zauber mittels unbändiger Magie gewirkt wird.
+
+Nahals gewagte Hexerei (3x/Tag)
+  Ermöglicht es dem Träger, einen beliebigen Zauber aus dem Zauberbuch zu sprechen. Da er sich die chaotischen Kräfte seines Geistes zu Nutze macht, endet er in der Regel im Desaster oder zumindest in einer Wirkung, die nicht vom Magier gewünscht wurde.~
+
+
+// from quest5.tra
+@6809 = ~Dieser Zauberstab hat eine begrenzte Anzahl an Ladungen, die es Euch ermöglichen, großer Hitze zu widerstehen, wie sie von Lava oder ähnlichen Hitzequellen abgestrahlt werden. Sie schützt allerdings NICHT vor Verbrennungen in direktem Kontakt mit Feuer.
+
+EIGENSCHAFTEN:
+
+Schützt vor Hitze
+Reichweite:  Gesamte Gruppe
+Dauer:  8 Stunden~
+
+@6822 = ~Dieser Zauberstab sieht aus, als ob er jeden Moment in Flammen aufgehen würde. Der untere Teil sieht metallisch aus, aber fühlt sich sehr organisch an. Der obere Teil scheint zu brennen, aber strahlt keine spürbare Hitze aus.
+
+Aura des Flammenden Todes
+  Dauer: zehn Runden
+Feuerelementar beschwören
+  Beschwört einen Feuerelementar mit 24 Trefferwürfeln
+  Dauer: 4 Stunden
+Komet
+  Betäubt für 1W4 Runden und richtet 10W10 Punkte Feuerschaden bei Gegnern in 9 m Radius an~
+
+@6826 = ~Dieser hervorragend verarbeitete Ring beinhaltet sehr mächtige Verzauberungen, die kein Sterblicher mehr in der Lage zu erschaffen ist. Wenn man ihn anlegt, erlaubt es seinen Träger, sich vor den elementaren Kräften der Welt zu schützen und gleichzeitig die gleichen Elemente auf den Gegner zurückzuwerfen.
+
+Roter Feuerschild
+  Dauer: Zwei Phasen
+  Kann dreimal pro Tag benutzt werden
+
+Blauer Feuerschild
+  Dauer: Zwei Phasen
+  Kann dreimal pro Tag benutzt werden
+
+Luftschild
+  Dauer: Zwei Phasen
+  Kann zweimal pro Tag benutzt werden~
+
+@6828 = ~Dieser Krummsäbel knistert vor Energie, wenn Ihr ihn in Euren Händen haltet, und jeder Schlag scheint selbst die Luft um Euch herum zu spalten.
+
+EIGENSCHAFTEN:
+
+Elektrizitätswiderstand: +50%
+Schutz vor Betäubung
+
+Blitzschlag
+  (jeder Schlag betäubt das Ziel für zwei Runden, Rettungswurf gg. Tod)
+Hinrichtung
+  (10% Chance, dass jeder Schlag das Ziel dauerhaft vernichtet, Rettungswurf gg. Tod)
+
+Schaden: 1W8 +4, +2W8 elektrischer Schaden
+ETW0-Bonus: +4
+Schadenstyp: Klinge
+Gewicht: 2
+Initiativefaktor: 1
+Fertigkeit: Krummsäbel
+Typ:  1-händig
+Mindeststärke: 8~
+
+@6845 = ~Dieser Schädel strahlt eine überwältigende Aura der Bosheit aus, und Ihr habt das Gefühl, als ob er immer noch vom Geist des Halbleichnams besessen ist.
+
+EIGENSCHAFTEN:
+
+*VERFLUCHT*
+
+Lebenskraft entziehen:
+  Entzieht dem Opfer drei Stufen Lebenskraft und richtet 3W8 +8 Schaden an. Heilt den Träger gleichzeitig.
+  Reichweite: Lang
+
+Unsegen der Untoten:
+  Der Träger erhält für eine kurze Zeitspanne sowohl positive als auch negative Eigenschaften der Untoten.
+  Dies beinhaltet:
+  - Unanfälligkeit gegenüber Todesmagie,
+    Entzug von Lebenskraft und Panik
+  - Erhöhter Widerstand gegenüber
+    physischem und Kälteschaden
+  - Immunität gegenüber Hast
+  - Anfälligkeit gegenüber Feuer
+  - Langsamer Verfall des Körpers und
+    des Geistes
+  - Und einiges mehr...~
+
+@6851 = ~Ein kleiner Zwergenklan erfand eine seltsame Substanz, die selbst das härteste Gestein zertrümmern konnte, wenn sie richtig gemischt wurde. Es wurde schnell in ein Werkzeug verwandelt, um Tunnel und Hohlräume zu graben. Leider explodierte ein Depot mit dieser hochentzündlichen Substanz und löschte den gesamten Klan aus.
+
+Die Anleitung zur Herstellung blieb allerdings erhalten. Eine Trupp Derro-Aufklärer entdeckte die zerstörte Siedlung und barg sowohl etwas von dieser Substanz als auch das Rezept dafür. Da sie eine böse und grausame Rasse waren, entdeckten sie schnell ihr volles Potenzial und entwickelten daraus eine Waffe. Wenn aktiviert, explodiert es nach einer kurzen Weile und richtet bei allen Kreaturen in der Umgebung Feuerschaden an. Später konnte ein Kleriker von Diirinka diese Waffe perfektionieren, indem er einen magischen Annäherungszünder hinzufügte. Im aktivierten Zustand kann man die Waffe an einem beliebigen Ort platzieren. Sie explodiert erst, wenn sich ihr eine Kreatur nähert.
+
+EIGENSCHAFTEN:
+
+Explodierende Feuerfalle
+Schadenstyp: 6W6 Feuerschaden
+Wird ausgelöst, wenn man sich ihr auf 5 m nähert
+Richtet Schaden in 9 m Umkreis an~
+
+@6885 = ~Die Kräfte dieses Schädels wurden durch das Reinigungsritual etwas geschwächt. Trotzdem besitzt er immer noch einen Großteil seiner ehemaligen Macht.
+
+EIGENSCHAFTEN:
+
+Unsegen der Untoten:
+ Der Träger erhält sowohl positive als auch negative Eigenschaften der Untoten.
+ Dies beinhaltet:
+   - Unanfälligkeit gegenüber Todesmagie,
+     Entzug von Lebenskraft und Panik
+   - Erhöhter Widerstand gegenüber
+     physischem und Kälteschaden
+   - Immunität gegenüber Hast
+   - Anfälligkeit gegenüber Feuer~

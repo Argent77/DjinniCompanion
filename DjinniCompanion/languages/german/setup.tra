@@ -1,0 +1,33 @@
+// -*- coding: us-ascii -*- 
+// *** WeiDU strings (use index 1 - 99) ***
+
+@1 = ~Afaaq, der Dschinngefaehrte~
+@2 = ~Vollversion (beinhaltet Abenteuer, Dialoge und mehr)~
+@3 = ~Eingeschraenkte Version (beinhaltet nur den Dschinn)~
+@4 = ~Diese Mod benoetigt BG2:TdB oder BG2:EE.~
+@5 = ~Diese Komponente unterstuetzt nicht BG1 Tutu.~
+@6 = ~Banter Beschleunigungsskript fuer den Dschinn installieren? (Vorgabe: 60 Minuten)~
+@7 = ~15 Minuten~
+@8 = ~30 Minuten~
+@9 = ~45 Minuten~
+@10 = ~90 Minuten~
+@11 = ~120 Minuten~
+@12 = ~Diese Komponente benoetigt die Vollversion des Dschinngefaehrten.~
+@13 = ~Diese Komponente setzt die Mod "Infinity Animation" voraus.~
+@14 = ~Infinity Animations fuer ausgewaehlte Kreaturen installieren?~
+@15 = ~Afaaqs Bantermusik entfernen?~
+@16 = ~Diese Komponente benoetigt die Unterkomponente "Distinctive Genies" der Mod "Infinity Animation".~
+@17 = ~Diese Komponente setzt voraus, dass eine der beiden Hauptkomponenten aus "Afaaq, der Dschinngefaehrte" installiert wurde.~
+@18 = ~Alternatives Dschinnportrait von Ulb~
+@19 = ~Verbesserungen~
+
+
+// Messages
+@25 = ~Die Dialogdatei des Dschinns aus der Hoellenpruefung der Gier ist nicht kompatibel mit dieser Mod. Bitte deinstallieren Sie die verantwortliche Mod bevor Sie es erneut versuchen.~
+@26 = ~Questpacks Komponente "Ueberarbeitete Hoellenpruefung" wurde gefunden...installiere Anpassungen.~
+@27 = ~Warnung: Bantermusik wurde deaktiviert (Grund: songlist.2da ist bereits voll)~
+@29 = ~Warnung: Kann Datei %filename% nicht einlesen (Grund: %restype%-Datei ist fehlerhaft)~
+@30 = ~Fehler: Kann Datei %filename% nicht erweitern (Grund: %restype%-Datei ist fehlerhaft)~
+@31 = ~Warnung: Kann Datei %filename% nicht erweitern (Grund: %restype%-Datei ist fehlerhaft)~
+@32 = ~Warnung: Kann Datei AR2700.WED nicht erweitern (Grund: Anzahl der Overlay-Eintraege ist zu klein)~
+@33 = ~Warnung: Kann Behaelter in AR3001.ARE nicht erweitern (Grund: Anzahl verfuegbarer Behaelter ist zu klein)~
