@@ -85,6 +85,14 @@
         display: block;
       }
 
+      #maindiv p.boxed {
+        border-style: inset;
+        border-width: 1px;
+        border-color: #66451f;
+        margin-top: 32px;
+        padding: 6px;
+      }
+
       #maindiv address a:link,
       #maindiv address a:visited {
         margin-right: 5px;
@@ -260,9 +268,44 @@
         margin-top: 0px;
       }
     </style>
+    <script>
+      var LANG_DE = "de";
+
+      var hintTable = [];
+      hintTable[LANG_DE] = 
+      [
+        "Mit einem Rechtsklick auf Afaaqs Krummsäbel könnt Ihr das Verhalten der Waffe ändern. Das kann bei Gegnern nützlich sein, die auf bestimmte Schadensarten allergisch reagieren.",
+        "Nutzt die Gelegenheit und lasst Afaaq hin und wieder mit den Stadtbewohnern reden, um ein paar nützliche, interessante oder lustige Dialoge zu sehen.",
+        "Afaaqs Schnellzugriff ermöglicht es Euch, spezielle Aktionen durchzuführen oder sein Angriffsskript zu ändern. Ihr könnt es über die 'Gegenstand benutzen'-Schaltfläche erreichen.",
+        "Versucht mal mit der Dschinnlampe zu reden, während sich Afaaq nicht darin befindet.",
+        "Vorsicht! Wenn Ihr bestimmte Quest-relevante Gegenstände in Afaaqs Gepäck ablegt, könntet Ihr geskriptete Überprüfungen umgehen.",
+        "Macht Euch auf eine böse Überraschung gefasst, wenn Ihr es wagt, den Schädel des Halbleichnams für eine längere Zeit zu tragen.",
+        "Die einsame Kiste auf einer Felsformation in der Magmahöhle unterhalb Amkethrans kann Euch eine Menge Zeit und Aufwand ersparen, wenn Ihr es tatsächlich schafft, an ihren Inhalt heranzukommen. ;)"
+      ];
+
+      var hintIdx = 0;
+
+      function showNextHint(lang, textId) {
+        var hints = hintTable[lang];
+        if (hints.length > 0) {
+          var elem = document.getElementById(textId);
+          if ('textContent' in elem) {
+            elem.textContent = hints[hintIdx];
+          } else {
+            elem.innerText = hints[hintIdx];
+          }
+          hintIdx = (hintIdx + 1) % hints.length;
+        }
+      }
+
+      function showHints(boxId, lang, textId) {
+        document.getElementById(boxId).style.display = "block";
+        showNextHint(lang, textId);
+      }
+    </script>
   </head>
 
-  <body>
+  <body onload="showHints('hintbox', 'de', 'hint')">
     <div><a name="top" id="top"></a></div>
     <div id="wrap">
       <div id="header">
@@ -460,6 +503,11 @@
             <span class="t3">F:</span><strong>Ich möchte mein Spiel in TdB beginnen. Wo finde ich den Dschinn?</strong><br />
             <span class="t3">A:</span><em>(Vollversion)</em> Leider gar nicht. Diese Mod wurde so entworfen, dass man sie nur im SvA-Teil beginnen kann.<br />
             <span class="t3">A:</span><em>(Eingeschränkte Version)</em> Ihr könnt den Dschinn finden, nachdem Ihr Illasera besiegt habt.<br />
+          </p>
+          <p id="hintbox" class="boxed" style="display: none">
+            <strong>Wusstet Ihr schon?</strong><input type="submit" value="Weiter" onclick="showNextHint('de', 'hint')" style="margin-left: 10px"></input>
+            <br />
+            <span id="hint">...</span>
           </p>
           <address>
             <a href="#top">ZURÜCK ZUM ANFANG</a>
