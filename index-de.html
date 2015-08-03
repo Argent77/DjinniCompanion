@@ -6,9 +6,10 @@
     <meta name="description" content="A WeiDU mod for Baldur's Gate II: SoA &amp; ToB. Contains the djinni Afaaq, interesting dialogs, interesting quests and new locations." />
     <meta name="keywords" content="WeiDU, mod, Afaaq, djinni companion, Baldur's Gate II, BG2, BG2:EE" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="script/hints.js"></script>
   </head>
   
-  <body>
+  <body onload="showHints('hintbox', 'de', 'hint')">
     <div><a name="top" id="top"></a></div>
     <div id="langdiv">
       <span><a href="index.html">English</a></span>
@@ -211,6 +212,11 @@
             <span class="t3">F:</span><strong>Ich möchte mein Spiel in TdB beginnen. Wo finde ich den Dschinn?</strong><br />
             <span class="t3">A:</span><em>(Vollversion)</em> Leider gar nicht. Diese Mod wurde so entworfen, dass man sie nur im SvA-Teil beginnen kann.<br />
             <span class="t3">A:</span><em>(Eingeschränkte Version)</em> Ihr könnt den Dschinn finden, nachdem Ihr Illasera besiegt habt.<br />
+          </p>
+          <p id="hintbox" class="boxed" style="display: none">
+            <strong>Wusstet Ihr schon?</strong><input type="submit" value="Weiter" onclick="showNextHint('de', 'hint')" style="margin-left: 10px"></input>
+            <br />
+            <span id="hint">...</span>
           </p>
           <address>
             <a href="#top">ZURÜCK ZUM ANFANG</a>

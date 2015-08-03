@@ -76,6 +76,14 @@ h2 {
   display: block;
 }
 
+#maindiv p.boxed {
+  border-style: inset;
+  border-width: 1px;
+  border-color: #66451f;
+  margin-top: 32px;
+  padding: 6px;
+}
+
 #maindiv address a:link,
 #maindiv address a:visited {
   margin-right: 5px;

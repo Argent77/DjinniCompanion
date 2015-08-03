@@ -6,9 +6,10 @@
     <meta name="description" content="A WeiDU mod for Baldur's Gate II: SoA &amp; ToB. Contains the djinni Afaaq, interesting dialogs, interesting quests and new locations." />
     <meta name="keywords" content="WeiDU, mod, Afaaq, djinni companion, Baldur's Gate II, BG2, BG2:EE" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="script/hints.js"></script>
   </head>
   
-  <body>
+  <body onload="showHints('hintbox', 'en', 'hint')">
     <div><a name="top" id="top"></a></div>
     <div id="langdiv">
       <span>English</span>
@@ -211,6 +212,11 @@
             <span class="t3">Q:</span><strong>I want to start a ToB-only game. Where can I find the djinni?</strong><br />
             <span class="t3">A:</span><em>(Full Version)</em> You can't. The mod is designed to be started in the SoA part of the game.<br />
             <span class="t3">A:</span><em>(Light Version)</em> You can find the djinni after you have beaten Illasera.<br />
+          </p>
+          <p id="hintbox" class="boxed" style="display: none">
+            <strong>Did you know?</strong><input type="submit" value="More" onclick="showNextHint('en', 'hint')" style="margin-left: 10px"></input>
+            <br />
+            <span id="hint">...</span>
           </p>
           <address>
             <a href="#top">BACK TO TOP</a>
