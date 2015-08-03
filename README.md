@@ -66,6 +66,8 @@ If you want to know more, simply talk to him when he is around or in his magical
 
 **English proofreading:** Many thanks to snowshoes1818 and Thimblerig
 
+**German translation and proofreading:** Many thanks to Gerri
+
 **Alternate Afaaq portrait:** provided by Ulb
 
 **Malik portrait:** based on the Fire Genasi illustration by Jesper Ejsing (published under the Creative Commons license)
