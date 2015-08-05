@@ -1,8 +1,8 @@
 // -*- coding: cp1252 -*- 
 // *** Misc. strings not fitting elsewhere (use index 100 - 999) ***
 
-// Strings related to rangers' tracking abilities
+// Strings related to rangers' tracking abilities (see strref 67807)
 @100 = ~Rakshasas und diverse Waldtiere~
-@101 = ~eine Vielzahl von feuerresistenten Kreaturen, wie zum Beispiel Mephits, Feuerelementare oder Höllenhunde~
-@102 = ~Panther, Riesenschlangen oder schlangenartige Kreaturen~
+@101 = ~eine Vielzahl feuerresistenter Kreaturen, wie Mephits, Feuerelementare oder Höllenhunde~
+@102 = ~Spinnen, Panther, Riesenschlangen oder schlangenähnliche Kreaturen~
 @103 = ~Spinnen und Erdkolosse~

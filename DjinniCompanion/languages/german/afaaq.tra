@@ -269,7 +269,7 @@
 @10265 = ~Bei nochmaliger Überlegung denke ich, dass ich dafür keine Zeit habe.~
 @10266 = ~Wollt Ihr noch mehr erfahren?~
 @10267 = ~Kannst Du mir mehr von Deinem Volk erzählen?~
-@10268 = ~Kannst Du mir mehr über Deine Fähigkeiten sagen?~
+@10268 = ~Kannst Du mir mehr über Deine Fähigkeiten erzählen?~
 @10269 = ~Ich kann Euch einiges über unsere Herkunft, Geschichte oder Kultur erzählen. Was wisst Ihr über mein Volk, <PRO_LADYLORD>?~
 @10270 = ~Ich weiß eine Menge über Eure Art. Die Dschinns stammen von der elementaren Luftebene. Sie gründeten das Calim Imperium vor undenklichen Zeiten und nahmen an einen Krieg gegen die Ifrits teil, der letztendlich in der Erschaffung der Calimwüste endete.~
 @10271 = ~Ich habe von Euch gehört. Der Dschinn stammt von der elementaren Luftebene und ist bekannt dafür, den sterblichen Rassen Wünsche zu erfüllen, nicht wahr?~
@@ -957,7 +957,7 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @12352 = ~Nein, ich glaube nicht.~
 @12353 = ~Nein, und das interessiert mich auch nicht.~
 @12354 = ~Das ist bedauernswert, aber ich möchte Euch nicht gegen Euren Willen in ein Gespräch verwickeln.~
-@12355 = ~Ich habe bemerkt, dass viele Sterbliche nicht zwischen den verschiedenen Genie-Stämmen unterscheiden, wie zum Beispiel den Dschinns, Ifrits oder Dao-Dschinns.~
+@12355 = ~Ich habe bemerkt, dass viele Sterbliche nicht zwischen den verschiedenen Völkern der Genies unterscheiden, wie zum Beispiel den Dschinns, Ifrits oder Dao-Dschinns.~
 @12356 = ~Dies ist ein sehr wichtiges Unterscheidungsmerkmal für uns und wir reagieren sehr allergisch darauf, wenn wir alle in einen Topf geworfen werden. Ihr mögt ähnlich beleidigt sein, wenn wir Menschen, Elfen, Duergar und Orks zusammenwerfen.~
 @12357 = ~Das stimmt. Auch ich muss zugeben, dass ich nichts weiter darüber weiß.~
 @12358 = ~Das stimmt. Ich habe schon einmal die Begriffe Dschinn und Ifrit gehört, aber das ist auch schon alles.~
@@ -967,15 +967,15 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @12362 = ~Die wenigen Bruchstücke, die niedergeschrieben wurden, stammen wahrscheinlich von Magiern, die sie über lange Zeit zusammengetragen haben.~
 @12363 = ~Ihr überrascht mich auf ein Neues, <PRO_LADYLORD>. An dieses Wissen seid Ihr sicher nicht leicht herangekommen.~
 @12364 = ~Ich bin ein Dschinn, wie Ihr inzwischen hoffentlich bemerkt haben solltet. Unsere Art entstand aus den chaotischen Elementen der Luft.~
-@12365 = ~Wir sind allerdings nicht der einzigen Genie-Stamm in den Ebenen. Unsere Todfeinde, die Dao-Dschinns und die Ifrits, gibt es auch noch. Wir treffen nur selten auf sie, aber wenn es geschieht, dann endet es fast immer in Gewalt.~
+@12365 = ~Wir sind allerdings nicht das einzige Genie-Volk in den Ebenen. Unsere Todfeinde, die Dao-Dschinns und die Ifrits, gibt es auch noch. Wir treffen nur selten auf sie, aber wenn es geschieht, dann endet es fast immer in Gewalt.~
 @12366 = ~Könnt Ihr keinen friedlichen Weg finden, miteinander zu leben?~
 @12367 = ~Fahr bitte fort.~
 @12368 = ~Verlangt nichts Unmögliches von uns. Allein ihre Existenz an sich ist schon eine ernstes Vergehen. Die Dao oder Ifrits sehen uns sicher auf eine ähnliche Weise.~
 @12369 = ~Ich kann mir vorstellen, dass diese Tatsache für einen Sterblichen schwer zu verstehen ist, aber das ist unsere Lebensweise.~
-@12370 = ~Nicht alle Stämme der Dschinns sind sich feindlich gesonnen. Die Mariden sind in unserer Mitte nicht unerwünscht, allerdings haben wir nicht oft Kontakt zu ihnen.~
+@12370 = ~Nicht alle Völker der Dschinns sind sich feindlich gesonnen. Die Mariden sind in unserer Mitte nicht unerwünscht, allerdings haben wir nicht oft Kontakt zu ihnen.~
 @12371 = ~Mariden?~
 @12372 = ~Maride sind Dschinns, die aus den launischen Elementen des Wassers geboren wurden. Sie lassen sich nur selten bei den sterblichen Rassen sehen, daher verstehe ich Eure Unwissenheit.~
-@12373 = ~Es gibt noch weitere Stämme, wie die Jann, Khayal oder Qorrash. Aber wir haben nur selten Kontakt zu ihnen oder meiden sie gänzlich.~
+@12373 = ~Es gibt noch weitere Völker, wie die Jann, Khayal oder Qorrash. Aber wir haben nur selten Kontakt zu ihnen oder meiden sie gänzlich.~
 @12374 = ~Sehr interessant. Das war eine einzigartige Einsicht in Eure Kultur.~
 @12375 = ~Sehr interessant. Selbst mir war einiges davon noch unbekannt.~
 @12376 = ~Danke, dass Du Dein Wissen mit mir geteilt hast, Afaaq.~
