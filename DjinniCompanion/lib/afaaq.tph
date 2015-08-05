@@ -9,7 +9,7 @@ INCLUDE ~DjinniCompanion/lib/ar4000.tph~
 INCLUDE ~DjinniCompanion/lib/a77006.tph~
 
 // BG2EE-specific stuff
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/bg2ee/a7clamp.bmp"
   OUTER_TEXT_SPRINT ITEM_ILAMP "DjinniCompanion/items/bg2ee/a7ilamp.bam"
   OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/bg2ee/a7afaaqs.bmp"
@@ -253,7 +253,7 @@ COPY ~DjinniCompanion/spells/a7spin1.spl~  ~override~
 COPY ~DjinniCompanion/spells/a7spin2.spl~  ~override~
   SAY NAME1 @60014    // Whirlwind
   SAY UNIDENTIFIED_DESC @60082    // Afaaq's close connection to the Elemental Plane of Air enables him to raise and control whirlwinds...
-  PATCH_IF (GAME_IS ~bg2ee~) BEGIN
+  PATCH_IF (GAME_IS ~bg2ee eet~) BEGIN
     WRITE_ASCII 0x3a ~A7SPIN2C~ #8
     READ_LONG 0x64 ability_ofs
     WRITE_ASCII (ability_ofs + 4) ~A7SPIN2B~ #8
@@ -261,7 +261,7 @@ COPY ~DjinniCompanion/spells/a7spin2.spl~  ~override~
 COPY ~DjinniCompanion/spells/a7whirl.vvc~  ~override~
      ~DjinniCompanion/spells/a7whirl.pro~  ~override~
      ~DjinniCompanion/spells/a7whirl.bam~  ~override~
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   COPY ~DjinniCompanion/spells/bg2ee/a7spin2b.bam~  ~override~
        ~DjinniCompanion/spells/bg2ee/a7spin2c.bam~  ~override~
 END ELSE BEGIN
@@ -278,7 +278,7 @@ COPY ~DjinniCompanion/spells/a7spin2a.spl~ ~override~
 COPY ~DjinniCompanion/spells/a7spin5.spl~    ~override~
   SAY NAME1 @60024    // Greater Whirlwind
   SAY UNIDENTIFIED_DESC @60083    // Afaaq's close connection to the Elemental Plane of Air enables him to raise and control whirlwinds...
-  PATCH_IF (GAME_IS ~bg2ee~) BEGIN
+  PATCH_IF (GAME_IS ~bg2ee eet~) BEGIN
     WRITE_ASCII 0x3a ~A7SPIN5C~ #8
     READ_LONG 0x64 ability_ofs
     WRITE_ASCII (ability_ofs + 4) ~A7SPIN5B~ #8
@@ -287,7 +287,7 @@ COPY ~DjinniCompanion/creatures/a7spin5.cre~ ~override~
   SAY NAME1 @60014    // Whirlwind
   SAY NAME2 @60014    // Whirlwind
 COPY ~DjinniCompanion/spells/a7spin5.eff~    ~override~
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   COPY ~DjinniCompanion/spells/bg2ee/a7spin5b.bam~ ~override~
        ~DjinniCompanion/spells/bg2ee/a7spin5c.bam~ ~override~
 END ELSE BEGIN
@@ -307,14 +307,14 @@ COPY ~DjinniCompanion/spells/a7spin4.spl~  ~override~
      ~DjinniCompanion/spells/a7spin4a.spl~ ~override~
   SAY NAME1 @60015    // Air Shield
   SAY UNIDENTIFIED_DESC @60085    // The Air Shield grants Afaaq immunity to electricity damage, as well as...
-  PATCH_IF (GAME_IS ~bg2ee~) BEGIN
+  PATCH_IF (GAME_IS ~bg2ee eet~) BEGIN
     WRITE_ASCII 0x3a ~A7SPIN4C~ #8
     READ_LONG 0x64 ability_ofs
     WRITE_ASCII (ability_ofs + 4) ~A7SPIN4B~ #8
   END
 COPY ~DjinniCompanion/spells/a7airsd.vvc~ ~override~
      ~DjinniCompanion/spells/a7airsd.bam~ ~override~
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   COPY ~DjinniCompanion/spells/bg2ee/a7spin4b.bam~ ~override~
        ~DjinniCompanion/spells/bg2ee/a7spin4c.bam~ ~override~
 END ELSE BEGIN

@@ -1,7 +1,7 @@
 // *** BG2EE-specific initializations ***
 
 // BG2EE-specific initialization
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   // grouping quest entries
   ADD_JOURNAL @1800 @1801 @1802 @1803 @1804 @1810 @1811 @1812 @1820
   ADD_JOURNAL @2800 @2801 @2802 @2803 @2804 @2805 @2806 @2807 @2810

@@ -1,7 +1,7 @@
 // *** Area A77005 (Secret Underdark passage) ***
 
 // BG2EE-specific stuff
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_TATHAS "DjinniCompanion/portraits/bg2ee/a7tathas.bmp"
 END ELSE BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_TATHAS "DjinniCompanion/portraits/a7tathas.bmp"

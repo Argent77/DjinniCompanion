@@ -1,7 +1,7 @@
 // *** Area A77004 (Jungle of Chult) ***
 
 // BG2EE-specific stuff
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_RAKPRS "DjinniCompanion/portraits/bg2ee/a7rakprs.bmp"
   OUTER_TEXT_SPRINT ITEM_CWS1 "DjinniCompanion/items/bg2ee/a7q2cws1.bmp"
   OUTER_TEXT_SPRINT ITEM_CWS2 "DjinniCompanion/items/bg2ee/a7q2cws2.bmp"
@@ -196,7 +196,7 @@ COMPILE EVALUATE_BUFFER
   ~DjinniCompanion/dialogs/A7Q2rkpr.d~
   ~DjinniCompanion/dialogs/A7Q2NPCs.d~
 
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   EXTEND_BOTTOM ~hexxat.bcs~ ~DjinniCompanion/scripts/hexxat_quest2.baf~
   COMPILE EVALUATE_BUFFER
     ~DjinniCompanion/dialogs/bg2ee/A7Q2NPCs_ee.d~

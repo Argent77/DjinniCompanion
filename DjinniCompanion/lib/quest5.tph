@@ -8,7 +8,7 @@ INCLUDE ~DjinniCompanion/lib/a77002.tph~
 INCLUDE ~DjinniCompanion/lib/a77003.tph~
 
 // BG2EE-specific stuff
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT ITEM_CFLUTE "DjinniCompanion/items/bg2ee/a7cflute.bmp"
   OUTER_TEXT_SPRINT ITEM_CMISC8 "DjinniCompanion/items/bg2ee/a7cmisc8.bmp"
   OUTER_TEXT_SPRINT ITEM_CMISCB "DjinniCompanion/items/bg2ee/a7cmiscb.bmp"

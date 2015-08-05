@@ -5,7 +5,7 @@ INCLUDE ~DjinniCompanion/lib/a77005.tph~
 INCLUDE ~DjinniCompanion/lib/a77007.tph~
 
 // BG2EE-specific stuff
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT ITEM_CMISC4 "DjinniCompanion/items/bg2ee/a7cmisc4.bmp"
   OUTER_TEXT_SPRINT PORTRAIT_ARABS "DjinniCompanion/portraits/bg2ee/a7arabs.bmp"
 END ELSE BEGIN

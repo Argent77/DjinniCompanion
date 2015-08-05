@@ -691,7 +691,7 @@ COMPILE ~djinnicompanion/inlined/wish.d~
 
 
 // *** BG2EE cutscenes ***
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   // Dorn
   COPY_EXISTING ~ohdcut11.bcs~ ~override~
                 ~ohdcut13.bcs~ ~override~

@@ -1,6 +1,6 @@
 // *** Installation of compressed TIS and MOS files (Light Version) ***
 
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT script_mos ~install_light_mos_ee~
 END ELSE BEGIN
   OUTER_TEXT_SPRINT script_mos ~install_light_mos~

@@ -1,14 +1,5 @@
 // *** Area AR2200: Ust Natha ***
 
-// BG2EE-specific stuff
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
-  OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/bg2ee/a7clamp.bmp"
-  OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/bg2ee/a7afaaqs.bmp"
-END ELSE BEGIN
-  OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/a7clamp.bam"
-  OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/a7afaaqs.bmp"
-END
-
 COPY ~DjinniCompanion/areas/a7q3ent1.bam~ ~override~
 
 COPY_EXISTING ~ar2200.are~ ~override~

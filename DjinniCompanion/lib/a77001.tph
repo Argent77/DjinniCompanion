@@ -1,7 +1,7 @@
 // *** Area A77001 (Rakshasa Encampment) ***
 
 // BG2EE-specific stuff
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_MAHELS "DjinniCompanion/portraits/bg2ee/a7mahels.bmp"
 END ELSE BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_MAHELS "DjinniCompanion/portraits/a7mahels.bmp"
@@ -36,7 +36,7 @@ COPY_EXISTING ~ar2700.wed~ ~override/a77001.wed~
   END
 
 // recycling existing resources
-ACTION_IF (GAME_IS ~bg2ee~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   COPY_EXISTING ~ar2700.tis~   ~override/a77001.tis~
                 ~a270000.pvrz~ ~override/a700100.pvrz~
                 ~a270001.pvrz~ ~override/a700101.pvrz~
