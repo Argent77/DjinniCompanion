@@ -17,6 +17,11 @@
 @3012 = ~Das ist alles, was ich wissen wollte. Ich lasse Euch am Leben. Wiedersehen.~
 @3013 = ~Es war ziemlich was los die letzten Tage. Ihr kamt hier durch, dann diese anderen zwei, und das Drow-Lager hinter uns... das sind sehr schlechte Zeichen.~
 @3014 = ~Außer diesem eingekerkerten Magier und dem Drow-Lager habe ich nichts ungewöhnlich gesehen.~
+@3015 = ~Es scheint so, als ob Haus Arabani schwere Zeiten durchlebt. Sie mussten sich sogar mit Haus Jae'llat verbünden, um zu überleben.~
+@3016 = ~Haus Arabani war einst ein wichtiger Geschäftspartner unseres Hauses. Leider sind sie tief gefallen. Und nun, da Haus Jae'llat einen Fuß in ihrer Tür hat, sieht ihre Zukunft ziemlich düster aus.~
+@3017 = ~Erzählt mir vom Haus Arabani.~
+@3018 = ~Ah, das adlige Haus Arabani. Es war einst ein mächtiges und sehr vielversprechendes Haus. Aber Mutter Lolth kann launisch sein. Sie riskierten alles, um Kontrolle über die Stadt zu erlangen und verloren den Kampf mit Haus Despana.~
+@3019 = ~Als Folge waren sie gezwungen, sich mit Haus Jae'llat zu verbünden, um zu überleben. Aber Haus Arabani hat immer noch seinen Stolz und könnte in Zukunft wieder eine Rolle spielen. Wie ich schon sagte, Mutter Lolth kann launisch sein.~
 
 
 // Dialog lines: Tathas Melarn
@@ -473,4 +478,3 @@ Gewicht: 1~
 @3984 = ~<PLAYER5> hat nach dem Beobachten der Duergar etwas gelernt.~
 @3985 = ~<PLAYER6> hat nach dem Beobachten der Duergar etwas gelernt.~
 @3986 = ~Diese Tür ist durch starke Magie geschützt. Wenn Ihr einfach so hindurch tretet, bedeutet das Euren sicheren Tod. Ihr werdet den Schutzstein des Hauses Arabani oder seiner verbündeten Häuser finden müssen, wenn Ihr eintreten möchtet.~
-@3987 = ~Es scheint so, als ob Haus Arabani schwere Zeiten durchlebt. Sie mussten sich sogar mit Haus Jae'llat verbünden, um zu überleben.~

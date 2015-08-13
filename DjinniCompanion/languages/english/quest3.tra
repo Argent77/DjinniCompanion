@@ -17,6 +17,11 @@
 @3012 = ~That's all I wanted to know. I leave you your life. Good bye.~
 @3013 = ~Been pretty busy these last few days. You come through; those other two; and the drow encampment in the back... bad sign, it is.~
 @3014 = ~Other than the imprisoned mage and the drow encampment I have not seen anything unusual.~
+@3015 = ~It appears that House Arabani has fallen on hard times. They were even forced to form an alliance with House Jae'llat to survive.~
+@3016 = ~House Arabani was once our prime customer. Too bad that they have fallen on hard times. And now with House Jae'llat having a foot in their door, their future looks dire indeed.~
+@3017 = ~Tell me of House Arabani.~
+@3018 = ~Ah, noble House Arabani. A strong House, once, and a very promising one. But Mother Lolth can be fickle. They gambled high to gain control over the city and lost to House Despana.~
+@3019 = ~They were forced to ally themselves with House Jae'llat to survive. However, House Arabani has not lost its pride and may rise again in the future. As I said, Mother Lolth can be fickle.~
 
 
 // Dialog lines: Tathas Melarn
@@ -473,4 +478,3 @@ Weight: 1~
 @3984 = ~<PLAYER5> has learned something after watching the duergars sparring for a while.~
 @3985 = ~<PLAYER6> has learned something after watching the duergars sparring for a while.~
 @3986 = ~The door is magically warded. To step through it would mean instant death. You'll need to find the wardstone of House Arabani or its allied Houses if you wish to enter.~
-@3987 = ~It appears that House Arabani has fallen on hard times. They were even forced to form an alliance with House Jae'llat to survive.~

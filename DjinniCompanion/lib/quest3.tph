@@ -191,6 +191,7 @@ EXTEND_TOP ~tran2209.bcs~ ~DjinniCompanion/scripts/tran2209.baf~
 // dialogs
 COMPILE EVALUATE_BUFFER
   ~DjinniCompanion/dialogs/udduergars.d~
+  ~DjinniCompanion/dialogs/uddrow.d~
   ~DjinniCompanion/dialogs/A7Tathas.d~
   ~DjinniCompanion/dialogs/A7Q3dhm.d~
   ~DjinniCompanion/dialogs/A7Q3dcpt.d~
@@ -210,7 +211,6 @@ COMPILE EVALUATE_BUFFER
   ~DjinniCompanion/dialogs/A7Arab02.d~
   ~DjinniCompanion/dialogs/A7Arab03.d~
   ~DjinniCompanion/dialogs/A7Arab04.d~
-  ~DjinniCompanion/dialogs/drow_rumors.d~
   // TODO: create dialogs for Arabani wizards and priestesses?
   // ~DjinniCompanion/dialogs/A7Arab05.d~
   // ~DjinniCompanion/dialogs/A7Arab06.d~
