@@ -1,23 +1,17 @@
 // *** Checks for possible incompatibilities ***
 
-// correcting improper creature race/class types
+// correcting improper creature class types
 COPY_EXISTING ~elemyanc.cre~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+              ~finsol02.cre~ ~override~
+              ~senstalk.cre~ ~override~
+              ~stalke.cre~   ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3 && BYTE_AT 0x273 != 186) BEGIN
     WRITE_BYTE 0x273 186      // Class type: ELEMENTAL_AIR
   END ELSE BEGIN
-    TEXT_SPRINT filename ~elemyanc.cre~
+    TEXT_SPRINT filename ~%SOURCE_FILE%~
     TEXT_SPRINT restype ~Creature~
     PATCH_WARN @31      // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
   END
-COPY_EXISTING ~finsol02.cre~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
-    WRITE_BYTE 0x273 186      // Class type: ELEMENTAL_AIR
-  END ELSE BEGIN
-    TEXT_SPRINT filename ~finsol02.cre~
-    TEXT_SPRINT restype ~Creature~
-    PATCH_WARN @31      // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
-  END
-
 
 // fix a bug in TobEx by disabling a specific option
 ACTION_IF (FILE_EXISTS ~TobEx_ini/TobExTweak.ini~) BEGIN

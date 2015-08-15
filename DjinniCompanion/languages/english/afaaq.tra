@@ -364,9 +364,9 @@
 @10363 = ~My people have learned to raise magical shields of air around them. They provide both protection and a means to harm attackers.~
 @10364 = ~A shield of air makes me immune to all kinds of electrical damage and partially shields me from missiles, and magical and physical damage.~
 @10365 = ~Additionally, each time I am physically attacked, the shield attempts to retaliate against the attacker within a certain radius.~
-@10366 = ~Our close link to the elemental forces of air has given us the power to exercise limited control over beings born out of it.~
-@10367 = ~Air Elementals are self-aware entities, born out of the forces of the Elemental Plane of Air. I have the power to bring them under my control for a short time.~
-@10368 = ~Opposing elementals are usually protected against that kind of attack by their summoners. As a result, I will not always be successful in my attempts.~
+@10366 = ~Our close link to the elemental forces of air has given us the power to exercise limited control over beings born out of or having close links to it.~
+@10367 = ~Air Elementals are self-aware entities, born out of the forces of the Elemental Plane of Air. Invisible Stalkers are also closely related to the Elemental Plane of Air. I have the power to bring all of them under my control for a short time.~
+@10368 = ~Opposing aerial creatures are usually protected against that kind of attack by their summoners. As a result, I will not always be successful in my attempts.~
 @10369 = ~It was a pleasure talking to you.~
 @10370 = ~Suit yourself!~
 @10371 = ~That is not possible at the moment. I still need some time to recover from my injuries.~
@@ -1720,7 +1720,7 @@ I have attained Grand Mastery in scimitars and am highly skilled in single weapo
 @60024 = ~Greater Whirlwind~
 @60025 = ~Help! My magic is being sucked away...~
 @60026 = ~Be careful! Magic is running wild in this room.~
-@60027 = ~Control Air Elemental~
+@60027 = ~Control Aerial Creatures~
 
 @60028 = ~Afaaq's respect for <CHARNAME> has grown.~
 @60029 = ~Afaaq's respect for <CHARNAME> has grown significantly.~
@@ -1789,7 +1789,7 @@ Since whirlwinds are an extension of the djinni himself, he can observe his surr
 
 Since Afaaq is born out of the chaotic forces of air, he can haste himself anytime he wants.~
 @60085 = ~The Air Shield grants Afaaq immunity to electricity damage, as well as high resistances to magical or missile damage. It also reduces physical melee damage somewhat. Any opponent that hits Afaaq in close combat while the effect is active suffers 2d8 points of electrical damage and 1d8 points of crushing and slashing damage. The shield will stay active for two turns.~
-@60086 = ~This spell allows Afaaq to take control over any kind of Air Elemental within his sight. If the Air Elemental fails his save vs. spell at a -4 penalty, it will stay under Afaaq's control for one turn before turning hostile again.~
+@60086 = ~This spell allows Afaaq to take control over any creature of aerial origin within his sight, such as Air Elementals, Aerial Servants or Invisible Stalkers. If the aerial creature fails its save vs. spell at a -4 penalty, it will stay under Afaaq's control for one turn before turning hostile.~
 @60087 = ~Scimitar +2~
 @60088 = ~Thunderclap +4~
 @60089 = ~Scimitar +4~

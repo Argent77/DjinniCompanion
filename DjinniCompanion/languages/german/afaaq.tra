@@ -365,8 +365,8 @@
 @10364 = ~Ein Luftschild kann mich vollständig vor elektrischen Energien bewahren und schützt mich auch teilweise vor Geschossen und magischem Schaden.~
 @10365 = ~Zusätzlich erleidet jeder Angreifer in der Nähe physischen und elektrischen Schaden.~
 @10366 = ~Unsere enge Verbindung zu den elementaren Kräften der Luft erlaubt uns eine gewisse Kontrolle über deren Kreaturen.~
-@10367 = ~Luftelementare sind intelligente Konstrukte, die direkt aus den Kräften der elementaren Luftebene geboren werden. Ich habe die Macht, sie für eine gewisse Zeit unter meine Kontrolle zu bringen.~
-@10368 = ~Da Elementare oftmals gegen solche Versuche durch ihre Beschwörer geschützt werden, werde ich bei meinen Versuchen nicht immer erfolgreich sein.~
+@10367 = ~Luftelementare sind intelligente Konstrukte, die direkt aus den Kräften der elementaren Luftebene geboren werden. Unsichtbare Pirscher sind ebenfalls eng mit der elementaren Luftebene verknüpft. Ich habe die Macht, sie alle für eine gewisse Zeit unter meine Kontrolle zu bringen.~
+@10368 = ~Da diese Geschöpfe oftmals gegen solche Versuche durch ihre Beschwörer geschützt werden, werde ich bei meinen Versuchen nicht immer erfolgreich sein.~
 @10369 = ~Es war mir ein Vergnügen, mich mit Euch zu unterhalten.~
 @10370 = ~Wie Ihr wollt.~
 @10371 = ~Das ist im Moment leider nicht möglich. Ich benötige noch etwas Zeit, um mich von meinen Verletzungen zu erholen.~
@@ -1718,7 +1718,7 @@ Ich habe die Großmeisterschaft in Krummsäbeln erlangt und bin hochbegabt im Umga
 @60024 = ~Größerer Wirbelwind~
 @60025 = ~Hilfe! Meine Magie wird aufgesaugt...~
 @60026 = ~Seid vorsichtig! Magie scheint in diesem Raum Amok zu laufen.~
-@60027 = ~Luftelementar befehligen~
+@60027 = ~Luftgeschöpf befehligen~
 
 @60028 = ~Afaaqs Respekt für <CHARNAME> ist angestiegen.~
 @60029 = ~Afaaqs Respekt für <CHARNAME> ist stark angestiegen.~
@@ -1787,7 +1787,7 @@ Da der Wirbelwind praktisch Teil des Dschinns ist, kann er durch sie seine näher
 
 Da Afaaq aus den chaotischen Kräften der Luft erschaffen wurde, kann er sich zu jederzeit und so oft er will beschleunigen.~
 @60085 = ~Das Luftschild gewährt Afaaq vollständige Immunität gegenüber elektrischen Schaden und hohe Resistenzen gegenüber magischem und Geschossschaden. Es reduziert ebenfalls ein wenig phyischen Nahkampfschaden. Jeder Gegner, der Afaaq im Nahkampf angreift, muss 2W8 Punke durch elektrischen Schaden und jeweils 1W8 Punke an Wucht- und Klingenschaden erleiden. Das Schild bleibt für zwei Phasen aktiv.~
-@60086 = ~Dieser Zauber ermöglicht es Afaaq, einen Luftelementar unter seine Kontrolle zu bringen. Falls der Luftelementar bei seinem Rettungswurf gegen Zauber mit einem -4 Malus scheitert, bleibt er für zehn Runden unter Afaaqs Kontrolle.~
+@60086 = ~Dieser Zauber ermöglicht es Afaaq, ein Geschöpf der elementaren Luftebene, wie z.B. Luftelementare, Luftdiener oder Unsichtbare Pirscher, unter seine Kontrolle zu bringen. Falls das Geschöpf bei seinem Rettungswurf gegen Zauber mit einem -4 Malus scheitert, bleibt es für zehn Runden unter Afaaqs Kontrolle, bevor es sich gegen seinen Peiniger auflehnt.~
 @60087 = ~Krummsäbel +2~
 @60088 = ~Donnerschlag +4~
 @60089 = ~Krummsäbel +4~

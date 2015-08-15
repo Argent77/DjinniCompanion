@@ -311,6 +311,7 @@ COPY ~DjinniCompanion/spells/a7spin6.spl~  ~override~
   SAY UNIDENTIFIED_DESC @60086    // This spell allows Afaaq to take control over any kind of Air Elemental...
 COPY ~DjinniCompanion/spells/a7spin6a.eff~ ~override~
    ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
+   ~DjinniCompanion/spells/a7spin6c.eff~ ~override~
 
 // Spell: Conjure Air Elemental
 COPY ~DjinniCompanion/spells/a7spwi01.spl~ ~override~
