@@ -322,13 +322,16 @@ END ELSE BEGIN
        ~DjinniCompanion/spells/a7spin4.bam~ ~override/a7spin4b.bam~
 END
 
-// Innate Ability: Control Air Elemental
+// Innate Ability: Control Aerial Creatures
 COPY ~DjinniCompanion/spells/a7spin6.spl~  ~override~
-  SAY NAME1 @60027    // Control Air Elemental
-  SAY UNIDENTIFIED_DESC @60086    // This spell allows Afaaq to take control over any kind of Air Elemental...
+  SAY NAME1 @60027    // Control Aerial Creatures
+  SAY UNIDENTIFIED_DESC @60086    // This spell allows Afaaq to take control over any creature of aerial origin...
 COPY ~DjinniCompanion/spells/a7spin6a.eff~ ~override~
      ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
      ~DjinniCompanion/spells/a7spin6c.eff~ ~override~
+
+// Spell: Conjure Air Elemental
+COPY ~DjinniCompanion/spells/a7spwi01.spl~ ~override~
 
 // Innate Ability: Gaseous Form (used by script)
 COPY ~DjinniCompanion/spells/a7mista.spl~ ~override~

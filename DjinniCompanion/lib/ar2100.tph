@@ -17,23 +17,18 @@ COPY_EXISTING ~ar2100.are~ ~override~
     LPF fj_are_structure
       INT_VAR
       fj_type           = 0         // proximity trigger
-      fj_box_left       = 930
-      fj_box_top        = 3000
-      fj_box_right      = 1888
-      fj_box_bottom     = 3835
+      fj_box_left       = 881
+      fj_box_top        = 3065
+      fj_box_right      = 1437
+      fj_box_bottom     = 3665
       fj_cursor_idx     = 0         // default cursor
       fj_flags          = (1 << 1)  // [Trap resets]
       fj_trap_active    = 1         // is trapped
-      fj_vertex_0       = 1414 + (3000 << 16)
-      fj_vertex_1       = 1525 + (3133 << 16)
-      fj_vertex_2       = 1375 + (3250 << 16)
-      fj_vertex_3       = 1575 + (3430 << 16)
-      fj_vertex_4       = 1888 + (3835 << 16)
-      fj_vertex_5       = 1616 + (3835 << 16)
-      fj_vertex_6       = 1400 + (3680 << 16)
-      fj_vertex_7       = 1015 + (3540 << 16)
-      fj_vertex_8       = 930 + (3250 << 16)
-      fj_vertex_9       = 1050 + (3070 << 16)
+      fj_vertex_0       = 881 + (3275 << 16)
+      fj_vertex_1       = 1055 + (3065 << 16)
+      fj_vertex_2       = 1437 + (3300 << 16)
+      fj_vertex_3       = 1284 + (3665 << 16)
+      fj_vertex_4       = 1024 + (3560 << 16)
       STR_VAR
       fj_structure_type = region
       fj_name           = A7Q3AfaaqEssence

@@ -276,7 +276,7 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 END ELSE BEGIN
   COPY ~DjinniCompanion/spells/a7spin5.bam~ ~override~
 END
-COPY ~DjinniCompanion/items/a7spin5.itm~     ~override~
+COPY ~DjinniCompanion/items/a7spin5.itm~ ~override~
   SAY NAME1 ~Whirlwind Effect~
   SAY NAME2 ~Whirlwind Effect~
 COMPILE ~DjinniCompanion/scripts/a7spin5.baf~
@@ -287,7 +287,7 @@ COPY ~DjinniCompanion/spells/a7spin3.spl~  ~override~
 
 // Innate Ability: Air Shield
 COPY ~DjinniCompanion/spells/a7spin4.spl~  ~override~
-   ~DjinniCompanion/spells/a7spin4a.spl~ ~override~
+     ~DjinniCompanion/spells/a7spin4a.spl~ ~override~
   SAY NAME1 @60015    // Air Shield
   SAY UNIDENTIFIED_DESC @60085    // The Air Shield grants Afaaq immunity to electricity damage, as well as...
   PATCH_IF (GAME_IS ~bg2ee eet~) BEGIN
@@ -296,7 +296,7 @@ COPY ~DjinniCompanion/spells/a7spin4.spl~  ~override~
     WRITE_ASCII (ability_ofs + 4) ~A7SPIN4B~ #8
   END
 COPY ~DjinniCompanion/spells/a7airsd.vvc~ ~override~
-   ~DjinniCompanion/spells/a7airsd.bam~ ~override~
+     ~DjinniCompanion/spells/a7airsd.bam~ ~override~
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   COPY ~DjinniCompanion/spells/bg2ee/a7spin4b.bam~ ~override~
        ~DjinniCompanion/spells/bg2ee/a7spin4c.bam~ ~override~
@@ -305,13 +305,13 @@ END ELSE BEGIN
        ~DjinniCompanion/spells/a7spin4.bam~ ~override/a7spin4b.bam~
 END
 
-// Innate Ability: Control Air Elemental
+// Innate Ability: Control Aerial Creatures
 COPY ~DjinniCompanion/spells/a7spin6.spl~  ~override~
-  SAY NAME1 @60027    // @60027
-  SAY UNIDENTIFIED_DESC @60086    // This spell allows Afaaq to take control over any kind of Air Elemental...
+  SAY NAME1 @60027    // Control Aerial Creatures
+  SAY UNIDENTIFIED_DESC @60086    // This spell allows Afaaq to take control over any creature of aerial origin...
 COPY ~DjinniCompanion/spells/a7spin6a.eff~ ~override~
-   ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
-   ~DjinniCompanion/spells/a7spin6c.eff~ ~override~
+     ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
+     ~DjinniCompanion/spells/a7spin6c.eff~ ~override~
 
 // Spell: Conjure Air Elemental
 COPY ~DjinniCompanion/spells/a7spwi01.spl~ ~override~

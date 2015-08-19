@@ -12,10 +12,11 @@ COPY_EXISTING ~elemyanc.cre~ ~override~
     TEXT_SPRINT restype ~Creature~
     PATCH_WARN @31      // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
   END
+  BUT_ONLY
 
 // fix a bug in TobEx by disabling a specific option
 ACTION_IF (FILE_EXISTS ~TobEx_ini/TobExTweak.ini~) BEGIN
   COPY + "TobEx_ini/TobExCore.ini" "TobEx_ini/TobExCore.ini"
     REPLACE_TEXTUALLY "Cast Spell On Condition Mod=1" "Cast Spell On Condition Mod=0"
-    BUT_ONLY_IF_IT_CHANGES
+    BUT_ONLY
 END
