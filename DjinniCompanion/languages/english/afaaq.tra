@@ -1702,6 +1702,7 @@ Charisma: 11
 Max. HP: <A7AFQ_HP>
 Base THAC0: <A7AFQ_THAC0>
 Armor Class: <A7AFQ_AC>
+Saving Throws: <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
 Attacks/round: 3/2
 I am specialized in scimitars and somewhat skilled in single weapon use.~
 @60023 = ~My character stats:
@@ -1715,6 +1716,7 @@ Charisma: 11
 Max. HP: <A7AFQ_HP>
 Base THAC0: <A7AFQ_THAC0>
 Armor Class: <A7AFQ_AC>
+Saving Throws: <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
 Attacks/round: 2
 I have attained Grand Mastery in scimitars and am highly skilled in single weapon use.~
 @60024 = ~Greater Whirlwind~

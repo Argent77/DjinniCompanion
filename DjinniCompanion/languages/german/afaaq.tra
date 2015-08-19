@@ -1700,6 +1700,7 @@ Charisma: 11
 Max. TP: <A7AFQ_HP>
 Normaler ETW0: <A7AFQ_THAC0>
 Rüstungsklasse: <A7AFQ_AC>
+Rettungswürfe: <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
 Angriffe/Runde: 3/2
 Ich habe mich auf Krummsäbel spezialisiert und bin etwas sachkundig im Umgang mit einhändigen Waffen.~
 @60023 = ~Meine Eigenschaften:
@@ -1713,6 +1714,7 @@ Charisma: 11
 Max. TP: <A7AFQ_HP>
 Normaler ETW0: <A7AFQ_THAC0>
 Rüstungsklasse: <A7AFQ_AC>
+Rettungswürfe: <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
 Angriffe/Runde: 2
 Ich habe die Großmeisterschaft in Krummsäbeln erlangt und bin hochbegabt im Umgang mit einhändigen Waffen.~
 @60024 = ~Größerer Wirbelwind~

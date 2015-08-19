@@ -379,7 +379,7 @@ COPY ~DjinniCompanion/spells/a7die.spl~ ~override~
   SAY NAME1 ~Afaaq dies~
   SAY UNIDENTIFIED_DESC @60019    // -used by script-
 
-// Spells to increase his HP, THAC0 and AC at simulated level up
+// Spells to increase his HP, THAC0, AC and saving throws at simulated level up
 COPY ~DjinniCompanion/spells/a7sphp2.spl~ ~override~
      ~DjinniCompanion/spells/a7sphp3.spl~ ~override~
      ~DjinniCompanion/spells/a7sphp8.spl~ ~override~
@@ -392,6 +392,9 @@ COPY ~DjinniCompanion/spells/a7spth1.spl~ ~override~
 COPY ~DjinniCompanion/spells/a7spac1.spl~ ~override~
      ~DjinniCompanion/spells/a7spac2.spl~ ~override~
   SAY NAME1 ~AC bonus~
+  SAY UNIDENTIFIED_DESC @60019    // -used by script-
+COPY ~DjinniCompanion/spells/a7spsv1.spl~ ~override~
+  SAY NAME1 ~Saving throws bonus~
   SAY UNIDENTIFIED_DESC @60019    // -used by script-
 
 // Visual effects

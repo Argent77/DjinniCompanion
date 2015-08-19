@@ -9,6 +9,11 @@ THEN RESPONSE #100
   SetTokenGlobal("A7AfaaqHP", "GLOBAL", "A7AFQ_HP")
   SetTokenGlobal("A7AfaaqTHAC0", "GLOBAL", "A7AFQ_THAC0")
   SetTokenGlobal("A7AfaaqAC", "GLOBAL", "A7AFQ_AC")
+  SetTokenGlobal("A7AfaaqSaves1", "GLOBAL", "A7AFQ_SV1")
+  SetTokenGlobal("A7AfaaqSaves2", "GLOBAL", "A7AFQ_SV2")
+  SetTokenGlobal("A7AfaaqSaves3", "GLOBAL", "A7AFQ_SV3")
+  SetTokenGlobal("A7AfaaqSaves4", "GLOBAL", "A7AFQ_SV4")
+  SetTokenGlobal("A7AfaaqSaves5", "GLOBAL", "A7AFQ_SV5")
   Continue()
 END
 

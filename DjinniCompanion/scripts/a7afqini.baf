@@ -79,10 +79,17 @@ THEN RESPONSE #100
   ApplySpellRES("A7spAC1", Myself)
   ApplySpellRES("A7spAC2", Myself)
   ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  ApplySpellRES("A7spSV1", Myself)
   SetGlobal("A7AfaaqHP", "GLOBAL", 99)
   SetGlobal("A7AfaaqTHAC0", "GLOBAL", 7)
   SetGlobal("A7AfaaqAC", "GLOBAL", -2)
   SetGlobal("A7AfaaqLevel", "GLOBAL", 14)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 6)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 8)
 END
 
 // Level 13
@@ -101,10 +108,16 @@ THEN RESPONSE #100
   ApplySpellRES("A7spAC1", Myself)
   ApplySpellRES("A7spAC2", Myself)
   ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spSV1", Myself)
   SetGlobal("A7AfaaqHP", "GLOBAL", 91)
   SetGlobal("A7AfaaqTHAC0", "GLOBAL", 8)
   SetGlobal("A7AfaaqAC", "GLOBAL", -1)
   SetGlobal("A7AfaaqLevel", "GLOBAL", 13)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 9)
 END
 
 // Level 12
@@ -120,10 +133,16 @@ THEN RESPONSE #100
   ApplySpellRES("A7spTH2", Myself)
   ApplySpellRES("A7spAC1", Myself)
   ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spSV1", Myself)
   SetGlobal("A7AfaaqHP", "GLOBAL", 83)
   SetGlobal("A7AfaaqTHAC0", "GLOBAL", 10)
   SetGlobal("A7AfaaqAC", "GLOBAL", 1)
   SetGlobal("A7AfaaqLevel", "GLOBAL", 12)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 9)
 END
 
 // Level 11
@@ -140,6 +159,11 @@ THEN RESPONSE #100
   SetGlobal("A7AfaaqTHAC0", "GLOBAL", 12)
   SetGlobal("A7AfaaqAC", "GLOBAL", 2)
   SetGlobal("A7AfaaqLevel", "GLOBAL", 11)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 10)
 END
 
 // Below Level 11
@@ -152,6 +176,11 @@ THEN RESPONSE #100
   SetGlobal("A7AfaaqTHAC0", "GLOBAL", 14)
   SetGlobal("A7AfaaqAC", "GLOBAL", 4)
   SetGlobal("A7AfaaqLevel", "GLOBAL", 10)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 10)
 END
 
 IF
@@ -164,5 +193,10 @@ THEN RESPONSE #100
   SetTokenGlobal("A7AfaaqTHAC0", "GLOBAL", "A7AFQ_THAC0")
   SetTokenGlobal("A7AfaaqAC", "GLOBAL", "A7AFQ_AC")
   SetTokenGlobal("A7AfaaqLevel", "GLOBAL", "A7AFQ_LVL")
+  SetTokenGlobal("A7AfaaqSaves1", "GLOBAL", "A7AFQ_SV1")
+  SetTokenGlobal("A7AfaaqSaves2", "GLOBAL", "A7AFQ_SV2")
+  SetTokenGlobal("A7AfaaqSaves3", "GLOBAL", "A7AFQ_SV3")
+  SetTokenGlobal("A7AfaaqSaves4", "GLOBAL", "A7AFQ_SV4")
+  SetTokenGlobal("A7AfaaqSaves5", "GLOBAL", "A7AFQ_SV5")
   ChangeAIScript("A7AFQLVL", RACE)
 END
