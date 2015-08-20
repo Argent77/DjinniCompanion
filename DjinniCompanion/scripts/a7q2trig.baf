@@ -17,6 +17,7 @@
     AreaCheck("AR2000")    // Trademeet
 */
 IF
+  Global("InToB", "GLOBAL", 0)    // Possibly needed for BGT/EET
   OR(2)                    // don't interfere with the druid quest
     !AreaCheck("AR1900")
     Dead("cefald01")
