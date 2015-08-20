@@ -51,6 +51,26 @@ APPEND ~A7AFAAQ~
 END
 
 
+// *** Taquee (The Dao in front of the tent) ***
+
+APPEND ~TRGENI02~
+  IF WEIGHT #-1 ~Name("A7Afaaq", LastTalkedToBy) Random(2, 2)~ Taquee.1
+    SAY @1457   /* Get out of my sight, djinni. */
+    IF ~~ EXIT
+  END
+
+  IF WEIGHT #-1 ~Name("A7Afaaq", LastTalkedToBy) Random(2, 1)~ Taquee.2
+    SAY @1458   /* You kind is not welcome here. Begone! */
+    IF ~~ EXIT
+  END
+
+  IF WEIGHT #-1 ~!Name("A7Afaaq", LastTalkedToBy) See("A7Afaaq") Random(3, 1)~ Taquee.3
+    SAY @1459 /* Please keep your djinni pet on a short leash to avoid unnecessary distractions, mortal! */
+    IF ~~ EXIT
+  END
+END
+
+
 // *** Amac (boy) ***
 
 APPEND ~TRKID02~

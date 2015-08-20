@@ -143,7 +143,7 @@
 @1421 = ~Yes.  It was difficult, but I have imprisoned their leader and taken care of the remaining genies.~
 
 
-// Dialog: Khan Zahraa
+// Dialog: Khan Zahraa and Dao genies
 @1450 = ~You dare to sully our presence with one of those djinns, mortal?~ [a7slnt_s]
 @1451 = ~Ah, I see. He is your personal slave. Please keep your pet under control to avoid unnecessary distractions.~
 @1452 = ~You are too much beneath us to provoke a hostile reaction from me. Repeat it, however, and I will not hold back my wrath.~
@@ -151,6 +151,9 @@
 @1454 = ~Your taunts will have no effect on me, dao, as I sense that you are bound to service as well. Whether it is by magic or contract, is merely a question of semantics.~
 @1455 = ~Please calm down, you two! There is no need for hostility.~
 @1456 = ~This might be getting interesting. Don't lose to him, Afaaq!~
+@1457 = ~Get out of my sight, djinni.~
+@1458 = ~You kind is not welcome here. Begone!~
+@1459 = ~Please keep your djinni pet on a short leash to avoid unnecessary distractions, mortal!~
 
 
 // Dialog: Trademeet townsfolk

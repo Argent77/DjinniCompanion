@@ -143,7 +143,7 @@
 @1421 = ~Ja. Es war schwierig, aber ich konnte ihren Anführer einkerkern und mich um die verbliebenen Dschinns kümmern.~
 
 
-// Dialog: Khan Zahraa
+// Dialog: Khan Zahraa and Dao genies
 @1450 = ~Ihr wagt es, meine Anwesenheit mit einem dieser Dschinns zu besudeln, Sterblicher?~ [a7slnt_s]
 @1451 = ~Aha! Er ist Euer persönlicher Sklave. Haltet bitte Euer Haustier unter Kontrolle, um unnötige Ablenkungen zu vermeiden.~
 @1452 = ~Ihr seid zu sehr unter meiner Würde um irgendeine feindliche Reaktion herauszufordern. Wiederholt Ihr sie jedoch, dann werde ich meinen Zorn nicht zurückhalten.~
@@ -151,6 +151,9 @@
 @1454 = ~Euer Spott zeigt bei mir keine Wirkung, Dao, da ich spüre dass Ihr ebenfalls in den Dienst eines Anderen gezwungen wurdet. Ob durch Magie oder Vertrag ist letztendlich unerheblich.~
 @1455 = ~Beruhigt Euch bitte! Es gibt keinen Grund zur Feindseligkeit.~
 @1456 = ~Das könnte interessant werden. Lass Dich nicht unterkriegen, Afaaq!~
+@1457 = ~Geht mir aus den Augen, Dschinn!~
+@1458 = ~Eure Art ist hier nicht willkommen. Verschwindet!~
+@1459 = ~Haltet doch bitte Euren Dschinn an der kurzen Leine, um keinen unnötigen Ablenkungen zu provozieren, Sterblicher.~
 
 
 // Dialog: Trademeet townsfolk
