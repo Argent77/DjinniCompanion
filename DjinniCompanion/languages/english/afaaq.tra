@@ -48,7 +48,7 @@
 @10044 = ~Thanks for your advice.~
 @10045 = ~Even the most heavily armed opponents will be powerless before you if you can hinder their movements.~
 @10046 = ~Be careful when fighting extraplanar creatures. Many of them can see through your illusions and have special powers you do not expect.~
-@10047 = ~Outsiders like myself or the efreets will transform into a gaseous state and recover their health when they are badly hurt. I advise you to hit them hard and fast, it may also help to hinder them in their movements.~
+@10047 = ~Outsiders like myself or the efreets can temporarily change their physical appearance to recover their health when they are badly hurt. I advise you to hit them hard and fast, it may also help to hinder them in their movements.~
 @10048 = ~Do not depend on your spells to silence enemy spellcasters. There is always a way to counteract their muted state.~
 @10049 = ~Spellcasters are usually lacking constitution or stamina to withstand physical attacks. It is always good practice to be prepared all the time, be it against overwhelming forces or the unseen dagger in the dark.~
 @10050 = ~Your thief will have a hard time sneaking up on your targets without shadows in his reach.~
@@ -1801,6 +1801,8 @@ Since Afaaq is born out of the chaotic forces of air, he can haste himself anyti
 @60093 = ~Please stop attacking me, my <PRO_LADYLORD>!~
 @60094 = ~Please stop attacking me!~
 @60095 = ~Select health-protective combat script~
+@60096 = ~Please stop stealing from me!~
+@60097 = ~That is enough!~
 
 // Afaaq's Epilogues
 @64090 = ~Afaaq continued his journey with <CHARNAME> which took them halfway across Faerûn and back. They defeated raiding parties of sahuagin on the western borders of Tethyr and pushed back an invasion of frost giants threatening Luskan and the surrounding settlements.
