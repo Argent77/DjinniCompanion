@@ -27,7 +27,9 @@ END
 // Djinni registers failed pickpocket attempts (doesn't work in vanilla BG2)
 IF
   PickPocketFailed([PC])
-  GlobalLT("StealAttempt", "LOCALS", 10)
+  OR(2)
+    GlobalLT("StealAttempt", "LOCALS", 10)
+    Global("A7AfaaqUpgraded", "GLOBAL", 1)
 THEN RESPONSE #100
   IncrementGlobal("StealAttempt", "LOCALS", 1)
   FaceObject(LastTrigger)
@@ -37,6 +39,7 @@ END
 IF
   PickPocketFailed([PC])
   GlobalGT("StealAttempt", "LOCALS", 9)
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("StealAttempt", "LOCALS", 0)
   FaceObject(LastTrigger)
