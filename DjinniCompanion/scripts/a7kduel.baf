@@ -38,7 +38,6 @@ THEN RESPONSE #100
   ActionOverride("A7Afaaq", DisplayString(Myself, 14026))    // Death
   ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
   SmallWait(25)
-  Deactivate("A7Afaaq")
   ActionOverride("A7Afaaq", DestroySelf())
   EndCutSceneMode()
   // Korgan triggers dialog with Player1

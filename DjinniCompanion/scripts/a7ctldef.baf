@@ -27,27 +27,27 @@ THEN
 END
 
 // Remove Afaaq forcefully if his death sequence has been interrupted at some point (delayed by 3 seconds)
-IF
-  Global("A7AfaaqSummoned","GLOBAL",0)
-  Global("DestroyAfaaq","LOCALS",0)
-  IsActive("A7Afaaq")
-THEN
-  RESPONSE #100
-    SetGlobal("DestroyAfaaq","LOCALS",1)
-    SetGlobalTimer("DestroyAfaaqTimer","LOCALS",3)
-END
+// IF
+  // Global("A7AfaaqSummoned","GLOBAL",0)
+  // Global("DestroyAfaaq","LOCALS",0)
+  // IsActive("A7Afaaq")
+// THEN
+  // RESPONSE #100
+    // SetGlobal("DestroyAfaaq","LOCALS",1)
+    // SetGlobalTimer("DestroyAfaaqTimer","LOCALS",3)
+// END
 
-IF
-  Global("A7AfaaqSummoned","GLOBAL",0)
-  Global("DestroyAfaaq","LOCALS",1)
-  GlobalTimerExpired("DestroyAfaaqTimer","LOCALS")
-  IsActive("A7Afaaq")
-THEN
-  RESPONSE #100
-    SetGlobal("DestroyAfaaq","LOCALS",0)
-    Deactivate("A7Afaaq")
-    ActionOverride("A7Afaaq",DestroySelf())
-END
+// IF
+  // Global("A7AfaaqSummoned","GLOBAL",0)
+  // Global("DestroyAfaaq","LOCALS",1)
+  // GlobalTimerExpired("DestroyAfaaqTimer","LOCALS")
+  // IsActive("A7Afaaq")
+// THEN
+  // RESPONSE #100
+    // SetGlobal("DestroyAfaaq","LOCALS",0)
+    // Deactivate("A7Afaaq")
+    // ActionOverride("A7Afaaq",DestroySelf())
+// END
 
 
 // Fix Afaaq's allegiance if necessary (work-around for a bug in the Infinity Engine)
@@ -104,7 +104,6 @@ THEN RESPONSE #100
   ActionOverride("A7Afaaq", DisplayString(Myself, 14026))    // Death
   ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
   SmallWait(25)
-  Deactivate("A7Afaaq")
   ActionOverride("A7Afaaq", DestroySelf())
   SetInterrupt(TRUE)
 END
