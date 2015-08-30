@@ -380,7 +380,7 @@ APPEND %afq_dialog%
     IF ~Dead("yaga01") !Dead("sendai") RandomNum(16, 2)~ + TalkGeneric.Advice.Specific.Sendai.1    // about Sendai
     IF ~Dead("abazigal") Dead("sendai") !Dead("balth") Global("BalthazarFights", "GLOBAL", 0) RandomNum(16, 1)~ + TalkGeneric.Advice.Specific.Balthazar.1    // about Balthazar
     IF ~Dead("abazigal") Dead("sendai") !Dead("balth") Global("BalthazarFights", "GLOBAL", 0) RandomNum(16, 2)~ + TalkGeneric.Advice.Specific.Balthazar.2    // about Balthazar
-    IF ~Dead("yaga01") OR(2) !Dead("abazigal") !Dead("sendai") Global("A7TalkAboutSolarDream", "GLOBAL", 0) RandomNum(18, 1)~ + TalkGeneric.Advice.Specific.SolarDream.1    // about CHARNAME's dream-like situations with the Solar
+    IF ~Dead("yaga01") OR(2) !Dead("abazigal") !Dead("sendai") Global("A7Q5AfaaqAppears", "GLOBAL", 0) Global("A7TalkAboutSolarDream", "GLOBAL", 0) RandomNum(18, 1)~ + TalkGeneric.Advice.Specific.SolarDream.1    // about CHARNAME's dream-like situations with the Solar
     IF ~Dead("balth") RandomNum(18, 2)~ + TalkGeneric.Advice.Specific.SolarDream.2    // about CHARNAME's dream-like situations with the Solar (after Melissan's true self has been revealed)
   END
 
