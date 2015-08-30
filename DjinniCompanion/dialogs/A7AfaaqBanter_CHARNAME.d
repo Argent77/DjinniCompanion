@@ -278,7 +278,7 @@ APPEND A7AFAAQ
 
   IF ~~ PCSoul.1.8
     SAY @12297 /* It is bad, but I have learned to be patient. Everything will be solved sooner or later as long as you do not give up. */
-    IF ~~ DO ~SetGlobal("BanterPCSoul", "LOCALS", 2)~ EXIT
+    IF ~~ DO ~SetGlobal("BanterPCSoul", "LOCALS", 2) SetGlobal("A7TalkAboutDrow", "GLOBAL", 1)~ EXIT
   END
 
 

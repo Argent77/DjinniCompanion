@@ -49,7 +49,6 @@ IF
 THEN RESPONSE #100
   SetGlobal("A7Quest2Grateful", "GLOBAL", 1)
   SetGlobal("A7TalkAboutRakshasa", "GLOBAL", 1)
-  SetGlobal("A7TalkAboutDrow", "GLOBAL", 1)
   StartDialogNoSet(Player1)
 END
 

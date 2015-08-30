@@ -395,7 +395,7 @@
 @10394 = ~I can give you Potions of Extra Healing.~
 @10395 = ~I can give you Potions of Superior Healing.~
 @10396 = ~I can give you Antidote potions.~
-@10397 = ~I can give you Elixirs of Help.~
+@10397 = ~I can give you Elixirs of Health.~
 @10398 = ~Then I have to manage with the remaining potions in my possession.~
 @10399 = ~Then I have to manage without it.~
 @10400 = ~How many potions can you give me?~
@@ -946,7 +946,7 @@ though he fought back like a crack of loud thunder."~
 @12339 = ~I have seriously considered it. Since my chances of success were minimal, I refrained from it in the end.~
 @12340 = ~Instead I studied alternate methods to overcome my weakened state. I travelled from one place to another, following even the vaguest hints.~
 @12341 = ~About thirty years ago I must have drawn the attention of a certain group of rakshasa. They followed me undetected, and studied me and my weaknesses before they took the initiative.~
-@12342 = ~Unable to retreat into the Plane of Air and with many of my powers sealed away I was an easy prey for their priests.~
+@12342 = ~Unable to retreat into the Plane of Air and with many of my powers sealed away, I was an easy prey for their priests.~
 @12343 = ~That was some story. The life of a genie is not as easy as I thought.~
 @12344 = ~You have suffered a long time. No wonder you are so gloomy all the time.~
 @12345 = ~I wish I could do more to help you.~
@@ -960,7 +960,7 @@ though he fought back like a crack of loud thunder."~
 @12353 = ~No, and I don't care.~
 @12354 = ~That is unfortunate, but I do not want to engage you in conversation against your will.~
 @12355 = ~I have realized that many mortals do not distinguish between the different clans of genies. The djinn, dao or efreet for example.~
-@12356 = ~It is a very important distinction for us and we do not take kindly that kind of generalization. You might be similarly offended if were throwing humans, elves, duergar and orcs together.~
+@12356 = ~It is a very important distinction for us and we do not take kindly that kind of generalization. You might be similarly offended if we were throwing humans, elves, duergar and orcs together.~
 @12357 = ~That's right. I have to admit that I don't know anything about it either.~
 @12358 = ~That's right. I have heard the terms djinn, dao or efreet before, but nothing specific.~
 @12359 = ~That's right. I however have learned much about your kind and can understand why you don't feel comfortable when people aren't able to tell djinn and dao apart.~

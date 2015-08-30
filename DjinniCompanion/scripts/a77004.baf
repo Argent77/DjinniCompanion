@@ -269,6 +269,5 @@ THEN RESPONSE #100
   SetGlobal("A7LampTalk", "GLOBAL", 1)
   SetGlobal("A7Quest2Grateful", "GLOBAL", 1)
   SetGlobal("A7TalkAboutRakshasa", "GLOBAL", 1)
-  SetGlobal("A7TalkAboutDrow", "GLOBAL", 1)
   ActionOverride(Player1, StartDialogOverrideItem("A7DJLMP", Myself, 0, 0, 1))
 END
