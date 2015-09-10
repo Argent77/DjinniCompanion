@@ -132,7 +132,7 @@ COPY_EXISTING ~hellgen.dlg~ ~override~
     PATCH_WARN @29    // ~Warning: Unable to read %filename% (Reason: %restype% file is invalid)~
   END
 
-ACTION_IF (MOD_IS_INSTALLED ~setup-d0questpack.tp2~ 8) BEGIN
+ACTION_IF (FILE_EXISTS_IN_GAME ~hellgen2.cre~ AND FILE_EXISTS_IN_GAME ~cutc7g.bcs~) BEGIN
   PRINT @26    // Questpack's "Revised Hell Trials" has been found...adjusting component.
   ACTION_IF (numstates < 27) BEGIN    // // very simple sanity check
     FAIL @25    // The dialog file of the enslaved genie in the Greed Hell Trial isn't compatible with this mod. You have to uninstall the responsible mod before installing again.
