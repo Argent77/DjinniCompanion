@@ -194,6 +194,14 @@
         clear: left;
       }
 
+      .code {
+        font-family: monospace;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        padding: 1px 2px 0px 2px;
+      }
+
       hr {
         margin: 10px 0 10px 0;
         padding: 0;
@@ -531,7 +539,8 @@
               <li>Wenn Ihr die Höhle zum ersten Mal betretet, nachdem Ihr sowohl Abazigal als auch Sendai besiegt habt.<br /></li>
             </ul><br />
             Falls Ihr sicher seid, dass die obengenannten Bedingungen nicht zutreffen, dann gibt es wahrscheinlich eine andere Mod, die das Höhlenskript stört. In diesem Fall solltet Ihr die verantwortliche Mod finden und deinstallieren.<br /> <strong>Wichtig:</strong> Ihr müsst einen Speicherstand benutzen, in dem Ihr noch nie die Schmugglerhöhle betreten habt.<br /><br /></li>
-            <li><strong>Afaaqs Wirbelsturmfähigkeit gerät völlig außer Kontrolle wenn ich die Spieloption "Automatische Pause: Charakter zaubert" aktiviert habe.</strong><br />Dieser Effekt wird höchstwahrscheinlich durch einen Fehler in TobEx ausgelöst. Die Mod versucht die entsprechende TobEx-Option während der Installation zu deaktivieren, aber sie kann im Nachhinein durch den Spieler oder eine andere Mod wieder aktiviert worden sein. Um das Problem zu lösen, öffnet die Datei "TobEx_ini/TobExCore.ini", sucht nach der Option <em>"Cast Spell On Condition Mod"</em> und setzt sie auf 0. Falls diese Option nicht existiert, fügt die Zeile <em>"Cast Spell On Condition Mod=0"</em> (ohne Anführungsstriche) in die Sektion <em>"[Effect Opcodes]"</em> ein.</li>
+            <li><strong>Afaaqs Wirbelsturmfähigkeit gerät völlig außer Kontrolle wenn ich die Spieloption "Automatische Pause: Charakter zaubert" aktiviert habe.</strong><br />Dieser Effekt wird höchstwahrscheinlich durch einen Fehler in TobEx ausgelöst. Die Mod versucht die entsprechende TobEx-Option während der Installation zu deaktivieren, aber sie kann im Nachhinein durch den Spieler oder eine andere Mod wieder aktiviert worden sein. Um das Problem zu lösen, öffnet die Datei "TobEx_ini/TobExCore.ini", sucht nach der Option <em>"Cast Spell On Condition Mod"</em> und setzt sie auf 0. Falls diese Option nicht existiert, fügt die Zeile <em>"Cast Spell On Condition Mod=0"</em> (ohne Anführungsstriche) in die Sektion <em>"[Effect Opcodes]"</em> ein.<br /><br /></li>
+            <li><strong>Afaaq reagiert nicht mehr, wenn man ihn anspricht.</strong><br />In sehr seltenen Fällen kann dieser Zustand durch eine falsch gesetzte Variable verursacht worden sein. In diesem Fall kann man das Problem beheben, indem man die Konsole im Spiel öffnet und den Code <span class="code">CLUAConsole:SetGlobal("BanterActive","LOCALS",0)</span> in BG2 oder <span class="code">C:SetGlobal("BanterActive","LOCALS",0)</span> in BG2:EE eingibt, während sich der Mauszeiger über dem Dschinn befindet.<br /><strong>Tip:</strong> Der Einfachheit halber kann man den hier angezeigten Code in die Zwischenablage kopieren (z.B. mit Strg+C in Windows) und im Spiel mit Strg+V oder dem entsprechenden Tastenkürzel des Betriebssystems in die Konsole einfügen.</li>
           </ol>
           <address>
             <a href="#top">ZURÜCK ZUM ANFANG</a>
