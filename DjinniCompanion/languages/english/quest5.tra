@@ -827,7 +827,7 @@
 @6207 = ~I don't have any Elven Holy Water in my possession. Maybe another time.~
 @6208 = ~I have changed my mind. I don't want to do it now.~
 @6209 = ~I see that you have already chained yourself to its necromantic powers. There is nothing I can do for you in this state.~
-@6210 = ~If you want to break the link to the artifact, you can make use of my services which includes removing curses.~
+@6210 = ~If you want to break your link to the artifact, you can make use of my services, however.~
 @6211 = ~Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of Good however, so I will make an exception.~
 @6212 = ~To neutralize an evil of this scale I need a vial of potent Elven Holy Water. The ritual itself is very draining, so I have to ask for a modest fee of 5000 gold as well. Are you still interested?~
 @6213 = ~Powerful artifacts such as this can do much damage if you succumbed to its evil. I cannot and will not, in good conscience, do what you want from me.~
@@ -843,6 +843,7 @@
 @6223 = ~It is done. The evil has been sealed away. It should be safe now to make use of its remaining powers.~
 @6224 = ~(The priest takes the skull as well as the money and the vial of holy water and starts making preparations for the ritual.)~
 @6225 = ~(The skull is placed onto the altar and after an initial prayer he pours the holy water over it, repeatedly interrupted by more prayers.)~
+@6226 = ~Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of Righteousness however, so I will make an exception.~
 
 
 // journal entries

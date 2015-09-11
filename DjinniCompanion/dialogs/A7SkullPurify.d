@@ -18,10 +18,19 @@ APPEND SARTEM01
               HasItemEquiped("a7skull", Player4) HasItemEquiped("a7skull", Player5) HasItemEquiped("a7skull", Player6)~ + A7SarPriest.3
     IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
         !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
-        Alignment(LastTalkedToBy, MASK_GOOD) ReputationGT(LastTalkedToBy, 15)~ DO ~SetGlobal("A7SkullPurify", "GLOBAL", 1)~ + A7SarPriest.4
+        Alignment(LastTalkedToBy, MASK_GOOD) ReputationGT(LastTalkedToBy, 15)~ DO ~SetGlobal("A7SkullPurify", "GLOBAL", 1)~ + A7SarPriest.4a
     IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
         !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
-        OR(2) !Alignment(LastTalkedToBy, MASK_GOOD) ReputationLT(LastTalkedToBy, 16)~ + A7SarPriest.5
+        Alignment(LastTalkedToBy, MASK_GENEUTRAL) ReputationGT(LastTalkedToBy, 18)~ DO ~SetGlobal("A7SkullPurify", "GLOBAL", 1)~ + A7SarPriest.4b
+    IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
+        !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
+        Alignment(LastTalkedToBy, MASK_GOOD) ReputationLT(LastTalkedToBy, 16)~ + A7SarPriest.5
+    IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
+        !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
+        Alignment(LastTalkedToBy, MASK_GENEUTRAL) ReputationLT(LastTalkedToBy, 19)~ + A7SarPriest.5
+    IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
+        !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
+        Alignment(LastTalkedToBy, MASK_EVIL)~ + A7SarPriest.5
   END
 
   IF ~~ A7SarPriest.2
@@ -39,9 +48,18 @@ APPEND SARTEM01
     IF ~~ + 3
   END
 
-  IF ~~ A7SarPriest.4
+  IF ~~ A7SarPriest.4a
     SAY @6211 /* Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of Good however, so I will make an exception. */
-    = @6212 /* To neutralize an evil of this scale I need a vial of potent Elven Holy Water. The ritual itself is very draining, so I have to ask for a modest fee of 5000 gold as well. Are you still interested? */
+    IF ~~ + A7SarPriest.4c
+  END
+
+  IF ~~ A7SarPriest.4b
+    SAY @6226 /* Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of righteousness however, so I will make an exception. */
+    IF ~~ + A7SarPriest.4c
+  END
+  
+  IF ~~ A7SarPriest.4c
+    SAY @6212 /* To neutralize an evil of this scale I need a vial of potent Elven Holy Water. The ritual itself is very draining, so I have to ask for a modest fee of 5000 gold as well. Are you still interested? */
     + ~PartyGoldGT(4999) PartyHasItem("miscau")~ + @6204 /* Yes, please do it. Here is the money and a vial of holy water. */ + A7SarPriest.9
     + ~PartyGoldLT(5000) !PartyHasItem("miscau")~ + @6205 /* I don't have anything you need with me right now. Maybe another time. */ + 3
     + ~PartyGoldLT(5000) PartyHasItem("miscau")~ + @6206 /* Unfortunately I don't have enough money for the ritual. Maybe another time. */ + 3
@@ -51,8 +69,8 @@ APPEND SARTEM01
 
   IF ~~ A7SarPriest.5
     SAY @6213 /* Powerful artifacts such as this can do much damage if you succumbed to its evil. I cannot and will not, in good conscience, do what you want from me. */
-    IF ~Alignment(LastTalkedToBy, MASK_GOOD)~ + A7SarPriest.6
-    IF ~!Alignment(LastTalkedToBy, MASK_GOOD)~ + A7SarPriest.7
+    IF ~!Alignment(LastTalkedToBy, MASK_EVIL)~ + A7SarPriest.6
+    IF ~Alignment(LastTalkedToBy, MASK_EVIL)~ + A7SarPriest.7
   END
 
   IF ~~ A7SarPriest.6
@@ -108,10 +126,19 @@ APPEND AMCLER02
               HasItemEquiped("a7skull", Player4) HasItemEquiped("a7skull", Player5) HasItemEquiped("a7skull", Player6)~ + A7AmPriest.3
     IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
         !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
-        Alignment(LastTalkedToBy, MASK_GOOD) ReputationGT(LastTalkedToBy, 15)~ DO ~SetGlobal("A7SkullPurify", "GLOBAL", 1)~ + A7AmPriest.4
+        Alignment(LastTalkedToBy, MASK_GOOD) ReputationGT(LastTalkedToBy, 15)~ DO ~SetGlobal("A7SkullPurify", "GLOBAL", 1)~ + A7AmPriest.4a
     IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
         !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
-        OR(2) !Alignment(LastTalkedToBy, MASK_GOOD) ReputationLT(LastTalkedToBy, 16)~ + A7AmPriest.5
+        Alignment(LastTalkedToBy, MASK_GENEUTRAL) ReputationGT(LastTalkedToBy, 18)~ DO ~SetGlobal("A7SkullPurify", "GLOBAL", 1)~ + A7AmPriest.4b
+    IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
+        !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
+        Alignment(LastTalkedToBy, MASK_GOOD) ReputationLT(LastTalkedToBy, 16)~ + A7AmPriest.5
+    IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
+        !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
+        Alignment(LastTalkedToBy, MASK_GENEUTRAL) ReputationLT(LastTalkedToBy, 19)~ + A7AmPriest.5
+    IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
+        !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
+        Alignment(LastTalkedToBy, MASK_EVIL)~ + A7AmPriest.5
   END
 
   IF ~~ A7AmPriest.2
@@ -125,11 +152,21 @@ APPEND AMCLER02
 
   IF ~~ A7AmPriest.3
     SAY @6209 /* I see that you have already chained yourself to its necromantic powers. There is nothing I can do for you in this state. */
-    = @6210 /* If you want to break the link to the artifact, you can make use of my services which includes removing curses. */
+    = @6210 /* If you want to break the link to the artifact, you can make use of my services, however. */
     IF ~~ EXIT
   END
 
-  IF ~~ A7AmPriest.4
+  IF ~~ A7AmPriest.4a
+    SAY @6211 /* Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of Good however, so I will make an exception. */
+    IF ~~ + A7AmPriest.4c
+  END
+
+  IF ~~ A7AmPriest.4b
+    SAY @6226 /* Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of Righteousness however, so I will make an exception. */
+    IF ~~ + A7AmPriest.4c
+  END
+
+  IF ~~ A7AmPriest.4c
     SAY @6211 /* Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of Good however, so I will make an exception. */
     = @6212 /* To neutralize an evil of this scale I need a vial of potent Elven Holy Water. The ritual itself is very draining, so I have to ask for a modest fee of 5000 gold as well. Are you still interested? */
     + ~PartyGoldGT(4999) PartyHasItem("miscau")~ + @6204 /* Yes, please do it. Here is the money and a vial of holy water. */ + A7AmPriest.9
@@ -141,8 +178,8 @@ APPEND AMCLER02
 
   IF ~~ A7AmPriest.5
     SAY @6213 /* Powerful artifacts such as this can do much damage if you succumbed to its evil. I cannot and will not, in good conscience, do what you want from me. */
-    IF ~Alignment(LastTalkedToBy, MASK_GOOD)~ + A7AmPriest.6
-    IF ~!Alignment(LastTalkedToBy, MASK_GOOD)~ + A7AmPriest.7
+    IF ~!Alignment(LastTalkedToBy, MASK_EVIL)~ + A7AmPriest.6
+    IF ~Alignment(LastTalkedToBy, MASK_EVIL)~ + A7AmPriest.7
   END
 
   IF ~~ A7AmPriest.6
