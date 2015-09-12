@@ -140,7 +140,7 @@ APPEND %afq_dialog%
     ++ @10028 /* You are behaving oddly. Care to fix it? */ + TalkGeneric.FixStates.1
     
     ++ @10029 /* I'll talk to you later. */ + TalkGeneric.Bye
-    + ~False() Global("A7AfaaqUpgraded", "GLOBAL", 0) HasItem("A7DJLMP", Player1)~ + ~Debug: Upgrade yourself!~ + TalkGeneric.Debug.Upgrade
+    + ~Global("A7AfaaqDebug", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0) HasItem("A7DJLMP", Player1)~ + ~Debug: Upgrade yourself!~ + TalkGeneric.Debug.Upgrade
   END
 
   IF ~~ TalkGeneric.PC.1
@@ -192,7 +192,7 @@ APPEND %afq_dialog%
     ++ @10028 /* You are behaving oddly. Care to fix it? */ + TalkGeneric.FixStates.1
  
     ++ @10002 /* I will talk to you later. */ + TalkGeneric.Bye
-    + ~False() Global("A7AfaaqUpgraded", "GLOBAL", 0) HasItem("A7DJLMP", Player1)~ + ~Debug: Upgrade yourself!~ + TalkGeneric.Debug.Upgrade
+    + ~Global("A7AfaaqDebug", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0) HasItem("A7DJLMP", Player1)~ + ~Debug: Upgrade yourself!~ + TalkGeneric.Debug.Upgrade
   END
 
 
