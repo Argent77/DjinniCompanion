@@ -39,10 +39,11 @@ APPEND %afq_dialog%
     // Granting a (limited) wish
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ + @10008 /* Can you grant me a wish? */ + TalkGeneric.Wish.Deny
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ + @10008 /* Can you grant me a wish? */ + TalkGeneric.LimitedWish.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 17, WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 14, WIS) CheckStatLT(LastTalkedToBy,18,WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(3, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 9, WIS) CheckStatLT(LastTalkedToBy,15,WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(2, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") Global("A7AfaaqEnslaved", "GLOBAL", 0) !Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 17, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 14, WIS) CheckStatLT(LastTalkedToBy,18,WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(3, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 9, WIS) CheckStatLT(LastTalkedToBy,15,WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(2, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
 
     // Djinni comes out of his lamp
     + ~!GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
@@ -65,10 +66,11 @@ APPEND %afq_dialog%
     // Granting a (limited) wish
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ + @10008 /* Can you grant me a wish? */ + TalkGeneric.Wish.Deny
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ + @10008 /* Can you grant me a wish? */ + TalkGeneric.LimitedWish.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 17, WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 14, WIS) CheckStatLT(LastTalkedToBy,18,WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(3, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 9, WIS) CheckStatLT(LastTalkedToBy,15,WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(2, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") Global("A7AfaaqEnslaved", "GLOBAL", 0) !Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 17, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 14, WIS) CheckStatLT(LastTalkedToBy,18,WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(3, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 9, WIS) CheckStatLT(LastTalkedToBy,15,WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(2, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
 
     // Djinni comes out of his lamp
     + ~!GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
@@ -111,10 +113,11 @@ APPEND %afq_dialog%
     // Granting a (limited) wish
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ + @10008 /* Can you grant me a wish? */ + TalkGeneric.Wish.Deny
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ + @10008 /* Can you grant me a wish? */ + TalkGeneric.LimitedWish.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 17, WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 14, WIS) CheckStatLT(LastTalkedToBy,18,WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(3, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 9, WIS) CheckStatLT(LastTalkedToBy,15,WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(2, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") Global("A7AfaaqEnslaved", "GLOBAL", 0) !Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 17, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 14, WIS) CheckStatLT(LastTalkedToBy,18,WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(3, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 9, WIS) CheckStatLT(LastTalkedToBy,15,WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(2, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
 
     // Storing/retrieving items
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqStore", "GLOBAL", 1)~ + @10023 /* I'd like to access your inventory again. */ + TalkGeneric.Store.1
@@ -163,10 +166,11 @@ APPEND %afq_dialog%
     // Granting a (limited) wish
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ + @10008 /* Can you grant me a wish? */ + TalkGeneric.Wish.Deny
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ + @10008 /* Can you grant me a wish? */ + TalkGeneric.LimitedWish.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 17, WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 14, WIS) CheckStatLT(LastTalkedToBy,18,WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(3, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 9, WIS) CheckStatLT(LastTalkedToBy,15,WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(2, 1)~ + TalkGeneric.Wish.Select.1
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") Global("A7AfaaqEnslaved", "GLOBAL", 0) !Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 17, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(4, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 14, WIS) CheckStatLT(LastTalkedToBy,18,WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(3, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatGT(LastTalkedToBy, 9, WIS) CheckStatLT(LastTalkedToBy,15,WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(2, 1)~ + TalkGeneric.Wish.Select.1
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
 
     // Storing/retrieving items
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqStore", "GLOBAL", 1)~ + @10023 /* I'd like to access your inventory again. */ + TalkGeneric.Store.1
@@ -2184,13 +2188,19 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.Wish.Select.1
     SAY @10437 /* Are you interested in a limited or a more powerful Wish? */
     ++ @10438 /* I'd like to choose a Limited Wish. */ + TalkGeneric.LimitedWish.1
-    ++ @10439 /* I'd like to choose a Wish. */ + TalkGeneric.Wish.1
+    + ~OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) !Global("A7FavorWish", "GLOBAL", 1)~ + @10439 /* I'd like to choose a Wish. */ + TalkGeneric.Wish.1
+    + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7FavorWish", "GLOBAL", 1)~ + @10439 /* I'd like to choose a Wish. */ + TalkGeneric.Wish.1a
     ++ #58584 /* I reconsider. I will make no wish at this time. */ + TalkGeneric.LimitedWish.22
   END
 
   IF ~~ TalkGeneric.Wish.1
     SAY @10440 /* I will grant you a wish. But choose wisely, for I will carry out your wishes literally. */
     IF ~~ + TalkGeneric.Wish.2
+  END
+
+  IF ~~ TalkGeneric.Wish.1a
+    SAY @10477 /* Since you have greatly assisted my friends to avert the threat against their stronghold, I will help you formulate wishes in your favor. */
+    IF ~~ DO ~SetGlobal("A7FavorWish", "GLOBAL", 2)~ + TalkGeneric.Wish.2
   END
 
   IF ~~ TalkGeneric.Wish.2
