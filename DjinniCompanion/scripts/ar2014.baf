@@ -6,6 +6,5 @@ IF
   Global("A7Q1DaoTrapped", "GLOBAL", 1)
 THEN RESPONSE #100
   SetGlobal("A7Q1DaoTrapped", "GLOBAL", 2)
-  SetGlobal("SPRITE_IS_DEADtrgeni01", "GLOBAL", 1)
   Continue()
 END

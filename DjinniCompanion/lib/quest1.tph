@@ -25,11 +25,12 @@ COPY ~DjinniCompanion/items/a7misc1a.itm~ ~override~
   SAY NAME1 @1602     // Dao Genie Trap
   SAY NAME2 @1602     // Dao Genie Trap
   SAY UNIDENTIFIED_DESC @1604     // This unusually heavy box radiates strong magic which contains the essence of the creature you have trapped within.
-COPY ~DjinniCompanion/items/a7daoimp.eff~ ~override~
-     ~DjinniCompanion/items/a7daoglb.eff~ ~override~
-     ~%ITEM_CMISC1%~                      ~override~
-     ~%ITEM_IMISC1%~                      ~override~
-     ~DjinniCompanion/spells/a7misc1.spl~ ~override~
+COPY ~DjinniCompanion/items/a7daoimp.eff~  ~override~
+     ~DjinniCompanion/items/a7daoglb.eff~  ~override~
+     ~%ITEM_CMISC1%~                       ~override~
+     ~%ITEM_IMISC1%~                       ~override~
+     ~DjinniCompanion/spells/a7misc1.spl~  ~override~
+     ~DjinniCompanion/spells/a7daoimp.spl~ ~override~
 
 // dialogs
 COMPILE ~DjinniCompanion/dialogs/trademeet.d~
