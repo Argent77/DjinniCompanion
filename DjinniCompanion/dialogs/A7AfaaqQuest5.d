@@ -19,6 +19,7 @@ IF ~~ A7AFQQ5.2
       AddFamiliar()
       SetGlobal("A7AfaaqBanterTimer", "GLOBAL", 0)
       SetGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 0)
+      SetGlobal("A7FavorWish", "GLOBAL", 0)
       ChangeAIScript("A7AFAAQ", OVERRIDE)
       ChangeAIScript("A7AFQTLK", CLASS)
       ChangeAIScript("A7AFQLVL", RACE)
