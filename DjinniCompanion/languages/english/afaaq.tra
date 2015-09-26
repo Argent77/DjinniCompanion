@@ -476,6 +476,9 @@
 @10475 = ~Please take care of yourself in battle.~
 @10476 = ~Sure, I will take care of myself if necessary.~
 @10477 = ~Since you have greatly assisted my friends to avert the threat against their stronghold, I will help you formulate wishes in your favor.~
+@10478 = ~Can you tell me more about how you are able to transfer your knowledge to other people?~
+@10479 = ~In my long life I have visited many places, met countless beings and came across a great number of enchanted artifacts. Furthermore, our kind had always been gifted with the powers of divination and illusion.~
+@10480 = ~Theses powers allow me to grant a person access to my accumulated knowledge for a short period of time to determine the true nature of powerful artifacts.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~received Afaaq's blessing~
@@ -1804,6 +1807,18 @@ Since Afaaq is born out of the chaotic forces of air, he can haste himself anyti
 @60095 = ~Select health-protective combat script~
 @60096 = ~Please stop stealing from me!~
 @60097 = ~That is enough!~
+@60098 = ~Transfer Knowledge~
+@60099 = ~Transfer Knowledge
+(Innate Ability/Divination)
+
+Range: 30 ft.
+Duration: 3 rounds
+Casting time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+Over the course of many millennia Afaaq accumulated a vast amount of knowledge about places, peoples, natural and supernatural phenomenons and artifacts created by mortals as well as immortals. This ability allows the targetted creature to access Afaaq's knowledge to identify items of power for a limited amount of time.~
+@60100 = ~Knowledge transferred~
 
 // Afaaq's Epilogues
 @64090 = ~Afaaq continued his journey with <CHARNAME> which took them halfway across Faerûn and back. They defeated raiding parties of sahuagin on the western borders of Tethyr and pushed back an invasion of frost giants threatening Luskan and the surrounding settlements.

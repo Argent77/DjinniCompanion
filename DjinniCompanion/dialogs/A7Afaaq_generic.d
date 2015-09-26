@@ -1669,6 +1669,7 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
@@ -1681,6 +1682,7 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
@@ -1693,6 +1695,7 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
@@ -1706,6 +1709,7 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
@@ -1718,6 +1722,7 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
@@ -1730,6 +1735,7 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
@@ -1743,6 +1749,7 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10349 /* Can you tell me more about your whirlwind power? */ + TalkGeneric.AboutMe.Stats.Powers.GreaterWhirlwind
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
@@ -1758,6 +1765,7 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10349 /* Can you tell me more about your whirlwind power? */ + TalkGeneric.AboutMe.Stats.Powers.GreaterWhirlwind
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10346 /* Can you tell me more about your power to control Air Elementals? */ + TalkGeneric.AboutMe.Stats.Powers.ControlElemental
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
@@ -1765,6 +1773,20 @@ APPEND %afq_dialog%
     SAY @10366 /* Our close link to the elemental forces of air has given us the power to exercise limited control over beings born out of it. */
     = @10367 /* Air Elementals are self-aware entities, born out of the forces of the Elemental Plane of Air. I have the power to bring them under my control for a short time. */
     = @10368 /* Opposing elementals are usually protected against that kind of attack by their summoners. As a result, I will not always be successful in my attempts. */
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10341 /* Can you tell me more about your power to grant wishes? */ + TalkGeneric.AboutMe.Stats.Powers.LimitedWish
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10341 /* Can you tell me more about your power to grant wishes? */ + TalkGeneric.AboutMe.Stats.Powers.Wish
+    ++ @10342 /* Can you tell me more about your innate power to turn invisible? */ + TalkGeneric.AboutMe.Stats.Powers.Invisibility
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10349 /* Can you tell me more about your whirlwind power? */ + TalkGeneric.AboutMe.Stats.Powers.Whirlwind
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10349 /* Can you tell me more about your whirlwind power? */ + TalkGeneric.AboutMe.Stats.Powers.GreaterWhirlwind
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10350 /* Can you tell me more about your power to haste yourself? */ + TalkGeneric.AboutMe.Stats.Powers.Haste
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10351 /* Can you tell me more about your Air Shield power? */ + TalkGeneric.AboutMe.Stats.Powers.AirShield
+    ++ @10478 /* Can you tell me more about how you are able to transfer your knowledge to other people? */ + TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
+    ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
+  END
+
+  IF ~~ TalkGeneric.AboutMe.Stats.Powers.TransferKnowledge
+    SAY @10479 /* In my long life I have visited many places, met countless beings and came across a great number of enchanted artifacts. Furthermore, our kind had always been gifted with the powers of divination and illusion. */
+    = @10480 /* Theses powers allow me to grant a person access to my accumulated knowledge for a short period of time to determine the true nature of powerful artifacts. */
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10341 /* Can you tell me more about your power to grant wishes? */ + TalkGeneric.AboutMe.Stats.Powers.LimitedWish
     + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10341 /* Can you tell me more about your power to grant wishes? */ + TalkGeneric.AboutMe.Stats.Powers.Wish
     ++ @10342 /* Can you tell me more about your innate power to turn invisible? */ + TalkGeneric.AboutMe.Stats.Powers.Invisibility

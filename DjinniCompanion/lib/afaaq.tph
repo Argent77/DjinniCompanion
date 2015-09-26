@@ -54,6 +54,7 @@ COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
   ADD_KNOWN_SPELL ~SPWI522~ #4 ~wizard~     // Minor Spell Turning
   ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
   ADD_KNOWN_SPELL ~A7SPIN2~ #0 ~innate~     // Whirlwind
+  ADD_KNOWN_SPELL ~A7SPIN7~ #0 ~innate~     // Transfer Knowledge
   ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
   ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~
   ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
@@ -69,6 +70,7 @@ COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
   ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~wizard~
   ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~
   ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~wizard~
+  ADD_MEMORIZED_SPELL ~A7SPIN7~ #0 ~innate~ ( 2 )
   ADD_MEMORIZED_SPELL ~A7SPIN2~ #0 ~innate~ ( 3 )
   ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
 
@@ -107,6 +109,7 @@ COPY ~DjinniCompanion/creatures/a7afaaq2.cre~ ~override~
   ADD_KNOWN_SPELL ~A7SPIN4~ #0 ~innate~     // Air Shield
   ADD_KNOWN_SPELL ~A7SPIN5~ #0 ~innate~     // Greater Whirlwind
   ADD_KNOWN_SPELL ~A7SPIN6~ #0 ~innate~     // Control Air Elemental
+  ADD_KNOWN_SPELL ~A7SPIN7~ #0 ~innate~     // Transfer Knowledge
   ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
   ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~ ( 2 )
   ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
@@ -125,6 +128,7 @@ COPY ~DjinniCompanion/creatures/a7afaaq2.cre~ ~override~
   ADD_MEMORIZED_SPELL ~SPWI609~ #5 ~wizard~
   ADD_MEMORIZED_SPELL ~SPWI615~ #5 ~wizard~
   ADD_MEMORIZED_SPELL ~A7SPWI01~ #6 ~wizard~
+  ADD_MEMORIZED_SPELL ~A7SPIN7~ #0 ~innate~ ( 4 )
   ADD_MEMORIZED_SPELL ~A7SPIN6~ #0 ~innate~ ( 3 )
   ADD_MEMORIZED_SPELL ~A7SPIN5~ #0 ~innate~ ( 3 )
   ADD_MEMORIZED_SPELL ~A7SPIN4~ #0 ~innate~ ( 2 )
@@ -329,6 +333,27 @@ COPY ~DjinniCompanion/spells/a7spin6.spl~  ~override~
 COPY ~DjinniCompanion/spells/a7spin6a.eff~ ~override~
      ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
      ~DjinniCompanion/spells/a7spin6c.eff~ ~override~
+
+// Innate Ability: Transfer Knowledge
+COPY ~DjinniCompanion/spells/a7spin7.spl~  ~override~
+  SAY NAME1 @60098    // Transfer Knowledge
+  SAY UNIDENTIFIED_DESC @60099    // Over the course of many millennia Afaaq accumulated a vast amount of knowledge about...
+  // updating displayed string
+  READ_LONG 0x64 ofsAbilities
+  READ_SHORT 0x68 numAbilities
+  READ_LONG 0x6a ofsEffects
+  FOR (i = 0; i < numAbilities; i += 1) BEGIN
+    READ_SHORT (ofsAbilities + 0x1e) numEffects
+    READ_SHORT (ofsAbilities + 0x20) idxEffects
+    SET found = 0
+    FOR (j = 0; j < numEffects && found = 0; j += 1) BEGIN
+      READ_SHORT (ofsEffects + (idxEffects+j)*0x30) fxOp
+      PATCH_IF (fxOp = 139) BEGIN
+        SAY (ofsEffects + (idxEffects+j)*0x30 + 0x04) @60100    // Knowledge transferred
+        SET found = 1
+      END
+    END
+  END
 
 // Spell: Conjure Air Elemental
 COPY ~DjinniCompanion/spells/a7spwi01.spl~ ~override~

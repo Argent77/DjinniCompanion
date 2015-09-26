@@ -476,6 +476,9 @@
 @10475 = ~Pass bitte im Kampf auf Dich auf.~
 @10476 = ~Sicher, ich werde versuchen, Schaden von mir abzuwenden, wenn nötig.~
 @10477 = ~Da Ihr meinen Freunden bei der Verteidigung ihrer Festung eine große Hilfe wart, werde ich Euch als Dank behilflich sein, Wünsche in Eurem Sinne zu formulieren.~
+@10478 = ~Kannst Du mir mehr darüber erzählen, wie Du dein Wissen auf andere Leute übertragen kannst?~
+@10479 = ~Im Laufe meines Lebens habe ich viele Orte besucht, unzählige Wesen getroffen und bin auf eine Vielzahl an verzauberten Gegenständen gestoßen. Des Weiteren besitzt unser Volk die Gabe des Hellsehens und ist erfahren in der Anwendung von Illusionen.~
+@10480 = ~Mit diesen Kräften ausgerüstet, kann ich einer Person für kurze Zeit erlauben, von meinem Wissen Gebrauch zu machen, um die wahre Natur verzauberter Gegenstände zu erkennen.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~empfängt Afaaqs Wohltat~
@@ -1802,6 +1805,18 @@ Da Afaaq aus den chaotischen Kräften der Luft erschaffen wurde, kann er sich zu 
 @60095 = ~Wähle gesundheitsschützendes Kampfskript aus.~
 @60096 = ~Hört bitte auf, mich zu bestehlen!~
 @60097 = ~Schluss jetzt!~
+@60098 = ~Wissen übertragen~
+@60099 = ~Wissen übertragen
+(Angeborene Fähigkeit/Erkenntniszauber)
+
+Reichweite: Lang
+Dauer: 3 Runden
+Zeitaufwand: 5
+Bereich: 1 Wesen
+Rettungswurf: Nein
+
+Im Laufe vieler Jahrtausende hatte Afaaq Gelegenheit, enorme Kenntnisse über Orte, Völker, natürliche und übernatürliche Phänomene und von Sterblichen oder Unsterblichen erschaffene Gegenstände anzusammeln. Diese Fähigkeit erlaubt es der Zielperson, für eine kurze Zeitspanne auf Afaaqs Wissen zurückzugreifen, um die wahre Natur verzauberter Gegenstände zu erfassen.~
+@60100 = ~Wissen übertragen~
 
 // Afaaq's Epilogues
 @64090 = ~Afaaq setzte seine Reise mit <CHARNAME> fort, die sie durch halb Faerûn führte. Sie besiegten Überfalltrupps der Sahuagin an der westlichen Grenze von Tethyr und schlugen einen Angriff der Frostriesen in Luskan und den umgebenden Siedlungen zurück.
