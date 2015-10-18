@@ -9,7 +9,7 @@ IF ~!InPartySlot(LastTalkedToBy, 0) !Name("Imoen2", LastTalkedToBy)~ Statue.NPC
   = @2002    // YOU ARE NOT WORTHY OF MY PRESENCE. BEGONE!
   = @2003    // It retreats as quickly as it came and leaves <HIMHER> slightly shaken.
   IF ~RandomNum(2, 1)~ EXIT
-  IF ~RandomNum(2, 2)~ DO ~MoraleInc(LastTalkedToBy, -10)~ EXIT
+  IF ~RandomNum(2, 2)~ DO ~MoraleInc(LastTalkedToBy, -5)~ EXIT
 END
 
 // First time talk to one of the bhaalspawns
