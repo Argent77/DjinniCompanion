@@ -46,6 +46,7 @@ THEN RESPONSE #100
   EraseJournalEntry(@3805)
   EraseJournalEntry(@3806)
   EraseJournalEntry(@3807)
+  EraseJournalEntry(@3808)
   AddJournalEntry(@3828, QUEST_DONE)    // Quest is over before it has begun...
 END
 

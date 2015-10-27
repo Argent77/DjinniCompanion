@@ -163,6 +163,7 @@ APPEND A7TATHAS
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
         EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)
         Enemy()~ SOLVED_JOURNAL @3820 EXIT    // Tathas Melarn and his drow retinue turned hostile and attacked me...
   END
 
@@ -191,6 +192,7 @@ APPEND A7TATHAS
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
         EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)
         Enemy()~ SOLVED_JOURNAL @3821 EXIT
   END
 
@@ -205,6 +207,7 @@ APPEND A7TATHAS
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
         EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)
         Enemy()~ SOLVED_JOURNAL @3822 EXIT
   END
 
@@ -319,6 +322,7 @@ APPEND A7TATHAS
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
         EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)
         Enemy()~ SOLVED_JOURNAL @3823 EXIT
   END
 
@@ -410,7 +414,8 @@ APPEND A7TATHAS
         EraseJournalEntry(@3804)
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
-        EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3824 EXIT
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3824 EXIT
   END
 
   // Receive a high-level mage scroll
@@ -426,7 +431,8 @@ APPEND A7TATHAS
         EraseJournalEntry(@3804)
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
-        EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3824 EXIT
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3824 EXIT
   END
 END
 
@@ -452,7 +458,8 @@ APPEND A7TATHAS
         EraseJournalEntry(@3804)
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
-        EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3825 EXIT
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3825 EXIT
   END
 
   // Receive Afaaq's soulcage
@@ -469,7 +476,8 @@ APPEND A7TATHAS
         EraseJournalEntry(@3804)
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
-        EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3825 EXIT
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3825 EXIT
   END
 
 
@@ -504,7 +512,8 @@ APPEND A7TATHAS
         EraseJournalEntry(@3804)
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
-        EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3824 EXIT
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3824 EXIT
   END
 
   // Receive two high-level mage scrolls
@@ -521,7 +530,8 @@ APPEND A7TATHAS
         EraseJournalEntry(@3804)
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
-        EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3824 EXIT
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3824 EXIT
   END
 END
 
@@ -549,7 +559,8 @@ APPEND A7TATHAS
         EraseJournalEntry(@3804)
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
-        EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3825 EXIT
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3825 EXIT
   END
 
   // Receive Afaaq's soulcage and a high-level mage scroll
@@ -567,7 +578,8 @@ APPEND A7TATHAS
         EraseJournalEntry(@3804)
         EraseJournalEntry(@3805)
         EraseJournalEntry(@3806)
-        EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3825 EXIT
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3825 EXIT
   END
 
   // *** Talk to Tathas after quest is over ***

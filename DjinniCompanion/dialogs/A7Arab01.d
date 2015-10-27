@@ -129,7 +129,8 @@ IF ~~ Arabani.4.3
       EraseJournalEntry(@3804)
       EraseJournalEntry(@3805)
       EraseJournalEntry(@3806)
-      EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3826 EXIT
+      EraseJournalEntry(@3807)
+      EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3826 EXIT
 END
 
 
@@ -176,7 +177,8 @@ IF ~~ Arabani.7.3
       EraseJournalEntry(@3804)
       EraseJournalEntry(@3805)
       EraseJournalEntry(@3806)
-      EraseJournalEntry(@3807)~ SOLVED_JOURNAL @3827 EXIT
+      EraseJournalEntry(@3807)
+      EraseJournalEntry(@3808)~ SOLVED_JOURNAL @3827 EXIT
 END
 
 END
