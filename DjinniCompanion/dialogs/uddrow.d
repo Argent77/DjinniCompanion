@@ -5,7 +5,7 @@
 APPEND ~RUMORU~
   IF WEIGHT #-1 ~GlobalGT("A7Quest3", "GLOBAL", 1) RandomNum(3,3)~ RUMORU.1
     SAY @3015 /* It appears that House Arabani has fallen on hard times. They were even forced to form an alliance with House Jae'llat to survive. */
-    IF ~~ EXIT
+    IF ~~ UNSOLVED_JOURNAL @3808 EXIT
   END
 END
 
