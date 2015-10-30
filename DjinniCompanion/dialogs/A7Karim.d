@@ -112,7 +112,7 @@ END
 APPEND A7KARIM
   IF ~~ Karim.Intro.4
     SAY @5038 /* Interesting, but not unusual. Do you have business with us, <PRO_RACE>? */
-    + ~OR(2) !Alignment(Player1, MASK_EVIL) ReputationGT(Player1, 9)~ + @5039 /* I couldn't help overhearing your discussion with the smugglers. Is there something I can do to help you? */ + Karim.Intro.5
+    + ~OR(3) !Alignment(Player1, MASK_EVIL) ReputationGT(Player1, 9) CheckStatGT(Player1, 17, CHR)~ + @5039 /* I couldn't help overhearing your discussion with the smugglers. Is there something I can do to help you? */ + Karim.Intro.5
     ++ @5040 /* No, I merely wanted to talk to the smugglers. */ + Karim.GoodBye.1
   END
 
