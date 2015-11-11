@@ -81,6 +81,246 @@ THEN RESPONSE #100
   DestroySelf()
 END
 
+// Assisting Afaaq with a Potion of Fire Resistance
+IF
+  HasItem("POTN02", Player1)
+  Global("MiscPotion", "LOCALS", 2)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN02", 1)
+  DestroyItem("POTN02")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN02", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN02", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Heroism
+IF
+  HasItem("POTN09", Player1)
+  Global("MiscPotion", "LOCALS", 9)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN09", 1)
+  DestroyItem("POTN09")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN09", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN09", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Invulnerability
+IF
+  HasItem("POTN11", Player1)
+  Global("MiscPotion", "LOCALS", 11)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN11", 1)
+  DestroyItem("POTN11")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN11", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN11", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with Oil of Speed
+IF
+  HasItem("POTN14", Player1)
+  Global("MiscPotion", "LOCALS", 14)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN14", 1)
+  DestroyItem("POTN14")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN14", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN14", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Absorption
+IF
+  HasItem("POTN18", Player1)
+  Global("MiscPotion", "LOCALS", 18)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN18", 1)
+  DestroyItem("POTN18")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN18", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN18", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Clarity
+IF
+  HasItem("POTN21", Player1)
+  Global("MiscPotion", "LOCALS", 21)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN21", 1)
+  DestroyItem("POTN21")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN21", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN21", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Cold Resistance
+IF
+  HasItem("POTN22", Player1)
+  Global("MiscPotion", "LOCALS", 22)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN22", 1)
+  DestroyItem("POTN22")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN22", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN22", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Defense
+IF
+  HasItem("POTN24", Player1)
+  Global("MiscPotion", "LOCALS", 24)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN24", 1)
+  DestroyItem("POTN24")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN24", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN24", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Insulation
+IF
+  HasItem("POTN31", Player1)
+  Global("MiscPotion", "LOCALS", 31)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN31", 1)
+  DestroyItem("POTN31")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN31", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN31", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Magic Blocking
+IF
+  HasItem("POTN33", Player1)
+  Global("MiscPotion", "LOCALS", 33)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN33", 1)
+  DestroyItem("POTN33")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN33", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN33", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Magic Protection
+IF
+  HasItem("POTN34", Player1)
+  Global("MiscPotion", "LOCALS", 34)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN34", 1)
+  DestroyItem("POTN34")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN34", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN34", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Magic Shielding
+IF
+  HasItem("POTN35", Player1)
+  Global("MiscPotion", "LOCALS", 35)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN35", 1)
+  DestroyItem("POTN35")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN35", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN35", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Power
+IF
+  HasItem("POTN41", Player1)
+  Global("MiscPotion", "LOCALS", 41)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN41", 1)
+  DestroyItem("POTN41")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN41", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN41", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Freedom
+IF
+  HasItem("POTN45", Player1)
+  Global("MiscPotion", "LOCALS", 45)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN45", 1)
+  DestroyItem("POTN45")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN45", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN45", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Potion of Stone Form
+IF
+  HasItem("POTN46", Player1)
+  Global("MiscPotion", "LOCALS", 46)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("POTN46", 1)
+  DestroyItem("POTN46")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("POTN46", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("POTN46", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
+// Assisting Afaaq with a Brine Potion
+IF
+  HasItem("MISC9Y", Player1)
+  Global("MiscPotion", "LOCALS", 100)
+THEN RESPONSE #100
+  SetGlobal("MiscPotion", "LOCALS", 0)
+  TakePartyItemNum("MISC9Y", 1)
+  DestroyItem("MISC9Y")
+  ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("MISC9Y", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("MISC9Y", Myself))
+  ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
+  DestroySelf()
+END
+
 
 // *** Transfer healing potions to Afaaq ***
 IF

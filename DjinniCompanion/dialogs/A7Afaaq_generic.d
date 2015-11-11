@@ -98,7 +98,9 @@ APPEND %afq_dialog%
     // Offer medical help to the djinni
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) StateCheck(Myself, STATE_POISONED) OR(2) HasItem("POTN20", Player1) HasItem("POTN17", Player1)~ + @10016 /* You are poisoned. Do you need a cure? */ + TalkGeneric.CuringAsked
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) StateCheck(Myself, STATE_DISEASED) HasItem("POTN17", Player1)~ + @10017 /* You are diseased. Do you need a cure? */ + TalkGeneric.CuringAsked
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10018 /* You are hurt. Do you need a healing potion? */ + TalkGeneric.HealingAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) HPPercent(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !HasItem("POTN08", Player1) !HasItem("POTN52", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10018 /* You are hurt. Do you need a healing potion? */ + TalkGeneric.PotionAsked
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1)~ + @10019 /* Would you like to have healing potions for emergency situations? */ + TalkGeneric.StoreHealingPotions
 
     // Changing combat scripts
@@ -151,7 +153,9 @@ APPEND %afq_dialog%
     // Offer medical help to the djinni
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) StateCheck(Myself, STATE_POISONED) OR(2) HasItem("POTN20", Player1) HasItem("POTN17", Player1)~ + @10016 /* You are poisoned. Do you need a cure? */ + TalkGeneric.CuringAsked
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) StateCheck(Myself, STATE_DISEASED) HasItem("POTN17", Player1)~ + @10017 /* You are diseased. Do you need a cure? */ + TalkGeneric.CuringAsked
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10018 /* You are hurt. Do you need a healing potion? */ + TalkGeneric.HealingAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) HPPercent(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !HasItem("POTN08", Player1) !HasItem("POTN52", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10018 /* You are hurt. Do you need a healing potion? */ + TalkGeneric.PotionAsked
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1)~ + @10019 /* Would you like to have healing potions for emergency situations? */ + TalkGeneric.StoreHealingPotions
 
     // Changing combat scripts
@@ -1887,12 +1891,30 @@ APPEND %afq_dialog%
     IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("ExtraCurePotion", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
-  IF ~~ TalkGeneric.HealingAsked
+  IF ~~ TalkGeneric.PotionAsked
     SAY @10383 /* Yes, if you have one to spare? */
-    + ~HasItem("POTN08", Player1)~ + @10384 /* This Potion of Healing should heal your injuries. */ + TalkGeneric.Healing
-    + ~HasItem("POTN52", Player1)~ + @10385 /* This Potion of Extra Healing should heal your injuries. */ + TalkGeneric.HealingExtra
-    + ~HasItem("POTN55", Player1)~ + @10386 /* This Potion of Superior Healing should heal your injuries. */ + TalkGeneric.HealingSuperior
-    ++ @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.HealingNone
+    + ~HPPercentLT(Myself, 100) HasItem("POTN08", Player1)~ + @10384 /* This Potion of Healing should heal your injuries. */ + TalkGeneric.Healing
+    + ~HPPercentLT(Myself, 100) HasItem("POTN52", Player1)~ + @10385 /* This Potion of Extra Healing should heal your injuries. */ + TalkGeneric.HealingExtra
+    + ~HPPercentLT(Myself, 100) HasItem("POTN55", Player1)~ + @10386 /* This Potion of Superior Healing should heal your injuries. */ + TalkGeneric.HealingSuperior
+    + ~HasItem("POTN02", Player1)~ + @10483 /* How about a Potion of Fire Resistance? */ + TalkGeneric.Potion.FireResistance
+    + ~HasItem("POTN22", Player1)~ + @10489 /* How about a Potion of Cold Resistance? */ + TalkGeneric.Potion.ColdResistance
+    + ~HasItem("POTN18", Player1)~ + @10487 /* How about a Potion of Absorption? */ + TalkGeneric.Potion.Absorption
+    + ~HasItem("POTN31", Player1)~ + @10491 /* How about a Potion of Insulation? */ + TalkGeneric.Potion.Insulation
+    + ~HasItem("POTN09", Player1)~ + @10484 /* How about a Potion of Heroism? */ + TalkGeneric.Potion.Heroism
+    + ~HasItem("POTN11", Player1)~ + @10485 /* How about a Potion of Invulnerability? */ + TalkGeneric.Potion.Invulnerability
+    + ~HasItem("POTN14", Player1)~ + @10486 /* How about some Oil of Speed? */ + TalkGeneric.Potion.Speed
+    + ~HasItem("POTN24", Player1)~ + @10490 /* How about a Potion of Defense? */ + TalkGeneric.Potion.Defense
+    + ~HasItem("POTN46", Player1)~ + @10497 /* How about a Potion of Stone Form? */ + TalkGeneric.Potion.StoneForm
+    + ~HasItem("POTN41", Player1)~ + @10495 /* How about a Potion of Power? */ + TalkGeneric.Potion.Power
+    + ~HasItem("POTN33", Player1)~ + @10492 /* How about a Potion of Magic Blocking? */ + TalkGeneric.Potion.MagicBlocking
+    + ~HasItem("POTN34", Player1)~ + @10493 /* How about a Potion of Magic Protection? */ + TalkGeneric.Potion.MagicProtection
+    + ~HasItem("POTN35", Player1)~ + @10494 /* How about a Potion of Magic Shielding? */ + TalkGeneric.Potion.MagicShielding
+    + ~HasItem("POTN45", Player1)~ + @10496 /* How about a Potion of Freedom? */ + TalkGeneric.Potion.Freedom
+    + ~HasItem("POTN21", Player1)~ + @10488 /* How about a Potion of Clarity? */ + TalkGeneric.Potion.Clarity
+    + ~HasItem("MISC9Y", Player1)~ + @10498 /* How about a Brine Potion, brewed from a pool of illithid tadpoles? */ + TalkGeneric.Potion.Brine
+    + ~HPPercent(Myself, 100)~ + @10482 /* I don't have any potions to spare, sorry. */ + TalkGeneric.PotionNone
+    + ~OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10482 /* I don't have any potions to spare, sorry. */ + TalkGeneric.PotionNone
+    + ~!HasItem("POTN08", Player1) !HasItem("POTN52", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.HealingNone
   END
 
   IF ~~ TalkGeneric.Healing
@@ -1913,6 +1935,91 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.HealingNone
     SAY @10391 /* (sigh) Then I have to manage without it. */
     IF ~~ + TalkGeneric.PC.1
+  END
+
+  IF ~~ TalkGeneric.PotionNone
+    SAY ~Then I have to manage without it.~
+    IF ~~ + TalkGeneric.PC.1
+  END
+
+  IF ~~ TalkGeneric.Potion.FireResistance
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 2)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Heroism
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 9)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Invulnerability
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 11)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Speed
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 14)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Absorption
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 18)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Clarity
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 21)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.ColdResistance
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 22)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Defense
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 24)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Insulation
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 31)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.MagicBlocking
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 33)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.MagicProtection
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 34)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.MagicShielding
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 35)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Power
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 41)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Freedom
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 45)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.StoneForm
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 46)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Potion.Brine
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("MiscPotion", "LOCALS", 100)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.StoreHealingPotions
