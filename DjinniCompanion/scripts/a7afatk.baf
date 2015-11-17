@@ -23,3 +23,16 @@ THEN RESPONSE #100
   DisplayStringHead(Myself, @60000)    // Ahh, no! Help me!
   Help()
 END
+
+// Improved Afaaq keeps himself hasted
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 1)
+  Global("AfaaqActiveHaste", "LOCALS", 1)
+  !StateCheck(Myself, STATE_HASTED)
+  CheckStat(Myself, 0, IMPROVEDHASTE)
+  HaveSpellRES("A7SPIN3") // Haste
+THEN
+  RESPONSE #100
+    SpellRES("A7SPIN3", Myself) // Haste
+    Continue()
+END

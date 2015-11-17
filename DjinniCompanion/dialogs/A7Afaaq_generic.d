@@ -107,6 +107,8 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 2)~ + @10475 /* Please take care of yourself in battle. */ + TalkGeneric.BattleSemiActive
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 1)~ + @10021 /* Please engage in battle again. */ + TalkGeneric.BattleActive
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 0)~ + @10020 /* Please don't engage in battle. */ + TalkGeneric.BattlePassive
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) Global("AfaaqActiveHaste", "LOCALS", 0)~ + @10499 /* Please keep yourself hasted constantly. */ + TalkGeneric.EnableHaste
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !Global("AfaaqActiveHaste", "LOCALS", 0)~ + @10500 /* Please don't keep yourself hasted constantly. */ + TalkGeneric.DisableHaste
 
     // Djinni returns into his lamp
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !PartyHasItem("A7DJLMP") !PartyHasItem("A7DJLMPA") !AreaCheck("A77006")~ + @10022 /* Please return into your lamp. */ + TalkGeneric.UnsummonDenied
@@ -162,6 +164,8 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 2)~ + @10475 /* Please take care of yourself in battle. */ + TalkGeneric.BattleSemiActive
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 1)~ + @10021 /* Please engage in battle again. */ + TalkGeneric.BattleActive
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 0)~ + @10020 /* Please don't engage in battle. */ + TalkGeneric.BattlePassive
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) Global("AfaaqActiveHaste", "LOCALS", 0)~ + @10499 /* Please keep yourself hasted constantly. */ + TalkGeneric.EnableHaste
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !Global("AfaaqActiveHaste", "LOCALS", 0)~ + @10500 /* Please don't keep yourself hasted constantly. */ + TalkGeneric.DisableHaste
 
     // Djinni returns into his lamp
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !PartyHasItem("A7DJLMP") !PartyHasItem("A7DJLMPA") !AreaCheck("A77006")~ + @10022 /* Please return into your lamp. */ + TalkGeneric.UnsummonDenied
@@ -1858,6 +1862,16 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.BattleSemiActive
     SAY @10476 /* Sure, I will take care of myself if necessary. */
     IF ~~ DO ~SetGlobal("AfaaqActive", "LOCALS", 2) ChangeAIScript("A7AFATK3", DEFAULT) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.EnableHaste
+    SAY @10501 /* Sure, I will try to keep myself hasted constantly. */
+    IF ~~ DO ~SetGlobal("AfaaqActiveHaste", "LOCALS", 1) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.DisableHaste
+    SAY @10502 /* Alright, I will stop trying to keep myself hasted constantly. */
+    IF ~~ DO ~SetGlobal("AfaaqActiveHaste", "LOCALS", 0) ClearActions(Myself)~ EXIT
   END
 
 

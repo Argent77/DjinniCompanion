@@ -497,6 +497,10 @@
 @10496 = ~How about a Potion of Freedom?~
 @10497 = ~How about a Potion of Stone Form?~
 @10498 = ~How about a Brine Potion, brewed from a pool of illithid tadpoles?~
+@10499 = ~Please keep yourself constantly hasted.~
+@10500 = ~Please don't keep yourself constantly hasted.~
+@10501 = ~Sure, I will try to keep myself constantly hasted.~
+@10502 = ~Alright, I will stop trying to keep myself constantly hasted.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~received Afaaq's blessing~
