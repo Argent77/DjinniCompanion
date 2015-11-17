@@ -80,7 +80,7 @@ THEN RESPONSE #100
   ActionOverride("A7Afaaq", DisplayString("A7Afaaq", @60038))    // turns into gaseous form
   ActionOverride("A7Afaaq", SetGlobalTimer("GaseousTimer", "LOCALS", 29))
   Wait(1)
-  SetGlobal("A7AfaaqGaseous", "GLOBAL", 2)
+  SetGlobal("A7AfaaqGaseous", "GLOBAL", 1)
   SetInterrupt(TRUE)
 END
 
