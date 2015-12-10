@@ -1,6 +1,6 @@
 BACKUP ~DjinniCompanion/backup~
 AUTHOR ~Argent77 at Spellhold Studios~
-VERSION ~v1.7~
+VERSION ~v1.8beta1~
 
 ALWAYS
   ACTION_DEFINE_ARRAY a7noconvert BEGIN setup bg2ee END
@@ -14,7 +14,7 @@ ALWAYS
       reload_array    = a7reload
   END
 
-  ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+  ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
     ACTION_IF (NOT (~%LANGUAGE%~ STRING_EQUAL_CASE ~english~)) BEGIN
       LOAD_TRA ~DjinniCompanion/languages/english/bg2ee.tra~
     END
@@ -94,6 +94,29 @@ BEGIN @3      // Light Version (the djinni only)
   REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee eet~ @4      // This mod requires BG2:ToB or BG2:EE to be installed.
   SUBCOMPONENT @1     // Afaaq, the Djinni Companion
   DESIGNATED 1
+
+  // BG2EE-specific initializations
+  INCLUDE ~DjinniCompanion/lib/bg2ee.tph~
+
+  // Checking for incompatibilities
+  INCLUDE ~DjinniCompanion/lib/prereqs.tph~
+
+  // *** generic stuff first ***
+  INCLUDE ~DjinniCompanion/lib/generic.tph~
+
+  // *** Djinni Afaaq ***
+  INCLUDE ~DjinniCompanion/lib/afaaqlight.tph~
+
+  // *** Installing tilesets ***
+  INCLUDE ~DjinniCompanion/lib/tilesets_light.tph~
+
+
+/////////////////////////////////////////////////////////
+// Afaaq - The Djinni (IWD:EE-specific main component) //
+/////////////////////////////////////////////////////////
+BEGIN @20       // Afaaq, the Djinni Companion (IWD:EE version)
+  REQUIRE_PREDICATE GAME_IS ~iwdee~ @21      // This mod requires IWD:EE to be installed.
+  DESIGNATED 2
 
   // BG2EE-specific initializations
   INCLUDE ~DjinniCompanion/lib/bg2ee.tph~

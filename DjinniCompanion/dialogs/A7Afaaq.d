@@ -265,7 +265,6 @@ END
 
 
 // *** When entered the djinni lamp interior the first time ***
-//IF ~InPartySlot(LastTalkedToBy, 0) AreaCheck("A77006") Global("LampInvitation", "LOCALS", 1) Global("BanterActive", "LOCALS", 0)~ TalkDjinniLampInterior.1
 IF ~Name("A7Q6COPY", LastTalkedToBy) AreaCheck("A77006") Global("LampInvitation", "LOCALS", 1) Global("BanterActive", "LOCALS", 0)~ TalkDjinniLampInterior.1
   SAY @11227 /* Welcome to my home, <CHARNAME>. */
   = @11228 /* After you broke the enchantments which bound me to the lamp, I have tried to make this pocket plane more homely by creating this small platform of solid matter. */

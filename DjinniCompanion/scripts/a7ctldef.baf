@@ -79,6 +79,7 @@ THEN RESPONSE #100
   ActionOverride("A7Afaaq", ApplySpellRES("A7MISTA", Myself))
   ActionOverride("A7Afaaq", DisplayString("A7Afaaq", @60038))    // turns into gaseous form
   ActionOverride("A7Afaaq", SetGlobalTimer("GaseousTimer", "LOCALS", 29))
+  ActionOverride("A7Afaaq", MakeUnselectable(2))
   Wait(1)
   SetGlobal("A7AfaaqGaseous", "GLOBAL", 1)
   SetInterrupt(TRUE)
@@ -100,9 +101,10 @@ THEN RESPONSE #100
   ApplySpellRES("A7DISPEL", "A7Afaaq")
   ApplySpellRES("A7IMMUN", "A7Afaaq")
   SetInterrupt(FALSE)
-  ActionOverride("A7Afaaq", ApplySpellRES("A7DIE", Myself))    // make the djinni unselectable
-  ActionOverride("A7Afaaq", DisplayString(Myself, 14026))    // Death
-  ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
+  ActionOverride("A7Afaaq", ApplySpellRES("A7DIE", Myself))   // make the djinni unselectable
+  ActionOverride("A7Afaaq", DisplayString(Myself, @201))      // Death
+  ActionOverride("A7Afaaq", SetSequence(%seq_die%))
+  ActionOverride("A7Afaaq",MakeUnselectable(2))
   SmallWait(25)
   ActionOverride("A7Afaaq", DestroySelf())
   SetInterrupt(TRUE)

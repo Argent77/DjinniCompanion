@@ -53,7 +53,7 @@ THEN RESPONSE #100
 END
 
 IF
-  HasItem("POTN52", Myself)
+  HasItem("%itm_potn52%", Myself)
   OR(2)
     Global("A7Quest3", "GLOBAL", 6)
     See(NearestEnemyOf(Myself))
@@ -62,7 +62,7 @@ IF
 THEN RESPONSE #100
   SetGlobalTimer("A7DrankPotionTimer", "LOCALS", ONE_ROUND)
   DisplayStringHead(Myself, 46150) // quaffs a potion
-  UseItem("POTN52", Myself)
+  UseItem("%itm_potn52%", Myself)
   Continue()
 END
 

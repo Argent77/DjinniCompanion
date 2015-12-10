@@ -1,20 +1,37 @@
 // *** Checks for possible incompatibilities ***
 
-// correcting improper creature class types
-COPY_EXISTING ~elemyanc.cre~ ~override~
-              ~finsol02.cre~ ~override~
-              ~senstalk.cre~ ~override~
-              ~stalke.cre~   ~override~
-  PATCH_IF (SOURCE_SIZE > 0x2d3 && BYTE_AT 0x273 != 186) BEGIN
-    WRITE_BYTE 0x273 186      // Class type: ELEMENTAL_AIR
-  END ELSE BEGIN
-    TEXT_SPRINT filename ~%SOURCE_FILE%~
-    TEXT_SPRINT restype ~Creature~
-    PATCH_WARN @31      // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
-  END
-  BUT_ONLY
+// dealing with game-specific differences
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  OUTER_TEXT_SPRINT set_iwdee_var ~SetGlobal("A7AfaaqIwdee", "GLOBAL", 1)~
+  OUTER_TEXT_SPRINT seq_awake ~AWAKE~
+  OUTER_TEXT_SPRINT seq_die ~DIE~
+  OUTER_TEXT_SPRINT seq_cast ~CAST~
+  OUTER_TEXT_SPRINT itm_potn52 ~EXTHEAL~
+END ELSE BEGIN
+  OUTER_TEXT_SPRINT set_iwdee_var ~~
+  OUTER_TEXT_SPRINT seq_awake ~SEQ_AWAKE~
+  OUTER_TEXT_SPRINT seq_die ~SEQ_DIE~
+  OUTER_TEXT_SPRINT seq_cast ~SEQ_CAST~
+  OUTER_TEXT_SPRINT itm_potn52 ~POTN52~
+END
 
-// fix a bug in TobEx by disabling a specific option
+// correcting improper creature class types
+ACTION_IF (GAME_IS ~tob bgt bg2ee eet~) BEGIN
+  COPY_EXISTING ~elemyanc.cre~ ~override~
+                ~finsol02.cre~ ~override~
+                ~senstalk.cre~ ~override~
+                ~stalke.cre~   ~override~
+    PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+      WRITE_BYTE 0x273 186      // Class type: ELEMENTAL_AIR
+    END ELSE BEGIN
+      TEXT_SPRINT filename ~%SOURCE_FILE%~
+      TEXT_SPRINT restype ~Creature~
+      PATCH_WARN @31      // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+    END
+    BUT_ONLY
+END
+
+// work around a bug in TobEx by disabling a specific option
 ACTION_IF (FILE_EXISTS ~TobEx_ini/TobExTweak.ini~) BEGIN
   COPY + "TobEx_ini/TobExCore.ini" "TobEx_ini/TobExCore.ini"
     REPLACE_TEXTUALLY "Cast Spell On Condition Mod=1" "Cast Spell On Condition Mod=0"

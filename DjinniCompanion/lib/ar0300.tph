@@ -40,4 +40,4 @@ THEN RESPONSE #100
   ActionOverride("A7Afaaq", StartDialogNoSet(Player1))
 END
 >>>>>>>>
-COMPILE ~djinnicompanion/inline/a70300t1.baf~
+COMPILE EVALUATE_BUFFER ~djinnicompanion/inline/a70300t1.baf~

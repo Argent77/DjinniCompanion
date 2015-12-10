@@ -19,15 +19,15 @@ END
 
 // Assisting Afaaq with extra healing potions
 IF
-  HasItem("POTN52", Player1)
+  HasItem("%itm_potn52%", Player1)
   Global("ExtraHealingPotion", "LOCALS", 1)
 THEN RESPONSE #100
   SetGlobal("ExtraHealingPotion", "LOCALS", 0)
-  TakePartyItemNum("POTN52", 1)
-  DestroyItem("POTN52")
+  TakePartyItemNum("%itm_potn52%", 1)
+  DestroyItem("%itm_potn52%")
   ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
-  ActionOverride("A7Afaaq", CreateItem("POTN52", 1, 0, 0))
-  ActionOverride("A7Afaaq", UseItem("POTN52", Myself))
+  ActionOverride("A7Afaaq", CreateItem("%itm_potn52%", 1, 0, 0))
+  ActionOverride("A7Afaaq", UseItem("%itm_potn52%", Myself))
   ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
   ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 2))
   DestroySelf()
@@ -310,6 +310,7 @@ END
 IF
   HasItem("MISC9Y", Player1)
   Global("MiscPotion", "LOCALS", 100)
+  Global("A7AfaaqIwdee", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("MiscPotion", "LOCALS", 0)
   TakePartyItemNum("MISC9Y", 1)
@@ -399,10 +400,10 @@ IF
   Global("GiveExtraHealingPotion", "LOCALS", 1)
 THEN RESPONSE #100
   SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
-  TakePartyItemNum("POTN52", 1)
-  DestroyItem("POTN52")
+  TakePartyItemNum("%itm_potn52%", 1)
+  DestroyItem("%itm_potn52%")
   ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
-  ActionOverride("A7Afaaq", CreateItem("POTN52", 1, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("%itm_potn52%", 1, 0, 0))
   ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
   ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 2))
   DisplayString("A7Afaaq", @60044)    // received one extra healing potion
@@ -413,10 +414,10 @@ IF
   Global("GiveExtraHealingPotion", "LOCALS", 2)
 THEN RESPONSE #100
   SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
-  TakePartyItemNum("POTN52", 2)
-  DestroyItem("POTN52")
+  TakePartyItemNum("%itm_potn52%", 2)
+  DestroyItem("%itm_potn52%")
   ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
-  ActionOverride("A7Afaaq", CreateItem("POTN52", 2, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("%itm_potn52%", 2, 0, 0))
   ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
   ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 4))
   DisplayString("A7Afaaq", @60045)    // received two extra healing potions
@@ -427,10 +428,10 @@ IF
   Global("GiveExtraHealingPotion", "LOCALS", 3)
 THEN RESPONSE #100
   SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
-  TakePartyItemNum("POTN52", 3)
-  DestroyItem("POTN52")
+  TakePartyItemNum("%itm_potn52%", 3)
+  DestroyItem("%itm_potn52%")
   ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
-  ActionOverride("A7Afaaq", CreateItem("POTN52", 3, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("%itm_potn52%", 3, 0, 0))
   ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
   ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 6))
   DisplayString("A7Afaaq", @60046)    // received three extra healing potions
@@ -441,10 +442,10 @@ IF
   Global("GiveExtraHealingPotion", "LOCALS", 4)
 THEN RESPONSE #100
   SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
-  TakePartyItemNum("POTN52", 4)
-  DestroyItem("POTN52")
+  TakePartyItemNum("%itm_potn52%", 4)
+  DestroyItem("%itm_potn52%")
   ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
-  ActionOverride("A7Afaaq", CreateItem("POTN52", 4, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("%itm_potn52%", 4, 0, 0))
   ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
   ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 8))
   DisplayString("A7Afaaq", @60047)    // received four extra healing potions
@@ -455,10 +456,10 @@ IF
   Global("GiveExtraHealingPotion", "LOCALS", 5)
 THEN RESPONSE #100
   SetGlobal("GiveExtraHealingPotion", "LOCALS", 0)
-  TakePartyItemNum("POTN52", 5)
-  DestroyItem("POTN52")
+  TakePartyItemNum("%itm_potn52%", 5)
+  DestroyItem("%itm_potn52%")
   ActionOverride("A7Afaaq", CreateItem("A7DUMMY", 1, 0, 0))
-  ActionOverride("A7Afaaq", CreateItem("POTN52", 5, 0, 0))
+  ActionOverride("A7Afaaq", CreateItem("%itm_potn52%", 5, 0, 0))
   ActionOverride("A7Afaaq", DestroyItem("A7DUMMY"))
   ActionOverride("A7Afaaq", IncrementGlobal("AfaaqPotions", "LOCALS", 10))
   DisplayString("A7Afaaq", @60048)    // received five extra healing potions
@@ -1077,6 +1078,7 @@ END
 
 IF
   Global("WishO_Quest", "LOCALS", 1)
+  Global("A7AfaaqIwdee", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("WishO_Quest", "LOCALS", 0)
   SetGlobal("wishQuest", "GLOBAL", 1)
@@ -1087,6 +1089,7 @@ END
 
 IF
   Global("WishO_Raissa", "LOCALS", 1)
+  Global("A7AfaaqIwdee", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("WishO_Raissa", "LOCALS", 0)
   SetGlobal("A7WishRestoreRaissa", "GLOBAL", 1)

@@ -39,7 +39,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
 
 // Dummy creature which triggers the teleporter sequence to A77004
 COPY ~DjinniCompanion/creatures/a7q2tel1.cre~ ~override~
-COMPILE ~DjinniCompanion/scripts/a7q2tel1.baf~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/scripts/a7q2tel1.baf~
 
 // *** 3D visual effects ***
 COPY ~DjinniCompanion/spells/a7shair.vvc~ ~override~

@@ -139,6 +139,34 @@
 @4203 = ~You are indeed a selfish creature. I can not stand this anymore!~
 @4204 = ~I give up! In my present form I am unable to accomplish anything. You have won and I will heed your commands.~
 
+// dialog lines (IWD)
+@4300 = ~I happen to have a djinni lamp in my possession. Is it possible to break the enchantment that binds the djinni to the lamp?~
+@4301 = ~I have reconsidered. Please try to break the seals, which restore some of Afaaq's powers.~
+@4302 = ~I may be known as a seer, but I can also cast a spell or two. Let me see that lamp of yours.~
+@4303 = ~Here you go.~
+@4304 = ~Hmm, the enchantments are old and powerful. I can try to break the minor seals, but that will only restore some of the djinni's powers. He will still be bound to the lamp.~
+@4305 = ~That's certainly an improvement to his current state. Please do it.~
+@4306 = ~On second thought, I'd like to keep the djinni as he is.~
+@4307 = ~I happen to have a djinni lamp in my possession. Do you have any means to break the enchantment that binds the djinni to the lamp?~
+@4308 = ~I have reconsidered. Please try to break the enchantment on the djinni lamp.~
+@4309 = ~I have reconsidered. I'm ready to pay your fee of 20,000 gold. Please try to break the enchantment on the djinni lamp.~
+@4310 = ~I have reconsidered. I'm ready to pay your fee of 16,000 gold. Please try to break the enchantment on the djinni lamp.~
+@4311 = ~Hmm, this is a curious request. I have something in my possession that could help me to perform the task you have requested.~
+@4312 = ~It is an artifact that contains potent magic to break even ancient and powerful enchantments as I can sense on that lamp of yours. Coincidentally, I also happen to know how to handle this item properly.~
+@4313 = ~I see where this is going. How much will it cost me?~
+@4314 = ~On second thought, I'd like to keep the djinni as he is. Farewell, Nym.~
+@4315 = ~You must understand that artifacts of this quality are hard to come by. So I am asking for the modest sum of 20,000 gold for my services.~
+@4316 = ~Is there no way to lower the price?~
+@4317 = ~Alright, I will pay your fee.~
+@4318 = ~That's too expensive for me. I have to decline your offer for now. Farewell, Nym.~
+@4319 = ~Unfortunately not. The artifact is very expensive, after all. Do we have a deal?~
+@4320 = ~Well, I'm not eager to set a precedence. But I could make an exception to you, outlander, as long as you don't spread words about it. I can lower the price to 16,000 gold. Do you accept?~
+@4321 = ~You have made a wise decision. Please let me take a closer look at the lamp.~
+@4322 = ~This will only take a moment.~
+@4323 = ~Unfortunately, I was not able to break all the enchantments. The djinni is still bound to the lamp, but I could restore most of his powers.~
+@4324 = ~Since I could not fulfill my side of the deal satisfactorily, I will lower the original fee by 4000 gold.~
+@4325 = ~Very well. I can try to break the enchantment with a powerful artifact I have in my possession.~
+
 
 // journal entries
 @4800 = ~The Gift of Freedom

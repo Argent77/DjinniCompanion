@@ -1,0 +1,52 @@
+/** Combat script for "hostile" Afaaq when part of Yxumonei's army */
+
+IF
+  Global("YXUN_ATTACK", "MYAREA", 0)
+THEN
+  RESPONSE #100
+    NoAction()
+END
+
+// Initiate combat action
+IF
+  !Global("YXUN_ATTACK", "MYAREA", 0)
+  !See([PC])
+  ActionListEmpty()
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
+
+// Protect yourself if hurt
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Myself, STATE_MIRRORIMAGE)
+  HPPercentLT(Myself, 50)
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN RESPONSE #100
+  Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+// Cast the occasional Magic Missile
+IF
+  See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("CastMissile", "LOCALS")
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN RESPONSE #100
+  SetGlobalTimer("CastMissile", "LOCALS", 6)
+  Spell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+  Continue()
+END
+
+// Retaliate if possible
+IF
+  AttackedBy(NearestEnemyOf(Myself),DEFAULT)
+THEN RESPONSE #100
+  AttackReevaluate(LastAttackerOf(Myself), 45)
+END
+
+// Attack nearby enemies
+IF
+  See(NearestEnemyOf(Myself))
+THEN RESPONSE #100
+  AttackReevaluate(LastSeenBy(Myself), 45)
+END

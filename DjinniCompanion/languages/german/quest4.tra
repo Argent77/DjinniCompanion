@@ -139,6 +139,34 @@
 @4203 = ~Ihr seid wahrhaftig eine selbstsüchtige Kreatur. Damit seid Ihr zu weit gegangen!~
 @4204 = ~Ich gebe auf! In meiner gegenwärtigen Form kann ich Eurer Macht nichts entgegensetzen. Ihr habt gewonnen und ich werde mich Eurem Willen unterwerfen.~
 
+// dialog lines (IWD)
+@4300 = ~Ich habe zufälligerweise eine Dschinnlampe in meinem Besitz. Wäre es möglich, die Verzauberung zu brechen, welche den Dschinn an die Lampe bindet?~ 
+@4301 = ~Ich habe es mir anders überlegt. Versucht bitte, die Siegel der Dschinnlampe zu brechen, um Afaaqs Kräfte wiederherzustellen.~
+@4302 = ~Ich mag zwar als Seherin bekannt sein, aber ich kann immer noch den einen oder anderen Zauber sprechen. Zeigt mir doch mal Eure Lampe.~
+@4303 = ~Bitte sehr.~
+@4304 = ~Hmm, die Verzauberungen scheinen alt und mächtig zu sein. Ich kann versuchen, die kleineren Siegel zu brechen. Aber das gibt dem Dschinn nur einige seiner Kräfte zurück. Er wird weiterhin an die Lampe gebunden sein.~
+@4305 = ~Das ist auf jeden Fall besser als sein jetziger Zustand. Bitte versucht es.~
+@4306 = ~Bei nochmaliger Überlegung möchte ich den Dschinn lieber im gegenwärtigen Zustand behalten.~
+@4307 = ~Ich habe zufälligerweise eine Dschinnlampe in meinem Besitz. Gibt es eine Möglichkeit, die Verzauberung zu brechen, welche den Dschinn an die Lampe bindet?~
+@4308 = ~Ich habe es mir anders überlegt. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
+@4309 = ~Ich habe es mir anders überlegt. Ich bin bereit, Euren Preis von 20.000 Goldmünzen zu zahlen. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
+@4310 = ~Ich habe es mir anders überlegt. Ich bin bereit, Euren Preis von 16.000 Goldmünzen zu zahlen. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
+@4311 = ~Hmm, das ist eine ungewöhnliche Bitte. Aber ich habe vielleicht etwas in meinem Besitz, das mir behilflich sein kann, Euren Wunsch zu erfüllen.~
+@4312 = ~Es ist ein Artefakt, das mit starker Magie ausgestattet ist. Es kann selbst solch alte und mächtige Verzauberungen brechen, wie ich sie an Eurer Lampe spüre. Wie der Zufall so will, besitze ich auch das nötige Wissen, um die Magie dieses Gegenstands freizusetzen.~
+@4313 = ~Ich sehe schon, wohin das führt. Wieviel wird es mich kosten?~
+@4314 = ~Bei nochmaliger Überlegung möchte ich den Dschinn lieber im gegenwärtigen Zustand behalten. Lebt wohl, Nym.~
+@4315 = ~Ihr müsst verstehen, dass Artefakte dieser Qualität nur sehr schwer zu bekommen sind. Ich verlange nur die bescheidene Summe von 20.000 Goldmünzen für meine Dienste.~
+@4316 = ~Gibt es keine Möglichkeit, den Preis zu senken?~
+@4317 = ~In Ordnung. Ich werde Euren Preis zahlen.~
+@4318 = ~Das ist mir zu teuer. Ich muss Euer Angebot fürs Erste ablehnen. Lebt wohl, Nym.~
+@4319 = ~Die gibt es leider nicht. Dieses Artefakt ist immerhin sehr wertvoll. Seid Ihr mit dem Preis einverstanden?~
+@4320 = ~Nun, ich bin nicht wirklich bereit, einen Präzedenzfall zu schaffen. Aber ich könnte für Euch Fremdländer eine Ausnahme machen, sofern Ihr mir versprecht, kein Wort darüber zu verlieren. Wie wäre es mit 16.000 Goldmünzen?~
+@4321 = ~Ihr habt eine weise Entscheidung getroffen. Lasst mich bitte einen genaueren Blick auf die Lampe werfen.~
+@4322 = ~Das wird nur einen Moment dauern.~
+@4323 = ~Leider konnte ich nicht alle Verzauberungen brechen. Der Dschinn ist immer noch an die Lampe gebunden, aber ich konnte zumindest die meisten seiner Kräfte wiederherstellen.~
+@4324 = ~Da ich meinen Teil der Abmachung nicht zur vollen Zufriedenheit erfüllen konnte, werde ich Euch 4000 Goldmünzen von meinem ursprünglichen Preis erstatten.~
+@4325 = ~Nun gut. Ich kann versuchen, die Verzauberung mittels eines mächtigen Artefakts zu brechen, das sich in meinem Besitz befindet.~
+
 
 // journal entries
 @4800 = ~Das Geschenk der Freiheit

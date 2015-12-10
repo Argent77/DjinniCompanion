@@ -78,6 +78,7 @@ END
 // Battle actions
 // Use healing potions when wounded
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   OR(2)
     See([PC])
     ActuallyInCombat()
@@ -87,25 +88,27 @@ IF
   Global("AfaaqDuelLost", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN55", Myself)
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   OR(2)
     See([PC])
     ActuallyInCombat()
-  HasItem("POTN52", Myself)
+  HasItem("%itm_potn52%", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   HPPercentLT(Myself, 50)
   Global("AfaaqDuelLost", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
-  UseItem("POTN52", Myself)
+  DisplayString(Myself, @200)    // quaffs a potion
+  UseItem("%itm_potn52%", Myself)
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   OR(2)
     See([PC])
     ActuallyInCombat()
@@ -115,13 +118,14 @@ IF
   Global("AfaaqDuelLost", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN08", Myself)
 END
 
 
 IF
   See([PC])
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Myself, STATE_INVISIBLE)
   Global("AfaaqDuelLost", "LOCALS", 0)
   Global("AfaaqDuelPrep", "LOCALS", 0)
@@ -132,6 +136,7 @@ END
 
 IF
   See([PC])
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   StateCheck(Myself, STATE_INVISIBLE)
   HaveSpellRES("A7SPIN4")
   Global("AfaaqDuelLost", "LOCALS", 0)
@@ -143,6 +148,7 @@ END
 
 IF
   See([PC])
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   StateCheck(Myself, STATE_INVISIBLE)
   !HasBounceEffects(Myself)
   !HasImmunityEffects(Myself) 
@@ -153,6 +159,7 @@ THEN RESPONSE #100
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   See([PC])
   HaveSpell(WIZARD_MIRROR_IMAGE)
   Global("AfaaqDuelLost", "LOCALS", 0)
@@ -163,6 +170,7 @@ THEN RESPONSE #100
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   OR(2)
     StateCheck(Player1, STATE_INVISIBLE)
     StateCheck(Player1, STATE_IMPROVEDINVISIBILITY)
@@ -177,6 +185,7 @@ THEN RESPONSE #100
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   OR(2)
     StateCheck(Player1, STATE_INVISIBLE)
     StateCheck(Player1, STATE_IMPROVEDINVISIBILITY)
@@ -191,6 +200,7 @@ END
 
 IF
   See([PC])
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Myself, STATE_INVISIBLE)
   !StateCheck(Myself, STATE_IMPROVEDINVISIBILITY)
   HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
@@ -201,6 +211,7 @@ END
 
 IF
   See([PC])
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Myself, STATE_INVISIBLE)
   !StateCheck(Myself, STATE_IMPROVEDINVISIBILITY)
   Global("AfaaqDuelLost", "LOCALS", 0)
@@ -212,6 +223,7 @@ THEN
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   See(Player1)
   HaveSpell(WIZARD_CHAIN_LIGHTNING)
   Global("AfaaqDuelLost", "LOCALS", 0)
@@ -220,6 +232,7 @@ THEN RESPONSE #100
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   See(Player1)
   HaveSpell(WIZARD_LIGHTNING_BOLT)
   Global("AfaaqDuelLost", "LOCALS", 0)
@@ -228,6 +241,7 @@ THEN RESPONSE #100
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   See(Player1)
   !Range([PC], 4)
   HaveSpell(WIZARD_MAGIC_MISSILE)
@@ -237,6 +251,7 @@ THEN RESPONSE #100
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   See(Player1)
   Range([PC], 4)
   HaveSpell(WIZARD_MAGIC_MISSILE)
@@ -249,6 +264,7 @@ THEN
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   See([PC])
   Global("AfaaqDuelLost", "LOCALS", 0)
   Global("AfaaqDuelPrep", "LOCALS", 2)

@@ -13,7 +13,7 @@ THEN RESPONSE #100
   ActionOverride("A7Afaaq", SetGlobal("initialize", "LOCALS", 1))
   ActionOverride("A7Afaaq", ApplySpellRES("A7REST", Myself))
   ActionOverride("A7Afaaq", Activate(Myself))
-  ActionOverride("A7Afaaq", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Afaaq", SetSequence(%seq_awake%))
   ActionOverride("A7Afaaq", CreateVisualEffectObject("A7AFQSUM", Myself))
   ChangeEnemyAlly("A7Afaaq", FAMILIAR)  // restoring player control
   Wait(3)

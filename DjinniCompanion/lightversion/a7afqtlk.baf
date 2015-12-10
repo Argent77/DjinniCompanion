@@ -1,0 +1,8 @@
+// *** Actions for interaction with party members for the genie Afaaq ***
+
+IF
+  AreaCheck("A77006")
+  Global("LampInvitation", "LOCALS", 1)
+THEN RESPONSE #100
+  StartDialogNoSet("A7Q6COPY")
+END

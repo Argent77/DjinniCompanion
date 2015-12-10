@@ -22,7 +22,13 @@ END ELSE BEGIN
 END
 
 // Sounds
-COPY ~DjinniCompanion/misc/a7afq01.wav~ ~override~
+COPY
+  ~DjinniCompanion/misc/a7afq01.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx01.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx02.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx03.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx04.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx05.wav~ ~override~
 
 // Djinni Afaaq
 COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
@@ -35,6 +41,11 @@ COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
   SAY SELECT_COMMON4 @60033   // [Djinni laughter]
   SAY SELECT_COMMON5 @60034   // [Silence]
   SAY SELECT_COMMON6 @60034   // [Silence]
+  SAY CRITICAL_HIT @60104     // [Ah hay!]
+  SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
+  SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
+  SAY DAMAGE @60107           // [SFX]
+  SAY HURT @60108             // [SFX]
   REMOVE_KNOWN_SPELLS
   REMOVE_MEMORIZED_SPELLS
   ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
@@ -84,6 +95,11 @@ COPY ~DjinniCompanion/creatures/a7afaaq2.cre~ ~override~
   SAY SELECT_COMMON4 @60033   // [Djinni laughter]
   SAY SELECT_COMMON5 @60034   // [Silence]
   SAY SELECT_COMMON6 @60034   // [Silence]
+  SAY CRITICAL_HIT @60104     // [Ah hay!]
+  SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
+  SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
+  SAY DAMAGE @60107           // [SFX]
+  SAY HURT @60108             // [SFX]
   REMOVE_KNOWN_SPELLS
   REMOVE_MEMORIZED_SPELLS
   ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
@@ -160,8 +176,13 @@ COPY ~DjinniCompanion/items/a7djlmpa.itm~ ~override~
 
 // Adding conversation entries for the conversable items
 COPY_EXISTING ~itemdial.2da~ ~override~
-  INSERT_2DA_ROW 0 3 ~A7DJLMPA      5689   A7DJLMP~
-  INSERT_2DA_ROW 0 3 ~A7DJLMP       5689   A7DJLMP~
+  PATCH_IF (GAME_IS ~iwdee~) BEGIN
+    SET strref_converse = RESOLVE_STR_REF (@60101)  // Converse
+  END ELSE BEGIN
+    SET strref_converse = 5689  // Converse
+  END
+  INSERT_2DA_ROW 0 3 ~A7DJLMPA      %strref_converse%   A7DJLMP~
+  INSERT_2DA_ROW 0 3 ~A7DJLMP       %strref_converse%   A7DJLMP~
 
 // Afaaq's Quick Menu item
 COPY ~DjinniCompanion/items/a7qmenu.itm~ ~override~
@@ -242,11 +263,12 @@ COPY ~DjinniCompanion/creatures/a7afqhlp.cre~ ~override/a7afqqm.cre~
   WRITE_ASCII 0x248 ~A7AFQQM~ #8
   WRITE_ASCII 0x280 ~A7AFQQM~ #32
 
-COMPILE ~DjinniCompanion/scripts/a7ctldef.baf~
-        ~DjinniCompanion/scripts/a7afqhlp.baf~
-        ~DjinniCompanion/scripts/a7afqwsh.baf~
-        ~DjinniCompanion/scripts/a7afqqm.baf~
-        ~DjinniCompanion/scripts/a7kduel.baf~
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a7ctldef.baf~
+  ~DjinniCompanion/scripts/a7afqhlp.baf~
+  ~DjinniCompanion/scripts/a7afqwsh.baf~
+  ~DjinniCompanion/scripts/a7afqqm.baf~
+  ~DjinniCompanion/scripts/a7kduel.baf~
 
 
 // Innate Ability: Invisibility
@@ -300,7 +322,7 @@ END
 COPY ~DjinniCompanion/items/a7spin5.itm~ ~override~
   SAY NAME1 ~Whirlwind Effect~
   SAY NAME2 ~Whirlwind Effect~
-COMPILE ~DjinniCompanion/scripts/a7spin5.baf~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/scripts/a7spin5.baf~
 
 // Innate Ability: Haste
 COPY ~DjinniCompanion/spells/a7spin3.spl~  ~override~
@@ -331,8 +353,9 @@ COPY ~DjinniCompanion/spells/a7spin6.spl~  ~override~
   SAY NAME1 @60027    // Control Aerial Creatures
   SAY UNIDENTIFIED_DESC @60086    // This spell allows Afaaq to take control over any creature of aerial origin...
 COPY ~DjinniCompanion/spells/a7spin6a.eff~ ~override~
-     ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
      ~DjinniCompanion/spells/a7spin6c.eff~ ~override~
+COPY ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
+  SAY 0x1c @60109   // Controlled
 
 // Innate Ability: Transfer Knowledge
 COPY ~DjinniCompanion/spells/a7spin7.spl~  ~override~
@@ -424,6 +447,8 @@ COPY ~DjinniCompanion/spells/a7spsv1.spl~ ~override~
 
 // Visual effects
 COPY ~DjinniCompanion/spells/a7afqsum.vvc~ ~override~     // Afaaq summoning effect
+     ~DjinniCompanion/spells/a7afqsum.bam~ ~override~
+     ~DjinniCompanion/spells/a7afqsum.wav~ ~override~
      ~DjinniCompanion/spells/a7afqlmp.vvc~ ~override~     // Magical effect when entering the djinni lamp
 
 // Installing soundtrack for conversation with CHARNAME
@@ -440,36 +465,37 @@ THEN RESPONSE #100
   DestroySelf()
 END
 >>>>>>>>
-COMPILE ~DjinniCompanion/inlined/a7khalid.baf~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/inlined/a7khalid.baf~
 
 
 // Scripts
-COMPILE ~DjinniCompanion/scripts/a7afaaq.baf~
-        ~DjinniCompanion/scripts/a7afqini.baf~
-        ~DjinniCompanion/scripts/a7afqin2.baf~
-        ~DjinniCompanion/scripts/a7afqin3.baf~
-        ~DjinniCompanion/scripts/a7afqlvl.baf~
-        ~DjinniCompanion/scripts/a7afatk.baf~
-        ~DjinniCompanion/scripts/a7afatk2.baf~
-        ~DjinniCompanion/scripts/a7afatk3.baf~
-        ~DjinniCompanion/scripts/a7afatkg.baf~
-        ~DjinniCompanion/scripts/a7afatkx.baf~
-        ~DjinniCompanion/scripts/a7afqup1.baf~
-        ~DjinniCompanion/scripts/a7afqup2.baf~
-        ~DjinniCompanion/scripts/a7cut02.baf~
-        // Edwin's attempt to steal the lamp
-        ~DjinniCompanion/scripts/a7cut03a.baf~
-        ~DjinniCompanion/scripts/a7cut03b.baf~
-        ~DjinniCompanion/scripts/a7cut03c.baf~
-        ~DjinniCompanion/scripts/a7cut03d.baf~
-        // Fight with Korgan
-        ~DjinniCompanion/scripts/a7afatkk.baf~
-        ~DjinniCompanion/scripts/a7korgan.baf~
-        // Jaheira and Khalid
-        ~DjinniCompanion/scripts/a7cut04a.baf~
-        ~DjinniCompanion/scripts/a7cut04b.baf~
-        // Afaaq comes out of his lamp and is about to leave CHARNAME
-        ~DjinniCompanion/scripts/a7cut05.baf~
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a7afaaq.baf~
+  ~DjinniCompanion/scripts/a7afqini.baf~
+  ~DjinniCompanion/scripts/a7afqin2.baf~
+  ~DjinniCompanion/scripts/a7afqin3.baf~
+  ~DjinniCompanion/scripts/a7afqlvl.baf~
+  ~DjinniCompanion/scripts/a7afatk.baf~
+  ~DjinniCompanion/scripts/a7afatk2.baf~
+  ~DjinniCompanion/scripts/a7afatk3.baf~
+  ~DjinniCompanion/scripts/a7afatkg.baf~
+  ~DjinniCompanion/scripts/a7afatkx.baf~
+  ~DjinniCompanion/scripts/a7afqup1.baf~
+  ~DjinniCompanion/scripts/a7afqup2.baf~
+  ~DjinniCompanion/scripts/a7cut02.baf~
+  // Edwin's attempt to steal the lamp
+  ~DjinniCompanion/scripts/a7cut03a.baf~
+  ~DjinniCompanion/scripts/a7cut03b.baf~
+  ~DjinniCompanion/scripts/a7cut03c.baf~
+  ~DjinniCompanion/scripts/a7cut03d.baf~
+  // Fight with Korgan
+  ~DjinniCompanion/scripts/a7afatkk.baf~
+  ~DjinniCompanion/scripts/a7korgan.baf~
+  // Jaheira and Khalid
+  ~DjinniCompanion/scripts/a7cut04a.baf~
+  ~DjinniCompanion/scripts/a7cut04b.baf~
+  // Afaaq comes out of his lamp and is about to leave CHARNAME
+  ~DjinniCompanion/scripts/a7cut05.baf~
 
 // Banter-related scripts
 LAF BanterAccelerator END
@@ -508,33 +534,33 @@ LAF BanterAccelerator END
 EXTEND_TOP ~yoshimo.bcs~    ~DjinniCompanion/scripts/npc_yoshimo.baf~
 
 // Lamp talks
-COMPILE ~DjinniCompanion/scripts/a72200gn.baf~    // Tortured djinni in Ust Natha
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/scripts/a72200gn.baf~      // Tortured djinni in Ust Natha
 EXTEND_BOTTOM ~ar1008.bcs~ ~DjinniCompanion/scripts/ar1008.baf~     // Twisted Rune
 EXTEND_BOTTOM ~ar0406.bcs~ ~DjinniCompanion/scripts/ar0406.baf~     // Copper Coronet
 EXTEND_BOTTOM ~ar0516.bcs~ ~DjinniCompanion/scripts/ar0516.baf~     // Planar Prison
 EXTEND_BOTTOM ~ar2400.bcs~ ~DjinniCompanion/scripts/ar2400.baf~     // Illithid Lair (Underdark)
 
 // djinni lamp dialog
-COMPILE ~DjinniCompanion/dialogs/A7djlmp.d~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7djlmp.d~
 
 // Afaaq's dialog files
-COMPILE ~DjinniCompanion/dialogs/A7Afaaq.d~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7Afaaq.d~
         ~DjinniCompanion/dialogs/A7AfaaqGreed.d~
         ~DjinniCompanion/dialogs/A7AfaaqEnslaved.d~
         ~DjinniCompanion/dialogs/A7AfaaqQuickMenu.d~
 
 // Afaaq's interjections and more
-COMPILE ~DjinniCompanion/dialogs/A7AfaaqInterjections.d~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7AfaaqInterjections.d~
         ~DjinniCompanion/dialogs/A7AfaaqTownsfolk.d~
 
 // Afaaq's banter files for CHARNAME (Order of compilation is important!)
-COMPILE ~DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME_Specific.d~
-COMPILE ~%DIALOG_BANTER_INTRO%~
-COMPILE ~DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME.d~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME_Specific.d~
+COMPILE EVALUATE_BUFFER ~%DIALOG_BANTER_INTRO%~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME.d~
 
 // Afaaq's banter files for Bio NPCs
 // TODO
-COMPILE 
+COMPILE EVALUATE_BUFFER 
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Aerie.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Keldorn.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Mazzy.d~

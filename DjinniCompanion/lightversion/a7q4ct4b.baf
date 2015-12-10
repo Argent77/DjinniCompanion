@@ -1,0 +1,22 @@
+// *** Cutscene IWD: Seer breaks enchantments - Party is positioned before the Seer, Afaaq is summoned ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("Seer")
+  FadeToColor([30.0], 0)
+  SmallWait(30)
+  ActionOverride(Player1, JumpToPoint([2968.341]))
+  ActionOverride(Player2, JumpToPoint([3034.258]))
+  ActionOverride(Player3, JumpToPoint([2905.355]))
+  ActionOverride(Player4, JumpToPoint([2957.241]))
+  ActionOverride(Player5, JumpToPoint([2856.305]))
+  ActionOverride(Player6, JumpToPoint([2872.246]))
+  ActionOverride(Player1, Face(12))
+  ActionOverride(Player2, Face(12))
+  ActionOverride(Player3, Face(12))
+  ActionOverride(Player4, Face(12))
+  ActionOverride(Player5, Face(12))
+  ActionOverride(Player6, Face(12))
+  StartCutScene("A7Q4ct4d")
+END

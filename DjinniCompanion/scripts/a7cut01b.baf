@@ -7,7 +7,7 @@ THEN RESPONSE #100
   CreateVisualEffectObject("A7AFQLMP", "A7Afaaq")
   CreateVisualEffectObject("A7AFQLMP", Myself)
   SmallWait(5)
-  ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
+  ActionOverride("A7Afaaq", SetSequence(%seq_die%))
   SmallWait(10) 
   FadeToColor([30.0], 0)
   Wait(2)

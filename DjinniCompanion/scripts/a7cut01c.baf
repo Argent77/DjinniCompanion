@@ -18,7 +18,7 @@ THEN RESPONSE #100
   ApplySpellRES("A7Q6FAD1", Player6)
   ActionOverride("A7Q6COPY", FaceObject("A7Afaaq")
   FaceObject("A7Q6COPY")
-  SetSequence(SEQ_AWAKE)
+  SetSequence(%seq_awake%)
   PlaySound("EFF_M110")
   FadeFromColor([30.0], 0)
   Wait(2)

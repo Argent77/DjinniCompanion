@@ -8,7 +8,7 @@ THEN RESPONSE #100
   CreateCreatureObject("A7Q5FES", LastTalkedToBy, 0, 0, 0)
   CreateVisualEffectObject("SPPORTAL", "A7Q5FES")
   SmallWait(20)
-  ActionOverride("A7Q5FES", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Q5FES", SetSequence(%seq_awake%))
   ActionOverride("A7Q5FES", DestroyItem("A7RING01"))
   Wait(2)
   StartDialogueNoSet([PC])

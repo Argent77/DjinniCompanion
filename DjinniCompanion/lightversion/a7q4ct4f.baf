@@ -1,0 +1,20 @@
+// *** Cutscene IWD: Seer breaks enchantments - The Seer will break the enchantment - Part 2 ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("Seer")
+  MoveViewObject(Myself, VERY_FAST)
+  Wait(3)
+  StartDialogueNoSet(Player1)
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)
+  AddFamiliar()
+  ApplySpellRES("A7REST", Myself)
+  SetGlobal("A7AfaaqUpgraded", "GLOBAL", 1)
+END

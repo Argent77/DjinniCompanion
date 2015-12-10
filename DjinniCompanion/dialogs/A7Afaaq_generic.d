@@ -46,14 +46,15 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
 
     // Djinni comes out of his lamp
-    + ~!GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
-    + ~!GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") !AreaCheck("AR3004") !AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") !AreaCheck("AR3004") !AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
     + ~GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.2
 
     // Conversation topics
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 0)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe.FirstTime
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe
-    + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have any advice for me? */ + TalkGeneric.Advice.1
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have any advice for me? */ + TalkGeneric.Advice.1
 
     // Fixes Afaaq's state in case of buggy behavior
     ++ @10028 /* You are behaving oddly. Care to fix it? */ + TalkGeneric.FixStates.1a
@@ -73,14 +74,15 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
 
     // Djinni comes out of his lamp
-    + ~!GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
-    + ~!GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") !AreaCheck("AR3004") !AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") !AreaCheck("AR3004") !AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
     + ~GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.2
 
     // Conversation topics
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 0)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe.FirstTime
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe
-    + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
 
     // Fixes Afaaq's state in case of buggy behavior
     ++ @10028 /* You are behaving oddly. Care to fix it? */ + TalkGeneric.FixStates.1a
@@ -92,16 +94,16 @@ APPEND %afq_dialog%
   // *** Standard dialog when CHARNAME talks to Afaaq ***
   IF ~InPartySlot(LastTalkedToBy, 0) Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqMet", "GLOBAL", 1) Global("BanterActive", "LOCALS", 0)~ TalkGeneric.PC
     SAY @10000 /* Yes, my <PRO_LADYLORD>? Do you want something from me? */
-    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1) Global("AfaaqLight", "LOCALS", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("HowDoYouFeel", "LOCALS", 0)~ + @10015 /* How do you feel with your body whole again? */ + TalkGeneric.HowAreYouUpgraded.1
-    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1) Global("AfaaqLight", "LOCALS", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqLeaveParty", "GLOBAL", 1) Global("HowDoYouFeel", "LOCALS", 0)~ + @10015 /* How do you feel with your body whole again? */ + TalkGeneric.HowAreYouUpgraded.2
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1) Global("A7AfaaqLight", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("HowDoYouFeel", "LOCALS", 0)~ + @10015 /* How do you feel with your body whole again? */ + TalkGeneric.HowAreYouUpgraded.1
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1) Global("A7AfaaqLight", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqLeaveParty", "GLOBAL", 1) Global("HowDoYouFeel", "LOCALS", 0)~ + @10015 /* How do you feel with your body whole again? */ + TalkGeneric.HowAreYouUpgraded.2
 
     // Offer medical help to the djinni
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) StateCheck(Myself, STATE_POISONED) OR(2) HasItem("POTN20", Player1) HasItem("POTN17", Player1)~ + @10016 /* You are poisoned. Do you need a cure? */ + TalkGeneric.CuringAsked
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) StateCheck(Myself, STATE_DISEASED) HasItem("POTN17", Player1)~ + @10017 /* You are diseased. Do you need a cure? */ + TalkGeneric.CuringAsked
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) HPPercent(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !HasItem("POTN08", Player1) !HasItem("POTN52", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10018 /* You are hurt. Do you need a healing potion? */ + TalkGeneric.PotionAsked
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1)~ + @10019 /* Would you like to have healing potions for emergency situations? */ + TalkGeneric.StoreHealingPotions
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !HasItem("POTN08", Player1) !HasItem("%itm_potn52%", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("%itm_potn52%", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10018 /* You are hurt. Do you need a healing potion? */ + TalkGeneric.PotionAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("%itm_potn52%", Player1) HasItem("POTN55", Player1)~ + @10019 /* Would you like to have healing potions for emergency situations? */ + TalkGeneric.StoreHealingPotions
 
     // Changing combat scripts
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 2)~ + @10475 /* Please take care of yourself in battle. */ + TalkGeneric.BattleSemiActive
@@ -131,16 +133,18 @@ APPEND %afq_dialog%
     // Conversation topics
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 0)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe.FirstTime
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe
-    + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
 
     // Telling Afaaq's stats
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10025 /* Can you tell me about your abilities? */ + TalkGeneric.TellStats.1
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10025 /* Can you tell me about your abilities? */ + TalkGeneric.TellStats.2
 
     // Inviting CHARNAME into the lamp
-    + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("GavePocketPlane","GLOBAL",1) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
-    + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
-    + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("GavePocketPlane","GLOBAL",1) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("A77006")~ + @10001 /* Please return me from whence I came. */ + TalkGeneric.Invitation.Return
 
     // Fixes Afaaq's state in case of buggy behavior
@@ -156,9 +160,9 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) StateCheck(Myself, STATE_POISONED) OR(2) HasItem("POTN20", Player1) HasItem("POTN17", Player1)~ + @10016 /* You are poisoned. Do you need a cure? */ + TalkGeneric.CuringAsked
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) StateCheck(Myself, STATE_DISEASED) HasItem("POTN17", Player1)~ + @10017 /* You are diseased. Do you need a cure? */ + TalkGeneric.CuringAsked
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) HPPercent(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !HasItem("POTN08", Player1) !HasItem("POTN52", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10018 /* You are hurt. Do you need a healing potion? */ + TalkGeneric.PotionAsked
-    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1)~ + @10019 /* Would you like to have healing potions for emergency situations? */ + TalkGeneric.StoreHealingPotions
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !HasItem("POTN08", Player1) !HasItem("%itm_potn52%", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10481 /* Do you want to drink a potion? */ + TalkGeneric.PotionAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("%itm_potn52%", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10018 /* You are hurt. Do you need a healing potion? */ + TalkGeneric.PotionAsked
+    + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) OR(3) HasItem("POTN08", Player1) HasItem("%itm_potn52%", Player1) HasItem("POTN55", Player1)~ + @10019 /* Would you like to have healing potions for emergency situations? */ + TalkGeneric.StoreHealingPotions
 
     // Changing combat scripts
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !Global("AfaaqActive", "LOCALS", 2)~ + @10475 /* Please take care of yourself in battle. */ + TalkGeneric.BattleSemiActive
@@ -188,16 +192,18 @@ APPEND %afq_dialog%
     // Conversation topics
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 0)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe.FirstTime
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe
-    + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
 
     // Telling Afaaq's stats
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10025 /* Can you tell me about your abilities? */ + TalkGeneric.TellStats.1
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10025 /* Can you tell me about your abilities? */ + TalkGeneric.TellStats.2
 
     // Inviting CHARNAME into the lamp
-    + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("GavePocketPlane","GLOBAL",1) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
-    + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
-    + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("GavePocketPlane","GLOBAL",1) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
+    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("A77006")~ + @10001 /* Please return me from whence I came. */ + TalkGeneric.Invitation.Return
     
    // Fixes Afaaq's state in case of buggy behavior
@@ -1454,24 +1460,24 @@ APPEND %afq_dialog%
     SAY @10258 /* As you can see, I am bound to a magical lamp. It is my home, my prison and my sanctuary. */
     = @10259 /* Whenever I am badly hurt, I will retreat there and recover from my wounds. It will not take too long, I can assure you. */
     = @10260 /* If I am in good health, you can call me forth by removing the plug from my lamp. I will also come from or go into the lamp whenever you ask me. Do not be shy to talk to me even while I am in there, I can hear you quite well. */
-    + ~Global("AfaaqLight", "LOCALS", 0)~ + @10261 /* I'd like to know more about you. */ + TalkGeneric.AboutMe
+    + ~Global("A7AfaaqLight", "GLOBAL", 0)~ + @10261 /* I'd like to know more about you. */ + TalkGeneric.AboutMe
     ++ @10262 /* Thanks for your time, that is all I wanted to know. */ + TalkGeneric.AboutMe.Finished
   END
 
   IF ~~ TalkGeneric.AboutMe
     SAY @10263 /* Of course! What do you want to know, my <PRO_LADYLORD>? */
-    + ~Global("AfaaqLight", "LOCALS", 0) GlobalLT("BanterPCAboutGenies", "LOCALS", 2)~ + @10264 /* Can you tell me about your people? */ + TalkGeneric.AboutMe.Djinns.Denied
-    + ~Global("AfaaqLight", "LOCALS", 0) GlobalGT("BanterPCAboutGenies", "LOCALS", 1)~ + @10264 /* Can you tell me about your people? */ + TalkGeneric.AboutMe.Djinns
-   // + ~Global("AfaaqLight", "LOCALS", 0)~ + ~Can you tell me something about your life?~ + TalkGeneric.AboutMe.Biography
+    + ~Global("A7AfaaqLight", "GLOBAL", 0) GlobalLT("BanterPCAboutGenies", "LOCALS", 2)~ + @10264 /* Can you tell me about your people? */ + TalkGeneric.AboutMe.Djinns.Denied
+    + ~Global("A7AfaaqLight", "GLOBAL", 0) GlobalGT("BanterPCAboutGenies", "LOCALS", 1)~ + @10264 /* Can you tell me about your people? */ + TalkGeneric.AboutMe.Djinns
+   // + ~Global("A7AfaaqLight", "GLOBAL", 0)~ + ~Can you tell me something about your life?~ + TalkGeneric.AboutMe.Biography
     ++ @10025 /* Can you tell me about your abilities? */ + TalkGeneric.AboutMe.Stats
     ++ @10265 /* On second thought, I don't have the time for this. */ + TalkGeneric.AboutMe.Finished.1
   END
 
   IF ~~ TalkGeneric.AboutMe.1
     SAY @10266 /* Do you want to know more? */
-    + ~Global("AfaaqLight", "LOCALS", 0) GlobalLT("BanterPCAboutGenies", "LOCALS", 2)~ + @10267 /* Can you tell me more about your people? */ + TalkGeneric.AboutMe.Djinns.Denied
-    + ~Global("AfaaqLight", "LOCALS", 0) GlobalGT("BanterPCAboutGenies", "LOCALS", 1)~ + @10267 /* Can you tell me more about your people? */ + TalkGeneric.AboutMe.Djinns
-   // + ~Global("AfaaqLight", "LOCALS", 0)~ + ~Can you tell me more about your life?~ + TalkGeneric.AboutMe.Biography
+    + ~Global("A7AfaaqLight", "GLOBAL", 0) GlobalLT("BanterPCAboutGenies", "LOCALS", 2)~ + @10267 /* Can you tell me more about your people? */ + TalkGeneric.AboutMe.Djinns.Denied
+    + ~Global("A7AfaaqLight", "GLOBAL", 0) GlobalGT("BanterPCAboutGenies", "LOCALS", 1)~ + @10267 /* Can you tell me more about your people? */ + TalkGeneric.AboutMe.Djinns
+   // + ~Global("A7AfaaqLight", "GLOBAL", 0)~ + ~Can you tell me more about your life?~ + TalkGeneric.AboutMe.Biography
     ++ @10268 /* Can you tell me more about your abilities? */ + TalkGeneric.AboutMe.Stats
     ++ @10262 /* Thanks for your time, that is all I wanted to know. */ + TalkGeneric.AboutMe.Finished
   END
@@ -1908,7 +1914,7 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.PotionAsked
     SAY @10383 /* Yes, if you have one to spare? */
     + ~HPPercentLT(Myself, 100) HasItem("POTN08", Player1)~ + @10384 /* This Potion of Healing should heal your injuries. */ + TalkGeneric.Healing
-    + ~HPPercentLT(Myself, 100) HasItem("POTN52", Player1)~ + @10385 /* This Potion of Extra Healing should heal your injuries. */ + TalkGeneric.HealingExtra
+    + ~HPPercentLT(Myself, 100) HasItem("%itm_potn52%", Player1)~ + @10385 /* This Potion of Extra Healing should heal your injuries. */ + TalkGeneric.HealingExtra
     + ~HPPercentLT(Myself, 100) HasItem("POTN55", Player1)~ + @10386 /* This Potion of Superior Healing should heal your injuries. */ + TalkGeneric.HealingSuperior
     + ~HasItem("POTN02", Player1)~ + @10483 /* How about a Potion of Fire Resistance? */ + TalkGeneric.Potion.FireResistance
     + ~HasItem("POTN22", Player1)~ + @10489 /* How about a Potion of Cold Resistance? */ + TalkGeneric.Potion.ColdResistance
@@ -1925,10 +1931,10 @@ APPEND %afq_dialog%
     + ~HasItem("POTN35", Player1)~ + @10494 /* How about a Potion of Magic Shielding? */ + TalkGeneric.Potion.MagicShielding
     + ~HasItem("POTN45", Player1)~ + @10496 /* How about a Potion of Freedom? */ + TalkGeneric.Potion.Freedom
     + ~HasItem("POTN21", Player1)~ + @10488 /* How about a Potion of Clarity? */ + TalkGeneric.Potion.Clarity
-    + ~HasItem("MISC9Y", Player1)~ + @10498 /* How about a Brine Potion, brewed from a pool of illithid tadpoles? */ + TalkGeneric.Potion.Brine
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) HasItem("MISC9Y", Player1)~ + @10498 /* How about a Brine Potion, brewed from a pool of illithid tadpoles? */ + TalkGeneric.Potion.Brine
     + ~HPPercent(Myself, 100)~ + @10482 /* I don't have any potions to spare, sorry. */ + TalkGeneric.PotionNone
-    + ~OR(3) HasItem("POTN08", Player1) HasItem("POTN52", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10482 /* I don't have any potions to spare, sorry. */ + TalkGeneric.PotionNone
-    + ~!HasItem("POTN08", Player1) !HasItem("POTN52", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.HealingNone
+    + ~OR(3) HasItem("POTN08", Player1) HasItem("%itm_potn52%", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10482 /* I don't have any potions to spare, sorry. */ + TalkGeneric.PotionNone
+    + ~!HasItem("POTN08", Player1) !HasItem("%itm_potn52%", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.HealingNone
   END
 
   IF ~~ TalkGeneric.Healing
@@ -2040,16 +2046,16 @@ APPEND %afq_dialog%
     SAY @10392 /* Yes, if you have some to spare? */
     + ~HasItem("POTN08", Player1) NumItemsLT("POTN08", "A7Afaaq", 5)~ + @10393 /* I can give you Potions of Healing. */ + TalkGeneric.StoreHealingPotions.2a
     + ~HasItem("POTN08", Player1) NumItemsGT("POTN08", "A7Afaaq", 4)~ + @10393 /* I can give you Potions of Healing. */ + TalkGeneric.StoreHealingPotions.2b
-    + ~HasItem("POTN52", Player1) NumItemsLT("POTN52", "A7Afaaq", 5)~ + @10394 /* I can give you Potions of Extra Healing. */ + TalkGeneric.StoreHealingPotions.3a
-    + ~HasItem("POTN52", Player1) NumItemsGT("POTN52", "A7Afaaq", 4)~ + @10394 /* I can give you Potions of Extra Healing. */ + TalkGeneric.StoreHealingPotions.3b
+    + ~HasItem("%itm_potn52%", Player1) NumItemsLT("%itm_potn52%", "A7Afaaq", 5)~ + @10394 /* I can give you Potions of Extra Healing. */ + TalkGeneric.StoreHealingPotions.3a
+    + ~HasItem("%itm_potn52%", Player1) NumItemsGT("%itm_potn52%", "A7Afaaq", 4)~ + @10394 /* I can give you Potions of Extra Healing. */ + TalkGeneric.StoreHealingPotions.3b
     + ~HasItem("POTN55", Player1) NumItemsLT("POTN55", "A7Afaaq", 5)~ + @10395 /* I can give you Potions of Superior Healing. */ + TalkGeneric.StoreHealingPotions.4a
     + ~HasItem("POTN55", Player1) NumItemsGT("POTN55", "A7Afaaq", 4)~ + @10395 /* I can give you Potions of Superior Healing. */ + TalkGeneric.StoreHealingPotions.4b
     + ~HasItem("POTN20", Player1) NumItemsLT("POTN20", "A7Afaaq", 5)~ + @10396 /* I can give you Antidote potions. */ + TalkGeneric.StoreHealingPotions.5a
     + ~HasItem("POTN20", Player1) NumItemsGT("POTN20", "A7Afaaq", 4)~ + @10396 /* I can give you Antidote potions. */ + TalkGeneric.StoreHealingPotions.5b
     + ~HasItem("POTN17", Player1) NumItemsLT("POTN17", "A7Afaaq", 5)~ + @10397 /* I can give you Elixirs of Help. */ + TalkGeneric.StoreHealingPotions.6a
     + ~HasItem("POTN17", Player1) NumItemsGT("POTN17", "A7Afaaq", 4)~ + @10397 /* I can give you Elixirs of Help. */ + TalkGeneric.StoreHealingPotions.6b
-    + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("POTN52", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
-    + ~!HasItem("POTN08", "A7Afaaq") !HasItem("POTN52", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~    + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
+    + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("%itm_potn52%", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
+    + ~!HasItem("POTN08", "A7Afaaq") !HasItem("%itm_potn52%", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~    + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
   END
 
   IF ~~ TalkGeneric.StoreHealingPotions.1a
@@ -2069,8 +2075,8 @@ APPEND %afq_dialog%
     + ~NumItemsPartyGT("POTN08", 2) NumItemsLT("POTN08", "A7Afaaq", 3)~ + @10403 /* I can give you three Potions of Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveHealingPotion", "LOCALS", 3))~ + TalkGeneric.StoreHealingPotions.2.1
     + ~NumItemsPartyGT("POTN08", 3) NumItemsLT("POTN08", "A7Afaaq", 2)~ + @10404 /* I can give you four Potions of Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveHealingPotion", "LOCALS", 4))~ + TalkGeneric.StoreHealingPotions.2.1
     + ~NumItemsPartyGT("POTN08", 4) NumItemsLT("POTN08", "A7Afaaq", 1)~ + @10405 /* I can give you five Potions of Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveHealingPotion", "LOCALS", 5))~ + TalkGeneric.StoreHealingPotions.2.1
-    + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("POTN52", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
-    + ~!HasItem("POTN08", "A7Afaaq") !HasItem("POTN52", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
+    + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("%itm_potn52%", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
+    + ~!HasItem("POTN08", "A7Afaaq") !HasItem("%itm_potn52%", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
   END
 
   IF ~~ TalkGeneric.StoreHealingPotions.2b
@@ -2085,13 +2091,13 @@ APPEND %afq_dialog%
 
   IF ~~ TalkGeneric.StoreHealingPotions.3a
     SAY @10400 /* How many potions can you give me? */
-    + ~NumItemsPartyGT("POTN52", 0) NumItemsLT("POTN52", "A7Afaaq", 5)~ + @10407 /* I can give you one Potion of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 1))~ + TalkGeneric.StoreHealingPotions.3.1
-    + ~NumItemsPartyGT("POTN52", 1) NumItemsLT("POTN52", "A7Afaaq", 4)~ + @10408 /* I can give you two Potions of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 2))~ + TalkGeneric.StoreHealingPotions.3.1
-    + ~NumItemsPartyGT("POTN52", 2) NumItemsLT("POTN52", "A7Afaaq", 3)~ + @10409 /* I can give you three Potions of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 3))~ + TalkGeneric.StoreHealingPotions.3.1
-    + ~NumItemsPartyGT("POTN52", 3) NumItemsLT("POTN52", "A7Afaaq", 2)~ + @10410 /* I can give you four Potions of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 4))~ + TalkGeneric.StoreHealingPotions.3.1
-    + ~NumItemsPartyGT("POTN52", 4) NumItemsLT("POTN52", "A7Afaaq", 1)~ + @10411 /* I can give you five Potions of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 5))~ + TalkGeneric.StoreHealingPotions.3.1
-    + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("POTN52", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
-    + ~!HasItem("POTN08", "A7Afaaq") !HasItem("POTN52", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
+    + ~NumItemsPartyGT("%itm_potn52%", 0) NumItemsLT("%itm_potn52%", "A7Afaaq", 5)~ + @10407 /* I can give you one Potion of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 1))~ + TalkGeneric.StoreHealingPotions.3.1
+    + ~NumItemsPartyGT("%itm_potn52%", 1) NumItemsLT("%itm_potn52%", "A7Afaaq", 4)~ + @10408 /* I can give you two Potions of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 2))~ + TalkGeneric.StoreHealingPotions.3.1
+    + ~NumItemsPartyGT("%itm_potn52%", 2) NumItemsLT("%itm_potn52%", "A7Afaaq", 3)~ + @10409 /* I can give you three Potions of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 3))~ + TalkGeneric.StoreHealingPotions.3.1
+    + ~NumItemsPartyGT("%itm_potn52%", 3) NumItemsLT("%itm_potn52%", "A7Afaaq", 2)~ + @10410 /* I can give you four Potions of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 4))~ + TalkGeneric.StoreHealingPotions.3.1
+    + ~NumItemsPartyGT("%itm_potn52%", 4) NumItemsLT("%itm_potn52%", "A7Afaaq", 1)~ + @10411 /* I can give you five Potions of Extra Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveExtraHealingPotion", "LOCALS", 5))~ + TalkGeneric.StoreHealingPotions.3.1
+    + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("%itm_potn52%", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
+    + ~!HasItem("POTN08", "A7Afaaq") !HasItem("%itm_potn52%", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
   END
 
   IF ~~ TalkGeneric.StoreHealingPotions.3b
@@ -2111,8 +2117,8 @@ APPEND %afq_dialog%
     + ~NumItemsPartyGT("POTN55", 2) NumItemsLT("POTN55", "A7Afaaq", 3)~ + @10415 /* I can give you three Potions of Superior Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveSuperHealingPotion", "LOCALS", 3))~ + TalkGeneric.StoreHealingPotions.4.1
     + ~NumItemsPartyGT("POTN55", 3) NumItemsLT("POTN55", "A7Afaaq", 2)~ + @10416 /* I can give you four Potions of Superior Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveSuperHealingPotion", "LOCALS", 4))~ + TalkGeneric.StoreHealingPotions.4.1
     + ~NumItemsPartyGT("POTN55", 4) NumItemsLT("POTN55", "A7Afaaq", 1)~ + @10417 /* I can give you five Potions of Superior Healing. */ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("GiveSuperHealingPotion", "LOCALS", 5))~ + TalkGeneric.StoreHealingPotions.4.1
-    + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("POTN52", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
-    + ~!HasItem("POTN08", "A7Afaaq") !HasItem("POTN52", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
+    + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("%itm_potn52%", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
+    + ~!HasItem("POTN08", "A7Afaaq") !HasItem("%itm_potn52%", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
   END
 
   IF ~~ TalkGeneric.StoreHealingPotions.4b
@@ -2189,124 +2195,124 @@ APPEND %afq_dialog%
   // *** Limited Wish ***
   IF ~~ TalkGeneric.LimitedWish.1
     SAY @10435 /* I will grant you a limited wish. You may ask for a wish I can repeat, or you may ask for a wish that will happen once only. Decide. */
-    ++ #58536 /* A repeatable wish. */ + TalkGeneric.LimitedWish.12
-    ++ #58537 /* A one time wish. */ + TalkGeneric.LimitedWish.2
-    ++ #58584 /* I reconsider. I will make no wish at this time. */ + TalkGeneric.LimitedWish.22
+    ++ @10503 /* A repeatable wish. */ + TalkGeneric.LimitedWish.12
+    ++ @10504 /* A one time wish. */ + TalkGeneric.LimitedWish.2
+    ++ @10505 /* I reconsider. I will make no wish at this time. */ + TalkGeneric.LimitedWish.22
   END
 
   IF ~~ TalkGeneric.LimitedWish.2
-    SAY #58538 /* ~Choose wisely then, as I can perform each of these tasks once and once only. ~ */
-    ++ #58539 /* ~Actually, I'd rather have a repeatable wish.~ */ + TalkGeneric.LimitedWish.12
-    ++ #58540 /* ~I don't want a wish of any kind right now.~ */ + TalkGeneric.LimitedWish.22
-    + ~Global("AfaaqLight", "LOCALS", 0) See("trskin01") Global("TrisLeave", "GLOBAL", 0) Global("A7WishRestoreRaissa","GLOBAL",0)~ + @11266 /* I wish Raissa's curse of the skin dancer to be removed. */ + TalkGeneric.LimitedWish.24
-    + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishRich","GLOBAL",0)~ + #58541 /* ~I wish to be rich.~ */ + TalkGeneric.LimitedWish.3
-    + ~CheckStatGT(LastTalkedToBy, 10, WIS) Global("wishArmor","GLOBAL",0)~ + #58542 /* ~I wish for a powerful magical item.~ */ + TalkGeneric.LimitedWish.6
-    + ~CheckStatGT(LastTalkedToBy, 3, WIS) Global("wishXP","GLOBAL",0)~ + #58543 /* ~I wish to be more experienced.~ */ + TalkGeneric.LimitedWish.7
-    + ~CheckStatGT(LastTalkedToBy, 11, WIS) Global("wishGlasses","GLOBAL",0)~ + #58544 /* ~I wish to see all as it really is.~ */ + TalkGeneric.LimitedWish.11
-    + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishQuest","GLOBAL",0) !Dead("dennis") !Global("DennisHasGong","GLOBAL",1) Global("InToB", "GLOBAL", 0)~ + #58545 /* ~I wish for an adventure like none I've ever experienced before.~ */ + TalkGeneric.LimitedWish.23
-    + ~CheckStatGT(LastTalkedToBy, 13, WIS) Global("wishTime","GLOBAL",0)~ + #58546 /* ~I wish for control over time.~ */ + TalkGeneric.LimitedWish.9
-    + ~CheckStatGT(LastTalkedToBy, 5, WIS) Global("wishShape","GLOBAL",0)~ + #58547 /* ~I wish to be anything I desire.~ */ + TalkGeneric.LimitedWish.10
-    + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishContigency","GLOBAL",0)~ + #58548 /* ~I wish to be prepared for anything.~ */ + TalkGeneric.LimitedWish.5
-    + ~CheckStatGT(LastTalkedToBy, 11, WIS) Global("wishWail","GLOBAL",0)~ + #58549 /* ~I wish that all my enemies will die.~ */ + TalkGeneric.LimitedWish.4
+    SAY @10506 /* ~Choose wisely then, as I can perform each of these tasks once and once only. ~ */
+    ++ @10507 /* ~Actually, I'd rather have a repeatable wish.~ */ + TalkGeneric.LimitedWish.12
+    ++ @10508 /* ~I don't want a wish of any kind right now.~ */ + TalkGeneric.LimitedWish.22
+    + ~Global("A7AfaaqLight", "GLOBAL", 0) See("trskin01") Global("TrisLeave", "GLOBAL", 0) Global("A7WishRestoreRaissa","GLOBAL",0)~ + @11266 /* I wish Raissa's curse of the skin dancer to be removed. */ + TalkGeneric.LimitedWish.24
+    + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishRich","GLOBAL",0)~ + @10509 /* ~I wish to be rich.~ */ + TalkGeneric.LimitedWish.3
+    + ~CheckStatGT(LastTalkedToBy, 10, WIS) Global("wishArmor","GLOBAL",0)~ + @10510 /* ~I wish for a powerful magical item.~ */ + TalkGeneric.LimitedWish.6
+    + ~CheckStatGT(LastTalkedToBy, 3, WIS) Global("wishXP","GLOBAL",0)~ + @10511 /* ~I wish to be more experienced.~ */ + TalkGeneric.LimitedWish.7
+    + ~CheckStatGT(LastTalkedToBy, 11, WIS) Global("wishGlasses","GLOBAL",0)~ + @10512 /* ~I wish to see all as it really is.~ */ + TalkGeneric.LimitedWish.11
+    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishQuest","GLOBAL",0) !Dead("dennis") !Global("DennisHasGong","GLOBAL",1) Global("InToB", "GLOBAL", 0)~ + @10513 /* ~I wish for an adventure like none I've ever experienced before.~ */ + TalkGeneric.LimitedWish.23
+    + ~CheckStatGT(LastTalkedToBy, 13, WIS) Global("wishTime","GLOBAL",0)~ + @10514 /* ~I wish for control over time.~ */ + TalkGeneric.LimitedWish.9
+    + ~CheckStatGT(LastTalkedToBy, 5, WIS) Global("wishShape","GLOBAL",0)~ + @10515 /* ~I wish to be anything I desire.~ */ + TalkGeneric.LimitedWish.10
+    + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishContigency","GLOBAL",0)~ + @10516 /* ~I wish to be prepared for anything.~ */ + TalkGeneric.LimitedWish.5
+    + ~CheckStatGT(LastTalkedToBy, 11, WIS) Global("wishWail","GLOBAL",0)~ + @10517 /* ~I wish that all my enemies will die.~ */ + TalkGeneric.LimitedWish.4
   END
 
   IF ~~ TalkGeneric.LimitedWish.3
-    SAY #58551 /* ~Rich you want, then rich you shall be.~ */
+    SAY @10518 /* ~Rich you want, then rich you shall be.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Rich", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.4
-    SAY #58552 /* ~Then let your enemies fall now!~ */
+    SAY @10519 /* ~Then let your enemies fall now!~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Wail", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.5
-    SAY #58553 /* ~Contingencies are the key to preparation.~ */
+    SAY @10520 /* ~Contingencies are the key to preparation.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Contigency", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.6
-    SAY #58554 /* ~Then you shall have it.~ */
+    SAY @10521 /* ~Then you shall have it.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Armor", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.7
-    SAY #58556 /* ~(chuckle)  Fight well and experience you will earn.~ */
+    SAY @10522 /* ~(chuckle)  Fight well and experience you will earn.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_XP", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.9
-    SAY #58558 /* ~Time is now your ally, Master.~ */
+    SAY @10523 /* ~Time is now your ally, Master.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Time", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.10
-    SAY #58559 /* ~I give you then the ability to shapechange...use it wisely for it will not last forever.~ */
+    SAY @10524 /* ~I give you then the ability to shapechange...use it wisely for it will not last forever.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Shape", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.11
-    SAY #58560 /* ~With these glasses no item will be beyond your ability to comprehend.~ */
+    SAY @10525 /* ~With these glasses no item will be beyond your ability to comprehend.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Glasses", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.12
-    SAY #58561 /* ~Choose then, but be aware that unwise wishes shall leave the wisher wanting.~ */
-    + ~CheckStatGT(LastTalkedToBy, 9, WIS)~ + #58562 /* ~I wish for my entire party to be healed.~ */ + TalkGeneric.LimitedWish.13
-    + ~CheckStatLT(LastTalkedToBy, 10, WIS)~ + #58563 /* ~I wish that none of my party would die of their wounds.~ */ + TalkGeneric.LimitedWish.14
-    + ~CheckStatGT(LastTalkedToBy, 15, WIS)~ + #58564 /* ~I wish that spells I have cast would be restored, that I might cast them again!~ */ + TalkGeneric.LimitedWish.15
-    + ~CheckStatLT(LastTalkedToBy, 16, WIS)~ + #58565 /* ~I wish for my spells to be restored!~ */ + TalkGeneric.LimitedWish.16
-    + ~CheckStatGT(LastTalkedToBy, 11, WIS)~ + #58566 /* ~I wish to make my party invulnerable.~ */ + TalkGeneric.LimitedWish.17
-    + ~CheckStatLT(LastTalkedToBy, 12, WIS)~ + #58567 /* ~I wish that magic would fail to affect me or my party.~ */ + TalkGeneric.LimitedWish.18
-    ++ #58568 /* ~I wish to summon a horde to overrun my enemies.~ */ + TalkGeneric.LimitedWish.19
-    + ~CheckStatGT(LastTalkedToBy, 9, WIS)~ + #58569 /* ~I wish to be protected from the undead.~ */ + TalkGeneric.LimitedWish.20
-    + ~CheckStatLT(LastTalkedToBy, 10, WIS)~ + #58570 /* ~I wish to be protected from undead right now.~ */ + TalkGeneric.LimitedWish.21
-    ++ #58571 /* ~I want to ask for a one time wish instead.~ */ + TalkGeneric.LimitedWish.2
-    ++ #58572 /* ~I do not want a wish now~ */ + TalkGeneric.LimitedWish.22
+    SAY @10526 /* ~Choose then, but be aware that unwise wishes shall leave the wisher wanting.~ */
+    + ~CheckStatGT(LastTalkedToBy, 9, WIS)~ + @10527 /* ~I wish for my entire party to be healed.~ */ + TalkGeneric.LimitedWish.13
+    + ~CheckStatLT(LastTalkedToBy, 10, WIS)~ + @10528 /* ~I wish that none of my party would die of their wounds.~ */ + TalkGeneric.LimitedWish.14
+    + ~CheckStatGT(LastTalkedToBy, 15, WIS)~ + @10529 /* ~I wish that spells I have cast would be restored, that I might cast them again!~ */ + TalkGeneric.LimitedWish.15
+    + ~CheckStatLT(LastTalkedToBy, 16, WIS)~ + @10530 /* ~I wish for my spells to be restored!~ */ + TalkGeneric.LimitedWish.16
+    + ~CheckStatGT(LastTalkedToBy, 11, WIS)~ + @10531 /* ~I wish to make my party invulnerable.~ */ + TalkGeneric.LimitedWish.17
+    + ~CheckStatLT(LastTalkedToBy, 12, WIS)~ + @10532 /* ~I wish that magic would fail to affect me or my party.~ */ + TalkGeneric.LimitedWish.18
+    ++ @10533 /* ~I wish to summon a horde to overrun my enemies.~ */ + TalkGeneric.LimitedWish.19
+    + ~CheckStatGT(LastTalkedToBy, 9, WIS)~ + @10534 /* ~I wish to be protected from the undead.~ */ + TalkGeneric.LimitedWish.20
+    + ~CheckStatLT(LastTalkedToBy, 10, WIS)~ + @10535 /* ~I wish to be protected from undead right now.~ */ + TalkGeneric.LimitedWish.21
+    ++ @10536 /* ~I want to ask for a one time wish instead.~ */ + TalkGeneric.LimitedWish.2
+    ++ @10537 /* ~I do not want a wish now~ */ + TalkGeneric.LimitedWish.22
   END
 
   IF ~~ TalkGeneric.LimitedWish.13
-    SAY #58573 /* ~Then all shall be healed. ~ */
+    SAY @10538 /* ~Then all shall be healed. ~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_Heal", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.14
-    SAY #58574 /* ~Granted.  All will die of other afflictions, but not of the wounds they have. ~ */
+    SAY @10539 /* ~Granted.  All will die of other afflictions, but not of the wounds they have. ~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_DieWounds", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.15
-    SAY #58575 /* ~Then I shall grant your wish and restore some of your lost spells.~ */
+    SAY @10540 /* ~Then I shall grant your wish and restore some of your lost spells.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_SpellMemorize", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.16
-    SAY #58576 /* ~Granted. Your spells have been restored to the way they were before you memorized them. ~ */
+    SAY @10541 /* ~Granted. Your spells have been restored to the way they were before you memorized them. ~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_SpellLose", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.17
-    SAY #58577 /* ~Invulnerability you shall have!~ */
+    SAY @10542 /* ~Invulnerability you shall have!~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_Invulnerable", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.18
-    SAY #58578 /* ~A curious request, but consider it granted. None of your spells shall function. ~ */
+    SAY @10543 /* ~A curious request, but consider it granted. None of your spells shall function. ~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_MagicFail", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.19
-    SAY #58579 /* ~A horde?  As you wish...~ */
+    SAY @10544 /* ~A horde?  As you wish...~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_Horde", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.20
-    SAY #58580 /* ~Protection granted.~ */
+    SAY @10545 /* ~Protection granted.~ */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_ProtUndead", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.LimitedWish.21
-    SAY #58581 /* Protection from undead granted, and I shall have to summon some undead for you to be protected from. */
+    SAY @10546 /* Protection from undead granted, and I shall have to summon some undead for you to be protected from. */
     IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishR_ProtUndeadSum", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
@@ -2333,7 +2339,7 @@ APPEND %afq_dialog%
     ++ @10438 /* I'd like to choose a Limited Wish. */ + TalkGeneric.LimitedWish.1
     + ~OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) !Global("A7FavorWish", "GLOBAL", 1)~ + @10439 /* I'd like to choose a Wish. */ + TalkGeneric.Wish.1
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7FavorWish", "GLOBAL", 1)~ + @10439 /* I'd like to choose a Wish. */ + TalkGeneric.Wish.1a
-    ++ #58584 /* I reconsider. I will make no wish at this time. */ + TalkGeneric.LimitedWish.22
+    ++ @10547 /* I reconsider. I will make no wish at this time. */ + TalkGeneric.LimitedWish.22
   END
 
   IF ~~ TalkGeneric.Wish.1
@@ -2363,43 +2369,43 @@ APPEND %afq_dialog%
 
   IF ~~ TalkGeneric.Wish.5
     SAY @10444 /* Very well, my <PRO_LADYLORD>. I can interpret the items listed here in the following ways. Choose carefully which you would prefer. */
-    + ~Global("WishPower01", "GLOBAL", 1)~ + #72526 /* ~'Breach' on everyone in the area, including the party.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power01", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower02", "GLOBAL", 1)~ + #72527 /* ~Blow all people, including party members, away from the caster.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power02", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower03", "GLOBAL", 1)~ + #72528 /* ~Heal everyone, party members and enemies included.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power03", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower04", "GLOBAL", 1)~ + #72529 /* ~Temporarily set Strength to 18 for everyone in the area, including enemies.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power04", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower05", "GLOBAL", 1)~ + #72530 /* ~'Miscast Magic' on everyone in the area, including party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power05", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower06", "GLOBAL", 1)~ + #72531 /* ~'Magic Resistance' on everyone in the area, including enemies.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power06", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower07", "GLOBAL", 1)~ + #72532 /* ~'Abi-Dalzim's Horrid Wilting' on everyone in the area, including the party.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power07", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower08", "GLOBAL", 1)~ + #72533 /* ~Everyone in the area, both party members and enemies, become intoxicated.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power08", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower09", "GLOBAL", 1)~ + #72534 /* ~Incur bad luck on everyone in the area, including party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power09", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower10", "GLOBAL", 1)~ + #72535 /* ~'Silence' on everyone in the area, including party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power10", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower11", "GLOBAL", 1)~ + #72536 /* ~'Haste' everyone in the area, including enemies.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power11", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower12", "GLOBAL", 1)~ + #72537 /* ~'Improved Haste' on all party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power12", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower13", "GLOBAL", 1)~ + #72538 /* ~'Breach' on all enemies in the area.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power13", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower14", "GLOBAL", 1)~ + #72539 /* ~'Restoration' on all party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power14", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower15", "GLOBAL", 1)~ + #72541 /* ~Raise all party members' characteristics to 25 for 4 rounds.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power15", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower16", "GLOBAL", 1)~ + #72542 /* ~'Resurrection' on all dead party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power16", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower17", "GLOBAL", 1)~ + #72543 /* ~All party members gain the temporary ability 'Greater Deathblow'.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power17", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower18", "GLOBAL", 1)~ + #72545 /* ~All party members gain the temporary ability 'Hardiness'.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power18", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower19", "GLOBAL", 1)~ + #72546 /* ~Create a random wand in caster's inventory.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power19", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower20", "GLOBAL", 1)~ + #72547 /* ~Create a random potion in the caster's inventory.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power20", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower21", "GLOBAL", 1)~ + #72548 /* ~Make it as if the entire party has just rested a full night and re-memorized all their spells.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power21", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower22", "GLOBAL", 1)~ + #72549 /* ~Cast a double-length 'Time Stop' and 'Improved Alacrity' on the caster.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power22", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower23", "GLOBAL", 1)~ + #72550 /* ~Heal all enemies in the area.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power23", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower24", "GLOBAL", 1)~ + #72551 /* ~'Improved Haste' on all enemies in the area.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power24", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower25", "GLOBAL", 1)~ + #72552 /* ~Summon an extra hostile monster into the area.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power25", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower26", "GLOBAL", 1)~ + #72553 /* ~Level Drain two levels from each party member.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power26", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower27", "GLOBAL", 1)~ + #72554 /* ~Temporarily remove half of the caster's HP.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power27", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower28", "GLOBAL", 1)~ + #72555 /* ~Temporarily remove 15% of all party members' HPs.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power28", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower29", "GLOBAL", 1)~ + #72556 /* ~Caster loses all memorized spells.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power29", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower30", "GLOBAL", 1)~ + #72557 /* ~Party loses 10,000 gp.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power30", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower31", "GLOBAL", 1)~ + #72558 /* ~Bring a 'Meteor Swarm' down upon the caster.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power31", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower32", "GLOBAL", 1)~ + #72559 /* ~Temporarily reduce the Strength of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power32", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower33", "GLOBAL", 1)~ + #72560 /* ~Temporarily reduce the Wisdom of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power33", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower34", "GLOBAL", 1)~ + #72561 /* ~Temporarily reduce the Constitution of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power34", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower35", "GLOBAL", 1)~ + #72562 /* ~Temporarily reduce the Dexterity of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power35", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower36", "GLOBAL", 1)~ + #72563 /* ~Temporarily reduce the Intelligence of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power36", "LOCALS", 1)) ClearActions(Myself)~ EXIT
-    + ~Global("WishPower37", "GLOBAL", 1)~ + #72564 /* ~'Slow' the entire party.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power37", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower01", "GLOBAL", 1)~ + @10548 /* ~'Breach' on everyone in the area, including the party.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power01", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower02", "GLOBAL", 1)~ + @10549 /* ~Blow all people, including party members, away from the caster.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power02", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower03", "GLOBAL", 1)~ + @10550 /* ~Heal everyone, party members and enemies included.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power03", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower04", "GLOBAL", 1)~ + @10551 /* ~Temporarily set Strength to 18 for everyone in the area, including enemies.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power04", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower05", "GLOBAL", 1)~ + @10552 /* ~'Miscast Magic' on everyone in the area, including party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power05", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower06", "GLOBAL", 1)~ + @10553 /* ~'Magic Resistance' on everyone in the area, including enemies.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power06", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower07", "GLOBAL", 1)~ + @10554 /* ~'Abi-Dalzim's Horrid Wilting' on everyone in the area, including the party.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power07", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower08", "GLOBAL", 1)~ + @10555 /* ~Everyone in the area, both party members and enemies, become intoxicated.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power08", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower09", "GLOBAL", 1)~ + @10556 /* ~Incur bad luck on everyone in the area, including party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power09", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower10", "GLOBAL", 1)~ + @10557 /* ~'Silence' on everyone in the area, including party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power10", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower11", "GLOBAL", 1)~ + @10558 /* ~'Haste' everyone in the area, including enemies.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power11", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower12", "GLOBAL", 1)~ + @10559 /* ~'Improved Haste' on all party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power12", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower13", "GLOBAL", 1)~ + @10560 /* ~'Breach' on all enemies in the area.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power13", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower14", "GLOBAL", 1)~ + @10561 /* ~'Restoration' on all party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power14", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower15", "GLOBAL", 1)~ + @10562 /* ~Raise all party members' characteristics to 25 for 4 rounds.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power15", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower16", "GLOBAL", 1)~ + @10563 /* ~'Resurrection' on all dead party members.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power16", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower17", "GLOBAL", 1)~ + @10564 /* ~All party members gain the temporary ability 'Greater Deathblow'.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power17", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower18", "GLOBAL", 1)~ + @10565 /* ~All party members gain the temporary ability 'Hardiness'.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power18", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower19", "GLOBAL", 1)~ + @10566 /* ~Create a random wand in caster's inventory.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power19", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower20", "GLOBAL", 1)~ + @10567 /* ~Create a random potion in the caster's inventory.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power20", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower21", "GLOBAL", 1)~ + @10568 /* ~Make it as if the entire party has just rested a full night and re-memorized all their spells.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power21", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower22", "GLOBAL", 1)~ + @10569 /* ~Cast a double-length 'Time Stop' and 'Improved Alacrity' on the caster.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power22", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower23", "GLOBAL", 1)~ + @10570 /* ~Heal all enemies in the area.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power23", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower24", "GLOBAL", 1)~ + @10571 /* ~'Improved Haste' on all enemies in the area.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power24", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower25", "GLOBAL", 1)~ + @10572 /* ~Summon an extra hostile monster into the area.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power25", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower26", "GLOBAL", 1)~ + @10573 /* ~Level Drain two levels from each party member.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power26", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower27", "GLOBAL", 1)~ + @10574 /* ~Temporarily remove half of the caster's HP.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power27", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower28", "GLOBAL", 1)~ + @10575 /* ~Temporarily remove 15% of all party members' HPs.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power28", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower29", "GLOBAL", 1)~ + @10576 /* ~Caster loses all memorized spells.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power29", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower30", "GLOBAL", 1)~ + @10577 /* ~Party loses 10,000 gp.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power30", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower31", "GLOBAL", 1)~ + @10578 /* ~Bring a 'Meteor Swarm' down upon the caster.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power31", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower32", "GLOBAL", 1)~ + @10579 /* ~Temporarily reduce the Strength of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power32", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower33", "GLOBAL", 1)~ + @10580 /* ~Temporarily reduce the Wisdom of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power33", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower34", "GLOBAL", 1)~ + @10581 /* ~Temporarily reduce the Constitution of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power34", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower35", "GLOBAL", 1)~ + @10582 /* ~Temporarily reduce the Dexterity of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power35", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower36", "GLOBAL", 1)~ + @10583 /* ~Temporarily reduce the Intelligence of all party members to 3.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power36", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("WishPower37", "GLOBAL", 1)~ + @10584 /* ~'Slow' the entire party.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power37", "LOCALS", 1)) ClearActions(Myself)~ EXIT
     + ~Global("WishPower38", "GLOBAL", 1)~ + @10445 /* Globe of Blades on the caster. */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power38", "LOCALS", 1)) ClearActions(Myself)~ EXIT
     + ~Global("WishPower39", "GLOBAL", 1)~ + @10446 /* Party gains 10,000 gp. */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power39", "LOCALS", 1)) ClearActions(Myself)~ EXIT
     + ~RandomNum(66, 6)~ + @10447 /* I wish to lose the game. */ + TalkGeneric.Wish.Lose

@@ -1,31 +1,52 @@
 // *** Area A77006 (Inside the djinni lamp) ***
 
-//COPY_LARGE ~DjinniCompanion/areas/a77006.tis~ ~override~
+// Setting display string for info triggers
 COPY ~DjinniCompanion/areas/a77006.are~   ~override~
-     ~DjinniCompanion/areas/a77006.wed~   ~override~
+  READ_LONG 0x5c ofs_triggers
+  READ_SHORT 0x5a num_triggers
+  FOR (i = 0; i < num_triggers; i += 1) BEGIN
+    SET ofs = ofs_triggers + (i * 0xc4)
+    READ_ASCII ofs trigger_name (8)
+    PATCH_IF (~%trigger_name%~ STRING_EQUAL_CASE ~Voidinfo~) BEGIN
+      SET strref_ofs = ofs + 0x64
+      SAY strref_ofs @60103  // Looking over the side shows only a dark, windy void that descends endlessly below.
+    END
+  END
+
+COPY ~DjinniCompanion/areas/a77006.wed~   ~override~
      ~DjinniCompanion/areas/a77006ht.bmp~ ~override~
      ~DjinniCompanion/areas/a77006lm.bmp~ ~override~
      ~DjinniCompanion/areas/a77006sr.bmp~ ~override~
 
 // Clone of CHARNAME
 COPY ~DjinniCompanion/creatures/a7q6copy.cre~ ~override~
+  PATCH_IF (GAME_IS ~iwdee~) BEGIN
+    SET projected_image = 37672
+  END ELSE BEGIN
+    SET projected_image = 8296
+  END
+  WRITE_LONG NAME1 projected_image
+  WRITE_LONG NAME2 projected_image
 
 // Regeneration effect for Afaaq
 COPY ~DjinniCompanion/spells/a7q6cure.spl~ ~override~
+
+// Blur effect for projected image
+COPY ~DjinniCompanion/items/a7blurfx.itm~ ~override~
 
 // Translucency effect for party members
 COPY ~DjinniCompanion/spells/a7q6fad1.spl~ ~override~
   SAY NAME1 ~Translucent~
 
 
-COPY_EXISTING ~am0601.wav~   ~override~
-              ~am0601a1.wav~ ~override~
-              ~am0601a2.wav~ ~override~
-              ~am0601a3.wav~ ~override~
-              ~am0601a4.wav~ ~override~
-              ~am0601a5.wav~ ~override~
-              ~am0601a6.wav~ ~override~
-              ~am0601a7.wav~ ~override~
+COPY ~DjinniCompanion/areas/a7am06.wav~   ~override~
+     ~DjinniCompanion/areas/a7am06a1.wav~ ~override~
+     ~DjinniCompanion/areas/a7am06a2.wav~ ~override~
+     ~DjinniCompanion/areas/a7am06a3.wav~ ~override~
+     ~DjinniCompanion/areas/a7am06a4.wav~ ~override~
+     ~DjinniCompanion/areas/a7am06a5.wav~ ~override~
+     ~DjinniCompanion/areas/a7am06a6.wav~ ~override~
+     ~DjinniCompanion/areas/a7am06a7.wav~ ~override~
 
 COMPILE EVALUATE_BUFFER
   ~DjinniCompanion/scripts/a77006.baf~

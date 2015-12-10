@@ -4,7 +4,8 @@ IF
   Global("A7AfaaqUpgraded", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("A7AfaaqUpgraded", "GLOBAL", 1)
-  SetGlobal("AfaaqLight", "LOCALS", 1)
+  SetGlobal("A7AfaaqLight", "GLOBAL", 1)
+  %set_iwdee_var%
   MakeGlobal()
   ChangeEnemyAlly(Myself, FAMILIAR)
   AddFamiliar()

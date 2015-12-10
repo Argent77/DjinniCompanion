@@ -13,7 +13,7 @@ IF ~True()~ QuickMenu.1
   + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("POTN20", Myself) !StateCheck(Myself, STATE_POISONED)~ + @60066 /* Quaff an Antidote potion */ + QuickMenu.3
 
   + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("POTN08", Myself) HPPercentLT(Myself, 100)~ + @60067 /* Quaff a Potion of Healing */ DO ~UseItem("POTN08", Myself)~ EXIT
-  + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("POTN52", Myself) HPPercentLT(Myself, 100)~ + @60068 /* Quaff a Potion of Extra Healing */ DO ~UseItem("POTN52", Myself)~ EXIT
+  + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("%itm_potn52%", Myself) HPPercentLT(Myself, 100)~ + @60068 /* Quaff a Potion of Extra Healing */ DO ~UseItem("%itm_potn52%", Myself)~ EXIT
   + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("POTN55", Myself) HPPercentLT(Myself, 100)~ + @60069 /* Quaff a Potion of Superior Healing */ DO ~UseItem("POTN55", Myself)~ EXIT
   
   // Change combat scripts

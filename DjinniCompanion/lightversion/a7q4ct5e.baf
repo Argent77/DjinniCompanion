@@ -1,0 +1,22 @@
+// *** Cutscene IWD: Nym breaks enchantments - Nym will break the enchantment ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("Nym")
+  MoveViewObject("A7Afaaq", VERY_FAST)
+  Wait(1)
+  ForceSpellRES("A7Q4SFX1", Myself)    // some casting animations without projectile effect
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7Afaaq")
+  Wait(4)
+  CreateVisualEffectObject("A7Q4CT3A", Myself)
+  Wait(3)
+  ChangeAnimation("A7AFAAQ2")
+  ActionOverride("A7Afaaq", MakeGlobal())
+  StartCutScene("A7Q4ct5f")
+END

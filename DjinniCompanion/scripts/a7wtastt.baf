@@ -55,11 +55,11 @@ IF
     See(NearestEnemyOf(Myself))
   HPPercentLT(Myself, 50)
   !GlobalTimerNotExpired("DrankPotionTimer", "LOCALS")
-  HasItem("POTN52", Myself)
+  HasItem("%itm_potn52%", Myself)
 THEN RESPONSE #100
   SetGlobalTimer("DrankPotionTimer", "LOCALS", ONE_ROUND)
   DisplayStringHead(Myself, 46150) // quaffs a potion
-  UseItem("POTN52", Myself)
+  UseItem("%itm_potn52%", Myself)
   Continue()
 END
 

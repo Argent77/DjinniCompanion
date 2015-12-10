@@ -70,6 +70,7 @@ THEN RESPONSE #100
   DisplayString(Myself, @60037)    // recovers from gaseous form
   ApplySpellRES("A7MISTB", Myself)
   ChangeEnemyAlly(Myself, FAMILIAR)
+  MakeUnselectable(2)
   SetInterrupt(TRUE)
 END
 
@@ -88,7 +89,7 @@ THEN RESPONSE #100
   ApplySpellRES("A7IMMUN", "A7Afaaq")
   ApplySpellRES("A7UNSUM", Myself)    // triggers visual and sound effects, make the djinni unselectable
   SmallWait(5)
-  SetSequence(SEQ_DIE)
+  SetSequence(%seq_die%)
   SmallWait(25)
   ChangeEnemyAlly(Myself, FAMILIAR)
   SetInterrupt(TRUE)
@@ -113,10 +114,11 @@ THEN RESPONSE #100
   SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
   SetGlobal("initialize", "LOCALS", 1)
   Activate(Myself)
-  SetSequence(SEQ_AWAKE)
+  SetSequence(%seq_awake%)
   MoveToOffset([0.0])
   CreateVisualEffectObject("A7AFQSUM", Myself)
   ChangeEnemyAlly(Myself, FAMILIAR)  // restoring player control
+  MakeUnselectable(1)
   Wait(1)
   SetInterrupt(TRUE)
 END
@@ -137,10 +139,11 @@ THEN RESPONSE #100
   SetGlobal("initialize", "LOCALS", 1)
   ApplySpellRES("A7REST", Myself)    // Cures effects and restores health
   Activate(Myself)
-  SetSequence(SEQ_AWAKE)
+  SetSequence(%seq_awake%)
   MoveToOffset([0.0])
   CreateVisualEffectObject("A7AFQSUM", Myself)
   ChangeEnemyAlly(Myself, FAMILIAR)  // restoring player control
+  MakeUnselectable(1)
   Wait(1)
   SetInterrupt(TRUE)
 END
@@ -160,10 +163,11 @@ THEN RESPONSE #100
   SetGlobal("initialize", "LOCALS", 1)
   ApplySpellRES("A7REST2", Myself)    // Cures effects, restores health and memorized spells
   Activate(Myself)
-  SetSequence(SEQ_AWAKE)
+  SetSequence(%seq_awake%)
   MoveToOffset([0.0])
   CreateVisualEffectObject("A7AFQSUM", Myself)
   ChangeEnemyAlly(Myself, FAMILIAR)  // restoring player control
+  MakeUnselectable(1)
   Wait(1)
   SetInterrupt(TRUE)
 END
@@ -205,6 +209,7 @@ IF
     AreaCheck("AR3008")
   Global("unsummoning", "LOCALS", 0)
   Global("A7AntiMagicZone", "MYAREA", 0)
+  Global("A7AfaaqIwdee", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("A7AntiMagicZone", "MYAREA", 1)
   SetGlobal("unsummoning", "LOCALS", 1)
@@ -219,6 +224,7 @@ IF
     AreaCheck("AR3008")
   Global("unsummoning", "LOCALS", 0)
   Global("A7AntiMagicZone", "MYAREA", 1)
+  Global("A7AfaaqIwdee", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("unsummoning", "LOCALS", 1)
 END
@@ -230,6 +236,7 @@ IF
     AreaCheck("AR3005")
     AreaCheck("AR3009")
   Global("A7WildMagicZone", "MYAREA", 0)
+  Global("A7AfaaqIwdee", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("A7WildMagicZone", "MYAREA", 1)
   DisplayStringHead(Myself, @60026)    // Be careful! Magic is running wild in this room.

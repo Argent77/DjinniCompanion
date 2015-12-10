@@ -6,3 +6,8 @@
 @101 = ~eine Vielzahl feuerresistenter Kreaturen, wie Mephits, Feuerelementare oder Höllenhunde~
 @102 = ~Spinnen, Panther, Riesenschlangen oder schlangenähnliche Kreaturen~
 @103 = ~Spinnen und Erdkolosse~
+
+// Common lines not available in all supported games
+@200 = ~trinkt einen Trank~
+@201 = ~stirbt!~
+@202 = ~Beschwörung beendet~

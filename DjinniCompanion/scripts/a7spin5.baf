@@ -111,7 +111,7 @@ IF
 THEN RESPONSE #100
   CreateVisualEffectObject("SPGFLSH1", Myself)
   SmallWait(5)
-  DisplayString(Myself, 14065)    // Unsummoned
+  DisplayString(Myself, @202)     // Unsummoned
   DestroySelf()
 END
 

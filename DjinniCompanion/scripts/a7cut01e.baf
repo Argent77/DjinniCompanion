@@ -7,7 +7,7 @@ THEN RESPONSE #100
   RestorePartyLocations()
   MoveGlobalObject("A7Afaaq", Player1)
   MultiPlayerSync()
-  ActionOverride("A7Afaaq", SetSequence(SEQ_AWAKE))
+  ActionOverride("A7Afaaq", SetSequence(%seq_awake%))
   ActionOverride("A7Afaaq", CreateVisualEffectObject("A7AFQSUM", Myself))
   FadeFromColor([30.0], 0)
   Wait(2)

@@ -29,6 +29,7 @@ IF
   Global("A7AfaaqUpgraded", "GLOBAL", 1)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
   Global("AfaaqActiveHaste", "LOCALS", 1)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Myself, STATE_HASTED)
   CheckStat(Myself, 0, IMPROVEDHASTE)
   HaveSpellRES("A7SPIN3") // Haste

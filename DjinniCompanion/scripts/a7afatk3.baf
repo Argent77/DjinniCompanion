@@ -2,12 +2,13 @@
 
 // Cast protective spells if necessary
 IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Myself, STATE_MIRRORIMAGE)
   See([EVILCUTOFF])
   HPPercentLT(Myself, 50)
   HPPercentGT(Myself, 9)
   HaveSpell(WIZARD_MIRROR_IMAGE)
-  Global("A7AfaaqGaseous", "GLOBAL", 0)
 THEN RESPONSE #100
   Spell(Myself, WIZARD_MIRROR_IMAGE)
 END
@@ -16,6 +17,7 @@ END
 // Use antidote potions when poisoned
 IF
   Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   HasItem("POTN17", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   OR(2)
@@ -23,73 +25,79 @@ IF
     StateCheck(Myself, STATE_DISEASED)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN17", Myself)
 END
 
 IF
   Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   HasItem("POTN20", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   StateCheck(Myself, STATE_POISONED)
 THEN RESPONSE #50
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN20", Myself)
 END
 
 // Use healing potions when wounded
 IF
   Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   ActuallyInCombat()
   HasItem("POTN55", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   HPPercentLT(Myself, 34)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN55", Myself)
 END
 
 IF
   Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   ActuallyInCombat()
-  HasItem("POTN52", Myself)
+  HasItem("%itm_potn52%", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   HPPercentLT(Myself, 34)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
-  UseItem("POTN52", Myself)
+  DisplayString(Myself, @200)    // quaffs a potion
+  UseItem("%itm_potn52%", Myself)
 END
 
 IF
   Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   ActuallyInCombat()
   HasItem("POTN08", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   HPPercentLT(Myself, 34)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN08", Myself)
 END
 
 IF
   Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   ActuallyInCombat()
-  HasItem("POTN52", Myself)
+  HasItem("%itm_potn52%", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   HPPercentLT(Myself, 50)
   RandomNum(2, 1)
 THEN  RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
-  UseItem("POTN52", Myself)
+  DisplayString(Myself, @200)    // quaffs a potion
+  UseItem("%itm_potn52%", Myself)
 END
 
 IF
   Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   ActuallyInCombat()
   HasItem("POTN08", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
@@ -97,12 +105,13 @@ IF
   RandomNumGT(4, 1)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN08", Myself)
 END
 
 IF
   Global("A7AfaaqGaseous", "GLOBAL", 0)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   ActuallyInCombat()
   HasItem("POTN08", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
@@ -110,18 +119,18 @@ IF
   RandomNum(4, 1)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN08", Myself)
 END
 
 // When hurt then do some protective actions
 IF
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
   !StateCheck(Myself, CD_STATE_NOTVALID)
   See([EVILCUTOFF])
   HPPercentLT(Myself, 33)
   HPPercentGT(Myself, 9)
   Global("hurt33", "LOCALS", 0)
-  Global("A7AfaaqGaseous", "GLOBAL", 0)
 THEN
   RESPONSE #90    // hide and run
     SetGlobal("hurt33", "LOCALS", 1)
@@ -141,6 +150,7 @@ IF
   Global("A7AfaaqUpgraded", "GLOBAL", 1)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
   Global("AfaaqActiveHaste", "LOCALS", 1)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Myself, STATE_HASTED)
   CheckStat(Myself, 0, IMPROVEDHASTE)
   HaveSpellRES("A7SPIN3") // Haste

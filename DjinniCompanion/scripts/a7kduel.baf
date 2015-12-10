@@ -35,8 +35,8 @@ THEN RESPONSE #100
   SetGlobalTimer("A7AfaaqDeathTimer", "GLOBAL", EIGHT_HOURS)
   SetGlobalTimer("A7AfaaqRestTimer", "GLOBAL", EIGHT_HOURS)
   ActionOverride("A7Afaaq", ApplySpellRES("A7DIE", Myself))
-  ActionOverride("A7Afaaq", DisplayString(Myself, 14026))    // Death
-  ActionOverride("A7Afaaq", SetSequence(SEQ_DIE))
+  ActionOverride("A7Afaaq", DisplayString(Myself, @201))    // Death
+  ActionOverride("A7Afaaq", SetSequence(%seq_die%))
   SmallWait(25)
   ActionOverride("A7Afaaq", DestroySelf())
   EndCutSceneMode()

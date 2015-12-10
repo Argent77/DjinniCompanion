@@ -501,6 +501,88 @@
 @10500 = ~Versetze Dich bitte nicht ständig in einen Hastzustand.~
 @10501 = ~Sicher, Ich werde fortwährend Hast auf mich zaubern, wenn es notwendig sein sollte.~
 @10502 = ~Alles klar. Ich werde aufhören, fortwährend Hast auf mich zu zaubern.~
+@10503 = ~Ein wiederholbarer Wunsch.~
+@10504 = ~Ein einmaliger Wunsch.~
+@10505 = ~Ich überlege es mir. Ich werde mir jetzt nichts wünschen.~
+@10506 = ~Trefft eine kluge Wahl, weil ich jede dieser Aufgaben nur ein einziges Mal ausführen kann.~
+@10507 = ~Eigentlich möchte ich doch lieber einen wiederholbaren Wunsch.~
+@10508 = ~Ich will im Moment gar keinen Wunsch erfüllt haben.~
+@10509 = ~Ich will reich sein.~
+@10510 = ~Ich wünsche mir einen mächtigen magischen Gegenstand.~
+@10511 = ~Ich wünsche mir mehr Erfahrung.~
+@10512 = ~Ich wünsche mir, alles so zu sehen, wie es wirklich ist.~
+@10513 = ~Ich wünsche mir ein Abenteuer, wie ich es noch nie erlebt habe.~
+@10514 = ~Ich wünsche mir Kontrolle über die Zeit.~
+@10515 = ~Ich wünsche mir, alles zu sein, was ich will.~
+@10516 = ~Ich wünsche mir, auf alles vorbereitet zu sein.~
+@10517 = ~Ich wünsche mir, dass alle meine Feinde sterben.~
+@10518 = ~Wenn Ihr Reichtum wollt, sollt Ihr Reichtum haben.~
+@10519 = ~Dann lasst Eure Feinde jetzt sterben!~
+@10520 = ~Alle Eventualitäten einzuplanen, ist der Schlüssel zur Vorbereitung.~
+@10521 = ~Dann sollt Ihr das haben.~
+@10522 = ~(kichert) Kämpft gut und Ihr werdet Erfahrung sammeln.~
+@10523 = ~Die Zeit ist nun Eure Verbündete, Boss.~
+@10524 = ~Dann gebe ich Euch die Fähigkeit zum Gestaltenändern...setzt diese Fähigkeit klug ein, denn sie wird nicht für immer andauern.~
+@10525 = ~Mit dieser Brille wird kein Gegenstand jenseits Eures Verständnisses sein.~
+@10526 = ~Dann wählt, doch seid Euch im Klaren darüber, dass ein dummer Wunsch dem Wünschenden schaden kann.~
+@10527 = ~Ich wünsche mir, dass meine ganze Gruppe geheilt wird.~
+@10528 = ~Ich wünsche mir, dass keiner aus meiner Gruppe an seinen Wunden stirbt.~
+@10529 = ~Ich wünsche mir, dass Zaubersprüche, nachdem ich sie benutzt habe, sich von alleine gleich wieder in meinem Gedächtnis verankern!~
+@10530 = ~Ich wünsche mir, dass ich meine Zaubersprüche wieder im Gedächtnis habe!~
+@10531 = ~Ich wünsche mir, dass meine Gruppe unverwundbar wird.~
+@10532 = ~Ich wünsche mir, dass Magie keine Wirkung auf mich oder meine Gruppe hat.~
+@10533 = ~Ich wünsche mir, dass sich eine ganze Horde versammelt, die meine Feinde überwältigt.~
+@10534 = ~Ich wünsche mir, vor Untoten geschützt zu sein.~
+@10535 = ~Ich wünsche mir, jetzt vor Untoten geschützt zu sein.~
+@10536 = ~Ich möchte statt dessen um einen einmaligen Wunsch bitten.~
+@10537 = ~Ich habe jetzt keinen Wunsch.~
+@10538 = ~Dann sollen alle geheilt werden.~
+@10539 = ~Sei gewährt. Alle werden an anderen Dingen sterben, doch nicht an den Wunden, die sie haben.~
+@10540 = ~Dann gewähre ich Euch Euren Wunsch und stelle Euch einige Eurer verlorenen Zaubersprüche wieder zur Verfügung.~
+@10541 = ~Sei gewährt. Eure Zaubersprüche sind jetzt wieder so, wie sie waren, bevor Ihr sie Euch eingeprägt habt.~
+@10542 = ~Unverwundbar sollt Ihr sein.~
+@10543 = ~Eine merkwürdige Bitte, aber sie sei Euch gewährt. Keiner Eurer Zaubersprüche wird klappen.~
+@10544 = ~Eine Horde? Wie Ihr wünscht...~
+@10545 = ~Schutz sei Euch gewährt.~
+@10546 = ~Schutz vor Untoten sei Euch gewährt, und ich werde ein paar Untote herbeirufen müssen, vor denen Ihr geschützt werden müsst.~
+@10547 = ~Ich überlege es mir. Ich werde mir jetzt nichts wünschen.~
+@10548 = ~Eine 'Bresche' für alle in dem betreffenden Gebiet, einschließlich der Gruppe.~
+@10549 = ~Alle Leute, einschließlich der Gruppenmitglieder, vom Zauberer wegstoßen.~
+@10550 = ~Jeden heilen, einschließlich aller Gruppenmitglieder und Feinde.~
+@10551 = ~Stärke bei allen Anwesenden in dem Gebiet vorübergehend auf 18 setzen, Feinde eingeschlossen.~
+@10552 = ~'Magie fehlwirken' auf alle Anwesenden in dem Gebiet, einschließlich Gruppenmitglieder.~
+@10553 = ~'Magieresistenz' bei allen im betreffenden Gebiet, Feinde eingeschlossen.~
+@10554 = ~'Abi-Dalzims Abscheuliche Austrocknung' wird auf jedem in dem Gebiet gewirkt, auch auf die Gruppe.~
+@10555 = ~Jeder in dem Gebiet, einschließlich Gruppenmitglieder und Feind, wird berauscht.~
+@10556 = ~Alle Anwesende in dem Gebiet, einschließlich der Gruppenmitglieder, werden vom Pech verfolgt.~
+@10557 = ~'Stille' bei allen Anwesenden in dem Gebiet, einschließlich der Gruppenmitglieder.~
+@10558 = ~'Hast' für alle Anwesenden in dem Gebiet, einschließlich aller Feinde.~
+@10559 = ~'Verbesserte Hast' für alle Gruppenmitglieder.~
+@10560 = ~'Bresche' für alle Feinde in dem Gebiet.~
+@10561 = ~'Genesung' bei allen Gruppenmitgliedern.~
+@10562 = ~Die Eigenschaften aller Gruppenmitglieder für 4 Runden auf 25 anheben.~
+@10563 = ~'Auferstehung' für alle toten Gruppenmitglieder.~
+@10564 = ~Alle Gruppenmitglieder erhalten die vorübergehende Fähigkeit 'Höherer Todesschlag'.~
+@10565 = ~Alle Gruppenmitglieder erhalten die vorübergehende Fähigkeit 'Zähigkeit'.~
+@10566 = ~Erzeugt im Gepäck des Magiers einen zufällig ausgewählten Zauberstab.~
+@10567 = ~Ein zufälliger Trank taucht im Gepäck des Zaubernden auf.~
+@10568 = ~Die gesamte Gruppe hat sich gerade eine volle Nacht ausgeruht und sich alle ihre Zauber eingeprägt.~
+@10569 = ~Zaubert einen doppelt so langen 'Zeitstopp' und eine 'Verbesserte Beschleunigung' auf den Zauberer.~
+@10570 = ~Alle Feinde in dem Gebiet heilen.~
+@10571 = ~'Verbesserte Hast' bei allen Feinden in dem Gebiet.~
+@10572 = ~Ein weiteres feindseliges Monster wird in dem Gebiet beschworen.~
+@10573 = ~Jedes Gruppenmitglied um zwei Stufen herunterstufen.~
+@10574 = ~Trefferpunkte des Zauberers vorübergehend um die Hälfte verringern.~
+@10575 = ~Trefferpunkte aller Gruppenmitglieder vorübergehend um 15% verringern.~
+@10576 = ~Zauberer verliert alle eingeprägten Zauber.~
+@10577 = ~Die Gruppe verliert 10.000 Goldmünzen.~
+@10578 = ~Einen 'Meteorschwarm' auf den Zauberer herabregnen lassen.~
+@10579 = ~Die Stärke aller Gruppenmitglieder vorübergehend auf 3 absenken.~
+@10580 = ~Die Weisheit aller Gruppenmitglieder vorübergehend auf 3 absenken.~
+@10581 = ~Die Konstitution aller Gruppenmitglieder vorübergehend auf 3 absenken.~
+@10582 = ~Die Geschicklichkeit aller Gruppenmitglieder vorübergehend auf 3 absenken.~
+@10583 = ~Die Intelligenz aller Gruppenmitglieder vorübergehend auf 3 absenken.~
+@10584 = ~Die gesamte Gruppe 'verlangsamen'.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~empfängt Afaaqs Wohltat~
@@ -777,6 +859,7 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @11265 = ~Ich könnte <CHARNAME> in der Tat den Wunsch gewähren, den Fluch von Euch zu nehmen, falls <PRO_HESHE> mich darum bittet.~
 @11266 = ~Ich wünsche mir, dass Ihr den Fluch des Hauttänzers von Raissa entfernt.~
 @11267 = ~So soll es sein. Raissas Fluch wird von ihr genommen.~
+@11268 = ~Nachdem Ihr meine versiegelten Kräfte wiederherstellen konntet, habe ich versucht, dieses Einsprengsel etwas wohnlicher zu gestalten, indem ich sie der materiellen Ebene etwas mehr angepasst habe.~
 
 // *** Banters with <PC> (index 12000...12999) ***
 // interjections and specific talks
@@ -1173,7 +1256,7 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 
 // *** Djinni Lamp Only Dialog (index 21000...21499) ***
 @21000 = ~(Die magische Lampe in Eurem Besitz fängt an, ein schwaches pulsierendes Leuchten abzugeben und kurze Zeit später wendet sich der Dschinn Euch zu.)~
-@21001 = ~(Bevor Ihr jedoch reagieren könnt, wendet er sich ab und die Lampe hört auf zu Leuchten.)~
+@21001 = ~(Bevor Ihr jedoch reagieren könnt, wendet er sich ab und die Lampe hört auf zu leuchten.)~
 @21002 = ~Ich danke Euch, <PRO_LADYLORD>. Ihr habt mich wieder aus den Klauen der verachtenswerten Rakshasa befreit, und dafür bin ich Euch dankbar. Ich bezweifle, dass sie mir weiter nachstellen, da Ihr den Verantwortlichen für meine Bindung an die Lampe getötet habt.~
 @21003 = ~Irgendetwas scheint nicht zu stimmen. Ich rate Euch, sehr vorsichtig voranzuschreiten, <PRO_LADYLORD>.~
 @21004 = ~Es ist ein schreckliches Schicksal, endlos von den Drow gequält zu werden, ohne Hoffnung auf Erlösung. Wenn wir nicht in geheimer Mission unterwegs wären, würde ich den Dschinn von seinen Fesseln befreien.~
@@ -1839,6 +1922,15 @@ Rettungswurf: Nein
 
 Im Laufe vieler Jahrtausende hatte Afaaq Gelegenheit, enorme Kenntnisse über Orte, Völker, natürliche und übernatürliche Phänomene und von Sterblichen oder Unsterblichen erschaffene Gegenstände anzusammeln. Diese Fähigkeit erlaubt es der Zielperson, für eine kurze Zeitspanne auf Afaaqs Wissen zurückzugreifen, um die wahre Natur verzauberter Gegenstände zu erfassen.~
 @60100 = ~Wissen übertragen~
+@60101 = ~Reden~
+@60102 = ~Diese Lampe hat eine eigentümliche Form und Ihr fühlt ein leichtes Kribbeln, wenn Ihr sie berührt. Sie war einst im Besitz von Yxunomei, aber gehört nun Euch.~
+@60103 = ~Ihr blickt über den Rand und seht einen dunklen, stürmischen Abgrund, der sich endlos nach unten zu erstrecken scheint.~
+@60104 = ~Ah, hay!!~ [A7SFX01]
+@60105 = ~Ich erhöre Euren Todeswunsch!~
+@60106 = ~Stirb, unwürdigster aller Feinde!~
+@60107 = ~~ [A7SFX02]
+@60108 = ~~ [A7SFX05]
+@60109 = ~Kontrolliert~
 
 // Afaaq's Epilogues
 @64090 = ~Afaaq setzte seine Reise mit <CHARNAME> fort, die sie durch halb Faerûn führte. Sie besiegten Überfalltrupps der Sahuagin an der westlichen Grenze von Tethyr und schlugen einen Angriff der Frostriesen in Luskan und den umgebenden Siedlungen zurück.

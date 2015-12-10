@@ -149,7 +149,7 @@ COPY ~DjinniCompanion/items/a7wand1.itm~ ~override~
 COPY ~DjinniCompanion/items/a7iwand1.bam~ ~override~
      ~DjinniCompanion/items/a7q5wand.eff~ ~override~
      ~DjinniCompanion/creatures/a7q5wand.cre~ ~override~
-COMPILE ~DjinniCompanion/scripts/a7q5wand.baf~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/scripts/a7q5wand.baf~
 
 COPY ~DjinniCompanion/items/a7wand2.itm~ ~override~
   SAY NAME2 @6821     // Wand of Inferno
@@ -179,7 +179,7 @@ COPY ~DjinniCompanion/items/a7iflute.bam~     ~override~
      ~%ITEM_CFLUTE%~                          ~override~
      ~DjinniCompanion/items/a7q5djin.eff~     ~override~
      ~DjinniCompanion/creatures/a7q5djin.cre~ ~override~
-COMPILE ~DjinniCompanion/scripts/a7q5djin.baf~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/scripts/a7q5djin.baf~
 
 COPY ~DjinniCompanion/items/a7ring03.itm~ ~override~
   SAY NAME2 @6825     // Ring of Elemental Protection
@@ -215,7 +215,7 @@ COPY ~DjinniCompanion/items/a7skull2.itm~ ~override~
 COPY ~DjinniCompanion/items/a7iskull.bam~ ~override~
      ~DjinniCompanion/items/a7skull.eff~ ~override~
      ~DjinniCompanion/creatures/a7skull.cre~ ~override~
-COMPILE ~DjinniCompanion/scripts/a7skull.baf~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/scripts/a7skull.baf~
 
 // Placing the demilich skull in WK's demilich and Kangaxx
 COPY_EXISTING ~demilich.cre~ ~override~

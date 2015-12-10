@@ -35,11 +35,11 @@ END
 IF
   HPPercentLT(Myself, 50)
   !GlobalTimerNotExpired("DrankPotionTimer", "LOCALS")
-  HasItem("POTN52", Myself) // Potion of Extra Healing
+  HasItem("%itm_potn52%", Myself) // Potion of Extra Healing
 THEN RESPONSE #100
   SetGlobalTimer("DrankPotionTimer", "LOCALS", ONE_ROUND)
   DisplayStringHead(Myself, 46150) // quaffs a potion
-  UseItem("POTN52", Myself) // Potion of Extra Healing
+  UseItem("%itm_potn52%", Myself) // Potion of Extra Healing
   Continue()
 END
 

@@ -4,7 +4,7 @@ INCLUDE ~DjinniCompanion/lib/a77006.tph~
 INCLUDE ~DjinniCompanion/lib/afaaq_cut.tph~
 
 // BG2EE-specific stuff
-ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
   OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/bg2ee/a7clamp.bmp"
   OUTER_TEXT_SPRINT ITEM_ILAMP "DjinniCompanion/items/bg2ee/a7ilamp.bam"
   OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/bg2ee/a7afaaqs.bmp"
@@ -15,7 +15,13 @@ END ELSE BEGIN
 END
 
 // Sounds
-COPY ~DjinniCompanion/misc/a7afq01.wav~ ~override~
+COPY
+  ~DjinniCompanion/misc/a7afq01.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx01.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx02.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx03.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx04.wav~ ~override~
+  ~DjinniCompanion/misc/a7sfx05.wav~ ~override~
 
 // Djinni Afaaq
 COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
@@ -28,7 +34,11 @@ COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
   SAY SELECT_COMMON4 @60033   // [Djinni laughter]
   SAY SELECT_COMMON5 @60034   // [Silence]
   SAY SELECT_COMMON6 @60034   // [Silence]
-  WRITE_ASCII 0x250 ~~ #8     // removing talk script (not needed in the light version)
+  SAY CRITICAL_HIT @60104     // [Ah hay!]
+  SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
+  SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
+  SAY DAMAGE @60107           // [SFX]
+  SAY HURT @60108             // [SFX]
   REMOVE_KNOWN_SPELLS
   REMOVE_MEMORIZED_SPELLS
   ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
@@ -78,7 +88,11 @@ COPY ~DjinniCompanion/creatures/a7afaaq2.cre~ ~override~
   SAY SELECT_COMMON4 @60033   // [Djinni laughter]
   SAY SELECT_COMMON5 @60034   // [Silence]
   SAY SELECT_COMMON6 @60034   // [Silence]
-  WRITE_ASCII 0x250 ~~ #8     // removing talk script (not needed in the light version)
+  SAY CRITICAL_HIT @60104     // [Ah hay!]
+  SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
+  SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
+  SAY DAMAGE @60107           // [SFX]
+  SAY HURT @60108             // [SFX]
   REMOVE_KNOWN_SPELLS
   REMOVE_MEMORIZED_SPELLS
   ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
@@ -143,30 +157,57 @@ COPY ~DjinniCompanion/creatures/a7gasfrm.cre~ ~override~
 COPY ~DjinniCompanion/items/a7djlmp.itm~ ~override~
   SAY NAME1 @60003    // Magic lamp
   SAY NAME2 @60004    // Afaaq's djinni lamp
-  SAY UNIDENTIFIED_DESC @60005    // This lamp radiates a strange magic. It...
   SAY IDENTIFIED_DESC @60006      // This lamp contains the essence of the djinni...
+  PATCH_IF (GAME_IS ~iwdee~) BEGIN
+    SAY UNIDENTIFIED_DESC @60102  // This lamp radiates a strange magic. It...
+    WRITE_ASCII 0x58 ~~ #8        // remove description image resref
+  END ELSE BEGIN
+    SAY UNIDENTIFIED_DESC @60005  // This lamp radiates a strange magic. It...
+  END
 
 // Djinni Lamp (with released genie)
 COPY ~DjinniCompanion/items/a7djlmpa.itm~ ~override~
   SAY NAME1 @60003    // Magic lamp
   SAY NAME2 @60004    // Afaaq's djinni lamp
-  SAY UNIDENTIFIED_DESC @60005    // This lamp radiates a strange magic. It...
   SAY IDENTIFIED_DESC @60006      // This lamp contains the essence of the djinni...
+  PATCH_IF (GAME_IS ~iwdee~) BEGIN
+    SAY UNIDENTIFIED_DESC @60102  // This lamp radiates a strange magic. It...
+    WRITE_ASCII 0x58 ~~ #8        // remove description image resref
+  END ELSE BEGIN
+    SAY UNIDENTIFIED_DESC @60005  // This lamp radiates a strange magic. It...
+  END
 
 // Adding conversation entries for the conversable items
 COPY_EXISTING ~itemdial.2da~ ~override~
-  INSERT_2DA_ROW 0 3 ~A7DJLMPA      5689   A7DJLMP~
-  INSERT_2DA_ROW 0 3 ~A7DJLMP       5689   A7DJLMP~
-
-// adding the djinni lamp to the rakshasa in the druid cottage
-COPY_EXISTING ~trrak01.cre~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
-    ADD_CRE_ITEM ~A7DJLMP~ #0 #0 #0 ~UNSTEALABLE~ ~INV1 INV2 INV3 INV4 INV5 INV6 INV7 INV8 INV9 INV10 INV11 INV12 INV13 INV14 INV15 INV16~
+  PATCH_IF (GAME_IS ~iwdee~) BEGIN
+    SET strref_converse = RESOLVE_STR_REF (@60101)  // Converse
   END ELSE BEGIN
-    TEXT_SPRINT filename ~trrak01.cre~
-    TEXT_SPRINT restype ~Creature~
-    PATCH_FAIL @30    // Error: Unable to patch %filename% (Reason: %restype% file is invalid)
+    SET strref_converse = 5689  // Converse
   END
+  INSERT_2DA_ROW 0 3 ~A7DJLMPA      %strref_converse%   A7DJLMP~
+  INSERT_2DA_ROW 0 3 ~A7DJLMP       %strref_converse%   A7DJLMP~
+
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  // adding the djinni lamp to Yxunomei's inventory in Dragon's Eye
+  COPY_EXISTING ~tanarri.cre~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+      ADD_CRE_ITEM ~A7DJLMP~ #0 #0 #0 ~UNSTEALABLE~ ~INV1 INV2 INV3 INV4 INV5 INV6 INV7 INV8 INV9 INV10 INV11 INV12 INV13 INV14 INV15 INV16~
+    END ELSE BEGIN
+      TEXT_SPRINT filename ~tanarri.cre~
+      TEXT_SPRINT restype ~Creature~
+      PATCH_FAIL @30    // Error: Unable to patch %filename% (Reason: %restype% file is invalid)
+    END
+END ELSE BEGIN
+  // adding the djinni lamp to the rakshasa in the druid cottage
+  COPY_EXISTING ~trrak01.cre~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+      ADD_CRE_ITEM ~A7DJLMP~ #0 #0 #0 ~UNSTEALABLE~ ~INV1 INV2 INV3 INV4 INV5 INV6 INV7 INV8 INV9 INV10 INV11 INV12 INV13 INV14 INV15 INV16~
+    END ELSE BEGIN
+      TEXT_SPRINT filename ~trrak01.cre~
+      TEXT_SPRINT restype ~Creature~
+      PATCH_FAIL @30    // Error: Unable to patch %filename% (Reason: %restype% file is invalid)
+    END
+END
 
 // Afaaq's Quick Menu item
 COPY ~DjinniCompanion/items/a7qmenu.itm~ ~override~
@@ -210,8 +251,20 @@ COPY ~DjinniCompanion/misc/a7afqinv.sto~ ~override~
   SAY NAME2 @60090    // Afaaq's inventory
 
 // Helper creatures for Afaaq
+COPY ~DjinniCompanion/creatures/a7afqhlp.cre~ ~override~
+  PATCH_IF (GAME_IS ~iwdee~) BEGIN
+    WRITE_LONG 0x28 0xD300  // Animation: BIRD
+    LPF ADD_CRE_EFFECT
+      INT_VAR
+        opcode      = 66  // Translucency
+        timing      = 9   // Instant/Permanent
+        target      = 1   // Self
+        parameter1  = 255 // Fully transparent
+        parameter2  = 0   // Draw immediately
+    END
+  END
+
 COPY ~DjinniCompanion/creatures/a7afqctl.cre~ ~override~
-     ~DjinniCompanion/creatures/a7afqhlp.cre~ ~override~
      ~DjinniCompanion/items/a7glamp.bam~ ~override~
      ~%ITEM_ILAMP%~ ~override~
      ~%ITEM_CLAMP%~ ~override~
@@ -226,10 +279,11 @@ COPY ~DjinniCompanion/creatures/a7afqhlp.cre~ ~override/a7afqqm.cre~
   WRITE_ASCII 0x248 ~A7AFQQM~ #8
   WRITE_ASCII 0x280 ~A7AFQQM~ #32
 
-COMPILE ~DjinniCompanion/scripts/a7ctldef.baf~
-        ~DjinniCompanion/scripts/a7afqhlp.baf~
-        ~DjinniCompanion/scripts/a7afqwsh.baf~
-        ~DjinniCompanion/scripts/a7afqqm.baf~
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a7ctldef.baf~
+  ~DjinniCompanion/scripts/a7afqhlp.baf~
+  ~DjinniCompanion/scripts/a7afqwsh.baf~
+  ~DjinniCompanion/scripts/a7afqqm.baf~
 
 
 // Innate Ability: Invisibility
@@ -240,7 +294,7 @@ COPY ~DjinniCompanion/spells/a7spin1.spl~  ~override~
 COPY ~DjinniCompanion/spells/a7spin2.spl~  ~override~
   SAY NAME1 @60014    // Whirlwind
   SAY UNIDENTIFIED_DESC @60082    // Afaaq's close connection to the Elemental Plane of Air enables him to raise and control whirlwinds...
-  PATCH_IF (GAME_IS ~bg2ee eet~) BEGIN
+  PATCH_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
     WRITE_ASCII 0x3a ~A7SPIN2C~ #8
     READ_LONG 0x64 ability_ofs
     WRITE_ASCII (ability_ofs + 4) ~A7SPIN2B~ #8
@@ -248,7 +302,7 @@ COPY ~DjinniCompanion/spells/a7spin2.spl~  ~override~
 COPY ~DjinniCompanion/spells/a7whirl.vvc~  ~override~
      ~DjinniCompanion/spells/a7whirl.pro~  ~override~
      ~DjinniCompanion/spells/a7whirl.bam~  ~override~
-ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
   COPY ~DjinniCompanion/spells/bg2ee/a7spin2b.bam~  ~override~
        ~DjinniCompanion/spells/bg2ee/a7spin2c.bam~  ~override~
 END ELSE BEGIN
@@ -265,7 +319,7 @@ COPY ~DjinniCompanion/spells/a7spin2a.spl~ ~override~
 COPY ~DjinniCompanion/spells/a7spin5.spl~    ~override~
   SAY NAME1 @60024    // Greater Whirlwind
   SAY UNIDENTIFIED_DESC @60083    // Afaaq's close connection to the Elemental Plane of Air enables him to raise and control whirlwinds...
-  PATCH_IF (GAME_IS ~bg2ee eet~) BEGIN
+  PATCH_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
     WRITE_ASCII 0x3a ~A7SPIN5C~ #8
     READ_LONG 0x64 ability_ofs
     WRITE_ASCII (ability_ofs + 4) ~A7SPIN5B~ #8
@@ -274,7 +328,7 @@ COPY ~DjinniCompanion/creatures/a7spin5.cre~ ~override~
   SAY NAME1 @60014    // Whirlwind
   SAY NAME2 @60014    // Whirlwind
 COPY ~DjinniCompanion/spells/a7spin5.eff~    ~override~
-ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
   COPY ~DjinniCompanion/spells/bg2ee/a7spin5b.bam~ ~override~
        ~DjinniCompanion/spells/bg2ee/a7spin5c.bam~ ~override~
 END ELSE BEGIN
@@ -283,7 +337,7 @@ END
 COPY ~DjinniCompanion/items/a7spin5.itm~ ~override~
   SAY NAME1 ~Whirlwind Effect~
   SAY NAME2 ~Whirlwind Effect~
-COMPILE ~DjinniCompanion/scripts/a7spin5.baf~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/scripts/a7spin5.baf~
 
 // Innate Ability: Haste
 COPY ~DjinniCompanion/spells/a7spin3.spl~  ~override~
@@ -294,14 +348,14 @@ COPY ~DjinniCompanion/spells/a7spin4.spl~  ~override~
      ~DjinniCompanion/spells/a7spin4a.spl~ ~override~
   SAY NAME1 @60015    // Air Shield
   SAY UNIDENTIFIED_DESC @60085    // The Air Shield grants Afaaq immunity to electricity damage, as well as...
-  PATCH_IF (GAME_IS ~bg2ee eet~) BEGIN
+  PATCH_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
     WRITE_ASCII 0x3a ~A7SPIN4C~ #8
     READ_LONG 0x64 ability_ofs
     WRITE_ASCII (ability_ofs + 4) ~A7SPIN4B~ #8
   END
 COPY ~DjinniCompanion/spells/a7airsd.vvc~ ~override~
      ~DjinniCompanion/spells/a7airsd.bam~ ~override~
-ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
   COPY ~DjinniCompanion/spells/bg2ee/a7spin4b.bam~ ~override~
        ~DjinniCompanion/spells/bg2ee/a7spin4c.bam~ ~override~
 END ELSE BEGIN
@@ -314,8 +368,9 @@ COPY ~DjinniCompanion/spells/a7spin6.spl~  ~override~
   SAY NAME1 @60027    // Control Aerial Creatures
   SAY UNIDENTIFIED_DESC @60086    // This spell allows Afaaq to take control over any creature of aerial origin...
 COPY ~DjinniCompanion/spells/a7spin6a.eff~ ~override~
-     ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
      ~DjinniCompanion/spells/a7spin6c.eff~ ~override~
+COPY ~DjinniCompanion/spells/a7spin6b.eff~ ~override~
+  SAY 0x1c @60109   // Controlled
 
 // Innate Ability: Transfer Knowledge
 COPY ~DjinniCompanion/spells/a7spin7.spl~  ~override~
@@ -411,28 +466,37 @@ COPY ~DjinniCompanion/spells/a7spsv1.spl~ ~override~
   SAY UNIDENTIFIED_DESC @60019    // -used by script-
 
 // Scripts
-COMPILE ~DjinniCompanion/scripts/a7afaaq.baf~
-        ~DjinniCompanion/lightversion/a7afqini.baf~
-        ~DjinniCompanion/lightversion/a7afqin2.baf~
-        ~DjinniCompanion/scripts/a7afqlvl.baf~
-        ~DjinniCompanion/scripts/a7afatk.baf~
-        ~DjinniCompanion/scripts/a7afatk2.baf~
-        ~DjinniCompanion/scripts/a7afatk3.baf~
-        ~DjinniCompanion/scripts/a7afqup1.baf~
-        ~DjinniCompanion/lightversion/a7afqup2.baf~
-        ~DjinniCompanion/scripts/a7cut02.baf~
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/scripts/a7afaaq.baf~
+  ~DjinniCompanion/lightversion/a7afqtlk.baf~
+  ~DjinniCompanion/lightversion/a7afqini.baf~
+  ~DjinniCompanion/lightversion/a7afqin2.baf~
+  ~DjinniCompanion/scripts/a7afqlvl.baf~
+  ~DjinniCompanion/scripts/a7afatk.baf~
+  ~DjinniCompanion/scripts/a7afatk2.baf~
+  ~DjinniCompanion/scripts/a7afatk3.baf~
+  ~DjinniCompanion/scripts/a7afqup1.baf~
+  ~DjinniCompanion/lightversion/a7afqup2.baf~
+  ~DjinniCompanion/scripts/a7cut02.baf~
 
 // Adding global script for Afaaq's control creature
-COPY_EXISTING ~ar1902.are~ ~override~
-  READ_ASCII 0x94 area1902_script
-EXTEND_TOP ~%area1902_script%.bcs~ ~DjinniCompanion/lightversion/ar1902.baf~
-EXTEND_TOP ~ar4000.bcs~ ~DjinniCompanion/lightversion/ar4000.baf~
-
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  COPY_EXISTING ~ar4005.are~ ~override~
+    READ_ASCII 0x94 area4005_script
+  EXTEND_TOP ~%area4005_script%.bcs~ ~DjinniCompanion/lightversion/iwdee_ar4005.baf~
+  EXTEND_TOP ~%area4005_script%.bcs~ ~DjinniCompanion/lightversion/ar1902.baf~
+END ELSE BEGIN
+  COPY_EXISTING ~ar1902.are~ ~override~
+    READ_ASCII 0x94 area1902_script
+  EXTEND_TOP ~%area1902_script%.bcs~ ~DjinniCompanion/lightversion/ar1902.baf~
+  EXTEND_TOP ~ar4000.bcs~ ~DjinniCompanion/lightversion/ar4000.baf~
+END
 
 // Dialogs
-COMPILE ~DjinniCompanion/lightversion/A7Afaaq.d~
-        ~DjinniCompanion/dialogs/A7djlmp.d~
-        ~DjinniCompanion/dialogs/A7AfaaqQuickMenu.d~
+COMPILE EVALUATE_BUFFER
+  ~DjinniCompanion/lightversion/A7Afaaq.d~
+  ~DjinniCompanion/dialogs/A7djlmp.d~
+  ~DjinniCompanion/dialogs/A7AfaaqQuickMenu.d~
 
 // Afaaq's default dialog file (generic) for friendship path
 COMPILE ~DjinniCompanion/dialogs/A7afaaq_generic.d~
@@ -444,58 +508,122 @@ COMPILE ~DjinniCompanion/dialogs/A7afaaq_generic.d~
   TEXT_SPRINT "afq_dialog" ~A7DJLMP~
   EVALUATE_BUFFER
 
-// Adding djinni lamp to Illasera
-COMPILE ~DjinniCompanion/lightversion/Illasera.d~
-
-
-// *** Greed Genie will upgrade Afaaq ***
-COPY_EXISTING ~hellgen.cre~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
-    WRITE_ASCII 0x258 ~A7HGINIT~ #8    // new race script
-  END ELSE BEGIN
-    TEXT_SPRINT filename ~hellgen.cre~
-    TEXT_SPRINT restype ~Creature~
-    PATCH_FAIL @30    // Error: Unable to patch %filename% (Reason: %restype% file is invalid)
-  END
+ACTION_IF (GAME_IS ~tob bgt bg2ee eet~) BEGIN
+  // Adding djinni lamp to Illasera
+  COMPILE EVALUATE_BUFFER ~DjinniCompanion/lightversion/Illasera.d~
+END
 
 // spells
 COPY ~DjinniCompanion/spells/a7q4sfx1.spl~ ~override~    // Casting effects (Afaaq only)
 
 // visual effects
 COPY ~DjinniCompanion/spells/a7afqsum.vvc~ ~override~    // Afaaq summoning effect
+     ~DjinniCompanion/spells/a7afqsum.bam~ ~override~
+     ~DjinniCompanion/spells/a7afqsum.wav~ ~override~
      ~DjinniCompanion/spells/a7afqlmp.vvc~ ~override~    // used in cutscene a7cut01*.baf
      ~DjinniCompanion/spells/a7q4ct3a.vef~ ~override~    // used in cutscene a7q4ct3a.baf
 
+ACTION_IF (GAME_IS ~tob bgt bg2ee eet~) BEGIN
+  // *** Greed Genie will upgrade Afaaq ***
+  COPY_EXISTING ~hellgen.cre~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+      WRITE_ASCII 0x258 ~A7HGINIT~ #8    // new race script
+    END ELSE BEGIN
+      TEXT_SPRINT filename ~hellgen.cre~
+      TEXT_SPRINT restype ~Creature~
+      PATCH_FAIL @30    // Error: Unable to patch %filename% (Reason: %restype% file is invalid)
+    END
 
-COMPILE EVALUATE_BUFFER
-  ~DjinniCompanion/scripts/a7hginit.baf~
-  ~DjinniCompanion/scripts/a7q4ct1.baf~
-  ~DjinniCompanion/scripts/a7q4ct2a.baf~
-  ~DjinniCompanion/scripts/a7q4ct2b.baf~
-  ~DjinniCompanion/scripts/a7q4ct2c.baf~
-  ~DjinniCompanion/scripts/a7q4ct2d.baf~
-  ~DjinniCompanion/scripts/a7q4ct2e.baf~
-  ~DjinniCompanion/scripts/a7q4ct2f.baf~
-  ~DjinniCompanion/lightversion/a7q4ct3a.baf~
-  ~DjinniCompanion/lightversion/a7q4ct3c.baf~
+  COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/scripts/a7hginit.baf~
+    ~DjinniCompanion/scripts/a7q4ct1.baf~
+    ~DjinniCompanion/scripts/a7q4ct2a.baf~
+    ~DjinniCompanion/scripts/a7q4ct2b.baf~
+    ~DjinniCompanion/scripts/a7q4ct2c.baf~
+    ~DjinniCompanion/scripts/a7q4ct2d.baf~
+    ~DjinniCompanion/scripts/a7q4ct2e.baf~
+    ~DjinniCompanion/scripts/a7q4ct2f.baf~
+    ~DjinniCompanion/lightversion/a7q4ct3a.baf~
+    ~DjinniCompanion/lightversion/a7q4ct3c.baf~
 
-COPY_EXISTING ~hellgen.dlg~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x33) BEGIN
-    READ_LONG 0x8 "numstates"
+  COPY_EXISTING ~hellgen.dlg~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x33) BEGIN
+      READ_LONG 0x8 "numstates"
+    END ELSE BEGIN
+      SET numstates = 0
+      TEXT_SPRINT filename ~hellgen.dlg~
+      TEXT_SPRINT restype ~Dialog~
+      PATCH_WARN @29    // ~Warning: Unable to read %filename% (Reason: %restype% file is invalid)~
+    END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~hellgen2.cre~ AND FILE_EXISTS_IN_GAME ~cutc7g.bcs~) BEGIN
+    PRINT @26    // Questpack's "Revised Hell Trials" has been found...adjusting component.
+    ACTION_IF (numstates < 27) BEGIN    // // very simple sanity check
+      FAIL @25    // The dialog file of the enslaved genie in the Greed Hell Trial isn't compatible with this mod. You have to uninstall the responsible mod before installing again.
+    END ELSE BEGIN
+      COMPILE EVALUATE_BUFFER ~DjinniCompanion/lightversion/A7hellgenie_questpack.d~
+    END
   END ELSE BEGIN
-    SET numstates = 0
-    TEXT_SPRINT filename ~hellgen.dlg~
-    TEXT_SPRINT restype ~Dialog~
-    PATCH_WARN @29    // ~Warning: Unable to read %filename% (Reason: %restype% file is invalid)~
+    COMPILE EVALUATE_BUFFER ~DjinniCompanion/lightversion/A7hellgenie_default.d~
   END
+END ELSE ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  // The Seer in Gloomfrost Mountains and Nym, the Drow merchant, can upgrade the djinni
+  COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/lightversion/a7q4ct4a.baf~
+    ~DjinniCompanion/lightversion/a7q4ct4b.baf~
+    ~DjinniCompanion/lightversion/a7q4ct4c.baf~
+    ~DjinniCompanion/lightversion/a7q4ct4d.baf~
+    ~DjinniCompanion/lightversion/a7q4ct4e.baf~
+    ~DjinniCompanion/lightversion/a7q4ct4f.baf~
+    ~DjinniCompanion/lightversion/a7q4ct5a.baf~
+    ~DjinniCompanion/lightversion/a7q4ct5b.baf~
+    ~DjinniCompanion/lightversion/a7q4ct5c.baf~
+    ~DjinniCompanion/lightversion/a7q4ct5d.baf~
+    ~DjinniCompanion/lightversion/a7q4ct5e.baf~
+    ~DjinniCompanion/lightversion/a7q4ct5f.baf~
 
-ACTION_IF (MOD_IS_INSTALLED ~setup-d0questpack.tp2~ 8) BEGIN
-  PRINT @26    // Questpack's "Revised Hell Trials" has been found...adjusting component.
-  ACTION_IF (numstates < 27) BEGIN    // // very simple sanity check
-    FAIL @25    // The dialog file of the enslaved genie in the Greed Hell Trial isn't compatible with this mod. You have to uninstall the responsible mod before installing again.
-  END ELSE BEGIN
-    COMPILE EVALUATE_BUFFER ~DjinniCompanion/lightversion/A7hellgenie_questpack.d~
-  END
-END ELSE BEGIN
-  COMPILE EVALUATE_BUFFER ~DjinniCompanion/lightversion/A7hellgenie_default.d~
+  COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/lightversion/dseer.d~
+    ~DjinniCompanion/lightversion/dnym.d~
+
+  // Adding an enslaved djinni to Yxunomei's army in Dragon's Eye
+  COPY_EXISTING ~a7afaaq.cre~  ~override/a7afqyx.cre~
+    WRITE_LONG  0x14 4000             // XP value
+    WRITE_BYTE  0x270 255             // Allegiance: Enemy
+    WRITE_ASCII 0x280 ~A7AFAAQYX~ #32 // script name
+    WRITE_ASCII 0x248 ~~ #8           // override script
+    WRITE_ASCII 0x250 ~~ #8           // class script
+    WRITE_ASCII 0x258 ~~ #8           // race script
+    WRITE_ASCII 0x260 ~~ #8           // general script
+    WRITE_ASCII 0x268 ~~ #8           // default script
+    WRITE_ASCII 0x2cc ~~ #8           // dialog
+    // unequipping irrelevant items
+    READ_LONG 0x2b8 ofsSlots
+    PATCH_IF (ofsSlots > 0x2d3) BEGIN
+      WRITE_SHORT (ofsSlots + 0x08) "-1"  // left ring
+      WRITE_SHORT (ofsSlots + 0x0a) "-1"  // right ring
+      WRITE_SHORT (ofsSlots + 0x0c) "-1"  // amulet
+      WRITE_SHORT (ofsSlots + 0x2a) 0     // inv1
+      WRITE_SHORT (ofsSlots + 0x2c) 1     // inv2
+      WRITE_SHORT (ofsSlots + 0x2e) 2     // inv3
+    END
+
+  COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/lightversion/a7afqyx.baf~
+
+  COPY_EXISTING ~ar4005.are~ ~override~
+    LPF fj_are_structure
+      INT_VAR
+      fj_loc_x        = 3346
+      fj_loc_y        = 615
+      fj_dest_x       = 3346
+      fj_dest_y       = 615
+      fj_animation    = 32517   // djinni
+      fj_orientation  = 4       // west
+      STR_VAR
+      fj_structure_type = actor
+      fj_name           = A7Djinni
+      fj_bcs_override   = A7AFQYX
+      fj_cre_resref     = A7AFQYX
+    END
 END

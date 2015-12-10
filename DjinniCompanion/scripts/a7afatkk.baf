@@ -2,6 +2,7 @@
 
 // Pre-buffing
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Myself, STATE_INVISIBLE)
   Global("A7KorganDuel", "GLOBAL", 3)
   Global("KorganFightInit", "LOCALS", 0)
@@ -14,6 +15,7 @@ END
 
 // Pre-buffing #2
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   StateCheck(Myself, STATE_INVISIBLE)
   HaveSpell(WIZARD_MIRROR_IMAGE)
   TimerExpired(167)
@@ -35,6 +37,7 @@ END
 
 // Dispel illusions
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   HaveSpell(WIZARD_DETECT_INVISIBILITY)
   !See("Korgan")
   Detect("Korgan")
@@ -48,6 +51,7 @@ END
 
 // Renewing protections when hit
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !HP(Myself, 1)
   !StateCheck(Myself, STATE_INVISIBLE)
   TookDamage()
@@ -62,6 +66,7 @@ END
 
 // Renewing protections if possible
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   !HP(Myself, 1)
   !StateCheck(Myself, STATE_INVISIBLE)
   TimerExpired(167)
@@ -75,6 +80,7 @@ END
 
 // Casting offensive spells when possible (only in invisible state to minimize spell interrupting)
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   StateCheck(Myself, STATE_INVISIBLE)
   See("Korgan")
   HaveSpell(WIZARD_MAGIC_MISSILE)
@@ -88,6 +94,7 @@ THEN RESPONSE #100
 END
 
 IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   StateCheck(Myself, STATE_INVISIBLE)
   Range("Korgan", 10)
   See("Korgan")

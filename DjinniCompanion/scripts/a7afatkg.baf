@@ -87,11 +87,12 @@ IF
   HasItem("POTN55", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   HPPercentLT(Myself, 34)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN55", Myself)
 END
 
@@ -99,15 +100,16 @@ IF
   OR(2)
     See([PC])
     ActuallyInCombat()
-  HasItem("POTN52", Myself)
+  HasItem("%itm_potn52%", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   HPPercentLT(Myself, 50)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
-  UseItem("POTN52", Myself)
+  DisplayString(Myself, @200)    // quaffs a potion
+  UseItem("%itm_potn52%", Myself)
 END
 
 IF
@@ -117,16 +119,18 @@ IF
   HasItem("POTN08", Myself)
   !GlobalTimerNotExpired("PotionUsedTimer", "LOCALS")
   HPPercentLT(Myself, 67)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobalTimer("PotionUsedTimer", "LOCALS", 6)
-  DisplayString(Myself, 46150)    // quaffs a potion
+  DisplayString(Myself, @200)    // quaffs a potion
   UseItem("POTN08", Myself)
 END
 
 IF
   See([PC])
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
   Global("AfaaqDuelPrep", "LOCALS", 0)
@@ -137,6 +141,7 @@ END
 
 IF
   Detect([PC])
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
   Global("AfaaqDuelPrep", "LOCALS", 1)
@@ -148,6 +153,7 @@ END
 
 IF
   See([PC])
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
   Global("AfaaqDuelPrep", "LOCALS", 3)
@@ -162,6 +168,7 @@ IF
   !HasBounceEffects(Myself)
   !HasImmunityEffects(Myself) 
   HaveSpell(WIZARD_MINOR_SPELL_TURNING)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
 THEN RESPONSE #100
@@ -173,6 +180,7 @@ IF
     StateCheck(Player1, STATE_INVISIBLE)
     StateCheck(Player1, STATE_IMPROVEDINVISIBILITY)
   Detect(Player1)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
   Global("AfaaqDuelDetect", "LOCALS", 0)
@@ -185,13 +193,12 @@ IF
   !StateCheck(Player1, STATE_IMPROVEDINVISIBILITY)
   See(Player1)
   HaveSpell(WIZARD_MAGIC_MISSILE)
+  RandomNum(2, 1)
+  !StateCheck(Myself, CD_STATE_NOTVALID)
   Global("GreedAfaaqMad", "LOCALS", 1)
   Global("AfaaqDuelLost", "LOCALS", 0)
-THEN
-  RESPONSE #50
-    Spell(Player1, WIZARD_MAGIC_MISSILE)
-  RESPONSE #50
-    AttackReevaluate(Player1, 30)
+THEN RESPONSE #100
+  Spell(Player1, WIZARD_MAGIC_MISSILE)
 END
 
 IF

@@ -1,0 +1,14 @@
+// *** Cutscene IWD: Nym breaks enchantments - Party and Afaaq are positioned before Nym - Part 2 ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("Nym")
+  ActionOverride("A7Afaaq", JumpToPoint([444.1195]))
+  ActionOverride("A7Afaaq", FaceObject("Nym"))
+  MultiPlayerSync()
+  MoveViewPoint([444.1195], INSTANT)
+  FadeFromColor([30.0], 0)
+  SmallWait(30)
+  StartDialogueNoSet(Player1)
+END

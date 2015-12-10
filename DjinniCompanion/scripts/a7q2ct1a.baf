@@ -44,7 +44,7 @@ THEN RESPONSE #100
   Wait(6)
   DisplayStringHead(Myself, @2402)    // I will take that from you...
   SmallWait(25)
-  SetSequence(SEQ_CAST)
+  SetSequence(%seq_cast%)
   SmallWait(5)
   // rakshasa steals the lamp from Player1
   CreateVisualEffectObject("A7SHWTR", Player1)

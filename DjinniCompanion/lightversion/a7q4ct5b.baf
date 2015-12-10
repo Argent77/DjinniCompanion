@@ -1,0 +1,22 @@
+// *** Cutscene IWD: Nym breaks enchantments - Party is positioned before Nym, Afaaq is summoned ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("Nym")
+  FadeToColor([30.0], 0)
+  SmallWait(30)
+  ActionOverride(Player1, JumpToPoint([473.1226]))
+  ActionOverride(Player2, JumpToPoint([545.1213]))
+  ActionOverride(Player3, JumpToPoint([395.1335]))
+  ActionOverride(Player4, JumpToPoint([626.1214]))
+  ActionOverride(Player5, JumpToPoint([394.1418]))
+  ActionOverride(Player6, JumpToPoint([698.1252]))
+  ActionOverride(Player1, Face(4))
+  ActionOverride(Player2, Face(4))
+  ActionOverride(Player3, Face(6))
+  ActionOverride(Player4, Face(4))
+  ActionOverride(Player5, Face(7))
+  ActionOverride(Player6, Face(4))
+  StartCutScene("A7Q4ct5d")
+END

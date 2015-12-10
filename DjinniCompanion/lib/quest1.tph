@@ -33,7 +33,7 @@ COPY ~DjinniCompanion/items/a7daoimp.eff~  ~override~
      ~DjinniCompanion/spells/a7daoimp.spl~ ~override~
 
 // dialogs
-COMPILE ~DjinniCompanion/dialogs/trademeet.d~
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/trademeet.d~
 
 COPY_EXISTING ~ar2014.are~ ~override~
   READ_ASCII 0x94 ar2014_script
@@ -43,7 +43,7 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~%ar2014_script%.bcs~) BEGIN
   EXTEND_TOP ~%ar2014_script%.bcs~ ~djinnicompanion/scripts/ar2014.baf~
 END ELSE BEGIN
   // create and set new script
-  COMPILE ~djinnicompanion/scripts/ar2014.baf~
+  COMPILE EVALUATE_BUFFER ~djinnicompanion/scripts/ar2014.baf~
   COPY_EXISTING ~ar2014.are~ ~override~
     WRITE_ASCII 0x94 ~AR2014~ #8
 END

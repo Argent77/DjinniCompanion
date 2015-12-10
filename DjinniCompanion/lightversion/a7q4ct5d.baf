@@ -1,0 +1,23 @@
+// *** Cutscene IWD: Nym breaks enchantments - Party is positioned before Nym, Afaaq is summoned - Part 2 ***
+
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("Nym")
+  MultiPlayerSync()
+  MoveViewPoint([444.1195], INSTANT)
+  FadeFromColor([30.0], 0)
+  // Summon Afaaq
+  MoveGlobal("AR2903", "A7Afaaq", [444.1195])
+  Deactivate("A7Afaaq")
+  SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+  ActionOverride("A7Afaaq", SetGlobal("initialize", "LOCALS", 1))
+  ActionOverride("A7Afaaq", ApplySpellRES("A7REST", Myself))
+  ActionOverride("A7Afaaq", Activate(Myself))
+  ActionOverride("A7Afaaq", FaceObject("Nym"))
+  ActionOverride("A7Afaaq", SetSequence(%seq_awake%))
+  ActionOverride("A7Afaaq", CreateVisualEffectObject("A7AFQSUM", Myself))
+  ChangeEnemyAlly("A7Afaaq", FAMILIAR)  // restoring player control
+  SmallWait(45)
+  StartDialogueNoSet(Player1)
+END

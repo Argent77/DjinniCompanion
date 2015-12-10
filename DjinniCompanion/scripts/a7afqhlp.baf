@@ -28,6 +28,7 @@ IF
     AreaCheck("AR3004")    // WK Dead Magic Zone
     AreaCheck("AR3008")    // WK Dead Magic Zone
     Allegiance("A7Afaaq", ENEMY)
+  Global("A7AfaaqIwdee", "GLOBAL", 0)
 THEN RESPONSE #100
   SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
   SetGlobal("A7AfaaqUnsummonOverride", "GLOBAL", 0)

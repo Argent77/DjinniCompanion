@@ -1,0 +1,10 @@
+// Trigger "Hostile Afaaq returns into lamp" sequence when Yxunomei dies
+IF
+  Dead("Yxunomei")
+  !Dead("A7AfaaqYX")
+  Global("A7AfaaqEnemyDone", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqEnemyDone", "MYAREA", 1)
+  Kill("A7AfaaqYX")
+  Continue()
+END

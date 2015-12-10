@@ -6,3 +6,8 @@
 @101 = ~various fire resistant creatures, such as mephits, fire elementals or hell hounds~
 @102 = ~predators, such as panthers, giant snakes or snake-like creatures~
 @103 = ~spiders and umber hulks~
+
+// Common lines not available in all supported games
+@200 = ~*quaffs a potion*~
+@201 = ~Death~
+@202 = ~Unsummoned~

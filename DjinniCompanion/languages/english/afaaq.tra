@@ -501,6 +501,88 @@
 @10500 = ~Please don't keep yourself constantly hasted.~
 @10501 = ~Sure, I will try to keep myself constantly hasted.~
 @10502 = ~Alright, I will stop trying to keep myself constantly hasted.~
+@10503 = ~A repeatable wish.~
+@10504 = ~A one-time wish.~
+@10505 = ~I reconsider. I will make no wish at this time.~
+@10506 = ~Choose wisely then, as I can perform each of these tasks once and once only.~
+@10507 = ~Actually, I'd rather have a repeatable wish.~
+@10508 = ~I don't want a wish of any kind right now.~
+@10509 = ~I wish to be rich.~
+@10510 = ~I wish for a powerful magical item.~
+@10511 = ~I wish to be more experienced.~
+@10512 = ~I wish to see all as it really is.~
+@10513 = ~I wish for an adventure like none I've ever experienced before.~
+@10514 = ~I wish for control over time.~
+@10515 = ~I wish to be anything I desire.~
+@10516 = ~I wish to be prepared for anything.~
+@10517 = ~I wish that all my enemies will die.~
+@10518 = ~Rich you want, then rich you shall be.~
+@10519 = ~Then let your enemies fall now!~
+@10520 = ~Contingencies are the key to preparation.~
+@10521 = ~Then you shall have it.~
+@10522 = ~*chuckle* Fight well, and experience you will earn.~
+@10523 = ~Time is now your ally, master.~
+@10524 = ~I give you then the ability to shapechange... Use it wisely, for it will not last forever.~
+@10525 = ~With these glasses, no item will be beyond your ability to comprehend.~
+@10526 = ~Choose then, but be aware that unwise wishes shall leave the wisher wanting.~
+@10527 = ~I wish for my entire party to be healed.~
+@10528 = ~I wish that none of my party would die of their wounds.~
+@10529 = ~I wish that spells I have cast would be restored, that I might cast them again!~
+@10530 = ~I wish for my spells to be restored!~
+@10531 = ~I wish to make my party invulnerable.~
+@10532 = ~I wish that magic would fail to affect me or my party.~
+@10533 = ~I wish to summon a horde to overrun my enemies.~
+@10534 = ~I wish to be protected from the undead.~
+@10535 = ~I wish to be protected from undead right now.~
+@10536 = ~I want to ask for a one-time wish instead.~
+@10537 = ~I do not want a wish now.~
+@10538 = ~Then all shall be healed.~
+@10539 = ~Granted. All will die of other afflictions, but not of the wounds they have.~
+@10540 = ~Then I shall grant your wish and restore some of your lost spells.~
+@10541 = ~Granted. Your spells have been restored to the way they were before you memorized them.~
+@10542 = ~Invulnerability you shall have!~
+@10543 = ~A curious request, but consider it granted. None of your spells shall function.~
+@10544 = ~A horde? As you wish...~
+@10545 = ~Protection granted.~
+@10546 = ~Protection from undead granted, and I shall have to summon some undead for you to be protected from.~
+@10547 = ~I reconsider. I will make no wish at this time.~
+@10548 = ~'Breach' on everyone in the area, including the party.~
+@10549 = ~Blow all people, including party members, away from the caster.~
+@10550 = ~Heal everyone, party members and enemies included.~
+@10551 = ~Temporarily set Strength to 18 for everyone in the area, including enemies.~
+@10552 = ~'Miscast Magic' on everyone in the area, including party members.~
+@10553 = ~'Magic Resistance' on everyone in the area, including enemies.~
+@10554 = ~'Abi-Dalzim's Horrid Wilting' on everyone in the area, including the party.~
+@10555 = ~Everyone in the area, both party members and enemies, become intoxicated.~
+@10556 = ~Incur bad luck on everyone in the area, including party members.~
+@10557 = ~'Silence' on everyone in the area, including party members.~
+@10558 = ~'Haste' everyone in the area, including enemies.~
+@10559 = ~'Improved Haste' on all party members.~
+@10560 = ~'Breach' on all enemies in the area.~
+@10561 = ~'Restoration' on all party members.~
+@10562 = ~Raise all party members' characteristics to 25 for 4 rounds.~
+@10563 = ~'Resurrection' on all dead party members.~
+@10564 = ~All party members gain the temporary ability 'Greater Deathblow'~
+@10565 = ~All party members gain the temporary ability 'Hardiness'~
+@10566 = ~Create a random wand in caster's inventory.~
+@10567 = ~Create a random potion in the caster's inventory.~
+@10568 = ~Make it as if the entire party has just rested a full night and re-memorized all their spells.~
+@10569 = ~Cast a double-length 'Time Stop' and 'Improved Alacrity' on the caster.~
+@10570 = ~Heal all enemies in the area.~
+@10571 = ~'Improved Haste' on all enemies in the area.~
+@10572 = ~Summon an extra hostile monster into the area.~
+@10573 = ~Level Drain two levels from each party member.~
+@10574 = ~Temporarily remove half of the caster's HP.~
+@10575 = ~Temporarily remove 15% of all party members' HPs.~
+@10576 = ~Caster loses all memorized spells.~
+@10577 = ~Party loses 10,000 gp.~
+@10578 = ~Bring a 'Meteor Swarm' down upon the caster.~
+@10579 = ~Temporarily reduce the Strength of all party members to 3.~
+@10580 = ~Temporarily reduce the Wisdom of all party members to 3.~
+@10581 = ~Temporarily reduce the Constitution of all party members to 3.~
+@10582 = ~Temporarily reduce the Dexterity of all party members to 3.~
+@10583 = ~Temporarily reduce the Intelligence of all party members to 3.~
+@10584 = ~'Slow' the entire party.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~received Afaaq's blessing~
@@ -779,6 +861,7 @@ though he fought back like a crack of loud thunder."~
 @11265 = ~I might indeed grant <CHARNAME> the wish to remove your curse, if <PRO_HESHE> is willing.~
 @11266 = ~I wish Raissa's curse of the skin dancer to be removed.~
 @11267 = ~Granted. Raissa's curse will been removed.~
+@11268 = ~After you restored my sealed powers, I have tried to make this pocket plane more homely by creating this small platform of solid matter.~
 
 // *** Banters with <PC> (index 12000...12999) ***
 // interjections and specific talks
@@ -1841,6 +1924,15 @@ Saving Throw: None
 
 Over the course of many millennia Afaaq accumulated a vast amount of knowledge about places, peoples, natural and supernatural phenomenons and artifacts created by mortals as well as immortals. This ability allows the targetted creature to access Afaaq's knowledge to identify items of power for a limited amount of time.~
 @60100 = ~Knowledge transferred~
+@60101 = ~Converse~
+@60102 = ~This lamp is oddly designed and you feel a slight tingling sensation when you touch it. It once belonged to Yxunomei, but is now yours.~
+@60103 = ~Looking over the side shows only a dark, windy void that descends endlessly below.~
+@60104 = ~Ah hay!~ [A7SFX01]
+@60105 = ~I grant your death wish!~ [A7SFX03]
+@60106 = ~Die, most unworthy foe!~ [A7SFX04]
+@60107 = ~~ [A7SFX02]
+@60108 = ~~ [A7SFX05]
+@60109 = ~Controlled~
 
 // Afaaq's Epilogues
 @64090 = ~Afaaq continued his journey with <CHARNAME> which took them halfway across Faerûn and back. They defeated raiding parties of sahuagin on the western borders of Tethyr and pushed back an invasion of frost giants threatening Luskan and the surrounding settlements.
