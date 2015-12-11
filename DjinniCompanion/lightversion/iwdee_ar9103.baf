@@ -1,0 +1,10 @@
+// Remove the lamp from chest if this is not a IWD:HoW-only game
+
+IF
+  GlobalLT("Chapter", "GLOBAL", 7)
+  Global("A7AfaaqLampCheck", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqLampCheck", "MYAREA", 1)
+  ActionOverride("Container1", DestroyItem("A7DJLMP"))
+  Continue()
+END
