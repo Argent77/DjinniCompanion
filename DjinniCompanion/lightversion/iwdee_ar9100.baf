@@ -1,9 +1,6 @@
 // Initial check when starting a new IWD:HOW-only game
 
 IF
-  OR(2)
-    PartyHasItem("A7DJLMP")
-    PartyHasItem("A7DJLMPA")
   GlobalGT("Chapter", "GLOBAL", 6)
   Global("A7AfaaqHowOnlyCheck", "MYAREA", 0)
 THEN RESPONSE #100
