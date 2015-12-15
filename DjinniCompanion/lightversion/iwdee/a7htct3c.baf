@@ -1,0 +1,26 @@
+// *** Cutscene: Lower Dorn's Deep entrance - Kelvor Domine summons elementals and demons - Normal mode ***
+
+// refuse: Kelvor summons elementals and demons -> Kelvor turns hostile -> Destroy cutspy
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("a7ht01")
+  CreateVisualEffect("cwelemx", [596.640])    // Water Elemental
+  Wait(1)
+  CreateVisualEffect("ceelemx", [596.492])    // Earth Elemental
+  CreateCreature("a7htwe", [596.640], NE)    // Water Elemental
+  Wait(1)
+  CreateVisualEffect("spsumgte", [772.652])   // Nabassu
+  CreateCreature("a7htee", [596.492], SSE)    // Earth Elemental
+  Wait(4)
+  CreateCreature("a7htdm1", [772.652], NW)    // Nabassu
+  ActionOverride("cutspy", DestroySelf())
+  // Destroy several overpowered equipment and spells only available in HoF mode
+  DestroyItem("RING07")   // Ring of Protection +2
+  DestroyItem("CLOAKIN")  // Cloak of Invisibility
+  DestroyItem("SCRL7O")   // Protection From Magical Weapons
+  RemoveSpell(WIZARD_FINGER_OF_DEATH)
+  RemoveSpell(WIZARD_DARTS_OF_BONE)
+  Enemy()
+  EndCutSceneMode()
+END

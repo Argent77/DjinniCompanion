@@ -1,0 +1,121 @@
+// *** Default combat script: Thief ***
+
+IF
+  See(NearestEnemyOf(Myself))
+  OR(6)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), SORCERER)
+    Class(LastSeenBy(Myself), BARD)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), MONK)
+  StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  OR(6)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), SORCERER)
+    Class(LastSeenBy(Myself), BARD)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), MONK)
+  StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  OR(6)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), SORCERER)
+    Class(LastSeenBy(Myself), BARD)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), MONK)
+  StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  OR(6)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), SORCERER)
+    Class(LastSeenBy(Myself), BARD)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), MONK)
+  StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+IF
+  See(FifthNearestEnemyOf(Myself))
+  OR(6)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), SORCERER)
+    Class(LastSeenBy(Myself), BARD)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), MONK)
+  StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+IF
+  See(SixthNearestEnemyOf(Myself))
+  OR(6)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), SORCERER)
+    Class(LastSeenBy(Myself), BARD)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), MONK)
+  StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself, STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself), 15)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_INVISIBLE)
+  Range(LastSeenBy(Myself), 10)
+  !Range(LastSeenBy(Myself), 4)
+  OR(3)
+    HasItem("AROW01", Myself)
+    HasItem("BOLT01", Myself)
+    HasItem("DART01", Myself)
+  !HasItem("potn10", Myself)   // Potion of Invisibility
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastSeenBy(Myself), 30)
+END

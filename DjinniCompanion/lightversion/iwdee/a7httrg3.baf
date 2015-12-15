@@ -1,0 +1,18 @@
+// *** Region trigger in Lower Dorn's Deep entrance (AR7000) ***
+
+IF
+  OR(2)
+    PartyHasItem("A7DJLMP")
+    PartyHasItem("A7DJLMPA")
+  OR(2)
+    See([PC])
+    See("A7Afaaq")
+  OR(2)
+    Global("A7HostTower", "GLOBAL", 2)  // in case the party missed the second encounter
+    Global("A7HostTower", "GLOBAL", 4)
+THEN RESPONSE #100
+  SetGlobal("A7HostTower", "GLOBAL", 5)
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("a7htct3a")
+END

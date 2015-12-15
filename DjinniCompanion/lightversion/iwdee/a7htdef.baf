@@ -1,0 +1,72 @@
+// *** Generic combat actions ***
+
+IF
+  Class(Myself, MAGE)
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 10)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    AttackReevaluate(LastSeenBy(Myself), 30)
+END
+
+IF
+  Class(Myself, MAGE)
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 10)
+  !Range(LastSeenBy(Myself), 4)
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastSeenBy(Myself), 30)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  OR(2)
+    !Class(Myself, MAGE)
+    Range(LastSeenBy(Myself), 4)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(LastSeenBy(Myself), 30)
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  See(ThirdNearestMyGroupOfType)
+THEN
+  RESPONSE #50
+    MoveToObject(LastSeenBy(Myself))
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  See(SecondNearestMyGroupOfType)
+THEN
+  RESPONSE #75
+    MoveToObject(LastSeenBy(Myself))
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  See(NearestMyGroupOfType)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  !See(NearestMyGroupOfType)
+THEN
+  RESPONSE #50
+    MoveToObject(NearestEnemyOf(Myself))
+  RESPONSE #40
+    NoAction()
+  RESPONSE #10
+    RandomWalk()
+END

@@ -1,0 +1,199 @@
+// *** Default combat script: Kelvor Domine ***
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("Prep", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself, WIZARD_VOCALIZE)
+    ApplySpell(Myself, WIZARD_MIRROR_IMAGE)
+    ApplySpell(Myself, WIZARD_GLOBE_OF_INVULNERABILITY)
+    SetGlobal("Prep", "LOCALS", 1)
+END
+
+IF
+  HitBy([GOODCUTOFF], 0)
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(Myself, STATE_INVISIBLE)
+  !StateCheck(Myself, STATE_IMPROVEDINVISIBILITY)
+  HaveSpell(WIZARD_IMPROVED_INVISIBILITY)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_IMPROVED_INVISIBILITY)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_SEVEN_EYES)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_SEVEN_EYES)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !CheckSpellState(LastSeenBy(Myself), DEATH_WARD)
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !CheckSpellState(LastSeenBy(Myself), DEATH_WARD)
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !CheckSpellState(LastSeenBy(Myself), DEATH_WARD)
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !CheckSpellState(LastSeenBy(Myself), DEATH_WARD)
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  See([CONTROLLED.0.0.0.0.SUMMONED])
+  !StateCheck(Myself, STATE_SILENCED)
+  !CheckSpellState(LastSeenBy(Myself), DEATH_WARD)
+  HaveSpell(WIZARD_DEATH_SPELL)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_DEATH_SPELL)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_LOWER_RESISTANCE)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_LOWER_RESISTANCE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), STATE_SLOWED)
+  HaveSpell(WIZARD_SLOW)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_SLOW)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MORDENKAINENS_FORCE_MISSILES)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_MORDENKAINENS_FORCE_MISSILES)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_VITRIOLIC_SPHERE)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_VITRIOLIC_SPHERE)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_CHROMATIC_ORB)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_CHROMATIC_ORB)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !HasItem("DOBONE", Myself)
+  HaveSpell(WIZARD_DARTS_OF_BONE)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_DARTS_OF_BONE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HasItem("DOBONE", Myself)
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself), 30)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !CheckSpellState(LastSeenBy(Myself), RED_FIRESHIELD)
+  CheckStatGT(LastSeenBy(Myself), 50, RESISTFIRE)
+  Range(LastSeenBy(Myself), 10)
+  HaveSpell(WIZARD_BURNING_HANDS)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_BURNING_HANDS)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !CheckSpellState(LastSeenBy(Myself), RED_FIRESHIELD)
+  CheckStatGT(LastSeenBy(Myself), 50, RESISTFIRE)
+  Range(LastSeenBy(Myself), 10)
+  HaveSpell(WIZARD_BURNING_HANDS)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_BURNING_HANDS)
+  RESPONSE #50
+    Continue()
+END

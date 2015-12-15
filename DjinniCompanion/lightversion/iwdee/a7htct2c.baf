@@ -1,0 +1,52 @@
+// *** Cutscene: Dorn's Deep cave - Kelvor Domine summons his peers - Normal mode ***
+
+// refuse: Kelvor calls several mages, clerics, thieves and fighters -> Kelvor teleports away -> Destroy cutspy
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("a7ht01")
+  CreateVisualEffect("a7ddoorh", [1060.1195])   // fighter 1
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [1207.1011])   // fighter 2
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [1282.1206])   // fighter 3
+  SmallWait(5)
+  CreateCreature("a7ht11", [1060.1195], NEE)    // fighter 1
+  SmallWait(5)
+  CreateCreature("a7ht11", [1207.1011], SSE)    // fighter 2
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [1137.1097])   // cleric 1
+  CreateCreature("a7ht11", [1282.1206], NW)     // fighter 3
+  SmallWait(15)
+  CreateCreature("a7ht13", [1137.1097], SE)     // cleric 1
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [1293.1130])   // thief 1
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [1195.1231])   // thief 2
+  SmallWait(10)
+  CreateCreature("a7ht12", [1293.1130], W)      // thief 1
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [1223.1091])   // male mage
+  CreateCreature("a7ht12", [1195.1231], N)      // thief 2
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [1141.1177])   // female mage
+  SmallWait(10)
+  CreateCreature("a7ht14", [1223.1091], SW)     // male mage
+  SmallWait(5)
+  CreateCreature("a7ht15", [1141.1177], NE)     // female mage
+  // Remove spells only available in HoF mode
+  ActionOverride("a7ht14", RemoveSpell(WIZARD_SHROUD_OF_FLAME))
+  ActionOverride("a7ht15", RemoveSpell(WIZARD_DOMINATION))
+  Wait(2)
+  FaceObject("a7ht15")
+  SmallWait(10)
+  DisplayStringHead(Myself, @100502)        // I'm counting on you to take care of them!
+  SmallWait(10)
+  ActionOverride("a7ht15", FaceObject("a7ht01"))
+  Wait(2)
+  CreateVisualEffectObject("a7ddoorh", Myself)  // Kelvor Domine
+  Wait(1)
+  ActionOverride("cutspy", DestroySelf())
+  DestroySelf()
+  EndCutSceneMode()
+END

@@ -1,0 +1,80 @@
+// *** Default combat script: Nabassu ***
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd01", SecondNearestEnemyOf(Myself)) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound(NearestEnemyOf(Myself))
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd01", NearestEnemyOf(Myself)) // Death Gaze
+    AttackOneRound(NearestEnemyOf(Myself))
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("TANARIPARALYZE", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd04", NearestEnemyOf(Myself)) // Paralyze
+    SetGlobal("TANARIPARALYZE","LOCALS",1)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  StateCheck(NearestEnemyOf(Myself), STATE_HELPLESS)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd01", SecondNearestEnemyOf(Myself)) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound(NearestEnemyOf(Myself))
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+THEN
+  RESPONSE #50
+    ForceSpellRES("a7htd01", SecondNearestEnemyOf(Myself)) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound(NearestEnemyOf(Myself))
+  RESPONSE #50
+    ForceSpellRES("a7htd01", NearestEnemyOf(Myself)) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound(NearestEnemyOf(Myself))
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #50
+    ForceSpellRES("a7htd01", NearestEnemyOf(Myself)) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound(NearestEnemyOf(Myself))
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+  OR(2)
+    !See([GOODCUTOFF])
+    TargetUnreachable(LastSeenBy(Myself))
+THEN
+  RESPONSE #100
+    RandomWalk()
+END

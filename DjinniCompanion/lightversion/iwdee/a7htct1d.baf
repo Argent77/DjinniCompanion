@@ -1,0 +1,33 @@
+// *** Cutscene: Dragon's Eye entrance - Kelvor Domine summons mercenaries - Heart of Fury mode ***
+
+// refuse: Kelvor calls several mercenaries -> Kelvor teleports away -> Destroy cutspy
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("a7ht01")
+  CreateVisualEffect("a7ddoorh", [814.806]) // fighter 1
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [888.758]) // fighter 2
+  SmallWait(10)
+  CreateVisualEffect("a7ddoorh", [882.819]) // thief
+  CreateCreature("a7ht05", [814.806], N)    // fighter 1
+  SmallWait(5)
+  CreateCreature("a7ht05", [888.758], NW)   // fighter 2
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [771.847]) // mage 1
+  SmallWait(5)
+  CreateVisualEffect("a7ddoorh", [950.725]) // mage 2
+  CreateCreature("a7ht04", [882.819], NNW)  // thief
+  SmallWait(10)
+  CreateCreature("a7ht02", [771.847], N)    // mage 1
+  SmallWait(5)
+  CreateCreature("a7ht03", [950.725], NW)   // mage 2
+  Wait(1)
+  DisplayStringHead(Myself, @100501)        // Show them no mercy!
+  Wait(2)
+  CreateVisualEffectObject("a7ddoorh", Myself)  // Kelvor Domine
+  Wait(1)
+  ActionOverride("cutspy", DestroySelf())
+  DestroySelf()
+  EndCutSceneMode()
+END

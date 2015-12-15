@@ -1,0 +1,21 @@
+// *** Region trigger in Dorn's Deep cave (AR6001) ***
+
+IF
+  CombatCounter(0)
+  !See([ENEMY])
+  OR(2)
+    PartyHasItem("A7DJLMP")
+    PartyHasItem("A7DJLMPA")
+  OR(2)
+    See([PC])
+    See("A7Afaaq")
+  OR(2)
+    Range([PC], 20)
+    Range("A7Afaaq", 20)
+  Global("A7HostTower", "GLOBAL", 2)
+THEN RESPONSE #100
+  SetGlobal("A7HostTower", "GLOBAL", 3)
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("a7htct2a")
+END

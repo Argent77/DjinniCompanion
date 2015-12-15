@@ -1,0 +1,13 @@
+// *** Cutscene: Lower Dorn's Deep entrance - Kelvor Domine teleports away with lamp ***
+
+// accept: Kelvor teleports away -> Destroy cutspy
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("a7ht01")
+  CreateVisualEffectObject("a7ddoorh", Myself)   // Kelvor Domine
+  Wait(1)
+  ActionOverride("cutspy", DestroySelf())
+  DestroySelf()
+  EndCutSceneMode()
+END

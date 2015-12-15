@@ -1,0 +1,17 @@
+// *** Cutscene: Lower Dorn's Deep entrance - Kelvor Domine appears ***
+
+// visual effect at position -> Kelvor Domine appears -> Dialog starts
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("A7KelvorEncounter")
+  CreateCreature("cutspy", [677.540], 0)
+  MoveViewPoint([652.564], VERY_FAST)
+  Wait(1)
+  CreateVisualEffect("a7ddoorh", [652.564])
+  Wait(1)
+  CreateCreature("a7ht01", [652.564], W)
+  ActionOverride("a7ht01", FaceObject(Player1))
+  Wait(1)
+  ActionOverride("a7ht01", StartDialogueNoSet([PC]))
+END

@@ -484,13 +484,13 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
   // For IWD main game
   COPY_EXISTING ~ar4005.are~ ~override~
     READ_ASCII 0x94 area4005_script
-  EXTEND_TOP ~%area4005_script%.bcs~ ~DjinniCompanion/lightversion/iwdee_ar4005.baf~
+  EXTEND_TOP ~%area4005_script%.bcs~ ~DjinniCompanion/lightversion/iwdee/ar4005.baf~
   EXTEND_TOP ~%area4005_script%.bcs~ ~DjinniCompanion/lightversion/ar1902.baf~
 
   // For HOW expansion only
   COPY_EXISTING ~ar9100.are~ ~override~
     READ_ASCII 0x94 area9100_script
-  EXTEND_TOP ~%area9100_script%.bcs~ ~DjinniCompanion/lightversion/iwdee_ar9100.baf~
+  EXTEND_TOP ~%area9100_script%.bcs~ ~DjinniCompanion/lightversion/iwdee/ar9100.baf~
   EXTEND_TOP ~%area9100_script%.bcs~ ~DjinniCompanion/lightversion/ar1902.baf~
   COPY_EXISTING ~%area9100_script%.bcs~ ~override~
     DECOMPILE_AND_PATCH BEGIN
@@ -498,7 +498,7 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
     END BUT_ONLY
   COPY_EXISTING ~ar9103.are~ ~override~
     READ_ASCII 0x94 area9103_script
-  EXTEND_TOP ~%area9103_script%.bcs~ ~DjinniCompanion/lightversion/iwdee_ar9103.baf~
+  EXTEND_TOP ~%area9103_script%.bcs~ ~DjinniCompanion/lightversion/iwdee/ar9103.baf~
 END ELSE BEGIN
   COPY_EXISTING ~ar1902.are~ ~override~
     READ_ASCII 0x94 area1902_script
@@ -583,22 +583,22 @@ ACTION_IF (GAME_IS ~tob bgt bg2ee eet~) BEGIN
 END ELSE ACTION_IF (GAME_IS ~iwdee~) BEGIN
   // The Seer in Gloomfrost Mountains and Nym, the Drow merchant, can upgrade the djinni
   COMPILE EVALUATE_BUFFER
-    ~DjinniCompanion/lightversion/a7q4ct4a.baf~
-    ~DjinniCompanion/lightversion/a7q4ct4b.baf~
-    ~DjinniCompanion/lightversion/a7q4ct4c.baf~
-    ~DjinniCompanion/lightversion/a7q4ct4d.baf~
-    ~DjinniCompanion/lightversion/a7q4ct4e.baf~
-    ~DjinniCompanion/lightversion/a7q4ct4f.baf~
-    ~DjinniCompanion/lightversion/a7q4ct5a.baf~
-    ~DjinniCompanion/lightversion/a7q4ct5b.baf~
-    ~DjinniCompanion/lightversion/a7q4ct5c.baf~
-    ~DjinniCompanion/lightversion/a7q4ct5d.baf~
-    ~DjinniCompanion/lightversion/a7q4ct5e.baf~
-    ~DjinniCompanion/lightversion/a7q4ct5f.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct4a.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct4b.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct4c.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct4d.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct4e.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct4f.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct5a.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct5b.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct5c.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct5d.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct5e.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7q4ct5f.baf~
 
   COMPILE EVALUATE_BUFFER
-    ~DjinniCompanion/lightversion/dseer.d~
-    ~DjinniCompanion/lightversion/dnym.d~
+    ~DjinniCompanion/lightversion/iwdee/dseer.d~
+    ~DjinniCompanion/lightversion/iwdee/dnym.d~
 
   // Adding an enslaved djinni to Yxunomei's army in Dragon's Eye
   COPY_EXISTING ~a7afaaq.cre~  ~override/a7afqyx.cre~
@@ -623,7 +623,7 @@ END ELSE ACTION_IF (GAME_IS ~iwdee~) BEGIN
     END
 
   COMPILE EVALUATE_BUFFER
-    ~DjinniCompanion/lightversion/a7afqyx.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7afqyx.baf~
 
   COPY_EXISTING ~ar4005.are~ ~override~
     LPF fj_are_structure
@@ -651,4 +651,6 @@ END ELSE ACTION_IF (GAME_IS ~iwdee~) BEGIN
       fj_structure_type = itm
       fj_name           = A7DJLMP
     END
+
+  INCLUDE ~DjinniCompanion/lib/events_iwdee.tph~
 END

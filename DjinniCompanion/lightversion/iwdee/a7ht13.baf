@@ -1,0 +1,612 @@
+// *** Default combat script: Cleric 2 ***
+
+IF
+  !NightmareModeOn()
+  Global("Init", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("Init", "LOCALS", 1)
+    TakeItemReplace("CHAN02", "CHAN03", Myself)
+    FillSlot(SLOT_ARMOR)
+    EquipMostDamagingMelee()
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("Prep", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(LastSeenBy(Myself),CLERIC_DEFENSIVE_HARMONY) // SPPR406.SPL (Defensive Harmony)
+    SetGlobal("Prep", "LOCALS", 1)
+END
+
+IF
+  AttackedBy([GOODCUTOFF], 0)
+  !StateCheck(Myself, STATE_SILENCED)
+  Range(LastAttackerOf(Myself), 10)
+  !Range(LastAttackerOf(Myself), 4)
+  OR(2)
+    HasItem("BULL01", Myself)
+    HasItem("BULL02", Myself)
+  Global("FearActive", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastAttackerOf(Myself), 45)
+END
+
+IF
+  Global("FearActive", "LOCALS", 1)
+  GlobalTimerExpired("FearActiveTimer", "LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobal("FearActive", "LOCALS", 0)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  Global("FearActive", "LOCALS", 1)
+THEN
+  RESPONSE #50
+    MoveToObject(LastSeenBy(Myself))
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  Global("FearActive", "LOCALS", 1)
+THEN
+  RESPONSE #75
+    MoveToObject(LastSeenBy(Myself))
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  Global("FearActive", "LOCALS", 1)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+  See(NearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 50)
+  !CheckSpellState(Myself, SANCTUARY)
+  HaveSpell(CLERIC_SANCTUARY)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_SANCTUARY)
+    MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+  See(SecondNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 50)
+  !CheckSpellState(Myself, SANCTUARY)
+  HaveSpell(CLERIC_SANCTUARY)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_SANCTUARY)
+    MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+  See(ThirdNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 50)
+  !CheckSpellState(Myself, SANCTUARY)
+  HaveSpell(CLERIC_SANCTUARY)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_SANCTUARY)
+    MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+  See(FourthNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 50)
+  !CheckSpellState(Myself, SANCTUARY)
+  HaveSpell(CLERIC_SANCTUARY)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_SANCTUARY)
+    MoveToObject(LastSeenBy(Myself))
+END
+
+IF
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(Myself, 50)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_MODERATE_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_CURE_MODERATE_WOUNDS)
+END
+
+IF
+  See(NearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 50)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_MODERATE_WOUNDS)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+    Spell(LastSeenBy(Myself), CLERIC_CURE_MODERATE_WOUNDS)
+END
+
+IF
+  See(SecondNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 50)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_MODERATE_WOUNDS)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+    Spell(LastSeenBy(Myself), CLERIC_CURE_MODERATE_WOUNDS)
+END
+
+IF
+  See(ThirdNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 50)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_MODERATE_WOUNDS)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+    Spell(LastSeenBy(Myself), CLERIC_CURE_MODERATE_WOUNDS)
+END
+
+IF
+  See(FourthNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 50)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_MODERATE_WOUNDS)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+    Spell(LastSeenBy(Myself), CLERIC_CURE_MODERATE_WOUNDS)
+END
+
+IF
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(Myself, 75)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  See(NearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 75)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+    Spell(LastSeenBy(Myself), CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  See(SecondNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 75)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+    Spell(LastSeenBy(Myself), CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  See(ThirdNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 75)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+    Spell(LastSeenBy(Myself), CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  See(FourthNearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HPPercentLT(LastSeenBy(Myself), 75)
+  OR(2)
+    CheckSpellState(Myself, SANCTUARY)
+    !HaveSpell(CLERIC_SANCTUARY)
+  HaveSpell(CLERIC_CURE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+    Spell(LastSeenBy(Myself), CLERIC_CURE_LIGHT_WOUNDS)
+END
+
+IF
+  See(NearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_RECITATION)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_RECITATION)
+END
+
+IF
+  See(NearestMyGroupOfType)
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_PRAYER)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_PRAYER)
+END
+
+IF
+  OR(3)
+    See(ThirdNearestEnemyOf(Myself))
+    See(SecondNearestEnemyOf(Myself))
+    See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_CURSE)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), CLERIC_CURSE)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  See(SecondNearestEnemyOf(Myself))
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_MASS_CAUSE_LIGHT_WOUNDS)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), CLERIC_MASS_CAUSE_LIGHT_WOUNDS)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_FLAME_STRIKE)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_FLAME_STRIKE)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_FLAME_STRIKE)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), CLERIC_FLAME_STRIKE)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_FLAME_STRIKE)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), CLERIC_FLAME_STRIKE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself), 15)
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  Global("FearActive", "LOCALS", 0)
+  HaveSpell(CLERIC_CLOAK_OF_FEAR)
+THEN
+  RESPONSE #100
+    Spell(Myself, CLERIC_CLOAK_OF_FEAR)
+    SetGlobalTimer("FearActiveTimer", "LOCALS", 18)
+    SetGlobal("FearActive", "LOCALS", 1)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), STATE_CHARMED)
+  HaveSpell(CLERIC_MENTAL_DOMINATION)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_MENTAL_DOMINATION)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), STATE_CHARMED)
+  HaveSpell(CLERIC_MENTAL_DOMINATION)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), CLERIC_MENTAL_DOMINATION)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), STATE_CHARMED)
+  HaveSpell(CLERIC_MENTAL_DOMINATION)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), CLERIC_MENTAL_DOMINATION)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_ANIMATE_DEAD)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_ANIMATE_DEAD)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  OR(12)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), CLERIC)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), CLERIC_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), DRUID)
+    Class(LastSeenBy(Myself), FIGHTER_DRUID)
+  !CheckSpellState(LastSeenBy(Myself), MISCAST_MAGIC)
+  HaveSpell(CLERIC_MISCAST_MAGIC)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_MISCAST_MAGIC)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  OR(12)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), CLERIC)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), CLERIC_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), DRUID)
+    Class(LastSeenBy(Myself), FIGHTER_DRUID)
+  !CheckSpellState(LastSeenBy(Myself), MISCAST_MAGIC)
+  HaveSpell(CLERIC_MISCAST_MAGIC)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), CLERIC_MISCAST_MAGIC)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  OR(12)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), CLERIC)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), CLERIC_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), DRUID)
+    Class(LastSeenBy(Myself), FIGHTER_DRUID)
+  !CheckSpellState(LastSeenBy(Myself), MISCAST_MAGIC)
+  HaveSpell(CLERIC_MISCAST_MAGIC)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), CLERIC_MISCAST_MAGIC)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_HOLD_PERSON)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_HOLD_PERSON)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_HOLD_PERSON)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), CLERIC_HOLD_PERSON)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(CLERIC_HOLD_PERSON)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), CLERIC_HOLD_PERSON)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  OR(10)
+    Class(LastSeenBy(Myself), FIGHTER)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), RANGER)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), PALADIN)
+    Class(LastSeenBy(Myself), MONK)
+  HaveSpell(CLERIC_DOOM)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_DOOM)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  OR(10)
+    Class(LastSeenBy(Myself), FIGHTER)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), RANGER)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), PALADIN)
+    Class(LastSeenBy(Myself), MONK)
+  HaveSpell(CLERIC_DOOM)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_DOOM)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  OR(10)
+    Class(LastSeenBy(Myself), FIGHTER)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), RANGER)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), PALADIN)
+    Class(LastSeenBy(Myself), MONK)
+  HaveSpell(CLERIC_DOOM)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), CLERIC_DOOM)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatLT(Myself, 75, RESISTELECTRICITY)
+  HaveSpell(TALOS_STORMSHIELD)
+THEN
+  RESPONSE #50
+    Spell(Myself, TALOS_STORMSHIELD)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 4)
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatGT(Myself, 74, RESISTELECTRICITY)
+  HaveSpell(TALOS_LIGHTNING_BOLT)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), TALOS_LIGHTNING_BOLT)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 4)
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatGT(Myself, 74, RESISTELECTRICITY)
+  HaveSpell(TALOS_LIGHTNING_BOLT)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), TALOS_LIGHTNING_BOLT)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 4)
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatGT(Myself, 74, RESISTELECTRICITY)
+  HaveSpell(TALOS_LIGHTNING_BOLT)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), TALOS_LIGHTNING_BOLT)
+END
+

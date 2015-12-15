@@ -1,0 +1,142 @@
+// *** Events in IWD:EE ***
+
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  // adding trigger at Dragon's Eye entrance
+  COPY_EXISTING ~ar4000.are~ ~override~
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0   // proximity trigger
+      fj_box_left       = 860
+      fj_box_top        = 783
+      fj_box_right      = 864
+      fj_box_bottom     = 787
+      fj_cursor_idx     = 0   // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1   // is trapped
+      fj_vertex_0       = 860 | (783 << 16)
+      fj_vertex_1       = 864 | (787 << 16)
+      fj_vertex_2       = 860 | (787 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7KelvorEncounter
+      fj_reg_script     = A7HTTRG1
+    END
+
+  // adding trigger in Dorn's Deep cave
+  COPY_EXISTING ~ar6001.are~ ~override~
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0   // proximity trigger
+      fj_box_left       = 1178
+      fj_box_top        = 1132
+      fj_box_right      = 1182
+      fj_box_bottom     = 1136
+      fj_cursor_idx     = 0   // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1   // is trapped
+      fj_vertex_0       = 1178 | (1132 << 16)
+      fj_vertex_1       = 1182 | (1136 << 16)
+      fj_vertex_2       = 1178 | (1136 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7KelvorEncounter
+      fj_reg_script     = A7HTTRG2
+    END
+
+  // adding trigger at Lower Dorn's Deep entrance
+  COPY_EXISTING ~ar7000.are~ ~override~
+    LPF fj_are_structure
+      INT_VAR
+      fj_type           = 0   // proximity trigger
+      fj_box_left       = 650
+      fj_box_top        = 562
+      fj_box_right      = 654
+      fj_box_bottom     = 566
+      fj_cursor_idx     = 0   // default cursor
+      fj_flags          = (1 << 1)  // [Trap resets]
+      fj_trap_active    = 1   // is trapped
+      fj_vertex_0       = 650 | (562 << 16)
+      fj_vertex_1       = 654 | (566 << 16)
+      fj_vertex_2       = 650 | (566 << 16)
+      STR_VAR
+      fj_structure_type = region
+      fj_name           = A7KelvorEncounter
+      fj_reg_script     = A7HTTRG3
+    END
+
+    // Move spawnpoint further east
+    COPY_EXISTING ~ar6001.ini~ ~override~
+      REPLACE_TEXTUALLY ~\[1430\.1064:.+\]~ ~[1752.983:4]~
+
+
+    COPY ~DjinniCompanion/lightversion/iwdee/a7ht01.cre~ ~override~
+      SAY NAME1 @100503 // Kelvor Domine
+      SAY NAME2 @100503 // Kelvor Domine
+    COPY ~DjinniCompanion/lightversion/iwdee/a7ht02.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7ht03.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7ht14.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7ht15.cre~ ~override~
+      SAY NAME1 @100504 // Mage
+      SAY NAME2 @100504 // Mage
+    COPY ~DjinniCompanion/lightversion/iwdee/a7ht04.cre~ ~override~
+    COPY ~DjinniCompanion/lightversion/iwdee/a7ht12.cre~ ~override~
+      SAY NAME1 @100505 // Thief
+      SAY NAME2 @100505 // Thief
+    COPY ~DjinniCompanion/lightversion/iwdee/a7ht05.cre~ ~override~
+    COPY ~DjinniCompanion/lightversion/iwdee/a7ht11.cre~ ~override~
+      SAY NAME1 @100506 // Fighter
+      SAY NAME2 @100506 // Fighter
+    COPY ~DjinniCompanion/lightversion/iwdee/a7ht13.cre~ ~override~
+      SAY NAME1 @100507 // Cleric
+      SAY NAME2 @100507 // Cleric
+
+    COPY ~DjinniCompanion/lightversion/iwdee/a7htdm1.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htdm2.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htee.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htwe.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htfe.cre~ ~override~
+
+    COPY ~DjinniCompanion/lightversion/iwdee/a7htd01.spl~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htd02.spl~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htd02a.spl~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htd02b.spl~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htd03.spl~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htd04.spl~ ~override~
+
+    COPY_EXISTING ~ddoorh.vvc~ ~override/a7ddoorh.vvc~
+      WRITE_ASCII 0x78 ~#EFF_M09~ #8
+
+    COMPILE EVALUATE_BUFFER
+      ~DjinniCompanion/lightversion/iwdee/a7ht01.d~
+      ~DjinniCompanion/lightversion/iwdee/a7ht01.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7ht02.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7ht03.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7ht04.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7ht11.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7ht12.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7ht13.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7ht14.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7ht15.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htdef.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htpotn.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htwiz.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htel.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htdm1.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htdm2.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htdmx.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7httrg1.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7httrg2.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7httrg3.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct1a.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct1b.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct1c.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct1d.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct2a.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct2b.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct2c.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct2d.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct3a.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct3b.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct3c.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htct3d.baf~
+END

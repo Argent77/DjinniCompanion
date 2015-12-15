@@ -1,0 +1,100 @@
+// -*- coding: utf-8 -*- 
+// *** IWDEE-specific strings (index 100000 and up)
+
+// dialog lines
+@100000 = ~Ich grüße Euch, Abenteurer. Mein Name ist Kelvor Domine. Ich bin ein Magier und hochangesehenes Mitglied des Heerturms der Arkanen.~
+@100001 = ~Heerturm der Arkanen?~
+@100002 = ~Was macht ein so hochangesehenes Mitglied des Heerturms so weit weg von Luskan?~
+@100003 = ~Ihr scheint wohl nicht viel über diese Region zu wissen, wenn Ihr solche Fragen stellt.~
+@100004 = ~Der Heerturm der Arkanen ist eine bedeutende Akademie der magischen Künste und das Machtzentrum Luskans.~
+@100005 = ~Interessant. Und was macht Ihr so weit weg von Luskan?~
+@100006 = ~Würdet Ihr bitte endlich zur Sache kommen?~
+@100007 = ~Ja, das ist in der Tat ungewöhnlich.~
+@100008 = ~Lasst es mich so sagen, dass ich ein flüchtiges Interesse an den Ereignissen habe, die sich in den Tiefen dieses erloschenen Vulkans abspielen.~
+@100009 = ~Ihr dagegen scheint einen nachhaltigen Eindruck auf die Einheimischen dieses Ortes gemacht zu haben, als Ihr ihre Königing Yxumonei besiegt habt.~
+@100010 = ~Woher wisst Ihr das?~
+@100011 = ~Es gibt mehr als nur einen Weg, solche Ereignisse zu erfahren.~
+@100012 = ~Aber lasst mich zur Sache kommen.~
+@100013 = ~Vor ein paar Jahren konnte ein Untergebener Yxunomeis ein sehr wertvolles Artefakt von uns stehlen. Seit diesem Vorfall haben wir wiederholt versucht, es zurückzuholen, leider ohne Erfolg. Ihr Versteck war einfach zu gut bewacht, um sie zu überraschen.~
+@100014 = ~Der Diebstahl des Herzsteinjuwel vor einigen Tagen hat auch den letzten Rest Hoffnung zerstört, das Artefakt ohne größeres Blutvergießen zu beschaffen.~
+@100015 = ~Ich spreche von dem Dschinn, den ich in Eurer Mitte sehe. Und natürlich von seiner Lampe.~
+@100016 = ~Ich spreche von dem Dschinnlampe, der sich in Eurem Besitz befindet.~
+@100017 = ~Ich hätte niemals gedacht, dass eine so unerfahrene Gruppe Abenteurer es schaffen könnte, die Lampe den Klauen Yxunomeis zu entreißen.~
+@100018 = ~Da die Lampe im Grunde uns gehört, biete ich Euch ein Geschäft an.~
+@100019 = ~Ich kann sie gegen ein verzaubertes Langschwert oder einen nicht ganz unbeträchtlichen Goldbetrag eintauschen. Beides sind sehr verlockende Varianten für Abenteurer wie Eich. Was sagt Ihr dazu?~
+@100020 = ~Ihr habt mit überzeugt. Ich würde gern die magische Waffe haben.~
+@100021 = ~Nun gut. Ich nehme das Gold.~
+@100022 = ~Eigentlich würde ich gerne die Lampe behalten.~
+@100023 = ~Ich bin nicht im Geringsten an Euren Angeboten interessiert. Die Lampe gehört jetzt mir.~
+@100024 = ~Ihr habt eine weise Entscheidung getroffen. Diese Klinge ist mit einem Zauber belegt, der selbst mächtige magische Kreaturen verletzen kann. Es gehört nun Euch.~
+@100025 = ~Ihr habt eine weise Entscheidung getroffen. 5000 Goldmünzen sind ein kleines Vermögen, aber Ihr habt es Euch redlich verdient.~
+@100026 = ~Lebt wohl und viel Glück auf Eurer weiteren Reise.~
+@100027 = ~Ihr solltet es Euch noch einmal ernsthaft überlegen. Wir sind bereits seit einigen Jahren auf der Suche nach der Lampe. Eine Weigerung eurerseits kann ich nicht akzeptieren.~
+@100028 = ~Wenn Ihr meint. Dann würde ich gern die magische Waffe haben.~
+@100029 = ~Das ist mir völlig egal. Die Lampe gehört jetzt mir.~
+@100030 = ~(seufz) Diese Antwort habe ich schon fast erwartet. Daher habe ich mir die Freiheit genommen, einige gute Freunde mitzubringen. Vielleicht können sie Euch eines Besseren belehren?~
+@100031 = ~Glaubt ja nicht, dass es vorbei ist. Ich werde die Lampe auf die eine oder andere Weise von Euch bekommen.~
+@100032 = ~Seid gegrüßt, <GABBER>. Ich habe Euch ja versprochen, dass wir uns wiedersehen.~
+@100033 = ~Ich hoffe, dass meine Freunde bei Euch einen Sinneswandel auslösen konnten. Seid Ihr jetzt bereit, mir die Dschinnlampe zu überlassen?~
+@100034 = ~Nun gut, Ihr könnt sie haben.~
+@100035 = ~Nein, das bin ich nicht.~
+@100036 = ~Ihr habt eine weise Entscheidung getroffen. Ich bin sogar immer noch bereit, Euch eine kleine Abfindung für Eure Mühen zu zahlen.~
+@100037 = ~Als Gegenleistung werde ich Euch nicht weiter belästigen. Lebt wohl.~
+@100038 = ~Ihr scheint den Ernst der Lage nicht richtig einzuschätzen. Ich besitze die Macht, Eure jämmerliche Existenz mit nur einer Geste meiner Hände auszulöschen. Aber ich halte mich zurück, da ich immer noch davon überzeugt bin, dass wir zu einer friedlichen Einigung kommen können.~
+@100039 = ~Wollt Ihr es Euch nicht überlegen? Ich werde Euch nicht noch einmal so höflich fragen.~
+@100040 = ~Wenn Ihr meint, dann nehmt sie an Euch.~
+@100041 = ~Ich habe Euch bereits meine Entscheidung mitgeteilt. Ich wiederhole mich nicht gerne.~
+@100042 = ~Hmm, vielleicht können Euch meine Freunde vom Heerturm des Arkanen überzeugen?~
+@100043 = ~Ihr könnt sicher sein, dass ich Euch weiter jagen werde, solange Ihr die Lampe in Eurem Besitz habt.~
+@100044 = ~Ah, da seid Ihr ja. Ich habe auf Euch gewartet, <GABBER>. Ihr wisst, warum ich hier bin.~
+@100045 = ~Ich gebe Euch noch eine letzte Gelegenheit, mir die Lampe friedlich zu übergeben. Wie entscheidet Ihr Euch?~
+@100046 = ~Ist ja gut. Ihr könnt sie haben. Es muss dewegen nicht noch mehr Blut vergossen werden.~
+@100047 = ~Ich sagte es Euch bereits mehr als einmal. Diese Lampe gehört jetzt mir!~
+@100048 = ~Es ist gut, dass Ihr endlich vernünftig geworden seid. Ihr mögt nicht besonders glücklich über die Situation sein, aber zumindest seit Ihr nicht tot.~
+@100049 = ~Ihr könnt Eure Reise fortsetzen. Ich werde Euch nicht noch einmal belästigen. Lebt wohl.~
+@100050 = ~(seufz) Meine Geduld ist jetzt endgültig erschöpft. Dann muss ich mir die Lampe wohl aus Euren Überresten nehmen. Ihr lasst mir leider keine andere Wahl.~
+@100051 = ~Habe ich bereits erwähnt, dass ich ein Meisterbeschwörer bin? Nein? Dann überzeugt Euch selbst!~
+
+// misc. strings
+@100500 = ~Der Meister ist tot! Es ist Zeit für ein ordentliches Gemetzel!~
+@100501 = ~Zeigt ihnen keine Gnade!~
+@100502 = ~Kümmert Euch gut um sie!~
+@100503 = ~Kelvor Domine~
+@100504 = ~Magier~
+@100505 = ~Dieb~
+@100506 = ~Kämpfer~
+@100507 = ~Kleriker~
+
+
+// journal entries
+@101000 = ~Lose Enden
+Auf meinem Weg au Drachenauge begegnete ich einem Magier namensKelvor Domine, der von sich behauptete, Mitglied des Heerturms der Arkanen in Luskan zu sein.
+
+Er wusste anscheinend bereits davon, dass ich Yxumonei besiegt hatte und verlangte die Dschinnlampe, die ich in ihren Überresten gefunden hatte. Nachdem ich sein Angebot ablehnte, rief einige Söldner herbei und drohte mir, dass ich ihn nicht zum letzten Mal gesehen habe, bevor es sich wegteleportierte.~
+
+@101001 = ~Lose Enden
+Auf meinem Weg durch die Höhle zu Dorntief, traf ich einen alten "Bekannten" wieder.
+
+Diesmal verlangte Kelvor Domine die Dschinnlampe von mir mit mehr Nachdruck. Ich lehnte erneut ab, was den Magier sichtlich ärgerte. Daraufhin rief er einige seiner Freunde, die sich um mich kümmern sollten. Er drohte mir außerdem, dass er mich immer weiter verfolgen werde, solange ich ihm die Dschinnlampe nicht überlasse. Dann verschwand er wieder mit Hilfe seines Teleportzaubers.~
+
+
+// completed journal entries
+@101900 = ~Lose Enden
+Auf meinem Weg au Drachenauge begegnete ich einem Magier namensKelvor Domine, der von sich behauptete, Mitglied des Heerturms der Arkanen in Luskan zu sein.
+
+Er wusste anscheinend bereits davon, dass ich Yxumonei besiegt hatte und verlangte die Dschinnlampe, die ich in ihren Überresten gefunden hatte. Ich gab seiner Bitte nach und händigte ihm die Lampe aus. Wer weiß, was ein Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Bitte nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wieder sehen.~
+
+@101901 = ~Lose Enden
+Auf meinem Weg durch die Höhle zu Dorntief, traf ich einen alten "Bekannten" wieder.
+
+Diesmal verlangte Kelvor Domine die Dschinnlampe von mir mit mehr Nachdruck. Ich entschied mich diesmal dafür, ihm die Lampe zu überlassen. Wer weiß, was ein wütender Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Forderung nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wieder sehen.~
+
+@101902 = ~Lose Enden
+Auf meinem Weg zu Unter-Dorntief begegnete ich wieder Kelvor Domine.
+
+Diesmal hielt er sich nicht vornehm zurück und forderte ganz unverblümt, dass ich ihm die Dschinnlampe überlassen soll. Ich entschied mich diesmal dafür, ihm die Lampe zu überlassen. Wer weiß, was ein wütender Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Forderung nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wieder sehen.~
+
+@101903 = ~Lose Enden
+Auf meinem Weg zu Unter-Dorntief begegnete ich wieder Kelvor Domine.
+
+Diesmal hielt er sich nicht vornehm zurück und forderte ganz unverblümt, dass ich ihm die Dschinnlampe überlassen soll. Nachdem ich seine Forderung zum weiteren Male ablehnte, wurde er richtig wütend. Er rief eine Gruppe Elementare und sogar ein paar mächtige Dämonen herbei. Seine eigenen magischen Kräfte waren ebenfalls sehr eindrucksvoll. Ich hoffe inständig, das mir nicht noch mehr Mitglieder des Heerturms über den Weg laufen.~

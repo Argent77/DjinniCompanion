@@ -1,0 +1,55 @@
+// *** Potion usage in combat ***
+
+IF
+  HPPercentLT(Myself, 75)
+  HasItem("potn08", Myself)   // Potion of Healing
+THEN
+  RESPONSE #100
+    UseItem("potn08", Myself)
+    DisplayString(Myself, @200)    // quaffs a potion
+    Continue()
+END
+
+IF
+  HPPercentLT(Myself, 50)
+  HasItem("extheal", Myself)   // Potion of Extra Healing
+THEN
+  RESPONSE #100
+    UseItem("extheal", Myself)
+    DisplayString(Myself, @200)    // quaffs a potion
+    Continue()
+END
+
+IF
+  Class(Myself, FIGHTER)
+  Global("heroism", "LOCALS", 0)
+  HasItem("potn09", Myself)   // Potion of Heroism
+THEN
+  RESPONSE #100
+    SetGlobal("heroism", "LOCALS", 1)
+    UseItem("potn09", Myself)
+    DisplayString(Myself, @200)    // quaffs a potion
+    Continue()
+END
+
+IF
+  Class(Myself, FIGHTER)
+  Global("power", "LOCALS", 0)
+  HasItem("potn41", Myself)   // Potion of Power
+THEN
+  RESPONSE #100
+    SetGlobal("power", "LOCALS", 1)
+    UseItem("potn41", Myself)
+    DisplayString(Myself, @200)    // quaffs a potion
+    Continue()
+END
+
+IF
+  !StateCheck(Myself, STATE_INVISIBLE)
+  HasItem("potn10", Myself)   // Potion of Invisibility
+THEN
+  RESPONSE #100
+    UseItem("potn10", Myself)
+    DisplayString(Myself, @200)    // quaffs a potion
+    Continue()
+END

@@ -1,9 +1,9 @@
 BACKUP ~DjinniCompanion/backup~
 AUTHOR ~Argent77 at Spellhold Studios~
-VERSION ~v2.0~
+VERSION ~v2.1 beta1~
 
 ALWAYS
-  ACTION_DEFINE_ARRAY a7noconvert BEGIN setup bg2ee END
+  ACTION_DEFINE_ARRAY a7noconvert BEGIN setup bg2ee iwdee END
   ACTION_DEFINE_ARRAY a7reload BEGIN afaaq misc quest1 quest2 quest3 quest4 quest5 END
   LAF HANDLE_CHARSETS
     INT_VAR
@@ -17,8 +17,10 @@ ALWAYS
   ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
     ACTION_IF (NOT (~%LANGUAGE%~ STRING_EQUAL_CASE ~english~)) BEGIN
       LOAD_TRA ~DjinniCompanion/languages/english/bg2ee.tra~
+      LOAD_TRA ~DjinniCompanion/languages/english/iwdee.tra~
     END
     LOAD_TRA ~DjinniCompanion/languages/%LANGUAGE%/bg2ee.tra~
+    LOAD_TRA ~DjinniCompanion/languages/%LANGUAGE%/iwdee.tra~
   END
 
 END
@@ -210,6 +212,19 @@ BEGIN @18    // Alternate djinni portrait by Ulb
 
   COPY ~DjinniCompanion/portraits/v2/a7afaaql.bmp~ ~override~
        ~%PORTRAIT_AFAAQS_V2%~                      ~override~
+
+
+///////////////////////////
+// Disable IWD:EE Quest //
+//////////////////////////
+BEGIN @22   // Disable IWD:EE Quest?
+  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 2 @23   // This component requires the IWD:EE version to be installed.
+  GROUP @19     // Tweaks
+  DESIGNATED 400
+  COPY_EXISTING ~A7AFQINI.BCS~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(SetGlobal("A7AfaaqIwdee",.+)\)~ ~\1 SetGlobal("A7HostTower", "GLOBAL", 10)~
+    END BUT_ONLY
 
 
 //////////////////////////////////

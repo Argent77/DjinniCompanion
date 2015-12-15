@@ -1,0 +1,330 @@
+// *** Default combat script: Mage 2 (Disabling) ***
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("Prep", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself, WIZARD_MIRROR_IMAGE)
+    ApplySpell(Myself, WIZARD_PROTECTION_FROM_NORMAL_MISSILES)
+    SetGlobal("Prep", "LOCALS", 1)
+END
+
+IF
+  HitBy([GOODCUTOFF], 0)
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+IF
+  AttackedBy([GOODCUTOFF], 0)
+  Range(LastAttackerOf(Myself), 10)
+  !Range(LastAttackerOf(Myself), 4)
+  HasItem("BULL01", Myself)
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastAttackerOf(Myself), 45)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_EMOTION_HOPELESSNESS)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_EMOTION_HOPELESSNESS)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_EMOTION_HOPELESSNESS)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_EMOTION_HOPELESSNESS)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_DOMINATION)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_DOMINATION)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_DOMINATION)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_DOMINATION)
+END
+
+IF
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_SHIELD)
+THEN
+  RESPONSE #33
+    Spell(Myself, WIZARD_SHIELD)
+  RESPONSE #67
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_CONFUSION)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_CONFUSION)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_CONFUSION)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_CONFUSION)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_SLOW)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_SLOW)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_SLOW)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_SLOW)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_SLOW)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_SLOW)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_HORROR)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_HORROR)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_HORROR)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_HORROR)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_HORROR)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_HORROR)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MONSTER_SUMMONING_1)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_MONSTER_SUMMONING_1)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MONSTER_SUMMONING_1)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_MONSTER_SUMMONING_1)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MONSTER_SUMMONING_1)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_MONSTER_SUMMONING_1)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  OR(10)
+    Class(LastSeenBy(Myself), FIGHTER)
+    Class(LastSeenBy(Myself), FIGHTER_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), RANGER)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), PALADIN)
+    Class(LastSeenBy(Myself), MONK)
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_BLINDNESS)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_BLINDNESS)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  OR(10)
+    Class(LastSeenBy(Myself), FIGHTER)
+    Class(LastSeenBy(Myself), FIGHTER_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), RANGER)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), PALADIN)
+    Class(LastSeenBy(Myself), MONK)
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_BLINDNESS)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_BLINDNESS)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  OR(10)
+    Class(LastSeenBy(Myself), FIGHTER)
+    Class(LastSeenBy(Myself), FIGHTER_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_CLERIC)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), RANGER)
+    Class(LastSeenBy(Myself), CLERIC_RANGER)
+    Class(LastSeenBy(Myself), PALADIN)
+    Class(LastSeenBy(Myself), MONK)
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_BLINDNESS)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_BLINDNESS)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !Race(LastSeenBy(Myself), ELF)
+  !Race(LastSeenBy(Myself), HALF_ELF)
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_CHARM_PERSON)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_CHARM_PERSON)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !Race(LastSeenBy(Myself), ELF)
+  !Race(LastSeenBy(Myself), HALF_ELF)
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_CHARM_PERSON)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_CHARM_PERSON)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Race(LastSeenBy(Myself), ELF)
+  !Race(LastSeenBy(Myself), HALF_ELF)
+  !StateCheck(Myself, STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  !CheckSpellState(LastSeenBy(Myself), HELD)
+  HaveSpell(WIZARD_CHARM_PERSON)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_CHARM_PERSON)
+END
+

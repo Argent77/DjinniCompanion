@@ -1,0 +1,355 @@
+// *** Default combat script: Mage 2 (Offensive) ***
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("Prep", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself, WIZARD_MIRROR_IMAGE)
+    ApplySpell(Myself, WIZARD_PROTECTION_FROM_NORMAL_MISSILES)
+    SetGlobal("Prep", "LOCALS", 1)
+END
+
+IF
+  HitBy([GOODCUTOFF], 0)
+  HaveSpell(WIZARD_MIRROR_IMAGE)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_MIRROR_IMAGE)
+END
+
+IF
+  AttackedBy([GOODCUTOFF], 0)
+  Range(LastAttackerOf(Myself), 10)
+  !Range(LastAttackerOf(Myself), 4)
+  HasItem("BULL01", Myself)
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastAttackerOf(Myself), 45)
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 12)
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_SHROUD_OF_FLAME)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_SHROUD_OF_FLAME)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 12)
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_SHROUD_OF_FLAME)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_SHROUD_OF_FLAME)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 12)
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_SHROUD_OF_FLAME)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_SHROUD_OF_FLAME)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself), 12)
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_SHROUD_OF_FLAME)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_SHROUD_OF_FLAME)
+END
+
+IF
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_SHIELD)
+THEN
+  RESPONSE #50
+    Spell(Myself, WIZARD_SHIELD)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MORDENKAINENS_FORCE_MISSILES)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_MORDENKAINENS_FORCE_MISSILES)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MORDENKAINENS_FORCE_MISSILES)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_MORDENKAINENS_FORCE_MISSILES)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MORDENKAINENS_FORCE_MISSILES)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_MORDENKAINENS_FORCE_MISSILES)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MORDENKAINENS_FORCE_MISSILES)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_MORDENKAINENS_FORCE_MISSILES)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_BELTYNS_BURNING_BLOOD)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_BELTYNS_BURNING_BLOOD)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_BELTYNS_BURNING_BLOOD)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_BELTYNS_BURNING_BLOOD)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_BELTYNS_BURNING_BLOOD)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_BELTYNS_BURNING_BLOOD)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatLT(LastSeenBy(Myself), 50, RESISTFIRE)
+  HaveSpell(WIZARD_FLAME_ARROW)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_FLAME_ARROW)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatLT(LastSeenBy(Myself), 50, RESISTFIRE)
+  HaveSpell(WIZARD_FLAME_ARROW)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_FLAME_ARROW)
+  RESPONSE #75
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatLT(LastSeenBy(Myself), 50, RESISTFIRE)
+  HaveSpell(WIZARD_FLAME_ARROW)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_FLAME_ARROW)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatLT(LastSeenBy(Myself), 50, RESISTCOLD)
+  HaveSpell(WIZARD_ICELANCE)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_ICELANCE)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatLT(LastSeenBy(Myself), 50, RESISTCOLD)
+  HaveSpell(WIZARD_ICELANCE)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_ICELANCE)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  CheckStatLT(LastSeenBy(Myself), 50, RESISTCOLD)
+  HaveSpell(WIZARD_ICELANCE)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_ICELANCE)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MELF_ACID_ARROW)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_MELF_ACID_ARROW)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MELF_ACID_ARROW)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_MELF_ACID_ARROW)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MELF_ACID_ARROW)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_MELF_ACID_ARROW)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #50
+    Spell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #75
+    Spell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+  RESPONSE #25
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #100
+    Spell(LastSeenBy(Myself), WIZARD_MAGIC_MISSILE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
+  !HasItem("MELFMET", Myself)
+  HaveSpell(WIZARD_MELF_METEOR)
+THEN
+  RESPONSE #100
+    Spell(Myself, WIZARD_MELF_METEOR)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  OR(9)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), THIEF)
+    Class(LastSeenBy(Myself), DRUID)
+    Class(LastSeenBy(Myself), MONK)
+  HasItem("MELFMET", Myself)
+THEN
+  RESPONSE #50
+    AttackReevaluate(LastSeenBy(Myself), 30)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  OR(9)
+    Class(LastSeenBy(Myself), MAGE)
+    Class(LastSeenBy(Myself), MAGE_THIEF)
+    Class(LastSeenBy(Myself), CLERIC_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_THIEF)
+    Class(LastSeenBy(Myself), FIGHTER_MAGE_CLERIC)
+    Class(LastSeenBy(Myself), THIEF)
+    Class(LastSeenBy(Myself), DRUID)
+    Class(LastSeenBy(Myself), MONK)
+  HasItem("MELFMET", Myself)
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself), 30)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  HasItem("MELFMET", Myself)
+THEN
+  RESPONSE #50
+    AttackReevaluate(LastSeenBy(Myself), 30)
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HasItem("MELFMET", Myself)
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself), 30)
+END
+

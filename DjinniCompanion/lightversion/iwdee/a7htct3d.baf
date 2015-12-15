@@ -1,0 +1,23 @@
+// *** Cutscene: Lower Dorn's Deep entrance - Kelvor Domine summons elementals and demons - Heart of Fury mode ***
+
+// refuse: Kelvor summons elementals and demons -> Kelvor turns hostile -> Destroy cutspy
+IF
+  True()
+THEN RESPONSE #100
+  CutSceneId("a7ht01")
+  CreateVisualEffect("cwelemx", [596.640])    // Water Elemental
+  Wait(1)
+  CreateVisualEffect("ceelemx", [596.492])    // Earth Elemental
+  CreateCreature("a7htwe", [596.640], NE)    // Water Elemental
+  Wait(1)
+  CreateVisualEffect("cfelemx", [758.440])    // Fire Elemental
+  CreateCreature("a7htee", [596.492], SSE)    // Earth Elemental
+  Wait(1)
+  CreateVisualEffect("spsumgte", [772.652])   // Glabrezu
+  CreateCreature("a7htfe", [758.440], SW)     // Fire Elemental
+  Wait(4)
+  CreateCreature("a7htdm2", [772.652], NW)    // Glabrezu
+  ActionOverride("cutspy", DestroySelf())
+  Enemy()
+  EndCutSceneMode()
+END

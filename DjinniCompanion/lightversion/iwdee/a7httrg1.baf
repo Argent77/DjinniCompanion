@@ -1,0 +1,20 @@
+// *** Region trigger in Dragon's Eye entrance (AR4000) ***
+
+IF
+  Dead("Yxunomei")
+  OR(2)
+    PartyHasItem("A7DJLMP")
+    PartyHasItem("A7DJLMPA")
+  OR(2)
+    See([PC])
+    See("A7Afaaq")
+  OR(2)
+    Range([PC], 20)
+    Range("A7Afaaq", 20)
+  Global("A7HostTower", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7HostTower", "GLOBAL", 1)
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("a7htct1a")
+END

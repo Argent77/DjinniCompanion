@@ -1,0 +1,11 @@
+// *** Override script: Elementals ***
+
+IF
+  !NightmareModeOn()
+  Global("Init", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("Init", "LOCALS", 1)
+    DestroyItem("IMMUNE2")
+    Continue()
+END

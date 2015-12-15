@@ -31,7 +31,7 @@ Meet Afaaq! The djinni who will be your faithful companion in the course of your
 
   **Light Version:** This component installs a stripped down version of the mod consisting only of the djinni Afaaq and his magical lamp. Choose this if you merely want additional fighting power in your adventures.
 
-2. **IWD:EE Version:** This component is basically the same as the *Light Version*, but can be installed in *Icewind Dale: Enhanced Edition*. It provides a stripped down version of the mod consisting only of the djinni Afaaq and his magical lamp.
+2. **IWD:EE Version:** This component is more or less the same as the *Light Version*, but can be installed in *Icewind Dale: Enhanced Edition*. It provides a stripped down version of the mod consisting of the djinni Afaaq, his magical lamp and a simple storyline to spice up the adventure.
 
 3. **Banter accelerator:** (Full Version only) Lets you control how often a conversation should be triggered by the djinni. Possible values range from 15 min. to 120 min. (Default is 60 minutes).
    *Note: Only conversations between the djinni and the protagonist are affected.*
@@ -40,7 +40,9 @@ Meet Afaaq! The djinni who will be your faithful companion in the course of your
 
 5. **Alternate djinni portrait by Ulb:** Choose this component if you want to replace the default portrait of the djinni Afaaq by an alternate version. ([Preview](https://argent77.github.io/DjinniCompanion/images/AfaaqAlternate.jpg))
 
-6. **Add Infinity Animation creatures:** (Full Version only) This component will be triggered only if the mod "Infinity Animations" and its subcomponent "Distinctive Genies" have been installed. It replaces a couple of creature animations with more natural looking versions.
+6. **Disable IWD:EE Quest:** (IWD:EE Version only) The quest, which is attached to the presence of the djinni in the party, includes a number of challenging battles. Choose this component if you want to skip this quest entirely.
+
+7. **Add Infinity Animation creatures:** (Full Version only) This component will be triggered only if the mod "Infinity Animations" and its subcomponent "Distinctive Genies" have been installed. It replaces a couple of creature animations with more natural looking versions.
 
 
 ## Details

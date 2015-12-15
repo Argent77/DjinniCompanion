@@ -1,0 +1,18 @@
+// *** Default combat script: Fighter 2 ***
+
+IF
+  !NightmareModeOn()
+  Global("Init", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    SetGlobal("Init", "LOCALS", 1)
+    TakeItemReplace("HELM01", "HELM06", Myself)
+    FillSlot(SLOT_HELMET)
+    TakeItemReplace("PLAT02", "PLAT04", Myself)
+    FillSlot(SLOT_ARMOR)
+    DestroyItem("BOLT04")
+    CreateItem("BOLT02", 20, 0, 0)
+    FillSlot(SLOT_AMMO0)
+    TakeItemReplace("POTN09", "POTN41", Myself)
+    Continue()
+END
