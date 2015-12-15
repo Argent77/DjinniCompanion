@@ -86,11 +86,9 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
     COPY ~DjinniCompanion/lightversion/iwdee/a7ht11.cre~ ~override~
       SAY NAME1 @100506 // Fighter
       SAY NAME2 @100506 // Fighter
-    COPY ~DjinniCompanion/lightversion/iwdee/a7ht13.cre~ ~override~
-      SAY NAME1 @100507 // Cleric
-      SAY NAME2 @100507 // Cleric
 
-    COPY ~DjinniCompanion/lightversion/iwdee/a7htdm1.cre~ ~override~
+    COPY ~DjinniCompanion/lightversion/iwdee/a7ht13.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htdm1.cre~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htdm2.cre~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htee.cre~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htwe.cre~ ~override~
