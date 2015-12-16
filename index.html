@@ -26,7 +26,7 @@
           <a href="https://github.com/Argent77/DjinniCompanion/releases/latest">Download</a> &#8226;
           <a href="index.html">Website</a> &#8226;
           <a href="https://github.com/Argent77/DjinniCompanion/">Project</a> &#8226;
-          Version: 2.0
+          Version: 2.1
         </p>
         <hr />
         <p class="menu">
@@ -109,10 +109,11 @@
               <br />
               <strong>Light Version:</strong> This component installs a stripped down version of the mod consisting only of the djinni Afaaq and his magical lamp. Choose this if you merely want additional fighting power in your adventures.<br /><br />
             </li>
-            <li><strong>IWD:EE Version:</strong> This component is basically the same as the <em>Light Version</em>, but can be installed in <em>Icewind Dale: Enhanced Edition</em>. It provides a stripped down version of the mod consisting only of the djinni Afaaq and his magical lamp.<br /><br /></li>
+            <li><strong>IWD:EE Version:</strong> This component is more or less the same as the <em>Light Version</em>, but can be installed in <em>Icewind Dale: Enhanced Edition</em>. It provides a stripped down version of the mod consisting of the djinni Afaaq, his magical lamp and a simple storyline to spice up the adventure.<br /><br /></li>
             <li><strong>Banter accelerator:</strong> (Full Version only) Lets you control how often a conversation should be triggered by the djinni. Possible values range from 15 min. to 120 min. (Default is 60 minutes).<br /><em>Note: Only conversations between the djinni and the protagonist are affected.</em><br /><br /></li>
             <li><strong>Remove Afaaq's banter soundtrack:</strong> (Full Version only) By default, a short oriental soundtrack will be played back whenever the djinni starts a conversation with the protagonist. This component disables the soundtrack.<br /><br /></li>
             <li><strong>Alternate djinni portrait by Ulb:</strong> Choose this component if you want to replace the default portrait of the djinni Afaaq by an alternate version. (<a href="AfaaqAlternate.jpg" target="_blank">Preview</a>)<br /><br /></li>
+            <li><strong>Disable IWD:EE Quest:</strong> (IWD:EE Version only) The quest, which is attached to the presence of the djinni in the party, includes a number of challenging battles. Choose this component if you want to skip this quest entirely.<br /><br /></li>
             <li><strong>Add Infinity Animation creatures:</strong> (Full Version only) This component will be triggered only if the mod &quot;Infinity Animations&quot; and its subcomponent &quot;Distinctive Genies&quot; have been installed. It replaces a couple of creature animations with more natural looking versions.</li>
           </ol>
           <address>
@@ -214,9 +215,15 @@
             <span class="t3">Q:</span><strong>Quest &quot;Playing with fire&quot;: How can I enter the pool in the smuggler cave?</strong><br />
             <span class="t3">A:</span><em>(Full Version only)</em> Firstly, you need permission from the occupants of the cave to enter the pool. Secondly, you'll surely burn yourself if you want to enter the pool unprotected. Talk to the townsfolk to find a solution for this problem.<br />
             <br />
-            <span class="t3">Q:</span><strong>I want to start a ToB-only game. Where can I find the djinni?</strong><br />
+            <span class="t3">Q:</span><strong>Adventure &quot;Loose Ends&quot;: A specific battle of this quest is too difficult. Is it possible to skip it?</strong><br />
+            <span class="t3">A:</span><em>(IWD:EE Version only)</em> Yes, it is possible by performing a simple trick. All events of the story require that the djinni lamp is in possession of the party. Afaaq's PID provides an option that allows you to store items in his inventory. Since Afaaq isn't a regular party member, you can simply put the lamp into his care temporarily.<br />
+            You can skip a battle by putting the lamp into Afaaq's inventory before you enter the area where a battle may take place. Don't forget to return it into your own inventory after leaving that area behind. The places of interest are the cave entrance area to Dragon's Eye, the Underdark cave leading to Dorn's Deep and the cave entrance area to Lower Dorn's Deep. Skipping a battle may result in the premature end of the whole quest, however.<br />
+            <strong>Remember</strong>: The djinni will be lost forever if he happens to die while the lamp is still in his possession.<br />
+            <br />
+            <span class="t3">Q:</span><strong>I want to start a ToB-only or HoW-only game. Where can I find the djinni?</strong><br />
             <span class="t3">A:</span><em>(Full Version)</em> You can't. The mod is designed to be started in the SoA part of the game.<br />
             <span class="t3">A:</span><em>(Light Version)</em> You can find the djinni after you have beaten Illasera.<br />
+            <span class="t3">A:</span><em>(IWD:EE Version)</em> You can find the djinni lamp somewhere hidden in the Shrine of Waukeen in Lonelywood.<br />
           </p>
           <p id="hintbox" class="boxed" style="display: none">
             <strong>Did you know?</strong><input type="submit" value="More" onclick="showNextHint('en', 'hint')" style="margin-left: 10px"></input>
@@ -302,6 +309,12 @@
         <a name="version" id="version"></a>
         <div class="content">
           <h2>Version History</h2>
+          <h6>2015-12-16 - Version 2.1:</h6>
+          <ul>
+            <li>Added a storyline to the IWD:EE version of the Djinni Companion.</li>
+            <li>Added a "Tweaks" component to disable to storyline in IWD:EE.</li>
+            <li>Made the djinni available in a "Heart of Winter" only game in IWD:EE.</li>
+          </ul>
           <h6>2015-12-10 - Version 2.0:</h6>
           <ul>
             <li>Added Icewind Dale: Enhanced Edition support.</li>
