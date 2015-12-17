@@ -12,6 +12,7 @@ IF
   OR(2)
     Range([PC], 20)
     Range("A7Afaaq", 20)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
   Global("A7HostTower", "GLOBAL", 2)
 THEN RESPONSE #100
   SetGlobal("A7HostTower", "GLOBAL", 3)
