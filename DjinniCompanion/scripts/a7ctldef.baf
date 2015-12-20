@@ -105,7 +105,7 @@ THEN RESPONSE #100
   ActionOverride("A7Afaaq", DisplayString(Myself, @201))      // Death
   ActionOverride("A7Afaaq", SetSequence(%seq_die%))
   ActionOverride("A7Afaaq",MakeUnselectable(2))
-  SmallWait(25)
+  Wait(2)
   ActionOverride("A7Afaaq", DestroySelf())
   SetInterrupt(TRUE)
 END
