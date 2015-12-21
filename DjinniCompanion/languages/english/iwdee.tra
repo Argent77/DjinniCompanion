@@ -4,10 +4,10 @@
 // dialog lines
 @100000 = ~Greetings, adventurer. My name is Kelvor Domine, wizard and high standing member of the Hosttower of the Arcane.~
 @100001 = ~Hosttower of the Arcane?~
-@100002 = ~What is a high standing member of the Hosttower doing so far away from Luskan?~
+@100002 = ~What is a high standing member of the Hosttower doing so far away from home?~
 @100003 = ~You appear to be somewhat ignorant about the region you are travelling through.~
-@100004 = ~The Hosttower of the Arcane is an important academy of magical training and the seat of power in Luskan.~
-@100005 = ~Interesting. And what are you doing so far away from Luskan?~
+@100004 = ~The Hosttower of the Arcane is an important academy of magical training and a center of power of the region.~
+@100005 = ~Interesting. And what are you doing so far away from home?~
 @100006 = ~Would you get to the point already?~
 @100007 = ~Yes, this is indeed very unusual.~
 @100008 = ~Let me just say that I have a passing interest in the events going on in the depths of this dormant volcano.~
@@ -68,7 +68,7 @@
 
 // journal entries
 @101000 = ~Loose Ends
-On my way out of Dragon's Eye I encountered a mage called Kelvor Domine, who claimed to be a member of the Hosttower of the Arcane in Luskan.
+On my way out of Dragon's Eye I encountered a mage called Kelvor Domine, who claimed to be a member of the Hosttower of the Arcane.
 
 He already seemed to know that I had defeated Yxumonei and asked for the djinni lamp I had looted from her dead body. After I declined, he called a number of mercenaries and threatened me that I haven't seen the last of him, before he teleported away.~
 
@@ -80,7 +80,7 @@ This time Kelvor Domine demanded more insistently that I gave him the djinni lam
 
 // completed journal entries
 @101900 = ~Loose Ends
-On my way out of Dragon's Eye I encountered a mage called Kelvor Domine, who claimed to be a member of the Hosttower of the Arcane in Luskan.
+On my way out of Dragon's Eye I encountered a mage called Kelvor Domine, who claimed to be a member of the Hosttower of the Arcane.
 
 He already seemed to know that I had defeated Yxumonei and asked for the djinni lamp I had looted from her dead body. I accepted and handed over the djinni lamp. Who knows what a wizard of his power would unleash upon me if I refused. I'll probably never see the djinni and his lamp again.~
 

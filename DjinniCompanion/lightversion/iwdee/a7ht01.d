@@ -4,13 +4,13 @@ BEGIN A7HT01
 IF ~Global("A7HostTower", "GLOBAL", 1)~ a7ht01.1
   SAY @100000 /* Greetings, adventurer. My name is Kelvor Domine, wizard and high standing member of the Hosttower of the Arcane. */
   ++ @100001 /* Hosttower of the Arcane? */ + a7ht01.1.1
-  + ~OR(2) CheckStatGT(LastTalkedToBy, 14, INT) CheckStatGT(LastTalkedToBy, 14, WIS)~ + @100002 /* What is a high standing member of the Hosttower doing so far away from Luskan? */ + a7ht01.1.2
+  + ~OR(2) CheckStatGT(LastTalkedToBy, 14, INT) CheckStatGT(LastTalkedToBy, 14, WIS)~ + @100002 /* What is a high standing member of the Hosttower doing so far away from home? */ + a7ht01.1.2
 END
 
 IF ~~ a7ht01.1.1
   SAY @100003 /* You appear to be somewhat ignorant about the region you are travelling through. */
-  = @100004 /* The Hosttower of the Arcane is an important academy of magical training and the seat of power in Luskan. */
-  ++ @100005 /* Interesting. And what are you doing so far away from Luskan? */ + a7ht01.1.2
+  = @100004 /* The Hosttower of the Arcane is an important academy of magical training and a seat of power in the region. */
+  ++ @100005 /* Interesting. And what are you doing so far away from home? */ + a7ht01.1.2
   ++ @100006 /* Would you get to the point already? */ + a7ht01.1.4
 END
 

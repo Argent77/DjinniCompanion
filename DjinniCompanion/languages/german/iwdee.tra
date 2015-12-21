@@ -4,10 +4,10 @@
 // dialog lines
 @100000 = ~Ich grüße Euch, Abenteurer. Mein Name ist Kelvor Domine. Ich bin ein Magier und hochangesehenes Mitglied des Heerturms der Arkanen.~
 @100001 = ~Heerturm der Arkanen?~
-@100002 = ~Was macht ein so hochangesehenes Mitglied des Heerturms so weit weg von Luskan?~
+@100002 = ~Was macht ein so hochangesehenes Mitglied des Heerturms so weit weg von Zuhause?~
 @100003 = ~Ihr scheint wohl nicht viel über diese Region zu wissen, wenn Ihr solche Fragen stellt.~
-@100004 = ~Der Heerturm der Arkanen ist eine bedeutende Akademie der magischen Künste und das Machtzentrum Luskans.~
-@100005 = ~Interessant. Und was macht Ihr so weit weg von Luskan?~
+@100004 = ~Der Heerturm der Arkanen ist eine bedeutende Akademie der magischen Künste und ein bedeutendes Machtzentrum der Region.~
+@100005 = ~Interessant. Und was macht Ihr so weit weg von Zuhause?~
 @100006 = ~Würdet Ihr bitte endlich zur Sache kommen?~
 @100007 = ~Ja, das ist in der Tat ungewöhnlich.~
 @100008 = ~Lasst es mich so sagen, dass ich ein flüchtiges Interesse an den Ereignissen habe, die sich in den Tiefen dieses erloschenen Vulkans abspielen.~
@@ -67,7 +67,7 @@
 
 // journal entries
 @101000 = ~Lose Enden
-Auf meinem Weg aus Drachenauge begegnete ich einem Magier namens Kelvor Domine, der von sich behauptete, Mitglied des Heerturms der Arkanen in Luskan zu sein.
+Auf meinem Weg aus Drachenauge begegnete ich einem Magier namens Kelvor Domine, der von sich behauptete, Mitglied des Heerturms der Arkanen zu sein.
 
 Er wusste anscheinend bereits davon, dass ich Yxumonei besiegt hatte und verlangte die Dschinnlampe, die ich in ihren Überresten gefunden hatte. Nachdem ich sein Angebot ablehnte, rief einige Söldner herbei und drohte mir, dass ich ihn nicht zum letzten Mal gesehen habe, bevor es sich wegteleportierte.~
 
@@ -79,7 +79,7 @@ Diesmal verlangte Kelvor Domine die Dschinnlampe von mir mit mehr Nachdruck. Ich
 
 // completed journal entries
 @101900 = ~Lose Enden
-Auf meinem Weg aus Drachenauge begegnete ich einem Magier namens Kelvor Domine, der von sich behauptete, Mitglied des Heerturms der Arkanen in Luskan zu sein.
+Auf meinem Weg aus Drachenauge begegnete ich einem Magier namens Kelvor Domine, der von sich behauptete, Mitglied des Heerturms der Arkanen zu sein.
 
 Er wusste anscheinend bereits davon, dass ich Yxumonei besiegt hatte und verlangte die Dschinnlampe, die ich in ihren Überresten gefunden hatte. Ich gab seiner Bitte nach und händigte ihm die Lampe aus. Wer weiß, was ein Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Bitte nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wieder sehen.~
 
