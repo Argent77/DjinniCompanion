@@ -1,6 +1,7 @@
 // *** Region trigger in Dragon's Eye entrance (AR4000) ***
 
 IF
+  Global("A7AfaaqBG2", "GLOBAL", 0)
   Dead("Yxunomei")
   OR(2)
     PartyHasItem("A7DJLMP")

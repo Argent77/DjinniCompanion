@@ -1,6 +1,7 @@
 // *** Region trigger in Lower Dorn's Deep entrance (AR7000) ***
 
 IF
+  Global("A7AfaaqBG2", "GLOBAL", 0)
   OR(2)
     PartyHasItem("A7DJLMP")
     PartyHasItem("A7DJLMPA")

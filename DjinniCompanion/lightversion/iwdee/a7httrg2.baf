@@ -1,6 +1,7 @@
 // *** Region trigger in Dorn's Deep cave (AR6001) ***
 
 IF
+  Global("A7AfaaqBG2", "GLOBAL", 0)
   CombatCounter(0)
   !See([ENEMY])
   OR(2)
