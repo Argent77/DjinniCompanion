@@ -1,4 +1,13 @@
-// Trigger "Hostile Afaaq returns into lamp" sequence when Yxunomei dies
+// EET-specific: Disable djinni if BG2 version of mod is detected
+IF
+  !Global("A7AfaaqBG2", "GLOBAL", 0)
+  Global("A7AfaaqBG2Check", "MYAREA", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqBG2Check", "MYAREA", 1)
+  ActionOverride("A7AfaaqYX", DestroySelf())
+END
+
+// Triggering "Hostile Afaaq returns into lamp" sequence when Yxunomei dies
 IF
   Dead("Yxunomei")
   !Dead("A7AfaaqYX")

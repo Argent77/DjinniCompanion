@@ -487,6 +487,27 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
   EXTEND_TOP ~%area4005_script%.bcs~ ~DjinniCompanion/lightversion/iwdee/ar4005.baf~
   EXTEND_TOP ~%area4005_script%.bcs~ ~DjinniCompanion/lightversion/ar1902.baf~
 
+  // Remove djinni lamp from Yxunomei if BG2 djinni mod has been detected
+  COPY_EXISTING - ~tanarri.cre~ ~override~
+    FOR (i = 0; i < 5; i += 1) BEGIN
+      READ_ASCII (SCRIPT_OVERRIDE + i*8) cre_script
+      PATCH_IF (STRING_LENGTH ~%cre_script%~ > 0 && FILE_EXISTS_IN_GAME ~%cre_script%.bcs~) BEGIN
+        INNER_ACTION BEGIN
+          <<<<<<<< djinnicompanion/inlined/tanarri.baf
+          IF
+            !Global("A7AfaaqBG2", "GLOBAL", 0)
+            HasItem("A7DJLMP", Myself)
+          THEN RESPONSE #100
+            DestroyItem("A7DJLMP")
+            Continue()
+          END
+          >>>>>>>>
+          EXTEND_TOP ~%cre_script%.bcs~ ~djinnicompanion/inlined/tanarri.baf~
+        END
+        SET i = 5
+      END
+    END
+
   // For HOW expansion only
   COPY_EXISTING ~ar9100.are~ ~override~
     READ_ASCII 0x94 area9100_script
@@ -499,11 +520,36 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
   COPY_EXISTING ~ar9103.are~ ~override~
     READ_ASCII 0x94 area9103_script
   EXTEND_TOP ~%area9103_script%.bcs~ ~DjinniCompanion/lightversion/iwdee/ar9103.baf~
+
+  // Mark Djinni Companion mod as installed
+  <<<<<<<< djinnicompanion/inlined/baldur.baf
+  IF
+    Global("A7AfaaqIWD", "GLOBAL", 0)
+  THEN RESPONSE #100
+    SetGlobal("A7AfaaqIWD", "GLOBAL", 1)
+    Continue()
+  END
+  >>>>>>>>
+  EXTEND_TOP ~baldur.bcs~ ~djinnicompanion/inlined/baldur.baf~
+  EXTEND_TOP ~baldur25.bcs~ ~djinnicompanion/inlined/baldur.baf~
+
 END ELSE BEGIN
   COPY_EXISTING ~ar1902.are~ ~override~
     READ_ASCII 0x94 area1902_script
   EXTEND_TOP ~%area1902_script%.bcs~ ~DjinniCompanion/lightversion/ar1902.baf~
   EXTEND_TOP ~ar4000.bcs~ ~DjinniCompanion/lightversion/ar4000.baf~
+
+  // Marking Djinni Companion mod as installed
+  <<<<<<<< djinnicompanion/inlined/baldur.baf
+  IF
+    Global("A7AfaaqBG2", "GLOBAL", 0)
+  THEN RESPONSE #100
+    SetGlobal("A7AfaaqBG2", "GLOBAL", 1)
+    Continue()
+  END
+  >>>>>>>>
+  EXTEND_TOP ~baldur.bcs~ ~djinnicompanion/inlined/baldur.baf~
+  EXTEND_TOP ~baldur25.bcs~ ~djinnicompanion/inlined/baldur.baf~
 END
 
 // Dialogs

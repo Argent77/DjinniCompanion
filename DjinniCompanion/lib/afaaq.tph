@@ -238,20 +238,19 @@ COPY ~DjinniCompanion/creatures/a7afqctl.cre~ ~override~
      // Helper creature handling the duel between Korgan and Afaaq
      ~DjinniCompanion/creatures/a7kduel.cre~ ~override~
 
-/*
+
+// Marking Djinni Companion mod as installed
 <<<<<<<< djinnicompanion/inlined/baldur.baf
-// Spawning a control creature
 IF
-  !Exists("A7AFQCTL")
-  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  Global("A7AfaaqBG2", "GLOBAL", 0)
 THEN RESPONSE #100
-  CreateCreatureImpassableAllowOverlap("A7AFQCTL", [0.0], 14)
+  SetGlobal("A7AfaaqBG2", "GLOBAL", 1)
   Continue()
 END
 >>>>>>>>
 EXTEND_TOP ~baldur.bcs~ ~djinnicompanion/inlined/baldur.baf~
 EXTEND_TOP ~baldur25.bcs~ ~djinnicompanion/inlined/baldur.baf~
-*/
+
 
 // Helper creature handling wishes and potions
 COPY ~DjinniCompanion/creatures/a7afqhlp.cre~ ~override/a7afqwsh.cre~
