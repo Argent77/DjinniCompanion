@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Meet Afaaq! The djinni who will be your faithful companion in the course of your adventures throughout SoA and ToB. Now available for Icewind Dale: Enhanced Edition as well!
+Meet Afaaq! The djinni who will be your faithful companion in the course of your adventures throughout SoA and ToB. Now available for Icewind Dale: Enhanced Edition and the Enhanced Edition Trilogy (EET) as well!
 
 ![Afaaq's portrait](https://argent77.github.io/DjinniCompanion/images/AfaaqPortrait.png)
 
