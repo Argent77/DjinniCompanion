@@ -1,0 +1,203 @@
+// *** Initial script for Afaaq to pre-define important states and variables (IWD:EE) ***
+
+IF
+  Global("A7AfaaqTOBOnly", "GLOBAL", 1)
+  Global("A7AfaaqMet", "GLOBAL", 0)
+THEN RESPONSE #100
+  ApplySpellRES("A7UNSEL1", Myself)
+  Continue()
+END
+
+IF
+  Global("A7AfaaqMet", "GLOBAL", 0)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqMet", "GLOBAL", 1)
+  SetGlobal("A7AfaaqLight", "GLOBAL", 1)
+  %set_iwdee_var%
+  ChangeEnemyAlly(Myself, FAMILIAR)
+  AddFamiliar()
+  Continue()
+END
+
+
+// *** Bring Afaaq's levels on par with CHARNAME ***
+
+// Level 12
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  GlobalLT("A7AfaaqLevel", "GLOBAL", 12)
+  XPGT(Player1, 2000000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spHP3", Myself)
+  ApplySpellRES("A7spHP2", Myself)
+  ApplySpellRES("A7spTH2", Myself)
+  ApplySpellRES("A7spTH2", Myself)
+  ApplySpellRES("A7spTH2", Myself)
+  ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spAC1", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  SetGlobal("A7AfaaqHP", "GLOBAL", 65)
+  SetGlobal("A7AfaaqTHAC0", "GLOBAL", 6)
+  SetGlobal("A7AfaaqAC", "GLOBAL", -1)
+  SetGlobal("A7AfaaqLevel", "GLOBAL", 12)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 5)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 6)
+END
+
+// Level 11
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  GlobalLT("A7AfaaqLevel", "GLOBAL", 11)
+  XPGT(Player1, 1500000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP3", Myself)
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spTH2", Myself)
+  ApplySpellRES("A7spTH2", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  SetGlobal("A7AfaaqHP", "GLOBAL", 63)
+  SetGlobal("A7AfaaqTHAC0", "GLOBAL", 7)
+  SetGlobal("A7AfaaqAC", "GLOBAL", 0)
+  SetGlobal("A7AfaaqLevel", "GLOBAL", 11)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 6)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 10)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 7)
+END
+
+// Level 10
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  GlobalLT("A7AfaaqLevel", "GLOBAL", 10)
+  XPGT(Player1, 1000000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spTH2", Myself)
+  ApplySpellRES("A7spTH2", Myself)
+  ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spAC1", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  SetGlobal("A7AfaaqHP", "GLOBAL", 60)
+  SetGlobal("A7AfaaqTHAC0", "GLOBAL", 8)
+  SetGlobal("A7AfaaqAC", "GLOBAL", 1)
+  SetGlobal("A7AfaaqLevel", "GLOBAL", 10)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 6)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 10)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 7)
+END
+
+// Level 9
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  GlobalLT("A7AfaaqLevel", "GLOBAL", 9)
+  XPGT(Player1, 500000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spTH2", Myself)
+  ApplySpellRES("A7spAC2", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  SetGlobal("A7AfaaqHP", "GLOBAL", 54)
+  SetGlobal("A7AfaaqTHAC0", "GLOBAL", 10)
+  SetGlobal("A7AfaaqAC", "GLOBAL", 2)
+  SetGlobal("A7AfaaqLevel", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 10)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 11)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 8)
+END
+
+// Level 8
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  GlobalLT("A7AfaaqLevel", "GLOBAL", 8)
+  XPGT(Player1, 250000)
+  CheckStat(Player1, 0, LEVELDRAIN)
+THEN RESPONSE #100
+  ApplySpellRES("A7spHP6", Myself)
+  ApplySpellRES("A7spTH1", Myself)
+  ApplySpellRES("A7spAC1", Myself)
+  ApplySpellRES("A7spSV1", Myself)
+  SetGlobal("A7AfaaqHP", "GLOBAL", 48)
+  SetGlobal("A7AfaaqTHAC0", "GLOBAL", 11)
+  SetGlobal("A7AfaaqAC", "GLOBAL", 3)
+  SetGlobal("A7AfaaqLevel", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 10)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 9)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 11)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 8)
+END
+
+// Below Level 8
+IF
+  Global("A7AfaaqUpgraded", "GLOBAL", 0)
+  GlobalLT("A7AfaaqLevel", "GLOBAL", 7)
+  CheckStat(Player1, 0, LEVELDRAIN)
+THEN RESPONSE #100
+  SetGlobal("A7AfaaqHP", "GLOBAL", 42)
+  SetGlobal("A7AfaaqTHAC0", "GLOBAL", 12)
+  SetGlobal("A7AfaaqAC", "GLOBAL", 4)
+  SetGlobal("A7AfaaqLevel", "GLOBAL", 7)
+  SetGlobal("A7AfaaqSaves1", "GLOBAL", 11)
+  SetGlobal("A7AfaaqSaves2", "GLOBAL", 8)
+  SetGlobal("A7AfaaqSaves3", "GLOBAL", 10)
+  SetGlobal("A7AfaaqSaves4", "GLOBAL", 12)
+  SetGlobal("A7AfaaqSaves5", "GLOBAL", 9)
+END
+
+IF
+  Global("A7AfaaqMet", "GLOBAL", 1)
+  !Global("A7AfaaqLevel", "GLOBAL", 0)
+  Global("AfaaqInitialized", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("AfaaqInitialized", "LOCALS", 1)
+  SetTokenGlobal("A7AfaaqHP", "GLOBAL", "A7AFQ_HP")
+  SetTokenGlobal("A7AfaaqTHAC0", "GLOBAL", "A7AFQ_THAC0")
+  SetTokenGlobal("A7AfaaqAC", "GLOBAL", "A7AFQ_AC")
+  SetTokenGlobal("A7AfaaqLevel", "GLOBAL", "A7AFQ_LVL")
+  SetTokenGlobal("A7AfaaqSaves1", "GLOBAL", "A7AFQ_SV1")
+  SetTokenGlobal("A7AfaaqSaves2", "GLOBAL", "A7AFQ_SV2")
+  SetTokenGlobal("A7AfaaqSaves3", "GLOBAL", "A7AFQ_SV3")
+  SetTokenGlobal("A7AfaaqSaves4", "GLOBAL", "A7AFQ_SV4")
+  SetTokenGlobal("A7AfaaqSaves5", "GLOBAL", "A7AFQ_SV5")
+  Continue()
+END
+
+IF
+  Global("A7AfaaqTOBOnly", "GLOBAL", 0)
+THEN RESPONSE #100
+  ChangeAIScript("A7AFQLVL", RACE)
+END
+
+IF
+  Global("A7AfaaqTOBOnly", "GLOBAL", 1)
+THEN RESPONSE #100
+  ChangeAnimationNoEffect("A7AFAAQ2")
+END

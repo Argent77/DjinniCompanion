@@ -17,10 +17,14 @@ ALWAYS
   ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
     ACTION_IF (NOT (~%LANGUAGE%~ STRING_EQUAL_CASE ~english~)) BEGIN
       LOAD_TRA ~DjinniCompanion/languages/english/bg2ee.tra~
-      LOAD_TRA ~DjinniCompanion/languages/english/iwdee.tra~
+      ACTION_IF (GAME_IS ~iwdee~) BEGIN
+        LOAD_TRA ~DjinniCompanion/languages/english/iwdee.tra~
+      END
     END
     LOAD_TRA ~DjinniCompanion/languages/%LANGUAGE%/bg2ee.tra~
-    LOAD_TRA ~DjinniCompanion/languages/%LANGUAGE%/iwdee.tra~
+    ACTION_IF (GAME_IS ~iwdee~) BEGIN
+      LOAD_TRA ~DjinniCompanion/languages/%LANGUAGE%/iwdee.tra~
+    END
   END
 
 END

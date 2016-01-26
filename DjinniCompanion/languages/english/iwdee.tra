@@ -1,6 +1,37 @@
 // -*- coding: utf-8 -*- 
-// *** IWDEE-specific strings (index 100000 and up)
 
+// Overridden strings
+@60022 = ~My character stats:
+I am a Fighter/Mage at level <A7AFQ_LVL>/7.
+Strength: 15
+Dexterity: 16
+Constitution: 13
+Intelligence: 15
+Wisdom: 16
+Charisma: 11
+Max. HP: <A7AFQ_HP>
+Base THAC0: <A7AFQ_THAC0>
+Armor Class: <A7AFQ_AC>
+Saving Throws: <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
+Attacks/round: 3/2
+I am specialized in scimitars and somewhat skilled in single weapon use.~
+@60023 = ~My character stats:
+I am a Fighter/Mage at level <A7AFQ_LVL>/11.
+Strength: 19
+Dexterity: 17
+Constitution: 16
+Intelligence: 15
+Wisdom: 16
+Charisma: 11
+Max. HP: <A7AFQ_HP>
+Base THAC0: <A7AFQ_THAC0>
+Armor Class: <A7AFQ_AC>
+Saving Throws: <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
+Attacks/round: 2
+I have attained Grand Mastery in scimitars and am highly skilled in single weapon use.~
+
+
+// *** IWDEE-specific strings (index 100000 and up)
 // dialog lines
 @100000 = ~Greetings, adventurer. My name is Kelvor Domine, wizard and high standing member of the Hosttower of the Arcane.~
 @100001 = ~Hosttower of the Arcane?~

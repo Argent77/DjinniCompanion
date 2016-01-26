@@ -1,6 +1,37 @@
 // -*- coding: utf-8 -*- 
-// *** IWDEE-specific strings (index 100000 and up)
 
+// Overridden strings
+@60022 = ~Meine Eigenschaften:
+Ich bin ein Kämpfer/Magier auf Stufe <A7AFQ_LVL>/7.
+Stärke: 15
+Geschicklichkeit: 16
+Konstitution: 13
+Intelligenz: 15
+Weisheit: 16
+Charisma: 11
+Max. TP: <A7AFQ_HP>
+Normaler ETW0: <A7AFQ_THAC0>
+Rüstungsklasse: <A7AFQ_AC>
+Rettungswürfe: <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
+Angriffe/Runde: 3/2
+Ich habe mich auf Krummsäbel spezialisiert und bin etwas sachkundig im Umgang mit einhändigen Waffen.~
+@60023 = ~Meine Eigenschaften:
+Ich bin ein Kämpfer/Magier auf Stufe <A7AFQ_LVL>/11.
+Stärke: 19
+Geschicklichkeit: 17
+Konstitution: 16
+Intelligenz: 15
+Weisheit: 16
+Charisma: 11
+Max. TP: <A7AFQ_HP>
+Normaler ETW0: <A7AFQ_THAC0>
+Rüstungsklasse: <A7AFQ_AC>
+Rettungswürfe: <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
+Angriffe/Runde: 2
+Ich habe die Großmeisterschaft in Krummsäbeln erlangt und bin hochbegabt im Umgang mit einhändigen Waffen.~
+
+
+// *** IWDEE-specific strings (index 100000 and up)
 // dialog lines
 @100000 = ~Ich grüße Euch, Abenteurer. Mein Name ist Kelvor Domine. Ich bin ein Magier und hochangesehenes Mitglied des Heerturms der Arkanen.~
 @100001 = ~Heerturm der Arkanen?~

@@ -24,125 +24,229 @@ COPY
   ~DjinniCompanion/misc/a7sfx05.wav~ ~override~
 
 // Djinni Afaaq
-COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
-  SAY NAME1 @60001    // Afaaq
-  SAY NAME2 @60001    // Afaaq
-  SAY CRITICAL_MISS @60032    // Oh?
-  SAY SELECT_COMMON1 @60033   // [Djinni laughter]
-  SAY SELECT_COMMON2 @60034   // [Silence]
-  SAY SELECT_COMMON3 @60034   // [Silence]
-  SAY SELECT_COMMON4 @60033   // [Djinni laughter]
-  SAY SELECT_COMMON5 @60034   // [Silence]
-  SAY SELECT_COMMON6 @60034   // [Silence]
-  SAY CRITICAL_HIT @60104     // [Ah hay!]
-  SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
-  SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
-  SAY DAMAGE @60107           // [SFX]
-  SAY HURT @60108             // [SFX]
-  REMOVE_KNOWN_SPELLS
-  REMOVE_MEMORIZED_SPELLS
-  ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
-  ADD_KNOWN_SPELL ~SPWI114~ #0 ~wizard~     // Shield
-  ADD_KNOWN_SPELL ~SPWI115~ #0 ~wizard~     // Shocking Grasp
-  ADD_KNOWN_SPELL ~SPWI203~ #1 ~wizard~     // Detect Invisibility
-  ADD_KNOWN_SPELL ~SPWI206~ #1 ~wizard~     // Invisibility
-  ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
-  ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
-  ADD_KNOWN_SPELL ~SPWI307~ #2 ~wizard~     // Invisibility 10' radius
-  ADD_KNOWN_SPELL ~SPWI308~ #2 ~wizard~     // Lightning Bolt
-  ADD_KNOWN_SPELL ~SPWI405~ #3 ~wizard~     // Improved Invisibility
-  ADD_KNOWN_SPELL ~SPWI406~ #3 ~wizard~     // Minor Globe of Invulnerability
-  ADD_KNOWN_SPELL ~SPWI419~ #3 ~wizard~     // Secret Word
-  ADD_KNOWN_SPELL ~SPWI508~ #4 ~wizard~     // Chaos
-  ADD_KNOWN_SPELL ~SPWI513~ #4 ~wizard~     // Breach
-  ADD_KNOWN_SPELL ~SPWI522~ #4 ~wizard~     // Minor Spell Turning
-  ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
-  ADD_KNOWN_SPELL ~A7SPIN2~ #0 ~innate~     // Whirlwind
-  ADD_KNOWN_SPELL ~A7SPIN7~ #0 ~innate~     // Transfer Knowledge
-  ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI203~ #1 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI206~ #1 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI307~ #2 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI419~ #3 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI406~ #3 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI405~ #3 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~wizard~
-  ADD_MEMORIZED_SPELL ~A7SPIN7~ #0 ~innate~ ( 2 )
-  ADD_MEMORIZED_SPELL ~A7SPIN2~ #0 ~innate~ ( 3 )
-  ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  COPY ~DjinniCompanion/lightversion/iwdee/a7afaaq.cre~  ~override~
+    SAY NAME1 @60001    // Afaaq
+    SAY NAME2 @60001    // Afaaq
+    SAY CRITICAL_MISS @60032    // Oh?
+    SAY SELECT_COMMON1 @60033   // [Djinni laughter]
+    SAY SELECT_COMMON2 @60034   // [Silence]
+    SAY SELECT_COMMON3 @60034   // [Silence]
+    SAY SELECT_COMMON4 @60033   // [Djinni laughter]
+    SAY SELECT_COMMON5 @60034   // [Silence]
+    SAY SELECT_COMMON6 @60034   // [Silence]
+    SAY CRITICAL_HIT @60104     // [Ah hay!]
+    SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
+    SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
+    SAY DAMAGE @60107           // [SFX]
+    SAY HURT @60108             // [SFX]
+    REMOVE_KNOWN_SPELLS
+    REMOVE_MEMORIZED_SPELLS
+    ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
+    ADD_KNOWN_SPELL ~SPWI114~ #0 ~wizard~     // Shield
+    ADD_KNOWN_SPELL ~SPWI115~ #0 ~wizard~     // Shocking Grasp
+    ADD_KNOWN_SPELL ~SPWI203~ #1 ~wizard~     // Detect Invisibility
+    ADD_KNOWN_SPELL ~SPWI206~ #1 ~wizard~     // Invisibility
+    ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
+    ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
+    ADD_KNOWN_SPELL ~SPWI307~ #2 ~wizard~     // Invisibility 10' radius
+    ADD_KNOWN_SPELL ~SPWI406~ #3 ~wizard~     // Minor Globe of Invulnerability
+    ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
+    ADD_KNOWN_SPELL ~A7SPIN2~ #0 ~innate~     // Whirlwind
+    ADD_KNOWN_SPELL ~A7SPIN7~ #0 ~innate~     // Transfer Knowledge
+    ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI203~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI206~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI307~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI406~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~A7SPIN7~ #0 ~innate~ ( 1 )
+    ADD_MEMORIZED_SPELL ~A7SPIN2~ #0 ~innate~ ( 2 )
+    ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
 
-COPY ~DjinniCompanion/creatures/a7afaaq2.cre~ ~override~
-  SAY NAME1 @60001    // Afaaq
-  SAY NAME2 @60001    // Afaaq
-  SAY CRITICAL_MISS @60032    // Oh?
-  SAY SELECT_COMMON1 @60033   // [Djinni laughter]
-  SAY SELECT_COMMON2 @60034   // [Silence]
-  SAY SELECT_COMMON3 @60034   // [Silence]
-  SAY SELECT_COMMON4 @60033   // [Djinni laughter]
-  SAY SELECT_COMMON5 @60034   // [Silence]
-  SAY SELECT_COMMON6 @60034   // [Silence]
-  SAY CRITICAL_HIT @60104     // [Ah hay!]
-  SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
-  SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
-  SAY DAMAGE @60107           // [SFX]
-  SAY HURT @60108             // [SFX]
-  REMOVE_KNOWN_SPELLS
-  REMOVE_MEMORIZED_SPELLS
-  ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
-  ADD_KNOWN_SPELL ~SPWI114~ #0 ~wizard~     // Shield
-  ADD_KNOWN_SPELL ~SPWI115~ #0 ~wizard~     // Shocking Grasp
-  ADD_KNOWN_SPELL ~SPWI203~ #1 ~wizard~     // Detect Invisibility
-  ADD_KNOWN_SPELL ~SPWI206~ #1 ~wizard~     // Invisibility
-  ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
-  ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
-  ADD_KNOWN_SPELL ~SPWI307~ #2 ~wizard~     // Invisibility 10' radius
-  ADD_KNOWN_SPELL ~SPWI308~ #2 ~wizard~     // Lightning Bolt
-  ADD_KNOWN_SPELL ~SPWI405~ #3 ~wizard~     // Improved Invisibility
-  ADD_KNOWN_SPELL ~SPWI406~ #3 ~wizard~     // Minor Globe of Invulnerability
-  ADD_KNOWN_SPELL ~SPWI419~ #3 ~wizard~     // Secret Word
-  ADD_KNOWN_SPELL ~SPWI508~ #4 ~wizard~     // Chaos
-  ADD_KNOWN_SPELL ~SPWI513~ #4 ~wizard~     // Breach
-  ADD_KNOWN_SPELL ~SPWI522~ #4 ~wizard~     // Minor Spell Turning
-  ADD_KNOWN_SPELL ~SPWI615~ #5 ~wizard~     // Chain Lightning
-  ADD_KNOWN_SPELL ~SPWI609~ #5 ~wizard~     // True Sight
-  ADD_KNOWN_SPELL ~A7SPWI01~ #6 ~wizard~    // Conjure Air Elemental
-  ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
-  ADD_KNOWN_SPELL ~A7SPIN3~ #0 ~innate~     // Haste
-  ADD_KNOWN_SPELL ~A7SPIN4~ #0 ~innate~     // Air Shield
-  ADD_KNOWN_SPELL ~A7SPIN5~ #0 ~innate~     // Greater Whirlwind
-  ADD_KNOWN_SPELL ~A7SPIN6~ #0 ~innate~     // Control Air Elemental
-  ADD_KNOWN_SPELL ~A7SPIN7~ #0 ~innate~     // Transfer Knowledge
-  ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI203~ #1 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI206~ #1 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI307~ #2 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI419~ #3 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI406~ #3 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI405~ #3 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~ ( 2 )
-  ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI609~ #5 ~wizard~
-  ADD_MEMORIZED_SPELL ~SPWI615~ #5 ~wizard~
-  ADD_MEMORIZED_SPELL ~A7SPWI01~ #6 ~wizard~
-  ADD_MEMORIZED_SPELL ~A7SPIN7~ #0 ~innate~ ( 4 )
-  ADD_MEMORIZED_SPELL ~A7SPIN6~ #0 ~innate~ ( 3 )
-  ADD_MEMORIZED_SPELL ~A7SPIN5~ #0 ~innate~ ( 3 )
-  ADD_MEMORIZED_SPELL ~A7SPIN4~ #0 ~innate~ ( 2 )
-  ADD_MEMORIZED_SPELL ~A7SPIN3~ #0 ~innate~
-  ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
+  COPY ~DjinniCompanion/lightversion/iwdee/a7afaaq2.cre~ ~override~
+    SAY NAME1 @60001    // Afaaq
+    SAY NAME2 @60001    // Afaaq
+    SAY CRITICAL_MISS @60032    // Oh?
+    SAY SELECT_COMMON1 @60033   // [Djinni laughter]
+    SAY SELECT_COMMON2 @60034   // [Silence]
+    SAY SELECT_COMMON3 @60034   // [Silence]
+    SAY SELECT_COMMON4 @60033   // [Djinni laughter]
+    SAY SELECT_COMMON5 @60034   // [Silence]
+    SAY SELECT_COMMON6 @60034   // [Silence]
+    SAY CRITICAL_HIT @60104     // [Ah hay!]
+    SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
+    SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
+    SAY DAMAGE @60107           // [SFX]
+    SAY HURT @60108             // [SFX]
+    REMOVE_KNOWN_SPELLS
+    REMOVE_MEMORIZED_SPELLS
+    ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
+    ADD_KNOWN_SPELL ~SPWI114~ #0 ~wizard~     // Shield
+    ADD_KNOWN_SPELL ~SPWI115~ #0 ~wizard~     // Shocking Grasp
+    ADD_KNOWN_SPELL ~SPWI203~ #1 ~wizard~     // Detect Invisibility
+    ADD_KNOWN_SPELL ~SPWI206~ #1 ~wizard~     // Invisibility
+    ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
+    ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
+    ADD_KNOWN_SPELL ~SPWI307~ #2 ~wizard~     // Invisibility 10' radius
+    ADD_KNOWN_SPELL ~SPWI308~ #2 ~wizard~     // Lightning Bolt
+    ADD_KNOWN_SPELL ~SPWI405~ #3 ~wizard~     // Improved Invisibility
+    ADD_KNOWN_SPELL ~SPWI406~ #3 ~wizard~     // Minor Globe of Invulnerability
+    ADD_KNOWN_SPELL ~SPWI419~ #3 ~wizard~     // Secret Word
+    ADD_KNOWN_SPELL ~SPWI508~ #4 ~wizard~     // Chaos
+    ADD_KNOWN_SPELL ~SPWI513~ #4 ~wizard~     // Breach
+    ADD_KNOWN_SPELL ~SPWI522~ #4 ~wizard~     // Minor Spell Turning
+    ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
+    ADD_KNOWN_SPELL ~A7SPIN3~ #0 ~innate~     // Haste
+    ADD_KNOWN_SPELL ~A7SPIN4~ #0 ~innate~     // Air Shield
+    ADD_KNOWN_SPELL ~A7SPIN5~ #0 ~innate~     // Greater Whirlwind
+    ADD_KNOWN_SPELL ~A7SPIN6~ #0 ~innate~     // Control Air Elemental
+    ADD_KNOWN_SPELL ~A7SPIN7~ #0 ~innate~     // Transfer Knowledge
+    ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI203~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI206~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI307~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI419~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI406~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI405~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~A7SPIN7~ #0 ~innate~ ( 3 )
+    ADD_MEMORIZED_SPELL ~A7SPIN6~ #0 ~innate~ ( 2 )
+    ADD_MEMORIZED_SPELL ~A7SPIN5~ #0 ~innate~ ( 2 )
+    ADD_MEMORIZED_SPELL ~A7SPIN4~ #0 ~innate~ ( 2 )
+    ADD_MEMORIZED_SPELL ~A7SPIN3~ #0 ~innate~
+    ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
+END ELSE BEGIN
+  COPY ~DjinniCompanion/creatures/a7afaaq.cre~  ~override~
+    SAY NAME1 @60001    // Afaaq
+    SAY NAME2 @60001    // Afaaq
+    SAY CRITICAL_MISS @60032    // Oh?
+    SAY SELECT_COMMON1 @60033   // [Djinni laughter]
+    SAY SELECT_COMMON2 @60034   // [Silence]
+    SAY SELECT_COMMON3 @60034   // [Silence]
+    SAY SELECT_COMMON4 @60033   // [Djinni laughter]
+    SAY SELECT_COMMON5 @60034   // [Silence]
+    SAY SELECT_COMMON6 @60034   // [Silence]
+    SAY CRITICAL_HIT @60104     // [Ah hay!]
+    SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
+    SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
+    SAY DAMAGE @60107           // [SFX]
+    SAY HURT @60108             // [SFX]
+    REMOVE_KNOWN_SPELLS
+    REMOVE_MEMORIZED_SPELLS
+    ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
+    ADD_KNOWN_SPELL ~SPWI114~ #0 ~wizard~     // Shield
+    ADD_KNOWN_SPELL ~SPWI115~ #0 ~wizard~     // Shocking Grasp
+    ADD_KNOWN_SPELL ~SPWI203~ #1 ~wizard~     // Detect Invisibility
+    ADD_KNOWN_SPELL ~SPWI206~ #1 ~wizard~     // Invisibility
+    ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
+    ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
+    ADD_KNOWN_SPELL ~SPWI307~ #2 ~wizard~     // Invisibility 10' radius
+    ADD_KNOWN_SPELL ~SPWI308~ #2 ~wizard~     // Lightning Bolt
+    ADD_KNOWN_SPELL ~SPWI405~ #3 ~wizard~     // Improved Invisibility
+    ADD_KNOWN_SPELL ~SPWI406~ #3 ~wizard~     // Minor Globe of Invulnerability
+    ADD_KNOWN_SPELL ~SPWI419~ #3 ~wizard~     // Secret Word
+    ADD_KNOWN_SPELL ~SPWI508~ #4 ~wizard~     // Chaos
+    ADD_KNOWN_SPELL ~SPWI513~ #4 ~wizard~     // Breach
+    ADD_KNOWN_SPELL ~SPWI522~ #4 ~wizard~     // Minor Spell Turning
+    ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
+    ADD_KNOWN_SPELL ~A7SPIN2~ #0 ~innate~     // Whirlwind
+    ADD_KNOWN_SPELL ~A7SPIN7~ #0 ~innate~     // Transfer Knowledge
+    ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI203~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI206~ #1 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI307~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI419~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI406~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI405~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~A7SPIN7~ #0 ~innate~ ( 2 )
+    ADD_MEMORIZED_SPELL ~A7SPIN2~ #0 ~innate~ ( 3 )
+    ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
+
+  COPY ~DjinniCompanion/creatures/a7afaaq2.cre~ ~override~
+    SAY NAME1 @60001    // Afaaq
+    SAY NAME2 @60001    // Afaaq
+    SAY CRITICAL_MISS @60032    // Oh?
+    SAY SELECT_COMMON1 @60033   // [Djinni laughter]
+    SAY SELECT_COMMON2 @60034   // [Silence]
+    SAY SELECT_COMMON3 @60034   // [Silence]
+    SAY SELECT_COMMON4 @60033   // [Djinni laughter]
+    SAY SELECT_COMMON5 @60034   // [Silence]
+    SAY SELECT_COMMON6 @60034   // [Silence]
+    SAY CRITICAL_HIT @60104     // [Ah hay!]
+    SAY BATTLE_CRY1 @60105      // [I grant your death wish!]
+    SAY BATTLE_CRY2 @60106      // [Die, most unworthy foe!]
+    SAY DAMAGE @60107           // [SFX]
+    SAY HURT @60108             // [SFX]
+    REMOVE_KNOWN_SPELLS
+    REMOVE_MEMORIZED_SPELLS
+    ADD_KNOWN_SPELL ~SPWI112~ #0 ~wizard~     // Magic Missiles
+    ADD_KNOWN_SPELL ~SPWI114~ #0 ~wizard~     // Shield
+    ADD_KNOWN_SPELL ~SPWI115~ #0 ~wizard~     // Shocking Grasp
+    ADD_KNOWN_SPELL ~SPWI203~ #1 ~wizard~     // Detect Invisibility
+    ADD_KNOWN_SPELL ~SPWI206~ #1 ~wizard~     // Invisibility
+    ADD_KNOWN_SPELL ~SPWI212~ #1 ~wizard~     // Mirror Image
+    ADD_KNOWN_SPELL ~SPWI305~ #2 ~wizard~     // Haste
+    ADD_KNOWN_SPELL ~SPWI307~ #2 ~wizard~     // Invisibility 10' radius
+    ADD_KNOWN_SPELL ~SPWI308~ #2 ~wizard~     // Lightning Bolt
+    ADD_KNOWN_SPELL ~SPWI405~ #3 ~wizard~     // Improved Invisibility
+    ADD_KNOWN_SPELL ~SPWI406~ #3 ~wizard~     // Minor Globe of Invulnerability
+    ADD_KNOWN_SPELL ~SPWI419~ #3 ~wizard~     // Secret Word
+    ADD_KNOWN_SPELL ~SPWI508~ #4 ~wizard~     // Chaos
+    ADD_KNOWN_SPELL ~SPWI513~ #4 ~wizard~     // Breach
+    ADD_KNOWN_SPELL ~SPWI522~ #4 ~wizard~     // Minor Spell Turning
+    ADD_KNOWN_SPELL ~SPWI615~ #5 ~wizard~     // Chain Lightning
+    ADD_KNOWN_SPELL ~SPWI609~ #5 ~wizard~     // True Sight
+    ADD_KNOWN_SPELL ~A7SPWI01~ #6 ~wizard~    // Conjure Air Elemental
+    ADD_KNOWN_SPELL ~A7SPIN1~ #0 ~innate~     // Invisibility
+    ADD_KNOWN_SPELL ~A7SPIN3~ #0 ~innate~     // Haste
+    ADD_KNOWN_SPELL ~A7SPIN4~ #0 ~innate~     // Air Shield
+    ADD_KNOWN_SPELL ~A7SPIN5~ #0 ~innate~     // Greater Whirlwind
+    ADD_KNOWN_SPELL ~A7SPIN6~ #0 ~innate~     // Control Air Elemental
+    ADD_KNOWN_SPELL ~A7SPIN7~ #0 ~innate~     // Transfer Knowledge
+    ADD_MEMORIZED_SPELL ~SPWI115~ #0 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI114~ #0 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI203~ #1 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI212~ #1 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI206~ #1 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI307~ #2 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI305~ #2 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI419~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI406~ #3 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI405~ #3 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI508~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI513~ #4 ~wizard~ ( 2 )
+    ADD_MEMORIZED_SPELL ~SPWI522~ #4 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI609~ #5 ~wizard~
+    ADD_MEMORIZED_SPELL ~SPWI615~ #5 ~wizard~
+    ADD_MEMORIZED_SPELL ~A7SPWI01~ #6 ~wizard~
+    ADD_MEMORIZED_SPELL ~A7SPIN7~ #0 ~innate~ ( 4 )
+    ADD_MEMORIZED_SPELL ~A7SPIN6~ #0 ~innate~ ( 3 )
+    ADD_MEMORIZED_SPELL ~A7SPIN5~ #0 ~innate~ ( 3 )
+    ADD_MEMORIZED_SPELL ~A7SPIN4~ #0 ~innate~ ( 2 )
+    ADD_MEMORIZED_SPELL ~A7SPIN3~ #0 ~innate~
+    ADD_MEMORIZED_SPELL ~A7SPIN1~ #0 ~innate~
+END
 
 // Portraits
 COPY ~%PORTRAIT_AFAAQS%~                    ~override~
@@ -450,6 +554,7 @@ COPY ~DjinniCompanion/spells/a7unsel1.spl~ ~override~
 // Spells to increase his HP, THAC0, AC and saving throws at simulated level up
 COPY ~DjinniCompanion/spells/a7sphp2.spl~ ~override~
      ~DjinniCompanion/spells/a7sphp3.spl~ ~override~
+     ~DjinniCompanion/spells/a7sphp6.spl~ ~override~
      ~DjinniCompanion/spells/a7sphp8.spl~ ~override~
   SAY NAME1 ~HP bonus~
   SAY UNIDENTIFIED_DESC @60019    // -used by script-
@@ -469,15 +574,23 @@ COPY ~DjinniCompanion/spells/a7spsv1.spl~ ~override~
 COMPILE EVALUATE_BUFFER
   ~DjinniCompanion/scripts/a7afaaq.baf~
   ~DjinniCompanion/lightversion/a7afqtlk.baf~
-  ~DjinniCompanion/lightversion/a7afqini.baf~
-  ~DjinniCompanion/lightversion/a7afqin2.baf~
-  ~DjinniCompanion/scripts/a7afqlvl.baf~
   ~DjinniCompanion/scripts/a7afatk.baf~
   ~DjinniCompanion/scripts/a7afatk2.baf~
   ~DjinniCompanion/scripts/a7afatk3.baf~
   ~DjinniCompanion/scripts/a7afqup1.baf~
   ~DjinniCompanion/lightversion/a7afqup2.baf~
   ~DjinniCompanion/scripts/a7cut02.baf~
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/lightversion/iwdee/a7afqini.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7afqin2.baf~
+    ~DjinniCompanion/lightversion/iwdee/a7afqlvl.baf~
+END ELSE BEGIN
+  COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/lightversion/a7afqini.baf~
+    ~DjinniCompanion/lightversion/a7afqin2.baf~
+    ~DjinniCompanion/scripts/a7afqlvl.baf~
+END
 
 // Adding global script for Afaaq's control creature
 ACTION_IF (GAME_IS ~iwdee~) BEGIN
