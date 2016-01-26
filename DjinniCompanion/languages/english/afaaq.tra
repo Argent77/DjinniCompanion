@@ -583,6 +583,8 @@
 @10582 = ~Temporarily reduce the Dexterity of all party members to 3.~
 @10583 = ~Temporarily reduce the Intelligence of all party members to 3.~
 @10584 = ~'Slow' the entire party.~
+@10585 = ~I am skilled in both using swords and magic. My current predicament limits my abilities, however. Being a djinni grants me a couple of additional traits as well.~
+@10586 = ~As you wish.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~received Afaaq's blessing~

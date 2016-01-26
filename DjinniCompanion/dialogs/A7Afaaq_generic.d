@@ -1643,17 +1643,40 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.AboutMe.Stats
     SAY @10471 /* What do you want to know about me? */
     ++ @10332 /* Can you tell me again how you can help me in my adventures? */ + TalkGeneric.AboutMe.FirstTime.1
-    + ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10472 /* Can you tell me about your skills? */ + TalkGeneric.AboutMe.Stats.Skills.1
-    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10472 /* Can you tell me about your skills? */ + TalkGeneric.AboutMe.Stats.Skills.2
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 0) Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10472 /* Can you tell me about your skills? */ + TalkGeneric.AboutMe.Stats.Skills.LAMP.1
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1) Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10472 /* Can you tell me about your skills? */ + TalkGeneric.AboutMe.Stats.Skills.LAMP.2
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 0) !Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10472 /* Can you tell me about your skills? */ + TalkGeneric.AboutMe.Stats.Skills.1
+    + ~Global("A7AfaaqUpgraded", "GLOBAL", 1) !Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10472 /* Can you tell me about your skills? */ + TalkGeneric.AboutMe.Stats.Skills.2
     ++ @10339 /* Can you tell me about your powers? */ + TalkGeneric.AboutMe.Stats.Powers
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
+  END
+
+  IF ~~ TalkGeneric.AboutMe.Stats.Skills.LAMP.1
+    SAY @10586 /* As you wish.*/
+    = @10585 /* I am skilled in both using swords and magic. My current predicament limits my abilities, however. Being a djinni grants me a couple of additional traits as well. */
+    IF ~~ + TalkGeneric.AboutMe.Stats.Skills.3
+  END
+
+  IF ~~ TalkGeneric.AboutMe.Stats.Skills.LAMP.2
+    SAY @10586 /* As you wish. */
+    IF ~~ + TalkGeneric.AboutMe.Stats.Skills.4
   END
 
   IF ~~ TalkGeneric.AboutMe.Stats.Skills.1
     SAY @10327 /* As you wish. Firstly, I will present you a short summary of my skills... */
     = @60022    // My character stats: ...
     = @10328 /* As you can see, I am skilled in both using swords and magic. My current predicament limits my abilities, however. Being a djinni grants me a couple of additional traits as well. */
-    = @10329 /* I can see in the dark and tolerate magical or electrical energies to a certain degree. */
+    IF ~~ + TalkGeneric.AboutMe.Stats.Skills.3
+  END
+
+  IF ~~ TalkGeneric.AboutMe.Stats.Skills.2
+    SAY @10327 /* As you wish. Firstly, I will present you a short summary of my skills... */
+    = @60023    // My (improved) character stats: ...
+    IF ~~ + TalkGeneric.AboutMe.Stats.Skills.4
+  END
+
+  IF ~~ TalkGeneric.AboutMe.Stats.Skills.3
+    SAY @10329 /* I can see in the dark and tolerate magical or electrical energies to a certain degree. */
     = @10330 /* Furthermore, my link to the lamp allows me to slowly recover from my wounds. However, I would be grateful if you could spare a healing potion or two in times of need. As I have told you before, I will recover much faster when I am within the lamp. */
     = @10331 /* The traditional weapon of choice for most djinn is the scimitar. My own blade is magically attuned to my soul, therefore I can control how it will affect my targets. Because of my current predicament, I can not show you its true powers, however. */
     ++ @10332 /* Can you tell me again how you can help me in my adventures? */ + TalkGeneric.AboutMe.FirstTime.1
@@ -1661,10 +1684,8 @@ APPEND %afq_dialog%
     ++ @10334 /* Let's talk about something else. */ + TalkGeneric.AboutMe.1
   END
 
-  IF ~~ TalkGeneric.AboutMe.Stats.Skills.2
-    SAY @10327 /* As you wish. Firstly, I will present you a short summary of my skills... */
-    = @60023    // My (improved) character stats: ...
-    = @10335 /* Thanks to your help, I can finally display my full potential in both using swords and magic. Being a djinni grants me a couple of additional traits as well. */
+  IF ~~ TalkGeneric.AboutMe.Stats.Skills.4
+    SAY @10335 /* Thanks to your help, I can finally display my full potential in both using swords and magic. Being a djinni grants me a couple of additional traits as well. */
     = @10336 /* I can see in the dark and am highly impervious to magical and electrical energies. */
     = @10337 /* Furthermore, I have the ability to slowly recover from my wounds. However, I would be grateful if you could spare a healing potion or two in times of need. As I have told you before, I will recover much faster when I am within the lamp. */
     = @10338 /* The traditional weapon of choice for most djinn is the scimitar. My own blade is magically attuned to my soul, therefore I can control how it will affect my targets. Being in full control of my soul, my scimitar can show its true powers once again. An opponent hit by the weapon has to suffer electrical damage in addition to the scimitar's slashing damage, and has a small chance to be stunned for one round. */
