@@ -1,11 +1,23 @@
 // *** Actions for interaction with party members for the genie Afaaq ***
 
+// No first-time dialog in HOW-only game
+IF
+  GlobalGT("Chapter", "GLOBAL", 6)
+  Global("A7AfaaqBG2", "GLOBAL", 0)
+  Global("A7AfaaqIWD", "GLOBAL", 1)
+  Global("IntroTalk", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("IntroTalk", "LOCALS", 2)
+END
+
+
 // Initiate first-time dialog to CHARNAME (IWD:EE)
 IF
   !StateCheck(Myself, CD_STATE_NOTVALID)
   !StateCheck(Player1, CD_STATE_NOTVALID)
   See(Player1)
   !ActuallyInCombat()
+  GlobalLT("Chapter", "GLOBAL", 7)
   Global("A7AfaaqBG2", "GLOBAL", 0)
   Global("A7AfaaqIWD", "GLOBAL", 1)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
@@ -24,6 +36,7 @@ IF
   See([PC])
   !See(Player1)
   !ActuallyInCombat()
+  GlobalLT("Chapter", "GLOBAL", 7)
   Global("A7AfaaqBG2", "GLOBAL", 0)
   Global("A7AfaaqIWD", "GLOBAL", 1)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
