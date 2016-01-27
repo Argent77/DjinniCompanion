@@ -1,180 +1,59 @@
-// *** Default combat script: Glabrezu ***
+// *** Modified Demon Knight combat script from BG2EE ***
 
 IF
-  See([PC])
-  Global("Prep", "LOCALS", 0)
+  Allegiance(Myself,NEUTRAL)
 THEN
   RESPONSE #100
-    ForceSpell(Myself, WIZARD_MIRROR_IMAGE)  // Mirror Image
-    SetGlobal("Prep", "LOCALS", 1)
-END
-
-IF
-  See([PC])
-  !StateCheck(Myself, STATE_MIRRORIMAGE)
-THEN
-  RESPONSE #25
-    ForceSpell(Myself, WIZARD_MIRROR_IMAGE)  // Mirror Image
-  RESPONSE #75
-    Continue()
-END
-
-IF
-  See([PC])
-  Global("Paralyze","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd04", [PC]) // Paralyze
-    SetGlobal("Paralyze","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.CLERIC_MAGE])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.CLERIC_MAGE]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.MAGE])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.MAGE]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.MAGE_THIEF])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.MAGE_THIEF]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.CLERIC])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.CLERIC]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.BARD])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.BARD]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.DRUID])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.DRUID]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
+    Enemy()
 END
 
 IF
   See(NearestEnemyOf(Myself))
-  NumCreatureGT([GOODCUTOFF],10)
+  Global("DeathKnightDispel","LOCALS",0)
 THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd01", [PC]) // Death Gaze
-    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
-    Wait(1)
-    AttackOneRound(NearestEnemyOf(Myself))
+  RESPONSE #50
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_DISPEL_MAGIC) // SPWI302.SPL (Remove Magic)
+    SetGlobal("DeathKnightDispel","LOCALS",1)
+  RESPONSE #50
+    AttackReevaluate(LastSeenBy(Myself),15)
+    SetGlobal("DeathKnightDispel","LOCALS",1)
 END
 
 IF
-  See(ThirdNearest([PC]))
-  StateCheck([PC],STATE_HELPLESS)
+  See(NearestEnemyOf(Myself))
+  Global("DeathAttack","LOCALS",0)
 THEN
-  RESPONSE #70
-    ForceSpellRES("a7htd01", SecondNearest([PC])) // Death Gaze
-    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
-    AttackOneRound([PC])
-  RESPONSE #30
-    ForceSpellRES("a7htd01", ThirdNearest([PC])) // Death Gaze
-    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
-    AttackOneRound(NearestEnemyOf(Myself))
+  RESPONSE #25
+    ForceSpell(LastSeenBy(Myself),WIZARD_SYMBOL_FEAR) // SPWI811.SPL (Symbol, Fear)
+    SetGlobal("DeathAttack","LOCALS",1)
+  RESPONSE #75
+    AttackReevaluate(LastSeenBy(Myself),15)
+    SetGlobal("DeathAttack","LOCALS",1)
 END
 
 IF
-  See(SecondNearest([PC]))
-  StateCheck([PC],STATE_HELPLESS)
+  See(NearestEnemyOf(Myself))
+  Global("DeathAttack","LOCALS",1)
 THEN
-  RESPONSE #70
-    ForceSpellRES("a7htd01", SecondNearest([PC])) // Death Gaze
-    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
-    AttackOneRound([PC])
+  RESPONSE #25
+    ForceSpell(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN) // SPWI715.SPL (Power Word, Stun)
+    SetGlobal("DeathAttack","LOCALS",2)
+  RESPONSE #75
+    AttackReevaluate(LastSeenBy(Myself),15)
+    SetGlobal("DeathAttack","LOCALS",2)
 END
 
 IF
-  See([PC.0.0.0.0.FEMALE])
-  NotStateCheck([PC.0.0.0.0.FEMALE],STATE_HELPLESS)
+  See(NearestEnemyOf(Myself))
+  Global("DeathAttack","LOCALS",2)
+  RandomNum(5,1)
 THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd01", [PC.0.0.0.0.FEMALE]) // Death Gaze
-    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
-    AttackOneRound([PC])
-END
-
-IF
-  See([PC.0.0.0.0.MALE])
-  See([PC.0.0.0.0.FEMALE])
-  StateCheck([PC.0.0.0.0.FEMALE],STATE_HELPLESS)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd01", [PC.0.0.0.0.MALE]) // Death Gaze
-    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
-    AttackOneRound([PC.0.0.0.0.FEMALE])
-    AttackOneRound([PC.0.0.0.0.FEMALE])
-END
-
-IF
-  See(FourthNearest([PC]))
-  See([PC.0.0.0.0.FEMALE])
-  StateCheck([PC.0.0.0.0.FEMALE],STATE_HELPLESS)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd01", FourthNearest([PC])) // Death Gaze
-    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
-    AttackOneRound([PC.0.0.0.0.FEMALE])
-    AttackOneRound(NearestEnemyOf(Myself))
-END
-
-IF
-  See(SecondNearest([PC]))
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd01", SecondNearest([PC])) // Death Gaze
-    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
-    AttackOneRound([PC])
-    AttackOneRound([PC])
-END
-
-IF
-  OR(2)
-    !See([GOODCUTOFF])
-    TargetUnreachable(LastSeenBy(Myself))
-THEN
-  RESPONSE #100
-    RandomWalk()
+  RESPONSE #25
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_POWER_WORD_STUN) // SPWI715.SPL (Power Word, Stun)
+  RESPONSE #25
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_SYMBOL_FEAR) // SPWI811.SPL (Symbol, Fear)
+  RESPONSE #25
+    ReallyForceSpell(LastSeenBy(Myself),WIZARD_SYMBOL_STUN) // SPWI816.SPL (Symbol, Stun)
+  RESPONSE #25
+    AttackReevaluate(NearestEnemyOf(Myself),15)
 END

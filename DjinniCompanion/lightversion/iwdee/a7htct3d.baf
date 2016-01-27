@@ -1,22 +1,30 @@
 // *** Cutscene: Lower Dorn's Deep entrance - Kelvor Domine summons elementals and demons - Heart of Fury mode ***
 
-// refuse: Kelvor summons elementals and demons -> Kelvor turns hostile -> Destroy cutspy
+// refuse: Kelvor summons demons -> Kelvor turns hostile -> Destroy cutspy
 IF
   True()
 THEN RESPONSE #100
   CutSceneId("a7ht01")
-  CreateVisualEffect("cwelemx", [596.640])    // Water Elemental
+  CreateVisualEffect("spplanar", [660.455])     // Quasit 1
   Wait(1)
-  CreateVisualEffect("ceelemx", [596.492])    // Earth Elemental
-  CreateCreature("a7htwe", [596.640], NE)    // Water Elemental
+  CreateVisualEffect("spplanar", [556.681])     // Quasit 2
   Wait(1)
-  CreateVisualEffect("cfelemx", [758.440])    // Fire Elemental
-  CreateCreature("a7htee", [596.492], SSE)    // Earth Elemental
+  CreateVisualEffect("spplanar", [563.559])     // Quasit 3
+  CreateCreature("a7htqua", [660.455], S)       // Quasit 1
   Wait(1)
-  CreateVisualEffect("spsumgte", [772.652])   // Glabrezu
-  CreateCreature("a7htfe", [758.440], SW)     // Fire Elemental
-  Wait(4)
-  CreateCreature("a7htdm2", [772.652], NW)    // Glabrezu
+  CreateVisualEffect("spplanar", [748.518])     // Succubus
+  CreateCreature("a7htqua", [556.681], NE)      // Quasit 2
+  Wait(1)
+  CreateVisualEffect("spplanar", [693.659])     // Demon Knight
+  CreateCreature("a7htqua", [563.559], E)       // Quasit 3
+  Wait(1)
+  CreateVisualEffect("spsumgte", [810.654])     // Glabrezu
+  CreateCreature("a7htdm1", [748.518], SWW)     // Succubus
+  Wait(1)
+  CreateCreature("a7htdm2", [693.659], NNW)     // Demon Knight
+  Wait(3)
+  CreateCreature("a7htdm4", [810.654], NW)      // Glabrezu
+  Wait(2)
   ActionOverride("cutspy", DestroySelf())
   Enemy()
   EndCutSceneMode()

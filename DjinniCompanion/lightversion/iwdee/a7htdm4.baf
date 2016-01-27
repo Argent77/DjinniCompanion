@@ -1,0 +1,180 @@
+// *** Default combat script: Glabrezu ***
+
+IF
+  See([PC])
+  Global("Prep", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself, WIZARD_MIRROR_IMAGE)  // Mirror Image
+    SetGlobal("Prep", "LOCALS", 1)
+END
+
+IF
+  See([PC])
+  !StateCheck(Myself, STATE_MIRRORIMAGE)
+THEN
+  RESPONSE #25
+    ForceSpell(Myself, WIZARD_MIRROR_IMAGE)  // Mirror Image
+  RESPONSE #75
+    Continue()
+END
+
+IF
+  See([PC])
+  Global("Paralyze","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd04", [PC]) // Paralyze
+    SetGlobal("Paralyze","LOCALS",1)
+END
+
+IF
+  See([PC.0.0.CLERIC_MAGE])
+  Global("Silence","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd03", [PC.0.0.CLERIC_MAGE]) // Silence, 15' Radius
+    SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+  See([PC.0.0.MAGE])
+  Global("Silence","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd03", [PC.0.0.MAGE]) // Silence, 15' Radius
+    SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+  See([PC.0.0.MAGE_THIEF])
+  Global("Silence","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd03", [PC.0.0.MAGE_THIEF]) // Silence, 15' Radius
+    SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+  See([PC.0.0.CLERIC])
+  Global("Silence","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd03", [PC.0.0.CLERIC]) // Silence, 15' Radius
+    SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+  See([PC.0.0.BARD])
+  Global("Silence","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd03", [PC.0.0.BARD]) // Silence, 15' Radius
+    SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+  See([PC.0.0.DRUID])
+  Global("Silence","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd03", [PC.0.0.DRUID]) // Silence, 15' Radius
+    SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+  See([PC])
+  Global("Silence","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd03", [PC]) // Silence, 15' Radius
+    SetGlobal("Silence","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  NumCreatureGT([GOODCUTOFF],10)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd01", [PC]) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    Wait(1)
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+  See(ThirdNearest([PC]))
+  StateCheck([PC],STATE_HELPLESS)
+THEN
+  RESPONSE #70
+    ForceSpellRES("a7htd01", SecondNearest([PC])) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound([PC])
+  RESPONSE #30
+    ForceSpellRES("a7htd01", ThirdNearest([PC])) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+  See(SecondNearest([PC]))
+  StateCheck([PC],STATE_HELPLESS)
+THEN
+  RESPONSE #70
+    ForceSpellRES("a7htd01", SecondNearest([PC])) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound([PC])
+END
+
+IF
+  See([PC.0.0.0.0.FEMALE])
+  NotStateCheck([PC.0.0.0.0.FEMALE],STATE_HELPLESS)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd01", [PC.0.0.0.0.FEMALE]) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound([PC])
+END
+
+IF
+  See([PC.0.0.0.0.MALE])
+  See([PC.0.0.0.0.FEMALE])
+  StateCheck([PC.0.0.0.0.FEMALE],STATE_HELPLESS)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd01", [PC.0.0.0.0.MALE]) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound([PC.0.0.0.0.FEMALE])
+    AttackOneRound([PC.0.0.0.0.FEMALE])
+END
+
+IF
+  See(FourthNearest([PC]))
+  See([PC.0.0.0.0.FEMALE])
+  StateCheck([PC.0.0.0.0.FEMALE],STATE_HELPLESS)
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd01", FourthNearest([PC])) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound([PC.0.0.0.0.FEMALE])
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+  See(SecondNearest([PC]))
+THEN
+  RESPONSE #100
+    ForceSpellRES("a7htd01", SecondNearest([PC])) // Death Gaze
+    ForceSpellRES("a7htd02", NearestEnemyOf(Myself)) // Vampiric Touch
+    AttackOneRound([PC])
+    AttackOneRound([PC])
+END
+
+IF
+  OR(2)
+    !See([GOODCUTOFF])
+    TargetUnreachable(LastSeenBy(Myself))
+THEN
+  RESPONSE #100
+    RandomWalk()
+END

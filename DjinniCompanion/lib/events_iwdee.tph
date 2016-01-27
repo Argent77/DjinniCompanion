@@ -87,12 +87,22 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
       SAY NAME1 @100506 // Fighter
       SAY NAME2 @100506 // Fighter
 
+    COPY ~DjinniCompanion/lightversion/iwdee/a7htdm1.cre~ ~override~
+      SAY NAME1 @100500 // Succubus
+      SAY NAME2 @100500 // Succubus
+
     COPY ~DjinniCompanion/lightversion/iwdee/a7ht13.cre~ ~override~
-         ~DjinniCompanion/lightversion/iwdee/a7htdm1.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htqua.cre~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htdm2.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htdm3.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htdm4.cre~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htee.cre~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htwe.cre~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htfe.cre~ ~override~
+
+    COPY ~DjinniCompanion/lightversion/iwdee/a7helm1.itm~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7htqua.itm~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7suc01.itm~ ~override~
 
     COPY ~DjinniCompanion/lightversion/iwdee/a7htd01.spl~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htd02.spl~ ~override~
@@ -100,6 +110,8 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
          ~DjinniCompanion/lightversion/iwdee/a7htd02b.spl~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htd03.spl~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htd04.spl~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7suc01.spl~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7suc02.spl~ ~override~
 
     COPY_EXISTING ~ddoorh.vvc~ ~override/a7ddoorh.vvc~
       WRITE_ASCII 0x78 ~#EFF_M09~ #8
@@ -121,7 +133,8 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
       ~DjinniCompanion/lightversion/iwdee/a7htel.baf~
       ~DjinniCompanion/lightversion/iwdee/a7htdm1.baf~
       ~DjinniCompanion/lightversion/iwdee/a7htdm2.baf~
-      ~DjinniCompanion/lightversion/iwdee/a7htdmx.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htdm3.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7htdm4.baf~
       ~DjinniCompanion/lightversion/iwdee/a7httrg1.baf~
       ~DjinniCompanion/lightversion/iwdee/a7httrg2.baf~
       ~DjinniCompanion/lightversion/iwdee/a7httrg3.baf~
