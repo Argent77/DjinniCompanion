@@ -310,7 +310,7 @@ END
 IF
   HasItem("MISC9Y", Player1)
   Global("MiscPotion", "LOCALS", 100)
-  Global("A7AfaaqIwdee", "GLOBAL", 0)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
 THEN RESPONSE #100
   SetGlobal("MiscPotion", "LOCALS", 0)
   TakePartyItemNum("MISC9Y", 1)
@@ -1078,7 +1078,7 @@ END
 
 IF
   Global("WishO_Quest", "LOCALS", 1)
-  Global("A7AfaaqIwdee", "GLOBAL", 0)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
 THEN RESPONSE #100
   SetGlobal("WishO_Quest", "LOCALS", 0)
   SetGlobal("wishQuest", "GLOBAL", 1)
@@ -1089,7 +1089,7 @@ END
 
 IF
   Global("WishO_Raissa", "LOCALS", 1)
-  Global("A7AfaaqIwdee", "GLOBAL", 0)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
 THEN RESPONSE #100
   SetGlobal("WishO_Raissa", "LOCALS", 0)
   SetGlobal("A7WishRestoreRaissa", "GLOBAL", 1)

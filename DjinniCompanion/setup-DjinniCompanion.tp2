@@ -227,7 +227,7 @@ BEGIN @22   // Disable IWD:EE Quest?
   DESIGNATED 400
   COPY_EXISTING ~A7AFQINI.BCS~ ~override~
     DECOMPILE_AND_PATCH BEGIN
-      REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(SetGlobal("A7AfaaqIwdee",.+)\)~ ~\1 SetGlobal("A7HostTower", "GLOBAL", 10)~
+      REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(SetGlobal("A7AfaaqLight",.+)\)~ ~\1 SetGlobal("A7HostTower", "GLOBAL", 10)~
     END BUT_ONLY
 
 

@@ -2,13 +2,11 @@
 
 // dealing with game-specific differences
 ACTION_IF (GAME_IS ~iwdee~) BEGIN
-  OUTER_TEXT_SPRINT set_iwdee_var ~SetGlobal("A7AfaaqIwdee", "GLOBAL", 1)~
   OUTER_TEXT_SPRINT seq_awake ~AWAKE~
   OUTER_TEXT_SPRINT seq_die ~DIE~
   OUTER_TEXT_SPRINT seq_cast ~CAST~
   OUTER_TEXT_SPRINT itm_potn52 ~EXTHEAL~
 END ELSE BEGIN
-  OUTER_TEXT_SPRINT set_iwdee_var ~~
   OUTER_TEXT_SPRINT seq_awake ~SEQ_AWAKE~
   OUTER_TEXT_SPRINT seq_die ~SEQ_DIE~
   OUTER_TEXT_SPRINT seq_cast ~SEQ_CAST~

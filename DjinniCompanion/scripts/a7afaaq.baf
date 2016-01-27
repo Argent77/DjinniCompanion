@@ -209,7 +209,7 @@ IF
     AreaCheck("AR3008")
   Global("unsummoning", "LOCALS", 0)
   Global("A7AntiMagicZone", "MYAREA", 0)
-  Global("A7AfaaqIwdee", "GLOBAL", 0)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
 THEN RESPONSE #100
   SetGlobal("A7AntiMagicZone", "MYAREA", 1)
   SetGlobal("unsummoning", "LOCALS", 1)
@@ -224,7 +224,7 @@ IF
     AreaCheck("AR3008")
   Global("unsummoning", "LOCALS", 0)
   Global("A7AntiMagicZone", "MYAREA", 1)
-  Global("A7AfaaqIwdee", "GLOBAL", 0)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
 THEN RESPONSE #100
   SetGlobal("unsummoning", "LOCALS", 1)
 END
@@ -236,7 +236,7 @@ IF
     AreaCheck("AR3005")
     AreaCheck("AR3009")
   Global("A7WildMagicZone", "MYAREA", 0)
-  Global("A7AfaaqIwdee", "GLOBAL", 0)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
 THEN RESPONSE #100
   SetGlobal("A7WildMagicZone", "MYAREA", 1)
   DisplayStringHead(Myself, @60026)    // Be careful! Magic is running wild in this room.

@@ -46,15 +46,15 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
 
     // Djinni comes out of his lamp
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") !AreaCheck("AR3004") !AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
+    + ~Global("A7AfaaqBG2", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
+    + ~Global("A7AfaaqBG2", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") !AreaCheck("AR3004") !AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
+    + ~Global("A7AfaaqBG2", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
     + ~GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.2
 
     // Conversation topics
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 0)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe.FirstTime
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have any advice for me? */ + TalkGeneric.Advice.1
+    + ~Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have any advice for me? */ + TalkGeneric.Advice.1
 
     // Fixes Afaaq's state in case of buggy behavior
     ++ @10028 /* You are behaving oddly. Care to fix it? */ + TalkGeneric.FixStates.1a
@@ -74,15 +74,15 @@ APPEND %afq_dialog%
     + ~Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL") CheckStatLT(LastTalkedToBy, 10, WIS) OR(2) Global("A7AfaaqEnslaved", "GLOBAL", 1) Global("A7FavorWish", "GLOBAL", 0)~ + @10008 /* Can you grant me a wish? */ DO ~SetupWish(1, 1)~ + TalkGeneric.Wish.Select.1
 
     // Djinni comes out of his lamp
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") !AreaCheck("AR3004") !AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
+    + ~Global("A7AfaaqBG2", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") OR(2) AreaCheck("AR3004") AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.3
+    + ~Global("A7AfaaqBG2", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL") !AreaCheck("AR3004") !AreaCheck("AR3008")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
+    + ~Global("A7AfaaqBG2", "GLOBAL", 0) !GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.1
     + ~GlobalTimerNotExpired("A7AfaaqDeathTimer", "GLOBAL")~ + @10009 /* Would you please come out of your lamp? */ + TalkGeneric.Summon.2
 
     // Conversation topics
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 0)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe.FirstTime
     + ~Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
+    + ~Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
 
     // Fixes Afaaq's state in case of buggy behavior
     ++ @10028 /* You are behaving oddly. Care to fix it? */ + TalkGeneric.FixStates.1a
@@ -133,18 +133,18 @@ APPEND %afq_dialog%
     // Conversation topics
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 0)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe.FirstTime
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
 
     // Telling Afaaq's stats
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10025 /* Can you tell me about your abilities? */ + TalkGeneric.TellStats.1
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10025 /* Can you tell me about your abilities? */ + TalkGeneric.TellStats.2
 
     // Inviting CHARNAME into the lamp
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("GavePocketPlane","GLOBAL",1) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("GavePocketPlane","GLOBAL",1) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("A77006")~ + @10001 /* Please return me from whence I came. */ + TalkGeneric.Invitation.Return
 
     // Fixes Afaaq's state in case of buggy behavior
@@ -192,18 +192,18 @@ APPEND %afq_dialog%
     // Conversation topics
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 0)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe.FirstTime
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10010 /* Can you tell me something about yourself? */ + TalkGeneric.AboutMe
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1)~ + @10011 /* Do you have an advice for me? */ + TalkGeneric.Advice.1
 
     // Telling Afaaq's stats
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0)~ + @10025 /* Can you tell me about your abilities? */ + TalkGeneric.TellStats.1
     + ~!ActuallyInCombat() Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1)~ + @10025 /* Can you tell me about your abilities? */ + TalkGeneric.TellStats.2
 
     // Inviting CHARNAME into the lamp
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("GavePocketPlane","GLOBAL",1) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
-    + ~!ActuallyInCombat() Global("A7AfaaqIwdee", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("GavePocketPlane","GLOBAL",1) Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("A7AfaaqLeaveParty", "GLOBAL", 0) Global("LampInvitation", "LOCALS", 0)~ + @10026 /* I'm curious, Afaaq. What does the interior of your lamp look like? */ + TalkGeneric.Invitation.1
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("AR4500") !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
+    + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("A77006")~ + @10001 /* Please return me from whence I came. */ + TalkGeneric.Invitation.Return
     
    // Fixes Afaaq's state in case of buggy behavior
@@ -1952,7 +1952,7 @@ APPEND %afq_dialog%
     + ~HasItem("POTN35", Player1)~ + @10494 /* How about a Potion of Magic Shielding? */ + TalkGeneric.Potion.MagicShielding
     + ~HasItem("POTN45", Player1)~ + @10496 /* How about a Potion of Freedom? */ + TalkGeneric.Potion.Freedom
     + ~HasItem("POTN21", Player1)~ + @10488 /* How about a Potion of Clarity? */ + TalkGeneric.Potion.Clarity
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) HasItem("MISC9Y", Player1)~ + @10498 /* How about a Brine Potion, brewed from a pool of illithid tadpoles? */ + TalkGeneric.Potion.Brine
+    + ~Global("A7AfaaqBG2", "GLOBAL", 1) HasItem("MISC9Y", Player1)~ + @10498 /* How about a Brine Potion, brewed from a pool of illithid tadpoles? */ + TalkGeneric.Potion.Brine
     + ~HPPercent(Myself, 100)~ + @10482 /* I don't have any potions to spare, sorry. */ + TalkGeneric.PotionNone
     + ~OR(3) HasItem("POTN08", Player1) HasItem("%itm_potn52%", Player1) HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10482 /* I don't have any potions to spare, sorry. */ + TalkGeneric.PotionNone
     + ~!HasItem("POTN08", Player1) !HasItem("%itm_potn52%", Player1) !HasItem("POTN55", Player1) HPPercentLT(Myself, 100)~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.HealingNone
@@ -2230,7 +2230,7 @@ APPEND %afq_dialog%
     + ~CheckStatGT(LastTalkedToBy, 10, WIS) Global("wishArmor","GLOBAL",0)~ + @10510 /* ~I wish for a powerful magical item.~ */ + TalkGeneric.LimitedWish.6
     + ~CheckStatGT(LastTalkedToBy, 3, WIS) Global("wishXP","GLOBAL",0)~ + @10511 /* ~I wish to be more experienced.~ */ + TalkGeneric.LimitedWish.7
     + ~CheckStatGT(LastTalkedToBy, 11, WIS) Global("wishGlasses","GLOBAL",0)~ + @10512 /* ~I wish to see all as it really is.~ */ + TalkGeneric.LimitedWish.11
-    + ~Global("A7AfaaqIwdee", "GLOBAL", 0) CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishQuest","GLOBAL",0) !Dead("dennis") !Global("DennisHasGong","GLOBAL",1) Global("InToB", "GLOBAL", 0)~ + @10513 /* ~I wish for an adventure like none I've ever experienced before.~ */ + TalkGeneric.LimitedWish.23
+    + ~Global("A7AfaaqBG2", "GLOBAL", 1) CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishQuest","GLOBAL",0) !Dead("dennis") !Global("DennisHasGong","GLOBAL",1) Global("InToB", "GLOBAL", 0)~ + @10513 /* ~I wish for an adventure like none I've ever experienced before.~ */ + TalkGeneric.LimitedWish.23
     + ~CheckStatGT(LastTalkedToBy, 13, WIS) Global("wishTime","GLOBAL",0)~ + @10514 /* ~I wish for control over time.~ */ + TalkGeneric.LimitedWish.9
     + ~CheckStatGT(LastTalkedToBy, 5, WIS) Global("wishShape","GLOBAL",0)~ + @10515 /* ~I wish to be anything I desire.~ */ + TalkGeneric.LimitedWish.10
     + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishContigency","GLOBAL",0)~ + @10516 /* ~I wish to be prepared for anything.~ */ + TalkGeneric.LimitedWish.5

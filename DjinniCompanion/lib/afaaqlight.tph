@@ -608,7 +608,7 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
         INNER_ACTION BEGIN
           <<<<<<<< djinnicompanion/inlined/tanarri.baf
           IF
-            !Global("A7AfaaqBG2", "GLOBAL", 0)
+            Global("A7AfaaqBG2", "GLOBAL", 1)
             HasItem("A7DJLMP", Myself)
           THEN RESPONSE #100
             DestroyItem("A7DJLMP")

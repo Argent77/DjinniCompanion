@@ -85,6 +85,14 @@ Ich habe die Großmeisterschaft in Krummsäbeln erlangt und bin hochbegabt im Um
 @100049 = ~Ihr könnt Eure Reise fortsetzen. Ich werde Euch nicht noch einmal belästigen. Lebt wohl.~
 @100050 = ~(seufz) Meine Geduld ist jetzt endgültig erschöpft. Dann muss ich mir die Lampe wohl aus Euren Überresten nehmen. Ihr lasst mir leider keine andere Wahl.~
 @100051 = ~Habe ich bereits erwähnt, dass ich ein Meisterbeschwörer bin? Nein? Dann überzeugt Euch selbst!~
+@100052 = ~Ich grüße Euch, <RACE>. Dürfte ich wohl mit Eurem Anführer sprechen?~
+@100053 = ~Dürfte ich mit Eurem Anführer sprechen?~
+@100054 = ~Grüße, <PRO_LADYLORD>. Ich sehe, dass Ihr die Dschinnlampe meiner letzten Gebieterin entrissen habt.~
+@100055 = ~(seufz) Ich kann auch spüren, dass die Lampe Euch bereits als meinen neuen alleinigen Meister auserwählt hat.~
+@100056 = ~Entschuldigt meine schlechten Manieren, aber ich muss das Herzsteinjuwel auf dem schnellsten Wege zurück nach Kuldahar bringen.~
+@100057 = ~Wir sollten uns auf den Weg machen, Afaaq. Ich muss noch das Herzsteinjuwel nach Kuldahar bringen.~
+@100058 = ~Meine Versklavung in die Lampe wurde durch mächtige schwarze Magie erreicht. Ich konnte leider nicht erkennen, wer meine Häscher sind, aber ich spüre, dass sie immer noch am Leben sind. In meinem gegenwärtigen Zustand habe ich ihnen nicht viel entgegenzusetzen.~
+
 
 // misc. strings
 @100500 = ~Sukkubus~

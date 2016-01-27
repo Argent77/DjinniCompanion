@@ -1,5 +1,42 @@
 // *** Actions for interaction with party members for the genie Afaaq ***
 
+// Initiate first-time dialog to CHARNAME (IWD:EE)
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  See(Player1)
+  !ActuallyInCombat()
+  Global("A7AfaaqBG2", "GLOBAL", 0)
+  Global("A7AfaaqIWD", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("IntroTalk", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("IntroTalk", "LOCALS", 1)
+  FaceObject(Player1)
+  SmallWait(5)
+  StartDialogNoSet(Player1)
+END
+
+// Initiate first-time dialog to other than CHARNAME (IWD:EE)
+IF
+  !StateCheck(Myself, CD_STATE_NOTVALID)
+  !StateCheck(LastSeenBy(Myself), CD_STATE_NOTVALID)
+  See([PC])
+  !See(Player1)
+  !ActuallyInCombat()
+  Global("A7AfaaqBG2", "GLOBAL", 0)
+  Global("A7AfaaqIWD", "GLOBAL", 1)
+  Global("A7AfaaqGaseous", "GLOBAL", 0)
+  Global("IntroTalk", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("IntroTalk", "LOCALS", 1)
+  FaceObject(LastSeenBy(Myself))
+  SmallWait(5)
+  StartDialogNoSet(LastSeenBy(Myself))
+END
+
+
+// Inside the djinni lamp
 IF
   AreaCheck("A77006")
   Global("LampInvitation", "LOCALS", 1)
