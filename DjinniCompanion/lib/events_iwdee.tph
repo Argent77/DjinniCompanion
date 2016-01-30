@@ -79,11 +79,11 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
       SAY NAME1 @100504 // Mage
       SAY NAME2 @100504 // Mage
     COPY ~DjinniCompanion/lightversion/iwdee/a7ht04.cre~ ~override~
-    COPY ~DjinniCompanion/lightversion/iwdee/a7ht12.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7ht12.cre~ ~override~
       SAY NAME1 @100505 // Thief
       SAY NAME2 @100505 // Thief
     COPY ~DjinniCompanion/lightversion/iwdee/a7ht05.cre~ ~override~
-    COPY ~DjinniCompanion/lightversion/iwdee/a7ht11.cre~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/a7ht11.cre~ ~override~
       SAY NAME1 @100506 // Fighter
       SAY NAME2 @100506 // Fighter
 
