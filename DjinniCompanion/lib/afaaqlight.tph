@@ -341,7 +341,11 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   INSERT_2DA_ROW 2 3 ~A7SW1H2           %sw2a%        %sw2b%       %sw2c%~
 
 // MinHP1 item (for a controlled death)
-COPY ~DjinniCompanion/items/a7minhp1.itm~ ~override~
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  COPY ~DjinniCompanion/lightversion/iwdee/a7minhp1.itm~ ~override~
+END ELSE BEGIN
+  COPY ~DjinniCompanion/items/a7minhp1.itm~ ~override~
+END
 
 // Effect Items (give weapon proficiencies, etc. to the djinni)
 COPY ~DjinniCompanion/items/a7afqfx1.itm~ ~override~
