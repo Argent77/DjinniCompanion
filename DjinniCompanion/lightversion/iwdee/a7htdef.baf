@@ -33,27 +33,8 @@ END
 
 IF
   !See(NearestEnemyOf(Myself))
-  See(ThirdNearestMyGroupOfType)
-THEN
-  RESPONSE #50
-    MoveToObject(LastSeenBy(Myself))
-  RESPONSE #50
-    Continue()
-END
-
-IF
-  !See(NearestEnemyOf(Myself))
-  See(SecondNearestMyGroupOfType)
-THEN
-  RESPONSE #75
-    MoveToObject(LastSeenBy(Myself))
-  RESPONSE #25
-    Continue()
-END
-
-IF
-  !See(NearestEnemyOf(Myself))
   See(NearestMyGroupOfType)
+  !Range(LastSeenBy(Myself), 20)
 THEN
   RESPONSE #100
     MoveToObject(LastSeenBy(Myself))
@@ -61,12 +42,44 @@ END
 
 IF
   !See(NearestEnemyOf(Myself))
+  See(ThirdNearestMyGroupOfType)
+THEN
+  RESPONSE #20
+    MoveToObject(LastSeenBy(Myself))
+  RESPONSE #10
+    RandomWalk()
+  RESPONSE #70
+    Continue()
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  See(SecondNearestMyGroupOfType)
+THEN
+  RESPONSE #40
+    MoveToObject(LastSeenBy(Myself))
+  RESPONSE #10
+    RandomWalk()
+  RESPONSE #50
+    Continue()
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  See(NearestMyGroupOfType)
+THEN
+  RESPONSE #75
+    MoveToObject(LastSeenBy(Myself))
+  RESPONSE #25
+    RandomWalk()
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
   !See(NearestMyGroupOfType)
 THEN
-  RESPONSE #50
-    MoveToObject(NearestEnemyOf(Myself))
-  RESPONSE #40
+  RESPONSE #75
     NoAction()
-  RESPONSE #10
+  RESPONSE #25
     RandomWalk()
 END
