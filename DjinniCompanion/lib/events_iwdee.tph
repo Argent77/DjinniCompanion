@@ -103,9 +103,9 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
          ~DjinniCompanion/lightversion/iwdee/a7htwe.cre~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htfe.cre~ ~override~
 
-    COPY ~DjinniCompanion/lightversion/iwdee/unearf05.wav~ ~override~
-         ~DjinniCompanion/lightversion/iwdee/unearf06.wav~ ~override~
-         ~DjinniCompanion/lightversion/iwdee/unearf07.wav~ ~override~
+    COPY ~DjinniCompanion/lightversion/iwdee/%LANGUAGE%/unearf05.wav~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/%LANGUAGE%/unearf06.wav~ ~override~
+         ~DjinniCompanion/lightversion/iwdee/%LANGUAGE%/unearf07.wav~ ~override~
 
     COPY ~DjinniCompanion/lightversion/iwdee/a7helm1.itm~ ~override~
          ~DjinniCompanion/lightversion/iwdee/a7htqua.itm~ ~override~
