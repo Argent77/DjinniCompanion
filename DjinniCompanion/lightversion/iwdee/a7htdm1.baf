@@ -1,10 +1,10 @@
 // *** Modified Succubus combat script from BG2EE ***
 
 IF
-  See([0.0.0.IMP.0.0.LAWFUL_EVIL])
+  See([0.0.IMP.0.0.0.LAWFUL_EVIL])
 THEN
   RESPONSE #100
-    AttackReevaluate([0.0.0.IMP.0.0.LAWFUL_EVIL],30)
+    AttackReevaluate(LastSeenBy(Myself),30)
 END
 
 IF
@@ -40,9 +40,8 @@ END
 IF
   OR(3)
     See([GOODCUTOFF.0.0.BARD_ALL])
-    See([GOODCUTOFF.0.0.LONG_BOW])
+    See([GOODCUTOFF.0.0.MAGE_ALL])
     See([GOODCUTOFF.0.0.SORCERER])
-  Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("prep","LOCALS")
   RandomNum(2,1)
 THEN
@@ -53,7 +52,7 @@ END
 
 IF
   See(NearestEnemyOf(Myself))
-  See([GOODCUTOFF.0.0.0.0.MALE])
+  See([GOODCUTOFF.HUMANOID.0.0.0.MALE])
   !Difficulty(EASIEST)
   Range(LastSeenBy(Myself),30)
   RandomNum(2,1)
@@ -66,12 +65,12 @@ IF
   !GlobalTimerNotExpired("Charm","LOCALS")
 THEN
   RESPONSE #100
-    SetGlobalTimer("Charm","LOCALS",6)
-    SpellNoDecRES("a7suc02",[GOODCUTOFF.0.0.0.0.MALE]) // Charm Person
+    SetGlobalTimer("Charm","LOCALS",18)
+    SpellNoDecRES("a7suc02",[GOODCUTOFF.HUMANOID.0.0.0.MALE]) // Charm Person
 END
 
 IF
-  See(NearestMyGroupOfType([EVILCUTOFF.0.0.TANARI]))
+  See(NearestMyGroupOfType([EVILCUTOFF.0.DEMONIC.0.0.0.CHAOTIC_EVIL]))
   HPPercentLT(LastSeenBy(Myself),50)
   !HPPercentLT(Myself,50)
   !GlobalTimerNotExpired("Healing","LOCALS")
@@ -84,7 +83,7 @@ THEN
 END
 
 IF
-  See(SecondNearestMyGroupOfType([EVILCUTOFF.0.0.TANARI]))
+  See(SecondNearestMyGroupOfType([EVILCUTOFF.0.DEMONIC.0.0.0.CHAOTIC_EVIL]))
   HPPercentLT(LastSeenBy(Myself),50)
   !HPPercentLT(Myself,50)
   !GlobalTimerNotExpired("Healing","LOCALS")
@@ -97,7 +96,7 @@ THEN
 END
 
 IF
-  See(ThirdNearestMyGroupOfType([EVILCUTOFF.0.0.TANARI]))
+  See(ThirdNearestMyGroupOfType([EVILCUTOFF.0.DEMONIC.0.0.0.CHAOTIC_EVIL]))
   HPPercentLT(LastSeenBy(Myself),50)
   !HPPercentLT(Myself,50)
   !GlobalTimerNotExpired("Healing","LOCALS")

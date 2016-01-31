@@ -1,6 +1,15 @@
 // *** Default combat script: Glabrezu ***
 
 IF
+  OR(2)
+    See([0.0.IMP.0.0.0.LAWFUL_EVIL])
+    See([0.0.DEMONIC.0.0.0.LAWFUL_EVIL])
+THEN
+  RESPONSE #100
+    AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
   See([PC])
   Global("Prep", "LOCALS", 0)
 THEN
@@ -12,9 +21,11 @@ END
 IF
   See([PC])
   !StateCheck(Myself, STATE_MIRRORIMAGE)
+  !GlobalTimerNotExpired("Mirror","LOCALS")
 THEN
   RESPONSE #25
     ForceSpell(Myself, WIZARD_MIRROR_IMAGE)  // Mirror Image
+    SetGlobalTimer("Mirror","LOCALS",12)
   RESPONSE #75
     Continue()
 END
@@ -29,65 +40,16 @@ THEN
 END
 
 IF
-  See([PC.0.0.CLERIC_MAGE])
+  OR(5)
+    See([PC.0.0.MAGE_ALL])
+    See([PC.0.0.CLERIC_ALL])
+    See([PC.0.0.BARD_ALL])
+    See([PC.0.0.DRUID_ALL])
+    See([PC.0.0.SORCERER])
   Global("Silence","LOCALS",0)
 THEN
   RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.CLERIC_MAGE]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.MAGE])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.MAGE]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.MAGE_THIEF])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.MAGE_THIEF]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.CLERIC])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.CLERIC]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.BARD])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.BARD]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC.0.0.DRUID])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC.0.0.DRUID]) // Silence, 15' Radius
-    SetGlobal("Silence","LOCALS",1)
-END
-
-IF
-  See([PC])
-  Global("Silence","LOCALS",0)
-THEN
-  RESPONSE #100
-    ForceSpellRES("a7htd03", [PC]) // Silence, 15' Radius
+    ForceSpellRES("a7htd03", LastSeenBy(Myself)) // Silence, 15' Radius
     SetGlobal("Silence","LOCALS",1)
 END
 

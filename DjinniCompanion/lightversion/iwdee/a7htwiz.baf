@@ -61,6 +61,20 @@ END
 IF
   See(NearestEnemyOf(Myself))
   !StateCheck(Myself, STATE_SILENCED)
+  OR(4)
+    StateCheck(NearestEnemyOf(Myself), STATE_HASTED)
+    StateCheck(SecondNearestEnemyOf(Myself), STATE_HASTED)
+    StateCheck(ThirdNearestEnemyOf(Myself), STATE_HASTED)
+    StateCheck(FourthNearestEnemyOf(Myself), STATE_HASTED)
+  HaveSpell(WIZARD_SLOW)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself), WIZARD_SLOW)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself, STATE_SILENCED)
   !CheckSpellState(LastSeenBy(Myself), DEATH_WARD)
   HaveSpell(WIZARD_FINGER_OF_DEATH)
 THEN
@@ -123,8 +137,10 @@ IF
   !StateCheck(LastSeenBy(Myself), STATE_SLOWED)
   HaveSpell(WIZARD_SLOW)
 THEN
-  RESPONSE #100
+  RESPONSE #75
     Spell(LastSeenBy(Myself), WIZARD_SLOW)
+  RESPONSE #25
+    Continue()
 END
 
 IF
