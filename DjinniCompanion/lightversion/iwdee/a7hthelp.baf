@@ -1,0 +1,60 @@
+// *** Tactical actions ***
+
+IF
+  Heard([ANYONE],89)
+  !See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    MoveToObject(LastHeardBy(Myself))
+    Continue()
+END
+
+IF
+  Class(Myself, IMP)
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself),20)
+  Global("Shout2","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Shout2","LOCALS",1)
+    Shout(89)
+    Continue()
+END
+
+IF
+  AttackedBy([GOODCUTOFF],0)
+  Global("Shout","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Shout","LOCALS",1)
+    Shout(89)
+    Continue()
+END
+
+IF
+  Class(Myself, IMP)
+  HitBy([GOODCUTOFF],CRUSHING)
+THEN
+  RESPONSE #100
+    Shout(89)
+    Continue()
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  !Range("a7ht01", 8)
+  See("a7ht01")
+THEN
+  RESPONSE #100
+    MoveToObject("a7ht01")
+    Continue()
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  !See("a7ht01")
+THEN
+  RESPONSE #100
+    RandomWalk()
+    Continue()
+END

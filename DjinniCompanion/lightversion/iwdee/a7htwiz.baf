@@ -1,6 +1,25 @@
 // *** Default combat script: Kelvor Domine ***
 
 IF
+  Heard([ANYONE],89)
+  !See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    MoveToObject(LastHeardBy(Myself))
+    Continue()
+END
+
+IF
+  AttackedBy([GOODCUTOFF],0)
+  Global("Shout","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Shout","LOCALS",1)
+    Shout(89)
+    Continue()
+END
+
+IF
   See(NearestEnemyOf(Myself))
   Global("Prep", "LOCALS", 0)
 THEN

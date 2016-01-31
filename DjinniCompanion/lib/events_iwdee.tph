@@ -131,6 +131,7 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
       ~DjinniCompanion/lightversion/iwdee/a7htpotn.baf~
       ~DjinniCompanion/lightversion/iwdee/a7htwiz.baf~
       ~DjinniCompanion/lightversion/iwdee/a7htel.baf~
+      ~DjinniCompanion/lightversion/iwdee/a7hthelp.baf~
       ~DjinniCompanion/lightversion/iwdee/a7htdm1.baf~
       ~DjinniCompanion/lightversion/iwdee/a7htdm2.baf~
       ~DjinniCompanion/lightversion/iwdee/a7htdm3.baf~
