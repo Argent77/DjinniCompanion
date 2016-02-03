@@ -552,6 +552,11 @@ COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7Afaaq.d~
 COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7AfaaqInterjections.d~
         ~DjinniCompanion/dialogs/A7AfaaqTownsfolk.d~
 
+ACTION_IF (FILE_EXISTS_IN_GAME ~u!kgen.dlg~) BEGIN
+  // Interjections for Unfinished Business - Kalah and What He Was Promised
+  COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7kalah_ub.d~
+END
+
 // Afaaq's banter files for CHARNAME (Order of compilation is important!)
 COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME_Specific.d~
 COMPILE EVALUATE_BUFFER ~%DIALOG_BANTER_INTRO%~
