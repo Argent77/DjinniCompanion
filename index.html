@@ -26,7 +26,7 @@
           <a href="https://github.com/Argent77/DjinniCompanion/releases/latest">Download</a> &#8226;
           <a href="index.html">Website</a> &#8226;
           <a href="https://github.com/Argent77/DjinniCompanion/">Project</a> &#8226;
-          Version: 2.1
+          Version: 2.2a
         </p>
         <hr />
         <p class="menu">
@@ -47,7 +47,7 @@
         <div class="content">
           <h2>Introduction</h2>
           <span id="portrait"><img src="images/AfaaqPortrait.png" alt="Afaaq's portrait" width="130" height="199" /></span>
-          <p>Meet Afaaq! The djinni who will be your faithful companion in the course of your adventures throughout SoA and ToB. Now available for Icewind Dale: Enhanced Edition as well!</p>
+          <p>Meet Afaaq! The djinni who will be your faithful companion in the course of your adventures throughout SoA and ToB. Now available for Icewind Dale: Enhanced Edition and the Enhanced Edition Trilogy (EET) as well!</p>
           <p><big><strong>Contents</strong></big></p>
           <ul style="margin-left: 160px">
             <li>The djinni Afaaq who acts as your &quot;seventh party member&quot;</li>
@@ -76,13 +76,17 @@
           <p>This is a WeiDU mod, that means it is very easy to install. Simply unpack <em>&quot;djinnicompanion.7z&quot;</em> (<a href="http://www.7-zip.org/download.html">7-Zip</a>) into the installation directory of your game and run either <em>&quot;setup-DjinniCompanion.exe&quot;</em> (Windows) or <em>&quot;setup-DjinniCompanion&quot;</em> (Mac OS X). Follow the instructions and you are ready to start.</p>
           <p>To uninstall, run <em>&quot;setup-DjinniCompanion.exe&quot;</em> again and follow the prompts.</p>
           <h5>Compatibility and Installation Order</h5>
-          <p>The mod requires that you have either <em>Baldur's Gate II: Throne of Bhaal</em>, <em>Baldur's Gate II: Enhanced Edition</em> or <em>Icewind Dale: Enhanced Edition</em> installed.</p>
+          <p>The mod requires that you have either <em>Baldur's Gate II: Throne of Bhaal</em>, <em>Baldur's Gate II: Enhanced Edition</em> or <em>Icewind Dale: Enhanced Edition</em> installed. The <em>Enhanced Edition Trilogy (EET)</em> is supported as well.</p>
           <p>You can install this mod at any time in your game before you are doing the Trademeet quests, but I suggest to install it early on to raise the chance of a certain quest to trigger.</p>
           <p>The following mods have to be installed BEFORE this mod, if you want to use them:</p>
           <ul>
             <li>Westley Weimer's <em>&quot;Ascension&quot;</em></li>
             <li>DavidW's <em>&quot;Wheels of Prophecy&quot;</em></li>
             <li>SimDing0's <em>Quest Pack</em> and its subcomponent <em>&quot;Revised Hell Trials&quot;</em></li>
+          </ul>
+          <p>The following mods will be considered if you install them before this mod:</p>
+          <ul>
+            <li><em>Unfinished Business</em> and its subcomponent <em>&quot;Kalah and What He Was Promised&quot;</em></li>
             <li><em>Infinity Animations</em> and its subcomponent <em>&quot;Distinctive Genies&quot;</em></li>
           </ul>
           <!--<p>The following mods have been reported to interfere with this mod:</p>
@@ -109,7 +113,7 @@
               <br />
               <strong>Light Version:</strong> This component installs a stripped down version of the mod consisting only of the djinni Afaaq and his magical lamp. Choose this if you merely want additional fighting power in your adventures.<br /><br />
             </li>
-            <li><strong>IWD:EE Version:</strong> This component is more or less the same as the <em>Light Version</em>, but can be installed in <em>Icewind Dale: Enhanced Edition</em>. It provides a stripped down version of the mod consisting of the djinni Afaaq, his magical lamp and a simple storyline to spice up the adventure.<br /><br /></li>
+            <li><strong>IWD:EE Version:</strong> This component is more or less the same as the <em>Light Version</em>, but can be installed in <em>Icewind Dale: Enhanced Edition</em>. It provides a stripped down version of the mod consisting of the djinni Afaaq, his magical lamp and a simple storyline to spice up the adventure.<br /><em>Note: You should avoid installing this component if you plan to integrate IWD:EE into the Enhanced Edition Trilogy to minimize potential conflicts.</em><br /><br /></li>
             <li><strong>Banter accelerator:</strong> (Full Version only) Lets you control how often a conversation should be triggered by the djinni. Possible values range from 15 min. to 120 min. (Default is 60 minutes).<br /><em>Note: Only conversations between the djinni and the protagonist are affected.</em><br /><br /></li>
             <li><strong>Remove Afaaq's banter soundtrack:</strong> (Full Version only) By default, a short oriental soundtrack will be played back whenever the djinni starts a conversation with the protagonist. This component disables the soundtrack.<br /><br /></li>
             <li><strong>Alternate djinni portrait by Ulb:</strong> Choose this component if you want to replace the default portrait of the djinni Afaaq by an alternate version. (<a href="AfaaqAlternate.jpg" target="_blank">Preview</a>)<br /><br /></li>
@@ -188,6 +192,7 @@
             <br />
             <span class="t3">Q:</span><strong>Afaaq is badly hurt. What are my options to heal him?</strong><br />
             <span class="t3">A:</span>You can cast healing spells on him, like on regular party members. You can also offer your healing potions to him. If you want to do that, make sure you have any kind of healing potion in your inventory before initiating a conversation with the djinni. Select the appropriate dialog option and the djinni will quaff the potion almost immediately. The same procedure works if Afaaq is poisoned or diseased and you have any kind of remedy in your backpack.<br />
+            <strong>Note:</strong> Healing spells in IWD:EE don't work on extraplanar creatures (such as genies) anymore. You have to rely on healing potions or Afaaq's own regenerative ability in this case.<br />
             <br />
             <span class="t3">Q:</span><strong>Sometimes I see strange messages in the game console which refer to Afaaq as familiar?</strong><br />
             <span class="t3">A:</span>The messages are harmless and will only be shown whenever Afaaq tries to leave a map on his own or attempts to enter a store. Unfortunately they are hardcoded into the game itself and cannot be changed without patching the game executable.<br />
@@ -309,6 +314,25 @@
         <a name="version" id="version"></a>
         <div class="content">
           <h2>Version History</h2>
+          <h6>2016-02-06 - Version 2.2a:</h6>
+          <ul>
+            <li>Fixed missing string references in the BG2 Light Version.</li>
+          </ul>
+          <h6>2016-02-06 - Version 2.2:</h6>
+          <ul>
+            <li>Added preliminary EET support.</li>
+            <li>Added interjection to the Genie dialog in <em>"Unfinished Business -&gt; Kalah and What He Was Promised"</em>.</li>
+            <li>Nerfed Afaaq's level progression in IWD:EE somewhat.</li>
+            <li>Revised battles in the IWD:EE version.</li>
+            <li>Added a proper introduction talk to IWD:EE version of Afaaq.</li>
+            <li>Fixed a few historical inconsistencies in the IWD:EE version.</li>
+            <li>Fixed an issue (again) which sometimes prevents the party to leave the current area if the djinni returned into his lamp.</li>
+            <li>Fixed a small issue of displaying uninitialized stats when talking to Afaaq's lamp under certain circumstances.</li>
+            <li>Fixed incorrect WAV references in Afaaq's lamp interior map in the IWD:EE version which caused the game to crash.</li>
+            <li>Worked around an installation issue on tolowered games on Linux.</li>
+            <li>Added a note to the Readme that djinns are immune to healing spells cast on them in IWD:EE.</li>
+            <li>Updated compatibility section of the Readme.</li>
+          </ul>
           <h6>2015-12-16 - Version 2.1:</h6>
           <ul>
             <li>Added a storyline to the IWD:EE version of the Djinni Companion.</li>
