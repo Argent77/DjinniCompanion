@@ -675,6 +675,11 @@ COMPILE EVALUATE_BUFFER
   ~DjinniCompanion/dialogs/A7djlmp.d~
   ~DjinniCompanion/dialogs/A7AfaaqQuickMenu.d~
 
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  COMPILE EVALUATE_BUFFER
+    ~DjinniCompanion/lightversion/iwdee/A7Afaaq.d~
+END
+
 // Afaaq's default dialog file (generic) for friendship path
 COMPILE ~DjinniCompanion/dialogs/A7afaaq_generic.d~
   TEXT_SPRINT "afq_dialog" ~A7AFAAQ~
