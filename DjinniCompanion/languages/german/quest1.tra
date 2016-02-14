@@ -163,6 +163,24 @@
 @1503 = ~Warum hat Fürst Logan diese verdammten Dschinns nicht schon früher verjagt. Wenn es nach mir ginge...~
 @1504 = ~Ahh! Das ist einer von ihnen! Ich habe nur Spaß gemacht. Entschuldigt mich bitte.~
 
+// Dialog: Side-quest "Adratha's remains"
+@1550 = ~Bitte, Ihr müsst mir helfen!~
+@1551 = ~Erlöst mich aus diesen Qualen. Meine Seele ist in der dunklen Magie dieses Ortes gefangen.~
+@1552 = ~Ich flehe Euch an, Fremder. Bringt meine sterblichen Überreste fort von diesem verfluchten Ort. Bitte...~
+@1553 = ~Ich bin...war Adratha. Eines Nachts drangen diese Monster in meine Hütte ein und töteten mich auf grausame Art und Weise. Als ich wieder zu mir kam, war ich in dieser albtraumhaften Landschaft gefangen ohne einer Möglichkeit, ihr zu entfliehen.~
+@1554 = ~Seht Ihr nicht die grotesken Formen der toten Stämme, die einst stattliche Bäume waren? Spürt Ihr nicht die unerträgliche Hitze, die von dieser öden Landschaft aufsteigt?~
+@1555 = ~Bitte, Fremder! Erlöst mich aus diesen Qualen.~
+@1556 = ~Bringt meine sterblichen Überreste fort von diesem verfluchten Ort und bestattet sie in heimatlicher Erde. Vielleicht kann ich dann etwas Frieden finden.~
+@1557 = ~Wer seid Ihr?~
+@1558 = ~Wie kann ich Euch helfen?~
+@1559 = ~Ich habe keine Zeit, mich mit Geistern abzugeben.~
+@1560 = ~Aber dieser Ort sieht so wunderschön aus.~
+@1561 = ~Ich habe hier die sterblichen Überreste der Kräuterfrau Adratha. Sie bat mich, sie in heimatlicher Erde zu bestatten.~
+@1562 = ~Das habt Ihr gut gemacht. Ich kann sie entsprechend der druidischen Traditionen im Hain begraben. Das sollte ihrer gequälten Seele etwas Frieden geben.~
+@1563 = ~Bitte nehmt das als Dank.~
+@1564 = ~Ich habe hier die sterblichen Überreste der Kräuterfrau Adratha aus dem Druidenhain. Könnt Ihr ihrer Seele etwas Frieden bringen?~
+@1565 = ~Ja, das kann ich wohl. Ich werde mich persönlich darum kümmern. Ihre Überreste werden auf dem Friedhof der Stadt ihre letzte Ruhe finden.~
+@1566 = ~Als Dank für diese gute Tat gebe ich Euch diese Schriftrolle.~
 
 // Misc. strings
 @1600 = ~Adrathas Überreste~
@@ -206,3 +224,20 @@ Nachdem ich den Anführer der Rakshasas besiegt hatte, fand ich eine magische Lam
 @1820 = ~Ein Katz-und-Maus-Spiel
 
 Die magische Lampe der Rakshasas erwies sich als ein Behältnis eines eingeschlossenen Dschinns. Das ist ein kostbares Artefakt. Ich frage mich, wer so mächtig war, solch eine Kreatur zu versklaven. Hoffentlich kann der Dschinn meine Neugier befriedigen.~
+
+
+@1850 = ~Adrathas sterbliche Überreste
+
+Die gequälte Seele der Kräuterfrau Adratha kam zu mir und flehte mich an, ihre sterblichen Überreste in heimatlicher Erde beizusetzen. Vielleicht kann mit einer der Druiden oder ein Priester dabei behilflich sein.~
+
+@1851 = ~Adrathas sterbliche Überreste
+
+Die gequälte Seele der Kräuterfrau Adratha kam zu mir und flehte mich an, ihre sterblichen Überreste in heimatlicher Erde beizusetzen. Ich bin daran eigentlich nicht wirklich interessiert, aber es kann auch nicht schaden, ihrer Bitte nachzukommen. Vielleicht kann mit einer der Druiden oder ein Priester dabei behilflich sein.~
+
+@1860 = ~Adrathas sterbliche Überreste
+
+Ich habe Adrathas Überreste Meister Verthan vom Druidenhain übergeben. Er war sichtlich zufrieden und belohnte mich mit einem wertvollen magischen Trank.~
+
+@1861 = ~Adrathas sterbliche Überreste
+
+Ich habe Adrathas Überreste dem Priester im Tempel der Waukeen von Handelstreff, Übergold Renwellyn, übergeben. Er dankte mir mit einer wertvollen magischen Schutzformel.~

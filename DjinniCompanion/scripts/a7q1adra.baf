@@ -1,0 +1,34 @@
+// *** Actions for Adratha's ghost ***
+
+IF
+  !See([PC])
+  Global("AskForHelp", "LOCALS", 0)
+THEN RESPONSE #100
+  MoveToObject([PC])
+END
+
+IF
+  See([PC])
+  Global("AskForHelp", "LOCALS", 0)
+THEN RESPONSE #100
+  SetGlobal("AskForHelp", "LOCALS", 1)
+  FaceObject(LastSeenBy(Myself))
+  StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+  Global("FadeAway", "LOCALS", 1)
+THEN RESPONSE #100
+  SetInterrupt(FALSE)
+  SetGlobal("FadeAway", "LOCALS", 2)
+  CreateVisualEffectObject("SPGFLSH1",Myself)
+  SmallWait(5)
+  DestroySelf()
+  SetInterrupt(TRUE)
+END
+
+IF
+  True()
+THEN RESPONSE #100
+  DestroySelf()
+END
