@@ -1,7 +1,9 @@
 // *** Actions for Adratha's ghost ***
 
 IF
-  !See([PC])
+  OR(2)
+    !See([PC])
+    !Range([PC], 15)
   Global("AskForHelp", "LOCALS", 0)
 THEN RESPONSE #100
   MoveToObject([PC])
@@ -9,6 +11,7 @@ END
 
 IF
   See([PC])
+  Range([PC], 15)
   Global("AskForHelp", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobal("AskForHelp", "LOCALS", 1)
