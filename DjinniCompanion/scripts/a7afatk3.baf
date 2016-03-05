@@ -147,6 +147,7 @@ END
 
 // Improved Afaaq keeps himself hasted
 IF
+  ActionListEmpty()
   Global("A7AfaaqUpgraded", "GLOBAL", 1)
   Global("A7AfaaqGaseous", "GLOBAL", 0)
   Global("AfaaqActiveHaste", "LOCALS", 1)
