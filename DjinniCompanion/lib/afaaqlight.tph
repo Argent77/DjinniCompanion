@@ -5,7 +5,7 @@ INCLUDE ~DjinniCompanion/lib/afaaq_cut.tph~
 
 // BG2EE-specific stuff
 ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
-  OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/bg2ee/a7clamp.bmp"
+  OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/bg2ee/a7clamp.bam"
   OUTER_TEXT_SPRINT ITEM_ILAMP "DjinniCompanion/items/bg2ee/a7ilamp.bam"
   OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/bg2ee/a7afaaqs.bmp"
 END ELSE BEGIN

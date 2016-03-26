@@ -3,10 +3,10 @@
 // BG2EE-specific stuff
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_RAKPRS "DjinniCompanion/portraits/bg2ee/a7rakprs.bmp"
-  OUTER_TEXT_SPRINT ITEM_CWS1 "DjinniCompanion/items/bg2ee/a7q2cws1.bmp"
-  OUTER_TEXT_SPRINT ITEM_CWS2 "DjinniCompanion/items/bg2ee/a7q2cws2.bmp"
-  OUTER_TEXT_SPRINT ITEM_CWS3 "DjinniCompanion/items/bg2ee/a7q2cws3.bmp"
-  OUTER_TEXT_SPRINT ITEM_CWS4 "DjinniCompanion/items/bg2ee/a7q2cws4.bmp"
+  OUTER_TEXT_SPRINT ITEM_CWS1 "DjinniCompanion/items/bg2ee/a7q2cws1.bam"
+  OUTER_TEXT_SPRINT ITEM_CWS2 "DjinniCompanion/items/bg2ee/a7q2cws2.bam"
+  OUTER_TEXT_SPRINT ITEM_CWS3 "DjinniCompanion/items/bg2ee/a7q2cws3.bam"
+  OUTER_TEXT_SPRINT ITEM_CWS4 "DjinniCompanion/items/bg2ee/a7q2cws4.bam"
 END ELSE BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_RAKPRS "DjinniCompanion/portraits/a7rakprs.bmp"
   OUTER_TEXT_SPRINT ITEM_CWS1 "DjinniCompanion/items/a7q2cws1.bam"

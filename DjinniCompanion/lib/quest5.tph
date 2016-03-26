@@ -9,10 +9,10 @@ INCLUDE ~DjinniCompanion/lib/a77003.tph~
 
 // BG2EE-specific stuff
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
-  OUTER_TEXT_SPRINT ITEM_CFLUTE "DjinniCompanion/items/bg2ee/a7cflute.bmp"
-  OUTER_TEXT_SPRINT ITEM_CMISC8 "DjinniCompanion/items/bg2ee/a7cmisc8.bmp"
-  OUTER_TEXT_SPRINT ITEM_CMISCB "DjinniCompanion/items/bg2ee/a7cmiscb.bmp"
-  OUTER_TEXT_SPRINT ITEM_CWAND2 "DjinniCompanion/items/bg2ee/a7cwand2.bmp"
+  OUTER_TEXT_SPRINT ITEM_CFLUTE "DjinniCompanion/items/bg2ee/a7cflute.bam"
+  OUTER_TEXT_SPRINT ITEM_CMISC8 "DjinniCompanion/items/bg2ee/a7cmisc8.bam"
+  OUTER_TEXT_SPRINT ITEM_CMISCB "DjinniCompanion/items/bg2ee/a7cmiscb.bam"
+  OUTER_TEXT_SPRINT ITEM_CWAND2 "DjinniCompanion/items/bg2ee/a7cwand2.bam"
   OUTER_TEXT_SPRINT PORTRAIT_KARIMS "DjinniCompanion/portraits/bg2ee/a7karims.bmp"
   OUTER_TEXT_SPRINT PORTRAIT_MALIKS "DjinniCompanion/portraits/bg2ee/a7maliks.bmp"
 END ELSE BEGIN

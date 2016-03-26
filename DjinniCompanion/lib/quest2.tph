@@ -5,7 +5,7 @@ INCLUDE ~DjinniCompanion/lib/quest2_triggers.tph~
 
 // BG2EE-specific stuff
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
-  OUTER_TEXT_SPRINT ITEM_CHELM1 "DjinniCompanion/items/bg2ee/a7chelm1.bmp"
+  OUTER_TEXT_SPRINT ITEM_CHELM1 "DjinniCompanion/items/bg2ee/a7chelm1.bam"
   OUTER_TEXT_SPRINT ITEM_IMISC3 "DjinniCompanion/items/bg2ee/a7imisc3.bam"
 END ELSE BEGIN
   OUTER_TEXT_SPRINT ITEM_CHELM1 "DjinniCompanion/items/a7chelm1.bam"

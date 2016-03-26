@@ -5,7 +5,7 @@ INCLUDE ~DjinniCompanion/lib/a77001.tph~
 
 // BG2EE-specific stuff
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
-  OUTER_TEXT_SPRINT ITEM_CMISC1 "DjinniCompanion/items/bg2ee/a7cmisc1.bmp"
+  OUTER_TEXT_SPRINT ITEM_CMISC1 "DjinniCompanion/items/bg2ee/a7cmisc1.bam"
   OUTER_TEXT_SPRINT ITEM_IMISC1 "DjinniCompanion/items/bg2ee/a7imisc1.bam"
 END ELSE BEGIN
   OUTER_TEXT_SPRINT ITEM_CMISC1 "DjinniCompanion/items/a7cmisc1.bam"
