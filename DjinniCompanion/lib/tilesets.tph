@@ -1,29 +1,53 @@
-// *** Installation of compressed TIS and MOS files (Full Version) ***
+// *** Installation of TIS and MOS files (Full Version) ***
 
-ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
-  OUTER_TEXT_SPRINT script_mos ~install_mos_ee~
-END ELSE BEGIN
-  OUTER_TEXT_SPRINT script_mos ~install_mos~
-END
+INCLUDE ~DjinniCompanion/lib/a7_tools.tpa~
 
-ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) BEGIN
-  AT_NOW ~DjinniCompanion/tools/install_tis-win32.bat~
-  AT_NOW ~DjinniCompanion/tools/%script_mos%-win32.bat~
-  AT_INTERACTIVE_UNINSTALL ~DjinniCompanion/tools/uninstall-win32.bat~
-END ELSE BEGIN
-  ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~osx~) BEGIN
-    AT_NOW ~sh DjinniCompanion/tools/install_tis-osx.sh~
-    AT_NOW ~sh DjinniCompanion/tools/%script_mos%-osx.sh~
-  END ELSE ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~unix~) BEGIN
-    ACTION_IF (~%WEIDU_ARCH%~ STRING_EQUAL_CASE ~amd64~) BEGIN
-      AT_NOW ~sh DjinniCompanion/tools/install_tis-linux64.sh~
-      AT_NOW ~sh DjinniCompanion/tools/%script_mos%-linux64.sh~
-    END ELSE BEGIN
-      AT_NOW ~sh DjinniCompanion/tools/install_tis-linux32.sh~
-      AT_NOW ~sh DjinniCompanion/tools/%script_mos%-linux32.sh~
+ACTION_IF (GAME_IS ~tob bgt~) BEGIN
+  // original games
+
+  // installing MOS
+  COPY ~DjinniCompanion/areas/a77001.mos~ ~override~
+       ~DjinniCompanion/areas/a77002.mos~ ~override~
+       ~DjinniCompanion/areas/a77003.mos~ ~override~
+       ~DjinniCompanion/areas/a77004.mos~ ~override~
+       ~DjinniCompanion/areas/a77005.mos~ ~override~
+       ~DjinniCompanion/areas/a77006.mos~ ~override~
+       ~DjinniCompanion/areas/ar2200.mos~ ~override~
+
+  // installing TIS
+  ACTION_FOR_EACH file IN ~a77002.tis~ ~a77003.tis~ ~a77004.tis~ ~a77005.tis~ ~a77006.tis~ BEGIN
+    LAF HANDLE_TILE2EE
+      INT_VAR
+        silent = 0  // show feedback
+      STR_VAR
+        input_path = EVAL ~DjinniCompanion/areas/%file%~
+      RET
+        num_converted
     END
-  END ELSE BEGIN
-    FAIL ~Unsupported or unrecognized operating system.~
+    ACTION_IF (num_converted != 1) BEGIN
+      FAIL ~Error converting %file%~
+    END
   END
-  AT_INTERACTIVE_UNINSTALL ~sh DjinniCompanion/tools/uninstall-unix.sh~
+END ELSE BEGIN
+  // Enhanced Editions
+
+  // installing MOS (only needed for pre-v2.0 patched games)
+  ACTION_FOR_EACH file IN ~a77001.mos~ ~a77002.mos~ ~a77003.mos~ ~a77004.mos~ ~a77005.mos~ ~a77006.mos~ ~ar2200.mos~ BEGIN
+    COPY ~DjinniCompanion/areas/bg2ee/%file%~ ~override~
+      LPF UPDATE_PVRZ_INDICES RET original_base_index new_base_index END
+
+    ACTION_IF (original_base_index >= 0 && new_base_index >= 0) BEGIN
+      LAF INSTALL_PVRZ INT_VAR original_base_index new_base_index STR_VAR source_file = EVAL ~DjinniCompanion/areas/bg2ee/mos%original_base_index%.pvrz~ END
+    END
+  END
+
+  // installing TIS
+  COPY ~DjinniCompanion/areas/a77002.tis~ ~override~
+       ~DjinniCompanion/areas/a77003.tis~ ~override~
+       ~DjinniCompanion/areas/a77004.tis~ ~override~
+       ~DjinniCompanion/areas/a77005.tis~ ~override~
+       ~DjinniCompanion/areas/a77006.tis~ ~override~
+  ACTION_BASH_FOR  ~DjinniCompanion/areas~ ~^a7.*\.pvrz$~ BEGIN
+    COPY ~%BASH_FOR_FILESPEC%~ ~override~
+  END
 END
