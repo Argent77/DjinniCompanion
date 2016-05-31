@@ -13,6 +13,17 @@ THEN RESPONSE #100
   Continue()
 END
 
+// disable the entrance after drow disguise ended
+IF
+  Global("A7Quest3Entrance", "AR2100", 1)
+  Global("PlayerLooksLikeDrow", "GLOBAL", 0)
+THEN RESPONSE #100
+    SetGlobal("A7Quest3Entrance", "AR2100", 2)
+    TriggerActivation("A7Tran05", FALSE)
+    TriggerActivation("A7Info05", TRUE)
+    Continue()
+END
+
 // Activate map marker
 IF
   OR(2)
