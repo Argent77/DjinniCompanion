@@ -2511,13 +2511,13 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.FixStates.1
     SAY @10467 /* I will attempt to do so. Please wait a moment. */
     = @10468 /* ... */
-    IF ~~ DO ~SetGlobal("A7AfaaqSummoned", "GLOBAL", 1) SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) ApplySpellRES("A7MISTC", Myself) ChangeEnemyAlly(Myself, FAMILIAR)~ + TalkGeneric.FixStates.2
+    IF ~~ DO ~SetGlobal("A7AfaaqSummoned", "GLOBAL", 1) SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) SetGlobal("BanterActive", "LOCALS", 0) ApplySpellRES("A7MISTC", Myself) ChangeEnemyAlly(Myself, FAMILIAR)~ + TalkGeneric.FixStates.2
   END
 
   IF ~~ TalkGeneric.FixStates.1a
     SAY @10467 /* I will attempt to do so. Please wait a moment. */
     = @10468 /* ... */
-    IF ~~ DO ~SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) ChangeEnemyAlly(Myself, FAMILIAR)~ + TalkGeneric.FixStates.2
+    IF ~~ DO ~SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) SetGlobal("BanterActive", "LOCALS", 0) ChangeEnemyAlly(Myself, FAMILIAR)~ + TalkGeneric.FixStates.2
   END
 
   IF ~~ TalkGeneric.FixStates.2
