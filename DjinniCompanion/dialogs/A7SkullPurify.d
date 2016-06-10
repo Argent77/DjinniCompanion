@@ -167,8 +167,7 @@ APPEND AMCLER02
   END
 
   IF ~~ A7AmPriest.4c
-    SAY @6211 /* Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of Good however, so I will make an exception. */
-    = @6212 /* To neutralize an evil of this scale I need a vial of potent Elven Holy Water. The ritual itself is very draining, so I have to ask for a modest fee of 5000 gold as well. Are you still interested? */
+    SAY @6212 /* To neutralize an evil of this scale I need a vial of potent Elven Holy Water. The ritual itself is very draining, so I have to ask for a modest fee of 5000 gold as well. Are you still interested? */
     + ~PartyGoldGT(4999) PartyHasItem("miscau")~ + @6204 /* Yes, please do it. Here is the money and a vial of holy water. */ + A7AmPriest.9
     + ~PartyGoldLT(5000) !PartyHasItem("miscau")~ + @6205 /* I don't have anything you need with me right now. Maybe another time. */ EXIT
     + ~PartyGoldLT(5000) PartyHasItem("miscau")~ + @6206 /* Unfortunately I don't have enough money for the ritual. Maybe another time. */ EXIT
