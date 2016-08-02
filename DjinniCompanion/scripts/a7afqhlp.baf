@@ -78,6 +78,7 @@ IF
 THEN RESPONSE #100
   SetGlobal("A7AfaaqRequested", "GLOBAL", 0)
   MoveViewObject("A7Afaaq", INSTANT)
+  ClickLButtonObject("A7Afaaq", INSTANT)  // Attempt to select the djinni
   DisplayStringNoName(Myself, @60011)    // You have already summoned the djinni.
   DestroySelf()
 END
