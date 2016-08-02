@@ -45,9 +45,9 @@ IF ~~ TalkIntro.1
   SAY @11170 /* The pleasure is all mine. */
   + ~CheckStatLT(Player1, 10, WIS)~ + @11171 /* Are you the proverbial djinni in a...lamp? */ + TalkIntro.4
   + ~CheckStatGT(Player1, 9, WIS)~ + @11172 /* How did you come to be bound to this lamp? */ + TalkIntro.5
-  + ~GlobalLT("Chapter", "GLOBAL", 4)~ + @11173 /* Please excuse my lack of manners, but I still have a wizard to catch. */ + TalkIntro.6
-  + ~GlobalLT("Chapter", "GLOBAL", 4) Global("A7Q1AfaaqRewarded", "GLOBAL", 0)~ + @11174 /* We should move on, Afaaq. I have yet another companion to free from her captors. */ + TalkIntro.6
-  + ~GlobalGT("Chapter", "GLOBAL", 4) GlobalLT("Chapter", "GLOBAL", 8)~ + @11175 /* Please excuse my lack of manners, but I'm in a hurry to reclaim my soul. */ + TalkIntro.6
+  + ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%)~ + @11173 /* Please excuse my lack of manners, but I still have a wizard to catch. */ + TalkIntro.6
+  + ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%) Global("A7Q1AfaaqRewarded", "GLOBAL", 0)~ + @11174 /* We should move on, Afaaq. I have yet another companion to free from her captors. */ + TalkIntro.6
+  + ~GlobalGT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalLT("Chapter", "GLOBAL", %bg2_chapter_8%)~ + @11175 /* Please excuse my lack of manners, but I'm in a hurry to reclaim my soul. */ + TalkIntro.6
   ++ @11176 /* Well then, let's go! */ + TalkIntro.6
 END
 
@@ -55,9 +55,9 @@ IF ~~ TalkIntro.2
   SAY @11177 /* You are a cautious one. But I have no intention to harm you. */
   + ~CheckStatLT(Player1, 10, WIS)~ + @11171 /* Are you the proverbial djinni in a...lamp? */ + TalkIntro.4
   + ~CheckStatGT(Player1, 9, WIS)~ + @11172 /* How did you come to be bound to this lamp? */ + TalkIntro.5
-  + ~GlobalLT("Chapter", "GLOBAL", 4)~ + @11173 /* Please excuse my lack of manners, but I still have a wizard to catch. */ + TalkIntro.6
-  + ~GlobalLT("Chapter", "GLOBAL", 4) Global("A7Q1AfaaqRewarded", "GLOBAL", 0)~ + @11174 /* We should move on, Afaaq. I have yet another companion to free from her captors. */ + TalkIntro.6
-  + ~GlobalGT("Chapter", "GLOBAL", 4) GlobalLT("Chapter", "GLOBAL", 8)~ + @11175 /* Please excuse my lack of manners, but I'm in a hurry to reclaim my soul. */ + TalkIntro.6
+  + ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%)~ + @11173 /* Please excuse my lack of manners, but I still have a wizard to catch. */ + TalkIntro.6
+  + ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%) Global("A7Q1AfaaqRewarded", "GLOBAL", 0)~ + @11174 /* We should move on, Afaaq. I have yet another companion to free from her captors. */ + TalkIntro.6
+  + ~GlobalGT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalLT("Chapter", "GLOBAL", %bg2_chapter_8%)~ + @11175 /* Please excuse my lack of manners, but I'm in a hurry to reclaim my soul. */ + TalkIntro.6
   ++ @11176 /* Well then, let's go! */ + TalkIntro.6
 END
 
@@ -65,8 +65,8 @@ IF ~~ TalkIntro.3
   SAY @11178 /* As you wish. */
   + ~CheckStatLT(Player1, 10, WIS)~ + @11171 /* Are you the proverbial djinni in a...lamp? */ + TalkIntro.4
   + ~CheckStatGT(Player1, 9, WIS)~ + @11172 /* How did you come to be bound to this lamp? */ + TalkIntro.5
-  + ~GlobalLT("Chapter", "GLOBAL", 4)~ + @11179 /* We should move on, Afaaq. I still have a wizard to catch. */ + TalkIntro.6
-  + ~GlobalGT("Chapter", "GLOBAL", 4) GlobalLT("Chapter", "GLOBAL", 8)~ + @11180 /* We should move on, Afaaq. I still have a soul to reclaim. */ + TalkIntro.6
+  + ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%)~ + @11179 /* We should move on, Afaaq. I still have a wizard to catch. */ + TalkIntro.6
+  + ~GlobalGT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalLT("Chapter", "GLOBAL", %bg2_chapter_8%)~ + @11180 /* We should move on, Afaaq. I still have a soul to reclaim. */ + TalkIntro.6
   ++ @11176 /* Well then, let's go! */ + TalkIntro.6
 END
 

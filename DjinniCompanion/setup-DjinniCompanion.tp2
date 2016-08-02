@@ -3,6 +3,8 @@ AUTHOR ~Argent77 at Spellhold Studios~
 VERSION ~v2.3~
 
 ALWAYS
+  INCLUDE ~DjinniCompanion/lib/eet.tph~
+
   ACTION_DEFINE_ARRAY a7noconvert BEGIN setup bg2ee iwdee END
   ACTION_DEFINE_ARRAY a7reload BEGIN afaaq misc quest1 quest2 quest3 quest4 quest5 END
   LAF HANDLE_CHARSETS

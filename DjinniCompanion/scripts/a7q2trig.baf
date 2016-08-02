@@ -25,7 +25,7 @@ IF
     !PartyHasItem("misc8u")
     GlobalGT("KruinTalked", "GLOBAL", 0)
   OR(3)                    // don't interfere with the vampire quest
-    Global("Chapter", "GLOBAL", 6)
+    Global("Chapter", "GLOBAL", %bg2_chapter_6%)
     GlobalGT("VampShadWar", "GLOBAL", 5)
     !TimeOfDay(NIGHT)
   !StateCheck(Player1, CD_STATE_NOTVALID)

@@ -64,7 +64,7 @@ EXIT
 
 
 // Banter #3 (after CHARNAME has gotten back his soul)
-// CHAIN IF ~Name("Cernd", LastTalkedToBy) GlobalGT("Chapter", "GLOBAL", 7) Global("BanterActive", "LOCALS", 1) Global("A7BanterCernd", "GLOBAL", 2)~ THEN A7AFAAQ Cernd.2
+// CHAIN IF ~Name("Cernd", LastTalkedToBy) GlobalGT("Chapter", "GLOBAL", %bg2_chapter_7%) Global("BanterActive", "LOCALS", 1) Global("A7BanterCernd", "GLOBAL", 2)~ THEN A7AFAAQ Cernd.2
   // ~(TODO: Afaaq praises Cernd for his steadfast loyalty to <CHARNAME> during his search for <PRO_HISHER> soul, and reminds him that he shouldn't forget his own obligations for the well-being of his son...)~ DO ~SetGlobal("A7BanterCernd", "GLOBAL", 3)~
   // == BCERND25 ~Cernd thanks Afaaq for his concern, but tells him that his task isn't over until the Bhaalspawn saga hasn't been solved completely.~
   // == A7AFAAQ ~Afaaq tells him that he can't take care of everything by himself and the Bhaalspawn saga will be solved even without his active involvement. He suggests Cernd to think about it and set his priorities accordingly.~

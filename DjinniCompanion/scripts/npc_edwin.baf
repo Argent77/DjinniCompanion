@@ -41,7 +41,7 @@ END
   // PartyRested()
   // HasItem("A7DJLMP", Player1)
   // InParty(Myself)
-  // GlobalGT("Chapter", "GLOBAL", 5)
+  // GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
   // Global("EnteredAR2806", "GLOBAL", 0)    // can be triggered until reaching the Tree of Life
   // Global("A7AfaaqSummoned", "GLOBAL", 0)
   // Global("A7EdwinTakesControl", "GLOBAL", 1)
@@ -60,7 +60,7 @@ END
   // Detect("A7Afaaq")
   // HasItem("A7DJLMP", Player1)
   // InParty(Myself)
-  // GlobalGT("Chapter", "GLOBAL", 5)
+  // GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
   // Global("EnteredAR2806", "GLOBAL", 0)      // can be triggered until reaching the Tree of Life
   // Global("A7AfaaqSummoned", "GLOBAL", 1)
   // Global("A7EdwinTakesControl", "GLOBAL", 1)

@@ -52,7 +52,7 @@ END
 
 // Mark Quest as finished after leaving Underdark
 IF
-  GlobalGT("Chapter", "GLOBAL", 5)
+  GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
   Global("Quest3Finished", "A77005", 0)
 THEN RESPONSE #100
   SetGlobal("Quest3Finished", "A77005", 1)

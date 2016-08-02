@@ -379,16 +379,16 @@ APPEND %afq_dialog%
            AreaCheck("AR6106") AreaCheck("AR6107") AreaCheck("AR6109") AreaCheck("AR6110") AreaCheck("AR6111") !Dead("sendai") RandomNum(4, 2)~ + TalkGeneric.Advice.AR6101.2    // Sendai's Enclave
 
     // situation-specific tips (max. 15% chance)
-    IF ~GlobalLT("Chapter", "GLOBAL", 4) RandomNum(28, 1)~ + TalkGeneric.Advice.Specific.FollowIrenicus.1    // CHARNAME follows Irenicus and abducted Imoen
-    IF ~GlobalLT("Chapter", "GLOBAL", 4) RandomNum(28, 2)~ + TalkGeneric.Advice.Specific.FollowIrenicus.2    // CHARNAME follows Irenicus and abducted Imoen
-    IF ~GlobalLT("Chapter", "GLOBAL", 4) GlobalGT("WorkingForAran", "GLOBAL", 0) RandomNum(28, 3)~ + TalkGeneric.Advice.Specific.ShadowThieves.1    // CHARNAME joins the Shadow Thieves
-    IF ~GlobalLT("Chapter", "GLOBAL", 4) GlobalGT("WorkingForAran", "GLOBAL", 0) GlobalGT("AranJob", "GLOBAL", 0) GlobalLT("AranJob", "GLOBAL", 3) RandomNum(28, 4)~ + TalkGeneric.Advice.Specific.ShadowThieves.2    // CHARNAME joins the Shadow Thieves (while working for them)
-    IF ~GlobalLT("Chapter", "GLOBAL", 4) GlobalGT("WorkingForBodhi", "GLOBAL", 0) RandomNum(28, 3)~ + TalkGeneric.Advice.Specific.Bodhi.1    // CHARNAME joins Bodhi
-    IF ~GlobalGT("Chapter", "GLOBAL", 4) GlobalLT("Chapter", "GLOBAL", 7) RandomNum(20, 1)~ + TalkGeneric.Advice.Specific.LostSoul.1    // CHARNAME has lost his soul
-    IF ~GlobalGT("Chapter", "GLOBAL", 4) GlobalLT("Chapter", "GLOBAL", 7) RandomNum(20, 2)~ + TalkGeneric.Advice.Specific.LostSoul.2    // CHARNAME has lost his soul
-    IF ~GlobalGT("Chapter", "GLOBAL", 4) GlobalLT("Chapter", "GLOBAL", 7) Global("A7TalkAboutLostSoul", "GLOBAL", 0) RandomNum(20, 3)~ + TalkGeneric.Advice.Specific.LostSoul.3    // CHARNAME has lost his soul
-    IF ~Global("Chapter", "GLOBAL", 6) RandomNum(16, 1)~ + TalkGeneric.Advice.Specific.IrenicusGoal.1    // CHARNAME knows about Irenicus' true intent
-    IF ~Global("Chapter", "GLOBAL", 6) RandomNum(16, 2)~ + TalkGeneric.Advice.Specific.IrenicusGoal.2    // CHARNAME knows about Irenicus' true intent
+    IF ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%) RandomNum(28, 1)~ + TalkGeneric.Advice.Specific.FollowIrenicus.1    // CHARNAME follows Irenicus and abducted Imoen
+    IF ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%) RandomNum(28, 2)~ + TalkGeneric.Advice.Specific.FollowIrenicus.2    // CHARNAME follows Irenicus and abducted Imoen
+    IF ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalGT("WorkingForAran", "GLOBAL", 0) RandomNum(28, 3)~ + TalkGeneric.Advice.Specific.ShadowThieves.1    // CHARNAME joins the Shadow Thieves
+    IF ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalGT("WorkingForAran", "GLOBAL", 0) GlobalGT("AranJob", "GLOBAL", 0) GlobalLT("AranJob", "GLOBAL", 3) RandomNum(28, 4)~ + TalkGeneric.Advice.Specific.ShadowThieves.2    // CHARNAME joins the Shadow Thieves (while working for them)
+    IF ~GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalGT("WorkingForBodhi", "GLOBAL", 0) RandomNum(28, 3)~ + TalkGeneric.Advice.Specific.Bodhi.1    // CHARNAME joins Bodhi
+    IF ~GlobalGT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalLT("Chapter", "GLOBAL", %bg2_chapter_7%) RandomNum(20, 1)~ + TalkGeneric.Advice.Specific.LostSoul.1    // CHARNAME has lost his soul
+    IF ~GlobalGT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalLT("Chapter", "GLOBAL", %bg2_chapter_7%) RandomNum(20, 2)~ + TalkGeneric.Advice.Specific.LostSoul.2    // CHARNAME has lost his soul
+    IF ~GlobalGT("Chapter", "GLOBAL", %bg2_chapter_4%) GlobalLT("Chapter", "GLOBAL", %bg2_chapter_7%) Global("A7TalkAboutLostSoul", "GLOBAL", 0) RandomNum(20, 3)~ + TalkGeneric.Advice.Specific.LostSoul.3    // CHARNAME has lost his soul
+    IF ~Global("Chapter", "GLOBAL", %bg2_chapter_6%) RandomNum(16, 1)~ + TalkGeneric.Advice.Specific.IrenicusGoal.1    // CHARNAME knows about Irenicus' true intent
+    IF ~Global("Chapter", "GLOBAL", %bg2_chapter_6%) RandomNum(16, 2)~ + TalkGeneric.Advice.Specific.IrenicusGoal.2    // CHARNAME knows about Irenicus' true intent
     IF ~Global("TalkedSarMel01", "GLOBAL", 1) !Dead("gromnir") RandomNum(24, 1)~ + TalkGeneric.Advice.Specific.Melissan.1    // speculating about Melissan and her plans (before Gromnir's defeat)
     IF ~Dead("yaga01") OR(2) !Dead("abazigal") !Dead("sendai") Global("A7TalkAboutMelissan", "GLOBAL", 0) RandomNum(24, 2)~ + TalkGeneric.Advice.Specific.Melissan.2    // speculating about Melissan and her plans (after Yaga-Shura is dead)
     IF ~Dead("abazigal") Dead("sendai") !Dead("balth") RandomNum(24, 3)~ + TalkGeneric.Advice.Specific.Melissan.3    // speculating about Melissan and her plans (after CHARNAME saw a vision of Melissan being detained)

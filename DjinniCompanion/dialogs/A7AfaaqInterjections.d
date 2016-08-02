@@ -41,7 +41,7 @@ END
 
 // SoA: Trademeet fortuneteller
 EXTEND_BOTTOM TRGYP02 2
-  IF ~Race(LastTalkedToBy, GENIE) Name("A7Afaaq", LastTalkedToBy) GlobalLT("Chapter", "GLOBAL", 6)~ + Gypsy.Fortune.1
+  IF ~Race(LastTalkedToBy, GENIE) Name("A7Afaaq", LastTalkedToBy) GlobalLT("Chapter", "GLOBAL", %bg2_chapter_6%)~ + Gypsy.Fortune.1
 END
 
 CHAIN TRGYP02 Gypsy.Fortune.1
