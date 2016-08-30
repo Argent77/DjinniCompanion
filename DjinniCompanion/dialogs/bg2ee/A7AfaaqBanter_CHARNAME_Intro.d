@@ -3776,7 +3776,7 @@ APPEND YOSHJ
     //SAY ~If you're having trouble in dealing with my fellow townspeople, I'll gladly help you out.~
     SAY @58320 /* Don't be shy to ask for help, if you're having trouble in dealing with my fellow townspeople. I'll gladly help you out. */
     IF ~~ EXTERN A7AFAAQ PCIntro.Party.Members.NPC
-    IF ~Global("InToB", "GLOBAL", 0) InParty("Aerie") Global("A7BanterIntroAerie", "GLOBAL", 1)~ EXTERN A7AFAAQ PCIntro.Party.Members.Aerie
+    IF ~Global("InToB", "GLOBAL", 0) InParty("Aerie") Global("A7BanterIntroAerie", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Aerie
     IF ~Global("InToB", "GLOBAL", 0) InParty("Keldorn") Global("A7BanterIntroKeldorn", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Keldorn
     IF ~Global("InToB", "GLOBAL", 0) InParty("Mazzy") Global("A7BanterIntroMazzy", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Mazzy
     IF ~Global("InToB", "GLOBAL", 0) InParty("Imoen2") Global("A7BanterIntroImoen", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Imoen
@@ -4947,7 +4947,7 @@ END
   // IF ~~ PCIntro.Party.Keto.1
     // SAY ~I guess I have to, considering that I am now part of <CHARNAME>'s party, the hero of the Sword Coast.~
     // IF ~~ EXTERN A7AFAAQ PCIntro.Party.Members.NPC
-    // IF ~Global("InToB", "GLOBAL", 0) InParty("Aerie") Global("A7BanterIntroAerie", "GLOBAL", 1)~ EXTERN A7AFAAQ PCIntro.Party.Members.Aerie
+    // IF ~Global("InToB", "GLOBAL", 0) InParty("Aerie") Global("A7BanterIntroAerie", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Aerie
     // IF ~Global("InToB", "GLOBAL", 0) InParty("Keldorn") Global("A7BanterIntroKeldorn", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Keldorn
     // IF ~Global("InToB", "GLOBAL", 0) InParty("Mazzy") Global("A7BanterIntroMazzy", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Mazzy
     // IF ~Global("InToB", "GLOBAL", 0) InParty("Imoen2") Global("A7BanterIntroImoen", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.Members.Imoen
