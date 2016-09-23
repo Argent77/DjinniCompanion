@@ -1935,6 +1935,9 @@ Im Laufe vieler Jahrtausende hatte Afaaq Gelegenheit, enorme Kenntnisse über Ort
 @60107 = ~~ [A7SFX02]
 @60108 = ~~ [A7SFX05]
 @60109 = ~Kontrolliert~
+@60110 = ~Vertraute und Anhänger können Gebiete nicht ohne Gruppenmitglieder betreten.~
+@60111 = ~Vertraute und Anhänger können alleine keine Läden betreten.~
+@60112 = ~Vertraute und Anhänger können keine Gegenstände aufheben.~
 
 // Afaaq's Epilogues
 @64090 = ~Afaaq setzte seine Reise mit <CHARNAME> fort, die sie durch halb Faerûn führte. Sie besiegten Überfalltrupps der Sahuagin an der westlichen Grenze von Tethyr und schlugen einen Angriff der Frostriesen in Luskan und den umgebenden Siedlungen zurück.

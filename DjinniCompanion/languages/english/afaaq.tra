@@ -1937,6 +1937,10 @@ Over the course of many millennia Afaaq accumulated a vast amount of knowledge a
 @60107 = ~~ [A7SFX02]
 @60108 = ~~ [A7SFX05]
 @60109 = ~Controlled~
+@60110 = ~Familiars and followers cannot enter areas without party members.~
+@60111 = ~Familiars and followers cannot enter stores.~
+@60112 = ~Familiars and followers cannot pick up items.~
+
 
 // Afaaq's Epilogues
 @64090 = ~Afaaq continued his journey with <CHARNAME> which took them halfway across Faerûn and back. They defeated raiding parties of sahuagin on the western borders of Tethyr and pushed back an invasion of frost giants threatening Luskan and the surrounding settlements.
