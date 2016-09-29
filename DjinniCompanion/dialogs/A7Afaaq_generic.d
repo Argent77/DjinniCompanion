@@ -280,6 +280,22 @@ APPEND %afq_dialog%
     IF ~AreaType(CITY) RandomNum(8, 4)~ + TalkGeneric.Advice.City.4
 
     // area-specific tips (max. 50% chance)
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
+        OR(9) AreaCheck("BG0100") AreaCheck("BG0200") AreaCheck("BG0300") AreaCheck("BG0600") AreaCheck("BG0700") 
+              AreaCheck("BG0800") AreaCheck("BG1100") AreaCheck("BG1200") AreaCheck("BG1300")~ + TalkGeneric.Advice.BG1.City.1  // Baldur's Gate City (EET-specific)
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
+        OR(6) AreaCheck("BG1000") AreaCheck("BG2300") AreaCheck("BG3300") AreaCheck("BG4000") AreaCheck("BG4800") AreaCheck("BG4900") ~ + TalkGeneric.Advice.BG1.Town.1   // Generic BG1 town (EET-specific)
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
+        OR(38) AreaCheck("BG0400") AreaCheck("BG0500") AreaCheck("BG0900") AreaCheck("BG1400") AreaCheck("BG1600") AreaCheck("BG1700") AreaCheck("BG1800") AreaCheck("BG1900") 
+               AreaCheck("BG2100") AreaCheck("BG2200") AreaCheck("BG2400") AreaCheck("BG2600") AreaCheck("BG2626") AreaCheck("BG2700") AreaCheck("BG2800") AreaCheck("BG2900") 
+               AreaCheck("BG3000") AreaCheck("BG3100") AreaCheck("BG3200") AreaCheck("BG3400") AreaCheck("BG3500") AreaCheck("BG3600") AreaCheck("BG3700") AreaCheck("BG3800") 
+               AreaCheck("BG3900") AreaCheck("BG4100") AreaCheck("BG4200") AreaCheck("BG4300") AreaCheck("BG4400") AreaCheck("BG4500") AreaCheck("BG4600") AreaCheck("BG4700") 
+               AreaCheck("BG5000") AreaCheck("BG5100") AreaCheck("BG5200") AreaCheck("BG5300") AreaCheck("BG5400") AreaCheck("BG5500")~ + TalkGeneric.Advice.BG1.Country.1  // BG1 countryside (EET-specific)
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
+        OR(9) AreaCheck("BD1000") AreaCheck("BD2000") AreaCheck("BD3000") AreaCheck("BD5000") AreaCheck("BD7000") 
+              AreaCheck("BD7100") AreaCheck("BD7200") AreaCheck("BD7300") AreaCheck("BD7400")~ + TalkGeneric.Advice.SOD.Map.1  // Generic SoD maps (EET-specific)
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
+        OR(3) AreaCheck("BD4000") AreaCheck("BD4100") AreaCheck("BD4300")~ + TalkGeneric.Advice.SOD.Castle.1  // SoD Castle Dragonspear (EET-specific)
     IF ~AreaCheck("AR0020") OR(2) TimeGT(20) TimeLT(6) RandomNum(4, 1)~ + TalkGeneric.Advice.AR0020.1    // City Gates (Night)
     IF ~AreaCheck("AR0020") RandomNum(4, 2)~ + TalkGeneric.Advice.AR0020.2    // City Gates
     IF ~AreaCheck("AR0201") RandomNum(2, 1)~ + TalkGeneric.Advice.AR0201.1    // Niche below the Cult of the Eyeless
@@ -559,6 +575,37 @@ APPEND %afq_dialog%
   END
 
   // Area-specific tips
+  IF ~~ TalkGeneric.Advice.BG1.City.1   // Baldur's Gate City (EET-specific)
+    SAY @10587 /* I have heard many stories about Baldur's Gate while I roamed this plane. Despite being situated in the more untamed parts of the world it has weathered past trials and crises remarkably well. */
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.Lamp.PC.2
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 1)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.PC.1
+  END
+
+  IF ~~ TalkGeneric.Advice.BG1.Town.1   // Generic BG1 town (EET-specific)
+    SAY @10588 /* The settlements in the northern parts of Faerûn feel empty and quiet compared to Calimshan. Even the smallest Calishite village is full of bustling activity. */
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.Lamp.PC.2
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 1)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.PC.1
+  END
+
+  IF ~~ TalkGeneric.Advice.BG1.Country.1    // BG1 countryside (EET-specific)
+    SAY @10589 /* The countryside along the Sword Coast appears to be more open and untouched by civilization. You may encounter a great variety of creatures and monsters that make these lands their home. */
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.Lamp.PC.2
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 1)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.PC.1
+  END
+
+  IF ~~ TalkGeneric.Advice.SOD.Map.1    // Generic SoD maps (EET-specific)
+    // TODO: Use a separate piece of advice
+    SAY @10589 /* The countryside along the Sword Coast appears to be more open and untouched by civilization. You may encounter a great variety of creatures and monsters that make these lands their home. */
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.Lamp.PC.2
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 1)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.PC.1
+  END
+
+  IF ~~ TalkGeneric.Advice.SOD.Castle.1   // SoD Castle Dragonspear (EET-specific)
+    SAY @10590 /* This castle must have endured much in the short time of its existence. I can feel the burden of past events within the very walls of the building itself. */
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.Lamp.PC.2
+    + ~Global("A7AfaaqSummoned", "GLOBAL", 1)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.PC.1
+  END
+
   IF ~~ TalkGeneric.Advice.AR0020.1    // City Gates (Night)
     SAY @10074 /* The Athkatlans seem to be very sure of their own defences. Not all cities allow bands of adventurers to enter or leave the town at night. */
     + ~Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.Lamp.PC.2
