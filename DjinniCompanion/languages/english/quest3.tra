@@ -151,6 +151,17 @@
 @3223 = ~We are still busy removing all traces of the Arabani family.~
 @3224 = ~This is unexpected, Veldrin. You are more resourceful than even I imagined.~
 @3225 = ~May I have it?~
+@3226 = ~It is so good to see you, my friend. I feared that you might have been hurt by the less civilized inhabitants of the Underdark.~
+@3227 = ~Especially since I caused your companion Afaaq so much trouble by robbing him of his powers and leaving him in that vulnerable state.~
+@3228 = ~I'd like to make amends for my imprudent actions in the past.~
+@3229 = ~Prove your intent and return my stolen powers.~
+@3230 = ~Certainly, my friend. As chance would have it I still have the container with your sealed essence in my possession. Please take it back and restore yourself when you have the opportunity.~
+@3231 = ~To unseal...~
+@3232 = ~As chance would have it I still have the container with Afaaq's essence in my possession. Please take it and restore your friend when you have the opportunity.~
+@3233 = ~As a token of our friendship I'd like to present you with a gift that will hopefully make some encounters less difficult.~
+@3234 = ~Come to your senses, commander! This <PRO_GIRLBOY> is a <PRO_RACE> in disguise, and <PRO_HESHE> is not to be trusted.~
+@3235 = ~I commend you that you managed to deceive me. But now face the consequences of your actions.~
+@3236 = ~Dispatch of them quickly! They are not allowed to reveal our presence.~
 
 
 // Dialog lines: Melarn entourage
@@ -374,6 +385,16 @@ The soulcage collection turned out to be very important for Afaaq. He was able t
 @3851 = ~An unexpected encounter
 
 Tathas Melarn rewarded me with Afaaq's soulcage. I don't know yet how to use it, but Afaaq seems to be relieved that it has come into our possession.~
+
+@3852 = ~An unexpected encounter
+
+My attempt to charm Tathas Melarn was only partly successful. I was able to get Afaaq's soulcage, but could not prevent the whole drow camp to turn on me after his priestesses detected the deception.
+
+Afaaq's soulcage appears to be sealed in some way, but Afaaq seems to be relieved that it has come into our possession. Maybe I can figure out how to access it at a later time.~
+
+@3853 = ~An unexpected encounter
+
+My attempt to charm Tathas Melarn was only partly successful. I was able to get a nice artifact from him, but could not prevent the whole drow camp to turn on me after his priestesses detected the deception.~
 
 
 // Misc. strings

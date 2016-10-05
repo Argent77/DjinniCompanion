@@ -151,6 +151,17 @@
 @3223 = ~Wir sind immer noch damit beschäftigt, alle Spuren der Arabani Familie zu beseitigen.~
 @3224 = ~Ihr überrascht mich, Veldrin. Ihr seid sogar noch einfallsreicher, als ich mir vorgestellt habe.~
 @3225 = ~Darf ich sie haben?~
+@3226 = ~Es ist so gut, Euch wiederzusehen, mein Freund. Ich fürchtete, dass Euch die weniger zivilisierten Bewohner des Unterreichs etwas angetan haben.~
+@3227 = ~Zumal ich Eurem Begleiter Afaaq so viel Ärger bereitet habe, in dem ich ihm seiner Kräfte beraubt und in einem sehr verletzlichen Zustand zurückgelassen habe.~
+@3228 = ~Ich möchte versuchen, meine etwas unbesonnenen Taten der Vergangenheit wieder gutzumachen.~
+@3229 = ~Dann könntet Ihr jetzt damit anfangen und meine gestohlenen Kräfte zurückgeben.~
+@3230 = ~Aber sicher, mein Freund. Wie der Zufall so will, habe ich noch das Behältnis mit Deiner versiegelten Essenz in meinem Besitz. Bitte nimm es als Zeichen meiner Freundschaft an Dich.~
+@3231 = ~Um das Siegel zu brechen...~
+@3232 = ~Wie der Zufall so will, habe ich noch das Behältnis mit Afaaqs versiegelter Essenz in meinem Besitz. Nehmt es bitte an Euch und befreit Euren Freund aus seiner misslichen Lage.~
+@3233 = ~Als Zeichen meiner Freundschaft mache ich Euch diesen Ring zum Geschenk. Er sollte Euch helfen, einige gefährliche Begegnungen besser zu bewältigen.~
+@3234 = ~Kommt wieder zur Vernunft, Anführer! Dieser <PRO_GIRLBOY> ist lediglich ein <PRO_RACE> in Drowgestalt und führt feindliche Absichten im Schilde.~ ~Kommt wieder zur Vernunft, Anführer! Dieses <PRO_GIRLBOY> ist lediglich ein <PRO_RACE> in Drowgestalt und führt feindliche Absichten im Schilde.~
+@3235 = ~Ich bin beeindruckt, dass Ihr es geschafft habt, mich zu täuschen. Aber nun werdet Ihr die Konsequenzen Eures Handelns zu spüren bekommen.~ 
+@3236 = ~Eliminiert diese Verräter! Sie dürfen unsere Anwesenheit auf keinen Fall verraten.~
 
 
 // Dialog lines: Melarn entourage
@@ -374,6 +385,16 @@ Die Sammlung des Seelengefängnisses stellte sich für Afaaq als sehr wichtig hera
 @3851 = ~Eine unerwartete Begegnung
 
 Tathas Melarn belohnte mich mit Afaaqs Seelengefängnis. Ich weiss noch nicht, wie es zu verwenden ist, aber Afaaq scheint erleichtert zu sein, dass es in unseren Besitz gelangt ist.~
+
+@3852 = ~Eine unerwartete Begegnung
+
+Mein Versuch, Tathas Melarn zu verzaubern, war nur teilweise erfolgreich. Ich habe zwar Afaaqs Seelengefängnis von ihm erhalten, aber seine Priesterinnen haben die Täuschung schnell durchschaut und das gesamte Drowlager auf mich gehetzt.
+
+Afaaqs Seelengefängnis scheint versiegelt zu sein, aber trotzdem ist Afaaq erleichtert, dass es in unseren Besitz gelangt ist. Vielleicht gelingt es uns später, das Siegel zu brechen.~
+
+@3853 = ~Eine unerwartete Begegnung
+
+Mein Versuch, Tathas Melarn zu verzaubern, war nur teilweise erfolgreich. Ich habe zwar ein nettes Geschenk von ihm erhalten, aber seine Priesterinnen haben die Täuschung schnell durchschaut und das gesamte Drowlager auf mich gehetzt.~
 
 
 // Misc. strings

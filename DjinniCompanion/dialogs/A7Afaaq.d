@@ -260,7 +260,8 @@ END
 IF ~InPartySlot(LastTalkedToBy, 0) Global("A7Quest3", "GLOBAL", 10) Global("Q3SoulcageRewarded", "LOCALS", 1) Global("BanterActive", "LOCALS", 0)~ TalkQ3SoulCageRewarded
   SAY @11225 /* The soulcage is in our possession and I can finally see a glimmer of hope that my imprisonment will come to an end. */
   = @11226 /* Unfortunately the seal which protects it is strong and I have not the power to break it. I implore you, my <PRO_LADYLORD>, please keep it safe from any harm until I find a way to access its contents. */
-  IF ~~ DO ~SetGlobal("Q3SoulcageRewarded", "LOCALS", 2)~ UNSOLVED_JOURNAL @3851 EXIT
+  IF ~!Global("A7TathasAttacked", "GLOBAL", 0)~ EXIT
+  IF ~Global("A7TathasAttacked", "GLOBAL", 0)~ DO ~SetGlobal("Q3SoulcageRewarded", "LOCALS", 2)~ UNSOLVED_JOURNAL @3851 EXIT
 END
 
 

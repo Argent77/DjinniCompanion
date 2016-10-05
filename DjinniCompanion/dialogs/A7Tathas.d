@@ -4,18 +4,77 @@
 BEGIN A7TATHAS
 
 // *** Introduction talk to Tathas Melarn ***
-IF ~NumTimesTalkedTo(0) Global("PlayerLooksLikeDrow", "GLOBAL", 1) GlobalLT("A7Quest3", "GLOBAL", 2)~ Tathas.Intro
-  SAY @3100 /* What have we here? */
-  = @3101 /* You come from the city of Ust Natha, no? */
-  IF ~True()~ DO ~SetGlobal("TathasMet", "A77005", 1) SetGlobal("A7TalkAboutDrow", "GLOBAL", 2)~ + Tathas.Intro.1a
-  IF ~InParty("Viconia") !StateCheck("Viconia", CD_STATE_NOTVALID) Gender(Player1, MALE)~ DO ~SetGlobal("TathasMet", "A77005", 1) SetGlobal("A7TalkAboutDrow", "GLOBAL", 2)~ + Tathas.Intro.1b
+IF ~StateCheck(Myself, STATE_CHARMED) AreaCheck("A77005")~ Tathas.Charmed
+  SAY @3226 /* It is so good to see you, my friend. I feared that you might have been hurt by the less civilized inhabitants of the Underdark. */
+  IF ~PartyHasItem("A7DJLMP") Detect("A7Afaaq")~ + Tathas.Charmed.1
+  IF ~PartyHasItem("A7DJLMP") !Detect("A7Afaaq")~ + Tathas.Charmed.2
+  IF ~!PartyHasItem("A7DJLMP")~ + Tathas.Charmed.3
 END
 
-IF ~~ Tathas.Intro.1a
-  SAY @3102 /* Identify yourself! */
-  ++ @3103 /* My name is Veldrin. I hail from Ched Nasad and arrived in Ust Natha several days ago. */ + Tathas.Intro.2
-  ++ @3104 /* My name is <GABBER> and I come from Adalon's lair. */ + Tathas.Intro.ToldTruth
-  ++ @3105 /* I am your death if you don't let us go. */ + Tathas.Intro.Hostile
+CHAIN A7TATHAS Tathas.Charmed.1
+  @3227 /* Especially since I caused your companion Afaaq so much trouble by robbing him of his powers and leaving him in that vulnerable state. */
+  = @3228 /* I'd like to make amends for my imprudent actions in the past. */
+  == A7AFAAQ @3229 /* Prove your intent and return my stolen powers. */
+  == A7TATHAS @3230 /* Certainly, my friend. As chance would have it I still have the container with your sealed essence in my possession. Please take it back and restore yourself when you have the opportunity. */
+  = @3231 /* To unseal... */
+    DO ~CreateItem("A7MISC6", 0, 0, 0)
+        GiveItem("A7MISC6", LastTalkedToBy)~
+END A7Q3DHM Tathas.Charmed.4
+
+APPEND A7TATHAS
+  IF ~~ Tathas.Charmed.2
+    SAY @3227 /* Especially since I caused your companion Afaaq so much trouble by robbing him of his powers and leaving him in that vulnerable state. */
+    = @3232 /* As chance would have it I still have the container with Afaaq's essence in my possession. Please take it and restore your friend when you have the opportunity. */
+    = @3231 /* To unseal... */
+    IF ~~ DO ~CreateItem("A7MISC6", 0, 0, 0)
+              GiveItem("A7MISC6", LastTalkedToBy)~ EXTERN A7Q3DHM Tathas.Charmed.4
+  END
+
+  IF ~~ Tathas.Charmed.3
+    SAY @3233 /* As a token of our friendship I'd like to present you with a gift that will hopefully make some encounters less difficult. */
+    IF ~~ DO ~CreateItem("A7RING02", 3, 0, 0)
+              GiveItem("A7RING02", LastTalkedToBy)~ EXTERN A7Q3DHM Tathas.Charmed.4
+  END
+END
+
+CHAIN A7Q3DHM Tathas.Charmed.4
+  @3234 /* Come to your senses, commander! This <PRO_BOYGIRL> is a <PRO_RACE> in disguise, and not to be trusted. */
+  == A7TATHAS @3235 /* I commend you that you managed to deceive me. But now face the consequences of your actions. */
+    DO ~SetGlobal("A7Quest3", "GLOBAL", 10) 
+        SetGlobal("A7TathasAttacked", "GLOBAL", 1)
+        AddXP2DA("A7Q3MQ2")
+        ApplySpellRES("A7DISPEL", Myself)
+        DestroyItem("A7MISC5")
+        EraseJournalEntry(@3800)
+        EraseJournalEntry(@3803)
+        EraseJournalEntry(@3804)
+        EraseJournalEntry(@3805)
+        EraseJournalEntry(@3806)
+        EraseJournalEntry(@3807)
+        EraseJournalEntry(@3808)~
+END A7TATHAS Tathas.Charmed.5
+
+APPEND A7TATHAS
+  IF ~~ Tathas.Charmed.5
+    SAY @3236 /* Dispatch of them quickly! They are not allowed to reveal our presence. */
+    IF ~PartyHasItem("A7DJLMP")~ DO ~Enemy()~ SOLVED_JOURNAL @3852 EXIT    // My attempt to charm Tathas Melarn was only partly successful...
+    IF ~!PartyHasItem("A7DJLMP")~ DO ~Enemy()~ SOLVED_JOURNAL @3853 EXIT   // My attempt to charm Tathas Melarn was only partly successful...
+  END
+
+
+  IF ~NumTimesTalkedTo(0) Global("PlayerLooksLikeDrow", "GLOBAL", 1) GlobalLT("A7Quest3", "GLOBAL", 2)~ Tathas.Intro
+    SAY @3100 /* What have we here? */
+    = @3101 /* You come from the city of Ust Natha, no? */
+    IF ~True()~ DO ~SetGlobal("TathasMet", "A77005", 1) SetGlobal("A7TalkAboutDrow", "GLOBAL", 2)~ + Tathas.Intro.1a
+    IF ~InParty("Viconia") !StateCheck("Viconia", CD_STATE_NOTVALID) Gender(Player1, MALE)~ DO ~SetGlobal("TathasMet", "A77005", 1) SetGlobal("A7TalkAboutDrow", "GLOBAL", 2)~ + Tathas.Intro.1b
+  END
+
+  IF ~~ Tathas.Intro.1a
+    SAY @3102 /* Identify yourself! */
+    ++ @3103 /* My name is Veldrin. I hail from Ched Nasad and arrived in Ust Natha several days ago. */ + Tathas.Intro.2
+    ++ @3104 /* My name is <GABBER> and I come from Adalon's lair. */ + Tathas.Intro.ToldTruth
+    ++ @3105 /* I am your death if you don't let us go. */ + Tathas.Intro.Hostile
+  END
 END
 
 CHAIN A7TATHAS Tathas.Intro.1b
@@ -406,7 +465,7 @@ APPEND A7TATHAS
     = @3209 /* You may continue your business in this city, I care not. As long as you do not breathe a word about this incident. */
     IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10)
         DestroyItem("A7MISC5")
-        CreateItem("A7RING02", 1, 0, 0)
+        CreateItem("A7RING02", 3, 0, 0)
         GiveItem("A7RING02", LastTalkedToBy)
         AddXP2DA("A7Q3MQ1")
         EraseJournalEntry(@3800)
@@ -503,7 +562,7 @@ APPEND A7TATHAS
     = @3209 /* You may continue your business in this city, I care not. As long as you do not breathe a word about this incident. */
     IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10)
         DestroyItem("A7MISC5")
-        CreateItem("A7RING02", 1, 0, 0)
+        CreateItem("A7RING02", 3, 0, 0)
         GiveItem("A7RING02", LastTalkedToBy) 
         GiveGoldForce(2000)
         AddXP2DA("A7Q3MQ1")
