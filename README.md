@@ -5,6 +5,8 @@
 
 **Website:** https://argent77.github.io/DjinniCompanion/index.html
 
+**Discussion:** [Spellhold Studios Forums](http://www.shsforums.net/topic/58089-afaaq-the-djinni-companion-for-bg2-and-bg2ee-released/) or [Beamdog Forums](http://forums.beamdog.com/discussion/41108/mod-afaaq-the-djinni-companion-for-bg2-and-bg2-ee-released/)
+
 ## Introduction
 
 Meet Afaaq! The djinni who will be your faithful companion in the course of your adventures throughout SoA and ToB. Now available for Icewind Dale: Enhanced Edition and the Enhanced Edition Trilogy (EET) as well!
