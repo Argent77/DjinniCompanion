@@ -147,7 +147,7 @@ BEGIN @20       // Afaaq, the Djinni Companion (IWD:EE version)
 ////////////////////////
 BEGIN @7      // 15 Minutes
   REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
-  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 101
   INCLUDE ~DjinniCompanion/lib/functions.tph~
@@ -155,7 +155,7 @@ BEGIN @7      // 15 Minutes
 
 BEGIN @8      // 30 Minutes
   REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
-  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 102
   INCLUDE ~DjinniCompanion/lib/functions.tph~
@@ -163,7 +163,7 @@ BEGIN @8      // 30 Minutes
 
 BEGIN @9      // 45 Minutes
   REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
-  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 103
   INCLUDE ~DjinniCompanion/lib/functions.tph~
@@ -171,7 +171,7 @@ BEGIN @9      // 45 Minutes
 
 BEGIN @10     // 90 Minutes
   REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
-  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 104
   INCLUDE ~DjinniCompanion/lib/functions.tph~
@@ -179,7 +179,7 @@ BEGIN @10     // 90 Minutes
 
 BEGIN @11     // 120 Minutes
   REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
-  SUBCOMPONENT @6     // Install Banter Accelerator for the djinni? (Default: 60 Minutes)
+  SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 105
   INCLUDE ~DjinniCompanion/lib/functions.tph~
