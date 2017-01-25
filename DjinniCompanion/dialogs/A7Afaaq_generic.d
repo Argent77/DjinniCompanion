@@ -1984,6 +1984,7 @@ APPEND %afq_dialog%
     + ~HPPercentLT(Myself, 100) HasItem("POTN08", Player1)~ + @10384 /* This Potion of Healing should heal your injuries. */ + TalkGeneric.Healing
     + ~HPPercentLT(Myself, 100) HasItem("%itm_potn52%", Player1)~ + @10385 /* This Potion of Extra Healing should heal your injuries. */ + TalkGeneric.HealingExtra
     + ~HPPercentLT(Myself, 100) HasItem("POTN55", Player1)~ + @10386 /* This Potion of Superior Healing should heal your injuries. */ + TalkGeneric.HealingSuperior
+    + ~HasItem("POTN17", Player1)~ + @10591 /* How about an Elixir of Health. */ + TalkGeneric.Elixir.Health
     + ~HasItem("POTN02", Player1)~ + @10483 /* How about a Potion of Fire Resistance? */ + TalkGeneric.Potion.FireResistance
     + ~HasItem("POTN22", Player1)~ + @10489 /* How about a Potion of Cold Resistance? */ + TalkGeneric.Potion.ColdResistance
     + ~HasItem("POTN18", Player1)~ + @10487 /* How about a Potion of Absorption? */ + TalkGeneric.Potion.Absorption
@@ -2018,6 +2019,11 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.HealingSuperior
     SAY @10390 /* Thank you. I accept your generous offer. */
     IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("SuperiorHealingPotion", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.Elixir.Health
+    SAY @10388 /* Thank you. I accept your offer. */
+    IF ~~ DO ~CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("ExtraCurePotion", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   IF ~~ TalkGeneric.HealingNone
@@ -2120,8 +2126,8 @@ APPEND %afq_dialog%
     + ~HasItem("POTN55", Player1) NumItemsGT("POTN55", "A7Afaaq", 4)~ + @10395 /* I can give you Potions of Superior Healing. */ + TalkGeneric.StoreHealingPotions.4b
     + ~HasItem("POTN20", Player1) NumItemsLT("POTN20", "A7Afaaq", 5)~ + @10396 /* I can give you Antidote potions. */ + TalkGeneric.StoreHealingPotions.5a
     + ~HasItem("POTN20", Player1) NumItemsGT("POTN20", "A7Afaaq", 4)~ + @10396 /* I can give you Antidote potions. */ + TalkGeneric.StoreHealingPotions.5b
-    + ~HasItem("POTN17", Player1) NumItemsLT("POTN17", "A7Afaaq", 5)~ + @10397 /* I can give you Elixirs of Help. */ + TalkGeneric.StoreHealingPotions.6a
-    + ~HasItem("POTN17", Player1) NumItemsGT("POTN17", "A7Afaaq", 4)~ + @10397 /* I can give you Elixirs of Help. */ + TalkGeneric.StoreHealingPotions.6b
+    + ~HasItem("POTN17", Player1) NumItemsLT("POTN17", "A7Afaaq", 5)~ + @10397 /* I can give you Elixirs of Health. */ + TalkGeneric.StoreHealingPotions.6a
+    + ~HasItem("POTN17", Player1) NumItemsGT("POTN17", "A7Afaaq", 4)~ + @10397 /* I can give you Elixirs of Health. */ + TalkGeneric.StoreHealingPotions.6b
     + ~OR(3) HasItem("POTN08", "A7Afaaq") HasItem("%itm_potn52%", "A7Afaaq") HasItem("POTN55", "A7Afaaq") ~ + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1a
     + ~!HasItem("POTN08", "A7Afaaq") !HasItem("%itm_potn52%", "A7Afaaq") !HasItem("POTN55", "A7Afaaq") ~    + @10387 /* I don't have a spare healing potion, sorry. */ + TalkGeneric.StoreHealingPotions.1b
   END
