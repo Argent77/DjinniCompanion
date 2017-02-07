@@ -244,19 +244,27 @@ COPY ~DjinniCompanion/items/a7heart.itm~ ~override/a7heart1.itm~
   SAY NAME1 @6853     // Demogorgon's Heart
   SAY NAME2 @6853     // Demogorgon's Heart
 COPY_EXISTING ~demogor2.cre~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
-    ADD_CRE_ITEM ~A7HEART1~ #0 #0 #0 ~UNSTEALABLE~ ~INV16 INV15 INV14 INV13 INV12 INV11 INV10 INV9 INV8~
-  END ELSE BEGIN
-    TEXT_SPRINT filename ~demogor2.cre~
-    TEXT_SPRINT restype ~Creature~
-    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
+  READ_ASCII SCRIPT_OVERRIDE script (8) NULL
+  PATCH_IF (~%script%~ STRING_EQUAL ~~ OR ~%script%~ STRING_EQUAL_CASE ~none~) BEGIN
+    TEXT_SPRINT script ~A7!DEMO2~
+    WRITE_ASCIIE SCRIPT_OVERRIDE ~%script%~ #8
   END
-COPY_EXISTING ~demogor2.bcs~ ~override~    // Make demogorgon drop his heart when dying
-  DECOMPILE_AND_PATCH BEGIN
-    REPLACE_TEXTUALLY CASE_INSENSITIVE 
-      ~\(SetGlobal("SPRITE_IS_DEADDEMOGOR2","GLOBAL",1)\)~ ~\1 DropItem("A7HEART1", [-1.-1])~
-  END
-  BUT_ONLY
+BUT_ONLY
+<<<<<<<< .../inlined/%script%.baf
+IF
+  HPLT(Myself, 30)
+  Global("DemoEffects", "LOCALS", 0)
+THEN
+  RESPONSE #100
+    DropItem("a7heart1", [-1.-1])
+    Continue()
+END
+>>>>>>>>
+ACTION_IF (FILE_EXISTS_IN_GAME ~%script%.bcs~) BEGIN
+  EXTEND_TOP ~%script%.bcs~ ~.../inlined/%script%.baf~
+END ELSE BEGIN
+  COMPILE ~.../inlined/%script%.baf~
+END
 
 COPY ~DjinniCompanion/items/a7heart.itm~ ~override/a7heart2.itm~
   SAY NAME1 @6854     // Heart of a demon lord
