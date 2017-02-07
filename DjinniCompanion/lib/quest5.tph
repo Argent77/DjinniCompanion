@@ -244,10 +244,17 @@ COPY ~DjinniCompanion/items/a7heart.itm~ ~override/a7heart1.itm~
   SAY NAME1 @6853     // Demogorgon's Heart
   SAY NAME2 @6853     // Demogorgon's Heart
 COPY_EXISTING ~demogor2.cre~ ~override~
-  READ_ASCII SCRIPT_OVERRIDE script (8) NULL
-  PATCH_IF (~%script%~ STRING_EQUAL ~~ OR ~%script%~ STRING_EQUAL_CASE ~none~) BEGIN
-    TEXT_SPRINT script ~A7!DEMO2~
-    WRITE_ASCIIE SCRIPT_OVERRIDE ~%script%~ #8
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    ADD_CRE_ITEM ~A7HEART1~ #0 #0 #0 ~UNSTEALABLE~ ~INV1 INV2 INV3 INV4 INV5 INV6 INV7 INV8 INV9 INV10 INV11 INV12 INV13 INV14 INV15 INV16~
+    READ_ASCII SCRIPT_OVERRIDE script (8) NULL
+    PATCH_IF (~%script%~ STRING_EQUAL ~~ OR ~%script%~ STRING_EQUAL_CASE ~none~) BEGIN
+      TEXT_SPRINT script ~A7!DEMO2~
+      WRITE_ASCIIE SCRIPT_OVERRIDE ~%script%~ #8
+    END
+  END ELSE BEGIN
+    TEXT_SPRINT filename ~%SOURCE_FILE%~
+    TEXT_SPRINT restype ~Creature~
+    PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
   END
 BUT_ONLY
 <<<<<<<< .../inlined/%script%.baf
