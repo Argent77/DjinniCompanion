@@ -246,6 +246,7 @@ COPY ~DjinniCompanion/items/a7heart.itm~ ~override/a7heart1.itm~
 COPY_EXISTING ~demogor2.cre~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
     ADD_CRE_ITEM ~A7HEART1~ #0 #0 #0 ~UNSTEALABLE~ ~INV1 INV2 INV3 INV4 INV5 INV6 INV7 INV8 INV9 INV10 INV11 INV12 INV13 INV14 INV15 INV16~
+    READ_ASCII SCRIPT_DEFAULT script_default (8) NULL
     READ_ASCII SCRIPT_OVERRIDE script (8) NULL
     PATCH_IF (~%script%~ STRING_EQUAL ~~ OR ~%script%~ STRING_EQUAL_CASE ~none~) BEGIN
       TEXT_SPRINT script ~A7!DEMO2~
@@ -257,10 +258,28 @@ COPY_EXISTING ~demogor2.cre~ ~override~
     PATCH_WARN @31    // Warning: Unable to patch %filename% (Reason: %restype% file is invalid)
   END
 BUT_ONLY
+
+// getting dying conditions
+OUTER_TEXT_SPRINT condition ~~
+ACTION_IF (FILE_EXISTS_IN_GAME ~%script_default%.bcs~) BEGIN
+  COPY_EXISTING - ~%script_default%.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+      REPLACE_EVALUATE 
+        ~^IF[%WNL%]\(\(.+[%WNL%]\)*[ %TAB%]+Global("DemoEffects","LOCALS",0)[%WNL%]\(.+[%WNL%]\)*\)THEN[%WNL%][ %TAB%]+RESPONSE #[0-9]+[%WNL%]\(.+[%WNL%]\)*[ %TAB%]+SetGlobal("DemoEffects","LOCALS",1)[%WNL%]\(.+[%WNL%]\)*END$~
+        BEGIN
+          TEXT_SPRINT condition ~%MATCH1%~
+        END
+        ~\0~
+    END
+END
+ACTION_IF (~%condition%~ STRING_EQUAL ~~) BEGIN
+  // using default condition as fallback solution
+  OUTER_TEXT_SPRINT condition ~HPLT(Myself,30) Global("DemoEffects","LOCALS",0)~
+END
+
 <<<<<<<< .../inlined/%script%.baf
 IF
-  HPLT(Myself, 30)
-  Global("DemoEffects", "LOCALS", 0)
+  %condition%
 THEN
   RESPONSE #100
     DropItem("a7heart1", [-1.-1])
@@ -268,9 +287,9 @@ THEN
 END
 >>>>>>>>
 ACTION_IF (FILE_EXISTS_IN_GAME ~%script%.bcs~) BEGIN
-  EXTEND_TOP ~%script%.bcs~ ~.../inlined/%script%.baf~
+  EXTEND_TOP ~%script%.bcs~ ~.../inlined/%script%.baf~ EVAL
 END ELSE BEGIN
-  COMPILE ~.../inlined/%script%.baf~
+  COMPILE ~.../inlined/%script%.baf~ EVAL
 END
 
 COPY ~DjinniCompanion/items/a7heart.itm~ ~override/a7heart2.itm~
