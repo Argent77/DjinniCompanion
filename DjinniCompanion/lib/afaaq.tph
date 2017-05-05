@@ -181,8 +181,16 @@ COPY_EXISTING ~itemdial.2da~ ~override~
   END ELSE BEGIN
     SET strref_converse = 5689  // Converse
   END
-  INSERT_2DA_ROW 0 3 ~A7DJLMPA      %strref_converse%   A7DJLMP~
-  INSERT_2DA_ROW 0 3 ~A7DJLMP       %strref_converse%   A7DJLMP~
+  TEXT_SPRINT dialamp1 ~A7DJLMPA      %strref_converse%   A7DJLMP~
+  TEXT_SPRINT dialamp2 ~A7DJLMP       %strref_converse%   A7DJLMP~
+  COUNT_2DA_COLS numCols
+  PATCH_IF (numCols = 4) BEGIN
+    SET strref_lamp = RESOLVE_STR_REF(@60004)  // Afaaq's djinni lamp
+    TEXT_SPRINT dialamp1 ~%dialamp1%  %strref_lamp%~
+    TEXT_SPRINT dialamp2 ~%dialamp2%  %strref_lamp%~
+  END
+  INSERT_2DA_ROW 0 numCols ~%dialamp1%~
+  INSERT_2DA_ROW 0 numCols ~%dialamp2%~
 
 // Afaaq's Quick Menu item
 COPY ~DjinniCompanion/items/a7qmenu.itm~ ~override~
