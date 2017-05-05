@@ -24,6 +24,9 @@ IF ~True()~ QuickMenu.1
   // Return into the lamp
   + ~OR(2) PartyHasItem("A7DJLMP") PartyHasItem("A7DJLMPA") !AreaCheck("A77006")~ + @60072 /* Return into the djinni lamp */ DO ~SetGlobal("unsummoning","LOCALS",1)~ EXIT
 
+  // Fixes Afaaq's state in case of buggy behavior
+  ++ @10592 /* Fix odd behavior */ DO ~SetGlobal("A7AfaaqSummoned", "GLOBAL", 1) SetGlobal("A7AfaaqGaseous", "GLOBAL", 0) SetGlobal("BanterActive", "LOCALS", 0) ApplySpellRES("A7MISTC", Myself) ChangeEnemyAlly(Myself, FAMILIAR)~ EXIT
+
   ++ @60073 /* Do nothing */ EXIT
 END
 
