@@ -28,6 +28,9 @@ OUTER_SET shout_helpme_tathas = 167
 OUTER_SET shout_helpme_arabani = 168
 OUTER_SET shout_help_tathas = 169
 OUTER_SET shout_help_arabani = 170
+// timer IDs used in scripts
+OUTER_SET timing_confus = 167
+OUTER_SET timing_noaction = 168
 
 // Modifying Arabani creatures
 // Xunvrae d'Arabani

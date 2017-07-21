@@ -31,6 +31,9 @@ OUTER_SET shout_djinni_attack = 169
 // specifics IDs used in scripts
 OUTER_SET specific_efreeti = 167
 OUTER_SET specific_djinni = 168
+// timer IDs used in scripts
+OUTER_SET timing_truesight = 167
+OUTER_SET timing_elem = 168
 
 // Adding XP rewards for Quest 5
 COPY_EXISTING ~xplist.2da~ ~override~

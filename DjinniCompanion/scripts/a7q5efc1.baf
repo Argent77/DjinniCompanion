@@ -237,16 +237,16 @@ IF
   Global("summon", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobal("summon", "LOCALS", 1)
-  StartTimer("elem", 30)
+  StartTimer(%timing_elem%, 30)
   SpellRES("A7SPWI02", LastSeenBy(Myself))
 END
 
 IF
   Detect(NearestEnemyOf(Myself))
   HaveSpellRES("A7SPWI02")
-  TimerExpired("elem")
+  TimerExpired(%timing_elem%)
 THEN RESPONSE #100
-  StartTimer("elem", 30)
+  StartTimer(%timing_elem%, 30)
   SpellRES("A7SPWI02", LastSeenBy(Myself))
 END
 

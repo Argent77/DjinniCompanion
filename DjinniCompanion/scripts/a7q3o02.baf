@@ -6,35 +6,35 @@ IF
 THEN
   RESPONSE #25
     SetGlobal("init", "LOCALS", 1)
-    StartTimer("noaction", 5)
+    StartTimer(%timing_noaction%, 5)
   RESPONSE #25
     SetGlobal("init", "LOCALS", 1)
-    StartTimer("noaction", 8)
+    StartTimer(%timing_noaction%, 8)
   RESPONSE #25
     SetGlobal("init", "LOCALS", 1)
-    StartTimer("noaction", 11)
+    StartTimer(%timing_noaction%, 11)
   RESPONSE #25
     SetGlobal("init", "LOCALS", 1)
-    StartTimer("noaction", 14)
+    StartTimer(%timing_noaction%, 14)
 END
 
 // Randomly walk around
 IF
-  TimerExpired("noaction")
+  TimerExpired(%timing_noaction%)
 THEN
   RESPONSE #10
-    StartTimer("noaction", 12)
+    StartTimer(%timing_noaction%, 12)
     MoveToPoint([537.1386])
   RESPONSE #10
-    StartTimer("noaction", 12)
+    StartTimer(%timing_noaction%, 12)
     MoveToPoint([581.1792])
   RESPONSE #10
-    StartTimer("noaction", 12)
+    StartTimer(%timing_noaction%, 12)
     MoveToPoint([541.1550])
   RESPONSE #10
-    StartTimer("noaction", 12)
+    StartTimer(%timing_noaction%, 12)
     MoveToPoint([733.1315])
   RESPONSE #60
-    StartTimer("noaction", 12)
+    StartTimer(%timing_noaction%, 12)
     ClearActions(Myself)
 END
