@@ -518,7 +518,7 @@ LAF BanterAccelerator END
 // EXTEND_TOP ~haerdali.bcs~   ~DjinniCompanion/scripts/npc_haerdalis.baf~
 // EXTEND_TOP ~haer25.bcs~     ~DjinniCompanion/scripts/npc_haerdalis.baf~
 // EXTEND_TOP ~imoen2.bcs~     ~DjinniCompanion/scripts/npc_imoen.baf~
-// EXTEND_TOP ~imoen25.bcs~    ~DjinniCompanion/scripts/npc_imoen.baf~
+// EXTEND_TOP ~imoe25.bcs~     ~DjinniCompanion/scripts/npc_imoen.baf~
 // EXTEND_TOP ~jaheira.bcs~    ~DjinniCompanion/scripts/npc_jaheira.baf~
 // EXTEND_TOP ~jahe25.bcs~     ~DjinniCompanion/scripts/npc_jaheira.baf~
 // EXTEND_TOP ~jan.bcs~        ~DjinniCompanion/scripts/npc_jan.baf~
@@ -539,6 +539,18 @@ LAF BanterAccelerator END
 // EXTEND_TOP ~viconia.bcs~    ~DjinniCompanion/scripts/npc_viconia.baf~
 // EXTEND_TOP ~vico25.bcs~     ~DjinniCompanion/scripts/npc_viconia.baf~
 EXTEND_TOP ~yoshimo.bcs~    ~DjinniCompanion/scripts/npc_yoshimo.baf~
+
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+  // EXTEND_TOP ~dorn.bcs~       ~DjinniCompanion/scripts/npc_dorn.baf~
+  // EXTEND_TOP ~dorn25.bcs~     ~DjinniCompanion/scripts/npc_dorn.baf~
+  // EXTEND_TOP ~hexxat.bcs~     ~DjinniCompanion/scripts/npc_hexxat.baf~
+  // EXTEND_TOP ~hexxa25.bcs~    ~DjinniCompanion/scripts/npc_hexxat.baf~
+  // EXTEND_TOP ~neera.bcs~      ~DjinniCompanion/scripts/npc_neera.baf~
+  // EXTEND_TOP ~neer25.bcs~     ~DjinniCompanion/scripts/npc_neera.baf~
+  // EXTEND_TOP ~rasaad.bcs~     ~DjinniCompanion/scripts/npc_rasaad.baf~
+  // EXTEND_TOP ~rasa25.bcs~     ~DjinniCompanion/scripts/npc_rasaad.baf~
+  // EXTEND_TOP ~wilson.bcs~     ~DjinniCompanion/scripts/npc_wilson.baf~
+END
 
 // Lamp talks
 COMPILE EVALUATE_BUFFER ~DjinniCompanion/scripts/a72200gn.baf~      // Tortured djinni in Ust Natha
@@ -590,6 +602,15 @@ COMPILE EVALUATE_BUFFER
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Viconia.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Korgan.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Sarevok.d~
+
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+  // COMPILE EVALUATE_BUFFER 
+          // ~DjinniCompanion/dialogs/A7AfaaqBanter_Dorn.d~
+          // ~DjinniCompanion/dialogs/A7AfaaqBanter_Hexxat.d~
+          // ~DjinniCompanion/dialogs/A7AfaaqBanter_Neera.d~
+          // ~DjinniCompanion/dialogs/A7AfaaqBanter_Rasaad.d~
+          // ~DjinniCompanion/dialogs/A7AfaaqBanter_Wilson.d~
+END
 
 // Afaaq's default dialog file (generic) for friendship path
 COMPILE ~DjinniCompanion/dialogs/A7afaaq_generic.d~

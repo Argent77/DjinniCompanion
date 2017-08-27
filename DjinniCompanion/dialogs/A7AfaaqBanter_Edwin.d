@@ -2,14 +2,14 @@
 // TODO
 
 // Banter #1
-CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 1)~ THEN EDWINJ Edwin.0
-  ~(TODO: Edwin tries hard to persuade Afaaq to change sides and work for him by promising him power, wealth and influence...)~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 2)~
+CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 1)~ THEN EDWINJ Edwin.0
+  ~(TODO: Edwin tries hard to persuade Afaaq to change sides and work for him by promising him power, wealth and influence...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq politely tells Edwin that he has no interest in it.~
   == EDWINJ ~Edwin is slightly offended by Afaaq's answer.~
 EXIT
 
-CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterEdwin", "GLOBAL", 1)~ THEN EDWIN25J Edwin.0
-  ~(TODO: Edwin tries hard to persuade Afaaq to change sides and work for him by promising him power, wealth and influence...)~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 2)~
+CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 1)~ THEN EDWIN25J Edwin.0
+  ~(TODO: Edwin tries hard to persuade Afaaq to change sides and work for him by promising him power, wealth and influence...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq politely tells Edwin that he has no interest in it.~
   == EDWIN25J ~Edwin is slightly offended by Afaaq's answer.~
 EXIT
@@ -17,13 +17,13 @@ EXIT
 
 // Banter #2
 CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWINJ Edwin.1
-  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 4)~
+  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq sees right through him and tells him that it is impossible to find what he's looking for.~
   == EDWINJ ~This answer infuriates Edwin for a moment before regaining his self-control and muttering to himself.~
 EXIT
 
 CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWIN25J Edwin.1
-  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 4)~
+  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq sees right through him and tells him that it is impossible to find what he's looking for.~
   == EDWIN25J ~This answer infuriates Edwin for a moment before regaining his self-control and muttering to himself.~
 EXIT
@@ -31,13 +31,13 @@ EXIT
 
 // Banter #3
 CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 5)~ THEN EDWINJ Edwin.3
-  ~(TODO: Edwin becomes impatient and openly threats Afaaq to grant him a wish now or he would experience the frightening powers of the Red Wizards of Thay....)~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 6) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
+  ~(TODO: Edwin becomes impatient and openly threats Afaaq to grant him a wish now or he would experience the frightening powers of the Red Wizards of Thay....)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq calls his bluff and is both mildly amused and slightly annoyed by Edwin's empty threats.~
   == EDWINJ ~Edwin loses his temper for only a moment before gaining self-control and tells Afaaq that he always gets what he wants.~
 EXIT
 
 CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterEdwin", "GLOBAL", 5)~ THEN EDWIN25J Edwin.3
-  ~(TODO: Edwin becomes impatient and openly threats Afaaq to grant him a wish now or he would experience the frightening powers of the Red Wizards of Thay....)~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 6) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
+  ~(TODO: Edwin becomes impatient and openly threats Afaaq to grant him a wish now or he would experience the frightening powers of the Red Wizards of Thay....)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq calls his bluff and is both mildly amused and slightly annoyed by Edwin's empty threats.~
   == EDWIN25J ~Edwin loses his temper for only a moment before gaining self-control and tells Afaaq that he always gets what he wants.~
 EXIT
@@ -75,7 +75,7 @@ APPEND EDWINP
   // After Edwin has been rescued
   IF WEIGHT #-1 ~Global("A7EdwinTakesControl", "GLOBAL", 5)~ EdwinHumiliated.1
     SAY ~It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.)~
-    IF ~~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 8) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10)~ + EdwinHumiliated.2
+    IF ~~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10)~ + EdwinHumiliated.2
   END
 
   IF ~~ EdwinHumiliated.2

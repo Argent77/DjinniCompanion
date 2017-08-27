@@ -3,7 +3,7 @@
 
 // Banter #1
 CHAIN IF ~Global("A7BanterYoshimo", "GLOBAL", 1)~ THEN YOSHJ Yoshimo.0
-  @17000 /* Afaaq, you are obviously not from around here.  Do you care to tell me where you hail from? */ DO ~SetGlobal("A7BanterYoshimo", "GLOBAL", 2)~
+  @17000 /* Afaaq, you are obviously not from around here.  Do you care to tell me where you hail from? */ DO ~IncrementGlobal("A7BanterYoshimo", "GLOBAL", 1)~
   == A7AFAAQ @17001 /* My home lies far beyond the material plane, out of reach for most mortals.  However, I have lived for quite some time in Calimshan, far to the south of here. */
   == YOSHJ @17002 /* Ah, Calimshan.  A very rich country from what I've heard. It is also a place where you can meet all kinds of people and other races. */
   == A7AFAAQ @17003 /* That is correct. Calimshan has always been a very rich nation and a melting pot of many different cultures.  Although its splendor pales in comparison to the wonders of the ancient Calim Empire. */

@@ -3,27 +3,27 @@
 
 // Dummy banter #1
 CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterJaheira", "GLOBAL", 1)~ THEN JAHEIRAJ Jaheira.0
-  ~(TODO: Dummy banter #1...)~ DO ~SetGlobal("A7BanterJaheira", "GLOBAL", 2)~
+  ~(TODO: Dummy banter #1...)~ DO ~IncrementGlobal("A7BanterJaheira", "GLOBAL", 1)~
   == A7AFAAQ ~...~
   == JAHEIRAJ ~....~
 EXIT
 
 CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterJaheira", "GLOBAL", 1)~ THEN JAHEI25J Jaheira.0
-  ~(TODO: Dummy banter #1...)~ DO ~SetGlobal("A7BanterJaheira", "GLOBAL", 2)~
+  ~(TODO: Dummy banter #1...)~ DO ~IncrementGlobal("A7BanterJaheira", "GLOBAL", 1)~
   == A7AFAAQ ~...~
   == JAHEI25J ~....~
 EXIT
 
 
 // Dummy banter #2
-CHAIN IF ~Name("Jaheira", LastTalkedToBy) Global("InToB", "GLOBAL", 0) Global("BanterActive", "LOCALS", 1) Global("A7BanterJaheira", "GLOBAL", 2)~ THEN A7AFAAQ Jaheira.1
-  ~(TODO: Dummy banter #2...)~ DO ~SetGlobal("A7BanterJaheira", "GLOBAL", 4)~
+CHAIN IF ~Name("Jaheira", LastTalkedToBy) Global("InToB", "GLOBAL", 0) Global("BanterActive", "LOCALS", 1) Global("A7BanterJaheira", "GLOBAL", 3)~ THEN A7AFAAQ Jaheira.1
+  ~(TODO: Dummy banter #2...)~ DO ~IncrementGlobal("A7BanterJaheira", "GLOBAL", 1)~
   == JAHEIRAJ ~...~
   == A7AFAAQ ~....~
 EXIT
 
-CHAIN IF ~Name("Jaheira", LastTalkedToBy) Global("InToB", "GLOBAL", 1) Global("BanterActive", "LOCALS", 1) Global("A7BanterJaheira", "GLOBAL", 2)~ THEN A7AFAAQ Jaheira.1
-  ~(TODO: Dummy banter #2...)~ DO ~SetGlobal("A7BanterJaheira", "GLOBAL", 4)~
+CHAIN IF ~Name("Jaheira", LastTalkedToBy) Global("InToB", "GLOBAL", 1) Global("BanterActive", "LOCALS", 1) Global("A7BanterJaheira", "GLOBAL", 3)~ THEN A7AFAAQ Jaheira.1
+  ~(TODO: Dummy banter #2...)~ DO ~IncrementGlobal("A7BanterJaheira", "GLOBAL", 1)~
   == JAHEI25J ~...~
   == A7AFAAQ ~....~
 EXIT
@@ -31,8 +31,8 @@ EXIT
 
 
 // Banter #1
-// CHAIN IF ~See("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("A7AfaaqEnslaved", "GLOBAL", 0) GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterJaheira", "GLOBAL", 0)~ THEN BJAHEIR Jaheira.0
-  // ~(TODO: Jaheira inquires whether Afaaq hails from Calimshan, as most djinn on this plane call that region their home...)~ DO ~SetGlobal("A7BanterJaheira", "GLOBAL", 1)~
+// CHAIN IF ~See("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("A7AfaaqEnslaved", "GLOBAL", 0) GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterJaheira", "GLOBAL", 1)~ THEN BJAHEIR Jaheira.0
+  // ~(TODO: Jaheira inquires whether Afaaq hails from Calimshan, as most djinn on this plane call that region their home...)~ DO ~IncrementGlobal("A7BanterJaheira", "GLOBAL", 1)~
   // == A7AFAAQ ~Afaaq tells her that he did live in Calimshan a long time ago...~
   // == BJAHEIR ~Jaheira reminds Calimshan of her deceased husband Khalid.~
   // = ~She tells him that she has unpleasant memories of that place because of its active slave trade in humans and other creatures.~
@@ -42,8 +42,8 @@ EXIT
   // == A7AFAAQ ~Afaaq respects her resolve and tells her that he shares a similar belief.~
 // EXIT
 
-// CHAIN IF ~See("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("A7AfaaqEnslaved", "GLOBAL", 0) GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterJaheira", "GLOBAL", 0)~ THEN BJAHEI25 Jaheira.0
-  // ~(TODO: Jaheira inquires whether Afaaq hails from Calimshan, as most djinn on this plane call that region their home...)~ DO ~SetGlobal("A7BanterJaheira", "GLOBAL", 1)~
+// CHAIN IF ~See("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("A7AfaaqEnslaved", "GLOBAL", 0) GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterJaheira", "GLOBAL", 1)~ THEN BJAHEI25 Jaheira.0
+  // ~(TODO: Jaheira inquires whether Afaaq hails from Calimshan, as most djinn on this plane call that region their home...)~ DO ~IncrementGlobal("A7BanterJaheira", "GLOBAL", 1)~
   // == A7AFAAQ ~Afaaq tells her that he did live in Calimshan a long time ago...~
   // == BJAHEI25 ~Jaheira reminds Calimshan of her deceased husband Khalid.~
   // = ~She tells him that she has unpleasant memories of that place because of its active slave trade in humans and other creatures.~

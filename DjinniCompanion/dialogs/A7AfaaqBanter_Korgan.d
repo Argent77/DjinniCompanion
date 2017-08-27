@@ -5,7 +5,7 @@
 // TODO: Korgan insults Afaaq because he let himself taken prisoner in a magical lamp...
 // TODO: Korgan'ize lines
 CHAIN IF ~Global("A7BanterKorgan", "GLOBAL", 1)~ THEN KORGANJ Korgan.0
-  ~Ye're bloody lucky <CHARNAME> took ye wit' us. I were dumpin' a weaklin' as ye at the first opportunity, if I had my way.~ DO ~SetGlobal("A7BanterKorgan", "GLOBAL", 2)~
+  ~Ye're bloody lucky <CHARNAME> took ye wit' us. I were dumpin' a weaklin' as ye at the first opportunity, if I had my way.~ DO ~IncrementGlobal("A7BanterKorgan", "GLOBAL", 1)~
   == A7AFAAQ ~Weakling? I have told you the cause for my plight already.~
   == KORGANJ ~An excuse for the weak. You didn't even try, did you? From your meek reply I gather that I could bash in your skull and you'd apologize for the trouble.~
   == A7AFAAQ ~An excess of emotion often leads to mistakes in battles.~
@@ -13,21 +13,21 @@ CHAIN IF ~Global("A7BanterKorgan", "GLOBAL", 1)~ THEN KORGANJ Korgan.0
 EXIT
 
 CHAIN IF ~Global("A7BanterKorgan", "GLOBAL", 1)~ THEN KORGA25J Korgan.0
-  ~(TODO: Korgan insults Afaaq because he let himself taken prisoner in a magical lamp...)~ DO ~SetGlobal("A7BanterKorgan", "GLOBAL", 2)~
+  ~(TODO: Korgan insults Afaaq because he let himself taken prisoner in a magical lamp...)~ DO ~IncrementGlobal("A7BanterKorgan", "GLOBAL", 1)~
   == A7AFAAQ ~(TODO: Afaaq doesn't react to the insults...)~
   == KORGA25J ~(TODO: Afaaq's reaction makes Korgan even angrier...)~
 EXIT
 
 
 // Banter #2
-CHAIN IF ~Name("Korgan", LastTalkedToBy) Global("A7BanterKorgan", "GLOBAL", 2) Global("BanterActive", "LOCALS", 1)~ THEN A7AFAAQ Korgan.1
-  ~(TODO: Afaaq tells Korgan that his ruthless and aggressive behavior reminds him of the rakshasa he had to serve...)~ DO ~SetGlobal("A7BanterKorgan", "GLOBAL", 4) RealSetGlobalTimer("A7KorganBanterNPCTimer", "GLOBAL", 3600)~
+CHAIN IF ~Name("Korgan", LastTalkedToBy) Global("A7BanterKorgan", "GLOBAL", 3) Global("BanterActive", "LOCALS", 1)~ THEN A7AFAAQ Korgan.1
+  ~(TODO: Afaaq tells Korgan that his ruthless and aggressive behavior reminds him of the rakshasa he had to serve...)~ DO ~IncrementGlobal("A7BanterKorgan", "GLOBAL", 1) RealSetGlobalTimer("A7KorganBanterNPCTimer", "GLOBAL", 3600)~
   == KORGANJ ~(TODO: Korgan is pissed because he has been compared to a pack of animals...)~
   == A7AFAAQ ~(TODO: Afaaq replies with a subtle sting to Korgan's reaction...)~
 EXIT
 
-CHAIN IF ~Name("Korgan", LastTalkedToBy) Global("A7BanterKorgan", "GLOBAL", 2) Global("BanterActive", "LOCALS", 1)~ THEN A7AFAAQ Korgan.1
-  ~(TODO: Afaaq tells Korgan that his ruthless and aggressive behavior reminds him of the rakshasa he had to serve...)~ DO ~SetGlobal("A7BanterKorgan", "GLOBAL", 4) RealSetGlobalTimer("A7KorganBanterNPCTimer", "GLOBAL", 3600)~
+CHAIN IF ~Name("Korgan", LastTalkedToBy) Global("A7BanterKorgan", "GLOBAL", 3) Global("BanterActive", "LOCALS", 1)~ THEN A7AFAAQ Korgan.1
+  ~(TODO: Afaaq tells Korgan that his ruthless and aggressive behavior reminds him of the rakshasa he had to serve...)~ DO ~IncrementGlobal("A7BanterKorgan", "GLOBAL", 1) RealSetGlobalTimer("A7KorganBanterNPCTimer", "GLOBAL", 3600)~
   == KORGA25J ~(TODO: Korgan is pissed because he has been compared to a pack of animals...)~
   == A7AFAAQ ~(TODO: Afaaq replies with a subtle sting to Korgan's reaction...)~
 EXIT
@@ -35,13 +35,13 @@ EXIT
 
 // Banter #3
 CHAIN IF ~Global("A7BanterKorgan", "GLOBAL", 5)~ THEN KORGANJ Korgan.2
-  ~(TODO: Korgan tries to provoke an emotional reaction from Afaaq by telling him what he would do with him, if he was his slave...)~ DO ~SetGlobal("A7BanterKorgan", "GLOBAL", 6) SetGlobal("A7KorganDuel", "GLOBAL", 1) RealSetGlobalTimer("A7KorganDuelTimer", "GLOBAL", 300)~
+  ~(TODO: Korgan tries to provoke an emotional reaction from Afaaq by telling him what he would do with him, if he was his slave...)~ DO ~IncrementGlobal("A7BanterKorgan", "GLOBAL", 1) SetGlobal("A7KorganDuel", "GLOBAL", 1) RealSetGlobalTimer("A7KorganDuelTimer", "GLOBAL", 300)~
   == A7AFAAQ ~(TODO: Afaaq reacts calmly as usual...)~
   == KORGANJ ~(TODO: Afaaq's calm behavior infuriates Korgan even further...)~
 EXIT
 
 CHAIN IF ~Global("A7BanterKorgan", "GLOBAL", 5)~ THEN KORGA25J Korgan.2
-  ~(TODO: Korgan tries to provoke an emotional reaction from Afaaq by telling him what he would do with him, if he was his slave...)~ DO ~SetGlobal("A7BanterKorgan", "GLOBAL", 6) SetGlobal("A7KorganDuel", "GLOBAL", 1) RealSetGlobalTimer("A7KorganDuelTimer", "GLOBAL", 300)~
+  ~(TODO: Korgan tries to provoke an emotional reaction from Afaaq by telling him what he would do with him, if he was his slave...)~ DO ~IncrementGlobal("A7BanterKorgan", "GLOBAL", 1) SetGlobal("A7KorganDuel", "GLOBAL", 1) RealSetGlobalTimer("A7KorganDuelTimer", "GLOBAL", 300)~
   == A7AFAAQ ~(TODO: Afaaq reacts calmly as usual...)~
   == KORGA25J ~(TODO: Afaaq's calm behavior infuriates Korgan even further...)~
 EXIT

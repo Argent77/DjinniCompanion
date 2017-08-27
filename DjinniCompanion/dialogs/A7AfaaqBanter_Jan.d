@@ -2,28 +2,28 @@
 // TODO
 
 // Dummy banter #1
-CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterJan", "GLOBAL", 1)~ THEN JANJ Jan.0
-  ~(TODO: Dummy banter #1...)~ DO ~SetGlobal("A7BanterJan", "GLOBAL", 2)~
+CHAIN IF ~Global("A7BanterJan", "GLOBAL", 1)~ THEN JANJ Jan.0
+  ~(TODO: Dummy banter #1...)~ DO ~IncrementGlobal("A7BanterJan", "GLOBAL", 1)~
   == A7AFAAQ ~...~
   == JANJ ~....~
 EXIT
 
-CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterJan", "GLOBAL", 1)~ THEN JAN25J Jan.0
-  ~(TODO: Dummy banter #1...)~ DO ~SetGlobal("A7BanterJan", "GLOBAL", 2)~
+CHAIN IF ~Global("A7BanterJan", "GLOBAL", 1)~ THEN JAN25J Jan.0
+  ~(TODO: Dummy banter #1...)~ DO ~IncrementGlobal("A7BanterJan", "GLOBAL", 1)~
   == A7AFAAQ ~...~
   == JAN25J ~....~
 EXIT
 
 
 // Dummy banter #2
-CHAIN IF ~Name("Jan", LastTalkedToBy) Global("InToB", "GLOBAL", 0) Global("BanterActive", "LOCALS", 1) Global("A7BanterJan", "GLOBAL", 2)~ THEN A7AFAAQ Jan.1
-  ~(TODO: Dummy banter #2...)~ DO ~SetGlobal("A7BanterJan", "GLOBAL", 4)~
+CHAIN IF ~Name("Jan", LastTalkedToBy) Global("InToB", "GLOBAL", 0) Global("BanterActive", "LOCALS", 1) Global("A7BanterJan", "GLOBAL", 3)~ THEN A7AFAAQ Jan.1
+  ~(TODO: Dummy banter #2...)~ DO ~IncrementGlobal("A7BanterJan", "GLOBAL", 1)~
   == JANJ ~...~
   == A7AFAAQ ~....~
 EXIT
 
-CHAIN IF ~Name("Jan", LastTalkedToBy) Global("InToB", "GLOBAL", 1) Global("BanterActive", "LOCALS", 1) Global("A7BanterJan", "GLOBAL", 2)~ THEN A7AFAAQ Jan.1
-  ~(TODO: Dummy banter #2...)~ DO ~SetGlobal("A7BanterJan", "GLOBAL", 4)~
+CHAIN IF ~Name("Jan", LastTalkedToBy) Global("InToB", "GLOBAL", 1) Global("BanterActive", "LOCALS", 1) Global("A7BanterJan", "GLOBAL", 3)~ THEN A7AFAAQ Jan.1
+  ~(TODO: Dummy banter #2...)~ DO ~IncrementGlobal("A7BanterJan", "GLOBAL", 1)~
   == JAN25J ~...~
   == A7AFAAQ ~....~
 EXIT
