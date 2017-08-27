@@ -517,8 +517,8 @@ LAF BanterAccelerator END
 // EXTEND_TOP ~edwi25.bcs~     ~DjinniCompanion/scripts/npc_edwin.baf~
 // EXTEND_TOP ~haerdali.bcs~   ~DjinniCompanion/scripts/npc_haerdalis.baf~
 // EXTEND_TOP ~haer25.bcs~     ~DjinniCompanion/scripts/npc_haerdalis.baf~
-// EXTEND_TOP ~imoen2.bcs~     ~DjinniCompanion/scripts/npc_imoen.baf~
-// EXTEND_TOP ~imoe25.bcs~     ~DjinniCompanion/scripts/npc_imoen.baf~
+EXTEND_TOP ~imoen2.bcs~     ~DjinniCompanion/scripts/npc_imoen.baf~
+EXTEND_TOP ~imoe25.bcs~     ~DjinniCompanion/scripts/npc_imoen.baf~
 // EXTEND_TOP ~jaheira.bcs~    ~DjinniCompanion/scripts/npc_jaheira.baf~
 // EXTEND_TOP ~jahe25.bcs~     ~DjinniCompanion/scripts/npc_jaheira.baf~
 // EXTEND_TOP ~jan.bcs~        ~DjinniCompanion/scripts/npc_jan.baf~
@@ -536,8 +536,8 @@ LAF BanterAccelerator END
 // EXTEND_TOP ~sarev25.bcs~    ~DjinniCompanion/scripts/npc_sarevok.baf~
 // EXTEND_TOP ~valygar.bcs~    ~DjinniCompanion/scripts/npc_valygar.baf~
 // EXTEND_TOP ~valy25.bcs~     ~DjinniCompanion/scripts/npc_valygar.baf~
-// EXTEND_TOP ~viconia.bcs~    ~DjinniCompanion/scripts/npc_viconia.baf~
-// EXTEND_TOP ~vico25.bcs~     ~DjinniCompanion/scripts/npc_viconia.baf~
+EXTEND_TOP ~viconia.bcs~    ~DjinniCompanion/scripts/npc_viconia.baf~
+EXTEND_TOP ~vico25.bcs~     ~DjinniCompanion/scripts/npc_viconia.baf~
 EXTEND_TOP ~yoshimo.bcs~    ~DjinniCompanion/scripts/npc_yoshimo.baf~
 
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
@@ -588,7 +588,7 @@ COMPILE EVALUATE_BUFFER
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Aerie.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Keldorn.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Mazzy.d~
-        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Imoen.d~
+        ~DjinniCompanion/dialogs/A7AfaaqBanter_Imoen.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Valygar.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Minsc.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Nalia.d~
@@ -599,7 +599,7 @@ COMPILE EVALUATE_BUFFER
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_HaerDalis.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Jan.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Edwin.d~
-        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Viconia.d~
+        ~DjinniCompanion/dialogs/A7AfaaqBanter_Viconia.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Korgan.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Sarevok.d~
 

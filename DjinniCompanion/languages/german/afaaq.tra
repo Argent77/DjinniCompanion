@@ -1207,6 +1207,25 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 
 
 // *** Banters with Imoen (index 14500...14999) ***
+@14500 = ~He, Afaaq! Kannst Du mir eine schöne Geschichte erzählen?~
+@14501 = ~In meiner Zeit auf dieser Ebene habe ich habe viele Ereignisse mitbekommen und an einigen sogar mitgewirkt. Nicht alle waren erfreulich, und einige sollten besser für immer in Vergessenheit geraten. Ich kann Euch über meine Zeit im Dienste des Kalifen Hasib berichte, falls Ihr es wünschst.~
+@14502 = ~Nein, Afaaq. Ich meinte eine richtige Geschichte. Etwas aufregendes oder lustiges, vielleicht sogar romantisches. Deine Art über vergangene Zeiten zu reden, wirkt immer so bedrückend.~
+@14503 = ~Ich verstehe. Dann lasst mich die Geschichte über die Mystischen Gärten Almraivens erzählen.~
+@14504 = ~Das hört sich schon viel besser an. Wir sollten aber <CHARNAME> nicht so lange warten lassen. Du kannst sie mir ja erzählen, wenn wir heute Nacht unser Lager aufschlagen.~
+@14505 = ~Ihr habt recht, Imoen. Die Geschichte ist sehr umfassend und erfordert viel Geduld und einen scharfen Verstand, um all die Feinheiten der zugrundeliegenden Philosophie zu ergründen.~
+@14506 = ~Afaaq?!~
+@14507 = ~Oh, nur keine Sorge. Sie wird Euch sicher trotzdem gefallen.~
+@14550 = ~Vermisst Du manchmal Deine Heimat?~
+@14551 = ~Aus Dschinn-Sicht bin ich noch nicht so lange von meiner Heimatebene fort. Wir sind von Natur aus einzelgängerisch. Daher ist es nicht ungewöhnlich, für ein oder zwei Zeitalter alleine zu reisen.~
+@14552 = ~Habt Ihr etwas auf dem Herzen, Imoen?~
+@14553 = ~Nicht wirklich. Ich denke in letzter Zeit häufiger an Kerzenburg zurück. Was wohl mit mir geschehen wäre, wenn ich <CHARNAME> und Gorion nicht gefolgt wäre. Dann hätte ich sicher nicht all die Qualen durch Irenicus erleiden müssen.~
+@14554 = ~Vergangene Entscheidungen zu bedauern ist ein nachvollziehbarer Wesenszug aller Sterblichen. Ihr habt Eure Entscheidung getroffen und konntet sie bis zum jetzigen Zeitpunkt durchziehen. Not und Mühsal sind Teil dieser Reise. Sie prägen den Charakter und machen Euch stärker und erfahrener.~
+@14555 = ~Das kann schon sein. Wenn ich in Kerzenburg zurückgeblieben wäre, hätte ich wohl irgendwann vor anderen Abkömmlingen von Bhaal fliehen müssen. Vielleicht wäre ich sogar in Saradush gelandet, wie all die anderen. Eine schreckliche Vorstellung.~
+@14556 = ~Das wäre aber nur eine von unzähligen Pfaden, die Ihr hättet nehmen können. Ihr habt zu jeder Zeit die Möglichkeit, einen neuen Weg einzuschlagen, unabhängig von Eurer anfänglichen Entscheidung, <CHARNAME> zu folgen oder nicht.~
+@14557 = ~Ja, aber oft fühlt es sich so an, als ob ich gar keine andere Wahl habe. Ein Abkömmling Bhaals zu sein ist manchmal echt lästig.~
+@14558 = ~Damit liegt Ihr gar nicht so falsch. Viele Entscheidungen werden unbewusst getroffen, und weitere können durch äußere Kräfte beeinflusst werden. Das gilt besonders für jemanden mit Eurer speziellen Abstammung.~
+@14559 = ~Wir Dschinn glauben stark an das Schicksal, dem großen Plan des Universums, der uns leitet und manchmal auch in bestimmte Richtungen drängt. Aber das bedeutet nicht, die Kontrolle über das eigene Leben zu verlieren. Ganz im Gegenteil, Ihr seid Eures eigenen Glückes Schmied. Das Universum wird sich schon darauf einstellen.~
+@14560 = ~Ha, das hört sich echt schräg an. Aber trotzdem Danke, Afaaq. Wenn ich wieder mal eine dumme Entscheidung treffen sollte, werde ich an Deine Worte denken.~
 
 
 // *** Banters with Valygar (index 15000...15499) ***
@@ -1253,6 +1272,15 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 
 
 // *** Banters with Viconia (index 20000...20499) ***
+@20000 = ~Afaaq, für einen Dschinn bist Du sehr mürrisch und unterwürfig. Hat Dir das Leben bereits so zugesetzt?~
+@20001 = ~So wie die Luft mal als leichte Brise oder als heftiger Sturm daherkommt, verläuft auch das Leben nicht immer in geraden Linien. Ich werde diesen Sturm überstehen, genauso wie all die anderen vorher.~
+@20002 = ~Du bist wahrhaft eine Schande für Deine Art. Jeder Sterbliche würde vor Neid erblassen, wenn man bedenkt, welche Kräfte in Dir ruhen.~
+@20003 = ~Einstmals dienten Dschinns meinem Haus. Trotz größter Bemühungen waren wir nie in der Lage, ihren Willen zu brechen, noch ihrem Stolz einen Dämpfer zu verpassen.~
+@20004 = ~Einstmals dienten Dschinns meinem Haus. Trotz größter Bemühungen waren wir nie in der Lage, ihren Willen zu brechen, noch ihrem Stolz einen Dämpfer zu verpassen. Offensichtlich hatte jemand mehr Erfolg mit Dir.~
+@20005 = ~Falscher Stolz kann auf lange Sicht großen Schaden verursachen. Gerade Ihr solltet wissen, wovon ich spreche.~
+@20006 = ~Mein Stolz hat mir geholfen, zu überleben. Er hat mich stärker gemacht. Hätte ich zu jener Zeit so ein unterwürfiges Verhalten an den Tag gelegt, dann hätte ich das gleiche Schicksal wie jeder Andere meines Hauses erlitten.~
+@20007 = ~Mein Stolz hat mir geholfen, zu überleben. Er hat mich stärker gemacht. Hätte ich zu jener Zeit so ein unterwürfiges Verhalten an den Tag gelegt, dann hätte ich das gleiche Schicksal wie jeder Andere meines Hauses erlitten. Gerade Du solltest über die Drowkultur Bescheid wissen.~
+@20008 = ~Nur die Zeit wird es zeigen, ob Ihr die richtige Entscheidung getroffen habt.~
 
 
 // *** Banters with Korgan (index 20500...20999) ***

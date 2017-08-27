@@ -18,16 +18,28 @@ THEN RESPONSE #100
 END
 
 // Triggering banters
-// IF
-  // Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself)
-  // !ActuallyInCombat() !Detect([ENEMY])
-  // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
-  // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7ImoenBanterNPCTimer", "GLOBAL")
-  // OR(2)
-    // Global("A7BanterImoen", "GLOBAL", 0)
-    // Global("A7BanterImoen", "GLOBAL", 4)
-// THEN RESPONSE #100
-  // IncrementGlobal("A7BanterImoen", "GLOBAL", 1)
-  // RealSetGlobalTimer("A7ImoenBanterNPCTimer", "GLOBAL", 3600)
-  // StartDialogNoSet("A7Afaaq")
-// END
+IF
+  Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself)
+  !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7ImoenBanterNPCTimer", "GLOBAL")
+  Global("A7BanterImoen", "GLOBAL", 0)
+THEN RESPONSE #100
+  IncrementGlobal("A7BanterImoen", "GLOBAL", 1)
+  RealSetGlobalTimer("A7ImoenBanterNPCTimer", "GLOBAL", 3600)
+  StartDialogNoSet("A7Afaaq")
+END
+
+// After defeating Yaga-Shura
+IF
+  Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself)
+  !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(4) !AreaType(DUNGEON) AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("InToB", "GLOBAL", 1) Global("HadBhaal25Dream1","GLOBAL",1)
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7ImoenBanterNPCTimer", "GLOBAL")
+  Global("A7BanterImoen", "GLOBAL", 2)
+THEN RESPONSE #100
+  IncrementGlobal("A7BanterImoen", "GLOBAL", 1)
+  RealSetGlobalTimer("A7ImoenBanterNPCTimer", "GLOBAL", 3600)
+  StartDialogNoSet("A7Afaaq")
+END
