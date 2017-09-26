@@ -996,6 +996,47 @@ THEN RESPONSE #100
   DestroySelf()
 END
 
+// Cross-mod content with Golem Construction
+IF
+  Global("Wish_GolemMithralLow", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_GolemMithralLow", "LOCALS", 0)
+  TakePartyItemAll("a7!iron")
+  DestroyItem("a7!iron")
+  GiveItemCreate("a7!mith", Player1, 1, 0, 0)
+  DestroySelf()
+END
+
+IF
+  Global("Wish_GolemMithralHigh", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_GolemMithralHigh", "LOCALS", 0)
+  TakePartyItemNum("a7!iron", 1)
+  DestroyItem("a7!iron")
+  GiveItemCreate("a7!mith", Player1, 1, 0, 0)
+  DestroySelf()
+END
+
+IF
+  Global("Wish_GolemAdamantineLow", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_GolemAdamantineLow", "LOCALS", 0)
+  TakePartyItemAll("a7!iron")
+  DestroyItem("a7!iron")
+  GiveItemCreate("a7!adam", Player1, 1, 0, 0)
+  DestroySelf()
+END
+
+IF
+  Global("Wish_GolemAdamantineHigh", "LOCALS", 1)
+THEN RESPONSE #100
+  SetGlobal("Wish_GolemAdamantineHigh", "LOCALS", 0)
+  TakePartyItemNum("a7!iron", 1)
+  DestroyItem("a7!iron")
+  GiveItemCreate("a7!adam", Player1, 1, 0, 0)
+  DestroySelf()
+END
+
 
 // *** One-time limited wishes ***
 IF
@@ -1094,6 +1135,55 @@ THEN RESPONSE #100
   SetGlobal("WishO_Raissa", "LOCALS", 0)
   SetGlobal("A7WishRestoreRaissa", "GLOBAL", 1)
   ReallyForceSpell("trskin01", CLERIC_LESSER_RESTORATION)
+  DestroySelf()
+END
+
+// Cross-mod content with Golem Construction
+IF
+  Global("WishO_GolemMithralLow", "LOCALS", 1)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_GolemMithralLow", "LOCALS", 0)
+  SetGlobal("a7!wishMithral", "GLOBAL", 1)
+  TakePartyItemAll("a7!iron")
+  DestroyItem("a7!iron")
+  GiveItemCreate("a7!mith", Player1, 1, 0, 0)
+  DestroySelf()
+END
+
+IF
+  Global("WishO_GolemMithralHigh", "LOCALS", 1)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_GolemMithralHigh", "LOCALS", 0)
+  SetGlobal("a7!wishMithral", "GLOBAL", 1)
+  TakePartyItemNum("a7!iron", 1)
+  DestroyItem("a7!iron")
+  GiveItemCreate("a7!mith", Player1, 1, 0, 0)
+  DestroySelf()
+END
+
+IF
+  Global("WishO_GolemAdamantineLow", "LOCALS", 1)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_GolemAdamantineLow", "LOCALS", 0)
+  SetGlobal("a7!wishAdamantine", "GLOBAL", 1)
+  TakePartyItemAll("a7!iron")
+  DestroyItem("a7!iron")
+  GiveItemCreate("a7!adam", Player1, 1, 0, 0)
+  DestroySelf()
+END
+
+IF
+  Global("WishO_GolemAdamantineHigh", "LOCALS", 1)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_GolemAdamantineHigh", "LOCALS", 0)
+  SetGlobal("a7!wishAdamantine", "GLOBAL", 1)
+  TakePartyItemNum("a7!iron", 1)
+  DestroyItem("a7!iron")
+  GiveItemCreate("a7!adam", Player1, 1, 0, 0)
   DestroySelf()
 END
 

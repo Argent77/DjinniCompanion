@@ -591,6 +591,18 @@
 @10590 = ~This castle must have endured much in the short time of its existence. I can feel the burden of past events within the very walls of the building itself.~
 @10591 = ~How about an Elixir of Health?~
 @10592 = ~Fix odd behavior~
+@10593 = ~I wish for my iron to be turned into mithral.~
+@10594 = ~I wish for a single piece of my iron to be turned into mithral.~
+@10595 = ~I wish for my iron to be turned into adamantine.~
+@10596 = ~I wish for a single piece of my iron to be turned into adamantine.~
+@10597 = ~It is done. All your iron has been turned into a single piece of mithral.~
+@10598 = ~It is done. One iron bar in your possession has been turned into a single piece of mithral.~
+@10599 = ~It is done. All your iron has been turned into a single piece of adamantine.~
+@10600 = ~It is done. One iron bar in your possession has been turned into a single piece of adamantine.~
+@10601 = ~Turn all your iron into a single piece of mithral.~
+@10602 = ~Turn a single piece of iron into mithral.~
+@10603 = ~Turn all your iron into a single piece of adamantine.~
+@10604 = ~Turn a single piece of iron into adamantine.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~received Afaaq's blessing~

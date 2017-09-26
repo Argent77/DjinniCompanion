@@ -591,6 +591,18 @@
 @10590 = ~Diese Burg hat in der kurzen Zeit ihres Bestehens bereits viel erlebt. Ich kann regelrecht die Last vergangener Ereignisse in den Mauern dieses Bauwerks spüren.~
 @10591 = ~Wie wäre es mit einem Heilungselixier?~
 @10592 = ~Seltsames Verhalten beheben~
+@10593 = ~Ich wüsche mir, dass mein Eisen in Mithril verwandelt wird.~
+@10594 = ~Ich wüsche mir, dass ein Eisenbarren aus meinem Besitz in Mithril verwandelt wird.~
+@10595 = ~Ich wüsche mir, dass mein Eisen in Adamantit verwandelt wird.~
+@10596 = ~Ich wüsche mir, dass ein Eisenbarren aus meinem Besitz in Adamantit verwandelt wird.~
+@10597 = ~Dann sollt Ihr das haben. Euer gesamtes Eisen wurde in einen Mithrilbrocken verwandelt.~
+@10598 = ~Dann sollt Ihr das haben. Ein Eisenbarren aus Eurem Besitz wurde in einen Mithrilbrocken verwandelt.~
+@10599 = ~Dann sollt Ihr das haben. Euer gesamtes Eisen wurde in einen Adamantitbarren verwandelt.~
+@10600 = ~Dann sollt Ihr das haben. Ein Eisenbarren aus Eurem Besitz wurde in einen Adamantitbarren verwandelt.~
+@10601 = ~Euer gesamtes Eisen wird in einen Mithrilbrocken verwandelt.~
+@10602 = ~Ein Eisenbarren aus Eurem Besitz wird in einen Mithrilbrocken verwandelt.~
+@10603 = ~Euer gesamtes Eisen wird in einen Adamantitbarren verwandelt.~
+@10604 = ~Ein Eisenbarren aus Eurem Besitz wird in einen Adamantitbarren verwandelt.~
 
 // *** Interjections and commentary (index 11000...11999) ***
 @11000 = ~empfängt Afaaqs Wohltat~

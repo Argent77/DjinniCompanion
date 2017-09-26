@@ -2288,6 +2288,11 @@ APPEND %afq_dialog%
     + ~CheckStatGT(LastTalkedToBy, 5, WIS) Global("wishShape","GLOBAL",0)~ + @10515 /* ~I wish to be anything I desire.~ */ + TalkGeneric.LimitedWish.10
     + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishContigency","GLOBAL",0)~ + @10516 /* ~I wish to be prepared for anything.~ */ + TalkGeneric.LimitedWish.5
     + ~CheckStatGT(LastTalkedToBy, 11, WIS) Global("wishWail","GLOBAL",0)~ + @10517 /* ~I wish that all my enemies will die.~ */ + TalkGeneric.LimitedWish.4
+    // Cross-mod content with Golem Construction
+    + ~Global("A7!TomeGolemMithral", "GLOBAL", 1) PartyHasItem("a7!iron") CheckStatLT(LastTalkedToBy, 14, WIS) Global("a7!wishMithral", "GLOBAL", 0)~ + @10593 /* I wish for my iron to be turned into mithral. */ + TalkGeneric.LimitedWish.Golem.Mithral.Low
+    + ~Global("A7!TomeGolemMithral", "GLOBAL", 1) PartyHasItem("a7!iron") CheckStatGT(LastTalkedToBy, 13, WIS) Global("a7!wishMithral", "GLOBAL", 0)~ + @10594 /* I wish for a single piece of my iron to be turned into mithral. */ + TalkGeneric.LimitedWish.Golem.Mithral.High
+    + ~Global("A7!TomeGolemAdamantite", "GLOBAL", 1) PartyHasItem("a7!iron") CheckStatLT(LastTalkedToBy, 14, WIS) Global("a7!wishAdamantine", "GLOBAL", 0)~ + @10595 /* I wish for my iron to be turned into adamantine. */ + TalkGeneric.LimitedWish.Golem.Adamantine.Low
+    + ~Global("A7!TomeGolemAdamantite", "GLOBAL", 1) PartyHasItem("a7!iron") CheckStatGT(LastTalkedToBy, 13, WIS) Global("a7!wishAdamantine", "GLOBAL", 0)~ + @10596 /* I wish for a single piece of my iron to be turned into adamantine. */ + TalkGeneric.LimitedWish.Golem.Adamantine.High
   END
 
   IF ~~ TalkGeneric.LimitedWish.3
@@ -2403,7 +2408,28 @@ APPEND %afq_dialog%
 
   IF ~~ TalkGeneric.LimitedWish.24
     SAY @11267 /* Granted. Raissa's curse will been removed. */
-    IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreatureObject("A7AFQWSH", "TRSKIN01", 0, 0, 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Raissa", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Raissa", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+  END
+
+  // Cross-mod content with Golem Construction
+  IF ~~ TalkGeneric.LimitedWish.Golem.Mithral.Low
+    SAY @10597 /* It is done. All your iron has been turned into a single piece of mithral. */
+    IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_GolemMithralLow", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.LimitedWish.Golem.Mithral.High
+    SAY @10598 /* It is done. One iron bar in your possession has been turned into a single piece of mithral. */
+    IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_GolemMithralHigh", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.LimitedWish.Golem.Adamantine.Low
+    SAY @10599 /* It is done. All your iron has been turned into a single piece of adamantine. */
+    IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_GolemAdamantineLow", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.LimitedWish.Golem.Adamantine.High
+    SAY @10600 /* It is done. One iron bar in your possession has been turned into a single piece of adamantine. */
+    IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_GolemAdamantineHigh", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
 
@@ -2482,6 +2508,15 @@ APPEND %afq_dialog%
     + ~Global("WishPower37", "GLOBAL", 1)~ + @10584 /* ~'Slow' the entire party.~ */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power37", "LOCALS", 1)) ClearActions(Myself)~ EXIT
     + ~Global("WishPower38", "GLOBAL", 1)~ + @10445 /* Globe of Blades on the caster. */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power38", "LOCALS", 1)) ClearActions(Myself)~ EXIT
     + ~Global("WishPower39", "GLOBAL", 1)~ + @10446 /* Party gains 10,000 gp. */ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_Power39", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    // Cross-mod content with Golem Construction
+    + ~Global("A7!TomeGolemMithral", "GLOBAL", 1) PartyHasItem("a7!iron") CheckStatLT(LastTalkedToBy, 14, WIS)~ + @10601 /* Turn all your iron into a single piece of mithral. */
+        DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_GolemMithralLow", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("A7!TomeGolemMithral", "GLOBAL", 1) PartyHasItem("a7!iron") CheckStatGT(LastTalkedToBy, 13, WIS)~ + @10602 /* Turn a single piece of iron into mithral. */
+        DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_GolemMithralHigh", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("A7!TomeGolemAdamantite", "GLOBAL", 1) PartyHasItem("a7!iron") CheckStatLT(LastTalkedToBy, 14, WIS)~ + @10603 /* Turn all your iron into a single piece of adamantine. */
+        DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_GolemAdamantineLow", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+    + ~Global("A7!TomeGolemAdamantite", "GLOBAL", 1) PartyHasItem("a7!iron") CheckStatGT(LastTalkedToBy, 13, WIS)~ + @10604 /* Turn a single piece of iron into adamantine. */
+        DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("Wish_GolemAdamantineHigh", "LOCALS", 1)) ClearActions(Myself)~ EXIT
     + ~RandomNum(66, 6)~ + @10447 /* I wish to lose the game. */ + TalkGeneric.Wish.Lose
     + ~RandomNum(77, 7)~ + @10448 /* I wish to win the game. */ + TalkGeneric.Wish.Win
     + ~CheckStatGT(LastTalkedToBy, 9, WIS)~ + @10449 /* I don't want to choose a wish at this time. */ DO ~ClearActions(Myself)~ + TalkGeneric.Wish.6
