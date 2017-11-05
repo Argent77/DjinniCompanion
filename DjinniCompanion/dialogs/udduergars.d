@@ -2,9 +2,9 @@
 // Traified
 
 // *** Introduction talk to the duergar in human form ***
-ADD_TRANS_TRIGGER ~UDDUER03~ 3 ~OR(2) !HasItem("A7DJLMP", Player1) GlobalGT("udDrowPlot", "GLOBAL", 8)~
+ADD_TRANS_TRIGGER ~UDDUER03~ 3 ~OR(2) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~
 EXTEND_BOTTOM ~UDDUER03~ 3
-  IF ~HasItem("A7DJLMP", Player1) GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.1
+  IF ~PartyHasItem("A7DJLMP") GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.1
 END
 
 APPEND ~UDDUER01~
@@ -29,27 +29,27 @@ APPEND ~UDDUER01~
 END
 
 // *** Introduction talk to the duergar in drow form ***
-ADD_TRANS_TRIGGER ~UDDUER01~ 0 ~OR(2) !HasItem("A7DJLMP", Player1) GlobalGT("udDrowPlot", "GLOBAL", 8)~ DO 2
+ADD_TRANS_TRIGGER ~UDDUER01~ 0 ~OR(2) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~ DO 2
 EXTEND_BOTTOM ~UDDUER01~ 0
   IF ~Global("PlayerLooksLikeDrow","GLOBAL",1) 
     !IsValidForPartyDialogue("VICONIA") 
     !IsValidForPartyDialogue("JAHEIRA") 
     !IsValidForPartyDialogue("MINSC") 
-    HasItem("A7DJLMP", Player1) 
+    PartyHasItem("A7DJLMP") 
     GlobalLT("udDrowPlot", "GLOBAL", 9)~ 
     THEN GOTO udduer01.6
 END
 
 // modify/add new transition to VICONIJ 141
-ADD_TRANS_TRIGGER ~VICONIJ~ 141 ~OR(2) !HasItem("A7DJLMP", Player1) GlobalGT("udDrowPlot", "GLOBAL", 8)~
+ADD_TRANS_TRIGGER ~VICONIJ~ 141 ~OR(2) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~
 EXTEND_BOTTOM ~VICONIJ~ 141
-  IF ~HasItem("A7DJLMP", Player1) GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.6
+  IF ~PartyHasItem("A7DJLMP") GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.6
 END
 
 // modify/add new transition to JAHEIRAJ 471
-ADD_TRANS_TRIGGER ~JAHEIRAJ~ 471 ~OR(2) !HasItem("A7DJLMP", Player1) GlobalGT("udDrowPlot", "GLOBAL", 8)~
+ADD_TRANS_TRIGGER ~JAHEIRAJ~ 471 ~OR(2) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~
 EXTEND_BOTTOM ~JAHEIRAJ~ 471
-  IF ~HasItem("A7DJLMP", Player1) GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.6
+  IF ~PartyHasItem("A7DJLMP") GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.6
 END
 
 // modify/add new transition to UDDUER02 15
@@ -59,9 +59,9 @@ EXTEND_BOTTOM ~UDDUER02~ 15
 END
 
 // modify/add new transition to UDDUER02 17
-ADD_TRANS_TRIGGER ~UDDUER02~ 17 ~OR(2) !HasItem("A7DJLMP", Player1) GlobalGT("udDrowPlot", "GLOBAL", 8)~
+ADD_TRANS_TRIGGER ~UDDUER02~ 17 ~OR(2) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~
 EXTEND_BOTTOM ~UDDUER02~ 17 
-  IF ~HasItem("A7DJLMP", Player1) GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.6
+  IF ~PartyHasItem("A7DJLMP") GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.6
 END
 
 // *** Talk with Uder Mordin ***
@@ -74,10 +74,10 @@ END
 
 
 // *** Talk with Carlig in human form ***
-ADD_STATE_TRIGGER ~UDDUER01~ 12 ~OR(3) GlobalGT("A7Quest3", "GLOBAL", 0) !HasItem("A7DJLMP", Player1) GlobalGT("udDrowPlot", "GLOBAL", 8)~
+ADD_STATE_TRIGGER ~UDDUER01~ 12 ~OR(3) GlobalGT("A7Quest3", "GLOBAL", 0) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~
 
 APPEND ~UDDUER01~
-  IF ~Global("PlayerLooksLikeDrow","GLOBAL",0) Global("A7Quest3", "GLOBAL", 0) HasItem("A7DJLMP", Player1) GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN BEGIN udduer01.3
+  IF ~Global("PlayerLooksLikeDrow","GLOBAL",0) Global("A7Quest3", "GLOBAL", 0) PartyHasItem("A7DJLMP") GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN BEGIN udduer01.3
     SAY @3005    // Ahh, you are back. Please forgive us, but we are a bit jumpy right now.
     = @3006    // We've accidently stumbled upon a camp of drow warriors a couple of days ago. There in the passage behind our back.
     = @3001    // We talked a bit about the current events in this region, but they barred the way to non-drow now. I guess they want to be left alone.
@@ -108,10 +108,10 @@ APPEND ~UDDUER01~
 END
 
 // *** Talk with Carlig in drow disguise ***
-ADD_STATE_TRIGGER ~UDDUER01~ 15 ~OR(3) GlobalGT("A7Quest3", "GLOBAL", 0) !HasItem("A7DJLMP", Player1) GlobalGT("udDrowPlot", "GLOBAL", 8)~
+ADD_STATE_TRIGGER ~UDDUER01~ 15 ~OR(3) GlobalGT("A7Quest3", "GLOBAL", 0) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~
 
 APPEND ~UDDUER01~
-  IF ~Global("PlayerLooksLikeDrow", "GLOBAL", 1) Global("A7Quest3", "GLOBAL", 0) HasItem("A7DJLMP", Player1) GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN BEGIN udduer01.6
+  IF ~Global("PlayerLooksLikeDrow", "GLOBAL", 1) Global("A7Quest3", "GLOBAL", 0) PartyHasItem("A7DJLMP") GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN BEGIN udduer01.6
     SAY #50233 /* ~M-malla C'rintri, most n-noble of Drow. I, Carlig, a simple trader, welcome your passing. Lolth kyorl dos.~ */
     = @3008    // When want to enter passage in our back, we clear way for you.
     ++ @3009 /* Tell me about this passage and be quick about it. */ + udduer01.7
