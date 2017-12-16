@@ -33,11 +33,11 @@ I have attained Grand Mastery in scimitars and am highly skilled in single weapo
 
 // *** IWDEE-specific strings (index 100000 and up)
 // dialog lines
-@100000 = ~Greetings, adventurer. My name is Kelvor Domine, wizard and high standing member of the Hosttower of the Arcane.~
-@100001 = ~Hosttower of the Arcane?~
-@100002 = ~What is a high standing member of the Hosttower doing so far away from home?~
+@100000 = ~Greetings, adventurer. My name is Kelvor Domine, wizard and high standing member of the Host Tower of the Arcane.~
+@100001 = ~Host Tower of the Arcane?~
+@100002 = ~What is a high standing member of the Host Tower doing so far away from home?~
 @100003 = ~You appear to be somewhat ignorant about the region you are travelling through.~
-@100004 = ~The Hosttower of the Arcane is an important academy of magical training and a center of power of the region.~
+@100004 = ~The Host Tower of the Arcane is an important academy of magical training and a center of power of the region.~
 @100005 = ~Interesting. And what are you doing so far away from home?~
 @100006 = ~Would you get to the point already?~
 @100007 = ~Yes, this is indeed very unusual.~
@@ -75,7 +75,7 @@ I have attained Grand Mastery in scimitars and am highly skilled in single weapo
 @100039 = ~Don't you want to reconsider? I won't ask you so nicely again.~
 @100040 = ~If you insist, please take it.~
 @100041 = ~I've told you my decision. Don't make me repeat myself!~
-@100042 = ~Very well. Maybe you just need a better motivation to change your mind? I'm sure that my colleagues from the Hosttower can help you in this case.~
+@100042 = ~Very well. Maybe you just need a better motivation to change your mind? I'm sure that my colleagues from the Host Tower can help you in this case.~
 @100043 = ~Be assured that I will hound you as long as you have the lamp in your possession.~
 @100044 = ~Ah, there you are. I have waited for you, <GABBER>. You know why I'm here.~
 @100045 = ~I give you one last chance to hand over the djinni lamp peacefully. What is your decision?~
@@ -109,7 +109,7 @@ I have attained Grand Mastery in scimitars and am highly skilled in single weapo
 
 // journal entries
 @101000 = ~Loose Ends
-On my way out of Dragon's Eye I encountered a mage called Kelvor Domine, who claimed to be a member of the Hosttower of the Arcane.
+On my way out of Dragon's Eye I encountered a mage called Kelvor Domine, who claimed to be a member of the Host Tower of the Arcane.
 
 He already seemed to know that I had defeated Yxumonei and asked for the djinni lamp I had looted from her dead body. After I declined, he called a number of mercenaries and threatened me that I haven't seen the last of him, before he teleported away.~
 
@@ -121,7 +121,7 @@ This time Kelvor Domine demanded more insistently that I gave him the djinni lam
 
 // completed journal entries
 @101900 = ~Loose Ends
-On my way out of Dragon's Eye I encountered a mage called Kelvor Domine, who claimed to be a member of the Hosttower of the Arcane.
+On my way out of Dragon's Eye I encountered a mage called Kelvor Domine, who claimed to be a member of the Host Tower of the Arcane.
 
 He already seemed to know that I had defeated Yxumonei and asked for the djinni lamp I had looted from her dead body. I accepted and handed over the djinni lamp. Who knows what a wizard of his power would unleash upon me if I refused. I'll probably never see the djinni and his lamp again.~
 
@@ -138,4 +138,4 @@ This time he didn't hide behind polite words and demanded outright that I gave h
 @101903 = ~Loose Ends
 On my way to Lower Dorn's Deep I encountered Kelvor Domine again.
 
-This time he didn't hide behind polite words and demanded outright that I gave him the djinni lamp. I refused again, which seemed to agitate him considerably. In response to my decision he summoned a host of mighty elementals and powerful demons. His own magical powers were impressive as well. I sincerely hope that I don't see any more members from the Hosttower after this incident.~
+This time he didn't hide behind polite words and demanded outright that I gave him the djinni lamp. I refused again, which seemed to agitate him considerably. In response to my decision he summoned a host of mighty elementals and powerful demons. His own magical powers were impressive as well. I sincerely hope that I don't see any more members from the Host Tower after this incident.~
