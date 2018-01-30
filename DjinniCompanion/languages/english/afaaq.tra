@@ -7,7 +7,7 @@
 @10002 = ~I will talk to you later.~
 @10003 = ~I am sorry, <GABBER>. But I will only answer to <CHARNAME>.~
 @10004 = ~You hold the lamp in your hands. A few moments later it starts to emit a faint pulsating light and the djinni turns his attention to you.~
-@10005 = ~When he realizes that you are not <CHARNAME>, he retreats back into the lamp and a short while later the glow disappears.~
+@10005 = ~When he realizes that you are not <CHARNAME>, he retreats back into the lamp, and a short while later the glow disappears.~
 @10006 = ~Greetings, my <PRO_LADYLORD>. May I help you with something?~
 @10007 = ~How are you doing, everything okay in there?~
 @10008 = ~Can you grant me a wish?~
@@ -26,7 +26,7 @@
 @10021 = ~Please engage in battle again.~
 @10022 = ~Please return into your lamp.~
 @10023 = ~I'd like to access your inventory again.~
-@10024 = ~Afaaq, how do you manage to enter the djinni lamp even though you are carrying big swords and the like?~
+@10024 = ~Afaaq, how do you manage to enter the lamp, even though you are carrying big swords and the like?~
 @10025 = ~Can you tell me about your abilities?~
 @10026 = ~I'm curious, Afaaq. What does the interior of your lamp look like?~
 @10027 = ~I'd like to enter your lamp again.~
@@ -119,7 +119,7 @@
 @10115 = ~This place appears to be far older than the buildings above it. I can sense a multitude of creatures crawling around the dark corners of this place.~
 @10116 = ~The lavish adornments and the stale air suggest this crypt is even older than the labyrinth which leads to it. Places like this are always guarded by undead of some kind.~
 @10117 = ~The place is teeming with undead, my <PRO_LADYLORD>. I hope you have brought enough stakes or holy water with you?~
-@10118 = ~Is this a sanctuary to reflect and contemplate? More probably a stage to show off and brag about. I wonder what your gods may think about places like this?~
+@10118 = ~Is this a sanctuary to reflect and contemplate? More likely a stage to show off and brag about. I wonder what your gods may think about places like this?~
 @10119 = ~I can see why Athkatla is called the "City of Coin". While your streets may not be paved with gold, the wealth showed off by your churches would have every god go green with envy.~
 @10120 = ~Did you know that Athkatla was founded by Calishite emigrants? The obsession for wealth and a decadent lifestyle has always been an important cornerstone of Calimshan.~
 @10121 = ~I have heard that the Athkatlan council members are not known to the public. That is very unusual for a city which attaches so much importance to financial wealth. How do the people know whom to bribe?~
@@ -150,7 +150,7 @@
 @10146 = ~To leave the influence of the illithids, you either have to prove your superiority to them or kill their master brain.~
 @10147 = ~If you actually manage to kill their master brain, the remaining forces will likely flee from your presence as they are unable to launch coordinated attacks anymore.~
 @10148 = ~Even in this ruined state you can catch a glimpse of the former glory the temple radiated in the past.~
-@10149 = ~This looks like a passage to the surface, my <PRO_LADYLORD>. I can sense a multitude of monsters however which guard it well.~
+@10149 = ~This looks like a passage to the surface, my <PRO_LADYLORD>. I can sense a multitude of monsters, however, which guard it well.~
 @10150 = ~If the rumors are true and the drow are at war with their surface cousins, it is unlikely you can pass them easily.~
 @10151 = ~Did you see their grim faces, my <PRO_LADYLORD>? The destruction of their temple appears to mean a lot to them. Maybe there is more at stake than they are willing to admit.~
 @10152 = ~It pains me to see the wonderful city of Suldanessellar fallen to Irenicus and his minions. Even more so as I can sense the tormentors of my past wrecking chaos in this place.~
@@ -184,11 +184,11 @@
 @10180 = ~You are nearing your goal, my <PRO_LADYLORD>. I can already feel your divine soul taking form to guide your actions.~
 @10181 = ~The time has finally come. You are almost ready to claim your heritage and take over Bhaal's Throne of Blood.~
 @10182 = ~Whatever choice you make, I will fight on your side as long as I am able to.~
-@10183 = ~The town is already on the brink of destruction. I do not see how you can prevent the inevitable as long as we are confined within it, my <PRO_LADYLORD>.~
+@10183 = ~The town is already on the brink of destruction. I do not see how you can prevent the inevitable as long as we are confined within, my <PRO_LADYLORD>.~
 @10184 = ~The smell of brimstone and ashes is very strong in this region. The Fire Giant Temple will be not far away.~
 @10185 = ~This place lives up to its name, my <PRO_LADYLORD>. The temple has been built over a massive magma chamber deep below the mountains. You will find no refuge from the heat here.~
 @10186 = ~You have brought us to a dark and foul place, my <PRO_LADYLORD>. The magical energies surrounding the temple ruins feel like stale air.~
-@10187 = ~Do you see the masses of soldiers, my <PRO_LADYLORD>? Defeating them all would take weeks. I strongly suggest that you concentrate your attacks on Yaga-Shura and his generals. An army without leadership will disperse quickly.~
+@10187 = ~Do you see the masses of soldiers, my <PRO_LADYLORD>? Defeating them all would take weeks. I strongly suggest to concentrate your attacks on Yaga-Shura and his generals. An army without leadership will disperse quickly.~
 @10188 = ~This appears to be the heart of the temple. Step carefully, I can sense strong magic guarding this place.~
 @10189 = ~Ah, this town reminds me of Calimshan. The blazing heat and dry wind... This will be a good place to restock your supplies and prepare for the coming battles.~
 @10190 = ~The townspeople seem to be frightened of something or someone. Maybe you can find a reason for their troubles, my <PRO_LADYLORD>.~
@@ -250,7 +250,7 @@
 @10246 = ~Of course, be my guest.~
 @10247 = ~You can not tell from the outside, but the interior of my lamp is a miniature version of my home, the Elemental Plane of Air, without any form of exit. Although you can call me forth, I am always bound to that place, unable to break through the dimensional barrier completely.~
 @10248 = ~You can not tell from the outside, but the interior of my lamp is a miniature version of my home, the Elemental Plane of Air.~
-@10249 = ~My equipment and other items in my possession are influenced by the lamp's enchantment as well. That is why even large objects can easily enter or leave the lamp.~
+@10249 = ~My equipment and other items in my possession are also influenced by the lamp's enchantment. That is why even large objects can easily enter or leave the lamp.~
 @10250 = ~So you have a lot of space in there, haven't you?~
 @10251 = ~Yes, I have. Why do you ask, my <PRO_LADYLORD>?~
 @10252 = ~Can I put some of my gear into your care?~
@@ -357,7 +357,7 @@
 @10356 = ~I am able to raise a small whirlwind in a controlled manner which is centered around myself. Being a creature of air, I have full control over it, naturally. Therefore I can choose how it affects my surrounding.~
 @10357 = ~As a result, I will concentrate its power only on creatures with hostile intent. The wind can blow around smaller chunks of debris damaging or even blinding nearby creatures.~
 @10358 = ~Being in full control of myself, I have the power to raise whirlwinds which can move around on their own. Each whirlwind can travel freely across the area, damaging or even blinding nearby enemies in their way.~
-@10359 = ~Since whirlwinds are extensions of myself, I can control them even if they move out of my visual range.~
+@10359 = ~Since whirlwinds are extensions of myself, I can control them even if they move out of my sight.~
 @10360 = ~The ability to increase my movement has been granted by the very air itself. It will increase almost all aspects of movement caused by my physical body.~
 @10361 = ~Therefore I can move faster as well as increase my attack speed. The effect will last for about an hour.~
 @10362 = ~I have witnessed that your kind has learned how to cast elemental shields of fire.~
@@ -889,11 +889,11 @@ though he fought back like a crack of loud thunder."~
 // interjections and specific talks
 @12000 = ~It appears you are very single-minded about following the trail of this Irenicus. Do you mind telling me why you are doing it?~
 @12001 = ~Irenicus took a very close friend of mine with him, and I intend to get her back to my side.~
-@12002 = ~Both Irenicus and my childhood friend Imoen have been abducted by the Cowled Mages and I won't leave them to their fates.~
-@12003 = ~This is a personal matter and I don't want to talk about it.~
+@12002 = ~Both Irenicus and my childhood friend Imoen have been abducted by the Cowled Mages, and I won't leave them to their fates.~
+@12003 = ~This is a personal matter. I don't want to talk about it.~
 @12004 = ~I respect your decision, but I am now part of your life too. Will you not reconsider?~
 @12005 = ~If you insist. Irenicus took a very close friend of mine with him, and I intend to get her back to my side.~
-@12006 = ~Very well. Both Irenicus and my childhood friend Imoen have been abducted by the Cowled Mages and I won't leave them to their fates.~
+@12006 = ~Very well. Both Irenicus and my childhood friend Imoen have been abducted by the Cowled Mages, and I won't leave them to their fates.~
 @12007 = ~No, this is something I have to solve by myself.~
 @12008 = ~As you wish.~
 @12009 = ~So you want to make sure that your friend does not come to harm?~
@@ -904,7 +904,7 @@ though he fought back like a crack of loud thunder."~
 @12014 = ~We do share bonds of trust and friendship with our siblings as well. But it is expressed in a different way than you mortals would imagine.~
 @12015 = ~My <PRO_LADYLORD>, you are finally reunited with your childhood friend Imoen.~
 @12016 = ~Do you care to introduce her to me?~
-@12017 = ~Sure, why not? This is my little sister and good friend Imoen. She went through a terrible ordeal and I am glad that she is at my side again.~
+@12017 = ~Sure, why not? This is my little sister and good friend Imoen. She went through a terrible ordeal and I'm glad that she is at my side again.~
 @12018 = ~I don't have the time for this, at the moment.~
 @12019 = ~Little sister is good. I'd rather see *you* as my little <PRO_BROTHERSISTER>, <CHARNAME>.~
 @12020 = ~And you are our new travelling companion, Afaaq? You look like a cheerful fellow.~
@@ -916,7 +916,7 @@ though he fought back like a crack of loud thunder."~
 @12026 = ~Your victory over Firkraag reminds me of my part in the great battle against the dragons of the Marching Mountains.~
 @12027 = ~You have battled against dragons?~
 @12028 = ~I don't really have time to listen to one of your long-winded stories again.~
-@12029 = ~Yes, I did long ago. At that time, dragons were much more numerous than today, and in the Marching Mountains this was doubly so.~
+@12029 = ~Yes, I did long ago. At that time, dragons were much more numerous than today, and in the Marching Mountains it was doubly so.~
 @12030 = ~I still remember the sheer size of the armies. Our side consisted mostly of djinn, genasi and some of the mortal races, while the dragons mobilized hordes of wyverns, drakes and dragons of all kinds.~
 @12031 = ~Although both sides were very well prepared, the number of casualties was unbelievably high. It didn't really matter to us, as we were merely thrown back to our home plane, but the mortal races suffered considerable losses as well.~
 @12032 = ~Fortunately those times are long since past, and today the surviving dragons live quite reclusively, hidden from most other life forms.~
@@ -1015,7 +1015,7 @@ though he fought back like a crack of loud thunder."~
 @12277 = ~Really? Tell me more!~
 @12278 = ~Thanks, but I don't want to hear more about it right now.~
 @12279 = ~As you wish.~
-@12280 = ~I too have lost parts of my spiritual essence. It happened long ago, but the effect is still as prevalent as back then.~
+@12280 = ~I have lost parts of my spiritual essence as well. It happened long ago, but the effect is still as prevalent as back then.~
 @12281 = ~Why didn't you mention it before?~
 @12282 = ~How did that happen?~
 @12283 = ~It is not my way to freely talk about matters that might be used against me. But the situation changed after you lost your soul as well.~
@@ -1024,7 +1024,7 @@ though he fought back like a crack of loud thunder."~
 @12286 = ~My opponents knew exactly who I was and what to expect from me. My suspicions were confirmed later by my captor.~
 @12287 = ~Who was able to catch you so easily?~
 @12288 = ~You are talking about Tathas Melarn, aren't you?~
-@12289 = ~I will not tell you the name of my captor, to avoid putting you into unnecessary danger.~
+@12289 = ~I will not tell you the name of my captor, to avoid putting you at unnecessary risk.~
 @12290 = ~My captor performed a dark ritual that ripped a part of my spiritual essence out and locked it away into a magical crystal.~
 @12291 = ~Yes, I am. He is apparently a collector of sorts, specialized in exotic and powerful beings that he manages to bring under his control.~
 @12292 = ~He performed a dark ritual that ripped a part of my spiritual essence out and locked it away into a magical crystal.~
@@ -1050,8 +1050,8 @@ though he fought back like a crack of loud thunder."~
 @12312 = ~He underestimated you in your final confrontation in Spellhold, but at that time we had help from the prison's inmates.~
 @12313 = ~Now we are on our own and Irenicus knows this. It might give us an advantage in our next confrontation.~
 @12314 = ~I agree that his plans were laid out very carefully, but he is also convinced of his superiority. We can use this overconfidence of his to our advantage.~
-@12315 = ~Do not let desperation lead your actions. An opponent as powerful as he will have ways to stop you even if you manage to surprise him.~
-@12316 = ~Nevertheless, I will follow your lead wherever you go. I am hopeful that together we will succeed in the end.~
+@12315 = ~Do not let desperation lead your actions. An opponent as powerful as him will have ways to stop you even if you manage to surprise him.~
+@12316 = ~I trust your judgment though and will follow your lead wherever you go. I am hopeful that together we will succeed in the end.~
 @12317 = ~I can imagine that you are wondering about my past in the presence of the drow sorcerer Tathas Melarn.~
 @12318 = ~He might have mentioned bits and pieces about me in his dealings with you. But I am certain that he told you nothing about how I was able to flee from his immediate grasp.~
 @12319 = ~No he hasn't. Please tell me more!~
@@ -1077,7 +1077,7 @@ though he fought back like a crack of loud thunder."~
 @12339 = ~I have seriously considered it. I refrained from it in the end since my chances of success were minimal.~
 @12340 = ~Instead I studied alternate methods to overcome my weakened state. I travelled from one place to another, following even the vaguest hints.~
 @12341 = ~About thirty years ago I must have drawn the attention of a certain group of rakshasa. They followed me undetected, and studied me and my weaknesses before they took the initiative.~
-@12342 = ~Unable to retreat into the Plane of Air and with many of my powers sealed away, I was an easy prey for their priests.~
+@12342 = ~Unable to retreat to the Plane of Air and with many of my powers sealed away, I was an easy prey for their priests.~
 @12343 = ~That was some story. The life of a genie is not as easy as I thought.~
 @12344 = ~You have suffered a long time. No wonder you are so gloomy all the time.~
 @12345 = ~I wish I could do more to help you.~
