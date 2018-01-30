@@ -18,21 +18,19 @@ THEN RESPONSE #100
 END
 
 // Triggering banters
-// IF
-  // Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself)
-  // !ActuallyInCombat() !Detect([ENEMY])
-  // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
-  // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
-  // OR(4)
-    // Global("A7BanterEdwin", "GLOBAL", 0)
-    // Global("A7BanterEdwin", "GLOBAL", 2)
-    // Global("A7BanterEdwin", "GLOBAL", 4)
-    // Global("A7BanterEdwin", "GLOBAL", 8)
-// THEN RESPONSE #100
-  // IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)
-  // RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3600)
-  // StartDialogNoSet("A7Afaaq")
-// END
+IF
+  Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself)
+  !ActuallyInCombat() !Detect([ENEMY])
+  !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
+  Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqUpgraded", "GLOBAL", 0) RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
+  OR(2)
+    Global("A7BanterEdwin", "GLOBAL", 0)
+    Global("A7BanterEdwin", "GLOBAL", 2)
+THEN RESPONSE #100
+  IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)
+  RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3600)
+  StartDialogNoSet("A7Afaaq")
+END
 
 // Triggering cutscene where Edwin attempts to bring Afaaq under his control (if Afaaq is inside his lamp)
 // IF
@@ -42,8 +40,10 @@ END
   // HasItem("A7DJLMP", Player1)
   // InParty(Myself)
   // GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
+  // !Global("Chapter", "GLOBAL", %bg2_chapter_7%)
   // Global("EnteredAR2806", "GLOBAL", 0)    // can be triggered until reaching the Tree of Life
   // Global("A7AfaaqSummoned", "GLOBAL", 0)
+  // RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
   // Global("A7EdwinTakesControl", "GLOBAL", 1)
 // THEN RESPONSE #100
   // SetGlobal("A7EdwinTakesControl", "GLOBAL", 2)
@@ -61,8 +61,10 @@ END
   // HasItem("A7DJLMP", Player1)
   // InParty(Myself)
   // GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
+  // !Global("Chapter", "GLOBAL", %bg2_chapter_7%)
   // Global("EnteredAR2806", "GLOBAL", 0)      // can be triggered until reaching the Tree of Life
   // Global("A7AfaaqSummoned", "GLOBAL", 1)
+  // RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
   // Global("A7EdwinTakesControl", "GLOBAL", 1)
 // THEN RESPONSE #100
   // SetGlobal("A7EdwinTakesControl", "GLOBAL", 2)

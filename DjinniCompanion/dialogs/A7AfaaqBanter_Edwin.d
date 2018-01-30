@@ -3,33 +3,48 @@
 
 // Banter #1
 CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 1)~ THEN EDWINJ Edwin.0
-  ~(TODO: Edwin tries hard to persuade Afaaq to change sides and work for him by promising him power, wealth and influence...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
-  == A7AFAAQ ~Afaaq politely tells Edwin that he has no interest in it.~
-  == EDWINJ ~Edwin is slightly offended by Afaaq's answer.~
+  @19550 /* It must be unbearable for a proud and noble djinn to be trapped in that prison, considering that you also have to suffer the indignity to follow every foolish whim of your masters. Don't you wish to escape this prison and enjoy freedom once more? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
+  == A7AFAAQ @19551 /* Your concern over my well-being is touching, wizard. */
+  = @19552 /* My current plight is just a temporary condition. I can allow myself to be patient since time is of no real consequence for my kind. */
+  == EDWINJ @19553 /* But surely even your patience will snap eventually. The Red Wizards have considerable knowledge of enslaving creatures as well as breaking enslavements. I could be of great help to you in this matter. */
+  == A7AFAAQ @19554 /* I have no doubt about your willingness to help me. However, Red Wizards are not known for their generosity. */
+  == EDWINJ @19555 /* Well, of course I'm not doing it purely out of the goodness of my heart. All I desire is a small favor that should easily be within your power. What say you? */
+  == A7AFAAQ @19556 /* You are not the first wizard of your order I have the misfortune to deal with. But unlike your brothers in Thay you are especially easy to read. */
+  = @19557 /* My previous masters forced me to perform unimaginably cruel and hideous tasks. But they all were well aware of the consequences of their actions. I am not so sure in your case. I would rather suffer another millennium in their clutches than being bound to grant you even the smallest of favors imaginable. */
+  == EDWINJ @19558 /* (How dare you!) Ahem, you wound me deeply, Afaaq. Think about it some more. I'm sure you will see the advantages of my offer. (As do I for myself.) */
 EXIT
 
 CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 1)~ THEN EDWIN25J Edwin.0
-  ~(TODO: Edwin tries hard to persuade Afaaq to change sides and work for him by promising him power, wealth and influence...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
-  == A7AFAAQ ~Afaaq politely tells Edwin that he has no interest in it.~
-  == EDWIN25J ~Edwin is slightly offended by Afaaq's answer.~
+  @19550 /* It must be unbearable for a proud and noble djinn to be trapped in that prison, considering that you also have to suffer the indignity to follow every foolish whim of your masters. Don't you wish to escape this prison and enjoy freedom once more? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
+  == A7AFAAQ @19551 /* Your concern over my well-being is touching, wizard. */
+  = @19552 /* My current plight is just a temporary condition. I can allow myself to be patient since time is of no real consequence for my kind. */
+  == EDWIN25J @19553 /* But surely even your patience will snap eventually. The Red Wizards have considerable knowledge of enslaving creatures as well as breaking enslavements. I could be of great help to you in this matter. */
+  == A7AFAAQ @19554 /* I have no doubt about your willingness to help me. However, Red Wizards are not known for their generosity. */
+  == EDWIN25J @19555 /* Well, of course I'm not doing it purely out of the goodness of my heart. All I desire is a small favor that should easily be within your power. What say you? */
+  == A7AFAAQ @19556 /* You are not the first wizard of your order I have the misfortune to deal with. But unlike your brothers in Thay you are especially easy to read. */
+  = @19557 /* My previous masters forced me to perform unimaginably cruel and hideous tasks. But they all were well aware of the consequences of their actions. I am not so sure in your case. I would rather suffer another millennium in their clutches than being bound to grant you even the smallest of favors imaginable. */
+  == EDWIN25J @19558 /* (How dare you!) Ahem, you wound me deeply, Afaaq. Think about it some more. I'm sure you will see the advantages of my offer. (As do I for myself.) */
 EXIT
 
 
 // Banter #2
-CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWINJ Edwin.1
-  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
+/*
+CHAIN IF ~FalseGlobal("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWINJ Edwin.1
+  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq sees right through him and tells him that it is impossible to find what he's looking for.~
   == EDWINJ ~This answer infuriates Edwin for a moment before regaining his self-control and muttering to himself.~
 EXIT
 
 CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWIN25J Edwin.1
-  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
+  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq sees right through him and tells him that it is impossible to find what he's looking for.~
   == EDWIN25J ~This answer infuriates Edwin for a moment before regaining his self-control and muttering to himself.~
 EXIT
+*/
 
 
 // Banter #3
+/*
 CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 5)~ THEN EDWINJ Edwin.3
   ~(TODO: Edwin becomes impatient and openly threats Afaaq to grant him a wish now or he would experience the frightening powers of the Red Wizards of Thay....)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
   == A7AFAAQ ~Afaaq calls his bluff and is both mildly amused and slightly annoyed by Edwin's empty threats.~
@@ -41,14 +56,16 @@ CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterEdwin", "GLOBAL", 5)~ THE
   == A7AFAAQ ~Afaaq calls his bluff and is both mildly amused and slightly annoyed by Edwin's empty threats.~
   == EDWIN25J ~Edwin loses his temper for only a moment before gaining self-control and tells Afaaq that he always gets what he wants.~
 EXIT
+*/
 
 
 // Cutscene: Edwin, after a rest, attempts to bring the lamp under his control
+/*
 APPEND A7AFAAQ
   // After Edwin failed to bring Afaaq under control
   IF ~InPartySlot(LastTalkedToBy, 0) Global("A7EdwinTakesControl", "GLOBAL", 3) Global("BanterActive", "LOCALS", 0)~ TalkEdwinTakesControl.1
     SAY ~I can not believe the foolishness of that wizard. He should have known that an artifact like this is protected against half-hearted attempts to break its enchantments.~
-    = ~That mage could have easily imprisoned everyone including you, my <PRO_LADYLORD>, by his foolish actions. I hope you have a way to free him from his predicament, because he will not have the power to do it by himself anymore.~
+    = ~He could have easily imprisoned everyone including you, my <PRO_LADYLORD>, by his foolish actions. I hope you have a way to free him from his predicament, because he will not have the power to do it by himself anymore.~
     + ~Class(LastTalkedToBy, MAGE_ALL)~ + ~I guess he has learned his lesson now. Would a Freedom spell release him from his imprisonment?~ + TalkEdwinTakesControl.2
     + ~!Class(LastTalkedToBy, MAGE_ALL)~ + ~I think he has learned his lesson now. How exactly can I release him from his predicament?~ + TalkEdwinTakesControl.3
     ++ ~That fool is more trouble than he's worth it. Let him rot in hell, for all I care.~ + TalkEdwinTakesControl.4
@@ -65,12 +82,14 @@ APPEND A7AFAAQ
   END
 
   IF ~~ TalkEdwinTakesControl.4
-    SAY ~I will not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast in this area however, to be effective.~
+    SAY ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast in this area however, to be effective.~
     IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL ~Free Edwin from his imprisonment.~ EXIT
   END
 END
+*/
 
 
+/*
 APPEND EDWINP
   // After Edwin has been rescued
   IF WEIGHT #-1 ~Global("A7EdwinTakesControl", "GLOBAL", 5)~ EdwinHumiliated.1
@@ -90,8 +109,10 @@ APPEND EDWINP
     IF ~~ DO ~EscapeArea()~ EXIT
   END
 END
+*/
 
 
+/*
 APPEND EDWIN25P
   // After Edwin has been rescued
   IF WEIGHT #-1 ~Global("A7EdwinTakesControl", "GLOBAL", 5)~ EdwinHumiliated.1
@@ -113,9 +134,11 @@ APPEND EDWIN25P
     IF ~~ DO ~EscapeArea()~ EXIT
   END
 END
+*/
 
 
 // Banter #5
+/*
 CHAIN IF ~Name("Edwin", LastTalkedToBy) Global("InToB", "GLOBAL", 0) Global("BanterActive", "LOCALS", 1) Global("A7BanterEdwin", "GLOBAL", 9)~ THEN A7AFAAQ Edwin.5
   ~(TODO: Afaaq chastises him for his thoughtless actions which has endangered everyone in the party...)~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 10)~
   == EDWINJ ~Edwin tells him that next time he'll be successful.~
@@ -154,4 +177,4 @@ APPEND EDWIN25J
     IF ~~ EXIT
   END
 END
-
+*/
