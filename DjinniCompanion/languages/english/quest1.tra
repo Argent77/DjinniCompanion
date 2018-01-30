@@ -53,7 +53,7 @@
 @1208 = ~ We are the hunters, you are the prey. That is all you need to know about us. You may still be of use to us, despite your ignorance.~
 @1209 = ~I'm called Mahel, <GABBER>. And I am the leader of our hunting party.~
 @1210 = ~You are pitiful excuse for a <RACE>. But you may still be useful to us.~
-@1211 = ~I don't know whether you are bold or merely ignorant, but I like your directness. I'm Mahel, the leader of our hunting party.~
+@1211 = ~I don't know whether you are bold or merely ignorant, but I like your directness. I am Mahel, the leader of our hunting party.~
 @1212 = ~You dare?~
 @1213 = ~We will hunt you down and feast on your innards. ATTACK THEM!~
 @1214 = ~We came here several moons ago for hunting and feasting. But we have aroused the interest of our enemies, the dao genies.~
@@ -167,7 +167,7 @@
 @1550 = ~You must help me, please!~
 @1551 = ~Deliver me from this misery. My spirit is trapped in the dark magics of this place.~
 @1552 = ~I beseech you, stranger. Take my remains away from this dark place. Please...~
-@1553 = ~I am...was Adratha. One night these monsters appeared and killed me in some gruesome manner. When I awoke again I was trapped in this nightmarish landscape unable to escape.~
+@1553 = ~I am...was Adratha. One night these monsters appeared and killed me in some gruesome manner. When I awoke again I was trapped in this nightmarish landscape, unable to escape.~
 @1554 = ~Don't you see the grotesque forms of dead trunks that were once beautiful trees? Don't you feel the heat of this bleak landscape when you touch it?~
 @1555 = ~Please, stranger! Release me from this misery.~
 @1556 = ~Take my remains away from this dark place and bury it in the soil of my home. Maybe then I can finally find some peace.~
@@ -179,7 +179,7 @@
 @1562 = ~You have done well. I can bury her according to druidic traditions. It should bring some peace to her tortured soul.~
 @1563 = ~Please take this in return.~
 @1564 = ~I have the remains of Adratha, the potion seller of the Druid Grove, in my possession. Can you put her spirit to rest?~
-@1565 = ~Yes, I can do it. I promise to take care of them personally. Her remains will be properly layed to rest in our town's cemetery.~
+@1565 = ~Yes, I can do it. I promise to take care of them personally. Her remains will be properly laid to rest in our town's cemetery.~
 @1566 = ~I'd like you to have this for your service.~
 
 // Misc. strings
@@ -189,7 +189,7 @@
 @1603 = ~This unusually heavy box radiates strong magic which allows you to trap the targeted creature. The rakshasa leader has told you to use it only on Khan Zahraa.~
 @1604 = ~This unusually heavy box radiates strong magic which contains the soul of the creature you have trapped within.~
 @1605 = ~Magical Portal~
-@1606 = ~You step out of the teleporter and feel a dark and menacing aura emanating from the magic circle. You are quite sure that whoever put that magic in place might already know you are here.~
+@1606 = ~You step out of the teleporter and feel a dark and menacing aura emanating from the magic circle. You are quite sure that whoever put that magic in place already knows you are here.~
 @1607 = ~Mahel~
 @1608 = ~Rakshasa Hunter~
 @1609 = ~Narantaka~

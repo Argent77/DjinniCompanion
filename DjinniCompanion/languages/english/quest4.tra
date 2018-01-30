@@ -2,7 +2,7 @@
 // *** Strings related to Quest 4: "The Gift of Freedom" (index 4000...4999)
 
 // dialog lines (vanilla game)
-@4000 = ~So... let me get this straight.  The sword Blackrazor is the key to your release, and Afaaq's, too?~
+@4000 = ~So... let me get this straight.  The sword Blackrazor is the key to your release. And Afaaq's, too?~
 @4001 = ~So if I were to give you Blackrazor, you would be able to release Afaaq from his enchantment?  And that would also release you from your punishment?~
 @4002 = ~I will not support your decision, <CHARNAME>. You have to do it without me.~
 @4003 = ~But I see that you are already familiar with such a fate, as I sense someone in a situation not unlike my own in your ranks.~
@@ -26,7 +26,7 @@
 @4021 = ~Maybe I was too hasty in my decision. There must be another way to release you. Could you please repeat the riddle again?~
 @4022 = ~As you have helped me, I will help your companion in turn.~
 @4023 = ~Breaking an enchantment of that kind is no simple task. Do you have anything in your possession which may support my attempt to do so?~
-@4024 = ~Yes, I have found a magical crystal which contains the sealed powers of Afaaq.~
+@4024 = ~Yes, I have found a magical crystal that contains the sealed powers of Afaaq.~
 @4025 = ~I'm afraid not. But you told me of my own powers in this realm...~
 @4026 = ~That is exactly what I was looking for! With direct access to his spiritual essence I am able to break the enchantments of the lamp.~
 @4027 = ~The casting will take only a moment...~

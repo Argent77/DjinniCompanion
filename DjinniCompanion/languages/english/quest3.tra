@@ -2,7 +2,7 @@
 // *** Strings related to Quest 3: "An unexpected encounter" (index 3000...3999)
 
 // Dialog lines: duergar merchants in map AR2100
-@3000 = ~And I'd advise you to avoid the passage behind us. We've accidentally stumbled upon a camp of drow warriors not long ago.~
+@3000 = ~And I'd advise you to avoid the passage behind us. We have accidentally stumbled upon a camp of drow warriors not long ago.~
 @3001 = ~They've barred the way to non-drow now, I guess they want to be left alone.~
 @3002 = ~A drow war party? Do you know why they are here?~
 @3003 = ~Thanks for the warning, but we have no business with the drow.~
@@ -94,7 +94,7 @@
 @3166 = ~You are undoubtedly a dimwitted moron, telling me of your true background while disguised as one of us.~
 @3167 = ~I'll do you a favor and release you from your pathetic life. Believe me, this is for the best for us all.~
 @3168 = ~You have made a wise decision. This is my plan, so listen closely.~
-@3169 = ~Being disguised as one of us for such a short time, you likely don't have close ties to the great houses of Ust Natha yet.~
+@3169 = ~Being disguised as one of us for such a short time, you most likely don't have close ties to the great houses of Ust Natha yet.~
 @3170 = ~Find a way to pass the protective wards of the Arabani House. It will likely be guarded, but you look strong enough to deal with them.~
 @3171 = ~Once you have passed the wards, find the residing Matron Mother Xunvrae d'Arabani and kill her. Return with her House Insignia and receive your reward.~
 @3172 = ~Do you know where I might find her House Insignia?~
@@ -142,7 +142,7 @@
 @3214 = ~Yes, I haven't forgotten. And you have felt it already, haven't you?~
 @3215 = ~I still have your soulcage in my possession. It is yours now.~
 @3216 = ~I will give you Afaaq's soulcage as a reward. It's a powerful item, and it is up to you how to use it.~
-@3217 = ~This is a ring which I have used regularly in the past. It will temporarily bring any creature of elemental origin under your control. Here is also a little money for your help in the last battle.~
+@3217 = ~This is a ring which I have used regularly in the past. It will temporarily bring any creature of elemental origin under your control. Here is also some gold for your help in the last battle.~
 @3218 = ~These are powerful scrolls which only respected members of Sorcere have access to. They are yours now.~
 @3219 = ~I still have your soulcage in my possession. It is yours now. And for your aid in the last battle I will add a little bonus to it.~
 @3220 = ~I will give you Afaaq's soulcage as a reward. It's a powerful item, and it is up to you how to use it. And for your aid in the last battle I will also add a little bonus to it.~
@@ -308,7 +308,7 @@
 // journal entries
 @3800 = ~An unexpected encounter
 
-A group of duergar merchants mentioned a warded secret passage behind their back which leads to an encampment of a drow party.~
+A group of duergar merchants mentioned a warded secret passage behind their back that leads to an encampment of a drow party.~
 
 @3801 = ~An unexpected encounter
 
@@ -328,7 +328,7 @@ The drow surprised me and have taken me to their commander Tathas Melarn. He ask
 
 @3805 = ~An unexpected encounter
 
-I have agreed to work for Tathas Melarn. My orders are to enter the House Arabani and assassinate their Matron Mother Xunvrae d'Arabani. When she is dead, I have to return to Tathas with her House Insignia. I hope he is true to his word and rewards us appropriately for such a dark deed.~
+I have agreed to work for Tathas Melarn. My orders are to enter the House Arabani and assassinate their Matron Mother Xunvrae d'Arabani. When she is dead, I have to return to Tathas with her House Insignia. I hope he is true to his word and rewards me appropriately for such a dark deed.~
 
 @3806 = ~An unexpected encounter
 

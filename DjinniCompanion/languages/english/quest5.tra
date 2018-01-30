@@ -212,7 +212,7 @@
 @5311 = ~I have a better plan. You could capture the djinns and use their powers to conquer their fortress.~
 @5312 = ~No, I don't want to be part of your schemes, Malik.~
 @5313 = ~That is an intriguing thought. Please, tell me more, <CHARNAME>.~
-@5314 = ~I have a whistle which enables me to summon the djinns at will. I could use it to lure the djinns to their doom.~
+@5314 = ~I have a whistle that enables me to summon the djinns at will. I could use it to lure the djinns to their doom.~
 @5315 = ~That is exactly what I needed. You are quite a bold <PRO_RACE>, <CHARNAME>. I think it'll work best near the prison in the north...~
 @5316 = ~There we are. While I'm busy preparing the prison for our guest, you will call the djinns.~
 @5317 = ~Greetings Karim, I welcome you and your brothers to our domain. Unfortunately our hospitality will be somewhat limited as I need your services very soon.~
@@ -484,10 +484,10 @@
 @5681 = ~It is highly unusual that you are tolerated by our commander.~
 @5682 = ~You are a <RACE>, aren't you? I haven't seen many of your kind yet.~
 @5683 = ~I was told that mortals cannot survive in hot environments like these. You must be a powerful spellcaster.~
-@5684 = ~The commander wants to ensure your loyalty? This is a sensible precaution.~
+@5684 = ~The commander wants to ensure your loyalty? That is a sensible precaution.~
 @5685 = ~The salamanders slipped through the portal unnoticed shortly after we arrived. Since then they have taken up residence in one of the southern buildings.~
 @5686 = ~You have quite a task before you, <RACE>. We didn't have much success to recruit the salamanders for our mission.~
-@5687 = ~Mephits are quick to occupy any places which provide environments similar to their elemental origin.~
+@5687 = ~Mephits are quick to occupy any places that provide environments similar to their elemental origin.~
 @5688 = ~Don't worry about killing any mephit you encounter in this place. They are too unreliable to be used in combat anyway.~
 @5689 = ~Mephits usually attack in groups, because of their cowardly nature. This will make your hunt for their blood easier.~
 @5690 = ~Very good, very good. The sooner you have delivered the elemental, the sooner we have ensured their loyalty... and yours.~
@@ -521,7 +521,7 @@
 @5732 = ~Are you a guest? Take a seat and relax for a while.~
 @5733 = ~Luckily the efreet haven't approached us yet. I have better things to do than taking part in their stupid battles.~
 @5734 = ~I miss my brothers in the planes. But it is unlikely they will join us soon because the efreet have strengthened their guard near the portal.~
-@5735 = ~Did you come to see my enchanted spear too? It must be legendary indeed if even mortals from far and wide arrive to admire its splendor.~
+@5735 = ~Did you come to see my enchanted spear too? It must be legendary indeed when even mortals from far and wide arrive to admire its splendor.~
 @5736 = ~No, I've come here on behalf of the efreet and wanted to invite you to join their campaign.~
 @5737 = ~Yes, of course. The tales of your mighty spear have reached even the most distant parts of our lands.~
 @5738 = ~Are you daft? I've come here to demand that you join the efreet campaign.~
@@ -728,13 +728,13 @@
 @6014 = ~You wouldn't ask me that if you'd known a simple spell like Protection from Fire would solve your problems.~
 @6015 = ~Let me think...  I could devise a spell similar to fire protection which will shield you from any kind of heat. Maybe an item with a limited number of charges, so you can use it without learning the arts of magic.~
 @6016 = ~But this will take a while. And I need to be compensated for my time and effort I have to put into this.~
-@6017 = ~It will cost you 8000 gold. Are you still interested?~
+@6017 = ~It'll cost you 8000 gold. Are you still interested?~
 @6018 = ~Very well, I will pay your price.~
 @6019 = ~No, this is too expensive for me. Maybe another time.~
 @6020 = ~As you wish. I'll be still here, if you change your mind or until Balthazar finally gives us new orders.~
 @6021 = ~Very good. This won't take long...~
 @6022 = ~Whew! That was harder than I thought... *ahem* I mean, it is done.~
-@6023 = ~Take this wand. It possesses at least ten charges which enable you and your companions to endure great heat for an extended period of time.~
+@6023 = ~Take this wand. It allows you and your companions to endure great heat for an extended period of time. You should be able to use it about a dozen times.~
 @6024 = ~If you need it recharged, come and see me.~
 @6025 = ~Greetings. Are you still in need of some heat protection? For 8000 gold I can solve your problem.~
 @6026 = ~No, not at the moment.~
