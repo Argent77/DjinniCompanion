@@ -1,43 +1,44 @@
 // *** BG2EE-specific initializations ***
 
-ACTION_IF (GAME_IS ~bg2ee eet iwdee~) BEGIN
-  // grouping quest entries
+// grouping quest entries
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   ADD_JOURNAL @1800 @1801 @1802 @1803 @1804 @1810 @1811 @1812 @1820
   ADD_JOURNAL @1850 @1851 @1860 @1861
   ADD_JOURNAL @2800 @2801 @2802 @2803 @2804 @2805 @2806 @2807 @2810
   ADD_JOURNAL @3800 @3801 @3802 @3803 @3804 @3805 @3806 @3807 @3808 @3820 @3821 @3822 @3823 @3824 @3825 @3826 @3827 @3828 @3850 @3851 @3852 @3853
   ADD_JOURNAL @4800 @4801 @4802 @4825 @4826 @4827 @4828
   ADD_JOURNAL @6500 @6501 @6502 @6503 @6504 @6505 @6506 @6507 @6508 @6509 @6510 @6511 @6512 @6513 @6514 @6515 @6516 @6517 @6518 @6519 @6520 @6521 @6522 @6523 @6524 @6525 @6526 @6527 @6528 @6529 @6530 @6531 @6532 @6533 @6534 @6535 @6536 @6537 @6538 @6539 @6540 @6541 @6542 @6543 @6544 @6545 @6546 @6547 @6548 @6590 @6591 @6592 @6593 @6594
+  ADD_JOURNAL @70000 @70001
+END
 
-  ACTION_IF (GAME_IS ~iwdee~) BEGIN
-    ADD_JOURNAL @101000 @101001 @101900 @101901 @101902 @101903
-  END
+ACTION_IF (GAME_IS ~iwdee~) BEGIN
+  ADD_JOURNAL @101000 @101001 @101900 @101901 @101902 @101903
+END
 
-  // updating familiar-specific game strings
-  ACTION_IF (FILE_EXISTS_IN_GAME ~enginest.2da~) BEGIN
-    COPY_EXISTING ~enginest.2da~ ~override~
-      COUNT_2DA_COLS numCols
-      COUNT_2DA_ROWS numCols numRows
-      SET updated = 0
-      FOR (row = 0; row < numRows; row += 1) BEGIN
-        READ_2DA_ENTRY row 0 numCols id
-        PATCH_IF (~%id%~ STRING_EQUAL_CASE ~STRREF_GUI_MIXED_FAMILIARNOTPERMITTEDENTERAREA~) BEGIN
-          SET strref = RESOLVE_STR_REF(@60110)  // Familiars and followers cannot enter areas without party members.
-          SET_2DA_ENTRY row 1 numCols ~%strref%~
-          SET updated += 1
-        END ELSE PATCH_IF (~%id%~ STRING_EQUAL_CASE ~STRREF_GUI_MIXED_FAMILIARNOTPERMITTEDENTERSTORE~) BEGIN
-          SET strref = RESOLVE_STR_REF(@60111)  // Familiars and followers cannot enter stores.
-          SET_2DA_ENTRY row 1 numCols ~%strref%~
-          SET updated += 1
-        END ELSE PATCH_IF (~%id%~ STRING_EQUAL_CASE ~STRREF_GUI_MIXED_FAMILIARNOTPERMITTEDPICKUPITEM~) BEGIN
-          SET strref = RESOLVE_STR_REF(@60112)  // Familiars and followers cannot pick up items.
-          SET_2DA_ENTRY row 1 numCols ~%strref%~
-          SET updated += 1
-        END
-        PATCH_IF (updated = 3) BEGIN
-          SET row = numRows
-        END
+// updating familiar-specific game strings
+ACTION_IF (FILE_EXISTS_IN_GAME ~enginest.2da~) BEGIN
+  COPY_EXISTING ~enginest.2da~ ~override~
+    COUNT_2DA_COLS numCols
+    COUNT_2DA_ROWS numCols numRows
+    SET updated = 0
+    FOR (row = 0; row < numRows; row += 1) BEGIN
+      READ_2DA_ENTRY row 0 numCols id
+      PATCH_IF (~%id%~ STRING_EQUAL_CASE ~STRREF_GUI_MIXED_FAMILIARNOTPERMITTEDENTERAREA~) BEGIN
+        SET strref = RESOLVE_STR_REF(@60110)  // Familiars and followers cannot enter areas without party members.
+        SET_2DA_ENTRY row 1 numCols ~%strref%~
+        SET updated += 1
+      END ELSE PATCH_IF (~%id%~ STRING_EQUAL_CASE ~STRREF_GUI_MIXED_FAMILIARNOTPERMITTEDENTERSTORE~) BEGIN
+        SET strref = RESOLVE_STR_REF(@60111)  // Familiars and followers cannot enter stores.
+        SET_2DA_ENTRY row 1 numCols ~%strref%~
+        SET updated += 1
+      END ELSE PATCH_IF (~%id%~ STRING_EQUAL_CASE ~STRREF_GUI_MIXED_FAMILIARNOTPERMITTEDPICKUPITEM~) BEGIN
+        SET strref = RESOLVE_STR_REF(@60112)  // Familiars and followers cannot pick up items.
+        SET_2DA_ENTRY row 1 numCols ~%strref%~
+        SET updated += 1
       END
-    BUT_ONLY
-  END
+      PATCH_IF (updated = 3) BEGIN
+        SET row = numRows
+      END
+    END
+  BUT_ONLY
 END

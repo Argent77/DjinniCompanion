@@ -3,8 +3,17 @@
 // Initializing Yoshimo's banter timer
 IF
   Global("A7YoshimoBanterNPCTimer", "GLOBAL", 0)
-THEN RESPONSE #100
-  RealSetGlobalTimer("A7YoshimoBanterNPCTimer", "GLOBAL", 3600)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("A7YoshimoBanterNPCTimer", "GLOBAL", 3000)
+  RESPONSE #100
+    RealSetGlobalTimer("A7YoshimoBanterNPCTimer", "GLOBAL", 3200)
+  RESPONSE #100
+    RealSetGlobalTimer("A7YoshimoBanterNPCTimer", "GLOBAL", 3400)
+  RESPONSE #100
+    RealSetGlobalTimer("A7YoshimoBanterNPCTimer", "GLOBAL", 3600)
+  RESPONSE #100
+    RealSetGlobalTimer("A7YoshimoBanterNPCTimer", "GLOBAL", 3800)
 END
 
 // Keep delaying first banter until after Afaaq's party introduction

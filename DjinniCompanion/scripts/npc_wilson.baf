@@ -3,8 +3,17 @@
 // Initializing Wilson's banter timer
 IF
   Global("A7WilsonBanterNPCTimer", "GLOBAL", 0)
-THEN RESPONSE #100
-  RealSetGlobalTimer("A7WilsonBanterNPCTimer", "GLOBAL", 3600)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("A7WilsonBanterNPCTimer", "GLOBAL", 3000)
+  RESPONSE #100
+    RealSetGlobalTimer("A7WilsonBanterNPCTimer", "GLOBAL", 3200)
+  RESPONSE #100
+    RealSetGlobalTimer("A7WilsonBanterNPCTimer", "GLOBAL", 3400)
+  RESPONSE #100
+    RealSetGlobalTimer("A7WilsonBanterNPCTimer", "GLOBAL", 3600)
+  RESPONSE #100
+    RealSetGlobalTimer("A7WilsonBanterNPCTimer", "GLOBAL", 3800)
 END
 
 // Keep delaying first banter until after Afaaq's party introduction

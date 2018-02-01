@@ -3,8 +3,17 @@
 // Initializing Edwin's banter timer
 IF
   Global("A7EdwinBanterNPCTimer", "GLOBAL", 0)
-THEN RESPONSE #100
-  RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3600)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3000)
+  RESPONSE #100
+    RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3200)
+  RESPONSE #100
+    RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3400)
+  RESPONSE #100
+    RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3600)
+  RESPONSE #100
+    RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3800)
 END
 
 // Keep delaying first banter until after Afaaq's party introduction
@@ -33,73 +42,83 @@ THEN RESPONSE #100
 END
 
 // Triggering cutscene where Edwin attempts to bring Afaaq under his control (if Afaaq is inside his lamp)
-// IF
-  // !AreaType(CITY)
-  // !AreaCheck("A77004") !AreaCheck("A77001")
-  // PartyRested()
-  // HasItem("A7DJLMP", Player1)
-  // InParty(Myself)
-  // GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
-  // !Global("Chapter", "GLOBAL", %bg2_chapter_7%)
-  // Global("EnteredAR2806", "GLOBAL", 0)    // can be triggered until reaching the Tree of Life
-  // Global("A7AfaaqSummoned", "GLOBAL", 0)
-  // RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
-  // Global("A7EdwinTakesControl", "GLOBAL", 1)
-// THEN RESPONSE #100
-  // SetGlobal("A7EdwinTakesControl", "GLOBAL", 2)
-  // ClearAllActions()
-  // StartCutSceneMode()
-  // StartCutScene("A7cut03a")
-// END
+IF
+  !AreaType(CITY)
+  !AreaCheck("A77004") !AreaCheck("A77001")
+  !AreaCheck("AR4000") !AreaCheck("AR6200")
+  PartyRested()
+  HasItem("A7DJLMP", Player1)
+  InParty(Myself)
+  GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
+  OR(2)   // Trigger in SoA only until reaching Tree of Life
+    GlobalGT("Chapter", "GLOBAL", %bg2_chapter_7%)
+    Global("EnteredAR2806", "GLOBAL", 0)
+  OR(2)   // Trigger in ToB only when Afaaq has been enslaved
+    GlobalLT("Chapter", "GLOBAL", %bg2_chapter_8%)
+    Global("A7AfaaqEnslaved", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 0)
+  RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
+  Global("A7EdwinTakesControl", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7EdwinTakesControl", "GLOBAL", 2)
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("A7cut03a")
+END
 
 // Triggering cutscene where Edwin attempts to bring Afaaq under his control (if Afaaq is outside of his lamp)
-// IF
-  // !AreaType(CITY)
-  // !AreaCheck("A77004") !AreaCheck("A77001")
-  // PartyRested()
-  // Detect("A7Afaaq")
-  // HasItem("A7DJLMP", Player1)
-  // InParty(Myself)
-  // GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
-  // !Global("Chapter", "GLOBAL", %bg2_chapter_7%)
-  // Global("EnteredAR2806", "GLOBAL", 0)      // can be triggered until reaching the Tree of Life
-  // Global("A7AfaaqSummoned", "GLOBAL", 1)
-  // RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
-  // Global("A7EdwinTakesControl", "GLOBAL", 1)
-// THEN RESPONSE #100
-  // SetGlobal("A7EdwinTakesControl", "GLOBAL", 2)
-  // ClearAllActions()
-  // StartCutSceneMode()
-  // StartCutScene("A7cut03b")
-// END
+IF
+  !AreaType(CITY)
+  !AreaCheck("A77004") !AreaCheck("A77001")
+  !AreaCheck("AR4000") !AreaCheck("AR6200")
+  PartyRested()
+  Detect("A7Afaaq")
+  HasItem("A7DJLMP", Player1)
+  InParty(Myself)
+  GlobalGT("Chapter", "GLOBAL", %bg2_chapter_5%)
+  OR(2)   // Trigger in SoA only until reaching Tree of Life
+    GlobalGT("Chapter", "GLOBAL", %bg2_chapter_7%)
+    Global("EnteredAR2806", "GLOBAL", 0)
+  OR(2)   // Trigger in ToB only when Afaaq has been enslaved
+    GlobalLT("Chapter", "GLOBAL", %bg2_chapter_8%)
+    Global("A7AfaaqEnslaved", "GLOBAL", 1)
+  Global("A7AfaaqSummoned", "GLOBAL", 1)
+  RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
+  Global("A7EdwinTakesControl", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("A7EdwinTakesControl", "GLOBAL", 2)
+  ClearAllActions()
+  StartCutSceneMode()
+  StartCutScene("A7cut03b")
+END
 
 
 // After Edwin has been released from his imprisonment
-// IF
-  // !Range([PC], 30)
-  // !InParty(Myself)
-  // Global("A7EdwinTakesControl", "GLOBAL", 4)
-// THEN RESPONSE #100
-  // MoveToObject(Player1)
-// END
+IF
+  !Range([PC], 30)
+  !InParty(Myself)
+  Global("A7EdwinTakesControl", "GLOBAL", 4)
+THEN RESPONSE #100
+  MoveToObject(Player1)
+END
 
-// IF
-  // !StateCheck(Player1, CD_STATE_NOTVALID)
-  // Range(Player1, 30)
-  // !InParty(Myself)
-  // Global("A7EdwinTakesControl", "GLOBAL", 4)
-// THEN RESPONSE #100
-  // SetGlobal("A7EdwinTakesControl", "GLOBAL", 5)
-  // StartDialogueNoSet([PC])
-// END
+IF
+  !StateCheck(Player1, CD_STATE_NOTVALID)
+  Range(Player1, 30)
+  !InParty(Myself)
+  Global("A7EdwinTakesControl", "GLOBAL", 4)
+THEN RESPONSE #100
+  SetGlobal("A7EdwinTakesControl", "GLOBAL", 5)
+  StartDialogueNoSet([PC])
+END
 
-// IF
-  // !Range(Player1, 30)
-  // Range([PC], 30)
-  // !StateCheck([PC], CD_STATE_NOTVALID)
-  // !InParty(Myself)
-  // Global("A7EdwinTakesControl", "GLOBAL", 4)
-// THEN RESPONSE #100
-  // SetGlobal("A7EdwinTakesControl", "GLOBAL", 5)
-  // StartDialogueNoSet([PC])
-// END
+IF
+  !Range(Player1, 30)
+  Range([PC], 30)
+  !StateCheck([PC], CD_STATE_NOTVALID)
+  !InParty(Myself)
+  Global("A7EdwinTakesControl", "GLOBAL", 4)
+THEN RESPONSE #100
+  SetGlobal("A7EdwinTakesControl", "GLOBAL", 5)
+  StartDialogueNoSet([PC])
+END

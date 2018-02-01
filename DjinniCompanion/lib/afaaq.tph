@@ -514,8 +514,8 @@ LAF BanterAccelerator END
 // EXTEND_TOP ~anom25.bcs~     ~DjinniCompanion/scripts/npc_anomen.baf~
 // EXTEND_TOP ~cernd.bcs~      ~DjinniCompanion/scripts/npc_cernd.baf~
 // EXTEND_TOP ~cern25.bcs~     ~DjinniCompanion/scripts/npc_cernd.baf~
-// EXTEND_TOP ~edwin.bcs~      ~DjinniCompanion/scripts/npc_edwin.baf~
-// EXTEND_TOP ~edwi25.bcs~     ~DjinniCompanion/scripts/npc_edwin.baf~
+EXTEND_TOP ~edwin.bcs~      ~DjinniCompanion/scripts/npc_edwin.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~edwi25.bcs~     ~DjinniCompanion/scripts/npc_edwin.baf~ EVALUATE_BUFFER
 // EXTEND_TOP ~haerdali.bcs~   ~DjinniCompanion/scripts/npc_haerdalis.baf~
 // EXTEND_TOP ~haer25.bcs~     ~DjinniCompanion/scripts/npc_haerdalis.baf~
 EXTEND_TOP ~imoen2.bcs~     ~DjinniCompanion/scripts/npc_imoen.baf~
@@ -599,7 +599,7 @@ COMPILE EVALUATE_BUFFER
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Cernd.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_HaerDalis.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Jan.d~
-        // ~DjinniCompanion/dialogs/A7AfaaqBanter_Edwin.d~
+        ~DjinniCompanion/dialogs/A7AfaaqBanter_Edwin.d~
         ~DjinniCompanion/dialogs/A7AfaaqBanter_Viconia.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Korgan.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Sarevok.d~

@@ -14,7 +14,7 @@ CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 1)~ THEN EDWINJ Edwin.0
   == EDWINJ @19558 /* (How dare you!) Ahem, you wound me deeply, Afaaq. Think about it some more. I'm sure you will see the advantages of my offer. (As do I for myself.) */
 EXIT
 
-CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 1)~ THEN EDWIN25J Edwin.0
+CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 1)~ THEN EDWIN25J Edwin.0
   @19550 /* It must be unbearable for a proud and noble djinn to be trapped in that prison, considering that you also have to suffer the indignity to follow every foolish whim of your masters. Don't you wish to escape this prison and enjoy freedom once more? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
   == A7AFAAQ @19551 /* Your concern over my well-being is touching, wizard. */
   = @19552 /* My current plight is just a temporary condition. I can allow myself to be patient since time is of no real consequence for my kind. */
@@ -28,19 +28,21 @@ EXIT
 
 
 // Banter #2
-/*
-CHAIN IF ~FalseGlobal("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWINJ Edwin.1
-  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
-  == A7AFAAQ ~Afaaq sees right through him and tells him that it is impossible to find what he's looking for.~
-  == EDWINJ ~This answer infuriates Edwin for a moment before regaining his self-control and muttering to himself.~
+CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWINJ Edwin.1
+  @19600 /* Afaaq, please satisfy my curiosity a bit. What was your life before your unfortunate encounters on the prime material plane? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
+  == A7AFAAQ @19601 /* I am certain that even the most insignificant tale from my past would vastly exceed your imagination, wizard. */
+  == EDWINJ @19602 /* Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. I could help you regain the opportunity to taste freedom once more. */
+  == A7AFAAQ @19603 /* You do seem to seriously believe in your own superior abilities? However, even a fool can see through your poorly disguised "sympathy". The powers that you so much crave for would certainly destroy you. I am not fool enough to even think about your offer. */
+  == EDWINJ @19604 /* So you refuse a helping hand that would allow you to leave your pitiable condition behind? You are more a fool than I expected. It is your loss, djinn. (But don't think I will give up so easily.) */
 EXIT
 
-CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWIN25J Edwin.1
-  ~(TODO: Edwin attempts to find a weakness in Afaaq by asking him about his dreams and ambitions...)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
-  == A7AFAAQ ~Afaaq sees right through him and tells him that it is impossible to find what he's looking for.~
-  == EDWIN25J ~This answer infuriates Edwin for a moment before regaining his self-control and muttering to himself.~
+CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 3) Global("A7AfaaqEnslaved", "GLOBAL", 1)~ THEN EDWIN25J Edwin.1
+  @19600 /* Afaaq, please satisfy my curiosity a bit. What was your life before your unfortunate encounters on the prime material plane? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
+  == A7AFAAQ @19601 /* I am certain that even the most insignificant tale from my past would vastly exceed your imagination, wizard. */
+  == EDWINJ @19602 /* Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. I could help you regain the opportunity to taste freedom once more. */
+  == A7AFAAQ @19603 /* You do seem to seriously believe in your own superior abilities? However, even a fool can see through your poorly disguised "sympathy". The powers that you so much crave for would certainly destroy you. I am not fool enough to even think about your offer. */
+  == EDWINJ @19604 /* So you refuse a helping hand that would allow you to leave your pitiable condition behind? You are more a fool than I expected. It is your loss, djinn. (But don't think I will give up so easily.) */
 EXIT
-*/
 
 
 // Banter #3
@@ -60,81 +62,75 @@ EXIT
 
 
 // Cutscene: Edwin, after a rest, attempts to bring the lamp under his control
-/*
 APPEND A7AFAAQ
   // After Edwin failed to bring Afaaq under control
   IF ~InPartySlot(LastTalkedToBy, 0) Global("A7EdwinTakesControl", "GLOBAL", 3) Global("BanterActive", "LOCALS", 0)~ TalkEdwinTakesControl.1
-    SAY ~I can not believe the foolishness of that wizard. He should have known that an artifact like this is protected against half-hearted attempts to break its enchantments.~
-    = ~He could have easily imprisoned everyone including you, my <PRO_LADYLORD>, by his foolish actions. I hope you have a way to free him from his predicament, because he will not have the power to do it by himself anymore.~
-    + ~Class(LastTalkedToBy, MAGE_ALL)~ + ~I guess he has learned his lesson now. Would a Freedom spell release him from his imprisonment?~ + TalkEdwinTakesControl.2
-    + ~!Class(LastTalkedToBy, MAGE_ALL)~ + ~I think he has learned his lesson now. How exactly can I release him from his predicament?~ + TalkEdwinTakesControl.3
-    ++ ~That fool is more trouble than he's worth it. Let him rot in hell, for all I care.~ + TalkEdwinTakesControl.4
+    SAY @19700 /* I can not believe the foolishness of that wizard. He should have known that an artifact like this is protected against half-hearted attempts to break its enchantments. */
+    = @19701 /* He could have easily imprisoned everyone including you, my <PRO_LADYLORD>, by his foolish actions. I hope you have a way to free him from his predicament, because he will not have the power to do it by himself anymore. */
+    + ~Class(LastTalkedToBy, MAGE_ALL)~ + @19702 /* I guess he has learned his lesson now. Would a Freedom spell release him from his imprisonment? */ + TalkEdwinTakesControl.2
+    + ~!Class(LastTalkedToBy, MAGE_ALL)~ + @19703 /* I think he has learned his lesson now. How exactly can I release him from his predicament? */ + TalkEdwinTakesControl.3
+    ++ @19704 /* That fool is more trouble than he's worth it. Let him rot in hell, for all I care. */ + TalkEdwinTakesControl.4
   END
 
   IF ~~ TalkEdwinTakesControl.2
-    SAY ~Yes, I think it would. But it has to be cast in this area to be effective. I hope you have a spell like that ready.~
-    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL ~Free Edwin from his imprisonment.~ EXIT
+    SAY @19705 /* Yes, I think it would. But it has to be cast in this area to be effective. I hope you have a spell like that ready. */
+    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
   END
 
   IF ~~ TalkEdwinTakesControl.3
-    SAY ~Only a Freedom spell will release the wizard from his prison. But it has to be used in this area to be effective. I hope you have a way to cast the spell.~
-    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL ~Free Edwin from his imprisonment.~ EXIT
+    SAY @19706 /* Only a Freedom spell will release the wizard from his prison. But it has to be used in this area to be effective. I hope you have a way to cast the spell. */
+    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
   END
 
   IF ~~ TalkEdwinTakesControl.4
-    SAY ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast in this area however, to be effective.~
-    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL ~Free Edwin from his imprisonment.~ EXIT
+    SAY @19707 /* ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast in this area however, to be effective. */
+    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
   END
 END
-*/
 
 
-/*
 APPEND EDWINP
   // After Edwin has been rescued
   IF WEIGHT #-1 ~Global("A7EdwinTakesControl", "GLOBAL", 5)~ EdwinHumiliated.1
-    SAY ~It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.)~
-    IF ~~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10)~ + EdwinHumiliated.2
+    SAY @19750 /* It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.) */
+    IF ~~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10) EraseJournalEntry(@70000)~ SOLVED_JOURNAL @70001 /* Free Edwin from his imprisonment */ + EdwinHumiliated.2
   END
 
   IF ~~ EdwinHumiliated.2
-    SAY ~Do you still need my superior intellect, <CHARNAME>?~
-    ++ ~Of course. I'm sure you won't try anything stupid like that again.~ DO ~SetGlobal("KickedOut", "LOCALS", 0) JoinParty()~ EXIT
-    ++ ~Not at the moment. I will have to think about your careless actions for a while.~ + 5
-    ++ ~What?! After all you have done, Edwin? You should be lucky that I cared enough to free you from your predicament.~ + EdwinHumiliated.3
+    SAY @19751 /* Do you still need my superior intellect, <CHARNAME>? */
+    ++ @19752 /* Of course. I'm sure you won't try anything stupid like that again. */ DO ~SetGlobal("KickedOut", "LOCALS", 0) JoinParty()~ EXIT
+    ++ @19753 /* ~Not at the moment. I will have to think about your careless actions for a while. */ + 5
+    ++ @19754 /* ~What?! After all you have done, Edwin? You should be lucky that I cared enough to free you from your predicament. */ + EdwinHumiliated.3
   END
 
   IF ~~ EdwinHumiliated.3
-    SAY ~Fine, I didn't care for your presence anyway. Good riddance!~
+    SAY @19755 /* ~Fine, I didn't care for your presence anyway. Good riddance! */
     IF ~~ DO ~EscapeArea()~ EXIT
   END
 END
-*/
 
 
-/*
 APPEND EDWIN25P
   // After Edwin has been rescued
   IF WEIGHT #-1 ~Global("A7EdwinTakesControl", "GLOBAL", 5)~ EdwinHumiliated.1
-    SAY ~It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.)~
-    IF ~~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 8) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10)~ + EdwinHumiliated.2
+    SAY @19750 /* It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.) */
+    IF ~~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 8) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10) EraseJournalEntry(@70000)~ SOLVED_JOURNAL @70001 /* Free Edwin from his imprisonment */ + EdwinHumiliated.2
   END
 
   IF ~~ EdwinHumiliated.2
-    SAY ~Do you still need my superior intellect, <CHARNAME>?~
-    ++ ~Of course. I'm sure you won't try anything stupid like that again.~ DO ~SetGlobal("KickedOut", "LOCALS", 0) JoinParty()~ EXIT
-    + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~Not at the moment. I will have to think about your careless actions for a while. I'll send you back to the pocket plane.~ 
+    SAY @19751 /* Do you still need my superior intellect, <CHARNAME>? */
+    ++ @19752 /* Of course. I'm sure you won't try anything stupid like that again. */ DO ~SetGlobal("KickedOut", "LOCALS", 0) JoinParty()~ EXIT
+    + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + @19756 /* Not at the moment. I will have to think about your careless actions for a while. I'll send you back to the pocket plane. */ 
       DO ~SetGlobal("KickedOut", "LOCALS", 1) CreateVisualEffectObject("SPDIMNDR", Myself) Wait(2) MoveBetweenAreas("AR4500", [2552.1445], 2)~ EXIT
-    + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~Not at the moment. I will have to think about your careless actions for a while. Just wait here for a while.~ DO ~SetGlobal("KickedOut","LOCALS",1)~ + 1
-      ++ ~What?! After all you have done, Edwin? You should be lucky that I cared enough to free you from your predicament.~ + EdwinHumiliated.3
+    + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + @19757 /* Not at the moment. I will have to think about your careless actions for a while. Just wait here for a while. */ DO ~SetGlobal("KickedOut","LOCALS",1)~ + 1
+      ++ @19754 /* ~What?! After all you have done, Edwin? You should be lucky that I cared enough to free you from your predicament. */ + EdwinHumiliated.3
   END
 
   IF ~~ EdwinHumiliated.3
-    SAY ~Fine, I didn't care for your presence anyway. Good riddance!~
+    SAY @19755 /* ~Fine, I didn't care for your presence anyway. Good riddance! */
     IF ~~ DO ~EscapeArea()~ EXIT
   END
 END
-*/
 
 
 // Banter #5

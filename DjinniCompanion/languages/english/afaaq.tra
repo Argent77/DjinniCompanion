@@ -1285,13 +1285,34 @@ though he fought back like a crack of loud thunder."~
 @19502 = ~No... it cannot be... Help me, <CHARNAME>!~
 @19550 = ~It must be unbearable for a proud and noble djinn to be trapped in that prison, considering that you also have to suffer the indignity to follow every foolish whim of your masters. Don't you wish to escape this prison and enjoy freedom once more?~
 @19551 = ~Your concern over my well-being is touching, wizard.~
-@19552 = ~My current plight is just a temporary condition. I can allow myself to be patient since time is of no real consequence for my kind.~
+@19552 = ~My current plight is just a temporary condition. I can allow myself to be patient, since time is of no real consequence for my kind.~
 @19553 = ~But surely even your patience will snap eventually. The Red Wizards have considerable knowledge of enslaving creatures as well as breaking enslavements. I could be of great help to you in this matter.~
 @19554 = ~I have no doubt about your willingness to help me. However, Red Wizards are not known for their generosity.~
 @19555 = ~Well, of course I'm not doing it purely out of the goodness of my heart. All I desire is a small favor that should easily be within your power. What say you?~
 @19556 = ~You are not the first wizard of your order I have the misfortune to deal with. But unlike your brothers in Thay you are especially easy to read.~
 @19557 = ~My previous masters forced me to perform unimaginably cruel and hideous tasks. But they all were well aware of the consequences of their actions. I am not so sure in your case. I would rather suffer another millennium in their clutches than being bound to grant you even the smallest of favors imaginable.~
 @19558 = ~(How dare you!) Ahem, you wound me deeply, Afaaq. Think about it some more. I'm sure you will see the advantages of my offer. (As do I for myself.)~
+@19600 = ~Afaaq, please satisfy my curiosity a bit. What was your life before your unfortunate encounters on the prime material plane?~
+@19601 = ~I am certain that even the most insignificant tale from my past would vastly exceed your imagination, wizard.~
+@19602 = ~Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. I could help you regain the opportunity to taste freedom once more.~
+@19603 = ~You do seem to seriously believe in your own superior abilities? However, even a fool can see through your poorly disguised "sympathy". The powers that you so much crave for would certainly destroy you. I am not fool enough to even think about your offer.~
+@19604 = ~So you refuse a helping hand that would allow you to leave your pitiable condition behind? You are more a fool than I expected. It is your loss, djinn. (But don't think I will give up so easily.)~
+@19700 = ~I can not believe the foolishness of that wizard. He should have known that an artifact like this is protected against half-hearted attempts to break its enchantments.~
+@19701 = ~He could have easily imprisoned everyone including you, my <PRO_LADYLORD>, by his foolish actions. I hope you have a way to free him from his predicament, because he will not have the power to do it by himself anymore.~
+@19702 = ~I guess he has learned his lesson now. Would a Freedom spell release him from his imprisonment?~
+@19703 = ~I think he has learned his lesson now. How exactly can I release him from his predicament?~
+@19704 = ~That fool is more trouble than he's worth it. Let him rot in hell, for all I care.~
+@19705 = ~Yes, I think it would. But it has to be cast in this area to be effective. I hope you have a spell like that ready.~
+@19706 = ~Only a Freedom spell will release the wizard from his prison. But it has to be used in this area to be effective. I hope you have a way to cast the spell.~
+@19707 = ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast in this area however, to be effective.~
+@19750 = ~It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.)~
+@19751 = ~Do you still need my superior intellect, <CHARNAME>?~
+@19752 = ~Of course. I'm sure you won't try anything stupid like that again.~
+@19753 = ~Not at the moment. I will have to think about your careless actions for a while.~
+@19754 = ~What?! After all you have done, Edwin? You should be lucky that I cared enough to free you from your predicament.~
+@19755 = ~Fine, I didn't care for your presence anyway. Good riddance!~
+@19756 = ~Not at the moment. I will have to think about your careless actions for a while. I'll send you back to the pocket plane.~ 
+@19757 = ~Not at the moment. I will have to think about your careless actions for a while. Just wait here for a while.~
 
 
 // *** Banters with Viconia (index 20000...20499) ***
@@ -2009,3 +2030,12 @@ However, as much as his time allows it, he takes the chance and travels across F
 @64092 = ~After <CHARNAME>'s ascension to godhood, Afaaq returned to the Elemental Plane of Air at long last where he hoped to live a quiet life. But news of his deeds had even reached the ears of the Grand Caliph who offered him a position as advisor in mortal affairs at the Court of Ice and Steel.
 
 However, as much as his time allows it, he takes the chance and travels across Faerûn in search of his kinsmen still waiting to be released from their imprisonments.~
+
+
+// Journal entries
+@70000 = ~Free Edwin from his imprisonment
+
+Edwin's attempt to steal Afaaq's lamp from me backfired and resulted only in his imprisonment. According to Afaaq, only a Freedom spell, cast in the vicinity of Edwin's imprisonment, may release him from his predicament.~
+@70001 = ~Free Edwin from his imprisonment
+
+I was able to release Edwin from his magical prison. He was as grateful as I expected from him. Hopefully he learned from his mistakes and will refrain from doing such careless actions in the future.~
