@@ -1292,7 +1292,7 @@ though he fought back like a crack of loud thunder."~
 @19556 = ~You are not the first wizard of your order I have the misfortune to deal with. But unlike your brothers in Thay you are especially easy to read.~
 @19557 = ~My previous masters forced me to perform unimaginably cruel and hideous tasks. But they all were well aware of the consequences of their actions. I am not so sure in your case. I would rather suffer another millennium in their clutches than being bound to grant you even the smallest of favors imaginable.~
 @19558 = ~(How dare you!) Ahem, you wound me deeply, Afaaq. Think about it some more. I'm sure you will see the advantages of my offer. (As do I for myself.)~
-@19600 = ~Afaaq, please satisfy my curiosity a bit. What was your life before your unfortunate encounters on the prime material plane?~
+@19600 = ~Afaaq, please satisfy my curiosity. What was your life before your unfortunate encounters on the prime material plane?~
 @19601 = ~I am certain that even the most insignificant tale from my past would vastly exceed your imagination, wizard.~
 @19602 = ~Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. I could help you regain the opportunity to taste freedom once more.~
 @19603 = ~You do seem to seriously believe in your own superior abilities? However, even a fool can see through your poorly disguised "sympathy". The powers that you so much crave for would certainly destroy you. I am not fool enough to even think about your offer.~
@@ -1302,9 +1302,9 @@ though he fought back like a crack of loud thunder."~
 @19702 = ~I guess he has learned his lesson now. Would a Freedom spell release him from his imprisonment?~
 @19703 = ~I think he has learned his lesson now. How exactly can I release him from his predicament?~
 @19704 = ~That fool is more trouble than he's worth it. Let him rot in hell, for all I care.~
-@19705 = ~Yes, I think it would. But it has to be cast in this area to be effective. I hope you have a spell like that ready.~
-@19706 = ~Only a Freedom spell will release the wizard from his prison. But it has to be used in this area to be effective. I hope you have a way to cast the spell.~
-@19707 = ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast in this area however, to be effective.~
+@19705 = ~Yes, I think it would. But it has to be cast near the place of his imprisonment to be effective. I hope you have a spell like that ready.~
+@19706 = ~Only a Freedom spell will release the wizard from his prison. But it has to be used near the place of his imprisonment to be effective. I hope you have a way to cast this spell.~
+@19707 = ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast near the place of his imprisonment to be effective, however.~
 @19750 = ~It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.)~
 @19751 = ~Do you still need my superior intellect, <CHARNAME>?~
 @19752 = ~Of course. I'm sure you won't try anything stupid like that again.~

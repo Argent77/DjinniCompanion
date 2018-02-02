@@ -29,7 +29,7 @@ EXIT
 
 // Banter #2
 CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWINJ Edwin.1
-  @19600 /* Afaaq, please satisfy my curiosity a bit. What was your life before your unfortunate encounters on the prime material plane? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
+  @19600 /* Afaaq, please satisfy my curiosity. What was your life before your unfortunate encounters on the prime material plane? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
   == A7AFAAQ @19601 /* I am certain that even the most insignificant tale from my past would vastly exceed your imagination, wizard. */
   == EDWINJ @19602 /* Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. I could help you regain the opportunity to taste freedom once more. */
   == A7AFAAQ @19603 /* You do seem to seriously believe in your own superior abilities? However, even a fool can see through your poorly disguised "sympathy". The powers that you so much crave for would certainly destroy you. I am not fool enough to even think about your offer. */
@@ -73,17 +73,17 @@ APPEND A7AFAAQ
   END
 
   IF ~~ TalkEdwinTakesControl.2
-    SAY @19705 /* Yes, I think it would. But it has to be cast in this area to be effective. I hope you have a spell like that ready. */
+    SAY @19705 /* Yes, I think it would. But it has to be cast near the place of his imprisonment to be effective. I hope you have a spell like that ready. */
     IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
   END
 
   IF ~~ TalkEdwinTakesControl.3
-    SAY @19706 /* Only a Freedom spell will release the wizard from his prison. But it has to be used in this area to be effective. I hope you have a way to cast the spell. */
+    SAY @19706 /* Only a Freedom spell will release the wizard from his prison. But it has to be used near the place of his imprisonment to be effective. I hope you have a way to cast the spell. */
     IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
   END
 
   IF ~~ TalkEdwinTakesControl.4
-    SAY @19707 /* ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast in this area however, to be effective. */
+    SAY @19707 /* ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast near the place of his imprisonment to be effective, however. */
     IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
   END
 END
