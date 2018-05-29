@@ -37,22 +37,22 @@ Ich habe die Großmeisterschaft in Krummsäbeln erlangt und bin hochbegabt im Um
 @100001 = ~Heerturm der Arkanen?~
 @100002 = ~Was macht ein so hochangesehenes Mitglied des Heerturms so weit weg von Zuhause?~
 @100003 = ~Ihr scheint wohl nicht viel über diese Region zu wissen, wenn Ihr solche Fragen stellt.~
-@100004 = ~Der Heerturm der Arkanen ist eine bedeutende Akademie der magischen Künste und ein bedeutendes Machtzentrum der Region.~
+@100004 = ~Der Heerturm der Arkanen ist eine bedeutende Akademie der magischen Künste und ein Machtzentrum der Region.~
 @100005 = ~Interessant. Und was macht Ihr so weit weg von Zuhause?~
 @100006 = ~Würdet Ihr bitte endlich zur Sache kommen?~
 @100007 = ~Ja, das ist in der Tat ungewöhnlich.~
 @100008 = ~Lasst es mich so sagen, dass ich ein flüchtiges Interesse an den Ereignissen habe, die sich in den Tiefen dieses erloschenen Vulkans abspielen.~
-@100009 = ~Ihr dagegen scheint einen nachhaltigen Eindruck auf die Einheimischen dieses Ortes gemacht zu haben, als Ihr ihre Königing Yxumonei besiegt habt.~
+@100009 = ~Ihr dagegen scheint einen nachhaltigen Eindruck auf die Einheimischen dieses Ortes gemacht zu haben, als Ihr ihre Königin Yxumonei besiegt habt.~
 @100010 = ~Woher wisst Ihr das?~
 @100011 = ~Es gibt mehr als nur einen Weg, solche Ereignisse zu erfahren.~
 @100012 = ~Aber lasst mich zur Sache kommen.~
 @100013 = ~Vor ein paar Jahren konnte ein Untergebener Yxunomeis ein sehr wertvolles Artefakt von uns stehlen. Seit diesem Vorfall haben wir wiederholt versucht, es zurückzuholen, leider ohne Erfolg. Ihr Versteck war einfach zu gut bewacht, um sie zu überraschen.~
 @100014 = ~Der Diebstahl des Herzsteinjuwel vor einigen Tagen hat auch den letzten Rest Hoffnung zerstört, das Artefakt ohne größeres Blutvergießen zu beschaffen.~
 @100015 = ~Ich spreche von dem Dschinn, den ich in Eurer Mitte sehe. Und natürlich von seiner Lampe.~
-@100016 = ~Ich spreche von dem Dschinnlampe, der sich in Eurem Besitz befindet.~
+@100016 = ~Ich spreche von der Dschinnlampe, der sich in Eurem Besitz befindet.~
 @100017 = ~Ich hätte niemals gedacht, dass eine so unerfahrene Gruppe Abenteurer es schaffen könnte, die Lampe den Klauen Yxunomeis zu entreißen.~
 @100018 = ~Da die Lampe im Grunde uns gehört, biete ich Euch ein Geschäft an.~
-@100019 = ~Ich kann sie gegen ein verzaubertes Langschwert oder einen nicht ganz unbeträchtlichen Goldbetrag eintauschen. Beides sind sehr verlockende Varianten für Abenteurer wie Eich. Was sagt Ihr dazu?~
+@100019 = ~Ich kann sie gegen ein verzaubertes Langschwert oder einen nicht ganz unbeträchtlichen Goldbetrag eintauschen. Beides sind sehr verlockende Varianten für Abenteurer wie Euch. Was sagt Ihr dazu?~
 @100020 = ~Ihr habt mit überzeugt. Ich würde gern die magische Waffe haben.~
 @100021 = ~Nun gut. Ich nehme das Gold.~
 @100022 = ~Eigentlich würde ich gerne die Lampe behalten.~
@@ -111,7 +111,7 @@ Ich habe die Großmeisterschaft in Krummsäbeln erlangt und bin hochbegabt im Um
 @101000 = ~Lose Enden
 Auf meinem Weg aus Drachenauge begegnete ich einem Magier namens Kelvor Domine, der von sich behauptete, Mitglied des Heerturms der Arkanen zu sein.
 
-Er wusste anscheinend bereits davon, dass ich Yxumonei besiegt hatte und verlangte die Dschinnlampe, die ich in ihren Überresten gefunden hatte. Nachdem ich sein Angebot ablehnte, rief einige Söldner herbei und drohte mir, dass ich ihn nicht zum letzten Mal gesehen habe, bevor es sich wegteleportierte.~
+Er wusste anscheinend bereits davon, dass ich Yxumonei besiegt hatte und verlangte die Dschinnlampe, die ich in ihren Überresten gefunden hatte. Nachdem ich sein Angebot ablehnte, rief er einige Söldner herbei und drohte mir, dass ich ihn nicht zum letzten Mal gesehen habe, bevor es sich wegteleportierte.~
 
 @101001 = ~Lose Enden
 Auf meinem Weg durch die Höhle zu Dorntief, traf ich einen alten "Bekannten" wieder.
@@ -123,17 +123,17 @@ Diesmal verlangte Kelvor Domine die Dschinnlampe von mir mit mehr Nachdruck. Ich
 @101900 = ~Lose Enden
 Auf meinem Weg aus Drachenauge begegnete ich einem Magier namens Kelvor Domine, der von sich behauptete, Mitglied des Heerturms der Arkanen zu sein.
 
-Er wusste anscheinend bereits davon, dass ich Yxumonei besiegt hatte und verlangte die Dschinnlampe, die ich in ihren Überresten gefunden hatte. Ich gab seiner Bitte nach und händigte ihm die Lampe aus. Wer weiß, was ein Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Bitte nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wieder sehen.~
+Er wusste anscheinend bereits davon, dass ich Yxumonei besiegt hatte und verlangte die Dschinnlampe, die ich in ihren Überresten gefunden hatte. Ich gab seiner Bitte nach und händigte ihm die Lampe aus. Wer weiß, was ein Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Bitte nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wiedersehen.~
 
 @101901 = ~Lose Enden
 Auf meinem Weg durch die Höhle zu Dorntief, traf ich einen alten "Bekannten" wieder.
 
-Diesmal verlangte Kelvor Domine die Dschinnlampe von mir mit mehr Nachdruck. Ich entschied mich diesmal dafür, ihm die Lampe zu überlassen. Wer weiß, was ein wütender Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Forderung nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wieder sehen.~
+Diesmal verlangte Kelvor Domine die Dschinnlampe von mir mit mehr Nachdruck. Ich entschied mich diesmal dafür, ihm die Lampe zu überlassen. Wer weiß, was ein wütender Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Forderung nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wiedersehen.~
 
 @101902 = ~Lose Enden
 Auf meinem Weg zu Unter-Dorntief begegnete ich wieder Kelvor Domine.
 
-Diesmal hielt er sich nicht vornehm zurück und forderte ganz unverblümt, dass ich ihm die Dschinnlampe überlassen soll. Ich entschied mich diesmal dafür, ihm die Lampe zu überlassen. Wer weiß, was ein wütender Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Forderung nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wieder sehen.~
+Diesmal hielt er sich nicht vornehm zurück und forderte ganz unverblümt, dass ich ihm die Dschinnlampe überlassen soll. Ich entschied mich diesmal dafür, ihm die Lampe zu überlassen. Wer weiß, was ein wütender Magier seines Kalibers mir für Probleme bereitet hätte, wenn ich seiner Forderung nicht nachgekommen wäre. Ich werde den Dschinn und seine Lampe wohl nie wiedersehen.~
 
 @101903 = ~Lose Enden
 Auf meinem Weg zu Unter-Dorntief begegnete ich wieder Kelvor Domine.
