@@ -248,7 +248,7 @@ END ELSE BEGIN
   // Additional condition for Carras-Monks-Plot triggers
   COPY_EXISTING ~%scrpt%.bcs~ ~override~
     DECOMPILE_AND_PATCH BEGIN
-      REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global("MONKSPAWNEDSMUGGLERPLOT","GLOBAL",0)~ ~GlobalGT("A7Quest5", "GLOBAL", 1) Global("MONKSPAWNEDSMUGGLERPLOT","GLOBAL",0)~
+      REPLACE_TEXTUALLY CASE_INSENSITIVE ~^[ %TAB%]*Global("MONKSPAWNEDSMUGGLERPLOT","GLOBAL",0)~ ~GlobalGT("A7Quest5", "GLOBAL", 1) Global("MONKSPAWNEDSMUGGLERPLOT","GLOBAL",0)~
       REPLACE_TEXTUALLY CASE_INSENSITIVE ~GlobalLT("CaveEnter","AR5504",2)~ ~GlobalGT("A7Quest5", "GLOBAL", 1) GlobalLT("CaveEnter","AR5504",2)~
     END
     BUT_ONLY
@@ -261,3 +261,4 @@ COMPILE EVALUATE_BUFFER
   ~DjinniCompanion/scripts/a7q5wtr1.baf~
   ~DjinniCompanion/scripts/a7q5wtr2.baf~
 
+  

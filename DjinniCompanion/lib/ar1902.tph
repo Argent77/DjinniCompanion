@@ -12,7 +12,7 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~trrak01.bcs~) BEGIN
         ~CreateVisualEffect("spdimndr",\[.+\..+\])~ ~~
       // Special case: older versions of SCS2 conjure up Saadat and Jalaal immediately -> disabling
       REPLACE_TEXTUALLY CASE_INSENSITIVE EVALUATE_REGEXP
-        ~\(Global("DMWWtrrak","GLOBAL",0)\)~ ~False() \1~
+        ~^[ %TAB%]*\(Global("DMWWtrrak","GLOBAL",0)\)~ ~False() \1~
     END
     BUT_ONLY
   EXTEND_TOP ~trrak01.bcs~ ~DjinniCompanion/scripts/trrak01.baf~
