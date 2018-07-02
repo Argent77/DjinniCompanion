@@ -153,7 +153,7 @@ COPY ~DjinniCompanion/creatures/a7q2rkpr.cre~ ~override~
   SAY NAME1 @2920     // Ak'chazar High Priest
   SAY NAME2 @2920     // Ak'chazar High Priest
 
-// portraits 
+// portraits
 COPY ~%PORTRAIT_RAKPRS%~ ~override~
 
 // scripts

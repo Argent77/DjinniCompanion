@@ -1,4 +1,4 @@
-// -*- coding: cp1252 -*- 
+// -*- coding: cp1252 -*-
 // *** General dialog lines for Afaaq (index 10000 and up)
 
 // *** Player-initiated dialog lines (index 10000...10999) ***
@@ -873,7 +873,7 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @11259 = ~Dann entlasse ich Euch aus meinen Diensten. Ihr seid frei, und ich wünsche Euch alles Gute auf Eurer Reise nach Hause.~
 @11260 = ~Ich muss Euch in meiner Gruppe behalten. Ihr seid zu nützlich, um Euch gehen zu lassen.~
 @11261 = ~Dies ist die unverschämteste Beleidigung, die ich je gehört habe. Ihr habt absichtlich alle Wege zu meiner Freiheit verhindert.~
-@11262 = ~Wenn Ihr meinem Wunsch, mich freizulassen nicht nachkommt, muss ich Euch wohl dazu zwingen, Euer Versprechen zu halten. Bereitet Euch vor!~ 
+@11262 = ~Wenn Ihr meinem Wunsch, mich freizulassen nicht nachkommt, muss ich Euch wohl dazu zwingen, Euer Versprechen zu halten. Bereitet Euch vor!~
 @11263 = ~Die Untoten stören die Lebenden normalerweise nicht, außer es gibt einen sehr guten Grund.~
 @11264 = ~Vielleich kann Euch Afaaq mit einem Wunsch aushelfen...~
 @11265 = ~Ich könnte <CHARNAME> in der Tat den Wunsch gewähren, den Fluch von Euch zu nehmen, falls <PRO_HESHE> mich darum bittet.~
@@ -931,7 +931,7 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @12043 = ~Und jetzt ziehen wir wieder gemeinsam durch die Lande. Bist Du wirklich sicher, dass Du das willst?~
 @12044 = ~Und dieses Ereignis führte dann zu unserem Wiedersehen. Warum hast Du Dich dafür entschieden, mir wieder nachzufolgen?~
 @12045 = ~Ich bin zu der Überzeugung gekommen, dass ich viel mehr erreichen kann, wenn ich Euch aushelfe.~
-@12046 = ~Ihr seid auf eine beeindruckende Art und Weise mit der Ifritarmee umgegangen. Indem ich Euch bei Eurer Aufgabe helfe, habe ich die Gelegenheit, mich auch im Namen von Scharif Karim erkenntlich zu zeigen.~ 
+@12046 = ~Ihr seid auf eine beeindruckende Art und Weise mit der Ifritarmee umgegangen. Indem ich Euch bei Eurer Aufgabe helfe, habe ich die Gelegenheit, mich auch im Namen von Scharif Karim erkenntlich zu zeigen.~
 // banters
 @12200 = ~<PRO_LADYLORD>, meine Sinne sagen mir, dass Ihr ein ungewöhnliches Geheimnis mit Euch herumtragt. Ich spüre eine rastlose und bösartige Aura.~
 @12201 = ~Obwohl ich Eure grausamen Charakterzüge bereits erleben durfte, scheinen sie doch nicht dieser unnatürlichen Art der Bosheit entsprungen zu sein. Es ist so, als ob Eure Seele eine gewisse Dualität aufweist.~

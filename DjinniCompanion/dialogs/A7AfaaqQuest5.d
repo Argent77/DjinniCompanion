@@ -13,9 +13,9 @@ END
 IF ~~ A7AFQQ5.2
   SAY @6154 /* Thank you, <CHARNAME>. I am looking forward to fight on you side. */
   = @6155 /* Please take my lamp. I am still bound to it, so that I can enter the heat of battle without the risk to be permanently destroyed. */
-  IF ~~ DO ~SetGlobal("A7AfaaqLeaveParty", "GLOBAL", 0) 
-      GiveItemCreate("A7DJLMPA", LastTalkedToBy, 0, 0, 0) 
-      ChangeEnemyAlly(Myself, FAMILIAR) 
+  IF ~~ DO ~SetGlobal("A7AfaaqLeaveParty", "GLOBAL", 0)
+      GiveItemCreate("A7DJLMPA", LastTalkedToBy, 0, 0, 0)
+      ChangeEnemyAlly(Myself, FAMILIAR)
       AddFamiliar()
       SetGlobal("A7AfaaqBanterTimer", "GLOBAL", 0)
       SetGlobal("A7AfaaqBanterNPCTimer", "GLOBAL", 0)

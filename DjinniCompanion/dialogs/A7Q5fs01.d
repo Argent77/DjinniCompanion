@@ -124,9 +124,9 @@ END
 
 IF ~Global("A7Q5SubQuest1", "A77003", 4) Range("A7Q5FES", 15) Global("A7Q5SalamandersTakeOver", "A77003", 0) Global("ElementalAccepted", "LOCALS", 0)~ A7Q5FS01.Subquest1.Finished.1
   SAY @5772 /* Ah, do I see a fire elemental following your trail? */
-  IF ~~ DO ~SetGlobal("ElementalAccepted", "LOCALS", 1) 
-      ActionOverride("A7Q5FES", ChangeAIScript("A7Q5SHT2", OVERRIDE)) 
-      ActionOverride("A7Q5FES", SetGlobal("FESIgnore", "LOCALS", 1)) 
+  IF ~~ DO ~SetGlobal("ElementalAccepted", "LOCALS", 1)
+      ActionOverride("A7Q5FES", ChangeAIScript("A7Q5SHT2", OVERRIDE))
+      ActionOverride("A7Q5FES", SetGlobal("FESIgnore", "LOCALS", 1))
       ActionOverride("A7Q5FES", SetGlobal("FESWait", "LOCALS", 1))~ + A7Q5FS01.Subquest1.Finished.2
 END
 
@@ -138,10 +138,10 @@ END
 
 IF ~~ A7Q5FS01.Subquest1.Finished.3
   SAY @5776 /* The efreets and their complicated contracts... it is done. I suggest you bring it to your master as soon as possible. */
-  IF ~~ DO ~SetGlobal("A7Q5SubQuest1", "A77003", 5) 
-      SetGlobal("A7Q5SalamanderAllied", "A77003", 1) 
-      TakePartyItem("A7MISC8") 
-      DestroyItem("A7MISC8") 
+  IF ~~ DO ~SetGlobal("A7Q5SubQuest1", "A77003", 5)
+      SetGlobal("A7Q5SalamanderAllied", "A77003", 1)
+      TakePartyItem("A7MISC8")
+      DestroyItem("A7MISC8")
       GiveItemCreate("A7MISC8A", LastTalkedToBy, 0, 0, 0)
       EraseJournalEntry(@6508) EraseJournalEntry(@6509)~ UNSOLVED_JOURNAL @6511 EXIT
 END

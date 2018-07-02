@@ -15,12 +15,12 @@ EXTERN CELVAN 1
 
 // SoA: The genie in the Circus Tent
 EXTEND_BOTTOM KGENIE1 3 #1
-  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~ 
+  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~
     + @11005 /* Could you help me out, Afaaq? */ EXTERN A7AFAAQ AskRiddleHelp1
 END
 
 EXTEND_BOTTOM KGENIE1 9 #1
-  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~ 
+  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~
     + @11005 /* Could you help me out, Afaaq? */ EXTERN A7AFAAQ AskRiddleHelp2
 END
 
@@ -30,7 +30,7 @@ APPEND A7AFAAQ
     = #15492  // The prince is 30 and the princess is 40.
     IF ~~ EXTERN KGENIE1 7
   END
-  
+
   IF ~~ AskRiddleHelp2
     SAY @11006 /* Sure, why not. */
     = @11007 /* It is 'nothing', of course. */
@@ -53,7 +53,7 @@ EXIT
 // SoA: Confrontation with Firkraag
 I_C_T2 FIRKRA02 25 A7I_FirkraagChallenged    // CHARNAME challenges Firkraag to a duel
   == A7AFAAQ IF ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~
-    THEN @11010 /* I admire your courage, my <PRO_LADYLORD>, and I will help you defeat the beast with all my might. */ 
+    THEN @11010 /* I admire your courage, my <PRO_LADYLORD>, and I will help you defeat the beast with all my might. */
       DO ~IncrementGlobal("A7AfaaqFriendship", "GLOBAL", 1) DisplayStringNoName(Player1, @60028)~
 END
 
@@ -175,13 +175,13 @@ END
 
 I_C_T DASLAVE1 10 A7I_DrowSlavesAbandon    // CHARNAME abandons the slaves in the city without equipment
   == A7AFAAQ IF ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~
-    THEN @11027 /* What a cruel joke are you playing with them? The humans will be dead within minutes! */ 
+    THEN @11027 /* What a cruel joke are you playing with them? The humans will be dead within minutes! */
       DO ~SetGlobal("SlaveResult", "GLOBAL", 4) IncrementGlobal("A7AfaaqFriendship", "GLOBAL", -1) DisplayStringNoName(Player1, @60030)~
 END
 
 I_C_T DASLAVE1 11 A7I_DrowSlavesSacrifice    // CHARNAME intends to sacrifice the human slaves
   == A7AFAAQ IF ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~
-    THEN @11024 /* What are you doing, <CHARNAME>!? Your actions are as despicable as those of the drow. */ 
+    THEN @11024 /* What are you doing, <CHARNAME>!? Your actions are as despicable as those of the drow. */
       DO ~IncrementGlobal("A7AfaaqFriendship", "GLOBAL", -1) DisplayStringNoName(Player1, @60030)~
 END
 
@@ -198,7 +198,7 @@ APPEND A7AFAAQ
     SAY @11028 /* I have heard of him, <CHARNAME>. He is an infamous mercenary, both feared and admired by the drow. */
     IF ~~ EXTERN BREG01 8
   END
-  
+
   IF ~~ JarlaxleKnown.2
     SAY @11029 /* I know of him because my former master Tathas Melarn had been humiliated by him and his band, the Bregan D'aerthe, more than once. */
     = @11030 /* He is an infamous mercenary, both feared and admired by the drow. */
@@ -216,14 +216,14 @@ END
 
 I_C_T2 UDSILVER 41 A7I_AdalonEggs    // CHARNAME returned Silver Dragon eggs unharmed
   == A7AFAAQ IF ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~
-    THEN @11033 /* That was quite a task we have accomplished. I am truly impressed by your resourcefulness, my <PRO_LADYLORD>. */ 
+    THEN @11033 /* That was quite a task we have accomplished. I am truly impressed by your resourcefulness, my <PRO_LADYLORD>. */
       DO ~IncrementGlobal("A7AfaaqFriendship", "GLOBAL", 1) DisplayStringNoName(Player1, @60028)~
 END
 
 
 I_C_T UDSILVER 49 A7I_AdalonEggs    // CHARNAME returned tainted Silver Dragon eggs
   == A7AFAAQ IF ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~
-    THEN @11034 /* You have committed a grave evil today, my <PRO_LADYLORD>. A greater evil than you would likely know. I see no difference between you and the drow we are fleeing from anymore. */ 
+    THEN @11034 /* You have committed a grave evil today, my <PRO_LADYLORD>. A greater evil than you would likely know. I see no difference between you and the drow we are fleeing from anymore. */
       DO ~IncrementGlobal("A7AfaaqFriendship", "GLOBAL", -2) DisplayStringNoName(Player1, @60031)~
 END
 
@@ -238,14 +238,14 @@ END
 
 APPEND PLAYER1
   IF ~~ ToL.1
-    SAY @11035 /* Afaaq, the djinni you have freed from his captors, who has supported your actions in your travels without complains. */ 
+    SAY @11035 /* Afaaq, the djinni you have freed from his captors, who has supported your actions in your travels without complains. */
     ++ @11036 /* Afaaq, you probably know better than anyone else what awaits us. If I fall you will likely have to serve Irenicus forever. I could ask the elves to keep you safe from any harm if you want to. */ EXTERN A7AFAAQ ToL.Friendly.1
     ++ @11037 /* Afaaq, you know what awaits us down there. Irenicus might even harm you despite your binding to the lamp. You don't have to fight with me if you don't want to. */ EXTERN A7AFAAQ ToL.Friendly.1
     ++ @11038 /* Are you ready for the big fight, Afaaq? Irenicus is a powerful mage as you well know. */ EXTERN A7AFAAQ ToL.Demanding.1
   END
 
   IF ~~ ToL.2
-    SAY @11039 /* Afaaq, the djinni you have been rewarded by the rakshasas, who has supported your actions in your travels without complains. */ 
+    SAY @11039 /* Afaaq, the djinni you have been rewarded by the rakshasas, who has supported your actions in your travels without complains. */
     ++ @11036 /* Afaaq, you probably know better than anyone else what awaits us. If I fall you will likely have to serve Irenicus forever. I could ask the elves to keep you safe from any harm if you want to. */ EXTERN A7AFAAQ ToL.Friendly.1
     ++ @11037 /* Afaaq, you know what awaits us down there. Irenicus might even harm you despite your binding to the lamp. You don't have to fight with me if you don't want to. */ EXTERN A7AFAAQ ToL.Friendly.1
     ++ @11038 /* Are you ready for the big fight, Afaaq? Irenicus is a powerful mage as you well know. */ EXTERN A7AFAAQ ToL.Demanding.1
@@ -296,7 +296,7 @@ END
 
 // ToB: Volo's praise
 EXTEND_BOTTOM SARVOLO 9 #1
-  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("A7AfaaqEnslaved", "GLOBAL", 0)~ 
+  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("A7AfaaqEnslaved", "GLOBAL", 0)~
     + @11045 /* Tell me about Afaaq. */ + VoloAboutAfaaq.1
 END
 
@@ -346,11 +346,11 @@ END
 
 // Watcher's Keep: Riddle Imp
 EXTEND_BOTTOM FSRIDD 3 4
-  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) CheckStatLT(Player1, 15, INT) Global("A7AfaaqEnslaved", "GLOBAL", 0)~ 
+  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) CheckStatLT(Player1, 15, INT) Global("A7AfaaqEnslaved", "GLOBAL", 0)~
     + @11005 /* Could you help me out, Afaaq? */ EXTERN A7AFAAQ WKImpRiddleHelp1
 END
 EXTEND_BOTTOM FSRIDD 8
-  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("A7AfaaqEnslaved", "GLOBAL", 0)~ 
+  + ~InMyArea("A7Afaaq") Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("A7AfaaqEnslaved", "GLOBAL", 0)~
     + @11052 /* Afaaq, the game is yours! */ EXTERN A7AFAAQ WKImpRiddleHelp2
 END
 

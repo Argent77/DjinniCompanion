@@ -29,8 +29,8 @@ IF ~GlobalLT("A7Quest3", "GLOBAL", 6) RandomNum(3, 3)~ DrowWarriorF.4
 END
 
 // *** When in battle with Arabani ***
-IF ~GlobalGT("A7Quest3", "GLOBAL", 5) 
-  GlobalLT("A7Quest3", "GLOBAL", 10) 
+IF ~GlobalGT("A7Quest3", "GLOBAL", 5)
+  GlobalLT("A7Quest3", "GLOBAL", 10)
   ActuallyInCombat()~ DrowWarriorF.5
   SAY @3383 /* I'm a little busy right now. */
   IF ~~ DO ~ClearActions(Myself)~ EXIT

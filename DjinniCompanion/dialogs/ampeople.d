@@ -97,9 +97,9 @@ END
 
 // Amkethran Barkeeper
 EXTEND_BOTTOM ~AMBAR01~ 3 21 #2
-  + ~Global("A7Quest5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) !PartyHasItem("A7WAND1") GlobalLT("A7Q5RumorCleric", "GLOBAL", 2) GlobalLT("A7Q5RumorWizard", "GLOBAL", 2)~ 
+  + ~Global("A7Quest5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) !PartyHasItem("A7WAND1") GlobalLT("A7Q5RumorCleric", "GLOBAL", 2) GlobalLT("A7Q5RumorWizard", "GLOBAL", 2)~
     + @6051 /* Do you know where I can find some protection from heat? */ + AMBAR01.1
-  + ~Global("A7Q5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) !PartyHasItem("A7WAND1") Global("A7Q5RumorWizard", "GLOBAL", 1)~ 
+  + ~Global("A7Q5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) !PartyHasItem("A7WAND1") Global("A7Q5RumorWizard", "GLOBAL", 1)~
     + @6072 /* I've heard that there are some mercenary wizards around. Do you know about them? */ + AMBAR01.2
 END
 

@@ -85,7 +85,7 @@ COPY ~DjinniCompanion/creatures/a7q1rkm1.cre~ ~override~
    ~DjinniCompanion/creatures/a7q1rkr1.cre~ ~override~
    ~DjinniCompanion/creatures/a7q1rk1.cre~ ~override~
 
-// portraits 
+// portraits
 COPY ~%PORTRAIT_MAHELS%~ ~override~
 
 // items

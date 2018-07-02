@@ -1,4 +1,4 @@
-// -*- coding: cp1252 -*- 
+// -*- coding: cp1252 -*-
 // *** General dialog lines for Afaaq (index 10000 and up)
 
 // *** Player-initiated dialog lines (index 10000...10999) ***
@@ -875,7 +875,7 @@ though he fought back like a crack of loud thunder."~
 @11259 = ~Then I release you from my service. You are free and I wish you well on your journey home.~
 @11260 = ~I have to keep you in my party. You are too useful to let you go.~
 @11261 = ~This is the most impudent insult I have heard for ages. You have deliberately cut off my means to be free.~
-@11262 = ~If you deny my wish to release me, I have to force you to keep your promise. Prepare yourself!~ 
+@11262 = ~If you deny my wish to release me, I have to force you to keep your promise. Prepare yourself!~
 @11263 = ~The undead usually do not bother the living unless there is a very good reason.~
 @11264 = ~Maybe Afaaq can help you with a wish...~
 @11265 = ~I might indeed grant <CHARNAME> the wish to remove your curse, if <PRO_HESHE> is willing.~
@@ -933,7 +933,7 @@ though he fought back like a crack of loud thunder."~
 @12043 = ~And now you have joined my adventures again. Are you sure that is what you really want?~
 @12044 = ~And that event has led to our reunion. Why have you decided to follow me again?~
 @12045 = ~I have come to the conclusion that I can achieve much more by helping you out.~
-@12046 = ~You have dealt with the efreet army in an impressive manner. By helping you in your quest, I have the opportunity to return a small measure of the gratitude Sharif Karim has expressed.~ 
+@12046 = ~You have dealt with the efreet army in an impressive manner. By helping you in your quest, I have the opportunity to return a small measure of the gratitude Sharif Karim has expressed.~
 // banters
 @12200 = ~My <PRO_LADYLORD>, I am sensing something unusual from you. A restless, malevolent aura.~
 @12201 = ~Although I have witnessed your cruel character already, this kind of evil does not feel natural. It is almost as if there is a duality within your soul.~
@@ -1311,7 +1311,7 @@ though he fought back like a crack of loud thunder."~
 @19753 = ~Not at the moment. I will have to think about your careless actions for a while.~
 @19754 = ~What?! After all you have done, Edwin? You should be lucky that I cared enough to free you from your predicament.~
 @19755 = ~Fine, I didn't care for your presence anyway. Good riddance!~
-@19756 = ~Not at the moment. I will have to think about your careless actions for a while. I'll send you back to the pocket plane.~ 
+@19756 = ~Not at the moment. I will have to think about your careless actions for a while. I'll send you back to the pocket plane.~
 @19757 = ~Not at the moment. I will have to think about your careless actions for a while. Just wait here for a while.~
 
 

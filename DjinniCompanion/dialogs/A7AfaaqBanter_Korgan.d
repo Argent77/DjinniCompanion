@@ -52,11 +52,11 @@ APPEND KORGANJ
   // Korgan challenges Afaaq
   IF WEIGHT #-1 ~Race(LastTalkedToBy, GENIE) Name("A7Afaaq", LastTalkedToBy) Global("A7KorganDuel", "GLOBAL", 2)~ KorganDuel.Challenge.1
     SAY ~Afaaq, ye bloody bastard! Let's see how tough ye really are.~
-    IF ~~ DO ~SetGlobal("A7KorganDuel", "GLOBAL", 3) 
+    IF ~~ DO ~SetGlobal("A7KorganDuel", "GLOBAL", 3)
         SetGlobal("A7AfaaqInvincible", "GLOBAL", 1)      // Prevent Afaaq from dying or polymorphing
         CreateCreatureOffScreen("A7KDUEL", 0)
-        ClearAllActions() 
-        LeaveParty() 
+        ClearAllActions()
+        LeaveParty()
         ChangeAIScript("A7KORGAN", OVERRIDE)
         ChangeAIScript("", CLASS)
         ChangeAIScript("", RACE)
@@ -103,11 +103,11 @@ APPEND KORGA25J
   // Korgan challenges Afaaq
   IF WEIGHT #-1 ~Race(LastTalkedToBy, GENIE) Name("A7Afaaq", LastTalkedToBy) Global("A7KorganDuel", "GLOBAL", 2)~ KorganDuel.Challenge.1
     SAY ~Afaaq, ye bloody bastard! Let's see how tough ye really are.~
-    IF ~~ DO ~SetGlobal("A7KorganDuel", "GLOBAL", 3) 
+    IF ~~ DO ~SetGlobal("A7KorganDuel", "GLOBAL", 3)
         SetGlobal("A7AfaaqInvincible", "GLOBAL", 1)      // Prevent Afaaq from dying or polymorphing
         CreateCreatureOffScreen("A7KDUEL", 0)
-        ClearAllActions() 
-        LeaveParty() 
+        ClearAllActions()
+        LeaveParty()
         ChangeAIScript("A7KORGAN", OVERRIDE)
         ChangeAIScript("", CLASS)
         ChangeAIScript("", RACE)
@@ -160,9 +160,9 @@ END
 
 CHAIN IF ~Name("Korgan", LastTalkedToBy) Global("A7KorganDuel", "GLOBAL", 5)~ THEN A7AFAAQ AfaaqDuel.Win.1
   ~I hope that your curiosity about my strength has been satisfied.~ DO ~SetGlobal("A7KorganDuel", "GLOBAL", 10) SetGlobal("A7AfaaqInvincible", "GLOBAL", 0) SetGlobal("A7KorganRespect", "GLOBAL", 1)~
-  == KORGANJ IF ~Global("InToB", "GLOBAL", 0)~ THEN ~Ye've done better than I thought. Ma'be ye aren't such a wimp after all.~ 
+  == KORGANJ IF ~Global("InToB", "GLOBAL", 0)~ THEN ~Ye've done better than I thought. Ma'be ye aren't such a wimp after all.~
       DO ~SetGlobal("A7BanterKorgan", "GLOBAL", 10) JoinParty() ChangeAIScript("KORGAN", OVERRIDE) ChangeAIScript("DEFAULT", CLASS) ChangeAIScript("", RACE) ChangeAIScript("", GENERAL) ChangeAIScript("DPLAYER2", DEFAULT)~
-  == KORGA25J IF ~Global("InToB", "GLOBAL", 1)~ THEN ~Ye've done better than I thought. Ma'be ye aren't such a wimp after all.~ 
+  == KORGA25J IF ~Global("InToB", "GLOBAL", 1)~ THEN ~Ye've done better than I thought. Ma'be ye aren't such a wimp after all.~
       DO ~SetGlobal("A7BanterKorgan", "GLOBAL", 10) JoinParty() ChangeAIScript("KORGAN", OVERRIDE) ChangeAIScript("DEFAULT", CLASS) ChangeAIScript("", RACE) ChangeAIScript("", GENERAL) ChangeAIScript("DPLAYER2", DEFAULT)~
 EXIT
 

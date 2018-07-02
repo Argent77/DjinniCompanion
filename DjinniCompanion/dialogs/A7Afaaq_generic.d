@@ -149,7 +149,7 @@ APPEND %afq_dialog%
 
     // Fixes Afaaq's state in case of buggy behavior
     ++ @10028 /* You are behaving oddly. Care to fix it? */ + TalkGeneric.FixStates.1
-    
+
     ++ @10029 /* I'll talk to you later. */ + TalkGeneric.Bye
     + ~Global("A7AfaaqDebug", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0) HasItem("A7DJLMP", Player1)~ + ~Debug: Upgrade yourself!~ + TalkGeneric.Debug.Upgrade
   END
@@ -205,10 +205,10 @@ APPEND %afq_dialog%
     + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) !AreaCheck("A77006") Global("LampInvitation", "LOCALS", 2)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.2
     + ~!ActuallyInCombat() Global("A7AfaaqBG2", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("AR4500") Global("LampInvitation", "LOCALS", 2) Global("LampInvitationPP", "LOCALS", 0)~ + @10027 /* I'd like to enter your lamp again. */ + TalkGeneric.Invitation.5
     + ~!ActuallyInCombat() Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 1) HasItem("A7DJLMPA", Player1) AreaCheck("A77006")~ + @10001 /* Please return me from whence I came. */ + TalkGeneric.Invitation.Return
-    
+
    // Fixes Afaaq's state in case of buggy behavior
     ++ @10028 /* You are behaving oddly. Care to fix it? */ + TalkGeneric.FixStates.1
- 
+
     ++ @10002 /* I will talk to you later. */ + TalkGeneric.Bye
     + ~Global("A7AfaaqDebug", "GLOBAL", 1) Global("A7AfaaqUpgraded", "GLOBAL", 0) HasItem("A7DJLMP", Player1)~ + ~Debug: Upgrade yourself!~ + TalkGeneric.Debug.Upgrade
   END
@@ -280,21 +280,21 @@ APPEND %afq_dialog%
     IF ~AreaType(CITY) RandomNum(8, 4)~ + TalkGeneric.Advice.City.4
 
     // area-specific tips (max. 50% chance)
-    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
-        OR(9) AreaCheck("BG0100") AreaCheck("BG0200") AreaCheck("BG0300") AreaCheck("BG0600") AreaCheck("BG0700") 
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1)
+        OR(9) AreaCheck("BG0100") AreaCheck("BG0200") AreaCheck("BG0300") AreaCheck("BG0600") AreaCheck("BG0700")
               AreaCheck("BG0800") AreaCheck("BG1100") AreaCheck("BG1200") AreaCheck("BG1300")~ + TalkGeneric.Advice.BG1.City.1  // Baldur's Gate City (EET-specific)
-    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1)
         OR(6) AreaCheck("BG1000") AreaCheck("BG2300") AreaCheck("BG3300") AreaCheck("BG4000") AreaCheck("BG4800") AreaCheck("BG4900") ~ + TalkGeneric.Advice.BG1.Town.1   // Generic BG1 town (EET-specific)
-    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
-        OR(38) AreaCheck("BG0400") AreaCheck("BG0500") AreaCheck("BG0900") AreaCheck("BG1400") AreaCheck("BG1600") AreaCheck("BG1700") AreaCheck("BG1800") AreaCheck("BG1900") 
-               AreaCheck("BG2100") AreaCheck("BG2200") AreaCheck("BG2400") AreaCheck("BG2600") AreaCheck("BG2626") AreaCheck("BG2700") AreaCheck("BG2800") AreaCheck("BG2900") 
-               AreaCheck("BG3000") AreaCheck("BG3100") AreaCheck("BG3200") AreaCheck("BG3400") AreaCheck("BG3500") AreaCheck("BG3600") AreaCheck("BG3700") AreaCheck("BG3800") 
-               AreaCheck("BG3900") AreaCheck("BG4100") AreaCheck("BG4200") AreaCheck("BG4300") AreaCheck("BG4400") AreaCheck("BG4500") AreaCheck("BG4600") AreaCheck("BG4700") 
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1)
+        OR(38) AreaCheck("BG0400") AreaCheck("BG0500") AreaCheck("BG0900") AreaCheck("BG1400") AreaCheck("BG1600") AreaCheck("BG1700") AreaCheck("BG1800") AreaCheck("BG1900")
+               AreaCheck("BG2100") AreaCheck("BG2200") AreaCheck("BG2400") AreaCheck("BG2600") AreaCheck("BG2626") AreaCheck("BG2700") AreaCheck("BG2800") AreaCheck("BG2900")
+               AreaCheck("BG3000") AreaCheck("BG3100") AreaCheck("BG3200") AreaCheck("BG3400") AreaCheck("BG3500") AreaCheck("BG3600") AreaCheck("BG3700") AreaCheck("BG3800")
+               AreaCheck("BG3900") AreaCheck("BG4100") AreaCheck("BG4200") AreaCheck("BG4300") AreaCheck("BG4400") AreaCheck("BG4500") AreaCheck("BG4600") AreaCheck("BG4700")
                AreaCheck("BG5000") AreaCheck("BG5100") AreaCheck("BG5200") AreaCheck("BG5300") AreaCheck("BG5400") AreaCheck("BG5500")~ + TalkGeneric.Advice.BG1.Country.1  // BG1 countryside (EET-specific)
-    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
-        OR(9) AreaCheck("BD1000") AreaCheck("BD2000") AreaCheck("BD3000") AreaCheck("BD5000") AreaCheck("BD7000") 
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1)
+        OR(9) AreaCheck("BD1000") AreaCheck("BD2000") AreaCheck("BD3000") AreaCheck("BD5000") AreaCheck("BD7000")
               AreaCheck("BD7100") AreaCheck("BD7200") AreaCheck("BD7300") AreaCheck("BD7400")~ + TalkGeneric.Advice.SOD.Map.1  // Generic SoD maps (EET-specific)
-    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1) 
+    IF ~GlobalGT("Chapter", "GLOBAL", 13) RandomNum(2, 1)
         OR(3) AreaCheck("BD4000") AreaCheck("BD4100") AreaCheck("BD4300")~ + TalkGeneric.Advice.SOD.Castle.1  // SoD Castle Dragonspear (EET-specific)
     IF ~AreaCheck("AR0020") OR(2) TimeGT(20) TimeLT(6) RandomNum(4, 1)~ + TalkGeneric.Advice.AR0020.1    // City Gates (Night)
     IF ~AreaCheck("AR0020") RandomNum(4, 2)~ + TalkGeneric.Advice.AR0020.2    // City Gates
@@ -366,7 +366,7 @@ APPEND %afq_dialog%
     IF ~AreaCheck("AR3000") RandomNum(2, 1)~ + TalkGeneric.Advice.AR3000.1    // Watcher's Keep Exterior
     IF ~AreaCheck("AR3001") Global("LivingStatues", "GLOBAL", 0) RandomNum(4, 1)~ + TalkGeneric.Advice.AR3001.1    // Watcher's Keep Level 1 (Statues not yet activated)
     IF ~AreaCheck("AR3001") RandomNum(4, 2)~ + TalkGeneric.Advice.AR3001.2    // Watcher's Keep Level 1 (general)
-    IF ~OR(12) AreaCheck("AR3003") AreaCheck("AR3004") AreaCheck("AR3005") AreaCheck("AR3006") AreaCheck("AR3007") AreaCheck("AR3008") 
+    IF ~OR(12) AreaCheck("AR3003") AreaCheck("AR3004") AreaCheck("AR3005") AreaCheck("AR3006") AreaCheck("AR3007") AreaCheck("AR3008")
            AreaCheck("AR3009") AreaCheck("AR3010") AreaCheck("AR3011") AreaCheck("AR3012") AreaCheck("AR3013") AreaCheck("AR3014") RandomNum(4, 2)~ + TalkGeneric.Advice.AR3003.1    // Watcher's Keep Level 3 Rooms
     IF ~AreaCheck("AR3016") RandomNum(2, 1)~ + TalkGeneric.Advice.AR3016.1    // Watcher's Keep Level 2
     IF ~AreaCheck("AR3017") RandomNum(2, 1)~ + TalkGeneric.Advice.AR3017.1    // Watcher's Keep Level 4 Machine of Lum Room
@@ -389,9 +389,9 @@ APPEND %afq_dialog%
     IF ~AreaCheck("AR6000") !Dead("bazdra02") RandomNum(2, 1)~ + TalkGeneric.Advice.AR6000.1    // Abazigal Lair Entrance
     IF ~OR(7) AreaCheck("AR6001") AreaCheck("AR6002") AreaCheck("AR6003") AreaCheck("AR6004") AreaCheck("AR6008") AreaCheck("AR6011") AreaCheck("AR6012") !Dead("abazigal") RandomNum(4, 1)~ + TalkGeneric.Advice.AR6001.1    // Abazigal Lair (Abazigal alive)
     IF ~AreaCheck("AR6100") !Dead("sendai") RandomNum(4, 2)~ + TalkGeneric.Advice.AR6100.2    // Sendai's Entrance
-    IF ~OR(11) AreaCheck("AR6101") AreaCheck("AR6102") AreaCheck("AR6103") AreaCheck("AR6104") AreaCheck("AR6105") AreaCheck("AR6101") 
+    IF ~OR(11) AreaCheck("AR6101") AreaCheck("AR6102") AreaCheck("AR6103") AreaCheck("AR6104") AreaCheck("AR6105") AreaCheck("AR6101")
            AreaCheck("AR6106") AreaCheck("AR6107") AreaCheck("AR6109") AreaCheck("AR6110") AreaCheck("AR6111") !Dead("sendai") RandomNum(4, 1)~ + TalkGeneric.Advice.AR6101.1    // Sendai's Enclave
-    IF ~OR(11) AreaCheck("AR6101") AreaCheck("AR6102") AreaCheck("AR6103") AreaCheck("AR6104") AreaCheck("AR6105") AreaCheck("AR6101") 
+    IF ~OR(11) AreaCheck("AR6101") AreaCheck("AR6102") AreaCheck("AR6103") AreaCheck("AR6104") AreaCheck("AR6105") AreaCheck("AR6101")
            AreaCheck("AR6106") AreaCheck("AR6107") AreaCheck("AR6109") AreaCheck("AR6110") AreaCheck("AR6111") !Dead("sendai") RandomNum(4, 2)~ + TalkGeneric.Advice.AR6101.2    // Sendai's Enclave
 
     // situation-specific tips (max. 15% chance)
@@ -744,7 +744,7 @@ APPEND %afq_dialog%
     ++ @10098 /* Can't you do something about it? */ + TalkGeneric.Advice.AR0600.1.1
     ++ @10099 /* That's good to know, but it doesn't get me anywhere. */ + TalkGeneric.Advice.AR0600.1.2
   END
-  
+
   IF ~~ TalkGeneric.Advice.AR0600.1.1
     SAY @10100 /* No, I can not. There are rules which forbid outsiders to interfere with a deal between mortals and djinn. */
     = @10101 /* You have to find a way to solve the puzzle for yourself. My intervention would do more harm than good in the end. */
@@ -770,7 +770,7 @@ APPEND %afq_dialog%
     IF ~Global("U!ReadyJafir", "GLOBAL", 1)~ + TalkGeneric.Advice.AR0607.1.2
     IF ~GlobalGT("U!ReadyJafir", "GLOBAL", 1)~ + TalkGeneric.Advice.AR0607.1.3
   END
-  
+
   IF ~~ TalkGeneric.Advice.AR0607.1.1
     SAY @10105 /* How the gnome was able to make a wish of this grand scale will always be a mystery. */
     + ~Global("A7AfaaqSummoned", "GLOBAL", 0)~ + @10044 /* Thanks for your advice. */ + TalkGeneric.Lamp.PC.2
@@ -1544,7 +1544,7 @@ APPEND %afq_dialog%
     + ~CheckStatGT(Player1, 8, WIS)~ + @10273 /* Truthfully, I don't know much about them. */ + TalkGeneric.AboutMe.Djinns.History.2
     + ~CheckStatLT(Player1, 9, WIS)~ + @10273 /* Truthfully, I don't know much about them. */ + TalkGeneric.AboutMe.Djinns.History.1
   END
-  
+
   IF ~~ TalkGeneric.AboutMe.Djinns.History.1
     SAY @10274 /* I thought so. You do not strike me as the intellectual kind of <PRO_RACE>. */
     IF ~~ + TalkGeneric.AboutMe.Djinns.History.6
@@ -1664,7 +1664,7 @@ APPEND %afq_dialog%
    // ++ ~Fascinating. Do you mind telling me about your yourself?~ + TalkGeneric.AboutMe.Biography
     ++ @10318 /* An interesting insight into your culture, but let's talk about something else. */ + TalkGeneric.AboutMe
   END
-  
+
 
   IF ~~ TalkGeneric.AboutMe.Djinns.1
     SAY @10320 /* If I bore you with my talk you should let me know, my <PRO_LADYLORD>. */
@@ -2616,7 +2616,7 @@ APPEND %afq_dialog%
   // *** DEBUG: ***
   IF ~~ TalkGeneric.Debug.Upgrade
     SAY @10470 /* The djinni closes his eyes and concentrates for a few moments... */
-    IF ~~ DO 
+    IF ~~ DO
        ~TakeItemReplace("A7DJLMPA", "A7DJLMP", Player1)
         ClearAllActions()
         StartCutSceneMode()

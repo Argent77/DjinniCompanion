@@ -7,7 +7,7 @@ COPY_EXISTING ~ar5504.are~ ~override~
       TEXT_SPRINT scrpt ~ar5504~
       WRITE_ASCIIE 0x94 "%scrpt%" #8
     END
-    
+
     // Adding exit from A77002
     LPF fj_are_structure
       INT_VAR
@@ -70,7 +70,7 @@ COPY_EXISTING ~ar5504.are~ ~override~
       fj_name           = A7Bubbles_5
       fj_bam_resref     = BUBBLES1
     END
-    
+
     // Adding animation sequences (steam)
     LPF fj_are_structure
       INT_VAR
@@ -260,5 +260,3 @@ EXTEND_BOTTOM ~%scrpt%.bcs~ ~DjinniCompanion/scripts/AR5504_bottom.baf~
 COMPILE EVALUATE_BUFFER
   ~DjinniCompanion/scripts/a7q5wtr1.baf~
   ~DjinniCompanion/scripts/a7q5wtr2.baf~
-
-  

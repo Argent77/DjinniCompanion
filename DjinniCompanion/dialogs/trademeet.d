@@ -110,7 +110,7 @@ END
 // *** Skin dancer Quest ***
 
 EXTEND_BOTTOM ~TRSKIN01~ 10
-  + ~Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~ 
+  + ~Global("A7AfaaqSummoned", "GLOBAL", 1) Global("A7AfaaqGaseous", "GLOBAL", 0) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) !GlobalTimerNotExpired("A7AfaaqWish", "GLOBAL")~
     + @11264 /* Maybe Afaaq can help you with a wish... */ EXTERN ~A7AFAAQ~ Afaaq.Raissa.1
 END
 

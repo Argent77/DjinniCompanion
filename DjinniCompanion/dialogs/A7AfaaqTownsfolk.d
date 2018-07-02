@@ -86,17 +86,17 @@ EXIT
 CHAIN IF WEIGHT #-1 ~Race(LastTalkedToBy, GENIE) Name("A7Afaaq", LastTalkedToBy)~ THEN BEGGAR2 BEGGAR2.Afaaq.1
   @11079 /* Oooh, ye're a genie, aren't you? Can't ye ease me sufferin' a little? I ha' not eaten properly in a tenday now, I beg you? */
   == A7AFAAQ @11080 /* You have a kind soul, poor man. I will grant you a boon, so that you can enjoy life once more. */
-  == BEGGAR2 @11081 /* Ach ye're too kind, my lord. Lathander's praises upon you. */ 
-    DO ~SetInterrupt(FALSE) 
-      ActionOverride("A7Afaaq", FaceObject(LastTalkedToBy)) 
-      ActionOverride("A7Afaaq", SetSequence(SEQ_CAST)) 
-      SmallWait(10) 
-      DisplayString(Myself, @11000) 
-      CreateVisualEffectObject("SPGFLSH1", Myself) 
-      SmallWait(5) 
-      Polymorph(PEASANT_MAN) 
-      SmallWait(15) 
-      SetInterrupt(TRUE) 
+  == BEGGAR2 @11081 /* Ach ye're too kind, my lord. Lathander's praises upon you. */
+    DO ~SetInterrupt(FALSE)
+      ActionOverride("A7Afaaq", FaceObject(LastTalkedToBy))
+      ActionOverride("A7Afaaq", SetSequence(SEQ_CAST))
+      SmallWait(10)
+      DisplayString(Myself, @11000)
+      CreateVisualEffectObject("SPGFLSH1", Myself)
+      SmallWait(5)
+      Polymorph(PEASANT_MAN)
+      SmallWait(15)
+      SetInterrupt(TRUE)
       EscapeArea()~
 EXIT
 
@@ -257,15 +257,15 @@ CHAIN IF WEIGHT #-1 ~Race(LastTalkedToBy, GENIE) Name("A7Afaaq", LastTalkedToBy)
   == A7AFAAQ @11137 /* You are right, little one. But I am not as powerful as you think while I am bound to a djinni lamp. */
   == TRKID04 @11138 /* Aww, I hope you get free one day. */
   == A7AFAAQ @11139 /* Thank you, my girl.  Please accept a little present from me. */
-  == TRKID04 @11140 /* Thank you, good sir. You are awfully nice for a genie. */ 
-    DO ~SetInterrupt(FALSE) 
-      ActionOverride("A7Afaaq", FaceObject(LastTalkedToBy)) 
-      ActionOverride("A7Afaaq", SetSequence(SEQ_CAST)) 
-      SmallWait(10) 
-      CreateVisualEffectObject("SPRAISEI", Myself) 
-      SmallWait(20) 
-      DisplayString(Myself, @11001) 
-      SmallWait(10) 
+  == TRKID04 @11140 /* Thank you, good sir. You are awfully nice for a genie. */
+    DO ~SetInterrupt(FALSE)
+      ActionOverride("A7Afaaq", FaceObject(LastTalkedToBy))
+      ActionOverride("A7Afaaq", SetSequence(SEQ_CAST))
+      SmallWait(10)
+      CreateVisualEffectObject("SPRAISEI", Myself)
+      SmallWait(20)
+      DisplayString(Myself, @11001)
+      SmallWait(10)
       SetInterrupt(TRUE)~
 EXIT
 

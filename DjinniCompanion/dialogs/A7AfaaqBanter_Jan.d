@@ -54,14 +54,14 @@ EXIT
 // CHAIN IF ~See("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("InToB", "GLOBAL", 0) Global("A7BanterJan", "GLOBAL", 1)~ THEN BJAN Jan.1
   // ~(TODO: Jan attempts to continue his interrupted story about the Calimshan cousin...)~ DO ~SetGlobal("A7BanterJan", "GLOBAL", 2)~
   // == A7AFAAQ ~Afaaq becomes slightly desperate in Jan's presence and pledges to finish the story already.~
-  // == BJAN ~...but Jan reassures him that he needs to hear the moral of the story. He continues his tale and finishes it eventually.~ 
+  // == BJAN ~...but Jan reassures him that he needs to hear the moral of the story. He continues his tale and finishes it eventually.~
   // == A7AFAAQ ~Afaaq sighs with relief that it's already over.~
 // EXIT
 
 // CHAIN IF ~See("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID) Global("InToB", "GLOBAL", 1) Global("A7BanterJan", "GLOBAL", 1)~ THEN BJAN25 Jan.1
   // ~(TODO: Jan attempts to continue his interrupted story about the Calimshan cousin...)~ DO ~SetGlobal("A7BanterJan", "GLOBAL", 2)~
   // == A7AFAAQ ~Afaaq becomes slightly desperate in Jan's presence and pledges to finish the story already.~
-  // == BJAN25 ~...but Jan reassures him that he needs to hear the moral of the story. He continues his tale and finishes it eventually.~ 
+  // == BJAN25 ~...but Jan reassures him that he needs to hear the moral of the story. He continues his tale and finishes it eventually.~
   // == A7AFAAQ ~Afaaq sighs with relief that it's already over.~
 // EXIT
 

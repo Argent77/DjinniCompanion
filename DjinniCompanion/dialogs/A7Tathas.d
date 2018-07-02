@@ -40,7 +40,7 @@ END
 CHAIN A7Q3DHM Tathas.Charmed.4
   @3234 /* Come to your senses, commander! This <PRO_BOYGIRL> is a <PRO_RACE> in disguise, and not to be trusted. */
   == A7TATHAS @3235 /* I commend you that you managed to deceive me. But now face the consequences of your actions. */
-    DO ~SetGlobal("A7Quest3", "GLOBAL", 10) 
+    DO ~SetGlobal("A7Quest3", "GLOBAL", 10)
         SetGlobal("A7TathasAttacked", "GLOBAL", 1)
         AddXP2DA("A7Q3MQ2")
         ApplySpellRES("A7DISPEL", Myself)
@@ -214,8 +214,8 @@ APPEND A7TATHAS
 
   IF ~~ Tathas.Intro.Hostile
     SAY @3161 /* What a disappointment you turn out to be. Let's dispose of you quickly, I have more important things to do. */
-    IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10) 
-        SetGlobal("A7TathasAttacked", "GLOBAL", 1) 
+    IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10)
+        SetGlobal("A7TathasAttacked", "GLOBAL", 1)
         EraseJournalEntry(@3800)
         EraseJournalEntry(@3803)
         EraseJournalEntry(@3804)
@@ -243,8 +243,8 @@ APPEND A7TATHAS
 
   IF ~~ Tathas.RefuseOffer
     SAY @3165 /* That is unfortunate. It also means that you've become an obstacle to my plans. Don't worry, this will be short and painful. */
-    IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10) 
-        SetGlobal("A7TathasAttacked", "GLOBAL", 1) 
+    IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10)
+        SetGlobal("A7TathasAttacked", "GLOBAL", 1)
         EraseJournalEntry(@3800)
         EraseJournalEntry(@3803)
         EraseJournalEntry(@3804)
@@ -258,8 +258,8 @@ APPEND A7TATHAS
   IF ~~ Tathas.Intro.ToldTruth
     SAY @3166 /* You are undoubtedly a dimwitted moron, telling me of your true background while disguised as one of us. */
     = @3167 /* I'll do you a favor and release you from your pathetic life. Believe me, this is for the best of us all. */
-    IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10) 
-        SetGlobal("A7TathasAttacked", "GLOBAL", 1) 
+    IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10)
+        SetGlobal("A7TathasAttacked", "GLOBAL", 1)
         EraseJournalEntry(@3800)
         EraseJournalEntry(@3803)
         EraseJournalEntry(@3804)
@@ -414,9 +414,9 @@ APPEND A7TATHAS
   IF ~~ Tathas.4.4
     SAY @3196 /* Yes, I feel its enchantments... */
     = @3197 /* I think I can use it to my advantage. The venerable matron mother of House Arabani will receive her prize, but it will be to my terms. Hahaha. */
-    IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 5) 
-        DestroyItem("A7MISC7") 
-        StartCutSceneMode() 
+    IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 5)
+        DestroyItem("A7MISC7")
+        StartCutSceneMode()
         StartCutScene("A7Q3ct5")~ EXIT
   END
 END
@@ -563,7 +563,7 @@ APPEND A7TATHAS
     IF ~~ DO ~SetGlobal("A7Quest3", "GLOBAL", 10)
         DestroyItem("A7MISC5")
         CreateItem("A7RING02", 3, 0, 0)
-        GiveItem("A7RING02", LastTalkedToBy) 
+        GiveItem("A7RING02", LastTalkedToBy)
         GiveGoldForce(2000)
         AddXP2DA("A7Q3MQ1")
         EraseJournalEntry(@3800)

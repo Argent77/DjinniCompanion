@@ -1,4 +1,4 @@
-// -*- coding: cp1252 -*- 
+// -*- coding: cp1252 -*-
 // *** Strings related to Quest 5: "Playing with fire" (index 5000...7999)
 
 // Dialog lines:
@@ -1080,11 +1080,11 @@ Special Abilities:
  Fireshield (Red)
  Duration: two turns
  Cast three times/day
- 
+
  Fireshield (Blue)
  Duration: two turns
  Cast three times/day
- 
+
  Airshield
  Duration: two turns
  Cast twice per day
@@ -1143,18 +1143,18 @@ STATISTICS:
 
 *CURSED*
 
-Special Abilities (three times per day): 
+Special Abilities (three times per day):
  Absorb Life Force:
  Drains three levels and causes 3d8 +8 damage to the victim while healing the caster at the same time.
  Range: 40 feet
 
 Equipped Abilities:
  Undead's Blessing:
- The wearer obtains both the curses and the blessings of the undead for a short time. 
+ The wearer obtains both the curses and the blessings of the undead for a short time.
  This includes:
-   - Immunity to death magic, 
+   - Immunity to death magic,
      level drain and panic
-   - Increased resistance to 
+   - Increased resistance to
      physical and cold damage
    - Immunity to haste
    - Vulnerability to fire
@@ -1225,9 +1225,9 @@ Equipped Abilities:
  Undead's Blessing:
  The wearer obtains both blessings and some of the curses of the undead.
  This includes:
-   - Immunity to death magic, 
+   - Immunity to death magic,
      level drain and panic
-   - Increased resistance to 
+   - Increased resistance to
      physical and cold damage
    - Immunity to haste
    - Vulnerability to fire

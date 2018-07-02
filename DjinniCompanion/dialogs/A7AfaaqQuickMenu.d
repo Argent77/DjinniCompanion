@@ -15,7 +15,7 @@ IF ~True()~ QuickMenu.1
   + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("POTN08", Myself) HPPercentLT(Myself, 100)~ + @60067 /* Quaff a Potion of Healing */ DO ~UseItem("POTN08", Myself)~ EXIT
   + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("%itm_potn52%", Myself) HPPercentLT(Myself, 100)~ + @60068 /* Quaff a Potion of Extra Healing */ DO ~UseItem("%itm_potn52%", Myself)~ EXIT
   + ~!GlobalTimerNotExpired("PotionUsedTimer", "LOCALS") HasItem("POTN55", Myself) HPPercentLT(Myself, 100)~ + @60069 /* Quaff a Potion of Superior Healing */ DO ~UseItem("POTN55", Myself)~ EXIT
-  
+
   // Change combat scripts
   + ~!Global("AfaaqActive", "LOCALS", 2)~ + @60095 /* Select health-protective combat script */ DO ~SetGlobal("AfaaqActive", "LOCALS", 2) ChangeAIScript("A7AFATK3", DEFAULT)~ EXIT
   + ~!Global("AfaaqActive", "LOCALS", 1)~ + @60070 /* Select active combat script */ DO ~SetGlobal("AfaaqActive", "LOCALS", 1) ChangeAIScript("A7AFATK2", DEFAULT)~ EXIT

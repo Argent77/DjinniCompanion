@@ -179,13 +179,13 @@ COMPILE EVALUATE_BUFFER
 COPY_EXISTING ~tran2209.bcs~ ~override~
   DECOMPILE_AND_PATCH BEGIN
     REPLACE_TEXTUALLY CASE_INSENSITIVE
-      ~\([^!]PartyHas.+("MISCBF".+\)~ 
+      ~\([^!]PartyHas.+("MISCBF".+\)~
       ~\1 Global("A7JaellatEntered","AR2200",0)~
     REPLACE_TEXTUALLY CASE_INSENSITIVE
-      ~Take.+"MISCBF".+~ 
+      ~Take.+"MISCBF".+~
       ~SetGlobal("A7JaellatEntered","AR2200",1)~
     REPLACE_TEXTUALLY CASE_INSENSITIVE
-      ~Display.+57372.+~ 
+      ~Display.+57372.+~
       ~DisplayString(Myself,@3968)~
   END
   BUT_ONLY

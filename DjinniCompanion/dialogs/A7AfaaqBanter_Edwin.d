@@ -120,7 +120,7 @@ APPEND EDWIN25P
   IF ~~ EdwinHumiliated.2
     SAY @19751 /* Do you still need my superior intellect, <CHARNAME>? */
     ++ @19752 /* Of course. I'm sure you won't try anything stupid like that again. */ DO ~SetGlobal("KickedOut", "LOCALS", 0) JoinParty()~ EXIT
-    + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + @19756 /* Not at the moment. I will have to think about your careless actions for a while. I'll send you back to the pocket plane. */ 
+    + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + @19756 /* Not at the moment. I will have to think about your careless actions for a while. I'll send you back to the pocket plane. */
       DO ~SetGlobal("KickedOut", "LOCALS", 1) CreateVisualEffectObject("SPDIMNDR", Myself) Wait(2) MoveBetweenAreas("AR4500", [2552.1445], 2)~ EXIT
     + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + @19757 /* Not at the moment. I will have to think about your careless actions for a while. Just wait here for a while. */ DO ~SetGlobal("KickedOut","LOCALS",1)~ + 1
       ++ @19754 /* ~What?! After all you have done, Edwin? You should be lucky that I cared enough to free you from your predicament. */ + EdwinHumiliated.3

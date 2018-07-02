@@ -57,10 +57,10 @@ END
 IF ~~ A7Q5EF08.Hostile.1
   SAY @5657 /* The enemy has found us out? Our commander must know about this immediately. */
   = @5658 /* Servants, attack the intruders! */
-  IF ~~ DO ~SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1) 
-      ClearAllActions() 
-      StartCutSceneMode() 
-      CreateVisualEffectObject("SPPLANAR", Myself) Wait(2) JumpToPoint([2195.1637]) Face(3) 
+  IF ~~ DO ~SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+      ClearAllActions()
+      StartCutSceneMode()
+      CreateVisualEffectObject("SPPLANAR", Myself) Wait(2) JumpToPoint([2195.1637]) Face(3)
       EndCutSceneMode()~ UNSOLVED_JOURNAL @6503 EXIT
 END
 

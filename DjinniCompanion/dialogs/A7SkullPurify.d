@@ -6,7 +6,7 @@ EXTEND_TOP SARTEM01 0 3 #1
   + ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
      !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
      PartyHasItemIdentified("a7skull") GlobalGT("A7SkullPurify", "GLOBAL", 0)~ + @6201 /* Can you purify this cursed skull of a demilich? */ + A7SarPriest.2
-  + ~OR(6) HasItemEquiped("a7skull", Player1) HasItemEquiped("a7skull", Player2) HasItemEquiped("a7skull", Player3) 
+  + ~OR(6) HasItemEquiped("a7skull", Player1) HasItemEquiped("a7skull", Player2) HasItemEquiped("a7skull", Player3)
            HasItemEquiped("a7skull", Player4) HasItemEquiped("a7skull", Player5) HasItemEquiped("a7skull", Player6)
      PartyHasItemIdentified("a7skull") GlobalGT("A7SkullPurify", "GLOBAL", 0)~ + @6201 /* Can you purify this cursed skull of a demilich? */ + A7SarPriest.3
 END
@@ -14,7 +14,7 @@ END
 APPEND SARTEM01
   IF ~~ A7SarPriest.1
     SAY @6202 /* I felt its evil even before you entered the temple. */
-    IF ~OR(6) HasItemEquiped("a7skull", Player1) HasItemEquiped("a7skull", Player2) HasItemEquiped("a7skull", Player3) 
+    IF ~OR(6) HasItemEquiped("a7skull", Player1) HasItemEquiped("a7skull", Player2) HasItemEquiped("a7skull", Player3)
               HasItemEquiped("a7skull", Player4) HasItemEquiped("a7skull", Player5) HasItemEquiped("a7skull", Player6)~ + A7SarPriest.3
     IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
         !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
@@ -57,7 +57,7 @@ APPEND SARTEM01
     SAY @6226 /* Normally I would suggest you to get rid of such evil artifacts immediately. I can see that you are seasoned adventurers following the path of righteousness however, so I will make an exception. */
     IF ~~ + A7SarPriest.4c
   END
-  
+
   IF ~~ A7SarPriest.4c
     SAY @6212 /* To neutralize an evil of this scale I need a vial of potent Elven Holy Water. The ritual itself is very draining, so I have to ask for a modest fee of 5000 gold as well. Are you still interested? */
     + ~PartyGoldGT(4999) PartyHasItem("miscau")~ + @6204 /* Yes, please do it. Here is the money and a vial of holy water. */ + A7SarPriest.9
@@ -114,7 +114,7 @@ EXTEND_BOTTOM AMCLER02 0 3 6 10 #1
   + ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
      !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)
      PartyHasItemIdentified("a7skull") GlobalGT("A7SkullPurify", "GLOBAL", 0)~ + @6201 /* Can you purify this cursed skull of a demilich? */ + A7AmPriest.2
-  + ~OR(6) HasItemEquiped("a7skull", Player1) HasItemEquiped("a7skull", Player2) HasItemEquiped("a7skull", Player3) 
+  + ~OR(6) HasItemEquiped("a7skull", Player1) HasItemEquiped("a7skull", Player2) HasItemEquiped("a7skull", Player3)
            HasItemEquiped("a7skull", Player4) HasItemEquiped("a7skull", Player5) HasItemEquiped("a7skull", Player6)
      PartyHasItemIdentified("a7skull") GlobalGT("A7SkullPurify", "GLOBAL", 0)~ + @6201 /* Can you purify this cursed skull of a demilich? */ + A7AmPriest.3
 END
@@ -122,7 +122,7 @@ END
 APPEND AMCLER02
   IF ~~ A7AmPriest.1
     SAY @6202 /* I felt its evil even before you entered the temple. */
-    IF ~OR(6) HasItemEquiped("a7skull", Player1) HasItemEquiped("a7skull", Player2) HasItemEquiped("a7skull", Player3) 
+    IF ~OR(6) HasItemEquiped("a7skull", Player1) HasItemEquiped("a7skull", Player2) HasItemEquiped("a7skull", Player3)
               HasItemEquiped("a7skull", Player4) HasItemEquiped("a7skull", Player5) HasItemEquiped("a7skull", Player6)~ + A7AmPriest.3
     IF ~!HasItemEquiped("a7skull", Player1) !HasItemEquiped("a7skull", Player2) !HasItemEquiped("a7skull", Player3)
         !HasItemEquiped("a7skull", Player4) !HasItemEquiped("a7skull", Player5) !HasItemEquiped("a7skull", Player6)

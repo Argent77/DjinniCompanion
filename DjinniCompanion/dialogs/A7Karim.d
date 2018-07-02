@@ -131,7 +131,7 @@ APPEND A7KARIM
   END
 
   IF ~~ Karim.Intro.7
-    SAY @5047 /* Some time ago our wise ruler sensed an unknown power probing our defenses, despite their effort to conceal their actions from us. The activities have increased over time and our protective shield is now more or less openly attacked. */ 
+    SAY @5047 /* Some time ago our wise ruler sensed an unknown power probing our defenses, despite their effort to conceal their actions from us. The activities have increased over time and our protective shield is now more or less openly attacked. */
     = @5048 /* Our divinations revealed that the source of the attacks originates from somewhere below the settlement you call Amkethran. You have witnessed our dealings with the current residents of the cave. They appear to be a suspicious lot. Maybe you have more luck in dealing with them. */
     = @5049 /* We will leave for the moment. If you find a way to safely enter the tunnel system, we will surely meet again. */
     IF ~True()~ DO ~SetGlobal("A7Quest5", "GLOBAL", 1) ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct1b")~ UNSOLVED_JOURNAL @6500 EXIT
@@ -164,7 +164,7 @@ APPEND A7KARIM
     SAY @5056 /* (You tell Karim everything you have learned from the efreet commander.) */
     = @5057 /* Thank you, <GABBER>, this information is invaluable to us. */
     = @5058 /* I'd advise you to continue your work for the efreets. They will see your actions as a means to earn their respect. Please inform us as soon as you learn anything else. */
-    IF ~~ DO ~SetGlobal("TellAboutCave", "A77002", 3) AddXP2DA("A7Q5ADV1") ClearActions(Myself) 
+    IF ~~ DO ~SetGlobal("TellAboutCave", "A77002", 3) AddXP2DA("A7Q5ADV1") ClearActions(Myself)
         EraseJournalEntry(@6501) EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504)~ UNSOLVED_JOURNAL @6505 EXIT
   END
 
@@ -206,7 +206,7 @@ APPEND A7KARIM
     ++ @5078 /* I'd prefer to defeat the efreets. */ + Karim.Alternative.Defeat.1
     ++ @5079 /* That sounds far too complicated to me. I will come up with something on my own. */ + Karim.Alternative.Reject.1
   END
-  
+
   IF ~~ Karim.Alternative.2
     SAY @5080 /* Demiliches share a permanent connection with the negative energy plane using their phylacteries, which are basically repositories used to store their souls. */
     = @5081 /* They are usually merged with their remaining body parts, that's why it is highly likely that the remains of a defeated demilich still contain their spiritual essences. */
@@ -272,7 +272,7 @@ APPEND A7KARIM
     + ~OR(2) Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 1)~ + @5103 /* Thanks for the warning, but I will ask Lord Malik if he accepts one of the alternatives you have mentioned. */ + Karim.Alternative.11
     + ~Global("A7Q5Demilich", "GLOBAL", 0) Global("A7Q5DemonHeart", "GLOBAL", 0)~ + @5104 /* Thanks for the warning, but I will ask Lord Malik if he accepts to use parts of my divine soul. */ + Karim.Alternative.11
   END
-  
+
   IF ~~ Karim.Alternative.10
     SAY @5105 /* This is surprising news, Imoen. However, you should be aware of the dangers if you actually tell Malik about it. It might be more than you can handle. */
     = @5102 /* But I believe it is a valid option for Malik, nonetheless. */
@@ -351,19 +351,19 @@ END
 APPEND A7KARIM
   IF ~~ Karim.Alternative.11
     SAY @5117 /* Agreed. You should return to Malik at once. I wish you success in your dealings with him, <CHARNAME>. */
-    IF ~Global("A7Q5Demilich", "GLOBAL", 0) Global("A7Q5DemonHeart", "GLOBAL", 0) Global("A7Q5DivineEssence", "GLOBAL", 1)~ 
+    IF ~Global("A7Q5Demilich", "GLOBAL", 0) Global("A7Q5DemonHeart", "GLOBAL", 0) Global("A7Q5DivineEssence", "GLOBAL", 1)~
       DO ~SetGlobal("A7Q5Artifact", "GLOBAL", 3) AddXP2DA("A7Q5ADV2") ClearActions(Myself) EraseJournalEntry(@6505)~ UNSOLVED_JOURNAL @6525 EXIT
-    IF ~Global("A7Q5Demilich", "GLOBAL", 0) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 0)~ 
+    IF ~Global("A7Q5Demilich", "GLOBAL", 0) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 0)~
       DO ~SetGlobal("A7Q5Artifact", "GLOBAL", 3) AddXP2DA("A7Q5ADV2") ClearActions(Myself) EraseJournalEntry(@6505)~ UNSOLVED_JOURNAL @6526 EXIT
-    IF ~Global("A7Q5Demilich", "GLOBAL", 0) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 1)~ 
+    IF ~Global("A7Q5Demilich", "GLOBAL", 0) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 1)~
       DO ~SetGlobal("A7Q5Artifact", "GLOBAL", 3) AddXP2DA("A7Q5ADV2") ClearActions(Myself) EraseJournalEntry(@6505)~ UNSOLVED_JOURNAL @6527 EXIT
-    IF ~Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 0) Global("A7Q5DivineEssence", "GLOBAL", 0)~ 
+    IF ~Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 0) Global("A7Q5DivineEssence", "GLOBAL", 0)~
       DO ~SetGlobal("A7Q5Artifact", "GLOBAL", 3) AddXP2DA("A7Q5ADV2") ClearActions(Myself) EraseJournalEntry(@6505)~ UNSOLVED_JOURNAL @6528 EXIT
-    IF ~Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 0) Global("A7Q5DivineEssence", "GLOBAL", 1)~ 
+    IF ~Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 0) Global("A7Q5DivineEssence", "GLOBAL", 1)~
       DO ~SetGlobal("A7Q5Artifact", "GLOBAL", 3) AddXP2DA("A7Q5ADV2") ClearActions(Myself) EraseJournalEntry(@6505)~ UNSOLVED_JOURNAL @6529 EXIT
-    IF ~Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 0)~ 
+    IF ~Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 0)~
       DO ~SetGlobal("A7Q5Artifact", "GLOBAL", 3) AddXP2DA("A7Q5ADV2") ClearActions(Myself) EraseJournalEntry(@6505)~ UNSOLVED_JOURNAL @6530 EXIT
-    IF ~Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 1)~ 
+    IF ~Global("A7Q5Demilich", "GLOBAL", 1) Global("A7Q5DemonHeart", "GLOBAL", 1) Global("A7Q5DivineEssence", "GLOBAL", 1)~
       DO ~SetGlobal("A7Q5Artifact", "GLOBAL", 3) AddXP2DA("A7Q5ADV2") ClearActions(Myself) EraseJournalEntry(@6505)~ UNSOLVED_JOURNAL @6531 EXIT
   END
 
@@ -470,7 +470,6 @@ APPEND A7KARIM
     SAY @5150 /* From what you have told me, we are targeted by an army of efreets, accompanied by fire trolls, elementals and salamanders. */
     = @5058 /* I'd advise you to continue your work for the efreets. They will see your actions as a means to earn their respect. Please inform us as soon as you learn anything else. */
     IF ~~ + Karim.Cave.5
-    
   END
 
   IF ~~ Karim.Cave.9
@@ -602,17 +601,17 @@ APPEND A7KARIM
   IF ~~ Karim.Reward.6
     SAY @5176 /* We will return to our home. May your future shine brightly and be assured that we will not forget what you have done for us. */
     IF ~~ DO ~SetGlobal("A7Q5Finished", "A77002", 2) AddXP2DA("A7Q5MQ5")
-        EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) 
-        EraseJournalEntry(@6505) EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) 
-        EraseJournalEntry(@6509) EraseJournalEntry(@6510) EraseJournalEntry(@6511) EraseJournalEntry(@6512) 
-        EraseJournalEntry(@6513) EraseJournalEntry(@6514) EraseJournalEntry(@6515) EraseJournalEntry(@6516) 
-        EraseJournalEntry(@6517) EraseJournalEntry(@6518) EraseJournalEntry(@6519) EraseJournalEntry(@6520) 
-        EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) EraseJournalEntry(@6524) 
-        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) 
-        EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) 
-        EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) EraseJournalEntry(@6536) 
-        EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) EraseJournalEntry(@6540) 
-        EraseJournalEntry(@6541) EraseJournalEntry(@6542) EraseJournalEntry(@6543) EraseJournalEntry(@6544) 
+        EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504)
+        EraseJournalEntry(@6505) EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508)
+        EraseJournalEntry(@6509) EraseJournalEntry(@6510) EraseJournalEntry(@6511) EraseJournalEntry(@6512)
+        EraseJournalEntry(@6513) EraseJournalEntry(@6514) EraseJournalEntry(@6515) EraseJournalEntry(@6516)
+        EraseJournalEntry(@6517) EraseJournalEntry(@6518) EraseJournalEntry(@6519) EraseJournalEntry(@6520)
+        EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) EraseJournalEntry(@6524)
+        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528)
+        EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532)
+        EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) EraseJournalEntry(@6536)
+        EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) EraseJournalEntry(@6540)
+        EraseJournalEntry(@6541) EraseJournalEntry(@6542) EraseJournalEntry(@6543) EraseJournalEntry(@6544)
         EraseJournalEntry(@6548)~ SOLVED_JOURNAL @6593 EXIT
   END
 

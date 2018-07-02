@@ -37,7 +37,7 @@ COPY_EXISTING ~ar1902.are~ ~override~
       TEXT_SPRINT scrpt ~AR1902~
       WRITE_ASCIIE 0x94 ~%scrpt%~ #8
     END
-    
+
     // Adding info region (teleporter is not yet usable)
     LPF fj_are_structure
       INT_VAR
@@ -63,7 +63,7 @@ COPY_EXISTING ~ar1902.are~ ~override~
       fj_structure_type     = region
       fj_name               = A7Info01
     END
-    
+
     // Adding travel region (teleporter is usable)
     LPF fj_are_structure
       INT_VAR
@@ -92,7 +92,7 @@ COPY_EXISTING ~ar1902.are~ ~override~
       fj_destination_area = A77001
       fj_destination_name = Exit1902
     END
-    
+
     // Adding entrance from A77001 map
     LPF fj_are_structure
       INT_VAR
@@ -103,7 +103,7 @@ COPY_EXISTING ~ar1902.are~ ~override~
       fj_structure_type = entrance
       fj_name           = A7Exit01
     END
-    
+
     // Starting animation of teleporter
     LPF fj_are_structure
       INT_VAR
@@ -118,7 +118,7 @@ COPY_EXISTING ~ar1902.are~ ~override~
       fj_name           = A7dimndr1
       fj_bam_resref     = A7DIMNDR
     END
-    
+
     // Looped animation of teleporter
     LPF fj_are_structure
       INT_VAR
@@ -133,7 +133,7 @@ COPY_EXISTING ~ar1902.are~ ~override~
       fj_name           = A7dimndr2
       fj_bam_resref     = A7DIMNDR
     END
-    
+
     // Ending animation of teleporter
     LPF fj_are_structure
       INT_VAR

@@ -43,8 +43,8 @@ IF ~~ DrowCpt.5
 END
 
 // *** When in battle with Arabani ***
-IF ~GlobalGT("A7Quest3", "GLOBAL", 5) 
-  GlobalLT("A7Quest3", "GLOBAL", 10) 
+IF ~GlobalGT("A7Quest3", "GLOBAL", 5)
+  GlobalLT("A7Quest3", "GLOBAL", 10)
   ActuallyInCombat()~ DrowCpt.6
   SAY @3311 /* I'm a little busy right now. */
   IF ~~ DO ~ClearActions(Myself)~ EXIT

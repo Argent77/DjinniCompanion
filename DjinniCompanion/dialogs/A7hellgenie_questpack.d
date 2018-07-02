@@ -48,7 +48,7 @@ END
 
 ADD_TRANS_ACTION HELLGEN BEGIN 14 END BEGIN 0 END ~SetGlobal("A7ResetPositions", "LOCALS", 1)~
 
-ADD_STATE_TRIGGER HELLGEN 15 ~!Global("A7AfaaqIntro", "LOCALS", 1) Global("A7AfaaqUpgrade", "LOCALS", 0) Global("A7GreedWaitForDecision", "GLOBAL", 0)~ 
+ADD_STATE_TRIGGER HELLGEN 15 ~!Global("A7AfaaqIntro", "LOCALS", 1) Global("A7AfaaqUpgrade", "LOCALS", 0) Global("A7GreedWaitForDecision", "GLOBAL", 0)~
 
 REPLACE HELLGEN
   IF ~Global("C7Geas","GLOBAL",2)~ THEN BEGIN 20
@@ -91,7 +91,7 @@ APPEND HELLGEN
 END
 
 CHAIN IF ~Global("A7AfaaqIntro", "LOCALS", 1) Detect("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~ THEN HELLGEN AfqIntro.2.1
-  @4108 /* Greeting Afaaq. I welcome you to my little prison. It would seem that our kind is fated to endure the whims of greater powers. */ 
+  @4108 /* Greeting Afaaq. I welcome you to my little prison. It would seem that our kind is fated to endure the whims of greater powers. */
   == A7AFAAQ @4109 /* You are right. Yet my prison allows me more freedom, as I am bound to a lamp which <CHARNAME> has with <PRO_HIMHER>. */
   == HELLGEN @4110 /* Yes, I see...  This might open a path to your freedom though. */
   == A7AFAAQ @4111 /* There is nothing I desire more, but how is this possible? */
@@ -128,7 +128,7 @@ END
 
 CHAIN HELLGEN GreedAttack1.3
   @4122 /* I welcome death... should you prove able. */ DO ~SetGlobal("Player1Greed","GLOBAL",2) Enemy()~
-  == ~A7AFAAQ~ IF ~Detect("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~ THEN @4103 /* I will not support your decision, <CHARNAME>. You have to do it without me. */ 
+  == ~A7AFAAQ~ IF ~Detect("A7Afaaq") !StateCheck("A7Afaaq", CD_STATE_NOTVALID)~ THEN @4103 /* I will not support your decision, <CHARNAME>. You have to do it without me. */
     DO ~ChangeAIScript("", CLASS) ChangeAIScript("A7AFATKG", DEFAULT) SetDialogue("A7AFAAQG") ChangeEnemyAlly(Myself, NEUTRAL) AddJournalEntry(@4800, QUEST)~
 END IF ~~ THEN UNSOLVED_JOURNAL #10250 EXIT
 
@@ -202,19 +202,19 @@ APPEND HELLGEN
 
   IF ~~ THEN BEGIN AfqHelp.7.1
     SAY @4141 /* As you will. I am free and wish you well in whatever trials you are to face. */
-    IF ~~ THEN 
+    IF ~~ THEN
       DO ~SetGlobal("A7AfaaqUpgradeRefused", "GLOBAL", 1)
-        CreateVisualEffect("spplanar",[362.918]) 
-        Wait(2) 
+        CreateVisualEffect("spplanar",[362.918])
+        Wait(2)
         DestroySelf()~ EXIT
   END
 
   IF ~~ THEN BEGIN AfqHelp.7.2
     SAY @4142 /* As you will. I wish you well in whatever trials you are to face. Until we meet again. */
-    IF ~~ THEN 
-      DO ~SetGlobal("A7AfaaqUpgradeRefused", "GLOBAL", 1) 
-      CreateVisualEffect("spplanar",[362.918]) 
-      Wait(2) 
+    IF ~~ THEN
+      DO ~SetGlobal("A7AfaaqUpgradeRefused", "GLOBAL", 1)
+      CreateVisualEffect("spplanar",[362.918])
+      Wait(2)
       DestroySelf()~ EXIT
   END
 
@@ -230,7 +230,7 @@ APPEND HELLGEN
 
   // Make a decision on the release of Afaaq
   IF ~Global("A7AfaaqUpgrade", "LOCALS", 0) Global("A7GreedWaitForDecision", "GLOBAL", 1)~ THEN BEGIN AfqHelp.9
-    SAY @4145 /* Did you come to a decision yet, my <PRO_LADYLORD>? */ 
+    SAY @4145 /* Did you come to a decision yet, my <PRO_LADYLORD>? */
     + ~PartyHasItem("A7DJLMP") PartyHasItem("A7MISC6")~ + @4146 /* I have found this magical crystal which contains the sealed powers of Afaaq. Would this be useful for your spell? */ DO ~SetGlobal("A7GreedWaitForDecision", "GLOBAL", 2)~ + AfqHelp.2
     + ~OR(2) PartyHasItem("MISCBC") HasItem("MISCBC", Myself) PartyHasItem("A7DJLMP") !PartyHasItem("A7MISC6")~ + @4133 /* I will take the risk. Begin your incantations! */ DO ~SetGlobal("A7AfaaqUpgrade", "LOCALS", 1) SetGlobal("A7GreedWaitForDecision", "GLOBAL", 2)~ + AfqRelease.1
     + ~!PartyHasItem("A7DJLMP")~ + @4133 /* I will take the risk. Begin your incantations! */ + AfqHelp.10
@@ -259,7 +259,7 @@ APPEND HELLGEN
 
   // Break enchantment with soulcage
   IF ~Global("A7PrepareAfaaq", "LOCALS", 1) Global("A7AfaaqUpgrade", "LOCALS", 2)~ AfqRelease.2
-    SAY @4153 /* I will begin the casting... */ 
+    SAY @4153 /* I will begin the casting... */
     IF ~~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("A7Q4ct3a")~ EXIT
   END
 
@@ -270,20 +270,20 @@ APPEND HELLGEN
   END
 
   IF ~Global("A7PrepareAfaaq", "LOCALS", 1) Global("A7AfaaqUpgrade", "LOCALS", 1)~ AfqRelease.4
-    SAY @4153 /* I will begin the casting... */ 
+    SAY @4153 /* I will begin the casting... */
     IF ~~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("A7Q4ct3b")~ EXIT
   END
 
   // After upgrading Afaaq with the soulcage
   IF ~Global("A7SoulcageUsed", "LOCALS", 1) Global("A7AfaaqUpgrade", "LOCALS", 3)~ AfqRelease.5.1
-    SAY @4155 /* It is done. */ 
+    SAY @4155 /* It is done. */
     IF ~!Global("C7Geas","GLOBAL",3)~ + AfqRelease.6.1
     IF ~Global("C7Geas","GLOBAL",3)~ + AfqRelease.6.2
   END
 
   // After upgrading Afaaq WITHOUT the soulcage
   IF ~Global("A7SoulcageUsed", "LOCALS", 0) Global("A7AfaaqUpgrade", "LOCALS", 3)~ AfqRelease.5.2
-    SAY @4156 /* It is done and you even survived it relatively unscathed. */ 
+    SAY @4156 /* It is done and you even survived it relatively unscathed. */
     IF ~!Global("C7Geas","GLOBAL",3)~ + AfqRelease.6.1
     IF ~Global("C7Geas","GLOBAL",3)~ + AfqRelease.6.2
   END

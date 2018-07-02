@@ -27,7 +27,7 @@
  *                                          3 = AT_INTERACTIVE_NOW, 4 = AT_INTERACTIVE_EXIT, 5 = AT_INTERACTIVE_UNINSTALL
  * STR_VAR input_path     (mandatory) Path to a single MOS/TIS input file or the directory containing MOS or TIS files to convert.
  * STR_VAR tile2ee_path   Full path to the "tile2ee" binary.
- *                        Default: Attempts to find the the tool binary in "%MOD_FOLDER%/tools/tile2ee/", "%input_path%/tile2ee/" or 
+ *                        Default: Attempts to find the the tool binary in "%MOD_FOLDER%/tools/tile2ee/", "%input_path%/tile2ee/" or
  *                        "%output_path%/tile2ee/" if not specified. (See default folder structure of GET_TOOL_BINARY below for more information.)
  * STR_VAR output_path    Output path for converted MOS and TIS files. (Default: override)
  * RET     num_converted  Returns the number of successfully converted MOS and TIS files (not counting PVRZ files generated in the process).
@@ -49,7 +49,7 @@
  *                                          3 = AT_INTERACTIVE_NOW, 4 = AT_INTERACTIVE_EXIT, 5 = AT_INTERACTIVE_UNINSTALL
  * STR_VAR input_path     (mandatory) Path to a single MBC/TBC input file or the directory containing MBC or TBC files to decode.
  * STR_VAR tileconv_path  Full path to the "tileconv" binary.
- *                        Default: Attempts to find the the tool binary in "%MOD_FOLDER%/tools/tileconv/", "%input_path%/tileconv/" or 
+ *                        Default: Attempts to find the the tool binary in "%MOD_FOLDER%/tools/tileconv/", "%input_path%/tileconv/" or
  *                        "%output_path%/tileconv/" if not specified. (See default folder structure of GET_TOOL_BINARY below for more information.)
  * STR_VAR output_path    Output path for MOS/TIS files. (Default: override)
  * RET     num_converted  Returns the number of successfully converted files.
@@ -102,7 +102,7 @@
  * Attempts to detect the system architecture Weidu is currently running on.
  *
  * Parameters:
- * RET SYSTEM_ARCH: Returns either "amd64" for 64-bit environments or "x86" for true 32-bit environments. 
+ * RET SYSTEM_ARCH: Returns either "amd64" for 64-bit environments or "x86" for true 32-bit environments.
  *                  Falls back to %WEIDU_ARCH% in case of problems.
  *
  *
@@ -215,7 +215,7 @@ BEGIN
   END ELSE BEGIN
     OUTER_TEXT_SPRINT tool_binary ~%tool_os_path%/%tool_name%~
   END
-  
+
   ACTION_IF (NOT FILE_EXISTS ~%tool_binary%~) BEGIN
     OUTER_TEXT_SPRINT tool_binary ~~
   END

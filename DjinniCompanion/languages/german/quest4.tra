@@ -1,4 +1,4 @@
-// -*- coding: cp1252 -*- 
+// -*- coding: cp1252 -*-
 // *** Strings related to Quest 4: "The Gift of Freedom" (index 4000...4999)
 
 // dialog lines (vanilla game)
@@ -140,7 +140,7 @@
 @4204 = ~Ich gebe auf! In meiner gegenwärtigen Form kann ich Eurer Macht nichts entgegensetzen. Ihr habt gewonnen und ich werde mich Eurem Willen unterwerfen.~
 
 // dialog lines (IWD)
-@4300 = ~Ich habe zufälligerweise eine Dschinnlampe in meinem Besitz. Wäre es möglich, die Verzauberung zu brechen, welche den Dschinn an die Lampe bindet?~ 
+@4300 = ~Ich habe zufälligerweise eine Dschinnlampe in meinem Besitz. Wäre es möglich, die Verzauberung zu brechen, welche den Dschinn an die Lampe bindet?~
 @4301 = ~Ich habe es mir anders überlegt. Versucht bitte, die Siegel der Dschinnlampe zu brechen, um Afaaqs Kräfte wiederherzustellen.~
 @4302 = ~Ich mag zwar als Seherin bekannt sein, aber ich kann immer noch den einen oder anderen Zauber sprechen. Zeigt mir doch mal Eure Lampe.~
 @4303 = ~Bitte sehr.~

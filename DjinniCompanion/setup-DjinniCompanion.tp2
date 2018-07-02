@@ -35,7 +35,7 @@ README ~DjinniCompanion/readme/readme-%LANGUAGE%.html~
        ~DjinniCompanion/readme/readme.html~
 
 LANGUAGE ~English~
-         ~english~ 
+         ~english~
          ~DjinniCompanion/languages/english/setup.tra~
          ~DjinniCompanion/languages/english/misc.tra~
          ~DjinniCompanion/languages/english/afaaq.tra~
@@ -45,7 +45,7 @@ LANGUAGE ~English~
          ~DjinniCompanion/languages/english/quest4.tra~
          ~DjinniCompanion/languages/english/quest5.tra~
 LANGUAGE ~Deutsch~
-         ~german~ 
+         ~german~
          ~DjinniCompanion/languages/german/setup.tra~
          ~DjinniCompanion/languages/german/misc.tra~
          ~DjinniCompanion/languages/german/afaaq.tra~
@@ -208,7 +208,7 @@ BEGIN @18    // Alternate djinni portrait by Ulb
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~a7afaaq.cre~ @17     // This component requires either the full version or the light version of the "Djinni Companion" to be installed.
   GROUP @19     // Tweaks
   DESIGNATED 300
-  
+
   // BG2EE-specific stuff
   ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
     OUTER_TEXT_SPRINT PORTRAIT_AFAAQS_V2 "DjinniCompanion/portraits/bg2ee/v2/a7afaaqs.bmp"

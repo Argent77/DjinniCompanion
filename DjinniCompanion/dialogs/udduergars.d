@@ -12,12 +12,12 @@ APPEND ~UDDUER01~
     SAY @3000    // And I'd advice you to avoid the passage behind us. We've accidently stumbled upon a camp of drow warriors a couple of days ago.
     = @3001    // We talked a bit about the current events in this region, but they barred the way to non-drow now. I guess they want to be left alone.
     ++ @3002 /* A drow war party? Do you know why they are here? */
-      DO ~SetGlobal("A7Quest3", "GLOBAL", 1) 
+      DO ~SetGlobal("A7Quest3", "GLOBAL", 1)
         SetGlobal("A7Q3TravelTrigger", "AR2100", 1)
-        AddJournalEntry(@3800, QUEST)~ 
+        AddJournalEntry(@3800, QUEST)~
         + udduer01.2
     ++ @3003 /* Thanks for the warning, but we have no business with the drow. */
-      DO ~SetGlobal("A7Quest3", "GLOBAL", 1) 
+      DO ~SetGlobal("A7Quest3", "GLOBAL", 1)
         SetGlobal("A7Q3TravelTrigger", "AR2100", 1)
         AddJournalEntry(@3800, QUEST)~ + 10
   END
@@ -31,12 +31,12 @@ END
 // *** Introduction talk to the duergar in drow form ***
 ADD_TRANS_TRIGGER ~UDDUER01~ 0 ~OR(2) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~ DO 2
 EXTEND_BOTTOM ~UDDUER01~ 0
-  IF ~Global("PlayerLooksLikeDrow","GLOBAL",1) 
-    !IsValidForPartyDialogue("VICONIA") 
-    !IsValidForPartyDialogue("JAHEIRA") 
-    !IsValidForPartyDialogue("MINSC") 
-    PartyHasItem("A7DJLMP") 
-    GlobalLT("udDrowPlot", "GLOBAL", 9)~ 
+  IF ~Global("PlayerLooksLikeDrow","GLOBAL",1)
+    !IsValidForPartyDialogue("VICONIA")
+    !IsValidForPartyDialogue("JAHEIRA")
+    !IsValidForPartyDialogue("MINSC")
+    PartyHasItem("A7DJLMP")
+    GlobalLT("udDrowPlot", "GLOBAL", 9)~
     THEN GOTO udduer01.6
 END
 
@@ -60,7 +60,7 @@ END
 
 // modify/add new transition to UDDUER02 17
 ADD_TRANS_TRIGGER ~UDDUER02~ 17 ~OR(2) !PartyHasItem("A7DJLMP") GlobalGT("udDrowPlot", "GLOBAL", 8)~
-EXTEND_BOTTOM ~UDDUER02~ 17 
+EXTEND_BOTTOM ~UDDUER02~ 17
   IF ~PartyHasItem("A7DJLMP") GlobalLT("udDrowPlot", "GLOBAL", 9)~ THEN EXTERN ~UDDUER01~ udduer01.6
 END
 
@@ -82,14 +82,14 @@ APPEND ~UDDUER01~
     = @3006    // We've accidently stumbled upon a camp of drow warriors a couple of days ago. There in the passage behind our back.
     = @3001    // We talked a bit about the current events in this region, but they barred the way to non-drow now. I guess they want to be left alone.
     ++ @3002 /* A drow war party? Do you know why they are here? */
-      DO ~SetGlobal("A7Quest3", "GLOBAL", 1) 
+      DO ~SetGlobal("A7Quest3", "GLOBAL", 1)
         SetGlobal("A7Q3TravelTrigger", "AR2100", 1)
-        AddJournalEntry(@3800, QUEST)~ 
+        AddJournalEntry(@3800, QUEST)~
         + udduer01.4
     ++ @3003 /* Thanks for the warning, but we have no business with the drow. */
-      DO ~SetGlobal("A7Quest3", "GLOBAL", 1) 
+      DO ~SetGlobal("A7Quest3", "GLOBAL", 1)
         SetGlobal("A7Q3TravelTrigger", "AR2100", 1)
-        AddJournalEntry(@3800, QUEST)~ 
+        AddJournalEntry(@3800, QUEST)~
         + 10
   END
 
@@ -124,9 +124,9 @@ APPEND ~UDDUER01~
     SAY @3010    // Of course malla C'rintri. We found camp of drow many days back, in tunnel behind. They ask about affairs in region here.
     = @3011    // But they have locked tunnel now. We can not enter, but you may.
     ++ @3012 /* That's all I wanted to know. I leave you your life. Good bye. */
-    DO ~SetGlobal("A7Quest3", "GLOBAL", 1) 
+    DO ~SetGlobal("A7Quest3", "GLOBAL", 1)
       SetGlobal("A7Q3TravelTrigger", "AR2100", 3)
-      AddJournalEntry(@3800, QUEST)~ 
+      AddJournalEntry(@3800, QUEST)~
       + 16
   END
 END

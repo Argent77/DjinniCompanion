@@ -135,8 +135,8 @@ END
 
 
 // *** Talk after defeating Tathas Melarn  ***
-IF ~GlobalGT("A7Quest3", "GLOBAL", 6) 
-  GlobalLT("A7Quest3", "GLOBAL", 10) 
+IF ~GlobalGT("A7Quest3", "GLOBAL", 6)
+  GlobalLT("A7Quest3", "GLOBAL", 10)
   Global("A7TathasAttacked", "GLOBAL", 0)
   !ActuallyInCombat()
   Dead("A7Tathas")~ Arabani.5
@@ -145,8 +145,8 @@ IF ~GlobalGT("A7Quest3", "GLOBAL", 6)
   IF ~Dead("JAEL01")~ + Arabani.7.2
 END
 
-IF ~GlobalGT("A7Quest3", "GLOBAL", 6) 
-  GlobalLT("A7Quest3", "GLOBAL", 10) 
+IF ~GlobalGT("A7Quest3", "GLOBAL", 6)
+  GlobalLT("A7Quest3", "GLOBAL", 10)
   Global("A7TathasAttacked", "GLOBAL", 1)
   !ActuallyInCombat()
   Dead("A7Tathas")~ Arabani.6

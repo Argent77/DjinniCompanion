@@ -59,17 +59,17 @@ END
 IF ~Global("A7Quest5", "GLOBAL", 10) AreaCheck("A77003") Dead("A7Karim")~ TalkA703.2
   SAY @5211 /* We thank you for defeating Malik and his army. Regrettably Karim has left this plane prematurely. */
   = @5212 /* We will return back to our home. May your future shine brightly, <CHARNAME>. */
-  IF ~~ DO ~SetGlobal("A7Q5TeleportAway", "A77003", 1) EraseJournalEntry(@6502) EraseJournalEntry(@6503) 
-      EraseJournalEntry(@6504) EraseJournalEntry(@6505) EraseJournalEntry(@6506) EraseJournalEntry(@6507) 
-      EraseJournalEntry(@6508) EraseJournalEntry(@6509) EraseJournalEntry(@6510) EraseJournalEntry(@6511) 
-      EraseJournalEntry(@6512) EraseJournalEntry(@6513) EraseJournalEntry(@6514) EraseJournalEntry(@6515) 
-      EraseJournalEntry(@6516) EraseJournalEntry(@6517) EraseJournalEntry(@6518) EraseJournalEntry(@6519) 
-      EraseJournalEntry(@6520) EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) 
-      EraseJournalEntry(@6524) EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) 
-      EraseJournalEntry(@6528) EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531) 
-      EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) 
-      EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) 
-      EraseJournalEntry(@6540) EraseJournalEntry(@6541) EraseJournalEntry(@6542) EraseJournalEntry(@6543) 
+  IF ~~ DO ~SetGlobal("A7Q5TeleportAway", "A77003", 1) EraseJournalEntry(@6502) EraseJournalEntry(@6503)
+      EraseJournalEntry(@6504) EraseJournalEntry(@6505) EraseJournalEntry(@6506) EraseJournalEntry(@6507)
+      EraseJournalEntry(@6508) EraseJournalEntry(@6509) EraseJournalEntry(@6510) EraseJournalEntry(@6511)
+      EraseJournalEntry(@6512) EraseJournalEntry(@6513) EraseJournalEntry(@6514) EraseJournalEntry(@6515)
+      EraseJournalEntry(@6516) EraseJournalEntry(@6517) EraseJournalEntry(@6518) EraseJournalEntry(@6519)
+      EraseJournalEntry(@6520) EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523)
+      EraseJournalEntry(@6524) EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527)
+      EraseJournalEntry(@6528) EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531)
+      EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535)
+      EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539)
+      EraseJournalEntry(@6540) EraseJournalEntry(@6541) EraseJournalEntry(@6542) EraseJournalEntry(@6543)
       EraseJournalEntry(@6544) EraseJournalEntry(@6548)~ SOLVED_JOURNAL @6594 EXIT
 END
 

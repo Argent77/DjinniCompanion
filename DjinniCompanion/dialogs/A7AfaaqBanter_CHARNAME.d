@@ -186,9 +186,9 @@ APPEND A7AFAAQ
   // Heritage #4
   IF ~InPartySlot(LastTalkedToBy, 0) Global("BanterPCHeritage", "LOCALS", 7) Global("BanterActive", "LOCALS", 1)~ PCHeritage.4
     SAY @12265 /* My <PRO_LADYLORD>, I have watched you most carefully after your horrible treatment by Irenicus and I am impressed that you have not given up despite your current state. */
-    + ~OR(3) !InParty("Imoen2") StateCheck("Imoen2", CD_STATE_NOTVALID) !InMyArea("Imoen2")~ + 
+    + ~OR(3) !InParty("Imoen2") StateCheck("Imoen2", CD_STATE_NOTVALID) !InMyArea("Imoen2")~ +
       @12266 /* Thank you. But honestly I'm not sure if I can go on like this much longer. */ + PCHeritage.4.2
-    + ~InParty("Imoen2") !StateCheck("Imoen2", CD_STATE_NOTVALID) InMyArea("Imoen2")~ + 
+    + ~InParty("Imoen2") !StateCheck("Imoen2", CD_STATE_NOTVALID) InMyArea("Imoen2")~ +
       @12266 /* Thank you. But honestly I'm not sure if I can go on like this much longer. */ EXTERN BIMOEN2 PCHeritage.4.Imoen.1
     ++ @12267 /* Do I have another choice? */ + PCHeritage.4.3
     ++ @12268 /* I'm really not in the mood to discuss my current predicament with you. */ + PCHeritage.4.1

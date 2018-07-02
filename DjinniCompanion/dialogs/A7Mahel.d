@@ -42,7 +42,7 @@ END
 IF ~~ A7RakLe1.6
   SAY @1212 /* You dare? */
   = @1213 /* We will hunt you down and feast on your innards. ATTACK THEM! */
-  IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~ 
+  IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~
     UNSOLVED_JOURNAL @1803 EXIT
 END
 
@@ -82,17 +82,17 @@ END
 // TODO: add remarks from either Hexxat, Dorn, Rasaad and/or Neera
 CHAIN A7MAHEL A7RakLe1.12
   @1224 /* I have something in mind to spice up our hunt. You can bring their leader to us. */
-  == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn", CD_STATE_NOTVALID)~ 
+  == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn", CD_STATE_NOTVALID)~
     THEN @1225 /* Do not listen to him. The rakshasa are demonic creatures and have only evil intentions. */
-  == MAZZYJ IF ~!InParty("Keldorn") InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy", CD_STATE_NOTVALID)~ 
+  == MAZZYJ IF ~!InParty("Keldorn") InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy", CD_STATE_NOTVALID)~
     THEN @1226 /* The rakshasa are evil creatures without honor. Do not enslave yourself to their whims. */
   == ANOMENJ IF ~!InParty("Keldorn") !InParty("Mazzy") InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen", CD_STATE_NOTVALID)~
     THEN @1227 /* I'd rather slay those creatures where they stand and be done with them. It is doubtful they will even let us live once we have completed their task. */
 
-  == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira", CD_STATE_NOTVALID)~ 
+  == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira", CD_STATE_NOTVALID)~
     THEN @1228 /* I have some knowledge about those creatures. They call themselves rakshasa and are evil creatures with strong predatory tendencies. */
       = @1229 /* Be careful around them. We just might be a piece of meat to them. */
-  == CERNDJ IF ~!InParty("Jaheira") InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd", CD_STATE_NOTVALID)~ 
+  == CERNDJ IF ~!InParty("Jaheira") InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd", CD_STATE_NOTVALID)~
     THEN @1230 /* The rakshasa are not part of the natural order of our world. Whatever their plan is, it will surely provoke a strong reaction from their opponents. */
 
   == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis", CD_STATE_NOTVALID) Global("zahraajob", "GLOBAL", 0)~
@@ -104,14 +104,14 @@ CHAIN A7MAHEL A7RakLe1.12
   == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis", CD_STATE_NOTVALID) InParty("Jan") InMyArea("Jan") !StateCheck("Jan", CD_STATE_NOTVALID)~
     THEN @1234 /* Please, not now. I want to know how this little act develops before our host loses his patience. */
 
-  == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin", CD_STATE_NOTVALID)~ 
+  == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin", CD_STATE_NOTVALID)~
     THEN @1235 /* Powerful creatures have always powerful items in their possession. You'd be a fool to decline his offer. */
-  == VICONIJ IF ~!InParty("Edwin") InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia", CD_STATE_NOTVALID) Global("zahraajob", "GLOBAL", 0)~ 
+  == VICONIJ IF ~!InParty("Edwin") InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia", CD_STATE_NOTVALID) Global("zahraajob", "GLOBAL", 0)~
     THEN @1236 /* I suggest you accept his offer for now. You may still reconsider after you've heard the other side. Think about it. */
-  == VICONIJ IF ~!InParty("Edwin") InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia", CD_STATE_NOTVALID) Global("zahraajob", "GLOBAL", 1)~ 
+  == VICONIJ IF ~!InParty("Edwin") InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia", CD_STATE_NOTVALID) Global("zahraajob", "GLOBAL", 1)~
     THEN @1237 /* I suggest you accept his offer. You have slain his underling Ihtafeer already and can return its head for a reward. */
       = @1238 /* Why not get the best from both sides? */
-  == KORGANJ IF ~!InParty("Edwin") !InParty("Viconia") InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan", CD_STATE_NOTVALID)~ 
+  == KORGANJ IF ~!InParty("Edwin") !InParty("Viconia") InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan", CD_STATE_NOTVALID)~
     THEN @1239 /* Argh, do ye really want to bow down to those beasts? Let's have 'eir heads and loot 'em bodies. That be less a hassle an' more riches for us. */
 END A7MAHEL A7RakLe1.13
 
@@ -144,7 +144,7 @@ APPEND A7MAHEL
 
   IF ~~ A7RakLe1.17
     SAY @1250 /* The game has changed, my brothers. We will hunt you down and feast on your innards. ATTACK THEM! */
-    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~ 
+    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~
       UNSOLVED_JOURNAL @1803 EXIT
   END
 
@@ -197,7 +197,7 @@ APPEND A7MAHEL
 
   IF ~~ A7RakLe1.25
     SAY @1266 /* You dare to refuse us? We will feast on your innards. ATTACK THEM! */
-    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~ 
+    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~
       UNSOLVED_JOURNAL @1803 EXIT
   END
 
@@ -238,7 +238,7 @@ APPEND A7MAHEL
     SAY @1276 /* You return to us again? */
     = @1277 /* I cannot sense the genies anymore, but our trap is still empty? */
     = @1278 /* You have failed us? We will feast on your innards. ATTACK THEM! */
-    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~ 
+    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~
       UNSOLVED_JOURNAL @1803 EXIT
   END
 
@@ -265,22 +265,22 @@ APPEND A7MAHEL
     SAY @1282 /* Ah, I sense the trapped genie. Very good. */
     = @1283 /* You have fulfilled your end of the deal. This magic lamp is your reward. You are very resourceful for a <RACE>. */
     IF ~~ DO ~
-      GiveItem("A7djlmp", LastTalkedToBy) 
+      GiveItem("A7djlmp", LastTalkedToBy)
       AddXP2DA("A7Q1MQ1")
-      SetGlobal("A7Quest1", "GLOBAL", 9) 
+      SetGlobal("A7Quest1", "GLOBAL", 9)
       SetGlobal("A7Q1AfaaqRewarded", "GLOBAL", 1)~ + A7RakLe4.3
   END
 
   IF ~~ A7RakLe4.3
     SAY @1284 /* Our deal is completed. We will leave now, and so should you. */
-    IF ~~ DO ~SetGlobal("A7RakTeleport", "A77001", 1) ReallyForceSpell(Myself, DRYAD_TELEPORT)~ 
+    IF ~~ DO ~SetGlobal("A7RakTeleport", "A77001", 1) ReallyForceSpell(Myself, DRYAD_TELEPORT)~
       UNSOLVED_JOURNAL @1810 EXIT
   END
 
   IF ~~ A7RakLe4.4
     SAY @1285 /* This isn't the requested genie! */
     = @1286 /* You dare to betray us? We will feast on your innards. ATTACK THEM! */
-    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~ 
+    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~
       UNSOLVED_JOURNAL @1804 EXIT
   END
 
@@ -295,7 +295,7 @@ APPEND A7MAHEL
   // *** A7RakLe6: Djinni lamp stolen from rakshasa leader ***
   IF ~GlobalGT("A7Quest1", "GLOBAL", 1) !HasItem("A7djlmp", "A7Mahel")~ A7RakLe6
     SAY @1288 /* You dare to steal from us? We will feast on your innards. ATTACK THEM! */
-    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~ 
+    IF ~~ DO ~SetGlobal("A7RakAttacked", "A77001", 1) Enemy()~
       UNSOLVED_JOURNAL @1804 EXIT
   END
 END

@@ -78,13 +78,13 @@ APPEND A7MALIK
   IF ~~ A7Malik.Artifact.Betrayal.5
     SAY @5322 /* I'm afraid that your reunion with <CHARNAME> is a short one. Brace yourself, you have hard times before you. */
     = @5323 /* And now to you, <CHARNAME>. You have saved us a lot of time and effort. That's why I reward you with a valuable gift which grants you some powers of the efreet kind. */
-    IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5Artifact", "GLOBAL", 10) SetGlobal("A7Q5EfreetiTeleportAway", "GLOBAL", 1) 
+    IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5Artifact", "GLOBAL", 10) SetGlobal("A7Q5EfreetiTeleportAway", "GLOBAL", 1)
         SetGlobal("A7FavorWish", "GLOBAL", 1) GiveItemCreate("A7WAND2", Player1, 10, 10, 10) AddXP2DA("A7Q5MQ4") ReputationInc(-1)
-        EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) EraseJournalEntry(@6524) 
-        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) 
-        EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) 
-        EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) EraseJournalEntry(@6536) 
-        EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) EraseJournalEntry(@6540) EraseJournalEntry(@6548) 
+        EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) EraseJournalEntry(@6524)
+        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528)
+        EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532)
+        EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) EraseJournalEntry(@6536)
+        EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) EraseJournalEntry(@6540) EraseJournalEntry(@6548)
         ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct7a")~ SOLVED_JOURNAL @6590 EXIT
   END
 
@@ -92,12 +92,12 @@ APPEND A7MALIK
   // *** CHARNAME rejects Lord Malik's offer to retrieve the artifact ***
   IF ~~ A7Malik.Artifact.Rejected.1
     SAY @5324 /* That is unfortunate. I fear that our hospitality will come to end now. Prepare yourself! */
-    IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 9) SetGlobal("A7Q5Artifact", "GLOBAL", 9) SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1) SetGlobal("AttackParty", "LOCALS", 1) 
-        EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) EraseJournalEntry(@6524) 
-        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) 
-        EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) 
-        EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) EraseJournalEntry(@6536) 
-        EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) EraseJournalEntry(@6540) EraseJournalEntry(@6548) 
+    IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 9) SetGlobal("A7Q5Artifact", "GLOBAL", 9) SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1) SetGlobal("AttackParty", "LOCALS", 1)
+        EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6523) EraseJournalEntry(@6524)
+        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528)
+        EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532)
+        EraseJournalEntry(@6533) EraseJournalEntry(@6534) EraseJournalEntry(@6535) EraseJournalEntry(@6536)
+        EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) EraseJournalEntry(@6540) EraseJournalEntry(@6548)
         Enemy()~ UNSOLVED_JOURNAL @6545 EXIT
   END
 
@@ -183,16 +183,16 @@ APPEND A7MALIK
 
   IF ~~ A7Malik.Artifact.Demilich.3
     SAY @5351 /* Let me see it... Yes, this looks promising. Do you have the artifact as well? */
-    + ~PartyHasItem("A7BOOK01") PartyHasItem("A7SKULL") !HasItemEquiped("A7SKULL", Player1) !HasItemEquiped("A7SKULL", Player2) !HasItemEquiped("A7SKULL", Player3) !HasItemEquiped("A7SKULL", Player4) !HasItemEquiped("A7SKULL", Player5) !HasItemEquiped("A7SKULL", Player6)~ 
+    + ~PartyHasItem("A7BOOK01") PartyHasItem("A7SKULL") !HasItemEquiped("A7SKULL", Player1) !HasItemEquiped("A7SKULL", Player2) !HasItemEquiped("A7SKULL", Player3) !HasItemEquiped("A7SKULL", Player4) !HasItemEquiped("A7SKULL", Player5) !HasItemEquiped("A7SKULL", Player6)~
       + @5352 /* Yes, of course. Here it is. */ + A7Malik.Artifact.Demilich.5
-    + ~PartyHasItem("A7BOOK01") PartyHasItem("A7SKULL") OR(6) HasItemEquiped("A7SKULL", Player1) HasItemEquiped("A7SKULL", Player2) HasItemEquiped("A7SKULL", Player3) HasItemEquiped("A7SKULL", Player4) HasItemEquiped("A7SKULL", Player5) HasItemEquiped("A7SKULL", Player6)~ 
+    + ~PartyHasItem("A7BOOK01") PartyHasItem("A7SKULL") OR(6) HasItemEquiped("A7SKULL", Player1) HasItemEquiped("A7SKULL", Player2) HasItemEquiped("A7SKULL", Player3) HasItemEquiped("A7SKULL", Player4) HasItemEquiped("A7SKULL", Player5) HasItemEquiped("A7SKULL", Player6)~
       + @5353 /* Yes, of course. Unfortunately the item is cursed and is causing us a bit of trouble. */ + A7Malik.Artifact.Demilich.6
     + ~OR(2) !PartyHasItem("A7SKULL") !PartyHasItem("A7BOOK01")~ + @5354 /* Not yet. I'm still searching, but I will return as soon as I have found it. */ + A7Malik.Artifact.Demilich.4
   END
 
   IF ~~ A7Malik.Artifact.Demilich.4
     SAY @5350 /* Very well. When you've found everything I need, I will accept your offer. */
-    IF ~~ DO ~EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6525) EraseJournalEntry(@6526) 
+    IF ~~ DO ~EraseJournalEntry(@6521) EraseJournalEntry(@6522) EraseJournalEntry(@6525) EraseJournalEntry(@6526)
           EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529) EraseJournalEntry(@6530) EraseJournalEntry(@6531)~ UNSOLVED_JOURNAL @6532 EXIT
   END
 
@@ -200,9 +200,9 @@ APPEND A7MALIK
     SAY @5355 /* Thank you, <CHARNAME>, I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore. */
     IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5EfreetiTeleportAway", "GLOBAL", 1)  SetGlobal("A7FavorWish", "GLOBAL", 1)
         TakePartyItem("A7BOOK01") DestroyItem("A7BOOK01") TakePartyItem("A7SKULL") DestroyItem("A7SKULL")
-        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529) 
-        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) 
-        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) 
+        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529)
+        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534)
+        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539)
         EraseJournalEntry(@6540) EraseJournalEntry(@6548) AddXP2DA("A7Q5MQ1") ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct7a")~ UNSOLVED_JOURNAL @6541 EXIT
   END
 
@@ -210,13 +210,13 @@ APPEND A7MALIK
     SAY @5356 /* Haha, so you have played with fire and burned yourself. However, that doesn't hinder me to take it from you. */
     = @5357 /* I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore. */
     IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5EfreetiTeleportAway", "GLOBAL", 1) SetGlobal("A7FavorWish", "GLOBAL", 1)
-        ApplySpell(Player1, CLERIC_REMOVE_CURSE) ApplySpell(Player2, CLERIC_REMOVE_CURSE) ApplySpell(Player3, CLERIC_REMOVE_CURSE) 
-        ApplySpell(Player4, CLERIC_REMOVE_CURSE) ApplySpell(Player5, CLERIC_REMOVE_CURSE) ApplySpell(Player6, CLERIC_REMOVE_CURSE) 
+        ApplySpell(Player1, CLERIC_REMOVE_CURSE) ApplySpell(Player2, CLERIC_REMOVE_CURSE) ApplySpell(Player3, CLERIC_REMOVE_CURSE)
+        ApplySpell(Player4, CLERIC_REMOVE_CURSE) ApplySpell(Player5, CLERIC_REMOVE_CURSE) ApplySpell(Player6, CLERIC_REMOVE_CURSE)
         TakePartyItem("A7BOOK01") DestroyItem("A7BOOK01") TakePartyItem("A7SKULL") DestroyItem("A7SKULL")
-        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529) 
-        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) 
-        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) 
-        EraseJournalEntry(@6540) EraseJournalEntry(@6548) 
+        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529)
+        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534)
+        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539)
+        EraseJournalEntry(@6540) EraseJournalEntry(@6548)
         AddXP2DA("A7Q5MQ1") ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct7a")~ UNSOLVED_JOURNAL @6541 EXIT
   END
 
@@ -242,13 +242,13 @@ APPEND A7MALIK
   IF ~~ A7Malik.Artifact.DemonHeart.3
     SAY @5366 /* That was an impressive deed, <CHARNAME>. Even I would think twice before attacking a ruler of the demonic races. */
     = @5367 /* Thank you, I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore. */
-    IF ~~ DO ~TakePartyItem("A7HEART1") DestroyItem("A7HEART1") 
-        TakePartyItem("A7HEART2") DestroyItem("A7HEART2") 
+    IF ~~ DO ~TakePartyItem("A7HEART1") DestroyItem("A7HEART1")
+        TakePartyItem("A7HEART2") DestroyItem("A7HEART2")
         SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5EfreetiTeleportAway", "GLOBAL", 1) SetGlobal("A7FavorWish", "GLOBAL", 1)
-        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529) 
-        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) 
-        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) 
-        EraseJournalEntry(@6540) EraseJournalEntry(@6548) 
+        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529)
+        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534)
+        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539)
+        EraseJournalEntry(@6540) EraseJournalEntry(@6548)
         AddXP2DA("A7Q5MQ1") ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct7a")~ UNSOLVED_JOURNAL @6542 EXIT
   END
 
@@ -280,12 +280,12 @@ APPEND A7MALIK
 
   IF ~Global("A7Quest5", "GLOBAL", 4) Global("A7Q5Artifact", "GLOBAL", 6) Global("A7Q5MalikEssencePC", "A77003", 1)~ A7Malik.Artifact.Soul.4
     SAY @5379 /* You have survived, <CHARNAME>, and I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore. */
-    IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5Artifact", "GLOBAL", 10) SetGlobal("A7Q5MalikEssencePC", "A77003", 2) 
+    IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5Artifact", "GLOBAL", 10) SetGlobal("A7Q5MalikEssencePC", "A77003", 2)
         SetGlobal("A7Q5EfreetiTeleportAway", "GLOBAL", 1) SetGlobal("A7FavorWish", "GLOBAL", 1)
-        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529) 
-        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) 
-        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) 
-        EraseJournalEntry(@6540) EraseJournalEntry(@6548) 
+        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529)
+        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534)
+        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539)
+        EraseJournalEntry(@6540) EraseJournalEntry(@6548)
         AddXP2DA("A7Q5MQ2") ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct7a")~ UNSOLVED_JOURNAL @6543 EXIT
   END
 
@@ -296,12 +296,12 @@ APPEND A7MALIK
 
   IF ~Global("A7Quest5", "GLOBAL", 4) Global("A7Q5Artifact", "GLOBAL", 6) Global("A7Q5MalikEssenceImoen", "A77003", 1)~ A7Malik.Artifact.Soul.6
     SAY @5381 /* You have survived, Imoen, and I am pleased. You can tell your employers that we will return home. Their little keep isn't of interest to us anymore. */
-    IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5Artifact", "GLOBAL", 10) SetGlobal("A7Q5MalikEssenceImoen", "A77003", 2) 
+    IF ~~ DO ~SetGlobal("A7Quest5", "GLOBAL", 10) SetGlobal("A7Q5Artifact", "GLOBAL", 10) SetGlobal("A7Q5MalikEssenceImoen", "A77003", 2)
         SetGlobal("A7Q5EfreetiTeleportAway", "GLOBAL", 1) SetGlobal("A7FavorWish", "GLOBAL", 1)
-        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529) 
-        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534) 
-        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539) 
-        EraseJournalEntry(@6540) EraseJournalEntry(@6548) 
+        EraseJournalEntry(@6525) EraseJournalEntry(@6526) EraseJournalEntry(@6527) EraseJournalEntry(@6528) EraseJournalEntry(@6529)
+        EraseJournalEntry(@6530) EraseJournalEntry(@6531) EraseJournalEntry(@6532) EraseJournalEntry(@6533) EraseJournalEntry(@6534)
+        EraseJournalEntry(@6535) EraseJournalEntry(@6536) EraseJournalEntry(@6537) EraseJournalEntry(@6538) EraseJournalEntry(@6539)
+        EraseJournalEntry(@6540) EraseJournalEntry(@6548)
         AddXP2DA("A7Q5MQ3") ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct7a")~ UNSOLVED_JOURNAL @6544 EXIT
   END
 END
@@ -314,7 +314,7 @@ APPEND IMOEN25J
     + ~Global("ImoenGiveSoul", "GLOBAL", 2)~ + @5383 /* Please do it, Imoen. It is for the good of dear friends. */ + A7Imoen.DivineImoen.4
     + ~!Alignment(Player1, MASK_GOOD)~ + @5384 /* Do it, Imoen! Don't forget who saved you from the clutches of Irenicus. */ + A7Imoen.DivineImoen.3
   END
-  
+
   IF ~~ A7Imoen.DivineImoen.2
     SAY @5385 /* I know, I know.  I...will do it. */
     = @5386 /* I guess you have sacrificed enough in the past. But don't expect much from me for the rest of our journey. */

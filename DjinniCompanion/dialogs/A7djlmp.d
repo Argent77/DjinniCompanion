@@ -140,16 +140,16 @@ END
 IF ~InPartySlot(LastTalkedToBy, 0) Global("A7AfaaqSummoned", "GLOBAL", 1)~ Lamp.Summoned
   SAY @21010 /* You look into the lamp but find nothing of interest. */
   + ~!StateCheck("A7Afaaq", CD_STATE_NOTVALID) InMyArea("A7Afaaq") !ActuallyInCombat()~ + @21012 /* (Switch places with Afaaq) */ + Lamp.SwitchPlaces
-  + ~Global("A7AfaaqLight", "GLOBAL", 1) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) InMyArea("A7Afaaq") !AreaCheck("A77006")~ 
+  + ~Global("A7AfaaqLight", "GLOBAL", 1) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) InMyArea("A7Afaaq") !AreaCheck("A77006")~
     + @21013 /* (Force the djinni into the lamp) */ + Lamp.ForceUnsummonLight
-  + ~Global("A7AfaaqLight", "GLOBAL", 0) !Allegiance("A7Afaaq", ENEMY) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) InMyArea("A7Afaaq") !AreaCheck("A77006") 
-    OR(2) !Global("InToB", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 1) GlobalLT("A7AfaaqForceUnsummon", "GLOBAL", 6)~ 
+  + ~Global("A7AfaaqLight", "GLOBAL", 0) !Allegiance("A7Afaaq", ENEMY) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) InMyArea("A7Afaaq") !AreaCheck("A77006")
+    OR(2) !Global("InToB", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 1) GlobalLT("A7AfaaqForceUnsummon", "GLOBAL", 6)~
     + @21013 /* (Force the djinni into the lamp) */ + Lamp.ForceUnsummon1
-  + ~Global("A7AfaaqLight", "GLOBAL", 0) !Allegiance("A7Afaaq", ENEMY) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) InMyArea("A7Afaaq") !AreaCheck("A77006") 
-    OR(2) !Global("InToB", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 1) GlobalGT("A7AfaaqForceUnsummon", "GLOBAL", 5) GlobalLT("A7AfaaqForceUnsummon", "GLOBAL", 11)~ 
+  + ~Global("A7AfaaqLight", "GLOBAL", 0) !Allegiance("A7Afaaq", ENEMY) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) InMyArea("A7Afaaq") !AreaCheck("A77006")
+    OR(2) !Global("InToB", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 1) GlobalGT("A7AfaaqForceUnsummon", "GLOBAL", 5) GlobalLT("A7AfaaqForceUnsummon", "GLOBAL", 11)~
     + @21013 /* (Force the djinni into the lamp) */ + Lamp.ForceUnsummon2
-  + ~Global("A7AfaaqLight", "GLOBAL", 0) !Allegiance("A7Afaaq", ENEMY) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) InMyArea("A7Afaaq") !AreaCheck("A77006") 
-    OR(2) !Global("InToB", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 1) GlobalGT("A7AfaaqForceUnsummon", "GLOBAL", 10)~ 
+  + ~Global("A7AfaaqLight", "GLOBAL", 0) !Allegiance("A7Afaaq", ENEMY) Global("A7AfaaqToldAboutHimself", "GLOBAL", 1) InMyArea("A7Afaaq") !AreaCheck("A77006")
+    OR(2) !Global("InToB", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 1) GlobalGT("A7AfaaqForceUnsummon", "GLOBAL", 10)~
     + @21013 /* (Force the djinni into the lamp) */ + Lamp.ForceUnsummon3
   ++ @21011 /* (Put the lamp away) */ EXIT
 END

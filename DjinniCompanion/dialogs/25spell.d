@@ -4,13 +4,13 @@
 ADD_STATE_TRIGGER 25SPELL 5 ~Global("A7WandCreating", "LOCALS", 0)~
 
 EXTEND_BOTTOM 25SPELL 1
-  + ~!Global("lazarusscroll", "GLOBAL", 3) Global("A7Quest5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) Global("A7Q5Wand", "GLOBAL", 0) Global("A7WandOffered", "LOCALS", 0)~ 
+  + ~!Global("lazarusscroll", "GLOBAL", 3) Global("A7Quest5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) Global("A7Q5Wand", "GLOBAL", 0) Global("A7WandOffered", "LOCALS", 0)~
     + @5960 /* I'm in need of a way to protect myself from great heat, like that of boiling water. Can you help me? */ DO ~SetGlobal("A7Q5RumorWizard", "GLOBAL", 1) SetGlobal("A7WandOffered", "LOCALS", 1)~ + 25SPELL.1
-  + ~Global("lazarusscroll", "GLOBAL", 3) Global("A7Quest5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) Global("A7Q5Wand", "GLOBAL", 0) Global("A7WandOffered", "LOCALS", 0)~ 
+  + ~Global("lazarusscroll", "GLOBAL", 3) Global("A7Quest5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) Global("A7Q5Wand", "GLOBAL", 0) Global("A7WandOffered", "LOCALS", 0)~
     + @5960 /* I'm in need of a way to protect myself from great heat, like that of boiling water. Can you help me? */ DO ~SetGlobal("A7Q5RumorWizard", "GLOBAL", 2)~ + 25SPELL.2
-  + ~Global("lazarusscroll", "GLOBAL", 3) Global("A7Quest5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) Global("A7Q5Wand", "GLOBAL", 0) Global("A7WandOffered", "LOCALS", 1)~ 
+  + ~Global("lazarusscroll", "GLOBAL", 3) Global("A7Quest5", "GLOBAL", 1) Global("A7Q5Protection", "GLOBAL", 0) Global("A7Q5Wand", "GLOBAL", 0) Global("A7WandOffered", "LOCALS", 1)~
     + @5961 /* I'd like to talk about your item of heat protection again. */ + 25SPELL.6
-  + ~GlobalGT("A7Quest5", "GLOBAL", 0) GlobalLT("A7Quest5", "GLOBAL", 10) PartyHasItem("A7WAND1") Global("A7WandOffered", "LOCALS", 2)~ 
+  + ~GlobalGT("A7Quest5", "GLOBAL", 0) GlobalLT("A7Quest5", "GLOBAL", 10) PartyHasItem("A7WAND1") Global("A7WandOffered", "LOCALS", 2)~
     + @5962 /* Can you recharge my Wand of Heat Protection? */ + 25SPELL.7
 END
 

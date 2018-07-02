@@ -1186,9 +1186,9 @@ IF ~~ Statue.Rewarded
   = @2032    // Take my wardstone, one of four. The remaining three are near, but take care! My enchantments will not yield without a fight.
   IF ~~ DO ~SetGlobal("WardstoneFound", "A77004", 1)
       SetGlobal("SerpentRiddle", "A77004", 2)
-      GiveItem("A7Q2WS3", LastTalkedToBy) 
+      GiveItem("A7Q2WS3", LastTalkedToBy)
       AddXP2DA("A7Q2SRP")
-      EraseJournalEntry(@2806)~ 
+      EraseJournalEntry(@2806)~
       UNSOLVED_JOURNAL @2805 EXIT
 END
 

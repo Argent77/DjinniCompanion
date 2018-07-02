@@ -47,7 +47,7 @@ APPEND A7AFAAQ
     SAY @58017 /* Very well. I don't want to press you for an answer, my <PRO_LADYLORD>. */
     IF ~~ DO ~SetGlobal("A7BanterIntro", "GLOBAL", 2)~ EXIT
   END
-  
+
   IF ~~ PCIntro.Solo.7
     SAY @58018 /* You are a thoughtful person, my <PRO_LADYLORD>. */
     = @58013 /* But even so, you should not underestimate the strength and toughness of your fellow adventurers. They have a will of their own and may be willing to risk their life for your cause. */
@@ -832,7 +832,7 @@ APPEND A7AFAAQ
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAliveGT(2) InPartySlot("Minsc", 3)~ + @58120 /* He and his animal companion are valuable party members. */ DO ~IncrementGlobal("A7BanterIntroParty", "GLOBAL", 1) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1) SetGlobal("BanterIntroNPC4", "LOCALS", 1)~ EXTERN MINSCJ PCIntro.Party.Minsc
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAliveGT(2) InPartySlot("Minsc", 4)~ + @58120 /* He and his animal companion are valuable party members. */ DO ~IncrementGlobal("A7BanterIntroParty", "GLOBAL", 1) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1) SetGlobal("BanterIntroNPC5", "LOCALS", 1)~ EXTERN MINSCJ PCIntro.Party.Minsc
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAliveGT(2) InPartySlot("Minsc", 5)~ + @58120 /* He and his animal companion are valuable party members. */ DO ~IncrementGlobal("A7BanterIntroParty", "GLOBAL", 1) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1) SetGlobal("BanterIntroNPC6", "LOCALS", 1)~ EXTERN MINSCJ PCIntro.Party.Minsc
-    
+
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAlive(2)~ + @58119 /* He and his animal companion are loyal friends for a long time. */ DO ~SetGlobal("A7BanterIntroParty", "GLOBAL", 7) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1)~ EXTERN MINSCJ PCIntro.Party.Minsc
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAlive(2)~ + @58120 /* He and his animal companion are valuable party members. */ DO ~SetGlobal("A7BanterIntroParty", "GLOBAL", 7) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1)~ EXTERN MINSCJ PCIntro.Party.Minsc
   END
@@ -891,7 +891,7 @@ APPEND A7AFAAQ
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAliveGT(2) InPartySlot("Minsc", 3)~ + @58120 /* He and his animal companion are valuable party members. */ DO ~IncrementGlobal("A7BanterIntroParty", "GLOBAL", 1) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1) SetGlobal("BanterIntroNPC4", "LOCALS", 1)~ EXTERN MINSC25J PCIntro25.Party.Minsc
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAliveGT(2) InPartySlot("Minsc", 4)~ + @58120 /* He and his animal companion are valuable party members. */ DO ~IncrementGlobal("A7BanterIntroParty", "GLOBAL", 1) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1) SetGlobal("BanterIntroNPC5", "LOCALS", 1)~ EXTERN MINSC25J PCIntro25.Party.Minsc
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAliveGT(2) InPartySlot("Minsc", 5)~ + @58120 /* He and his animal companion are valuable party members. */ DO ~IncrementGlobal("A7BanterIntroParty", "GLOBAL", 1) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1) SetGlobal("BanterIntroNPC6", "LOCALS", 1)~ EXTERN MINSC25J PCIntro25.Party.Minsc
-    
+
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAlive(2)~ + @58119 /* He and his animal companion are loyal friends for a long time. */ DO ~SetGlobal("A7BanterIntroParty", "GLOBAL", 7) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1)~ EXTERN MINSC25J PCIntro25.Party.Minsc
     + ~Global("A7BanterIntroParty", "GLOBAL", 0) NumInPartyAlive(2)~ + @58120 /* He and his animal companion are valuable party members. */ DO ~SetGlobal("A7BanterIntroParty", "GLOBAL", 7) SetGlobal("A7BanterIntroMinsc", "GLOBAL", 1)~ EXTERN MINSC25J PCIntro25.Party.Minsc
   END
@@ -2431,14 +2431,14 @@ END
 
 
 // Keldorn's lines
-APPEND KELDORJ 
+APPEND KELDORJ
   IF ~~ PCIntro.Party.Keldorn
     SAY @58285 /* I greet you, Afaaq. A friend of <CHARNAME> is also a friend of mine. */
     IF ~~ EXTERN A7AFAAQ PCIntro.Party.Keldorn.1
   END
 END
 
-APPEND KELDO25J 
+APPEND KELDO25J
   IF ~~ PCIntro25.Party.Keldorn
     SAY @58285 /* I greet you, Afaaq. A friend of <CHARNAME> is also a friend of mine. */
     IF ~~ EXTERN A7AFAAQ PCIntro.Party.Keldorn.1
@@ -3016,7 +3016,7 @@ APPEND A7AFAAQ
     IF ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ EXTERN JAHEIRAJ PCIntro.Party.Jaheira.1
     IF ~Global("A7AfaaqUpgraded", "GLOBAL", 1)~ EXTERN JAHEIRAJ PCIntro.Party.Jaheira.2
   END
-  
+
   IF ~~ PCIntro25.Party.Jaheira
     SAY @58321 /* I am pleased to meet you, my lady. */
     IF ~Global("A7AfaaqUpgraded", "GLOBAL", 0)~ EXTERN JAHEI25J PCIntro25.Party.Jaheira.1
@@ -3206,7 +3206,7 @@ APPEND A7AFAAQ
     IF ~Global("InToB", "GLOBAL", 0)~ EXTERN HAERDAJ PCIntro.Party.HaerDalis.1
     IF ~Global("InToB", "GLOBAL", 1)~ EXTERN HAERD25J PCIntro25.Party.HaerDalis.1
   END
-  
+
   IF ~~ PCIntro.Party.HaerDalis.Afq2
     SAY @58332 /* Like a bird born anew. I may finally see my home again. */
     IF ~Global("InToB", "GLOBAL", 0)~ EXTERN HAERDAJ PCIntro.Party.HaerDalis.1
@@ -3221,7 +3221,7 @@ APPEND HAERDAJ
     IF ~Global("A7AfaaqEnslaved", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.HaerDalis.Afq1
     IF ~Global("A7AfaaqEnslaved", "GLOBAL", 1)~ EXTERN A7AFAAQ PCIntro.Party.HaerDalis.Afq2
   END
-  
+
   IF ~~ PCIntro.Party.HaerDalis.1
     SAY @58335 /* Ah yes, the marvelous planes... Once they capture your gaze, you can never stop thinking about them. */
     IF ~~ EXTERN A7AFAAQ PCIntro.Party.Members.NPC
@@ -3254,7 +3254,7 @@ APPEND HAERD25J
     IF ~OR(2) Global("A7AfaaqUpgraded", "GLOBAL", 0) Global("A7AfaaqEnslaved", "GLOBAL", 1)~ EXTERN A7AFAAQ PCIntro.Party.HaerDalis.Afq1
     IF ~Global("A7AfaaqUpgraded", "GLOBAL", 1) Global("A7AfaaqEnslaved", "GLOBAL", 0)~ EXTERN A7AFAAQ PCIntro.Party.HaerDalis.Afq2
   END
-  
+
   IF ~~ PCIntro25.Party.HaerDalis.1
     SAY @58335 /* Ah yes, the marvelous planes... Once they capture your gaze, you can never stop thinking about them. */
     IF ~~ EXTERN A7AFAAQ PCIntro.Party.Members.NPC

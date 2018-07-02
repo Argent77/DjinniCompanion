@@ -1,4 +1,4 @@
-// -*- coding: cp1252 -*- 
+// -*- coding: cp1252 -*-
 // *** Strings related to Quest 3: "An unexpected encounter" (index 3000...3999)
 
 // Dialog lines: duergar merchants in map AR2100
@@ -413,7 +413,7 @@ My attempt to charm Tathas Melarn was only partly successful. I was able to get 
 @3912 = ~Afaaq's Soulcage~
 @3913 = ~This magical crystal contains the elemental essence of Afaaq. Although it is now in my possession, I have yet to find out how to release the energies confined within.~
 @3914 = ~Arabani Anchor Stone~
-@3915 = ~The anchor stone of the House Arabani allows you to enter their home at any time. 
+@3915 = ~The anchor stone of the House Arabani allows you to enter their home at any time.
 
 This particular stone also contains another enchantment. If it is used in Tathas Melarn's close proximity, it will entrap and teleport him into the immediate vicinity of Xunvrae d'Arabani.~
 

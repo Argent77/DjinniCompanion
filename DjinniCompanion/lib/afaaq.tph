@@ -585,7 +585,7 @@ COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7AfaaqBanter_CHARNAME.d~
 
 // Afaaq's banter files for Bio NPCs
 // TODO
-COMPILE EVALUATE_BUFFER 
+COMPILE EVALUATE_BUFFER
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Aerie.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Keldorn.d~
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Mazzy.d~
@@ -605,7 +605,7 @@ COMPILE EVALUATE_BUFFER
         // ~DjinniCompanion/dialogs/A7AfaaqBanter_Sarevok.d~
 
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
-  // COMPILE EVALUATE_BUFFER 
+  // COMPILE EVALUATE_BUFFER
           // ~DjinniCompanion/dialogs/A7AfaaqBanter_Dorn.d~
           // ~DjinniCompanion/dialogs/A7AfaaqBanter_Hexxat.d~
           // ~DjinniCompanion/dialogs/A7AfaaqBanter_Neera.d~

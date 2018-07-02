@@ -176,7 +176,7 @@ IF ~~ A7Q5EF01.SubQuest1.5.3
   SAY @5510 /* I should have seen that coming. They are a treacherous pack. */
   = @5511 /* You did your best, for that I commend you. */
   IF ~~ DO ~SetGlobal("A7Q5SubQuest1", "A77003", 10) AddXP2DA("A7Q5SQ1")
-      EraseJournalEntry(@6506) EraseJournalEntry(@6509) EraseJournalEntry(@6510) EraseJournalEntry(@6511) 
+      EraseJournalEntry(@6506) EraseJournalEntry(@6509) EraseJournalEntry(@6510) EraseJournalEntry(@6511)
       EraseJournalEntry(@6512) EraseJournalEntry(@6513) EraseJournalEntry(@6514)~ + A7Q5EF01.SubQuest2.0.1
 END
 
@@ -184,7 +184,7 @@ IF ~~ A7Q5EF01.SubQuest1.5.4
   SAY @5512 /* You don't lie very well. I know that you are to blame. */
   = @5513 /* I hope that you can improve yourself a bit or there will be...consequences. */
   IF ~~ DO ~SetGlobal("A7Q5SubQuest1", "A77003", 10) IncrementGlobal("Motivation", "LOCALS", -1)
-      EraseJournalEntry(@6506) EraseJournalEntry(@6509) EraseJournalEntry(@6510) EraseJournalEntry(@6511) 
+      EraseJournalEntry(@6506) EraseJournalEntry(@6509) EraseJournalEntry(@6510) EraseJournalEntry(@6511)
       EraseJournalEntry(@6512) EraseJournalEntry(@6513) EraseJournalEntry(@6514) ~ + A7Q5EF01.SubQuest2.0.1
 END
 
@@ -226,46 +226,46 @@ END
 IF ~Global("A7Q5SubQuest2", "A77003", 1)~ A7Q5EF01.SubQuest2.1.4
   SAY @5529 /* Do you have the potions? */
   ++ @5530 /* I'm still looking for the potions you require. */ + A7Q5EF01.SubQuest2.1.5
-  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN18", 5)~ + @5531 /* I can give you twelve potions of cold resistance and six potions of absorbtion. */ 
-    DO ~TakePartyItemNum("POTN22", 12) 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
+  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN18", 5)~ + @5531 /* I can give you twelve potions of cold resistance and six potions of absorbtion. */
+    DO ~TakePartyItemNum("POTN22", 12)
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
       TakePartyItemNum("POTN18", 6)
       DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18")~ + A7Q5EF01.SubQuest2.2.1
-  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 0) NumItemsPartyGT("POTN18", 4)~ + @5532 /* I can give you twelve potions of cold resistance, a potion of insulation and five potions of absorbtion. */ 
-    DO ~TakePartyItemNum("POTN22", 12) 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      TakePartyItemNum("POTN31", 1) DestroyItem("POTN31") 
+  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 0) NumItemsPartyGT("POTN18", 4)~ + @5532 /* I can give you twelve potions of cold resistance, a potion of insulation and five potions of absorbtion. */
+    DO ~TakePartyItemNum("POTN22", 12)
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      TakePartyItemNum("POTN31", 1) DestroyItem("POTN31")
       TakePartyItemNum("POTN18", 5) DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18")~ + A7Q5EF01.SubQuest2.2.1
-  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 1) NumItemsPartyGT("POTN18", 3)~ + @5533 /* I can give you twelve potions of cold resistance, two potions of insulation and four potions of absorbtion. */ 
-    DO ~TakePartyItemNum("POTN22", 12) 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      TakePartyItemNum("POTN31", 2) DestroyItem("POTN31") DestroyItem("POTN31") 
+  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 1) NumItemsPartyGT("POTN18", 3)~ + @5533 /* I can give you twelve potions of cold resistance, two potions of insulation and four potions of absorbtion. */
+    DO ~TakePartyItemNum("POTN22", 12)
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      TakePartyItemNum("POTN31", 2) DestroyItem("POTN31") DestroyItem("POTN31")
       TakePartyItemNum("POTN18", 4) DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18")~ + A7Q5EF01.SubQuest2.2.1
-  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 2) NumItemsPartyGT("POTN18", 2)~ + @5534 /* I can give you twelve potions of cold resistance, three potions of insulation and three potions of absorbtion. */ 
-    DO ~TakePartyItemNum("POTN22", 12) 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      TakePartyItemNum("POTN31", 3) DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") 
+  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 2) NumItemsPartyGT("POTN18", 2)~ + @5534 /* I can give you twelve potions of cold resistance, three potions of insulation and three potions of absorbtion. */
+    DO ~TakePartyItemNum("POTN22", 12)
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      TakePartyItemNum("POTN31", 3) DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31")
       TakePartyItemNum("POTN18", 3) DestroyItem("POTN18") DestroyItem("POTN18") DestroyItem("POTN18")~ + A7Q5EF01.SubQuest2.2.1
-  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 3) NumItemsPartyGT("POTN18", 1)~ + @5535 /* I can give you twelve potions of cold resistance, four potions of insulation and two potions of absorbtion. */ 
-    DO ~TakePartyItemNum("POTN22", 12) 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      TakePartyItemNum("POTN31", 4) DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") 
+  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 3) NumItemsPartyGT("POTN18", 1)~ + @5535 /* I can give you twelve potions of cold resistance, four potions of insulation and two potions of absorbtion. */
+    DO ~TakePartyItemNum("POTN22", 12)
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      TakePartyItemNum("POTN31", 4) DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31")
       TakePartyItemNum("POTN18", 2) DestroyItem("POTN18") DestroyItem("POTN18")~ + A7Q5EF01.SubQuest2.2.1
-  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 4) NumItemsPartyGT("POTN18", 0)~ + @5536 /* I can give you twelve potions of cold resistance, five potions of insulation and a potion of absorbtion. */ 
-    DO ~TakePartyItemNum("POTN22", 12) 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      TakePartyItemNum("POTN31", 5) DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") 
+  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 4) NumItemsPartyGT("POTN18", 0)~ + @5536 /* I can give you twelve potions of cold resistance, five potions of insulation and a potion of absorbtion. */
+    DO ~TakePartyItemNum("POTN22", 12)
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      TakePartyItemNum("POTN31", 5) DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31")
       TakePartyItemNum("POTN18", 1) DestroyItem("POTN18")~ + A7Q5EF01.SubQuest2.2.1
-  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 5)~ + @5537 /* I can give you twelve potions of cold resistance and six potions of insulation. */ 
-    DO ~TakePartyItemNum("POTN22", 12) 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
-      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") 
+  + ~NumItemsPartyGT("POTN22", 11) NumItemsPartyGT("POTN31", 5)~ + @5537 /* I can give you twelve potions of cold resistance and six potions of insulation. */
+    DO ~TakePartyItemNum("POTN22", 12)
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
+      DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22") DestroyItem("POTN22")
       TakePartyItemNum("POTN31", 6)
       DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31") DestroyItem("POTN31")~ + A7Q5EF01.SubQuest2.2.1
 END
@@ -284,16 +284,16 @@ END
 IF ~~ A7Q5EF01.SubQuest2.2.2
   SAY @5540 /* You have performed surprisingly well for a mortal and earned our respect. */
   = @5541 /* Our lord is very interested in the <RACE> who helped us so much. He wants to talk to you in person. */
-  IF ~~ DO ~SetGlobal("A7Q5SubQuest2", "A77003", 10) SetGlobal("A7Quest5", "GLOBAL", 4) 
-      EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517) EraseJournalEntry(@6518) 
+  IF ~~ DO ~SetGlobal("A7Q5SubQuest2", "A77003", 10) SetGlobal("A7Quest5", "GLOBAL", 4)
+      EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517) EraseJournalEntry(@6518)
       ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct4a")~ UNSOLVED_JOURNAL @6519 EXIT
 END
 
 IF ~~ A7Q5EF01.SubQuest2.2.3
   SAY @5542 /* You have met our expectations, mortal. Maybe you are useful to us after all. */
   = @5543 /* There is yet another matter which has to be solved. This one is very important, that's why our lord will talk to you about it in person. */
-  IF ~~ DO ~SetGlobal("A7Q5SubQuest2", "A77003", 10) SetGlobal("A7Quest5", "GLOBAL", 4) 
-      EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517) EraseJournalEntry(@6518) 
+  IF ~~ DO ~SetGlobal("A7Q5SubQuest2", "A77003", 10) SetGlobal("A7Quest5", "GLOBAL", 4)
+      EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517) EraseJournalEntry(@6518)
       ClearAllActions() StartCutSceneMode() StartCutScene("A7Q5ct4a")~ UNSOLVED_JOURNAL @6519 EXIT
 END
 
@@ -301,31 +301,31 @@ END
 // *** After insulting the commander ***
 IF ~~ A7Q5EF01.Challenged.1
   SAY @5544 /* You seek to challenge us? Why not, there is always time for a bit of fun. */
-  IF ~~ DO ~SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1) 
-      EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) EraseJournalEntry(@6505) 
-      EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) EraseJournalEntry(@6509) 
-      EraseJournalEntry(@6510) EraseJournalEntry(@6511) EraseJournalEntry(@6512) EraseJournalEntry(@6513) 
-      EraseJournalEntry(@6514) EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517) 
+  IF ~~ DO ~SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+      EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) EraseJournalEntry(@6505)
+      EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) EraseJournalEntry(@6509)
+      EraseJournalEntry(@6510) EraseJournalEntry(@6511) EraseJournalEntry(@6512) EraseJournalEntry(@6513)
+      EraseJournalEntry(@6514) EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517)
       EraseJournalEntry(@6518) EraseJournalEntry(@6519) Enemy()~ UNSOLVED_JOURNAL @6520 EXIT
 END
 
 IF ~~ A7Q5EF01.Challenged.2
   SAY @5545 /* That's too bad. Then you will experience the frightful power of the efreets firsthand. */
-  IF ~~ DO ~SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1) 
-      EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) EraseJournalEntry(@6505) 
-      EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) EraseJournalEntry(@6509) 
-      EraseJournalEntry(@6510) EraseJournalEntry(@6511) EraseJournalEntry(@6512) EraseJournalEntry(@6513) 
-      EraseJournalEntry(@6514) EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517) 
+  IF ~~ DO ~SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+      EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) EraseJournalEntry(@6505)
+      EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) EraseJournalEntry(@6509)
+      EraseJournalEntry(@6510) EraseJournalEntry(@6511) EraseJournalEntry(@6512) EraseJournalEntry(@6513)
+      EraseJournalEntry(@6514) EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517)
       EraseJournalEntry(@6518) EraseJournalEntry(@6519) Enemy()~ UNSOLVED_JOURNAL @6520 EXIT
 END
 
 IF ~~ A7Q5EF01.Challenged.3
   SAY @5546 /* I gave you the chance to earn our respect, instead you have earned our wrath. */
-  IF ~~ DO ~SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1) 
-      EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) EraseJournalEntry(@6505) 
-      EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) EraseJournalEntry(@6509) 
-      EraseJournalEntry(@6510) EraseJournalEntry(@6511) EraseJournalEntry(@6512) EraseJournalEntry(@6513) 
-      EraseJournalEntry(@6514) EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517) 
+  IF ~~ DO ~SetGlobal("A7Q5EfreetiAttacked", "GLOBAL", 1)
+      EraseJournalEntry(@6502) EraseJournalEntry(@6503) EraseJournalEntry(@6504) EraseJournalEntry(@6505)
+      EraseJournalEntry(@6506) EraseJournalEntry(@6507) EraseJournalEntry(@6508) EraseJournalEntry(@6509)
+      EraseJournalEntry(@6510) EraseJournalEntry(@6511) EraseJournalEntry(@6512) EraseJournalEntry(@6513)
+      EraseJournalEntry(@6514) EraseJournalEntry(@6515) EraseJournalEntry(@6516) EraseJournalEntry(@6517)
       EraseJournalEntry(@6518) EraseJournalEntry(@6519) Enemy()~ UNSOLVED_JOURNAL @6520 EXIT
 END
 
