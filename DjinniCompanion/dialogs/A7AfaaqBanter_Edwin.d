@@ -29,36 +29,45 @@ EXIT
 
 // Banter #2
 CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWINJ Edwin.1
-  @19600 /* Afaaq, please satisfy my curiosity. What was your life before your unfortunate encounters on the prime material plane? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
+  @19600 /* Afaaq, please satisfy my curiosity. What was your life before your unfortunate encounters on the prime material plane? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
   == A7AFAAQ @19601 /* I am certain that even the most insignificant tale from my past would vastly exceed your imagination, wizard. */
-  == EDWINJ @19602 /* Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. I could help you regain the opportunity to taste freedom once more. */
-  == A7AFAAQ @19603 /* You do seem to seriously believe in your own superior abilities? However, even a fool can see through your poorly disguised "sympathy". The powers that you so much crave for would certainly destroy you. I am not fool enough to even think about your offer. */
-  == EDWINJ @19604 /* So you refuse a helping hand that would allow you to leave your pitiable condition behind? You are more a fool than I expected. It is your loss, djinn. (But don't think I will give up so easily.) */
+  == EDWINJ @19602 /* Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. */
+  == A7AFAAQ @19603 /* Our past is an important part of us. It shapes us and prepares for events that have not yet come to pass. Joy and sadness, anticipation and regret are all part of life. I would not have it otherwise. */
+  = @19604 /* I have noticed you are exceptionally reticent when it comes to your own past, wizard. Do you regret past decisions? */
+  == EDWINJ @19605 /* What nonsense! I have accomplished more than the ragtag party I'm pleasing with my presence would experience in a lifetime. My current endeavor will be just as fruitful in the end. (Even if those monkeys in Thay refuse to see it yet.) */
 EXIT
 
 CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 3) Global("A7AfaaqEnslaved", "GLOBAL", 1)~ THEN EDWIN25J Edwin.1
-  @19600 /* Afaaq, please satisfy my curiosity a bit. What was your life before your unfortunate encounters on the prime material plane? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
+  @19600 /* Afaaq, please satisfy my curiosity. What was your life before your unfortunate encounters on the prime material plane? */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
   == A7AFAAQ @19601 /* I am certain that even the most insignificant tale from my past would vastly exceed your imagination, wizard. */
-  == EDWINJ @19602 /* Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. I could help you regain the opportunity to taste freedom once more. */
-  == A7AFAAQ @19603 /* You do seem to seriously believe in your own superior abilities? However, even a fool can see through your poorly disguised "sympathy". The powers that you so much crave for would certainly destroy you. I am not fool enough to even think about your offer. */
-  == EDWINJ @19604 /* So you refuse a helping hand that would allow you to leave your pitiable condition behind? You are more a fool than I expected. It is your loss, djinn. (But don't think I will give up so easily.) */
+  == EDWIN25J @19602 /* Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. */
+  == A7AFAAQ @19603 /* Our past is an important part of us. It shapes us and prepares for events that have not yet come to pass. Joy and sadness, anticipation and regret are all part of life. I would not have it otherwise. */
+  = @19604 /* I have noticed you are exceptionally reticent when it comes to your own past, wizard. Do you regret past decisions? */
+  == EDWIN25J @19605 /* What nonsense! I have accomplished more than the ragtag party I'm pleasing with my presence would experience in a lifetime. My current endeavor will be just as fruitful in the end. (Even if those monkeys in Thay refuse to see it yet.) */
 EXIT
 
 
 // Banter #3
-/*
 CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 5)~ THEN EDWINJ Edwin.3
-  ~(TODO: Edwin becomes impatient and openly threats Afaaq to grant him a wish now or he would experience the frightening powers of the Red Wizards of Thay....)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
-  == A7AFAAQ ~Afaaq calls his bluff and is both mildly amused and slightly annoyed by Edwin's empty threats.~
-  == EDWINJ ~Edwin loses his temper for only a moment before gaining self-control and tells Afaaq that he always gets what he wants.~
+  @19650 /* Afaaq, I would have a word with you. Alone. */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
+  == A7AFAAQ @19651 /* I am sure you would. Although my anticipation of this conversation is limited. */
+  == EDWINJ @19652 /* Silence! This is very important (to me). */
+  = @19653 /* Do you remember our first conversation? I promised to help you breaking the enchantment that keeps you chained to the lamp. */
+  = @19659 /* In addition I can offer you riches beyond your dreams. My family is quite affluent. I know your kind appreciates gems, magical items or opulent meals. All I desire is a small service of you in return. What is your decision? */
+  == A7AFAAQ @19655 /* You think yourself clever, but the desparation in your words is poorly veiled. Even if I did not have the experience of countless lifetimes of you mortals, I would be wary of your intent. Others of my race may be more tolerant in this regard, but I am not. */
+  = @19656 /* My service will never be available for your kind. I do not do this out of malice or selfishness, but rather to protect you and everyone else from the mistakes that will inevitably be the result of your actions. Do not ask me of it again. */
+  == EDWINJ @19657 /* So you refuse a helping hand and the opportunity to gain wealth beyond measure at the same time? You are more a fool than I expected. It is your loss, djinn. (But don't think I will give up so easily.) */
 EXIT
 
 CHAIN IF ~Global("InToB", "GLOBAL", 1) Global("A7BanterEdwin", "GLOBAL", 5)~ THEN EDWIN25J Edwin.3
-  ~(TODO: Edwin becomes impatient and openly threats Afaaq to grant him a wish now or he would experience the frightening powers of the Red Wizards of Thay....)~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
-  == A7AFAAQ ~Afaaq calls his bluff and is both mildly amused and slightly annoyed by Edwin's empty threats.~
-  == EDWIN25J ~Edwin loses his temper for only a moment before gaining self-control and tells Afaaq that he always gets what he wants.~
+  @19650 /* Afaaq, I would have a word with you. Alone. */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)~
+  == A7AFAAQ @19651 /* I am sure you would. Although my anticipation of this conversation is limited. */
+  == EDWIN25J @19652 /* Silence! This is very important (to me). */
+  = @19654 /* I know your kind appreciates gems, magical items or opulent meals. My family is quite affluent. I can provide you with wealth beyond your wildest dreams. All I desire is a small service of you in return. What is your decision? */
+  == A7AFAAQ @19655 /* You think yourself clever, but the desparation in your words is poorly veiled. Even if I did not have the experience of countless lifetimes of you mortals, I would be wary of your intent. Others of my race may be more tolerant in this regard, but I am not. */
+  = @19656 /* My service will never be available for your kind. I do not do this out of malice or selfishness, but rather to protect you and everyone else from the mistakes that will inevitably be the result of your actions. Do not ask me of it again. */
+  == EDWIN25J @19658 /* So you refuse the opportunity to gain wealth beyond measure? You are more a fool than I expected. It is your loss, djinn. */
 EXIT
-*/
 
 
 // Cutscene: Edwin, after a rest, attempts to bring the lamp under his control
@@ -74,17 +83,25 @@ APPEND A7AFAAQ
 
   IF ~~ TalkEdwinTakesControl.2
     SAY @19705 /* Yes, I think it would. But it has to be cast near the place of his imprisonment to be effective. I hope you have a spell like that ready. */
-    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
+    + ~OR(2) CheckStatGT(LastTalkedToBy, 14, INT) CheckStatGT(LastTalkedToBy, 14, WIS)~ + @19708 /* Can't you grant me the wish to free Edwin from his state? */ + TalkEdwinTakesControl.5
+    IF ~!CheckStatGT(LastTalkedToBy, 14, INT) !CheckStatGT(LastTalkedToBy, 14, WIS)~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
   END
 
   IF ~~ TalkEdwinTakesControl.3
     SAY @19706 /* Only a Freedom spell will release the wizard from his prison. But it has to be used near the place of his imprisonment to be effective. I hope you have a way to cast the spell. */
-    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
+    + ~OR(2) CheckStatGT(LastTalkedToBy, 14, INT) CheckStatGT(LastTalkedToBy, 14, WIS)~ + @19708 /* Can't you grant me the wish to free Edwin from his state? */ + TalkEdwinTakesControl.5
+    IF ~!CheckStatGT(LastTalkedToBy, 14, INT) !CheckStatGT(LastTalkedToBy, 14, WIS)~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
   END
 
   IF ~~ TalkEdwinTakesControl.4
     SAY @19707 /* ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast near the place of his imprisonment to be effective, however. */
-    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
+    + ~OR(2) CheckStatGT(LastTalkedToBy, 14, INT) CheckStatGT(LastTalkedToBy, 14, WIS)~ + @19708 /* Can't you grant me the wish to free Edwin from his state? */ + TalkEdwinTakesControl.5
+    IF ~!CheckStatGT(LastTalkedToBy, 14, INT) !CheckStatGT(LastTalkedToBy, 14, WIS)~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4)~ UNSOLVED_JOURNAL @70000 /* Free Edwin from his imprisonment */ EXIT
+  END
+
+  IF ~~ TalkEdwinTakesControl.5
+    SAY @19709 /* Yes, I can grant you a wish to release someone from imprisonment. However, I can do it only a single time. Please think carefully before you make use of my offer. */
+    IF ~~ DO ~SetGlobal("A7EdwinTakesControl", "GLOBAL", 4) SetGlobal("A7WishFreeEdwin", "MYAREA", 1)~ UNSOLVED_JOURNAL @70001 /* Free Edwin from his imprisonment */ EXIT
   END
 END
 
@@ -93,7 +110,7 @@ APPEND EDWINP
   // After Edwin has been rescued
   IF WEIGHT #-1 ~Global("A7EdwinTakesControl", "GLOBAL", 5)~ EdwinHumiliated.1
     SAY @19750 /* It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.) */
-    IF ~~ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10) EraseJournalEntry(@70000)~ SOLVED_JOURNAL @70001 /* Free Edwin from his imprisonment */ + EdwinHumiliated.2
+    IF ~~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 8) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10) EraseJournalEntry(@70000)~ SOLVED_JOURNAL @70002 /* Free Edwin from his imprisonment */ + EdwinHumiliated.2
   END
 
   IF ~~ EdwinHumiliated.2
@@ -114,7 +131,7 @@ APPEND EDWIN25P
   // After Edwin has been rescued
   IF WEIGHT #-1 ~Global("A7EdwinTakesControl", "GLOBAL", 5)~ EdwinHumiliated.1
     SAY @19750 /* It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.) */
-    IF ~~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 8) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10) EraseJournalEntry(@70000)~ SOLVED_JOURNAL @70001 /* Free Edwin from his imprisonment */ + EdwinHumiliated.2
+    IF ~~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 8) SetGlobal("A7EdwinTakesControl", "GLOBAL", 10) EraseJournalEntry(@70000)~ SOLVED_JOURNAL @70002 /* Free Edwin from his imprisonment */ + EdwinHumiliated.2
   END
 
   IF ~~ EdwinHumiliated.2
@@ -142,7 +159,7 @@ END
   ++ ~Cut it out, Edwin. Next time I won't come to your rescue.~ EXTERN EDWINJ Edwin.5.1
   ++ ~You may try if you wish. But don't expect that I show any mercy when I catch you.~ EXTERN EDWINJ Edwin.5.2
 
-CHAIN IF ~Name("Edwin", LastTalkedToBy) Global("InToB", "GLOBAL", 1) Global("BanterActive", "LOCALS", 1) Global("A7BanterEdwin", "GLOBAL", 11)~ THEN A7AFAAQ Edwin.5
+CHAIN IF ~Name("Edwin", LastTalkedToBy) Global("InToB", "GLOBAL", 1) Global("BanterActive", "LOCALS", 1) Global("A7BanterEdwin", "GLOBAL", 9)~ THEN A7AFAAQ Edwin.5
   ~(TODO: Afaaq chastises him for his thoughtless actions which has endangered everyone in the party...)~ DO ~SetGlobal("A7BanterEdwin", "GLOBAL", 10)~
   == EDWIN25J ~Edwin tells him that next time he'll be successful.~
 END

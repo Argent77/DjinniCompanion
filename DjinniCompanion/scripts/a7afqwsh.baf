@@ -1138,6 +1138,16 @@ THEN RESPONSE #100
   DestroySelf()
 END
 
+IF
+  Global("WishO_Edwin", "LOCALS", 1)
+  Global("A7AfaaqBG2", "GLOBAL", 1)
+THEN RESPONSE #100
+  SetGlobal("WishO_Edwin", "LOCALS", 0)
+  SetGlobal("A7WishFreeEdwin", "MYAREA", 2)
+  ReallyForceSpell(Myself, WIZARD_FREEDOM)
+  DestroySelf()
+END
+
 // Cross-mod content with Golem Construction
 IF
   Global("WishO_GolemMithralLow", "LOCALS", 1)

@@ -2279,6 +2279,7 @@ APPEND %afq_dialog%
     ++ @10507 /* ~Actually, I'd rather have a repeatable wish.~ */ + TalkGeneric.LimitedWish.12
     ++ @10508 /* ~I don't want a wish of any kind right now.~ */ + TalkGeneric.LimitedWish.22
     + ~Global("A7AfaaqLight", "GLOBAL", 0) See("trskin01") Global("TrisLeave", "GLOBAL", 0) Global("A7WishRestoreRaissa","GLOBAL",0)~ + @11266 /* I wish Raissa's curse of the skin dancer to be removed. */ + TalkGeneric.LimitedWish.24
+    + ~Global("A7AfaaqLight", "GLOBAL", 0) Global("A7EdwinTakesControl", "GLOBAL", 4) Global("A7WishFreeEdwin", "MYAREA", 1)~ + @11270 /* I wish Edwin to be released from his imprisonment. */ + TalkGeneric.LimitedWish.25
     + ~CheckStatGT(LastTalkedToBy, 9, WIS) Global("wishRich","GLOBAL",0)~ + @10509 /* ~I wish to be rich.~ */ + TalkGeneric.LimitedWish.3
     + ~CheckStatGT(LastTalkedToBy, 10, WIS) Global("wishArmor","GLOBAL",0)~ + @10510 /* ~I wish for a powerful magical item.~ */ + TalkGeneric.LimitedWish.6
     + ~CheckStatGT(LastTalkedToBy, 3, WIS) Global("wishXP","GLOBAL",0)~ + @10511 /* ~I wish to be more experienced.~ */ + TalkGeneric.LimitedWish.7
@@ -2409,6 +2410,11 @@ APPEND %afq_dialog%
   IF ~~ TalkGeneric.LimitedWish.24
     SAY @11267 /* Granted. Raissa's curse will been removed. */
     IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Raissa", "LOCALS", 1)) ClearActions(Myself)~ EXIT
+  END
+
+  IF ~~ TalkGeneric.LimitedWish.25
+    SAY @11271 /* Granted. Edwin will be released from his imprisonment. */
+    IF ~~ DO ~SetGlobalTimer("A7AfaaqWish", "GLOBAL", EIGHT_HOURS) CreateCreature("A7AFQWSH", [-1.-1], 0) ActionOverride("A7AFQWSH", SetGlobal("WishO_Edwin", "LOCALS", 1)) ClearActions(Myself)~ EXIT
   END
 
   // Cross-mod content with Golem Construction

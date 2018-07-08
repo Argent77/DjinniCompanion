@@ -32,9 +32,10 @@ IF
   !ActuallyInCombat() !Detect([ENEMY])
   !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   Global("A7AfaaqEnslaved", "GLOBAL", 0) Global("A7AfaaqUpgraded", "GLOBAL", 0) RealGlobalTimerExpired("A7EdwinBanterNPCTimer", "GLOBAL")
-  OR(2)
+  OR(3)
     Global("A7BanterEdwin", "GLOBAL", 0)
     Global("A7BanterEdwin", "GLOBAL", 2)
+    Global("A7BanterEdwin", "GLOBAL", 4)
 THEN RESPONSE #100
   IncrementGlobal("A7BanterEdwin", "GLOBAL", 1)
   RealSetGlobalTimer("A7EdwinBanterNPCTimer", "GLOBAL", 3600)

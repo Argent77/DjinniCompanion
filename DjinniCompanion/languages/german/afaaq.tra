@@ -881,6 +881,8 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @11267 = ~So soll es sein. Raissas Fluch wird von ihr genommen.~
 @11268 = ~Nachdem Ihr meine versiegelten Kräfte wiederherstellen konntet, habe ich versucht, dieses Einsprengsel etwas wohnlicher zu gestalten, indem ich sie der materiellen Ebene etwas mehr angepasst habe.~
 @11269 = ~Ich weiß Eure selbstlose Tat zu schätzen, <PRO_LADYLORD>. Ihr hättet ebenso gut seine Zwangslage zu Eurem Vorteil ausnutzen können.~
+@11270 = ~Ich wünsche mir, dass Edwin aus seiner Einkerkerung befreit wird.~
+@11271 = ~So soll es sein. Edwin wird aus seiner Einkerkerung befreit.~
 
 
 // *** Banters with <PC> (index 12000...12999) ***
@@ -1282,7 +1284,7 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @19501 = ~Nun wirst Du MEIN Spielzeug sein, nachdem der Zauber wirksam wird, Afaaq.~
 @19502 = ~Nein... das kann nicht sein... Helft mir, <CHARNAME>!~
 @19550 = ~Für einen stolzen und erhabenen Dschinn wie Euch muss dieses Gefängnis unerträglich sein, wenn man bedenkt, dass Ihr auch die Schmach ertragen müsst, allen noch so törichten Launen Eures Herren zu folgen. Wünscht Ihr Euch nicht, aus diesem Kerker auszubrechen und die Freiheit zu genießen?~
-@19551 = ~Eure Besognis um mein Wohlergehen ist rührend, Magier.~
+@19551 = ~Eure Besorgnis um mein Wohlergehen ist rührend, Magier.~
 @19552 = ~Meine gegenwärtige Zwangslage ist aber nur vorübergehend. Ich kann es mir erlauben, geduldig zu sein, da Zeit für mein Volk nur von untergeordneter Bedeutung ist.~
 @19553 = ~Aber selbst Euer Geduldsfaden wird irgendwann reißen. Die Roten Magier besitzen ein beachtliche Erfahrung über das Verknechten und auch wie man es bricht. Ich könnte Euch eine große Hilfe in dieser Angelegenheit sein.~
 @19554 = ~Ich habe keine Zweifel an Eurem Willen, mir zu helfen. Allerdings sind die Roten Magier nicht gerade für ihren Großmut bekannt.~
@@ -1292,9 +1294,20 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @19558 = ~(Wie kannst Du es wagen?!) Ähm, das kränkt mich aber wirklich, Afaaq. Denkt bitte noch einmal darüber nach. Ich bin mir sicher, dass Ihr die Vorteile meines Angebots schätzen würdet. (So wie ich sie für mich sehe.)~
 @19600 = ~Afaaq, könntet Ihr bitte meine Neugier befriedigen? Wie war Euer Leben vor Euren bedauernswerten Begegnungen auf der Materiellen Ebene?~
 @19601 = ~Ich bin sicher, dass selbst die unbedeutendsten Geschichten meiner Vergangenheit Eure Vorstellung bei weitem übersteigen, Magier.~
-@19602 = ~Oh, höre ich da eine Andeutung von Traurigkeit aus Eurer Stimme heraus? Oder ist es Bedauern? Eure Vergangenheit muss in der Tat glorreich gewesen sein. Ich könnte Euch dabei behilflich sein, Eure Freiheit wiederzuerlangen.~
-@19603 = ~Ihr scheint tatsächlich an Eure überragenden Fähigkeiten zu glauben? Dabei überseht ihr, dass selbst ein Narr Euer dürftig verschleiertes "Mitgefühl" durchschauen kann. Die Kräfte, nach denen Ihr giert, werden Euch gewiss vernichten. Ich bin nicht töricht genug, um Euer Angebot ernsthaft in Erwägung zu ziehen.~
-@19604 = ~Ihr schlagt also die helfende Hand ab, die es ermöglichen würde, Euren bemitleidenswerte Zustand hinter Euch zu lassen? Ihr seid ein größerer Narr als ich dachte. Das ist Euer Pech, Dschinn. (Denke ja nicht, ich gebe so schnell auf.)~
+@19602 = ~Oh, höre ich da eine Andeutung von Traurigkeit aus Eurer Stimme heraus? Oder ist es Bedauern? Eure Vergangenheit muss in der Tat glorreich gewesen sein.~
+@19603 = ~Unsere Vergangenheit ist ein wichtiger Teil unserer selbst. Sie formt uns und bereitet uns auch auf zukünftige Ereignisse in unserem Leben vor. Sowohl Freude und Trauer als auch Zuversicht und Bedauern sind Teil des Lebens.~
+@19604 = ~Mir ist aufgefallen, dass Ihr erstaunlich verschwiegen seid, wenn Eure Vergangenheit erwähnt wird. Gibt es da Entscheidungen, die Ihr bedauert?~
+@19605 = ~Unsinn! Ich habe viel mehr erreicht, als irgendjemand sonst in dieser zusammengewürfelten Truppe. Mein derzeitiges Unterfangen wird garantiert genauso erfolgreich enden, wie alle meine vorherigen. (Selbst wenn es diese Affen aus Tay nicht begreifen wollen.)~
+@19650 = ~Afaaq, ich möchte Euch gern unter vier Augen sprechen.~
+@19651 = ~Das kann ich mir denken. Obwohl meine Vorfreude darauf recht begrenzt ist.~
+@19652 = ~Ruhe! Das ist sehr wichtig (für mich).~
+@19653 = ~Erinnert Ihr Euch an unser erstes Gespräch? Ich versprach Euch, die Verzauberung Eurer Lampe zu brechen.~
+@19654 = ~Ich weiß, dass Eure Art Geschenken in Form von Edelsteinen, magischen Artefakten und opulenten Festmählern nicht abgeneigt ist. Mein Haus ist recht angesehen in Tay. Ich kann Euch all das und noch mehr bieten. Dafür bitte ich lediglich um eine kleine Gegenleistung eurerseits. Was sagt Ihr dazu?~
+@19655 = ~Ihr haltet Euch für so clever, aber die Verzweiflung in Euren Worten könnt Ihr nur schlecht verbergen. Selbst wenn ich nicht bereits über die Erfahrung aus unzähligen Zeitaltern besäße, würde mein Argwohn geweckt werden. Andere meiner Art sind vielleicht toleranter in dieser Hinsicht, aber ich bin es nicht.~
+@19656 = ~Ihr und euresgleichen könntet nie meine Dienste in Anspruch nehmen. Dieser Entscheidung liegt keine Bosheit oder Selbstsucht zugrunde. Aber Wünsche aus niederen Beweggründen werden zwangsläufig in einer Katastrophe enden. Diese Bürde werde ich nicht akzeptieren. Fragt mich nicht noch einmal danach.~
+@19657 = ~Ihr schlagt also die helfende Hand ab, die es ermöglichen würde, Euren bemitleidenswerte Zustand hinter Euch zu lassen und seid außerdem nicht an Reichtümern jenseits Eurer Vorstellungskraft interessiert? Ihr seid ein größerer Narr als ich dachte. Das ist Euer Pech, Dschinn. (Aber denkt ja nicht, ich gebe so schnell auf.)~
+@19658 = ~Ihr seid also nicht an Reichtümern jenseits Eurer Vorstellungskraft interessiert? Ihr seid ein größerer Narr als ich dachte. Das ist Euer Pech, Dschinn.~
+@19659 = ~Zusätzlich würde ich auch meinen Einfluss geltend machen und Euch Reichtümer ohne Ende anbieten. Mein Haus ist recht angesehen in Tay. Ich weiß, dass Eure Art Geschenken in Form von Edelsteinen, magischen Artefakten und opulenten Festmählern nicht abgeneigt ist. Dafür bitte ich lediglich um eine kleine Gegenleistung eurerseits. Was sagt Ihr dazu?~
 @19700 = ~Ich kann nicht glauben, wir töricht sich dieser Magier benommen hat. Er hätte besser wissen müssen, dass Gegenstände der Macht vor halbherzigen Versuchen, ihre Verzauberung zu brechen, geschützt sind.~
 @19701 = ~Er hätte mit seiner gedankenlosen Tat genauso Euch und jeden anderen in Reichweite mit einkerkern können. Ich hoffe, Ihr habt eine Möglichkeit, ihn aus seiner misslichen Lage zu befreien. Aus eigener Kraft wird er es wohl nicht mehr können.~
 @19702 = ~Ich denke, er hat jetzt seine Lektion gelernt. Würde ihn ein Freiheitszauber aus seiner Einkerkerung befreien?~
@@ -1303,6 +1316,8 @@ in ihr Netz aus Lug and Trug, und wurde auf Dauer gebunden."~
 @19705 = ~Ja, das würde es. Aber der Zauber muss in seiner Nähe gewirkt werden, damit er funktioniert. Ich hoffe, Ihr habt solch einen Zauber zur Hand.~
 @19706 = ~Nur ein Freiheitszauber kann den Magier aus seinem Kerker befreien. Er muss allerdings in seiner Nähe gewirkt werden, damit er funktioniert. Ich hoffe, Ihr habt eine Möglichkeit, diesen Zauber zu wirken.~
 @19707 = ~Ich kann Euch nicht verübeln, den Magier seinem Schicksal zu überlassen. Aber falls Ihr es Euch anders überlegt, könnte ihn ein Freiheitszauber aus seiner Einkerkerung befreien. Er müsste allerdings in seiner Nähe gewirkt werden, wenn er funktionieren soll.~
+@19708 = ~Kannst Du mir nicht den Wunsch gewähren, Edwin aus seiner misslichen Lage zu befreien?~
+@19709 = ~Ja, ich kann Euch einen Wunsch gewähren, der jemanden aus einer Einkerkerung befreit. Aber nur ein einziges Mal. Daher denkt gründlich darüber nach, bevor Ihr mein Angebot wahrnehmt.~
 @19750 = ~Es wird aber auch Zeit, dass Ihr mich aus meiner unbequemen Lage befreit. Ich... ich dachte schon, dass ich dafür einen meiner eigenen Zauber verschwenden müsste. (Wie schlau von mir.)~
 @19751 = ~Könnt Ihr noch immer meinen überlegenen Verstand gebrauchen, <CHARNAME>?~
 @19752 = ~Natürlich. Ich bin sicher, dass Ihr so eine Dummheit nicht noch einmal begehen werdet.~
@@ -2034,5 +2049,8 @@ So oft es seine Zeit erlaubte, nahm er allerdings die Gelegenheit wahr und berei
 
 Edwins Versuch, Afaaqs Lampe von mir zu stehlen, ging nach hinten los und hatte zur Folge, dass er selbst magisch eingekerkert wurde. Afaaq zufolge kann er mit einem Freiheitszauber, angewendet in der Nähe seiner Einkerkerung, aus seiner misslichen Lage befreit werden.~
 @70001 = ~Befreie Edwin aus seiner Einkerkerung
+
+Edwins Versuch, Afaaqs Lampe von mir zu stehlen, ging nach hinten los und hatte zur Folge, dass er selbst magisch eingekerkert wurde. Afaaq zufolge kann er mit einem Freiheitszauber, angewendet in der Nähe seiner Einkerkerung, aus seiner misslichen Lage befreit werden. Er bot mir außerdem an, seine Fähigkeit des Begrenzten Wunsches in Anspruch zu nehmen, um dieses Problem zu lösen.~
+@70002 = ~Befreie Edwin aus seiner Einkerkerung
 
 Ich konnte Edwin aus seinem magischen Gefängnis befreien. Allerdings hielt sich seine Dankbarkeit in Grenzen. Hoffentlich hat er wenigstens aus seinen Fehlern gelernt und versucht so eine Dummheit nicht noch einmal.~

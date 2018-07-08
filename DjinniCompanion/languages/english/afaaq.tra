@@ -883,6 +883,8 @@ though he fought back like a crack of loud thunder."~
 @11267 = ~Granted. Raissa's curse will been removed.~
 @11268 = ~After you restored my sealed powers, I have tried to make this pocket plane more homely by creating this small platform of solid matter.~
 @11269 = ~I appreciate your selfless act to release one of my kin from imprisonment, my <PRO_LADYLORD>. You could have just as well taken advantage of his current plight instead.~
+@11270 = ~I wish Edwin to be released from his imprisonment.~
+@11271 = ~Granted. Edwin will be released from his imprisonment.~
 
 
 // *** Banters with <PC> (index 12000...12999) ***
@@ -1294,9 +1296,20 @@ though he fought back like a crack of loud thunder."~
 @19558 = ~(How dare you!) Ahem, you wound me deeply, Afaaq. Think about it some more. I'm sure you will see the advantages of my offer. (As do I for myself.)~
 @19600 = ~Afaaq, please satisfy my curiosity. What was your life before your unfortunate encounters on the prime material plane?~
 @19601 = ~I am certain that even the most insignificant tale from my past would vastly exceed your imagination, wizard.~
-@19602 = ~Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. I could help you regain the opportunity to taste freedom once more.~
-@19603 = ~You do seem to believe in your own superiority? However, even a fool can see through your poorly disguised "sympathy". The powers that you so much crave for would certainly destroy you. I am not fool enough to even think about your offer.~
-@19604 = ~So you refuse a helping hand that would allow you to leave your pitiable condition behind? You are more a fool than I expected. It is your loss, djinn. (But don't think I will give up so easily.)~
+@19602 = ~Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed.~
+@19603 = ~Our past is an important part of us. It shapes us and prepares for events that have not yet come to pass. Joy and sadness, anticipation and regret are all part of life. I would not have it otherwise.~
+@19604 = ~I have noticed you are exceptionally reticent when it comes to your own past, wizard. Do you regret past decisions?~
+@19605 = ~What nonsense! I have accomplished more than the ragtag party I'm pleasing with my presence would experience in a lifetime. My current endeavor will be just as fruitful in the end. (Even if those monkeys in Thay refuse to see it yet.)~
+@19650 = ~Afaaq, I would have a word with you. Alone.~
+@19651 = ~I am sure you would. Although my anticipation of this conversation is limited.~
+@19652 = ~Silence! This is very important (to me).~
+@19653 = ~Do you remember our first conversation? I promised to help you breaking the enchantment that keeps you chained to the lamp.~
+@19654 = ~I know your kind appreciates gems, magical items or opulent meals. My family is quite affluent. I can provide you with wealth beyond your wildest dreams. All I desire is a small service of you in return. What is your decision?~
+@19655 = ~You think yourself clever, but the desperation in your words is poorly veiled. Even if I did not have the experience of countless lifetimes of you mortals, I would be wary of your intent. Others of my race may be more tolerant in this regard, but I am not.~
+@19656 = ~My service will never be available for your kind. I do not do this out of malice or selfishness, but rather to protect you and everyone else from the mistakes that will inevitably be the result of your actions. Do not ask me of it again.~
+@19657 = ~So you refuse a helping hand and the opportunity to gain wealth beyond measure at the same time? You are more a fool than I expected. It is your loss, djinn. (But don't think I will give up so easily.)~
+@19658 = ~So you refuse the opportunity to gain wealth beyond measure? You are more a fool than I expected. It is your loss, djinn.~
+@19659 = ~In addition I can offer you riches beyond your dreams. My family is quite affluent. I know your kind appreciates gems, magical items or opulent meals. All I desire is a small service of you in return. What is your decision?~
 @19700 = ~I can not believe the foolishness of that wizard. He should have known that artifacts like these are protected against half-hearted attempts to break their enchantments.~
 @19701 = ~He could have easily imprisoned everyone including you, my <PRO_LADYLORD>, by his foolish actions. I hope you have a way to free him from his predicament, because he will not have the power to do it by himself anymore.~
 @19702 = ~I guess he has learned his lesson now. Would a Freedom spell release him from his imprisonment?~
@@ -1305,6 +1318,8 @@ though he fought back like a crack of loud thunder."~
 @19705 = ~Yes, I think it would. But it has to be cast near the place of his imprisonment to be effective. I hope you have a spell like that ready.~
 @19706 = ~Only a Freedom spell will release the wizard from his prison. But it has to be used near the place of his imprisonment to be effective. I hope you have a way to cast this spell.~
 @19707 = ~I can not blame you if you want to leave him where he is. But if you change your mind, a Freedom spell will probably release him from his prison. It has to be cast near the place of his imprisonment to be effective, however.~
+@19708 = ~Can't you grant me the wish to free Edwin from his state?~
+@19709 = ~Yes, I can grant you a wish to release someone from imprisonment. However, I can do it only a single time. Please think carefully before you make use of my offer.~
 @19750 = ~It is about time that you came to my rescue. I...I thought I had to waste one of my own spells to free myself. (How very clever of me.)~
 @19751 = ~Do you still need my superior intellect, <CHARNAME>?~
 @19752 = ~Of course. I'm sure you won't try anything stupid like that again.~
@@ -2037,5 +2052,8 @@ However, as much as his time allows it, he takes the chance and travels across F
 
 Edwin's attempt to steal Afaaq's lamp from me backfired and resulted only in his imprisonment. According to Afaaq, only a Freedom spell, cast in the vicinity of Edwin's imprisonment, may release him from his predicament.~
 @70001 = ~Free Edwin from his imprisonment
+
+Edwin's attempt to steal Afaaq's lamp from me backfired and resulted only in his imprisonment. According to Afaaq, only a Freedom spell, cast in the vicinity of Edwin's imprisonment, may release him from his predicament. He also offered me to use his Limited Wish ability to accomplish this task.~
+@70002 = ~Free Edwin from his imprisonment
 
 I was able to release Edwin from his magical prison. He was as grateful as I expected from him. Hopefully he learned from his mistakes and will refrain from doing such careless actions in the future.~
