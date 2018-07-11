@@ -849,12 +849,14 @@
 // journal entries
 @6500 = ~Playing with fire
 
-I have encountered a group of djinns, led by the sharif Karim, who were arguing with the local smugglers of Amkethran. They told me that their home is threatened by an unknown force and found the source of the attacks somewhere below this settlement.
-First I have to find a way to safely enter the tunnel system below the smuggler base, if I want to help them in their task.~
+I have encountered a group of djinns, led by the sharif Karim, who were arguing with the local smugglers of Amkethran.
+
+They told me that their home is threatened by an unknown force and found the source of the attacks somewhere below this settlement. First I have to find a way to safely enter the tunnel system below the smuggler base, if I want to help them in their task.~
 @6501 = ~Playing with fire
 
-I have met Karim and his djinns again who have established a camp in a small subterranean cave just below the smuggler base. He told me that the threat can be found in a deeper and much bigger cave which can be accessed from their base.
-He asked me to gather as much information as I can about the threat and report back to him regularly. He also gave me a whistle which I can use to call them for help in emergency situations.~
+I have met Karim and his djinns again who have established a camp in a small subterranean cave just below the smuggler base.
+
+He told me that the threat can be found in a deeper and much bigger cave which can be accessed from their base. He asked me to gather as much information as I can about the threat and report back to him regularly. He also gave me a whistle which I can use to call them for help in emergency situations.~
 @6502 = ~Playing with fire
 
 I have discovered a secret base of efreet in a huge magma cavern. They fortunately didn't attack me on sight and their guards escorted me to their commander for further questionings.~
@@ -870,6 +872,7 @@ I have told Karim about the efreet and their commander. He suggested that I shou
 @6506 = ~Playing with fire
 
 The efreeti commander pointed out that I should work for them, if I wanted to stay in their domain. He already had a task for me which I accepted.
+
 I have to convince the local group of salamanders to join their campaign. He gave me a contract which I have to return signed by their "boss".~
 @6507 = ~Playing with fire
 
@@ -894,7 +897,9 @@ The efreeti summoner wasn't thrilled about the demands of the salamanders. Howev
 The efreeti summoner has summoned a fire elemental. My task is now to escort it back to the salamanders.~
 @6514 = ~Playing with fire
 
-I went too far by continuously slaying the fire elementals meant for the salamanders. The efreeti summoner refused to provide me with another creature. I guess I have to deliver the bad news to the efreeti commander.~
+I went too far by continuously slaying the fire elementals meant for the salamanders.
+
+The efreeti summoner refused to provide me with another creature. I guess I have to deliver the bad news to the efreeti commander.~
 @6515 = ~Playing with fire
 
 The efreeti commander was impressed by my persistence and wit in dealing with the salamanders.~
@@ -916,60 +921,79 @@ I have insulted the efreet somehow and they turned hostile.~
 @6521 = ~Playing with fire
 
 I have finally met the leader of the efreet army. His name is Lord Malik and his true goal is an ancient artifact, called the "Crown of Qadeej", which is jealously guarded by the djinns.
+
 He already knew about my connection to the djinns and offered me an alternative to war. If I am able to convince the djinns to surrender their precious artifact to him freely, he promised to return home without further attacking the djinn fortress.~
 @6522 = ~Playing with fire
 
 I have finally met the leader of the efreet army. His name is Lord Malik and his true goal is an ancient artifact, called the "Crown of Qadeej", which is jealously guarded by the djinns.
+
 He already knew about my connection to the djinns and offered me an alternative to war. If I am able to convince the djinns to surrender their precious artifact to him freely, he promised to return home without further attacking the djinn fortress.
 He also knew about Afaaq and promised that he will tolerate his presence within his domain as long as I can keep the djinni under control.~
 @6523 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of question to surrender the "Crown of Qadeej" to the efreet.
+
 I suggested fighting the efreet, as this will most surely end the threat to the djinns. Karim supports my decision, but tells me that it will be difficult because the efreet are already well prepared for war.~
 @6524 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+
 I volunteered to find a solution on my own.~
 @6525 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+
 Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. As unlikely as it sounds, Bhaal's divine essence within Imoen's and my soul may be a valid alternative for him.~
 @6526 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+
 Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. The powers of mighty demon lords, sealed within their hearts, could be a valid alternative for him.~
 @6527 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+
 Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. He told me of two valid alternatives I could offer to him: the heart of a mighty demon lord and, as unlikely as it sounds, Bhaal's divine essence within Imoen's or my soul.~
 @6528 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+
 Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. The mysterious powers of mighty undead creatures like demiliches might be a valid alternative for him.~
 @6529 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+
 Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. He told me of two valid alternatives I could offer to him: the remains of a powerful undead creature like a demilich and, as unlikely as it sounds, Bhaal's divine essence within Imoen's or my soul.~
 @6530 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+
 Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. He told me of two valid alternatives I could offer to him: the remains of a powerful undead creature like a demilich and the heart of a mighty demon lord.~
 @6531 = ~Playing with fire
 
 I have returned with the news about Lord Malik's offer to Karim. He was surprised and told me that it is out of the question to surrender the "Crown of Qadeej" to the efreet.
+
 Instead, Karim suggested that Lord Malik could be persuaded to accept an equally powerful artifact. He told me of three valid alternatives I could offer to him: the remains of a powerful undead creature like a demilich, the heart of a mighty demon lord and, as unlikely as it sounds, Bhaal's divine essence within Imoen's or my soul.~
 @6532 = ~Playing with fire
 
-I was able to persuade Lord Malik to settle on a powerful undead artifact instead of the "Crown of Qadeej". However, he also demands knowledge of how to tap its powers. Maybe Karim can help me again.~
+I was able to persuade Lord Malik to settle on a powerful undead artifact instead of the "Crown of Qadeej".
+
+However, he also demands knowledge of how to tap its powers. Maybe Karim can help me again.~
 @6533 = ~Playing with fire
 
-I was able to persuade Lord Malik to settle on the heart of a powerful demon lord instead of the "Crown of Qadeej". All I need to do now is to find a ruler of the Abyss somewhere on Faerûn and defeat it.~
+I was able to persuade Lord Malik to settle on the heart of a powerful demon lord instead of the "Crown of Qadeej".
+
+All I need to do now is to find a ruler of the Abyss somewhere on Faerûn and defeat it.~
 @6534 = ~Playing with fire
 
-Karim told me that his sources tell of a fortress which contains an unknown evil. Its name is Watcher's Keep and it is situated on the southern border of Amn. I might even find some tome or script about undead rituals there, as the keep was also home to many sects and cults of the darker arts.~
+Karim told me that his sources tell of a fortress which contains an unknown evil. Its name is Watcher's Keep and it is situated on the southern border of Amn.
+
+I might even find some tome or script about undead rituals there, as the keep was also home to many sects and cults of the darker arts.~
 @6535 = ~Playing with fire
 
-Karim told me that the remains of the demilich I destroyed in Watcher's Keep will be the artifact of power which Lord Malik is looking for. I should backtrace my path and retrieve it as quickly as possible.~
+Karim told me that the remains of the demilich I destroyed in Watcher's Keep will be the artifact of power which Lord Malik is looking for.
+
+I should backtrace my path and retrieve it as quickly as possible.~
 @6536 = ~Playing with fire
 
 I have told Karim that I want to deal with Lord Malik my way.~
@@ -987,16 +1011,24 @@ Karim told me that the heart of Demogorgon, whom I destroyed in the depths of Wa
 After telling Karim of Lord Malik's response, he wished me good luck in my next steps.~
 @6541 = ~Playing with fire
 
-I have brought Lord Malik both an undead artifact and a tome of knowledge. He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
+I have brought Lord Malik both an undead artifact and a tome of knowledge.
+
+He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
 @6542 = ~Playing with fire
 
-I have brought Lord Malik the heart of a demon lord. He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
+I have brought Lord Malik the heart of a demon lord.
+
+He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
 @6543 = ~Playing with fire
 
-I have sacrificed a substantial portion of my divine essence to Lord Malik. He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
+I have sacrificed a substantial portion of my divine essence to Lord Malik.
+
+He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
 @6544 = ~Playing with fire
 
-I was able to convince Imoen to sacrifice a substantial portion of her divine essence to Lord Malik. He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
+I was able to convince Imoen to sacrifice a substantial portion of her divine essence to Lord Malik.
+
+He was pleased and promised that he wasn't interested in the djinn fortress anymore. I should return to Karim and tell him the good news.~
 @6545 = ~Playing with fire
 
 After telling Lord Malik that I didn't want to work for him anymore, he and his army turned hostile.~
@@ -1012,10 +1044,14 @@ I have found a tome of undead rituals in the ancient library of Watcher's Keep.~
 
 @6590 = ~Playing with fire
 
-I have betrayed Karim and his djinns and lured them into a trap. Lord Malik was pleased with my cooperation and rewarded me with a powerful magical wand before he and his army teleported away.~
+I have betrayed Karim and his djinns and lured them into a trap.
+
+Lord Malik was pleased with my cooperation and rewarded me with a powerful magical wand before he and his army teleported away.~
 @6591 = ~Playing with fire
 
-The efreet have been defeated. Unfortunately, all the djinns who came to my help died in the battle. However, with the efreet threat gone, their fortress should be safe once more.~
+The efreet have been defeated. Unfortunately, all the djinns who came to my help died in the battle.
+
+However, with the efreet threat gone, their fortress should be safe once more.~
 @6592 = ~Playing with fire
 
 My actions caused the djinns to turn hostile. I am sure their enemies in the lower cavern will hear about it quickly and attack the djinn fortress soon.~
