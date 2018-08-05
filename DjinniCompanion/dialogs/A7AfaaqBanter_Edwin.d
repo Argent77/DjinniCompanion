@@ -50,7 +50,7 @@ EXIT
 // Banter #3
 CHAIN IF ~Global("InToB", "GLOBAL", 0) Global("A7BanterEdwin", "GLOBAL", 5)~ THEN EDWINJ Edwin.3
   @19650 /* Afaaq, I would have a word with you. Alone. */ DO ~IncrementGlobal("A7BanterEdwin", "GLOBAL", 1) SetGlobal("A7EdwinTakesControl", "GLOBAL", 1)~
-  == A7AFAAQ @19651 /* I am sure you would. Although my anticipation of this conversation is limited. */
+  == A7AFAAQ @19651 /* I am sure you would. Although I must confess that my anticipation of this conversation is limited. */
   == EDWINJ @19652 /* Silence! This is very important (to me). */
   = @19653 /* Do you remember our first conversation? I promised to help you breaking the enchantment that keeps you chained to the lamp. */
   = @19659 /* In addition I can offer you riches beyond your dreams. My family is quite affluent. I know your kind appreciates gems, magical items or opulent meals. All I desire is a small service of you in return. What is your decision? */
