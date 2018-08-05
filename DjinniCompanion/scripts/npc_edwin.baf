@@ -44,7 +44,6 @@ END
 
 // Triggering cutscene where Edwin attempts to bring Afaaq under his control (if Afaaq is inside his lamp)
 IF
-  !AreaType(CITY)
   !AreaCheck("A77004") !AreaCheck("A77001")
   !AreaCheck("AR4000") !AreaCheck("AR6200")
   PartyRested()
@@ -69,7 +68,6 @@ END
 
 // Triggering cutscene where Edwin attempts to bring Afaaq under his control (if Afaaq is outside of his lamp)
 IF
-  !AreaType(CITY)
   !AreaCheck("A77004") !AreaCheck("A77001")
   !AreaCheck("AR4000") !AreaCheck("AR6200")
   PartyRested()

@@ -4,10 +4,10 @@ IF
   True()
 THEN RESPONSE #100
   CutSceneId("Edwin")
-  LeaveParty()
   MoveToObjectNoInterrupt(Player1)
   TakePartyItem("A7DJLMP")
   RunAwayFromNoInterrupt(Player1, 45)
+  LeaveParty()
   MoveViewObject("Edwin", FAST)
   SmallWait(15)
   DisplayStringHead(Myself, @19500)    // Haha, the lamp is finally mine.
