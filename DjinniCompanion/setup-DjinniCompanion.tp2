@@ -1,6 +1,6 @@
 BACKUP ~DjinniCompanion/backup~
 AUTHOR ~Argent77 at Spellhold Studios~
-VERSION ~v2.5~
+VERSION ~v2.6~
 
 ALWAYS
   INCLUDE ~DjinniCompanion/lib/eet.tph~
