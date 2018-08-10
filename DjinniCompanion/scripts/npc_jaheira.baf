@@ -28,7 +28,7 @@ END
 
 // Triggering banters
 // IF
-  // Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself)
+  // Detect("A7Afaaq") !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck("A7Afaaq", CD_STATE_NOTVALID) InParty(Myself) Allegiance("A7Afaaq",FAMILIAR)
   // !ActuallyInCombat() !Detect([ENEMY])
   // !AreaCheck("AR6200") OR(7) !AreaType(DUNGEON) AreaCheck("AR2100") AreaCheck("AR2102") AreaCheck("AR2300") AreaCheck("AR5201") AreaCheck("AR5204") InWatchersKeep()
   // Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7JaheiraBanterNPCTimer", "GLOBAL")
