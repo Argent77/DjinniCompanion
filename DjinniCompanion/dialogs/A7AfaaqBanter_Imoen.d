@@ -27,7 +27,7 @@ EXIT
 
 // Banter #2
 CHAIN IF ~Global("A7BanterImoen", "GLOBAL", 3)~ THEN IMOEN25J Imoen2.1
-  @14550 /* Do you sometimes miss your home? */ DO ~IncrementGlobal("A7BanterImoen", "GLOBAL", 1)~
+  @14550 /* Do you miss your home sometimes? */ DO ~IncrementGlobal("A7BanterImoen", "GLOBAL", 1)~
   == A7AFAAQ @14551 /* I am not yet so long away from my home plane in djinni terms. We are solitary creatures by nature. It is not unusual for a djinn to journey alone for an age or two. */
   = @14552 /* Do you have something on your mind? */
   == IMOEN25J @14553 /* No, not really. I've been thinking about my home in Candlekeep recently. About what would have happened if I had not followed <CHARNAME> when <PRO_HESHE> left with Gorion. I would certainly not have been through all this torture from Irenicus, and more. */

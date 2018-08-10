@@ -34,7 +34,7 @@ CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 3)~ THEN EDWINJ Edwin.1
   == EDWINJ @19602 /* Oh, do I hear a hint of sadness in your voice? Or is it regret? Your past must have been glorious indeed. */
   == A7AFAAQ @19603 /* Our past is an important part of us. It shapes us and prepares for events that have not yet come to pass. Joy and sadness, anticipation and regret are all part of life. I would not have it otherwise. */
   = @19604 /* I have noticed you are exceptionally reticent when it comes to your own past, wizard. Do you regret past decisions? */
-  == EDWINJ @19605 /* What nonsense! I have accomplished more than the ragtag party I'm pleasing with my presence would experience in a lifetime. My current endeavor will be just as fruitful in the end. (Even if those monkeys in Thay refuse to see it yet.) */
+  == EDWINJ @19605 /* What nonsense! I have accomplished more than the ragtag party I'm pleasing my presence with would experience in a lifetime. My current endeavor will be just as fruitful in the end. (Even if those monkeys in Thay refuse to see it yet.) */
 EXIT
 
 CHAIN IF ~Global("A7BanterEdwin", "GLOBAL", 3) Global("A7AfaaqEnslaved", "GLOBAL", 1)~ THEN EDWIN25J Edwin.1
