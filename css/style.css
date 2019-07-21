@@ -9,29 +9,30 @@ body {
 }
 
 #wrap {
-  border: 2px solid #66451f;
+  border: 0.15rem solid #66451f;
   background: #e8e8e0;
   text-align: left;
-  margin: 20px auto;
-  width: 80%;
+  margin: 2vh auto;
+  width: 80vw;
   font-family: Verdana, Tahoma, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 1rem;
   color: #222;
 }
 
 #header {
   text-align: center;
   background: #e8e8e0;
-  border-bottom: 2px solid #66451f;
-  padding: 5px 0 13px 0;
+  border-bottom: 0.15rem solid #66451f;
+  padding: 0.5rem 0 1rem 0;
   margin: 0 auto;
+  width: 100%;
 }
 
 #header .about {
-  margin: 7px 0 0 0;
+  margin: 0.6rem 0 0 0;
   padding: 0;
   /*font-style: italic;*/
-  font-size: 120%;
+  font-size: 1.2rem;
   color: #222;
 }
 
@@ -46,12 +47,12 @@ body {
 }
 
 #maindiv {
-  margin: 10px auto 0px auto;
+  margin: 0.8rem auto 0 auto;
 }
 
 #maindiv .content {
   background-color: #e8e8e0;
-  padding: 0 0 25px 0;
+  padding: 0 0 1.75rem 0;
   position: relative;
   display: block;
 }
@@ -60,61 +61,61 @@ h2 {
   display: block;
   font-family: Verdana, Tahoma, Arial, sans-serif;
   text-align: left;
-  text-indent: 30px;
-  padding: 0px;
+  text-indent: 1.5vw;
+  padding: 0;
   margin: 0;
-  font-size: 160%;
+  font-size: 1.6rem;
 }
 
 #maindiv p {
-  font-size: 100%;
+  font-size: 1rem;
   font-style: normal;
-  line-height: 150%;
-  padding: 0px;
-  margin: 10px auto;
+  line-height: 1.5rem;
+  padding: 0;
+  margin: 0.6rem auto;
   width: 90%;
   display: block;
 }
 
 #maindiv p.boxed {
   border-style: inset;
-  border-width: 1px;
+  border-width: 0.1rem;
   border-color: #66451f;
-  margin-top: 32px;
-  padding: 6px;
+  margin-top: 2rem;
+  padding: 0.5rem;
 }
 
 #maindiv address a:link,
 #maindiv address a:visited {
-  margin-right: 5px;
+  margin-right: 0.3vw;
 }
 
 #maindiv address {
-  font-size: 95%;
+  font-size: 0.95rem;
   font-style: normal;
   font-weight: bold;
   text-decoration: none;
   color: #bbb;
-  padding: 3px 0px 3px;
-  margin: 0px;
+  padding: 0.4vh 0 0.4vh;
+  margin: 0;
   width: 100%;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   display: block;
   text-align: right;
 }
 
 #maindiv .important {
-  font-size: 95%;
+  font-size: 0.95rem;
   font-family: Verdana, Tahoma, Arial, sans-serif;
   text-align: left;
   background-color: #f5f5f0;
-  border: solid 2px #888;
-  padding: 10px;
-  margin: 20px auto;
+  border: solid 0.1rem #888;
+  padding: 0.8rem;
+  margin: 1.5rem auto;
   width: 80%;
-  line-height: 160%;
+  line-height: 1.6rem;
 }
 
 #maindiv .important::before {
@@ -122,60 +123,66 @@ h2 {
 }
 
 #maindiv .important p {
-  font-size: 100%;
-  text-indent: 0px;
-  margin: 5px 0 10px 0;
+  font-size: 1rem;
+  text-indent: 0;
+  margin: 0.4rem 0 0.8rem 0;
 }
 
 #maindiv ul {
-  margin: -10px 0 0 40px;
-  *margin-left: 65px;
+  margin: -0.7rem 0 0 2vw;
+  *margin-left: 3vw;
 }
 
 #maindiv ol {
-  margin: -10px 0 0 35px;
-  *margin-left: 70px;
+  margin: -0.7rem 0 0 1.5vw;
+  *margin-left: 3vw;
 }
 
 #maindiv .important ul {
-  margin: -10px 0 0 15px;
+  margin: -0.7rem 0 0 1vw;
 }
 
 #maindiv .important ol {
-  margin: -10px 0 0 20px;
+  margin: -0.7rem 0 0 1.2vw;
 }
 
 #maindiv ul li {
   list-style-type: square;
-  line-height: 150%;
+  line-height: 1.5rem;
 }
 
 #maindiv ol li {
-  line-height: 150%;
+  line-height: 1.5rem;
 }
 
 #langdiv {
-  border-left: 2px solid #66451f;
-  border-right: 2px solid #66451f;
-  border-bottom: 2px solid #66451f;
+  border-left: 0.15rem solid #66451f;
+  border-right: 0.15rem solid #66451f;
+  border-bottom: 0.15rem solid #66451f;
   background-color: #e8e8e0;
   margin: 0 auto;
-  width: 80%;
+  width: 80vw;
 }
 
 #langdiv  span {
-  padding: 0px 4px;
+  padding: 0px 0.3rem;
   font-weight: bold;
   color: #666;
 }
 
 #langdiv .divider {
-  border-left: 1px dotted #66451f;
+  border-left: 0.1rem dotted #66451f;
 }
 
 #portrait {
   float: left;
-  margin: 10px 10px 0px 30px;
+  margin: 0.6rem 0.75rem 0 1.8rem;
+}
+
+#license img {
+  border-width:0
+  width:7.5rem;
+  height:2.64rem;
 }
 
 .t1 {
@@ -213,9 +220,9 @@ h2 {
 }
 
 hr {
-  margin: 10px 0 10px 0;
+  margin: 0.7rem 0 0.7rem 0;
   padding: 0;
-  height: 1px;
+  height: 0.1rem;
   border: 0;
   color: #aaa;
   background-color: #aaa;
@@ -230,9 +237,9 @@ hr.floatfix {
 }
 
 h1 {
-  font-size: 250%;
+  font-size: 2.5rem;
   color: #222;
-  padding: 5px 0 5px 0;
+  padding: 0.4rem 0 0.4rem 0;
   margin: 0;
   width: 100%;
 }
@@ -240,32 +247,32 @@ h1 {
 h3,
 h4,
 h5 {
-  margin: 10px 40px 10px 40px;
+  margin: 1vh 2vw 1vh 1.5vw;
   padding: 0;
 }
 
 h3 {
-  font-size: 125%;
+  font-size: 1.25rem;
   font-style: italic;
 }
 
 h4 {
-  font-size: 125%;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 100%;
+  font-size: 1rem;
 }
 
 h6 {
   width: 100%;
-  margin: 10px 0 15px 0;
+  margin: 1vh 0 1.5vh 0;
   text-align: left;
-  text-indent: 30px;
-  font-size: 100%;
+  text-indent: 1.5vw;
+  font-size: 1rem;
   font-style: italic;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.1rem;
 }
 
 a:link,
@@ -278,10 +285,10 @@ a:visited {
 a:hover,
 a:active {
   color: #222;
-  border-bottom: 1px solid black;
+  border-bottom: 0.1rem solid black;
 }
 
 hr.divider {
   background-color: #66451f;
-  margin-top: 0px;
+  margin-top: 0;
 }
