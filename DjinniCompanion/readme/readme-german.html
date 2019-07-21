@@ -5,277 +5,7 @@
     <title>BALDUR'S GATE II MOD: Afaaq, der Dschinngefährte</title>
     <meta name="description" content="A WeiDU mod for Baldur's Gate II: SoA &amp; ToB. Contains the djinni Afaaq, interesting dialogs, interesting quests and new locations." />
     <meta name="keywords" content="WeiDU, mod, Afaaq, djinni companion, Baldur's Gate II, BG2, BG2:EE, IWD:EE" />
-    <style type="text/css">
-      body {
-        margin: 0;
-        padding: 0;
-        cursor: default;
-        text-align: center;
-        color: #000;
-        background-image: linear-gradient(#ccc7ba, #e8e6e1);
-        /*background-color: #ccc7ba;*/
-      }
-
-      #wrap {
-        border: 2px solid #66451f;
-        background: #e8e8e0;
-
-        text-align: left;
-        margin: 20px auto;
-        width: 80%;
-        font-family: Verdana, Tahoma, Arial, sans-serif;
-        font-size: 12px;
-        color: #222;
-      }
-
-      #header {
-        text-align: center;
-        background: #e8e8e0;
-        border-bottom: 2px solid #66451f;
-        padding: 5px 0 13px 0;
-        margin: 0 auto;
-      }
-
-      #header .about {
-        margin: 7px 0 0 0;
-        padding: 0;
-        /*font-style: italic;*/
-        font-size: 120%;
-        color: #222;
-      }
-
-      #header .menu {
-        font-weight: bold;
-        margin: 0;
-      }
-
-      #header .menu a:link,
-      #header .menu a:visited {
-        color: #222;
-      }
-
-      #maindiv {
-        margin: 10px auto 0px auto;
-      }
-
-      #maindiv .content {
-        background-color: #e8e8e0;
-        padding: 0 0 25px 0;
-        position: relative;
-        display: block;
-      }
-
-      h2 {
-        display: block;
-        font-family: Verdana, Tahoma, Arial, sans-serif;
-        text-align: left;
-        text-indent: 30px;
-        padding: 0px;
-        margin: 0;
-        font-size: 160%;
-      }
-
-      #maindiv p {
-        font-size: 100%;
-        font-style: normal;
-        line-height: 150%;
-        padding: 0px;
-        margin: 10px auto;
-        width: 90%;
-        display: block;
-      }
-
-      #maindiv p.boxed {
-        border-style: inset;
-        border-width: 1px;
-        border-color: #66451f;
-        margin-top: 32px;
-        padding: 6px;
-      }
-
-      #maindiv address a:link,
-      #maindiv address a:visited {
-        margin-right: 5px;
-      }
-
-      #maindiv address {
-        font-size: 95%;
-        font-style: normal;
-        font-weight: bold;
-        text-decoration: none;
-        color: #bbb;
-        padding: 3px 0px 3px;
-        margin: 0px;
-        width: 100%;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        display: block;
-        text-align: right;
-      }
-
-      #maindiv .important {
-        font-size: 95%;
-        font-family: Verdana, Tahoma, Arial, sans-serif;
-        text-align: left;
-        background-color: #f5f5f0;
-        border: solid 2px #888;
-        padding: 10px;
-        margin: 20px auto;
-        width: 80%;
-        line-height: 160%;
-      }
-
-      #maindiv .important::before {
-        display: none;
-      }
-
-      #maindiv .important p {
-        font-size: 100%;
-        text-indent: 0px;
-        margin: 5px 0 10px 0;
-      }
-
-      #maindiv ul {
-        margin: -10px 0 0 40px;
-        *margin-left: 65px;
-      }
-
-      #maindiv ol {
-        margin: -10px 0 0 35px;
-        *margin-left: 70px;
-      }
-
-      #maindiv .important ul {
-        margin: -10px 0 0 15px;
-      }
-
-      #maindiv .important ol {
-        margin: -10px 0 0 20px;
-      }
-
-      #maindiv ul li {
-        list-style-type: square;
-        line-height: 150%;
-      }
-
-      #maindiv ol li {
-        line-height: 150%;
-      }
-
-      #portrait {
-        float: left;
-        margin: 10px 10px 0px 30px;
-      }
-
-      .t1 {
-        font-weight: bold;
-        width: 26%;
-        text-align: right;
-        clear: right;
-        float: left;
-        *float: none;
-        *margin-left: 65px;
-        line-height: 22px;
-      }
-
-      .t2 {
-        text-align: left;
-        width: 73%;
-        float: right;
-        *float: none;
-        line-height: 22px;
-      }
-
-      .t3 {
-        font-weight: bold;
-        width: 25px;
-        float: left;
-        clear: left;
-      }
-
-      .code {
-        font-family: monospace;
-        border-width: 1px;
-        border-color: black;
-        border-style: solid;
-        padding: 1px 2px 0px 2px;
-      }
-
-      hr {
-        margin: 10px 0 10px 0;
-        padding: 0;
-        height: 1px;
-        border: 0;
-        color: #aaa;
-        background-color: #aaa;
-      }
-
-      hr.floatfix {
-        clear: both;
-        color: #e8e8e6;
-        background-color: #e8e8e6;
-        *margin: 0;
-        *padding: 0;
-      }
-
-      h1 {
-        font-size: 250%;
-        color: #222;
-        padding: 5px 0 5px 0;
-        margin: 0;
-        width: 100%;
-      }
-
-      h3,
-      h4,
-      h5 {
-        margin: 10px 40px 10px 40px;
-        padding: 0;
-      }
-
-      h3 {
-        font-size: 125%;
-        font-style: italic;
-      }
-
-      h4 {
-        font-size: 125%;
-      }
-
-      h5 {
-        font-size: 100%;
-      }
-
-      h6 {
-        width: 100%;
-        margin: 10px 0 15px 0;
-        text-align: left;
-        text-indent: 30px;
-        font-size: 100%;
-        font-style: italic;
-        padding-top: 1px;
-        padding-bottom: 1px;
-      }
-
-      a:link,
-      a:visited {
-        color: #804000;
-        font-weight: bold;
-        text-decoration: none;
-      }
-
-      a:hover,
-      a:active {
-        color: #222;
-        border-bottom: 1px solid black;
-      }
-
-      hr.divider {
-        background-color: #66451f;
-        margin-top: 0px;
-      }
-    </style>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
     <script>
       var LANG_DE = "de";
 
@@ -347,10 +77,10 @@
         <a name="intro" id="intro"></a>
         <div class="content">
           <h2>Einführung</h2>
-          <span id="portrait"><img src="AfaaqPortrait.png" alt="Afaaq's portrait" width="130" height="199" /></span>
+          <span id="portrait"><img src="AfaaqPortrait.png" alt="Afaaq's portrait" style="width: 11.76rem; height: 18rem;" /></span>
           <p>Hier kommt Afaaq! Ein Dschinn und treuer Gefährte während Eurer Abenteuer durch Schatten von Amn und Thron des Bhaal. Jetzt auch für Icewind Dale: Enhanced Edition und die Enhanced Edition Trilogie (EET) verfügbar!</p>
           <p><big><strong>Inhalte</strong></big></p>
-          <ul style="margin-left: 160px">
+          <ul style="margin-left: 14rem">
             <li>Der Dschinn Afaaq als &quot;siebtes Gruppenmitglied&quot;</li>
             <li>Umfangreiche Dialoge zwischen Afaaq und dem Protagonisten</li>
             <li>Banter mit den originalen Bioware/Beamdog NSCs (noch in Arbeit)</li>
@@ -407,7 +137,7 @@
         <div class="content">
           <h2>Modkomponenten</h2>
           <hr class="floatfix" />
-          <ol style="margin-right: 50px">
+          <ol style="margin-right: 3rem">
             <li>
               Die Hauptkomponente kommt in zwei Varianten daher:<br />
               <strong>Vollversion:</strong> (empfohlen) Diese Komponente installiert den Dschinn Afaaq zusammen mit allen Abenteuern, neuen Gebieten, Dialogen, Kommentaren, usw.<br />
@@ -532,7 +262,7 @@
             <span class="t3">A:</span><em>(IWD:EE-Version)</em> Die Dschinnlampe ist irgendwo im Schrein von Waukeen in Einsamwald versteckt.<br />
           </p>
           <p id="hintbox" class="boxed" style="display: none">
-            <strong>Wusstet Ihr schon?</strong><input type="submit" value="Weiter" onclick="showNextHint('de', 'hint')" style="margin-left: 10px"></input>
+            <strong>Wusstet Ihr schon?</strong><input type="submit" value="Weiter" onclick="showNextHint('de', 'hint')" style="margin-left: 0.8rem; padding: 0.2rem 0.5rem;"></input>
             <br />
             <span id="hint">...</span>
           </p>
@@ -548,7 +278,7 @@
         <div class="content">
           <h2>Fehlerbehebung</h2>
           <hr class="floatfix" />
-          <ol style="margin-right: 50px">
+          <ol style="margin-right: 3rem">
             <li><strong>Die Rückkehr des Dschinns in seine Lampe wurde unterbrochen. Er hat jetzt einen neutralen Auswahlkreis und der Mauszeiger ändert sich nicht wenn man ihn über den Dschinn bewegt.</strong><br />Das kann in Ausnahmefällen passieren, wenn sein Rückkehrprozess in die Lampe durch äußere Einwirkungen unterbrochen wird (z.B. durch heftige Kampfhandlungen). Ihr könnt versuchen, mit ihm zu reden, indem Ihr auf die Gesprächsschaltfläche klickt (oder die Taste F1 drückt) und dann den Dschinn auswählt. Sein Dialog kann jetzt der der Lampe sein. Wählt die Dialogoption "Du verhältst Dich seltsam. Möchtest Du das beheben?" aus. Danach sollte alles wieder funktionieren. Manchmal muss man zusätzlich das Spiel speichern und neu laden, um die Veränderungen zu erzwingen.<br /><br /></li>
             <li><strong>Der Dschinn verhält sich ungewöhnlich. Er scheint nicht zu sterben, selbst wenn er schwer verletzt ist oder der Mauszeiger wandelt sich in den Gesprächszeiger, wenn man ihn über den Dschinn bewegt.</strong><br />Diese Probleme können ebenfalls durch äußere Einwirkungen ausgelöst werden. Auch hier versucht die Dialogoption "Du verhältst Dich seltsam. Möchtest Du das beheben?" auszuwählen, um das Problem zu beheben. Danach muss man unter Umständen das Spiel speichern und neu laden, um die Veränderungen zu erzwingen.<br /><br /></li>
             <li><strong><em>(Nur für Vollversion)</em> Nachdem ich Adratha, die Kräuterfrau im Druidenhain, angegriffen habe, passiert nichts ungewöhnliches.</strong><br />Im normalen Spielverlauf sollte ein permanenter Teleporter entstehen sobald Adratha feindlich wird oder stirbt. Eine andere Mod könnte diesen Prozess stören. In diesem Fall solltet Ihr die verantwortliche Mod finden und deinstallieren.<br /> <strong>Wichtig:</strong> Ihr müsst einen Speicherstand benutzen, in dem Ihr noch nie die Hütte der Kräuterfrau betreten habt.<br /><br /></li>
@@ -601,7 +331,7 @@
           <hr class="floatfix" />
           <h5>Copyright Notice:</h5>
           <div class="important">
-            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />&quot;Afaaq, the Djinni Companion&quot; is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            <a rel="license" id="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />&quot;Afaaq, the Djinni Companion&quot; is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
             <p>Baldur's Gate II: Enhanced Edition and Icewind Dale: Enhanced Edition &copy; Beamdog Inc., Baldur's Gate and Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc., Icewind Dale and Icewind Dale II: &copy; Interplay Entertainment Corp., The BioWare Infinity Engine is &copy; BioWare Corp., Diablo II: &copy; Blizzard Entertainment, Age of Wonders Shadow Magic: &copy; Triumph Studios.</p>
           </div>
           <address>
