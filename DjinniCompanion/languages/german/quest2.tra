@@ -160,6 +160,9 @@ werd in der Luft geboren.~
 @2408 = ~Die Jadekugel fängt an zu glühen und Ihr werdet von gleißendem Licht umgeben...~
 @2409 = ~Die Jadekugel flackert kurz auf, bevor sie sich in eine Staubwolke verwandelt. Es scheint, als ob die Magie des Steins bereits verbraucht wurde. Ihr habt den Dschinn für immer verloren.~
 @2410 = ~Die Jadekugel rührt sich nicht.~
+@2411 = ~Ihr konzentriert Eure Gedanken auf die Jadekugel in Euren Händen.~
+@2412 = ~Nach einigen Augenblicken fängt sie an zu glühen und Ihr werdet von gleißendem Licht umgeben...~
+@2413 = ~Nach einigen Augenblicken flackert sie nur kurz auf, bevor sie sich in eine Staubwolke verwandelt. Es scheint, als ob die Magie des Steins bereits verbraucht wurde. Ihr habt den Dschinn für immer verloren.~
 
 
 // journal entries
@@ -273,3 +276,4 @@ Kann nur verwendet werden von:
  Magiern (auch mehrklassig und mit Klassenkombination)
  Barden
  Chaotischen Charakteren~
+@2942 = ~Benutzen~

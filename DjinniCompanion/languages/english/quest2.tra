@@ -161,6 +161,9 @@ losing money might bring good luck.~
 @2408 = ~The Jade Orb begins to glow as you are wrapped into a gleaming light...~
 @2409 = ~The Jade Orb flickers shortly and disintegrates into a cloud of dust. It looks like the stone's magic has already been used up. You have lost the djinni forever.~
 @2410 = ~The orb does nothing.~
+@2411 = ~You focus your thoughts on the Jade Orb in your hands.~
+@2412 = ~After a few moments it begins to glow as you are wrapped into a gleaming light...~
+@2413 = ~After a few moments it flickers shortly and disintegrates into a cloud of dust. It looks like the stone's magic has already been used up. You have lost the djinni forever.~
 
 
 // journal entries
@@ -270,3 +273,4 @@ Only usable by:
  Mage (single, dual, & multi-class)
  Bard
  Chaotic characters~
+@2942 = ~Use~

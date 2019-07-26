@@ -26,6 +26,21 @@ COPY ~DjinniCompanion/items/a7misc3.itm~ ~override~
 COPY ~DjinniCompanion/items/a7q2tel1.eff~ ~override~
      ~%ITEM_IMISC3%~                      ~override~
 
+COPY_EXISTING ~itemdial.2da~ ~override~
+  SET strref_use = RESOLVE_STR_REF(@2942)
+  TEXT_SPRINT diaorb ~A7MISC3       %strref_use%   A7MISC3~
+  COUNT_2DA_COLS numCols
+  COUNT_2DA_ROWS numCols numRows
+  PATCH_IF (numCols = 4) BEGIN
+    SET strref_orb = RESOLVE_STR_REF(@2936)  // Jade Orb
+    TEXT_SPRINT diaorb ~%diaorb%  %strref_orb%~
+  END
+  INSERT_2DA_ROW numRows numCols ~%diaorb%~
+BUT_ONLY
+
+// Jade Orb dialog via "Use" button
+COMPILE EVALUATE_BUFFER ~DjinniCompanion/dialogs/A7Q2Misc3.d~
+
 COPY ~DjinniCompanion/items/a7helm1.itm~ ~override~
   SAY NAME1 @2938     // Hat
   SAY NAME2 @2939     // Pointy Hat

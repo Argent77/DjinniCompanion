@@ -22,6 +22,7 @@ THEN RESPONSE #100
   DisplayStringHead(LastSummonerOf(Myself), @2408)    // The Jade Orb begins to glow and you are being wrapped into a gleaming light...
   TakePartyItem("A7MISC3")
   StartCutSceneMode()
+  Wait(3)
   StartCutScene("A7Q2ct2")
 END
 

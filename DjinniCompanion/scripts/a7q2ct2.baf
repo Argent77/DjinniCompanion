@@ -5,7 +5,7 @@ IF
 THEN RESPONSE #100
   CutSceneId(Player1)
   //ActionOverride("A7Q2TEL1", DestroySelf())
-  Wait(3)
+  Wait(1)
   StorePartyLocations()              // save current party location
   CreateVisualEffectObject("ICRMPARI", Player1)
   CreateVisualEffectObject("ICRMPARI", Player2)

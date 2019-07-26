@@ -201,29 +201,13 @@ END ELSE BEGIN
   COMPILE EVALUATE_BUFFER ~djinnicompanion/inlined/ppireni1.d~
 
 
-  // *** Cutscene: Party is teleported to the Asylum dungeon ***
-  COPY_EXISTING ~cut41j.bcs~ ~override~
-    DECOMPILE_AND_PATCH BEGIN
-      REPLACE_TEXTUALLY CASE_INSENSITIVE
-        ~\(ActionOverride(Player6,LeaveAreaLUA("AR1512","",\[.+\..+\],.+))\)~
-        ~\1
-         MoveGlobal("AR1512","A7Afaaq",[1614.1471])
-         ChangeEnemyAlly("A7Afaaq",FAMILIAR)
-         ActionOverride("A7Afaaq",AddFamiliar())
-         SetGlobal("A7AfaaqSummoned","GLOBAL",1)
-         ActionOverride("A7Afaaq",SetGlobal("initialize","LOCALS",1))
-         ActionOverride("A7Afaaq",ApplySpellRES("A7REST",Myself))
-         ActionOverride("A7Afaaq",SetSequence(SEQ_READY))
-         ActionOverride("A7Afaaq",Face(10))~
-    END BUT_ONLY
-
-  // Failsave mechanism if the above script portion isn't called
+  // *** Spellhold Maze, upper level: Afaaq rejoins party ***
   <<<<<<<< djinnicompanion/inlined/ar1512_afaaq.baf
   IF
     Allegiance("A7Afaaq", NEUTRAL)
+    PartyHasItem("A7DJLMP")
     Global("A7AfaaqJoined", "AR1512", 0)
   THEN RESPONSE #100
-    SetGlobal("A7AfaaqJoined", "AR1512", 1)
     MoveGlobal("AR1512", "A7Afaaq", [1614.1471])
     ChangeEnemyAlly("A7Afaaq", FAMILIAR)
     ActionOverride("A7Afaaq", AddFamiliar())
@@ -231,9 +215,45 @@ END ELSE BEGIN
     ActionOverride("A7Afaaq", SetGlobal("initialize", "LOCALS", 1))
     ActionOverride("A7Afaaq", ApplySpellRES("A7REST", Myself))
     ActionOverride("A7Afaaq", SetSequence(SEQ_READY))
+    ActionOverride("A7Afaaq", Face(10))
+    Continue()
+  END
+  
+  IF
+    Global("A7AfaaqJoined", "AR1512", 0)
+  THEN RESPONSE #100
+    SetGlobal("A7AfaaqJoined", "AR1512", 1)
+    Continue()
   END
   >>>>>>>>
-  EXTEND_BOTTOM ~ar1512.bcs~ ~djinnicompanion/inlined/ar1512_afaaq.baf~
+  EXTEND_TOP ~ar1512.bcs~ ~djinnicompanion/inlined/ar1512_afaaq.baf~
+
+
+  // *** Spellhold fallback action: Afaaq rejoins party ***
+  <<<<<<<< djinnicompanion/inlined/ar1515_afaaq.baf
+  IF
+    Allegiance("A7Afaaq", NEUTRAL)
+    GlobalGT("AsylumPlot","GLOBAL",20)
+    Global("A7AfaaqJoined", "AR1515", 0)
+  THEN RESPONSE #100
+    ChangeEnemyAlly("A7Afaaq", FAMILIAR)
+    ActionOverride("A7Afaaq", AddFamiliar())
+    SetGlobal("A7AfaaqSummoned", "GLOBAL", 1)
+    ActionOverride("A7Afaaq", SetGlobal("initialize", "LOCALS", 1))
+    ActionOverride("A7Afaaq", ApplySpellRES("A7REST", Myself))
+    ActionOverride("A7Afaaq", SetSequence(SEQ_READY))
+    Continue()
+  END
+  
+  IF
+    GlobalGT("AsylumPlot","GLOBAL",20)
+    Global("A7AfaaqJoined", "AR1515", 0)
+  THEN RESPONSE #100
+    SetGlobal("A7AfaaqJoined", "AR1515", 1)
+    Continue()
+  END
+  >>>>>>>>
+  EXTEND_TOP ~ar1515.bcs~ ~djinnicompanion/inlined/ar1515_afaaq.baf~
 
 
   // *** Cutscene: Party arrives in Sahuagin City ***
