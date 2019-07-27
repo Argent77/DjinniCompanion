@@ -233,7 +233,9 @@ END ELSE BEGIN
   <<<<<<<< djinnicompanion/inlined/ar1515_afaaq.baf
   IF
     Allegiance("A7Afaaq", NEUTRAL)
-    GlobalGT("AsylumPlot","GLOBAL",20)
+    OR(2)
+      GlobalGT("AsylumPlot","GLOBAL",54)
+      Allegiance("ppworker",ENEMY)
     Global("A7AfaaqJoined", "AR1515", 0)
   THEN RESPONSE #100
     ChangeEnemyAlly("A7Afaaq", FAMILIAR)
@@ -246,7 +248,9 @@ END ELSE BEGIN
   END
   
   IF
-    GlobalGT("AsylumPlot","GLOBAL",20)
+    OR(2)
+      GlobalGT("AsylumPlot","GLOBAL",54)
+      Allegiance("ppworker",ENEMY)
     Global("A7AfaaqJoined", "AR1515", 0)
   THEN RESPONSE #100
     SetGlobal("A7AfaaqJoined", "AR1515", 1)
