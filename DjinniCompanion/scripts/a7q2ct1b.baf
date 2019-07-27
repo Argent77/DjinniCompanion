@@ -21,7 +21,7 @@ THEN RESPONSE #100
   ActionOverride("A7Q2RK5", Enemy())
   ActionOverride("A7Q2RK6", Enemy())
   ActionOverride("A7Q2RK7", Enemy())
-  SetGlobalTimer("A7Quest2Timer", "GLOBAL", THREE_DAYS)      // set limit to three days to start the next phase of Quest 2
+  SetGlobalTimer("A7Quest2Timer", "GLOBAL", SIX_DAYS)      // set limit to three days to start the next phase of Quest 2
   ActionOverride("A7Afaaq", SetGlobal("unsummoning", "LOCALS", 1))    // Force the djinni into the lamp
   AddJournalEntry(@2800, QUEST)
   EndCutSceneMode()
