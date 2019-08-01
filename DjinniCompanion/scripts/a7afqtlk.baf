@@ -527,6 +527,7 @@ END
 IF
   Delay(12) See(Player1) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck(Myself, CD_STATE_NOTVALID) !ActuallyInCombat()
   OR(2) !AreaType(DUNGEON) InWatchersKeep()
+  Global("C#IM_ImoenStays", "GLOBAL", 0)
   GlobalGT("BanterPCHeritage", "LOCALS", 1) Global("BanterPCIrenicusHunt", "LOCALS", 0) GlobalLT("Chapter", "GLOBAL", %bg2_chapter_4%)
   Global("A7AfaaqEnslaved", "GLOBAL", 0) RealGlobalTimerExpired("A7AfaaqBanterTimer", "GLOBAL")
 THEN RESPONSE #100
@@ -540,6 +541,7 @@ END
 // PC specific banter: Introduction to Imoen
 IF
   InParty("Imoen2")
+  Global("C#IM_ImoenStays", "GLOBAL", 0)
   GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterIntroImoen", "GLOBAL", 0) Global("BanterImoenTimer", "LOCALS", 0)
 THEN RESPONSE #100
   RealSetGlobalTimer("BanterImoenTimer", "LOCALS", 18)
@@ -549,7 +551,7 @@ IF
   Detect("Imoen2") See(Player1)
   !StateCheck(Myself, CD_STATE_NOTVALID) !StateCheck(Player1, CD_STATE_NOTVALID) !StateCheck("Imoen2", CD_STATE_NOTVALID) InParty("Imoen2")
   !ActuallyInCombat()
-  GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterIntroImoen", "GLOBAL", 0)
+  Global("C#IM_ImoenStays", "GLOBAL", 0) GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterIntroImoen", "GLOBAL", 0)
   RealGlobalTimerExpired("BanterImoenTimer", "LOCALS")
 THEN RESPONSE #100
   SetInterrupt(FALSE)
