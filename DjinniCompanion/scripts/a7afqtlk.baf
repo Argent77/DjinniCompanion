@@ -540,7 +540,7 @@ END
 
 // PC specific banter: Introduction to Imoen
 IF
-  InParty("Imoen2")
+  InParty("Imoen2") Allegiance(Myself, FAMILIAR)
   Global("C#IM_ImoenStays", "GLOBAL", 0)
   GlobalGT("A7BanterIntro", "GLOBAL", 0) Global("A7BanterIntroImoen", "GLOBAL", 0) Global("BanterImoenTimer", "LOCALS", 0)
 THEN RESPONSE #100
