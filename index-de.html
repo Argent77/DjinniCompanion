@@ -9,51 +9,53 @@
     <link rel="stylesheet" href="css/styles.css" />
     <script src="script/hints.js"></script>
   </head>
-  
-  <body onload="showHints('hintbox', 'de', 'hint')">
-    <div><a name="top" id="top"></a></div>
-    <div id="langdiv">
-      <span><a href="index.html">English</a></span>
-      <span class="divider" />
-      <span>Deutsch</span>
-    </div>
-    <div id="wrap">
-      <div id="header">
-        <h1>Afaaq, der Dschinngefährte</h1>
-        <strong>Eine Mod für Baldur's Gate II: Thron des Bhaal, Baldur's Gate II: Enhanced Edition und Icewind Dale: Enhanced Edition</strong>
-        <hr />
-        <p class="about"><strong>Autor: Argent77</strong></p>
-        <p class="about">
-          <strong>Download</strong> (<a href="http://www.shsforums.net/files/file/1217-afaaq-the-djinni-companion/">SHS</a>) &#8226;
-          <strong>Download</strong> (<a href="https://github.com/Argent77/DjinniCompanion/releases/latest">GitHub</a>) &#8226;
-          <a href="http://www.shsforums.net/forum/651-djinni-companion/">Diskussion</a> &#8226;
-          <a href="index-de.html">Webseite</a> &#8226;
-          <a href="https://github.com/Argent77/DjinniCompanion/">Projekt</a> &#8226;
-          Version: 2.6
-        </p>
-        <hr />
-        <p class="menu">
-          <a href="#intro">Einführung</a> &middot;
-          <a href="#installation">Installation</a> &middot;
-          <a href="#component">Modkomponenten</a> &middot;
-          <a href="#details">Einzelheiten</a> &middot;
-          <a href="#faq">FAQ</a> &middot;
-          <a href="#trouble">Fehlerbehebung</a> &middot;
-          <a href="#credits">Danksagungen</a> &middot;
-          <a href="#version">Versionshistorie</a>
-        </p>
-      </div>
-      <div id="maindiv">
 
-        <!-- ================== I N T R O D U C T I O N ================== -->
-        <a name="intro" id="intro"></a>
-        <div class="content">
-          <h2>Einführung</h2>
-          <span id="portrait"><img src="images/AfaaqPortrait.png" alt="Afaaq's portrait" style="width: 11.76rem; height: 18rem;" /></span>
-          <p>Hier kommt Afaaq! Ein Dschinn und treuer Gefährte während Eurer Abenteuer durch Schatten von Amn und Thron des Bhaal. Jetzt auch für Icewind Dale: Enhanced Edition und die Enhanced Edition Trilogie (EET) verfügbar!</p>
-          <p><big><strong>Inhalte</strong></big></p>
-          <ul style="margin-left: 14rem">
-            <li>Der Dschinn Afaaq als &quot;siebtes Gruppenmitglied&quot;</li>
+  <body onload="showHints('hintbox', 'de', 'hint')">
+    <div><a id="top"></a></div>
+    <div id="language">
+      <ul>
+        <li><a href="index.html">English</a></li>
+        <li title="German">Deutsch</li>
+      </ul>
+    </div>
+
+    <header>
+      <h1 class="title">Afaaq, der Dschinngefährte</h1>
+      <div class="subtitle">Eine Mod für Baldur's Gate II: Thron des Bhaal, Baldur's Gate II: Enhanced Edition und Icewind Dale: Enhanced Edition.</div>
+      <hr />
+      <p class="about"><strong>Autor: Argent77</strong></p>
+      <ul id="globalnav" class="about">
+        <li><strong>Download</strong> (<a href="http://www.shsforums.net/files/file/1217-afaaq-the-djinni-companion/">SHS</a>)</li>
+        <li><strong>Download</strong> (<a href="https://github.com/Argent77/DjinniCompanion/releases/latest">GitHub</a>)</li>
+        <li><a href="http://www.shsforums.net/forum/651-djinni-companion/">Diskussion</a></li>
+        <li><a href="https://argent77.github.io/DjinniCompanion/index.html">Webseite</a></li>
+        <li><a href="https://github.com/Argent77/DjinniCompanion/">Projekt</a></li>
+        <li>Version: 2.6</li>
+      </ul>
+      <hr />
+      <nav>
+        <ul>
+          <li><a href="#intro">Einführung</a></li>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#components">Modkomponenten</a></li>
+          <li><a href="#details">Einzelheiten</a></li>
+          <li><a title="H&auml;ufig gestellte Fragen" href="#faq">FAQ</a></li>
+          <li><a href="#trouble">Fehlerbehebung</a></li>
+          <li><a href="#credits">Danksagungen</a></li>
+          <li><a href="#changelog">Versionshistorie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ================== I N T R O D U C T I O N ================== -->
+      <section id="intro">
+        <h2>Einführung</h2>
+        <span id="portrait" style="float: left; margin: 0.6rem 0.75rem 1.8rem;"><img src="images/AfaaqPortrait.png" alt="Afaaq's portrait" style="width: 12rem; height: auto;" /></span>
+        <p>Hier kommt Afaaq! Ein Dschinn und treuer Gefährte während Eurer Abenteuer durch Schatten von Amn und Thron des Bhaal. Jetzt auch für Icewind Dale: Enhanced Edition und die Enhanced Edition Trilogie (EET) verfügbar!</p>
+        <h3>Inhalte</h3>
+        <ul style="margin-left: 13rem;">
+            <li>Der Dschinn Afaaq als „siebtes Gruppenmitglied”</li>
             <li>Umfangreiche Dialoge zwischen Afaaq und dem Protagonisten</li>
             <li>Banter mit den originalen Bioware/Beamdog NSCs (noch in Arbeit)</li>
             <li>Einwürfe und Kommentare</li>
@@ -62,82 +64,90 @@
             <li>Sechs neue Gebiete</li>
             <li>Mehrere einzigartige magische Gegenstände</li>
             <li>Einige Easter Eggs &#x1f609;</li>
-          </ul>
-          <hr class="floatfix" />
-          <p>Ihr könnt im <a href="https://kerzenburg.baldurs-gate.eu/showthread.php?t=43956">Kerzenburg Forum</a> (deutsch), <a href="http://www.shsforums.net/forum/651-djinni-companion/">SHS Forum</a> (englisch) oder <a href="https://forums.beamdog.com/discussion/41108/mod-afaaq-the-djinni-companion-for-bg2-and-bg2-ee-released/">Beamdog Forum</a> (englisch) vorbeischauen, um die letzten Neuigkeiten zu erfahren.</p>
-          <address>
-            <a href="#top">ZURÜCK ZUM ANFANG</a>
-          </address>
+        </ul>
+        <hr class="floatfix" />
+        <p>Ihr könnt im <a href="https://www.baldurs-gate.de/index.php?threads/afaaq-der-dschinngef%C3%A4hrte-f%C3%BCr-bg2-und-bg2-ee.43956/">Kerzenburg Forum</a> (deutsch), <a href="http://www.shsforums.net/forum/651-djinni-companion/">SHS Forum</a> (englisch) oder <a href="https://forums.beamdog.com/discussion/41108/mod-afaaq-the-djinni-companion-for-bg2-and-bg2-ee-released/">Beamdog Forum</a> (englisch) vorbeischauen, um die letzten Neuigkeiten zu erfahren.</p>
+        <div class="back">
+          <a class="novisit" href="#top">ZURÜCK ZUM ANFANG</a>
         </div>
+      </section>
 
-        <hr class="divider" />
-
-        <!-- ================== I N S T A L L A T I O N ================== -->
-        <a name="installation" id="installation"></a>
-        <div class="content">
-          <h2>Installation</h2>
-          <p>Dies ist eine WeiDU Mod. Das bedeutet, sie ist sehr einfach zu installieren. Entpackt die Datei <em>&quot;djinnicompanion.7z&quot;</em> (<a href="https://www.7-zip.org/download.html">7-Zip</a>) in das Installationsverzeichnis Eues Spiels und startet entweder <em>&quot;setup-DjinniCompanion.exe&quot;</em> (Windows) oder <em>&quot;setup-DjinniCompanion&quot;</em> (Mac OS X). Folgt den Anweisungen im Textfenster und die Mod ist startbereit.</p>
-          <p>Um die Mod zu deinstallieren, startet <em>&quot;setup-DjinniCompanion.exe&quot;</em> und folgt den Anweisungen.</p>
-          <h5>Kompatibilität und Installationsreihenfolge</h5>
-          <p>Die Mod lässt sich in <em>Baldur's Gate II: Thron des Bhaal</em>, <em>Baldur's Gate Trilogie (BGT)</em>, <em>Baldur's Gate II: Enhanced Edition</em> oder <em>Icewind Dale: Enhanced Edition</em> installieren. Die <em>Enhanced Edition Trilogy (EET)</em> wird ebenfalls unterstützt.</p>
-          <p>Ihr könnt die Mod jederzeit während des Spielverlaufs installieren, solange noch keine Aufgaben in Handelstreff angefangen wurden. Allerdings empfehle ich, diese Mod so früh wie möglich im Spielverlauf zu installieren, um die Chancen zu erhöhen, dass ein bestimmtes Abenteuer ausgelöst wird.</p>
-          <p>Die folgenden Mods müssen VOR dieser Mod installiert werden, falls Ihr sie nutzen möchtet:</p>
-          <ul>
-            <li>Westley Weimers <em>&quot;Ascension&quot;</em></li>
-            <li>DavidWs <em>&quot;Wheels of Prophecy&quot;</em></li>
-            <li>SimDing0s <em>&quot;Quest Pack&quot;</em> und ihre Unterkomponente <em>&quot;Überarbeitete Höllenprüfung&quot;</em></li>
-          </ul>
-          <p>Die folgenden Mods werden berücksichtigt, wenn sie vor dieser Mod installiert wurden:</p>
-          <ul>
-            <li><em>&quot;Unfinished Business&quot;</em> und ihre Unterkomponente <em>&quot;Kalah und was ihm versprochen wurde&quot;</em></li>
-            <li><em>&quot;Infinity Animations&quot;</em> und ihre Unterkomponente <em>&quot;Distinctive Genies&quot;</em></li>
-          </ul>
-          <!--<p>Die folgenden Mods können zusammen mit dem Djinngefährten zu beeiträchtigungen führen:</p>
-          <ul>
-            <li>keine</li>
-          </ul>-->
-          <p>Diese Mod verändert eine Vielzahl von Spieldateien. Um die höchste Kompatibilität zu gewährleisten, sollte diese Mod so spät wie möglich in der Modreihenfolge installiert werden. Falls Ihr einen Fehler findet, der von dieser Mod ausgelöst wurde, könnt Ihr ihn im <a href="https://kerzenburg.baldurs-gate.eu/showthread.php?t=43956">Kerzenburg Forum</a>, <a href="http://www.shsforums.net/forum/651-djinni-companion/">SHS Forum</a> oder <a href="https://forums.beamdog.com/discussion/41108/mod-afaaq-the-djinni-companion-for-bg2-and-bg2-ee-released/">Beamdog Forum</a> melden.</p>
-          <address>
-            <a href="#top">ZURÜCK ZUM ANFANG</a>
-          </address>
+      <!-- ================== I N S T A L L A T I O N ================== -->
+      <section id="installation">
+        <h2>Installation</h2>
+        <p>Dies ist eine WeiDU Mod. Das bedeutet, sie ist sehr einfach zu installieren. Entpackt das komprimierte Mod-Archiv in das Installationsverzeichnis Eues Spiels und startet entweder <em>„setup-DjinniCompanion.exe”</em> (Windows) oder <em>„setup-DjinniCompanion”</em> (macOS). Folgt den Anweisungen im Textfenster und die Mod ist startbereit.</p>
+        <p>Um die Mod zu deinstallieren, startet <em>„setup-DjinniCompanion.exe”</em> und folgt den Anweisungen.</p>
+        <hr class="spacer" />
+        <h3>Kompatibilität und Installationsreihenfolge</h3>
+        <p>Die Mod lässt sich in <em>Baldur's Gate II: Thron des Bhaal</em>, <em>Baldur's Gate Trilogie (BGT)</em>, <em>Baldur's Gate II: Enhanced Edition</em> oder <em>Icewind Dale: Enhanced Edition</em> installieren. Die <em>Enhanced Edition Trilogy (EET)</em> wird ebenfalls unterstützt.</p>
+        <p>Ihr könnt die Mod jederzeit während des Spielverlaufs installieren, solange noch keine Aufgaben in Handelstreff angefangen wurden. Allerdings empfehle ich, diese Mod so früh wie möglich im Spielverlauf zu installieren, um die Chancen zu erhöhen, dass ein bestimmtes Abenteuer ausgelöst wird.</p>
+        <hr class="spacer" />
+        <p>Die folgenden Mods müssen VOR dieser Mod installiert werden, falls Ihr sie nutzen möchtet:</p>
+        <ul>
+          <li>Westley Weimers <em>„Ascension”</em></li>
+          <li>DavidWs <em>„Wheels of Prophecy”</em></li>
+          <li>SimDing0s <em>„Quest Pack”</em> und ihre Unterkomponente <em>„Überarbeitete Höllenprüfung”</em></li>
+        </ul>
+        <hr class="spacer" />
+        <p>Die folgenden Mods werden berücksichtigt, wenn sie vor dieser Mod installiert wurden:</p>
+        <ul>
+            <li><em>„Unfinished Business”</em> und ihre Unterkomponente <em>„Kalah und was ihm versprochen wurde”</em></li>
+            <li><em>„Infinity Animations”</em> und ihre Unterkomponente <em>„Distinctive Genies”</em></li>
+        </ul>
+        <!--<p>Die folgenden Mods können zusammen mit dem Djinngefährten zu Beeinträchtigungen führen:</p>
+        <ul>
+          <li>keine</li>
+        </ul>-->
+        <hr class="spacer" />
+        <p>Diese Mod verändert eine Vielzahl von Spieldateien. Um die höchste Kompatibilität zu gewährleisten, sollte diese Mod so spät wie möglich in der Modreihenfolge installiert werden. Falls Ihr einen Fehler findet, der von dieser Mod ausgelöst wurde, könnt Ihr ihn im <a href="https://kerzenburg.baldurs-gate.eu/showthread.php?t=43956">Kerzenburg Forum</a>, <a href="http://www.shsforums.net/forum/651-djinni-companion/">SHS Forum</a> oder <a href="https://forum.baldursgate.com/discussion/41108/mod-afaaq-the-djinni-companion-for-bg2-and-bg2-ee-released/">Beamdog Forum</a> melden.</p>
+        <div class="back">
+          <a class="novisit" href="#top">ZURÜCK ZUM ANFANG</a>
         </div>
+      </section>
 
-        <hr class="divider" />
-
-        <!-- ================== C O M P O N E N T S ================== -->
-        <a name="component" id="component"></a>
-        <div class="content">
-          <h2>Modkomponenten</h2>
-          <hr class="floatfix" />
-          <ol style="margin-right: 3rem">
-            <li>
-              Die Hauptkomponente kommt in zwei Varianten daher:<br />
-              <strong>Vollversion:</strong> (empfohlen) Diese Komponente installiert den Dschinn Afaaq zusammen mit allen Abenteuern, neuen Gebieten, Dialogen, Kommentaren, usw.<br />
-              <br />
-              <strong>Eingeschränkte Version:</strong> Diese Komponente installiert ausschließlich den Dschinn und seine magische Lampe. Sie ist vor allem auf Spieler ausgerichtet, die lediglich an einem weiteren Kampfgefährten interessiert sind.<br /><br />
-            </li>
-            <li><strong>IWD:EE-Version:</strong> Diese Komponente verhält sich ähnlich wie die <em>Eingeschränkte Version</em>, kann aber in <em>Icewind Dale: Enhanced Edition</em> installiert werden. Sie installiert den Dschinn, seine magische Lampe und ein Abenteuer, das an seine Gegenwart in der Gruppe geknüpft ist.<br /><em>Hinweis: Diese Komponente muss nicht installiert werden, wenn IWD:EE in die Enhanced Edition Trilogy integriert werden soll.</em><br /><br /></li>
-            <li><strong>Banter Beschleunigungsskript:</strong> (nur für Vollversion) Legt fest, wie oft Dialoge zwischen dem Dschinn und dem Protagonisten ausgelöst werden sollen. Mögliche Intervalle reichen von 15 Minuten bis 120 Minuten (Standard ist 60 Minuten).<br /><br /></li>
-            <li><strong>Afaaqs Bantermusik entfernen:</strong> (nur für Vollversion) Die Mod kommt mit einem kurzen orientalischen Soundtrack daher, der jedesmal abgespielt wird, wenn eine Unterhaltung zwischen den Dschinn und dem Protagonisten im Gange ist. Diese Komponente entfernt den Soundtrack.<br /><br /></li>
-            <li><strong>Alternatives Dschinnporträt von Ulb:</strong> Diese Komponente installiert ein alternatives Porträt für den Dschinn Afaaq. (<a href="images/AfaaqAlternate.jpg" target="_blank">Vorschau</a>)<br /><br /></li>
-            <li><strong>IWD:EE-Abenteuer entfernen:</strong> (nur für IWD:EE-Version) Das Abenteuer, welches an die Anwesenheit des Dschinns in der Gruppe geknüpft ist, beinhaltet einige recht anspruchsvolle Kämpfe. Mit dieser Komponente kann man dieses Abenteuer vollständig deaktivieren.<br /><br /></li>
-            <li><strong>Infinity Animationen für ausgewählte Kreaturen installieren:</strong> (nur für Vollversion) Diese Komponente installiert ein paar grafische Verbesserungen für einige ausgewählte Kreaturen. Setzt &quot;Infinity Animations&quot; und seine Unterkomponente &quot;Distinctive Genies&quot; voraus.</li>
-          </ol>
-          <address>
-            <a href="#top">ZURÜCK ZUM ANFANG</a>
-          </address>
+      <!-- ================== C O M P O N E N T S ================== -->
+      <section id="components">
+        <h2>Modkomponenten</h2>
+        <ol class="gappedlist">
+          <li>
+            <p>Die Hauptkomponente kommt in zwei Varianten daher:</p>
+            <p><strong>Vollversion:</strong> (empfohlen) Diese Komponente installiert den Dschinn Afaaq zusammen mit allen Abenteuern, neuen Gebieten, Dialogen, Kommentaren, usw.</p>
+            <p><strong>Eingeschränkte Version:</strong> Diese Komponente installiert ausschließlich den Dschinn und seine magische Lampe. Sie ist vor allem auf Spieler ausgerichtet, die lediglich an einem weiteren Kampfgefährten interessiert sind.</p>
+          </li>
+          <li>
+            <p><strong>IWD:EE-Version:</strong> Diese Komponente verhält sich ähnlich wie die <em>Eingeschränkte Version</em>, kann aber in <em>Icewind Dale: Enhanced Edition</em> installiert werden. Sie installiert den Dschinn, seine magische Lampe und ein Abenteuer, das an seine Gegenwart in der Gruppe geknüpft ist.</p>
+            <p><em>Hinweis: Diese Komponente muss nicht installiert werden, wenn IWD:EE in die Enhanced Edition Trilogy integriert werden soll.</em></p>
+          </li>
+          <li>
+            <p><strong>Banter Beschleunigungsskript:</strong> (nur für Vollversion) Legt fest, wie oft Dialoge zwischen dem Dschinn und dem Protagonisten ausgelöst werden sollen. Mögliche Intervalle reichen von 15 Minuten bis 120 Minuten (Standard ist 60 Minuten).</p>
+            <p><em>Hinweis: Nur Gespräche zwischen dem Dschinn und dem Protagonisten sind davon betroffen.</em></p>
+          </li>
+          <li>
+            <p><strong>Afaaqs Bantermusik entfernen:</strong> (nur für Vollversion) Die Mod kommt mit einem kurzen orientalischen Soundtrack daher, der jedesmal abgespielt wird, wenn eine Unterhaltung zwischen den Dschinn und dem Protagonisten im Gange ist. Diese Komponente entfernt den Soundtrack.</p>
+          </li>
+          <li>
+            <p><strong>Alternatives Dschinnporträt von Ulb:</strong> Diese Komponente installiert ein alternatives Porträt für den Dschinn Afaaq. (<a href="images/AfaaqAlternate.jpg" target="_blank">Vorschau</a>)</p>
+          </li>
+          <li>
+            <p><strong>IWD:EE-Abenteuer entfernen:</strong> (nur für IWD:EE-Version) Das Abenteuer, welches an die Anwesenheit des Dschinns in der Gruppe geknüpft ist, beinhaltet einige recht anspruchsvolle Kämpfe. Mit dieser Komponente kann man dieses Abenteuer vollständig deaktivieren.</p>
+          </li>
+          <li>
+            <p><strong>Infinity Animationen für ausgewählte Kreaturen installieren:</strong> (nur für Vollversion) Diese Komponente installiert ein paar grafische Verbesserungen für einige ausgewählte Kreaturen. Setzt „Infinity Animations” und seine Unterkomponente „Distinctive Genies” voraus.</p>
+          </li>
+        </ol>
+        <div class="back">
+          <a class="novisit" href="#top">ZURÜCK ZUM ANFANG</a>
         </div>
+      </section>
 
-        <hr class="divider" />
-
-        <!-- ================== D E T A I L S ================== -->
-        <a name="details" id="details"></a>
-        <div class="content">
-          <h2>Einzelheiten</h2>
-          <p>Afaaq ist ein Dschinn &#150; ein Genie der elementaren Luftebene. Selbst für Genies ist er schon sehr alt. Die unzähligen Ereignisse, die er in seinem Leben erfuhr, haben ihre Spuren in seiner Persönlichkeit hinterlassen. Er wirkt zurückhaltend und strahlt eine trübsinnige, manchmal sogar schwermütige Aura aus. Afaaq ist ernster als die meisten seiner Art und tendiert zu langatmigen und verschlungenen Ausführungen. Er respektiert Weisheit und Aufgeschlossenheit, toleriert aber auch bis zu einem gewissen Grad törichtes Verhalten. Alles andere kann er Euch selbst erzählen.</p>
-          <p>Bei Eurem ersten Kontakt kommt er mit seinem eigenen verzauberten Krummsäbel daher und besitzt eine kleine aber feine Auswahl an Zaubersprüchen und einzigartigen Fähigkeiten. Der Dschinn kann ähnlich wie ein reguläres Gruppenmitglied Erfahrung sammeln und steigt automatisch auf. Je nachdem welche Entscheidungen im Spielverlauf getroffen wurden, kann er später noch sehr viel mächtiger werden.</p>
-          <h5>Anfängliche Eigenschaften</h5>
-          <ul>
+      <!-- ================== D E T A I L S ================== -->
+      <section id="details">
+        <h2>Einzelheiten</h2>
+        <p>Afaaq ist ein Dschinn &#150; ein Genie der elementaren Luftebene. Selbst für Genies ist er schon sehr alt. Die unzähligen Ereignisse, die er in seinem Leben erfuhr, haben ihre Spuren in seiner Persönlichkeit hinterlassen. Er wirkt zurückhaltend und strahlt eine trübsinnige, manchmal sogar schwermütige Aura aus. Afaaq ist ernster als die meisten seiner Art und tendiert zu langatmigen und verschlungenen Ausführungen. Er respektiert Weisheit und Aufgeschlossenheit, toleriert aber auch bis zu einem gewissen Grad törichtes Verhalten. Alles andere kann er Euch selbst erzählen.</p>
+        <p>Bei Eurem ersten Kontakt kommt er mit seinem eigenen verzauberten Krummsäbel daher und besitzt eine kleine aber feine Auswahl an Zaubersprüchen und einzigartigen Fähigkeiten. Der Dschinn kann ähnlich wie ein reguläres Gruppenmitglied Erfahrung sammeln und steigt automatisch auf. Je nachdem welche Entscheidungen im Spielverlauf getroffen wurden, kann er später noch sehr viel mächtiger werden.</p>
+        <hr class="spacer" />
+        <h3>Anfängliche Eigenschaften</h3>
+        <ul>
             <li>Klasse: Kämpfer/Magier auf Stufe 10/11</li>
             <li>Gesinnung: Chaotisch Gut</li>
             <li>Stärke: 15</li>
@@ -146,310 +156,397 @@
             <li>Intelligenz: 15</li>
             <li>Weisheit: 16</li>
             <li>Charisma: 11</li>
+        </ul>
+        <p>Um mehr über den Dschinn zu erfahren könnt Ihr mit ihm reden, egal ob er sich außerhalb oder innerhalb seiner magischen Lampe befindet. Er wird Euch die meisten Eurer Fragen ausführlich beantworten.</p>
+        <div class="back">
+          <a class="novisit" href="#top">ZURÜCK ZUM ANFANG</a>
+        </div>
+      </section>
+
+      <!-- ================== F A Q ================== -->
+      <section id="faq">
+        <h2>Häufig gestellte Fragen (Spoilerwarnung!)</h2>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Wo kann ich den Dschinn finden?</summary>
+          <ul>
+            <li data="A"><em>(Baldur's Gate II)</em> Ihr könnt den Dschinn während Eurer Handelstreff-Abenteuer finden.</li>
+            <li data="A"><em>(Icewind Dale)</em> Ihr könnt den Dschinn irgendwo im „Drachenauge” finden.</li>
           </ul>
-          <p>Um mehr über den Dschinn zu erfahren könnt Ihr mit ihm reden, egal ob er sich außerhalb oder innerhalb seiner magischen Lampe befindet. Er wird Euch die meisten Eurer Fragen ausführlich beantworten.</p>
-          <address>
-            <a href="#top">ZURÜCK ZUM ANFANG</a>
-          </address>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Kannst Du mir genauer sagen, wo ich den Dschinn finden kann?</summary>
+          <ul>
+            <li data="A"><em>(Vollversion)</em> Das Abenteuer um den Dschinn zu finden startet mit der Attacke auf Adratha, der Kräuterfrau im Druidenhain. Sie ist der verschleierte Rakshasa.</li>
+            <li data="A"><em>(Eingeschränkte Version)</em> Ihr könnt den Dschinn im Besitz von Adratha, der Kräuterfrau im Druidenhain, finden, nachdem Ihr sie besiegt habt.</li>
+            <li data="A"><em>(IWD:EE-Version)</em> Ihr findet den Dschinn in den Überresten von Yxunomei, der derzeitigen Herrscherin des Drachenauges.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Was hat es eigentlich mit der Vollversion und der eingeschränkten Version der Mod auf sich?</summary>
+          <ul>
+            <li data="A">Die Vollversion beinhaltet alles was die Mod bieten kann. Das beinhaltet den Dschinn, diverse Abenteuer, neue Gebiete, viele Dialoge und mehr. Die eingeschränkte Version bietet lediglich den Dschinn und seine magische Lampe an, ohne Abenteuer, neue Gebiete oder Dialoge. Sie ist mehr für Spieler gedacht, die nur an mehr Kampfkraft interessiert sind oder anderweitig kein Interesse an Abenteuer und Dialoge haben. In Icewind Dale ist sie die einzige Option, um den Dschinn mit dabeizuhaben.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Wie nützlich ist der Dschinn wenn er der Gruppe nicht regulär beitritt?</summary>
+          <ul>
+            <li data="A">Da er eher wie eine Vertrauter oder eine beschworene Kreatur nebenher läuft, gibt es auch kein Zugriff auf sein Inventar oder Charakterbildschirm. Seine Zauberspruchauswahl ist ebenfalls festgelegt, allerding kann sie sich im Laufe des Spiels erweitern. Um diesen Einschränkungen entgegenzuwirken, besitzt er einige interessante Fähigkeiten und jede Menge Optionen wie man mit ihm interagieren kann. Es gibt ein sehr umfangreiches PID (vom Spieler initiierter Dialog) und man kann auch mit seiner Lampe kommunizieren. Es gibt noch mehr, aber das solltet Ihr selbst herausfinden. &#x1f609;</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Gibt es Abenteuer?</summary>
+          <ul>
+            <li data="A"><em>(nur für Vollversion)</em> Jede Menge sogar. Im Spielverlauf kann man sich in bis zu fünf mehr oder weniger umfangreichen Abenteuern austoben. Einige Abenteuer sind allerdings optional oder hängen davon ab, wie ein anderes Abenteuer gelöst wurde.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Kommt Afaaq auch mit bösen Charakteren zurecht?</summary>
+          <ul>
+            <li data="A">Afaaq ist ziemlich tolerant, was die Gesinnung seiner Begleiter angeht. Allerdings wird er nicht allen Entscheidungen zustimmen, und wenn er sich zu sehr misshandelt fühlt, kann es auch zum Kampf führen. Es kann sich aber auch lohnen, ihn mit einem bösen Protagonisten zu spielen, da einige Abenteuer zusätzliche Lösungswege für böse Charaktere bereithält.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Gibt es eine Romanze mit dem Dschinn?</summary>
+          <ul>
+            <li data="A">Nein. Es gibt aber eine Art Freundschaftssystem. Während des Spielverlaufs kann sein Respekt dem Protagonisten gegenüber steigen oder fallen, je nachdem wie bestimmte Entscheidungen getroffen werden. Das hat großen Einfluss auf ein bestimmtes Ereignis im späteren Spielverlauf.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Wie kommt er mit anderen NSCs zurecht?</summary>
+          <ul>
+            <li data="A">Zur Zeit gibt es noch nicht so viele Geplänkel mit den NSCs, daher kommt er mit ihnen recht gut zurecht. Das wird sich aber irgendwann ändern. Er kommt generell mit gleichgesinnten Charakteren besser zurecht, aber er toleriert auch böse Zeitgenossen bis zu einem bestimmten Grad. Das bedeutet nicht, dass es nicht zu Überraschungen mit Korgan, Edwin und Co. kommen kann.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Wird es irgendwann Crossmod-Inhalte geben?</summary>
+          <ul>
+            <li data="A">Das Bantersystem unterstützt Crossmod-Inhalte mit wenigen Einschränkungen. Die offiziellen Bioware/Beamdog NSCs haben aber erstmal eine höhere Priorität</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Ich möchte, dass Afaaq sich in seine Lampe zurückzieht. Wie geht das?</summary>
+          <ul>
+            <li data="A">Ihr könnt ihn fragen. Klickt dazu auf die „Gespräch” Schaltfläche in der Symbolleiste (oder drücke F1) und wählt den Dschinn aus. Er wird eine Dialog starten, der unter anderem eine Option enthält, um ihn in seine Lampe zu schicken. Alternativ kann man auch Afaaqs Schnellmenü im „Gegenstand benutzen” Slot auswählen oder man zwingt ihn in die Lampe über die Gesprächsoption der Lampe selbst.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Afaaq ist schwer verletzt. Wie kann ich ihn heilen?</summary>
+          <ul>
+            <li data="A">Ihr könnt ihn mit Heilungszaubern heilen. Außerdem kann man ihm Heilungstränke anbieten. Dafür muss sich der entsprechende Trank im Inventar des Protagonisten befinden, bevor Ihr ein Gespräch mit ihm anfangt. Wenn er verletzt ist, gibt es eine Gesprächsoption, um ihm einen Trank zur sofortigen Anwendung zu geben. Andernfalls kann man ihm auch einen oder mehrere Tränke zur späteren Verwendung anbieten. Das funktioniert auch mit anderen Tränken wenn er vergiftet oder krank ist.
+              <p><em><strong>Hinweis:</strong> Heilungszauber können in IWD:EE nicht mehr auf extraplanare Kreaturen (wie z.B. Dschinns) angewendet werden. Ihr müsst Euch in dem Fall auf Heilungstränke oder Afaaqs eigene Regenerationsfähigkeit beschränken.</em></p>
+            </li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Manchmal sehe ich eigenartige Meldungen im Spielkonsolenfenster, die Afaaq als Vertrauten bezeichnen.</summary>
+          <ul>
+            <li data="A">Diese Meldungen sind harmlos und werden nur angezeigt, wenn Afaaq allein das Gebiet verlassen will oder kaufen bzw. verkaufen will. Diese Meldungen sind leider im Spiel fest verdrahtet und können daher nicht verändert werden.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Wird Afaaq im Verlauf des Spiels stärker?</summary>
+          <ul>
+            <li data="A"><em>(Vollversion)</em> Ja. Er kann ähnlich wie ein reguläres Gruppenmitglied aufsteigen. Man kann den Dschinn jederzeit fragen, um sich seine gegenwärtigen Eigenschaften anzusehen. Zu einem bestimmten Zeitpunkt kann Afaaq noch viel mächtiger werden. Er bekommt außerdem neue Fertigkeiten und Zaubersprüche. Ob oder wie das erreicht wird, hängt von den Entscheidungen der Gruppe im Spielverlauf ab.</li>
+            <li data="A"><em>(Eingeschränkte Version)</em> Wie in der <em>Vollversion</em> kann er wie ein reguläres Gruppenmitglied aufsteigen. Zu einem bestimmten Zeitpunkt kann Afaaq noch viel mächtiger werden.</li>
+            <li data="A"><em>(IWD:EE-Version)</em> Wie in der <em>Vollversion</em> oder <em>Eingeschränkten Version</em> kann er wie ein reguläres Gruppenmitglied aufsteigen. Ihr habt außerdem die Wahl zwischen zwei Optionen, um den Dschinn noch viel mächtiger werden zu lassen. Eine davon kann während des "Herz des Winters" Abenteuers ausgelöst werden, indem man mit einer bestimmten Person redet, der Ihr früher oder später über den Weg lauft. Die andere Option kann man bei einem zwielichtigen Händler im versteckten Lager der Svirfneblins in Unter-Dorntief auslösen.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Afaaq hat einen Kampf mit mir angefangen. Wie wirkt sich das auf das Spiel aus?</summary>
+          <ul>
+            <li data="A"><em>(nur für Vollversion)</em> Es gibt einige Punkte im Spiel, in dem es zu einem Kampf eskalieren kann. Nachdem der Kampf gewonnen wurde, befindet sich der Dschinn völlig unter der Kontrolle des Protagonisten. Aufgrund dessen gibt es keine Banter mehr und es sind einige zukünftige Ereignisse betroffen. Alles andere funktioniert wie gewohnt.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Abenteuer „Vergeltung”: Ich habe den Gegenstand benutzt, den die Rakshasas hinterlassen haben, und er hat sich einfach in Luft aufgelöst. Was nun?</summary>
+          <ul>
+            <li data="A"><em>(nur für Vollversion)</em> Ihr habt leider zu lange gewartet, um den Rakshasas zu folgen. Das Zeitlimit beträgt etwa 6 Tage. Der Dschinn wurde inzwischen wahrscheinlich schon vernichtet oder befindet sich außerhalb Eurer Reichweite. Auf jeden Fall gibt es keine Möglichkeit mehr, ihn zurückzubekommen.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Abenteuer „Vergeltung”: Wie kann ich die Sperren um die Tempelanlage überwinden?</summary>
+          <ul>
+            <li data="A"><em>(nur für Vollversion)</em> Ihr benötigt bestimmte Gegenstände für die Steckplätze neben der Sperre. Ihr könnt sie alle irgendwo in der Nähe finden oder „verdienen”. Schaut in jeden Winkel und klickt alles an, was man anklicken kann.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Abenteuer „Eine unerwartete Begegnung”: Ich habe die Höhle betreten, aber sie scheint verlassen zu sein. Wie geht es jezt weiter?</summary>
+          <ul>
+            <li data="A"><em>(nur für Vollversion)</em> Leider gar nicht mehr. Ihr müsst die Aufgabe starten, bevor Eure Gruppe am Beschwörungsritual der Drow in Ust Natha teilnimmt. Afaaq sollte Euch bereits ein- oder zweimal daran erinnert haben, der Höhle einen Besuch abzustatten. Ihr könnt Eure Reise fortsetzen, auch ohne diese Aufgabe zu beenden. Allerdings werden dadurch bestimmte zukünftige Ereignisse etwas schwieriger zu lösen sein.</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Abenteuer „Eine unerwartete Begegnung”: Wie kann ich Haus Arabani betreten?</summary>
+          <ul>
+            <li data="A"><em>(nur für Vollversion)</em> Ihr benötigt einen Schutzstein, um das Gebäude zu betreten. Da Haus Arabani zu den kleineren Häusern gehört, haben sie Bündnisse mit anderen Häusern geschmiedet, um zu überleben. Vielleicht könnt Ihr das zu Eurem Vorteil ausnutzen?</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Abenteuer „Wer mit dem Feuer spielt...”: Wie kann ich das Wasserbecken in der Schmugglerhöhle betreten?</summary>
+          <ul>
+            <li data="A"><em>(nur für Vollversion)</em> Zuerst benötigt Ihr die Erlaubnis der Schmuggler. Darüber hinaus müsst Ihr Euch irgendwie vor der Hitze schützen. Vielleicht können Euch die Dorfbewohner, Schmuggler oder Söldner weiterhelfen?</li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Abenteuer „Lose Enden”: Einer der Kämpfe ist mir zu schwer. Kann ich ihn überspringen?</summary>
+          <ul>
+            <li data="A"><em>(Nur für IWD:EE-Version)</em> Ja, es ist möglich mit Hilfe eines einfachen Tricks. Alle Ereignisse dieses Abenteuers werden nur ausgelöst, wenn sich die Dschinnlampe im Besitz Eurer Gruppenmitglieder befindet. Eine von Afaaqs Gespächsoptionen bietet Euch die Möglichkeit, Gegenstände in seinem Gepäck zu verstauen. Da Afaaq kein reguläres Gruppenmitglied ist, könnt Ihr einfach die Lampe in seine Obhut geben.
+              <p>Ihr könnt eine Kampf überspringen, indem Ihr die Lampe in Afaaqs Gepäck verstaut, bevor Ihr das entsprechende Gebiet betretet. Nachdem Ihr das Gebiet verlassen habt, solltet Ihr die Lampe wieder in Eurem eigenen Gepäck verstauen. Die folgenden Orte könnten Kämpfe beinhalten: das Gebiet mit dem Höhleneingang zum Drachenauge, die Unterreich-Höhle, die zu Dorntief führt und das Gebiet mit dem Höhleneingang zu Unter-Dorntief. Es ist gut möglich, dass Ihr das komplette Abenteuer beendet, wenn Ihr einen der Kämpfe überspringt.</p>
+              <p><em><strong>Wichtig:</strong> Der Dschinn ist für immer verloren, sollte er sterben während sich die Lampe noch in seinem Gepäck befindet.</em></p>
+            </li>
+          </ul>
+        </details>
+        <details class="faq">
+          <summary title="Anklicken um Antworten ein- oder auszublenden">F: Ich möchte mein Spiel in "Thron des Bhaal" oder "Herz des Winters" beginnen. Wo finde ich den Dschinn?</summary>
+          <ul>
+            <li data="A"><em>(Vollversion)</em> Leider gar nicht. Diese Mod wurde so entworfen, dass man sie nur im SvA-Teil beginnen kann.</li>
+            <li data="A"><em>(Eingeschränkte Version)</em> Ihr könnt den Dschinn finden, nachdem Ihr Illasera besiegt habt.</li>
+            <li data="A"><em>(IWD:EE-Version)</em> Die Dschinnlampe ist irgendwo im Schrein von Waukeen in Einsamwald versteckt.</li>
+          </ul>
+        </details>
+
+        <p id="hintbox" class="boxed" style="display: none">
+          <strong>Wusstet Ihr schon?</strong><button type="button" onclick="showNextHint('de', 'hint')" style="margin-left: 0.8rem; padding: 0.2rem 0.5rem;">More</button>
+          <br />
+          <span id="hint">...</span>
+        </p>
+        <div class="back">
+          <a class="novisit" href="#top">ZURÜCK ZUM ANFANG</a>
         </div>
+      </section>
 
-        <hr class="divider" />
-
-        <!-- ================== F A Q ================== -->
-        <a name="faq" id="faq"></a>
-        <div class="content">
-          <h2>Häufig gestellte Fragen (Spoilerwarnung!)</h2>
-          <p>
-            <span class="t3">F:</span><strong>Wo kann ich den Dschinn finden?</strong><br />
-            <span class="t3">A:</span><em>(Baldur's Gate II)</em> Ihr könnt den Dschinn während Eurer Handelstreff-Abenteuer finden.<br />
-            <span class="t3">A:</span><em>(Icewind Dale)</em> Ihr könnt den Dschinn irgendwo im "Drachenauge" finden.<br />
-            <br />
-            <span class="t3">F:</span><strong>Kannst Du mir genauer sagen, wo ich den Dschinn finden kann?</strong><br />
-            <span class="t3">A:</span><em>(Vollversion)</em> Das Abenteuer um den Dschinn zu finden startet mit der Attacke auf Adratha, der Kräuterfrau im Druidenhain. Sie ist der verschleierte Rakshasa.<br />
-            <span class="t3">A:</span><em>(Eingeschränkte Version)</em> Ihr könnt den Dschinn im Besitz von Adratha, der Kräuterfrau im Druidenhain, finden, nachdem Ihr sie besiegt habt.<br />
-            <span class="t3">A:</span><em>(IWD:EE-Version)</em> Ihr findet den Dschinn in den Überresten von Yxunomei, der derzeitigen Herrscherin des Drachenauges.<br />
-            <br />
-            <span class="t3">F:</span><strong>Was hat es eigentlich mit der Vollversion und der eingeschränkten Version der Mod auf sich?</strong><br />
-            <span class="t3">A:</span>Die Vollversion beinhaltet alles was die Mod bieten kann. Das beinhaltet den Dschinn, diverse Abenteuer, neue Gebiete, viele Dialoge und mehr. Die eingeschränkte Version bietet lediglich den Dschinn und seine magische Lampe an, ohne Abenteuer, neue Gebiete oder Dialoge. Sie ist mehr für Spieler gedacht, die nur an mehr Kampfkraft interessiert sind oder anderweitig kein Interesse an Abenteuer und Dialoge haben. In Icewind Dale ist sie die einzige Option, um den Dschinn mit dabeizuhaben.<br />
-            <br />
-            <span class="t3">F:</span><strong>Wie nützlich ist der Dschinn wenn er der Gruppe nicht regulär beitritt?</strong><br />
-            <span class="t3">A:</span>Da er eher wie eine Vertrauter oder eine beschworene Kreatur nebenher läuft, gibt es auch kein Zugriff auf sein Inventar oder Charakterbildschirm. Seine Zauberspruchauswahl ist ebenfalls festgelegt, allerding kann sie sich im Laufe des Spiels erweitern. Um diesen Einschränkungen entgegenzuwirken, besitzt er einige interessante Fähigkeiten und jede Menge Optionen wie man mit ihm interagieren kann. Es gibt ein sehr umfangreiches PID (vom Spieler initiierter Dialog) und man kann auch mit seiner Lampe kommunizieren. Es gibt noch mehr, aber das solltet Ihr selbst herausfinden. ;)<br />
-            <br />
-            <span class="t3">F:</span><strong>Gibt es Abenteuer?</strong><br />
-            <span class="t3">A:</span><em>(nur für Vollversion)</em> Jede Menge sogar. Im Spielverlauf kann man sich in bis zu fünf mehr oder weniger umfangreichen Abenteuern austoben. Einige Abenteuer sind allerdings optional oder hängen davon ab, wie ein anderes Abenteuer gelöst wurde.<br />
-            <br />
-            <span class="t3">F:</span><strong>Kommt Afaaq auch mit bösen Charakteren zurecht?</strong><br />
-            <span class="t3">A:</span>Afaaq ist ziemlich tolerant, was die Gesinnung seiner Begleiter angeht. Allerdings wird er nicht allen Entscheidungen zustimmen, und wenn er sich zu sehr misshandelt fühlt, kann es auch zum Kampf führen. Es kann sich aber auch lohnen, ihn mit einem bösen Protagonisten zu spielen, da einige Abenteuer zusätzliche Lösungswege für böse Charaktere bereithält.<br />
-            <br />
-            <span class="t3">F:</span><strong>Gibt es eine Romanze mit dem Dschinn?</strong><br />
-            <span class="t3">A:</span>Nein. Es gibt aber eine Art Freundschaftssystem. Während des Spielverlaufs kann sein Respekt dem Protagonisten gegenüber steigen oder fallen, je nachdem wie bestimmte Entscheidungen getroffen werden. Das hat großen Einfluss auf ein bestimmtes Ereignis im späteren Spielverlauf.<br />
-            <br />
-            <span class="t3">F:</span><strong>Wie kommt er mit anderen NSCs zurecht?</strong><br />
-            <span class="t3">A:</span>Zur Zeit gibt es noch nicht so viele Geplänkel mit den NSCs, daher kommt er mit ihnen recht gut zurecht. Das wird sich aber irgendwann ändern. Er kommt generell mit gleichgesinnten Charakteren besser zurecht, aber er toleriert auch böse Zeitgenossen bis zu einem bestimmten Grad. Das bedeutet nicht, dass es nicht zu Überraschungen mit Korgan, Edwin und Co. kommen kann.<br />
-            <br />
-            <span class="t3">F:</span><strong>Wird es irgendwann Crossmod-Content geben?</strong><br />
-            <span class="t3">A:</span>Das Bantersystem unterstützt Crossmod Content mit wenigen Einschränkungen. Die offiziellen Bioware/Beamdog NSCs haben aber erstmal eine höhere Priorität.<br />
-            <br />
-            <span class="t3">F:</span><strong>Ich möchte, dass Afaaq sich in seine Lampe zurückzieht. Wie geht das?</strong><br />
-            <span class="t3">A:</span>Ihr könnt ihn fragen. Klickt dazu auf die &quot;Gespräch&quot; Schaltfläche in der Symbolleiste (oder drücke F1) und wählt den Dschinn aus. Er wird eine Dialog starten, der unter anderem eine Option enthält, um ihn in seine Lampe zu schicken. Alternativ kann man auch Afaaqs Schnellmenü im &quot;Gegenstand benutzen&quot; Slot auswählen oder man zwingt ihn in die Lampe über die Gesprächsoption der Lampe selbst.<br />
-            <br />
-            <span class="t3">F:</span><strong>Afaaq ist schwer verletzt. Wie kann ich ihn heilen?</strong><br />
-            <span class="t3">A:</span>Ihr könnt ihn mit Heilungszaubern heilen. Außerdem kann man ihm Heilungstränke anbieten. Dafür muss sich der entsprechende Trank im Inventar des Protagonisten befinden, bevor Ihr ein Gespräch mit ihm anfangt. Wenn er verletzt ist, gibt es eine Gesprächsoption, um ihm einen Trank zur sofortigen Anwendung zu geben. Andernfalls kann man ihm auch einen oder mehrere Tränke zur späteren Verwendung anbieten. Das funktioniert auch mit anderen Tränken wenn er vergiftet oder krank ist. <br />
-            <strong>Hinweis:</strong> Heilungszauber können in IWD:EE nicht mehr auf extraplanare Kreaturen (wie z.B. Dschinns) angewendet werden. Ihr müsst Euch in dem Fall auf Heilungstränke oder Afaaqs eigene Regenerationsfähigkeit beschränken.<br />
-            <br />
-            <span class="t3">F:</span><strong>Manchmal sehe ich eigenartige Meldungen im Spielkonsolenfenster, die Afaaq als Vertrauten bezeichnen.</strong><br />
-            <span class="t3">A:</span>Diese Meldungen sind harmlos und werden nur angezeigt, wenn Afaaq allein das Gebiet verlassen will oder kaufen bzw. verkaufen will. Diese Meldungen sind leider im Spiel fest verdrahtet und können daher nicht verändert werden.<br />
-            <br />
-            <span class="t3">F:</span><strong>Wird Afaaq im Verlauf des Spiels stärker?</strong><br />
-            <span class="t3">A:</span><em>(Vollversion)</em> Ja. Er kann ähnlich wie ein reguläres Gruppenmitglied aufsteigen. Man kann den Dschinn jederzeit fragen, um sich seine gegenwärtigen Eigenschaften anzusehen. Zu einem bestimmten Zeitpunkt kann Afaaq noch viel mächtiger werden. Er bekommt außerdem neue Fertigkeiten und Zaubersprüche. Ob oder wie das erreicht wird, hängt von den Entscheidungen der Gruppe im Spielverlauf ab.<br />
-            <span class="t3">A:</span><em>(Eingeschränkte Version)</em> Wie in der <em>Vollversion</em> kann er wie ein reguläres Gruppenmitglied aufsteigen. Zu einem bestimmten Zeitpunkt kann Afaaq noch viel mächtiger werden.<br />
-            <span class="t3">A:</span><em>(IWD:EE-Version)</em> Wie in der <em>Vollversion</em> oder <em>Eingeschränkten Version</em> kann er wie ein reguläres Gruppenmitglied aufsteigen. Ihr habt außerdem die Wahl zwischen zwei Optionen, um den Dschinn noch viel mächtiger werden zu lassen. Eine davon kann während des "Herz des Winters" Abenteuers ausgelöst werden, indem man mit einer bestimmten Person redet, der Ihr früher oder später über den Weg lauft. Die andere Option kann man bei einem zwielichtigen Händler im versteckten Lager der Svirfneblins in Unter-Dorntief auslösen.<br />
-            <br />
-            <!--<span class="t3">F:</span><strong>Afaaq told me that he will leave me as soon as I have my soul back from Irenicus. Isn't he supposed to accompany my party throughout the whole game?</strong><br />
-            <span class="t3">A:</span><em>(Full Version only)</em> Not necessarily, he has a mind of his own. If he doesn't like you enough, he may decide to leave your presence. Your actions throughout the game decide whether his respect for you grows.<br />
-            <br />-->
-            <span class="t3">F:</span><strong>Afaaq hat einen Kampf mit mir angefangen. Wie wirkt sich das auf das Spiel aus?</strong><br />
-            <span class="t3">A:</span><em>(nur für Vollversion)</em> Es gibt einige Punkte im Spiel, in dem es zu einem Kampf eskalieren kann. Nachdem der Kampf gewonnen wurde, befindet sich der Dschinn völlig unter der Kontrolle des Protagonisten. Aufgrund dessen gibt es keine Banter mehr und es sind einige zukünftige Ereignisse betroffen. Alles andere funktioniert wie gewohnt.<br />
-            <br />
-            <span class="t3">F:</span><strong>Abenteuer &quot;Vergeltung&quot;: Wie kann ich die Sperren um die Tempelanlage überwinden?</strong><br />
-            <span class="t3">A:</span><em>(nur für Vollversion)</em> Ihr benötigt bestimmte Gegenstände für die Steckplätze neben der Sperre. Ihr könnt sie alle irgendwo in der Nähe finden oder &quot;verdienen&quot;.<br />
-            <br />
-            <span class="t3">F:</span><strong>Abenteuer &quot;Eine unerwartete Begegnung&quot;: Ich habe die Höhle betreten, aber sie scheint bereits verlassen zu sein. Wie komme ich weiter?</strong><br />
-            <span class="t3">A:</span><em>(nur für Vollversion)</em> Leider gar nicht mehr. Ihr müsst die Aufgabe starten, bevor Eure Gruppe am Beschwörungsritual der Drow in Ust Natha teilnimmt. Afaaq sollte Euch bereits ein- oder zweimal daran erinnert haben, der Höhle einen Besuch abzustatten. Ihr könnt Eure Reise fortsetzen, auch ohne diese Aufgabe zu beenden. Allerdings werden dadurch bestimmte zukünftige Ereignisse etwas schwieriger zu lösen sein.<br />
-            <br />
-            <span class="t3">F:</span><strong>Abenteuer &quot;Eine unerwartete Begegnung&quot;: Wie kann ich Haus Arabani betreten?</strong><br />
-            <span class="t3">A:</span><em>(nur für Vollversion)</em> Ihr benötigt einen Schutzstein, um das Gebäude zu betreten. Da Haus Arabani zu den kleineren Häusern gehört, haben sie Bündnisse mit anderen Häusern geschmiedet, um zu überleben. Vielleicht könnt Ihr das zu Eurem Vorteil ausnutzen?<br />
-            <br />
-            <span class="t3">F:</span><strong>Abenteuer &quot;Wer mit dem Feuer spielt...&quot;: Wie kann ich das Wasserbecken in der Schmugglerhöhle betreten?</strong><br />
-            <span class="t3">A:</span><em>(nur für Vollversion)</em> Zuerst benötigt Ihr die Erlaubnis der Schmuggler. Darüber hinaus müsst Ihr Euch irgendwie vor der Hitze schützen. Vielleicht können Euch die Dorfbewohner weiterhelfen?<br />
-            <br />
-            <span class="t3">F:</span><strong>Abenteuer &quot;Lose Enden&quot;: Einer der Kämpfe ist mir zu schwer. Kann ich ihn überspringen?</strong><br />
-            <span class="t3">A:</span><em>(Nur für IWD:EE-Version)</em> Ja, es ist möglich mit Hilfe eines einfachen Tricks. Alle Ereignisse dieses Abenteuers werden nur ausgelöst, wenn sich die Dschinnlampe im Besitz Eurer Gruppenmitglieder befindet. Eine von Afaaqs Gespächsoptionen bietet Euch die Möglichkeit, Gegenstände in seinem Gepäck zu verstauen. Da Afaaq kein reguläres Gruppenmitglied ist, könnt Ihr einfach die Lampe in seine Obhut geben.<br />
-            Ihr könnt eine Kampf überspringen, indem Ihr die Lampe in Afaaqs Gepäck verstaut, bevor Ihr das entsprechende Gebiet betretet. Nachdem Ihr das Gebiet verlassen habt, solltet Ihr die Lampe wieder in Eurem eigenen Gepäck verstauen. Die folgenden Orte könnten Kämpfe beinhalten: das Gebiet mit dem Höhleneingang zum Drachenauge, die Unterreich-Höhle, die zu Dorntief führt und das Gebiet mit dem Höhleneingang zu Unter-Dorntief. Es ist gut möglich, dass Ihr das komplette Abenteuer beendet, wenn Ihr einen der Kämpfe überspringt.<br />
-            <strong>Wichtig:</strong> Der Dschinn ist für immer verloren, sollte er sterben während sich die Lampe noch in seinem Gepäck befindet.<br />
-            <br />
-            <span class="t3">F:</span><strong>Ich möchte mein Spiel in "Thron des Bhaal" oder "Herz des Winters" beginnen. Wo finde ich den Dschinn?</strong><br />
-            <span class="t3">A:</span><em>(Vollversion)</em> Leider gar nicht. Diese Mod wurde so entworfen, dass man sie nur im SvA-Teil beginnen kann.<br />
-            <span class="t3">A:</span><em>(Eingeschränkte Version)</em> Ihr könnt den Dschinn finden, nachdem Ihr Illasera besiegt habt.<br />
-            <span class="t3">A:</span><em>(IWD:EE-Version)</em> Die Dschinnlampe ist irgendwo im Schrein von Waukeen in Einsamwald versteckt.<br />
-          </p>
-          <p id="hintbox" class="boxed" style="display: none">
-            <strong>Wusstet Ihr schon?</strong><input type="submit" value="Weiter" onclick="showNextHint('de', 'hint')" style="margin-left: 0.8rem; padding: 0.2rem 0.5rem;"></input>
-            <br />
-            <span id="hint">...</span>
-          </p>
-          <address>
-            <a href="#top">ZURÜCK ZUM ANFANG</a>
-          </address>
-        </div>
-
-        <hr class="divider" />
-
-        <!-- ================== T R O U B L E S H O O T I N G ================== -->
-        <a name="trouble" id="trouble"></a>
-        <div class="content">
-          <h2>Fehlerbehebung</h2>
-          <hr class="floatfix" />
-          <ol style="margin-right: 3rem">
-            <li><strong>Die Rückkehr des Dschinns in seine Lampe wurde unterbrochen. Er hat jetzt einen neutralen Auswahlkreis und der Mauszeiger ändert sich nicht wenn man ihn über den Dschinn bewegt.</strong><br />Das kann in Ausnahmefällen passieren, wenn sein Rückkehrprozess in die Lampe durch äußere Einwirkungen unterbrochen wird (z.B. durch heftige Kampfhandlungen). Ihr könnt versuchen, mit ihm zu reden, indem Ihr auf die Gesprächsschaltfläche klickt (oder die Taste F1 drückt) und dann den Dschinn auswählt. Sein Dialog kann jetzt der der Lampe sein. Wählt die Dialogoption "Du verhältst Dich seltsam. Möchtest Du das beheben?" aus. Danach sollte alles wieder funktionieren. Manchmal muss man zusätzlich das Spiel speichern und neu laden, um die Veränderungen zu erzwingen.<br /><br /></li>
-            <li><strong>Der Dschinn verhält sich ungewöhnlich. Er scheint nicht zu sterben, selbst wenn er schwer verletzt ist oder der Mauszeiger wandelt sich in den Gesprächszeiger, wenn man ihn über den Dschinn bewegt.</strong><br />Diese Probleme können ebenfalls durch äußere Einwirkungen ausgelöst werden. Auch hier versucht die Dialogoption "Du verhältst Dich seltsam. Möchtest Du das beheben?" auszuwählen, um das Problem zu beheben. Danach muss man unter Umständen das Spiel speichern und neu laden, um die Veränderungen zu erzwingen.<br /><br /></li>
-            <li><strong><em>(Nur für Vollversion)</em> Nachdem ich Adratha, die Kräuterfrau im Druidenhain, angegriffen habe, passiert nichts ungewöhnliches.</strong><br />Im normalen Spielverlauf sollte ein permanenter Teleporter entstehen sobald Adratha feindlich wird oder stirbt. Eine andere Mod könnte diesen Prozess stören. In diesem Fall solltet Ihr die verantwortliche Mod finden und deinstallieren.<br /> <strong>Wichtig:</strong> Ihr müsst einen Speicherstand benutzen, in dem Ihr noch nie die Hütte der Kräuterfrau betreten habt.<br /><br /></li>
-            <li><strong><em>(Nur für Vollversion)</em> Wenn ich die Schmugglerhöhle in Amkethran betreten habe, passiert nichts ungewöhnliches.</strong><br />Das passiert regulär in folgenden Situationen:<br /><br />
+      <!-- ================== T R O U B L E S H O O T I N G ================== -->
+      <section id="trouble">
+        <h2>Fehlerbehebung</h2>
+        <ol class="gappedlist">
+          <li><strong>Die Rückkehr des Dschinns in seine Lampe wurde unterbrochen. Er hat jetzt einen neutralen Auswahlkreis und der Mauszeiger ändert sich nicht wenn man ihn über den Dschinn bewegt.</strong>
+            <p>Das kann in Ausnahmefällen passieren, wenn sein Rückkehrprozess in die Lampe durch äußere Einwirkungen unterbrochen wird (z.B. durch heftige Kampfhandlungen). Ihr könnt versuchen, mit ihm zu reden, indem Ihr auf die Gesprächsschaltfläche klickt (oder die Taste F1 drückt) und dann den Dschinn auswählt. Sein Dialog kann jetzt der der Lampe sein.</p>
+            <p>Wählt die Dialogoption "Du verhältst Dich seltsam. Möchtest Du das beheben?" aus. Danach sollte alles wieder funktionieren. Manchmal muss man zusätzlich das Spiel speichern und neu laden, um die Veränderungen zu erzwingen.</p>
+          </li>
+          <li><strong>Der Dschinn verhält sich ungewöhnlich. Er scheint nicht zu sterben, selbst wenn er schwer verletzt ist oder der Mauszeiger wandelt sich in den Gesprächszeiger, wenn man ihn über den Dschinn bewegt.</strong>
+            <p>Diese Probleme können ebenfalls durch äußere Einwirkungen ausgelöst werden. Auch hier versucht die Dialogoption "Du verhältst Dich seltsam. Möchtest Du das beheben?" auszuwählen, um das Problem zu beheben. Danach muss man unter Umständen das Spiel speichern und neu laden, um die Veränderungen zu erzwingen.</p>
+          </li>
+          <li><strong><em>(Nur für Vollversion)</em> Nachdem ich Adratha, die Kräuterfrau im Druidenhain, angegriffen habe, passiert nichts ungewöhnliches.</strong>
+            <p>Im normalen Spielverlauf sollte ein permanenter Teleporter entstehen sobald Adratha feindlich wird oder stirbt. Eine andere Mod könnte diesen Prozess stören. In diesem Fall solltet Ihr die verantwortliche Mod finden und deinstallieren.</p>
+            <p><strong>Wichtig:</strong> Ihr müsst einen Speicherstand benutzen, in dem Ihr noch nie die Hütte der Kräuterfrau betreten habt.</p>
+          </li>
+          <li><strong><em>(Nur für Vollversion)</em> Wenn ich die Schmugglerhöhle in Amkethran betreten habe, passiert nichts ungewöhnliches.</strong>
+            <p>Das passiert regulär in folgenden Situationen:</p>
             <ul>
               <li>Wenn Ihr die Höhle zum ersten Mal betretet, ohne die magische Lampe zu besitzen.</li>
-              <li>Wenn Ihr die Höhle zum ersten Mal betretet, nachdem Ihr sowohl Abazigal als auch Sendai besiegt habt.<br /></li>
-            </ul><br />
-            Falls Ihr sicher seid, dass die obengenannten Bedingungen nicht zutreffen, dann gibt es wahrscheinlich eine andere Mod, die das Höhlenskript stört. In diesem Fall solltet Ihr die verantwortliche Mod finden und deinstallieren.<br /> <strong>Wichtig:</strong> Ihr müsst einen Speicherstand benutzen, in dem Ihr noch nie die Schmugglerhöhle betreten habt.<br /><br /></li>
-            <li><strong>Afaaqs Wirbelsturmfähigkeit gerät völlig außer Kontrolle wenn ich die Spieloption "Automatische Pause: Charakter zaubert" aktiviert habe.</strong><br />Dieser Effekt wird höchstwahrscheinlich durch einen Fehler in TobEx ausgelöst. Die Mod versucht die entsprechende TobEx-Option während der Installation zu deaktivieren, aber sie kann im Nachhinein durch den Spieler oder eine andere Mod wieder aktiviert worden sein. Um das Problem zu lösen, öffnet die Datei "TobEx_ini/TobExCore.ini", sucht nach der Option <em>"Cast Spell On Condition Mod"</em> und setzt sie auf 0. Falls diese Option nicht existiert, fügt die Zeile <em>"Cast Spell On Condition Mod=0"</em> (ohne Anführungsstriche) in die Sektion <em>"[Effect Opcodes]"</em> ein.<br /><br /></li>
-            <li><strong>Afaaq reagiert nicht mehr, wenn man ihn anspricht.</strong><br />In sehr seltenen Fällen kann dieser Zustand durch eine falsch gesetzte Variable verursacht worden sein. In diesem Fall kann man das Problem beheben, indem man die Konsole im Spiel öffnet und den Code <span class="code">CLUAConsole:SetGlobal("BanterActive","LOCALS",0)</span> in BG2 oder <span class="code">C:SetGlobal("BanterActive","LOCALS",0)</span> in BG2:EE oder IWD:EE eingibt, während sich der Mauszeiger über dem Dschinn befindet.<br /><strong>Tip:</strong> Der Einfachheit halber kann man den hier angezeigten Code in die Zwischenablage kopieren (z.B. mit Strg+C in Windows) und im Spiel mit Strg+V oder dem entsprechenden Tastenkürzel des Betriebssystems in die Konsole einfügen.</li>
-          </ol>
-          <address>
-            <a href="#top">ZURÜCK ZUM ANFANG</a>
-          </address>
+              <li>Wenn Ihr die Höhle zum ersten Mal betretet, nachdem Ihr sowohl Abazigal als auch Sendai besiegt habt.</li>
+            </ul>
+            <p>Falls Ihr sicher seid, dass die obengenannten Bedingungen nicht zutreffen, dann gibt es wahrscheinlich eine andere Mod, die das Höhlenskript stört. In diesem Fall solltet Ihr die verantwortliche Mod finden und deinstallieren.</p>
+            <p><strong>Wichtig:</strong> Ihr müsst einen Speicherstand benutzen, in dem Ihr noch nie die Schmugglerhöhle betreten habt.</p>
+          </li>
+          <li><strong>Afaaqs Wirbelsturmfähigkeit gerät völlig außer Kontrolle wenn ich die Spieloption "Automatische Pause: Charakter zaubert" aktiviert habe.</strong>
+            <p>Dieser Effekt wird höchstwahrscheinlich durch einen Fehler in TobEx ausgelöst. Die Mod versucht die entsprechende TobEx-Option während der Installation zu deaktivieren, aber sie kann im Nachhinein durch den Spieler oder eine andere Mod wieder aktiviert worden sein. Um das Problem zu lösen, öffnet die Datei "TobEx_ini/TobExCore.ini", sucht nach der Option <em>"Cast Spell On Condition Mod"</em> und setzt sie auf 0. Falls diese Option nicht existiert, fügt die Zeile <em>"Cast Spell On Condition Mod=0"</em> (ohne Anführungsstriche) in den Abschnitt <em>"[Effect Opcodes]"</em> ein.</p>
+          </li>
+          <li><strong>Afaaq reagiert nicht mehr, wenn man ihn anspricht.</strong>
+            <p>In sehr seltenen Fällen kann dieser Zustand durch eine falsch gesetzte Variable verursacht worden sein. In diesem Fall kann man das Problem beheben, indem man die Konsole im Spiel öffnet und den Code <span class="code">CLUAConsole:SetGlobal("BanterActive","LOCALS",0)</span> in BG2 oder <span class="code">C:SetGlobal("BanterActive","LOCALS",0)</span> in BG2:EE oder IWD:EE eingibt, während sich der Mauszeiger über dem Dschinn befindet.</p>
+            <p><strong>Tip:</strong> Der Einfachheit halber kann man den hier angezeigten Code in die Zwischenablage kopieren (z.B. mit Strg+C in Windows) und im Spiel mit Strg+V oder dem entsprechenden Tastenkürzel des Betriebssystems in die Konsole einfügen.</p>
+          </li>
+        </ol>
+        <div class="back">
+          <a class="novisit" href="#top">ZURÜCK ZUM ANFANG</a>
         </div>
+      </section>
 
-        <hr class="divider" />
-
-        <!-- ================== C R E D I T S ================== -->
-        <a name="credits" id="credits"></a>
-        <div class="content">
-          <h2>Danksagungen</h2>
-          <p><strong>Writing &amp; Coding:</strong> <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a></p>
-          <p><strong>English proofreading:</strong> Many thanks to <a href="http://www.shsforums.net/user/39857-snowshoes1818/">snowshoes1818</a> and <a href="http://www.shsforums.net/user/40147-thimblerig/">Thimblerig</a>.</p>
-          <p><strong>German translation and proofreading:</strong> Many thanks to Gerri from the German <a href="https://www.baldurs-gate.de/index.php">Baldur's Gate Forum</a>.</p>
-          <p><strong>Alternate Afaaq portrait:</strong> provided by <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a></p>
-          <p><strong>Malik portrait:</strong> based on the Fire Genasi illustration by Jesper Ejsing (published under the Creative Commons license)</p>
-          <p><strong>Afaaq's Theme:</strong> based on the soundtrack &#132;Sa'aluni-n-Nass&#148; by Fairuz (published under the Creative Commons license)</p>
-          <p><strong>Serpent Statue riddles are coming from</strong></p>
-          <ul>
-            <li><a href="http://dragonslair.wetpaint.com/">Lair of the Dragon</a></li>
-            <li><a href="http://www.cloudkingdom.com/home.aspx">Cloud Kingdom Games</a></li>
-          </ul>
-          <p>Everything else is based on resources from Baldur's Gate, Baldur's Gate II, Icewind Dale, Icewind Dale II, Diablo II or Age of Wonders Shadow Magic.</p>
-          <hr class="floatfix" />
-          <h5>Programs/tools used in creation:</h5><br />
-          <ul>
-            <li><a href="http://www.weidu.org">WeiDU</a>, by Westley Weimer/Valerio Bigiani (the bigg)/Fredrik Lindgren (Wisp)</li>
-            <li><a href="http://www.shsforums.net/topic/45358-nearinfinity/?p=490464">Near Infinity</a>, by Jon Olav Hauglid</li>
-            <li><a href="http://gibberlings3.net/forums/index.php?showforum=137">DLTCEP</a>, by Avenger</li>
-            <li><a href="https://gibberlings3.github.io/iesdp/">IESDP</a>, maintained by igi and lynx</li>
-            <li><a href="https://github.com/Argent77/tile2ee/releases">Tile2EE</a>, by Argent77</li>
-            <li><a href="https://notepad-plus-plus.org/">Notepad++</a>, by Don Ho</li>
-            <li><a href="https://mh-nexus.de/en/hxd/">HxD Hex Editor</a>, by Ma&euml;l H&ouml;rz</li>
-            <li><a href="https://www.xnview.com/">XnView</a>, by Pierre Gougelet</li>
-            <li><a href="https://www.adobe.com/">Adobe Photoshop</a></li>
-            <li><a href="https://www.gimp.org/">GIMP</a></li>
-          </ul>
-          <hr class="floatfix" />
-          <h5>Copyright Notice:</h5>
-          <div class="important">
-            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />&quot;Afaaq, the Djinni Companion&quot; is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-            <p>Baldur's Gate II: Enhanced Edition and Icewind Dale: Enhanced Edition &copy; Beamdog Inc., Baldur's Gate and Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc., Icewind Dale and Icewind Dale II: &copy; Interplay Entertainment Corp., The BioWare Infinity Engine is &copy; BioWare Corp., Diablo II: &copy; Blizzard Entertainment, Age of Wonders Shadow Magic: &copy; Triumph Studios.</p>
+      <!-- ================== C R E D I T S ================== -->
+      <section id="credits">
+        <h2>Danksagungen</h2>
+        <p><strong>Writing &amp; Coding:</strong> <a href="http://www.shsforums.net/user/14985-argent77/">Argent77</a></p>
+        <p><strong>English proofreading:</strong> Many thanks to <a href="http://www.shsforums.net/user/39857-snowshoes1818/">snowshoes1818</a> and <a href="http://www.shsforums.net/user/40147-thimblerig/">Thimblerig</a>.</p>
+        <p><strong>German translation and proofreading:</strong> Many thanks to Gerri from the german <a href="https://www.baldurs-gate.de/index.php">Baldurs Gate Forum</a>.</p>
+        <p><strong>Alternate Afaaq portrait:</strong> provided by <a href="http://www.shsforums.net/user/22187-ulb/">Ulb</a></p>
+        <p><strong>Malik portrait:</strong> based on the Fire Genasi illustration by Jesper Ejsing (published under the Creative Commons license)</p>
+        <p><strong>Afaaq's Theme:</strong> based on the soundtrack &#132;Sa'aluni-n-Nass&#148; by Fairuz (published under the Creative Commons license)</p>
+        <p><strong>Serpent Statue riddles are coming from</strong></p>
+        <ul>
+          <li><a href="http://dragonslair.wetpaint.com/">Lair of the Dragon</a></li>
+          <li><a href="https://www.cloudkingdom.com/home.aspx">Cloud Kingdom Games</a></li>
+        </ul>
+        <p>Everything else is based on resources from Baldur's Gate, Baldur's Gate II, Icewind Dale, Icewind Dale II, Diablo II or Age of Wonders Shadow Magic.</p>
+        <hr class="spacer" />
+        <h3>Programs/tools used in creation:</h3>
+        <ul>
+          <li><a href="http://www.weidu.org">WeiDU</a>, by Westley Weimer/Valerio Bigiani (the bigg)/Fredrik Lindgren (Wisp)</li>
+          <li><a href="http://www.shsforums.net/topic/45358-nearinfinity/?p=490464">Near Infinity</a>, by Jon Olav Hauglid</li>
+          <li><a href="http://gibberlings3.net/forums/index.php?showforum=137">DLTCEP</a>, by Avenger</li>
+          <li><a href="https://gibberlings3.github.io/iesdp/">IESDP</a>, maintained by igi</li>
+          <li><a href="https://github.com/Argent77/tile2ee/releases">Tile2EE</a>, by Argent77</li>
+          <li><a href="https://notepad-plus-plus.org/">Notepad++</a>, by Don Ho</li>
+          <li><a href="https://mh-nexus.de/en/hxd/">HxD Hex Editor</a>, by Ma&euml;l H&ouml;rz</li>
+          <li><a href="https://www.xnview.com/">XnView</a>, by Pierre Gougelet</li>
+          <li><a href="https://www.adobe.com/">Adobe Photoshop</a></li>
+          <li><a href="https://www.gimp.org/">GIMP</a></li>
+        </ul>
+        <hr class="spacer" />
+        <h3>Copyright Notice:</h3>
+        <div class="important">
+          <div>
+            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+              <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+            </a>
           </div>
-          <address>
-            <a href="#top">ZURÜCK ZUM ANFANG</a>
-          </address>
+          <p>"Afaaq, the Djinni Companion" is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+          <hr class="spacer" />
+          <p>Baldur's Gate II: Enhanced Edition and Icewind Dale: Enhanced Edition &copy; Beamdog Inc., Baldur's Gate and Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc., Icewind Dale and Icewind Dale II: &copy; Interplay Entertainment Corp., The BioWare Infinity Engine is &copy; BioWare Corp., Diablo II: &copy; Blizzard Entertainment, Age of Wonders Shadow Magic: &copy; Triumph Studios.</p>
         </div>
-
-        <hr class="divider" />
-
-        <!-- ================== V E R S I O N   H I S T O R Y ================== -->
-        <a name="version" id="version"></a>
-        <div class="content">
-          <h2>Versionshistorie</h2>
-          <h6>2018-08-10 - Version 2.6:</h6>
-          <ul>
-            <li>Added banters for Imoen.</li>
-            <li>Added banters for Viconia.</li>
-            <li>Added banters and an 'event' for Edwin.</li>
-            <li>Added crossmod content with Golem Construction: New Wish options.</li>
-            <li>Fixed conditions to improve triggering Afaaq's Underdark quest.</li>
-            <li>Fixed "Converse" button label in IWD:EE.</li>
-            <li>Fixed installation errors under specific conditions.</li>
-            <li>Fixed various minor bugs.</li>
-            <li>Fixed spelling errors.</li>
-          </ul>
-          <h6>2017-08-25 - Version 2.5:</h6>
-          <ul>
-            <li>Added another path to solve Afaaq's Underdark quest.</li>
-            <li>Improved Tweaks component name.</li>
-            <li>Added Elixir of Health to list of potions Afaaq may use.</li>
-            <li>Fixed a compatibility issue with SCS regarding an artifact for a quest.</li>
-            <li>Improved compatibility with 2.x patched BG2EE.</li>
-            <li>Added correction dialog option to Afaaq's quick menu.</li>
-            <li>Fixed several (cosmetic) scripting issues.</li>
-            <li>Fixed spelling errors.</li>
-          </ul>
-          <h6>2016-09-29 - Version 2.4:</h6>
-          <ul>
-            <li>Added full EET support.</li>
-            <li>Improved Afaaq's correction dialog.</li>
-            <li>Added pieces of advice about BG1 and SoD areas to Afaaq's PID (EET only).</li>
-            <li>Removed a duplicate line in skull purification dialog.</li>
-            <li>Fixed an incorrect condition in Afaaq's introduction talk.</li>
-            <li>Adapted previously hardcoded strings regarding familiars not allowed to execute specific actions.</li>
-            <li>Textual fixes in Adratha side quest.</li>
-          </ul>
-          <h6>2016-04-22 - Version 2.3:</h6>
-          <ul>
-            <li>Added new side quest: Put Adratha's spirit to rest.</li>
-            <li>Rebalanced Afaaq's "Transfer Knowledge" ability.</li>
-            <li>Made script to keep Afaaq hasted more user-friendly.</li>
-            <li>Fixed incompatibilities with Enhanced Edition patch v2.0.</li>
-            <li>Various internal fixes and optimizations.</li>
-          </ul>
-          <h6>2016-02-06 - Version 2.2a:</h6>
-          <ul>
-            <li>Fixed missing string references in the BG2 Light Version.</li>
-          </ul>
-          <h6>2016-02-06 - Version 2.2:</h6>
-          <ul>
-            <li>Added preliminary EET support.</li>
-            <li>Added interjection to the Genie dialog in <em>"Unfinished Business -&gt; Kalah and What He Was Promised"</em>.</li>
-            <li>Nerfed Afaaq's level progression in IWD:EE somewhat.</li>
-            <li>Revised battles in the IWD:EE version.</li>
-            <li>Added a proper introduction talk to IWD:EE version of Afaaq.</li>
-            <li>Fixed a few historical inconsistencies in the IWD:EE version.</li>
-            <li>Fixed an issue (again) which sometimes prevents the party to leave the current area if the djinni returned into his lamp.</li>
-            <li>Fixed a small issue of displaying uninitialized stats when talking to Afaaq's lamp under certain circumstances.</li>
-            <li>Fixed incorrect WAV references in Afaaq's lamp interior map in the IWD:EE version which caused the game to crash.</li>
-            <li>Worked around an installation issue on tolowered games on Linux.</li>
-            <li>Added a note to the Readme that djinns are immune to healing spells cast on them in IWD:EE.</li>
-            <li>Updated compatibility section of the Readme.</li>
-          </ul>
-          <h6>2015-12-16 - Version 2.1:</h6>
-          <ul>
-            <li>Added a storyline to the IWD:EE version of the Djinni Companion.</li>
-            <li>Added a "Tweaks" component to disable to storyline in IWD:EE.</li>
-            <li>Made the djinni available in a "Heart of Winter" only game in IWD:EE.</li>
-          </ul>
-          <h6>2015-12-10 - Version 2.0:</h6>
-          <ul>
-            <li>Added Icewind Dale: Enhanced Edition support.</li>
-            <li>Added a dialog options that allow Afaaq to drink potions of various types in addition to healing potions.</li>
-            <li>Added dialog options for Afaaq to keep himself constantly hasted in ToB.</li>
-            <li>Made Afaaq immune to curse effect.</li>
-            <li>Fixed several bugs.</li>
-          </ul>
-          <h6>2015-11-04 - Version 1.7:</h6>
-          <ul>
-            <li>Fixed an incompatibility with Spell Revisions which prevented the completion of the Dao Trademeet quest.</li>
-            <li>Afaaq's Wish-granting ability improves after successfully solving the ToB quest.</li>
-            <li>Added new innate ability "Transfer Knowledge" to Afaaq, which raises the Lore skill of a character for a short span of time.</li>
-            <li>Added a new journal entry to Afaaq's Underdark quest after talking to certain drow citizens or listening to the local rumors, which should give you more hints about how to complete it successfully.</li>
-            <li>Several more minor fixes and adjustments.</li>
-          </ul>
-          <h6>2015-09-12 - Version 1.6:</h6>
-          <ul>
-            <li>Fixed a serious bug which might occur in combination with QuestPack's "Revised Hell Trials" component.</li>
-            <li>Fixed a bug that prevented the party to leave an area after the djinni returned into his lamp.</li>
-            <li>Added new rumors to the Drow innkeeper in Ust Natha.</li>
-            <li>Added more background information about House Arabani to several drow citizens.</li>
-            <li>Improved Afaaq's ability "Control Aerial Creatures".</li>
-            <li>Expanded Afaaq's level progression up to level 30 and added saving throw bonuses on level up.</li>
-            <li>Added more Afaaq-specific lines to Trademeet Dao Genies.</li>
-            <li>Afaaq reacts to failed pickpocket attempts from party members (TobEx/BG2EE only).</li>
-            <li>Various minor fixes and optimizations.</li>
-          </ul>
-          <h6>2015-08-06 - Version 1.5:</h6>
-          <ul>
-            <li>Added german translation (thanks to Gerri)</li>
-            <li>Added strings for rangers' Tracking HLA to selected areas</li>
-            <li>Fixed a couple of spelling errors</li>
-            <li>Slightly expanded the Readme's FAQ section</li>
-          </ul>
-          <h6>2015-06-21 - Version 1.4:</h6>
-          <ul>
-            <li>Fixed a bug in the &quot;Light Version&quot; component which sometimes failed to summon the djinni for the first time</li>
-            <li>Slightly modified Afaaq's character level to increase chances for unsuccessful dispel magic attempts on him</li>
-            <li>Expanded &quot;Frequently Asked Questions&quot; section</li>
-          </ul>
-          <h6>2015-05-23 - Version 1.3:</h6>
-          <ul>
-            <li>(Mac only) Fixed an issue which prevented mod installation on certain systems</li>
-            <li>Lots of small fixes and improvements</li>
-          </ul>
-          <h6>2015-05-07 - Version 1.2:</h6>
-          <ul>
-            <li>Added missing map files when installing the "Light Version" component</li>
-            <li>Changed Afaaq's script to further reduce chances of his death sequence getting out of control</li>
-            <li>Added a third selectable combat script for Afaaq</li>
-            <li>Several minor fixes</li>
-          </ul>
-          <h6>2015-04-30 - Version 1.1:</h6>
-          <ul>
-            <li>Fixed several minor scripting issues</li>
-          </ul>
-          <h6>2015-04-25 - Version 1.0:</h6>
-          <ul>
-            <li>Initial release</li>
-          </ul>
-          <address>
-            <a href="#top">ZURÜCK ZUM ANFANG</a>
-          </address>
+        <div class="back">
+          <a class="novisit" href="#top">ZURÜCK ZUM ANFANG</a>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <!-- ================== V E R S I O N   H I S T O R Y ================== -->
+      <section id="changelog">
+        <h2>Versionshistorie</h2>
+        <h6>Version 2.6 (2018-08-10)</h6>
+        <ul>
+          <li>Added banters for Imoen.</li>
+          <li>Added banters for Viconia.</li>
+          <li>Added banters and an 'event' for Edwin.</li>
+          <li>Added crossmod content with Golem Construction: New Wish options.</li>
+          <li>Fixed conditions to improve triggering Afaaq's Underdark quest.</li>
+          <li>Fixed "Converse" button label in IWD:EE.</li>
+          <li>Fixed installation errors under specific conditions.</li>
+          <li>Fixed various minor bugs.</li>
+          <li>Fixed spelling errors.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 2.5 (2017-08-25)</h6>
+        <ul>
+          <li>Added another path to solve Afaaq's Underdark quest.</li>
+          <li>Improved Tweaks component name.</li>
+          <li>Added Elixir of Health to list of potions Afaaq may use.</li>
+          <li>Fixed a compatibility issue with SCS regarding an artifact for a quest.</li>
+          <li>Improved compatibility with 2.x patched BG2EE.</li>
+          <li>Added correction dialog option to Afaaq's quick menu.</li>
+          <li>Fixed several (cosmetic) scripting issues.</li>
+          <li>Fixed spelling errors.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 2.4 (2016-09-29)</h6>
+        <ul>
+          <li>Added full EET support.</li>
+          <li>Improved Afaaq's correction dialog.</li>
+          <li>Added pieces of advice about BG1 and SoD areas to Afaaq's PID (EET only).</li>
+          <li>Removed a duplicate line in skull purification dialog.</li>
+          <li>Fixed an incorrect condition in Afaaq's introduction talk.</li>
+          <li>Adapted previously hardcoded strings regarding familiars not allowed to execute specific actions.</li>
+          <li>Textual fixes in Adratha side quest.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 2.3 (2016-04-22)</h6>
+        <ul>
+          <li>Added new side quest: Put Adratha's spirit to rest.</li>
+          <li>Rebalanced Afaaq's "Transfer Knowledge" ability.</li>
+          <li>Made script to keep Afaaq hasted more user-friendly.</li>
+          <li>Fixed incompatibilities with Enhanced Edition patch v2.0.</li>
+          <li>Various internal fixes and optimizations.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 2.2a (2016-02-06)</h6>
+        <ul>
+          <li>Fixed missing string references in the BG2 Light Version.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 2.2 (2016-02-06)</h6>
+        <ul>
+          <li>Added preliminary EET support.</li>
+          <li>Added interjection to the Genie dialog in <em>"Unfinished Business -&gt; Kalah and What He Was Promised"</em>.</li>
+          <li>Nerfed Afaaq's level progression in IWD:EE somewhat.</li>
+          <li>Revised battles in the IWD:EE version.</li>
+          <li>Added a proper introduction talk to IWD:EE version of Afaaq.</li>
+          <li>Fixed a few historical inconsistencies in the IWD:EE version.</li>
+          <li>Fixed an issue (again) which sometimes prevents the party to leave the current area if the djinni returned into his lamp.</li>
+          <li>Fixed a small issue of displaying uninitialized stats when talking to Afaaq's lamp under certain circumstances.</li>
+          <li>Fixed incorrect WAV references in Afaaq's lamp interior map in the IWD:EE version which caused the game to crash.</li>
+          <li>Worked around an installation issue on tolowered games on Linux.</li>
+          <li>Added a note to the Readme that djinns are immune to healing spells cast on them in IWD:EE.</li>
+          <li>Updated compatibility section of the Readme.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 2.1 (2015-12-16)</h6>
+        <ul>
+          <li>Added a storyline to the IWD:EE version of the Djinni Companion.</li>
+          <li>Added a "Tweaks" component to disable to storyline in IWD:EE.</li>
+          <li>Made the djinni available in a "Heart of Winter" only game in IWD:EE.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 2.0 (2015-12-10)</h6>
+        <ul>
+          <li>Added Icewind Dale: Enhanced Edition support.</li>
+          <li>Added a dialog options that allow Afaaq to drink potions of various types in addition to healing potions.</li>
+          <li>Added dialog options for Afaaq to keep himself constantly hasted in ToB.</li>
+          <li>Made Afaaq immune to curse effect.</li>
+          <li>Fixed several bugs.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 1.7 (2015-11-04)</h6>
+        <ul>
+          <li>Fixed an incompatibility with Spell Revisions which prevented the completion of the Dao Trademeet quest.</li>
+          <li>Afaaq's Wish-granting ability improves after successfully solving the ToB quest.</li>
+          <li>Added new innate ability "Transfer Knowledge" to Afaaq, which raises the Lore skill of a character for a short span of time.</li>
+          <li>Added a new journal entry to Afaaq's Underdark quest after talking to certain drow citizens or listening to the local rumors, which should give you more hints about how to complete it successfully.</li>
+          <li>Several more minor fixes and adjustments.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 1.6 (2015-09-12)</h6>
+        <ul>
+          <li>Fixed a serious bug which might occur in combination with QuestPack's "Revised Hell Trials" component.</li>
+          <li>Fixed a bug that prevented the party to leave an area after the djinni returned into his lamp.</li>
+          <li>Added new rumors to the Drow innkeeper in Ust Natha.</li>
+          <li>Added more background information about House Arabani to several drow citizens.</li>
+          <li>Improved Afaaq's ability "Control Aerial Creatures".</li>
+          <li>Expanded Afaaq's level progression up to level 30 and added saving throw bonuses on level up.</li>
+          <li>Added more Afaaq-specific lines to Trademeet Dao Genies.</li>
+          <li>Afaaq reacts to failed pickpocket attempts from party members (TobEx/BG2EE only).</li>
+          <li>Various minor fixes and optimizations.</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 1.5 (2015-08-06)</h6>
+        <ul>
+          <li>Added german translation (thanks to Gerri)</li>
+          <li>Added strings for rangers' Tracking HLA to selected areas</li>
+          <li>Fixed a couple of spelling errors</li>
+          <li>Slightly expanded the Readme's FAQ section</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 1.4 (2015-06-21)</h6>
+        <ul>
+          <li>Fixed a bug in the "Light Version" component which sometimes failed to summon the djinni for the first time</li>
+          <li>Slightly modified Afaaq's character level to increase chances for unsuccessful dispel magic attempts on him</li>
+          <li>Expanded "Frequently Asked Questions" section</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 1.3 (2015-05-23)</h6>
+        <ul>
+          <li>(Mac only) Fixed an issue which prevented mod installation on certain systems</li>
+          <li>Lots of small fixes and improvements</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 1.2 (2015-05-07)</h6>
+        <ul>
+          <li>Added missing map files when installing the "Light Version" component</li>
+          <li>Changed Afaaq's script to further reduce chances of his death sequence getting out of control</li>
+          <li>Added a third selectable combat script for Afaaq</li>
+          <li>Several minor fixes</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 1.1 (2015-04-30)</h6>
+        <ul>
+          <li>Fixed several minor scripting issues</li>
+        </ul>
+        <hr class="spacer" />
+        <h6>Version 1.0 (2015-04-25)</h6>
+        <ul>
+          <li>Initial release</li>
+        </ul>
+        <div class="back">
+          <a class="novisit" href="#top">ZURÜCK ZUM ANFANG</a>
+        </div>
+      </section>
+    </main>
   </body>
-
 </html>
