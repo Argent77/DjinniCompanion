@@ -54,6 +54,16 @@ LANGUAGE ~Deutsch~
          ~DjinniCompanion/languages/german/quest3.tra~
          ~DjinniCompanion/languages/german/quest4.tra~
          ~DjinniCompanion/languages/german/quest5.tra~
+LANGUAGE ~Francais~
+         ~french~
+         ~DjinniCompanion/languages/french/setup.tra~
+         ~DjinniCompanion/languages/french/misc.tra~
+         ~DjinniCompanion/languages/french/afaaq.tra~
+         ~DjinniCompanion/languages/french/quest1.tra~
+         ~DjinniCompanion/languages/french/quest2.tra~
+         ~DjinniCompanion/languages/french/quest3.tra~
+         ~DjinniCompanion/languages/french/quest4.tra~
+         ~DjinniCompanion/languages/french/quest5.tra~
 
 
 /////////////////////////////////////////

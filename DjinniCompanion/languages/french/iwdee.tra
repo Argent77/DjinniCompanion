@@ -1,0 +1,141 @@
+// -*- coding: utf-8 -*-
+
+// Overridden strings
+@60022 = ~Mes caractéristiques :
+Je suis un guerrier/mage de niveau <A7AFQ_LVL>/7.
+Force : 15
+Dextérité : 16
+Constitution: 13
+Intelligence: 15
+Sagesse : 16
+Charisme : 11
+Points de vie maximum : <A7AFQ_HP>
+TAC0 de base : <A7AFQ_THAC0>
+Classe d'Armure : <A7AFQ_AC>
+Jets de sauvegarde : <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
+Attaques par rounds : 3/2
+Je suis spécialisé dans les cimeterres et compétent dans l'utilisation d'une seule arme.~
+@60023 = ~Mes caractéristiques :
+Je suis un guerrier/mage de niveau <A7AFQ_LVL>/11.
+Force : 19
+Dextérité : 17
+Constitution: 16
+Intelligence: 15
+Sagesse : 16
+Charisme : 11
+Points de vie maximum : <A7AFQ_HP>
+TAC0 de base : <A7AFQ_THAC0>
+Classe d'Armure : <A7AFQ_AC>
+Jets de sauvegarde : <A7AFQ_SV1>/<A7AFQ_SV2>/<A7AFQ_SV3>/<A7AFQ_SV4>/<A7AFQ_SV5>
+Attaques par rounds : 2
+J'ai atteint la grande maîtrise avec les cimeterres et je suis spécialisé dans l'utilisation d'une seule arme.~
+
+
+// *** IWDEE-specific strings (index 100000 and up)
+// dialog lines
+@100000 = ~Salutations, aventurier. Je m'appelle Kelvor Domine, magicien et membre de haut rang de la Tour des Arcanes Majeure.~
+@100001 = ~Tour des Arcanes Majeure ?~
+@100002 = ~Que fait un membre de haut rang de la Tour Majeure si loin de chez lui ?~
+@100003 = ~Vous semblez ignorer quelque peu la région que vous traversez.~
+@100004 = ~La Tour des Arcanes Majeure est une importante académie de formation magique et un centre de pouvoir dans la région.~
+@100005 = ~Intéressant. Et que faites-vous si loin de chez vous ?~
+@100006 = ~Pourriez-vous en venir au fait ?~
+@100007 = ~Oui, c'est en effet très inhabituel.~
+@100008 = ~Laissez-moi vous dire que je m'intéresse plus ou moins aux événements qui se déroulent dans les profondeurs de ce volcan endormi.~
+@100009 = ~Vous semblez avoir fait une impression durable sur les habitants locaux en battant leur reine, Yxumonei.~
+@100010 = ~Comment le savez-vous ?~
+@100011 = ~Il y a plus d'une façon de se renseigner sur des événements comme celui-ci.~
+@100012 = ~Mais laissez-moi aller droit au but.~
+@100013 = ~Il y a plusieurs années, un agent d'Yxunomei nous a volé un objet très précieux. Depuis cet incident, nous avons tenté à plusieurs reprises de le récupérer sans grand succès. Son repaire était trop bien gardé pour la prendre par surprise.~
+@100014 = ~Le vol récent de la Gemme du Cœur de Pierre a détruit même le dernier soupçon d'espoir de récupérer l'artefact sans une confrontation directe.~
+@100015 = ~Je parle du djinn que je vois parmi vous, et de sa lampe.~
+@100016 = ~Je parle de la lampe djinn que je peux sentir en votre possession.~
+@100017 = ~Je n'aurais jamais imaginé qu'une bande d'aventuriers inexpérimentés serait capable de lui arracher la lampe.~
+@100018 = ~Puisque la lampe est techniquement encore à nous, j'aimerais vous proposer un marché.~
+@100019 = ~Je peux vous offrir soit une longue épée magique, soit une compensation monétaire. Ces deux options sont très tentantes pour les aventuriers comme vous. Qu'est-ce que vous en dites ?~
+@100020 = ~Vous m'avez convaincu. J'aimerais avoir l'arme magique.~
+@100021 = ~Très bien. Donnez-moi l'argent.~
+@100022 = ~En fait, j'aimerais garder la lampe.~
+@100023 = ~Je ne suis intéressé par aucune de vos offres. La lampe est à moi maintenant.~~Je ne suis intéressée par aucune de vos offres. La lampe est à moi maintenant.~
+@100024 = ~Vous avez pris une sage décision. Cette lame est fortement enchantée pour trancher même des êtres magiques de grande puissance. Utilisez-la bien.~
+@100025 = ~Vous avez pris une sage décision. 5000 pièces d'or, c'est beaucoup d'argent, mais vous l'avez gagné.~
+@100026 = ~Je vous dis adieu et bonne chance pour votre voyage.~
+@100027 = ~Vous devriez sérieusement reconsidérer la question. Nous cherchons la lampe depuis un certain temps déjà. Un refus de votre part est hors de question.~
+@100028 = ~Si vous insistez. Alors j'aimerais avoir l'arme magique.~
+@100029 = ~Je me fiche de votre offre. La lampe est à moi maintenant.~
+@100030 = ~(Soupir) je m'attendais presque à ce que vous ne coopériez pas. C'est pour ça que j'ai pris la liberté d'amener des amis. Peut-être qu'ils peuvent vous convaincre de vous en séparer ?~
+@100031 = ~Ne croyez pas que ce soit terminé. Je récupérerai ta lampe d'une façon ou d'une autre.~
+@100032 = ~Salutations, <GABBER>. Je vous avais dit qu'on se reverrait.~
+@100033 = ~J'espère que mes amis ont pu vous faire changer d'avis. Êtes-vous maintenant plus enclin à me remettre la lampe djinn ?~~J'espère que mes amis ont pu vous faire changer d'avis. Êtes-vous maintenant plus encline à me remettre la lampe djinn ?~
+@100034 = ~Très bien. Vous pouvez l'avoir.~
+@100035 = ~Non, je ne crois pas.~
+@100036 = ~Vous avez pris une sage décision. Je suis même prêt à vous donner un peu d'argent pour vos ennuis.~
+@100037 = ~En retour, je promets de ne plus vous déranger. Adieu.~
+@100038 = ~Vous ne semblez pas comprendre votre situation. J'ai le pouvoir de détruire vos misérables peaux avec un simple geste de la main. Mais je retiens mes pouvoirs, car je suis toujours convaincu que nous pouvons parvenir à un accord civilisé.~
+@100039 = ~Vous ne voulez pas changer d'avis ? Je ne te le redemanderai pas si gentiment.~
+@100040 = ~Si vous insistez, prenez-la.~
+@100041 = ~Je vous ai fait part de ma décision. Ne m'obligez pas à me répéter !~
+@100042 = ~Très bien. Peut-être avez-vous juste besoin d'une meilleure motivation pour changer d'avis ? Je suis sûr que mes collègues de la tour majeure peuvent vous aider dans ce cas.~
+@100043 = ~Soyez assurés que je vous pourchasserai tant que vous aurez la lampe en votre possession.~
+@100044 = ~Ah, vous voilà. Je vous ai attendu, <GABBER>. Vous savez pourquoi je suis ici.~
+@100045 = ~Je vous donne une dernière chance de remettre la lampe du djinn pacifiquement. Que décidez-vous ?~
+@100046 = ~D'accord, d'accord. Vous pouvez l'avoir. Il n'est pas nécessaire de verser plus de sang dessus.~
+@100047 = ~Je vous l'ai déjà dit, cette lampe est à moi maintenant !~
+@100048 = ~C'est bien que vous soyez revenu à la raison. Vous n'êtes peut-être pas content de la situation, mais au moins vous ne mourrez pas.~~C'est bien que vous soyez revenue à la raison. Vous n'êtes peut-être pas contente de la situation, mais au moins vous ne mourrez pas.~
+@100049 = ~Vous pouvez continuer votre voyage. Je ne vous dérangerai plus. Adieu.~
+@100050 = ~(soupir) Très bien. Vous me forcez la main maintenant. Je vais prendre la lampe sur votre cadavre.~
+@100051 = ~Ai-je mentionné que je suis un maître invocateur ? Non ? Voyez par vous-même !~
+@100052 = ~Salutations <RACE>, pourrais-je parler à votre chef ?~
+@100053 = ~Pourrais-je parler à votre chef ?~
+@100054 = ~Salutations, mon mon seigneur. Je vois que vous avez réussi à arracher la lampe des mains de mon ancien maître.~~Salutations, mon ma dame. Je vois que vous avez réussi à arracher la lampe des mains de mon ancien maître.~
+@100055 = ~(soupir) Je sens aussi que la lampe vous a choisi comme mon seul nouveau maître.~~(soupir) Je sens aussi que la lampe vous a choisi comme ma seule nouvelle maîtresse.~
+@100056 = ~Veuillez excuser mon manque de manières, mais je dois ramener la Gemme du Cœur de Pierre à Kuldahar aussi vite que possible.~
+@100057 = ~On devrait passer à autre chose, Afaaq. Je dois encore ramener la Gemme du Cœur de Pierre à Kuldahar.~
+@100058 = ~Mon asservissement à la lampe a été causé par une puissante sorcellerie noire. Je n'ai pas pu deviner l'identité de mes ravisseurs, mais je peux encore sentir qu'ils sont vivants. Dans mon état actuel, je ne pourrais pas résister s'ils décidaient de revenir me chercher.~
+
+
+// misc. strings
+@100500 = ~Succube~
+@100501 = ~Ne leur montrez aucune pitié !~
+@100502 = ~Je compte sur vous pour prendre vous occupez d'eux !~
+@100503 = ~Kelvor Domine~
+@100504 = ~Mage~
+@100505 = ~Voleur~
+@100506 = ~Guerrier~
+@100507 = ~Le temps est venu pour vous de payer !~ [UNEARF05]
+@100508 = ~~ [unearf06]
+@100509 = ~~ [unearf07]
+
+
+// journal entries
+@101000 = ~Culs-de-sac
+En sortant de l'Oeil du Dragon, j'ai rencontré un mage appelé Kelvor Domine, qui prétendait être un membre de la Tour des Arcane Majeure.
+
+Il semblait déjà savoir que j'avais vaincu Yxumonei et il m'avait demandé la lampe djinn que j'avais pris sur son cadavre. Après que j'ai refusé, il a appelé un certain nombre de mercenaires et m'a menacé que ce n'est pas la dernière fois que je le vois, avant qu'il se téléporte loin.~
+
+@101001 = ~Culs-de-sac
+Pendant que j'explorais la grotte menant à Profondorn, une vieille "connaissance" m'a de nouveau rendu visite.
+
+Cette fois-ci, Kelvor Domine a exigé avec plus d'insistance que je lui donne la lampe djinn. J'ai encore refusé, ce qui a mis le mage en colère. Il a appelé ses collègues pour s'occuper de moi et m'a menacé de me traquer jusqu'à ce que j'abandonne la lampe, avant qu'il ne se téléporte à nouveau.~
+
+
+// completed journal entries
+@101900 = ~Culs-de-sac
+En sortant de l'Oeil du Dragon, j'ai rencontré un mage appelé Kelvor Domine, qui prétendait être un membre de la Tour de l'Arcane.
+
+Il semblait déjà savoir que j'avais vaincu Yxumonei et il m'avait demandé la lampe djinn que j'avais pris sur son cadavre. J'ai accepté et je lui ai donné la lampe djinn. Qui sait ce qu'un magicien aussi puissant m'infligerait si je refusais. Je ne reverrai probablement jamais le djinn et sa lampe.~
+
+@101901 = ~Culs-de-sac
+Pendant que j'explorais la grotte menant à Profondorn, une vieille "connaissance" m'a de nouveau rendu visite.
+
+Cette fois-ci, Kelvor Domine a exigé avec plus d'insistance que je lui donne la lampe djinn. J'ai finalement décidé d’accéder à sa demande et j'ai lui ai donné la lampe. Qui sait ce qu'un magicien aussi puissant en colère m'infligerait si je refusais à plusieurs reprises ses demandes. Je ne reverrai probablement jamais le djinn et sa lampe.~
+
+@101902 = ~Culs-de-sac
+En me rendant au Bas-Profondorn, j'ai retrouvé Kelvor Domine.
+
+Cette fois, il ne s'est pas caché derrière des paroles polies et m'a demandé carrément de lui donner la lampe djinn. J'ai finalement décidé d’accéder à sa demande et j'ai lui ai donné la lampe. Qui sait ce qu'un magicien aussi puissant en colère m'infligerait si je refusais à plusieurs reprises ses demandes. Je ne reverrai probablement jamais le djinn et sa lampe.~
+
+@101903 = ~Culs-de-sac
+En me rendant au Bas-Profondorn, j'ai retrouvé Kelvor Domine.
+
+Cette fois, il ne s'est pas caché derrière des paroles polies et m'a demandé carrément de lui donner la lampe djinn. J'ai encore refusé, ce qui semblait l'agacer considérablement. En réponse à ma décision, il a convoqué une foule de puissants élémentaux et de puissants démons. Ses propres pouvoirs magiques étaient également impressionnants. J'espère sincèrement que je ne verrai plus de membres de la Tour Majeure après cet incident.~

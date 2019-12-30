@@ -1,0 +1,277 @@
+// -*- coding: cp1252 -*-
+// *** Textes relatifs à la quête n°2: "Vengeance" (index 2000...2999)
+
+// *** Dialogue : Statue Serpent ***
+@2001 = ~Les yeux de la statue serpent commencent à briller, et <GABBER> sent une présence étrangère dans sa tête. Elle parle directement dans l'esprit de <HISHER> avec une voix puissante.~
+@2002 = ~VOUS N'ÊTES PAS DIGNE DE MA PRÉSENCE. PARTEZ !~
+@2003 = ~Il se retire aussi vite qu'il est venu et laisse <GABBER> légèrement secoué(e).~
+@2005 = ~Les yeux de la statue serpent commencent à briller, et vous sentez une présence étrangère dans votre tête. Vous avez l'impression que votre esprit est sondé... délicatement au début, puis avec plus d'insistance.~
+@2006 = ~Des images de votre enfance à Chateausuif ainsi que des souvenirs plus récents voltigent sous vos yeux, parfois mêlés d'un sentiment d'amusement lointain. Les images cessent aussi vite qu'elles sont venues. Vous commencez à entendre une voix qui résonne dans votre tête.~
+@2007 = ~Les yeux de la statue serpent commencent à briller lorsque votre esprit est de nouveau sondé par la présence.~
+@2008 = ~Vous vous tenez encore devant moi ? Avez-vous changé d'avis ? Êtes-vous maintenant prêt à répondre à mes énigmes ?~
+@2009 = ~Oui, je suis prêt.~~Oui, je suis prête.~
+@2010 = ~Non, je trouverai un autre moyen d'entrer dans le temple.~
+@2011 = ~Vous n'êtes pas un de mes disciples. Votre espèce n'a rien à faire ici, mais je sens que vous êtes plus que vous n'en avez l'air.~
+@2012 = ~Oui, je sens le pouvoir divin de ton âme.~
+@2013 = ~Je connais vos intentions, <GABBER>. Vous voulez récupérer votre dû auprès de mes chasseurs.~
+@2014 = ~Je ne sais pas de quoi vous parlez.~
+@2015 = ~Vous avez raison. J'ai l'intention de reprendre ce qu'ils m'ont volé.~
+@2016 = ~Vous ne pouvez pas me tromper. Je connais vos pensées.~
+@2017 = ~Vous êtes une créature courageuse qui suit mes chasseurs en territoire inconnu.~
+@2018 = ~Je respecte la force et la ruse. Mes disciples m'ont beaucoup déçu, alors je vais vous aider.~
+@2019 = ~Prouvez-moi votre valeur, et je vous rapprocherai un peu plus de votre but.~
+@2020 = ~Comment puis-je faire ça ?~
+@2021 = ~Je ne veux pas jouer à vos jeux.~
+@2022 = ~Vous avez prouvé votre ruse en me dérobant à mes chasseurs.~
+@2023 = ~Vous avez prouvé votre force en terrassant mes chasseurs.~
+@2024 = ~Cependant, vous devez être fort non seulement dans votre corps, mais aussi dans votre esprit.~
+@2025 = ~Répondez correctement à mes énigmes, et je vous accorderai mon aide.~
+@2026 = ~Très bien, j'accepte votre défi.~
+@2027 = ~Voici ma première énigme. Écoutez attentivement.~
+@2028 = ~Vous avez raison. Maintenant prêtez attention à ma deuxième énigme.~
+@2029 = ~Je suis impressionné. Voilà ma dernière énigme.~
+@2030 = ~Je ne veux plus jouer à vos jeux.~
+@2031 = ~Vous avez satisfait ma curiosité et résolu correctement toutes mes énigmes. En retour, je vais vous aider.~
+@2032 = ~Prenez ma pierre de garde, l'une des quatre. Les trois autres sont proches, mais attention ! Mes enchantements ne céderont pas sans un combat.~
+@2033 = ~Ce n'est pas la bonne réponse !~
+@2034 = ~Les forts seront récompensés, mais les faibles seront...~
+@2035 = ~PUNIS !~
+@2036 = ~Ainsi, vous ne voulez compter que sur vous-même. Pensez-vous que votre héritage divin est assez puissant pour outrepasser mes barrières ?~
+@2037 = ~Qu'il en soit ainsi. Faites ce que vous avez à faire, mais sachez que vous devez surpasser mon pouvoir si vous voulez avancer.~
+
+
+// Énigmes et réponses
+// TRADUCTEURS : La première réponse est toujours la bonne
+// TRADUCTEURS : Les deux dernières réponses erronées sont comparées à INT et SAG : elles devraient être les plus faciles)
+@2100 = ~Mon pas est lent, et mon souffle froid.
+Je donne au sol une mort atroce.
+Ma marche me mène à la fin,
+tué par le soleil ou noyé dans la mer.~
+@2101 = ~Un glacier ?~
+@2102 = ~Les morts-vivants ?~
+@2103 = ~Une avalanche !~
+@2104 = ~La nuit ??~
+@2105 = ~Un géant du froid ?~
+@2106 = ~Une ombre ?!~
+@2107 = ~Un lézard.~
+
+@2110 = ~Je suis très étrange, mais très commun.
+Je grandis vers le bas, au lieu de vers le haut.
+Sans moi, tant de choses n'existeraient pas.
+Que suis-je ?~
+@2111 = ~Une racine.~
+@2112 = ~Une taupe !~
+@2113 = ~Un nain ?~
+@2114 = ~Une stalactite ?!~
+@2115 = ~Une vigne.~
+@2116 = ~Une stalagmite !~
+@2117 = ~Un iceberg ??~
+
+@2120 = ~Ce jardin est un endroit isolé
+où beaucoup sont venus et restent encore.
+Les plantes poussent robustes sur un sol fertile,
+arrosées par les séquelles de la douleur.
+Et si je labourais, ma charrue se briserait
+sur des enveloppes en grains de fer.
+Maintenant enterrés là où ils sont tombés comme du blé.
+Que suis-je ? Parle ! Ou faire face au fléau.~
+@2121 = ~Un champ de bataille ?!~
+@2122 = ~Un terrain de chasse ?~
+@2123 = ~Un cimetière !~
+@2124 = ~Un marais !!!~
+@2125 = ~Une clairière de forêt.~
+@2126 = ~Un jardin !~
+@2127 = ~Un champ rocailleux ?~
+
+// TRADUCTEURS : Cette énigme ne fonctionne qu'en anglais, remplacez-la par ce que vous voulez (le nombre de réponses ne doit pas changer !)
+@2130 = ~Mon premier est un nombre,
+mon deuxième un autre.
+Et chacun, je vous assure
+rimera avec l'autre.
+Mon premier je peux le dire
+est un cinquième de mon second.
+Et quand les deux sont ensemble,
+une longue période considérée.~
+@2131 = ~Quatre-vingts ?!~
+@2132 = ~Un siècle.~
+@2133 = ~Une douzaine ?~
+@2134 = ~Vingt-quatre !!~
+@2135 = ~Un score ?~
+@2136 = ~Six ?!~
+@2137 = ~Un millénaire.~
+
+@2140 = ~Une prison profonde dans le sol,
+murs de pierre courbés tout autour.
+Un prisonnier est étroitement lié,
+puis il est pendu, puis il se noie.
+La corde suspendue est ensuite rembobinée,
+peut-être alors que la prison est couronnée.
+Mais...si dans cette prison, la magie est coincée,
+perdre de l'argent pourrait porter chance.~
+@2141 = ~Un puits !~
+@2142 = ~Un donjon ?~
+@2143 = ~Un campement drow ?!~
+@2144 = ~Une caverne.~
+@2145 = ~Un mariage !!!~
+@2146 = ~Un prêteur sur gages ?~
+@2147 = ~Une colonie naine !!~
+
+
+// Lignes de dialogues
+@2200 = ~Des intrus sont entrés sur notre territoire ? Nous allons vous arrêter ici et maintenant. Attaquez !~
+@2201 = ~C'est vous qui avez pris le djinn à notre champion ? Bientôt vous serez impuissants devant nous quand il sera sacrifié à Ravanna !~
+@2202 = ~Vous êtes arrivé loin, <PRO_RACE>. Mais c'est ici que vous mourrez. En vous sacrifiant vous et le djinn, je deviendrai le favori aux yeux de Ravanna.~
+@2203 = ~Attaquez-les, mes disciples. Ils ne doivent pas survivre !~
+@2204 = ~Il semble que nous ayons été transportés loin d'Amn. Le climat et la végétation ne correspondent à rien de ce que l'on trouve sur la Côte des Épées.~
+@2205 = ~Je n'ai pas encore visité d'endroits aussi au sud, mais je crois que cette forêt appartient aux Jungles de Chult.~
+@2206 = ~La magie sorcière des rakshasi nous a emmenés loin au sud.~
+@2207 = ~Je reconnais certaines des plantes de mes études. Les chants des oiseaux me rappellent les espèces que j'ai observées lors de ma visite dans un bosquet aux druides du sud.~
+@2208 = ~Le spécimen à ton extrême gauche est un palmier coyote, facilement reconnaissable par les épines acérées qui dépassent du tronc. C'est--~
+@2209 = ~Merci Cernd, mais je ne suis pas d'humeur à discuter des merveilles de la nature. N'oubliez pas que nous sommes ici pour sauver Afaaq.~
+@2210 = ~Tu n'as rien de mieux à faire que de me faire la morale sur les arbres et les buissons ? Nous sommes ici pour reprendre aux rakshasas la lampe djinn. ~
+@2211 = ~Ce n'est jamais une perte de temps que d'en apprendre plus sur la beauté de la nature. Mais vous avez raison, comme souvent. Nous devrions avancer prudemment et rappeler aux rakshasi la valeur de l'équilibre...~
+@2212 = ~Tu as peut-être raison, Jaheira. Je reconnais certaines des plantes que j'ai étudiées, et les bruits des oiseaux me rappellent les espèces que j'ai observées lors de ma visite dans un bosquet aux druides au sud.~
+// réservées : @2213 @2214
+
+
+// Texte de la statue Marilith
+@2300 = ~La statue semble aussi ancienne que la forêt elle-même, mais vous ne voyez aucun signe de négligence.~
+@2301 = ~Lorsque vous vous approchez de la statue, elle ouvre les yeux et tourne lentement la tête jusqu'à ce qu'elle pointe vers le sud. Vous attendez que quelque chose de plus se passe, mais la statue reste inanimée.~
+@2302 = ~La statue reste inanimée, mais sa tête est toujours tournée vers le sud.~
+@2303 = ~Quand vous vous approchez de la statue, vous entendez un léger bourdonnement. Il ne se passe plus rien.~
+@2304 = ~Quand vous vous approchez de la statue, elle prend vie et ouvre ses yeux de feu. Son regard rencontre le vôtre, et vous sentez un frisson couler le long de votre colonne vertébrale. Elle se déplace ensuite lentement vers l'est et s'arrête brusquement. Vous attendez que quelque chose de plus se passe, mais la statue ne bouge pas.~
+@2305 = ~La statue reste inanimée tandis que sa tête continue de faire face à l'est.~
+@2306 = ~Quand vous approchez de la statue, elle commence lentement à bouger la tête. Vous attendez patiemment qu'elle s'arrête de bouger. Vous devinez que la prochaine statue se trouve encore dans la direction sud.~
+@2307 = ~La statue reste inanimée tandis que sa tête continue de faire face au sud.~
+@2308 = ~Quand vous vous approchez de la statue, elle lève brusquement la tête. Elle commence alors à tourner lentement jusqu'à ce qu'elle soit orientée vers l'ouest.~
+@2309 = ~La statue reste inanimée, mais sa tête est toujours tournée vers l'ouest.~
+@2310 = ~Quand vous approchez de la statue, elle lève lentement la tête et ouvre les yeux. Sa tête se tourne vers vous et vous avez l'impression que son regard brûle dans votre âme. Votre vision commence à se troubler et vous perdez la notion du temps. Quand vous revenez à vous, la statue semble aussi inerte qu'avant, mais vous découvrez une pierre gardienne dans votre sac à dos.~
+@2311 = ~La statue semble à nouveau inanimée, mais vous avez l'impression que ses yeux suivent toujours vos mouvements.~
+
+
+// Textes de la cutscene
+@2400 = ~Vous êtes un fuyant, mais nous vous avons enfin retrouvé.~~Vous êtes une fuyante, mais nous vous avons enfin retrouvée.~
+@2401 = ~Vous pensiez vraiment pouvoir vous en tirer si facilement avec notre précieuse lampe ?~
+@2402 = ~Je vais vous prendre ça...~
+@2403 = ~Attaquez, mes frères. Battez-vous pour la gloire de Ravanna !~
+@2404 = ~Je vais remettre notre prix au maître.~
+@2405 = ~Pour la gloire de Ravanna !~
+@2406 = ~Pour Ravanna!~
+@2407 = ~La bataille en cours vous empêche de vous concentrer sur les pouvoirs de l'orbe.~
+@2408 = ~L'orbe de Jade commence à briller alors que vous êtes enveloppé dans une lumière étincelante...~~L'orbe de Jade commence à briller alors que vous êtes enveloppée dans une lumière étincelante...~
+@2409 = ~L'orbe de Jade scintille rapidement et se désagrège en un nuage de poussière. On dirait que la magie de la pierre a déjà été épuisée. Vous avez perdu le djinn pour toujours.~
+@2410 = ~L'orbe ne fait rien.~
+@2411 = ~Vous concentrez vos pensées sur l'orbe de Jade entre vos mains.~
+@2412 = ~Après quelques instants, il commence à briller alors que vous êtes enveloppé dans une lumière étincelante...~~Après quelques instants, il commence à briller alors que vous êtes enveloppée dans une lumière étincelante...~
+@2413 = ~Après quelques instants, il clignote brièvement et se désagrège en un nuage de poussière. On dirait que la magie de la pierre a déjà été épuisée. Vous avez perdu le djinn pour toujours.~
+
+
+// entrées de journal
+@2800 = ~Vengeance
+
+Un groupe de rakshasa m'a tendu une embuscade, et leur chef a dérobé par magie la lampe djinn.
+
+Avant que je puisse réagir, il s'est téléporté quelque part et a laissé ses sous-fifres pour s'occuper de moi. Je devrais me hâter et les suivre avant que le djinn ne soit hors de ma portée pour toujours.~
+
+@2801 = ~Vengeance
+
+J'ai utilisé l'orbe de Jade que j'ai trouvé sur le corps d'un rakshasa. Il m'a téléporté dans une jungle inconnue. Le climat est très différent d'Amn, donc je peux être n'importe où.~
+
+@2802 = ~Vengeance
+
+J'ai découvert un temple antique dans le sud de la jungle. Quand j'ai essayé d'y entrer, j'ai été retenu par un champ de force. Il doit y avoir un moyen de le désactiver.~
+
+@2803 = ~Vengeance
+
+J'ai rencontré une pierre gardienne avec une aura de magie autour d'elle. Je ne sais pas encore à quoi elle sert, mais je devrais la garder quelque temps.~
+
+@2804 = ~Vengeance
+
+J'ai rencontré une pierre gardienne avec une aura de magie autour d'elle. Cela a peut-être quelque chose à voir avec le champ de force du temple sud.~
+
+@2805 = ~Vengeance
+
+J'ai rencontré une statue en forme de serpent. Elle a communiqué avec moi par télépathie et m'a mis au défi de relever une épreuve d'intelligence.
+
+Après avoir passé ses tests, elle m'a présenté une pierre gardienne en quelque sorte liée au champ de force qui bloquait mon chemin vers le temple sud. La statue a aussi mentionné que j'aurai besoin de quatre pierres gardiennes. Rompre les protections déclenchera des pièges.~
+
+@2806 = ~Vengeance
+
+J'ai rencontré une statue en forme de serpent. Elle a communiqué avec moi par télépathie et m'a mis au défi de relever une épreuve d'intelligence.
+
+Quand j'ai refusé son défi, elle m'a dit que j'aurais besoin de "pouvoirs divins" pour surmonter les protections, quoi que cela puisse vouloir dire.~
+
+@2807 = ~Vengeance
+
+Après que j'ai réussi à désactiver les barrières autour du temple, un puissant grand prêtre rakshasa m'attendait.
+
+La bataille a été difficile, mais je l'ai finalement vaincu. Avec la mort du grand prêtre, le champ de protection autour de l'autel a disparu, et je peux accéder à son contenu.~
+
+@2810 = ~Vengeance
+
+Après ma victoire sur le grand prêtre rakshasa, j'ai pu utiliser le téléporteur dans la jungle pour retourner à Amn.
+J'espère que je n'aurai plus à m'occuper de rakshasas pendant un bon moment.~
+
+
+// Textes divers pour la carte A77004
+@2900 = ~La tête de serpent semble presque vivante. Vous avez l'impression que... quelque chose vous observe.~
+@2901 = ~La tête de serpent reste silencieuse.~
+@2902 = ~Portail magique~
+@2903 = ~Temple~
+@2904 = ~Pierre gardienne yuan-Ti 1~
+@2905 = ~Cette pierre est anormalement froide au toucher. Elle porte une gravure que vous ne reconnaissez pas.~
+@2907 = ~Pierre gardienne yuan-Ti 2~
+@2908 = ~Bien que cette pierre ait l'air grossièrement taillée, elle porte des gravures complexes que vous ne reconnaissez pas.~
+@2910 = ~Pierre gardienne yuan-Ti 3~
+@2911 = ~Cette pierre étonnamment lourde a été fabriquée à partir d'un matériau que vous ne reconnaissez pas. Bien que les gravures dessus soient à peine visibles, elles sont presque gravées dans votre esprit.~
+@2913 = ~Pierre gardienne yuan-Ti 4~
+@2914 = ~Au premier coup d'œil, cette pierre ressemble à n'importe quelle autre, mais vous pouvez voir de petites marques qui émettent une faible lueur quand vous couvrez la lumière.~
+@2916 = ~Statue serpent~
+@2917 = ~Clé Yuan-Ti~
+@2918 = ~Cette clé a été trouvée sur le corps d'un Mage yuan-ti.~
+@2919 = ~Champion Yuan-Ti~
+@2920 = ~Grand Prêtre Ak'chazar~
+@2921 = ~L'entrée du temple est protégée par un champ de force impénétrable.~
+@2922 = ~Cette structure semble être le lieu de vie des habitants de cette jungle. Vous ne voyez rien d'intéressant ici.~
+@2923 = ~Cet ancien autel de pierre semble avoir des centaines d'années. Il doit avoir été utilisé récemment, même si vous ne voyez pas d'offrandes sur l'autel.~
+@2924 = ~Une barrière impénétrable vous bloque la route. Vous devez d'abord trouver un moyen de la désactiver.~
+@2925 = ~Vous êtes trop loin pour l'examiner de près.~
+@2926 = ~Une deuxième barrière vous bloque le passage. Vous devez d'abord trouver un moyen de la désactiver.~
+@2927 = ~Le portail ne semble pas fonctionner. Vous devez d'abord trouver un moyen de l'activer.~
+@2928 = ~Lorsque vous placez la bonne pierre gardienne dans la fente, elle commence à émettre une lueur violette. Vous entendez un bruit derrière vous...~
+@2930 = ~Attaquez-les !~
+@2931 = ~Lorsque la dernière créature meurt, vous entendez un son aigu et percevez un léger vacillement dans l'air. La barrière a disparu.~
+@2932 = ~Vous entendez un son aigu et percevez un léger scintillement dans l'air. La barrière extérieure a disparu.~
+@2933 = ~Lorsque vous placez la dernière pierre gardienne dans la fente, Vous percevez un léger scintillement dans l'air. La barrière qui disparaît révèle lentement le vrai décor qui se dresse devant vous. Vous n'êtes pas seul ici.~
+@2934 = ~Vous percevez un léger scintillement dans l'air et la barrière intérieure qui disparaît lentement révèle le vrai décor qui se dresse devant vous. Vous n'êtes pas seul ici.~
+@2935 = ~Avec la défaite du Grand Prêtre Ak'chazar, le champ de protection autour de l'autel disparaît.~
+@2936 = ~Orbe de Jade~
+@2937 = ~L'orbe que vous avez trouvé sur le corps d'un rakshasa est frais au toucher et semble presque liquide sous la lumière normale du soleil. Quand vous le tenez dans vos mains, il émet une faible lueur pulsante, et vous pouvez presque sentir la magie à l'intérieur. C'est un mystère de savoir comment une espèce aussi sauvage a pu fabriquer des artefacts aussi délicats.~
+@2938 = ~Chapeau de mage~
+@2939 = ~Le chapeau pointu de Matar~
+@2940 = ~Le chapeau émet une lueur bleue. Il est étonnamment léger et semble avoir été conçu pour un mage en particulier.
+
+Uniquement utilisable par :
+ Mage (simple, jumelé, & multi-classé)
+ Barde
+ Personnages chaotiques~
+
+@2941 = ~Il y a des siècles, le magicien fou Harash Matar a demandé à un enchanteur gnome local de trouver un moyen d'utiliser ses pouvoirs au maximum. Le gnome connaissait l'état mental du magicien et a façonné une coiffe qui transforme les pensées chaotiques de celui qui le porte en puissants sorts.
+
+Le chapeau s'est avéré plus efficace qu'il ne l'imaginait. Peu après que le gnome eut livré son chef-d'œuvre, le sorcier fou a accidentellement appelé une horde de démons dans sa ville natale. Ils ravagèrent tout ce qui était à leur portée et tuèrent tous les habitants de la ville. Seul cette coiffe a survécu au massacre.
+
+Le chapeau puise dans les forces chaotiques de l'esprit, permettant à celui qui le porte de lancer des sorts qui sont généralement au-delà de ses capacités. En raison de sa nature particulière, les personnages qui ne suivent pas le chemin chaotique seront dans l'impossibilité de l'utiliser.
+
+Capacité d'équipement :
+Effet : Bouclier du chaos
+Protège un peu le porteur des effets secondaires dangereux lors du lancement d'un sort de magie entropique.
+
+Capacité spéciale (3x par jour) :
+Rupture hasardeuse de Nahal
+Permet à l'utilisateur de lancer n'importe quel sort du livre de sorts sans restriction de niveau. Parce qu'il s'appuie sur les énergies chaotiques de l'esprit, le plus souvent le résultat sera désastreux ou très éloigné de ce que le lanceur espère.
+
+Uniquement utilisable par :
+ Mage (simple, jumelé, & multi-classé)
+ Barde
+ Personnages chaotiques~
+@2942 = ~Utiliser~

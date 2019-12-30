@@ -1,0 +1,247 @@
+// -*- coding: utf-8 -*-
+// *** BG2EE-specific strings ***
+
+// from afaaq.tra
+// *** Banter with Dorn (index 22000...22499) ***
+
+// *** Banter with Hexxat (index 22500...22999) ***
+
+// *** Banter with Neera (index 23000...23499) ***
+
+// *** Banter with Rasaad (index 23500...23999) ***
+
+
+// *** Party introductions ***
+@58485 = ~Mon seul compagnon de voyage est Dorn.~
+@58486 = ~Voici Dorn.~
+@58487 = ~Ma seule compagne de voyage est Neera.~
+@58488 = ~Voici Neera.~
+@58489 = ~Ma seule compagne de voyage est Hexxat.~
+@58490 = ~Voici Hexxat.~
+@58491 = ~Mon seul compagnon de voyage est Rasaad.~
+@58492 = ~Voici Rasaad.~
+@58493 = ~Mon seul... compagnon de voyage est Wilson.~
+@58494 = ~Voici Wilson.~
+@58495 = ~Mon seul compagnon de voyage est Wilson.~
+@58496 = ~Et pour finir, et non des moindres, voici Dorn. C'est un sacré guerrier et il possède aussi des pouvoirs impies.~
+@58497 = ~Et pour finir, et non des moindres, voici Dorn. C'est un puissant chevalier noir et c'est un précieux membre du groupe.~
+@58498 = ~Notre prochain compagnon est Dorn. C'est un sacré guerrier et il possède aussi des pouvoirs impies.~
+@58499 = ~Notre prochain compagnon est Dorn. C'est un puissant chevalier noir et c'est un précieux membre du groupe.~
+@58500 = ~Notre troisième compagnon est Dorn. C'est un sacré guerrier et il possède aussi des pouvoirs impies.~
+@58501 = ~Notre troisième compagnon est Dorn. C'est un puissant chevalier noir et c'est un précieux membre du groupe.~
+@58502 = ~Le suivant est Dorn. C'est un sacré guerrier et il possède aussi des pouvoirs impies.~
+@58503 = ~Le suivant est Dorn. C'est un puissant chevalier noir et c'est un précieux membre du groupe.~
+@58504 = ~C'est un sacré guerrier et il possède aussi des pouvoirs impies.~
+@58505 = ~C'est un puissant chevalier noir et c'est un précieux membre du groupe.~
+@58506 = ~Et pour finir, et non des moindres, voici Neera. C'est une demi-elfe enthousiaste, passionnée par la magie entropique~
+@58507 = ~Et pour finir, et non des moindres, voici Neera. C'est une entropiste compétente et c'est un précieux membre du groupe.~
+@58508 = ~Notre prochain compagnon est Neera. C'est une demi-elfe enthousiaste, passionnée par la magie entropique~
+@58509 = ~Notre prochain compagnon est Neera. C'est une entropiste compétente et c'est un précieux membre du groupe.~
+@58510 = ~Notre troisième compagnon est Neera. C'est une demi-elfe enthousiaste, passionnée par la magie entropique~
+@58511 = ~Notre troisième compagnon est Neera. C'est une entropiste compétente et c'est un précieux membre du groupe.~
+@58512 = ~La suivante est Neera. C'est une demi-elfe enthousiaste, passionnée par la magie entropique~
+@58513 = ~La suivante est Neera. C'est une entropiste compétente et c'est un précieux membre du groupe.~
+@58514 = ~C'est une demi-elfe enthousiaste, passionnée par la magie entropique~
+@58515 = ~C'est une entropiste compétente et c'est un précieux membre du groupe.~
+@58516 = ~Et pour finir, et non des moindres, voici Hexxat. Elle ne parle pas beaucoup d'elle-même, mais elle sait crocheter des serrures récalcitrantes.~
+@58517 = ~Et pour finir, et non des moindres, voici Hexxat. Même si toutes ses pensées sont fixées sur son prochain boulot, c'est une voleuse compétente et c'est un précieux membre du groupe.~
+@58518 = ~Notre prochain compagnon est Hexxat. Elle ne parle pas beaucoup d'elle-même, mais elle sait crocheter des serrures récalcitrantes.~
+@58519 = ~Notre prochain compagnon est Hexxat. Même si toutes ses pensées sont fixées sur son prochain boulot, c'est une voleuse compétente et c'est un précieux membre du groupe.~
+@58520 = ~Notre troisième compagnon est Hexxat. Elle ne parle pas beaucoup d'elle-même, mais elle sait crocheter des serrures récalcitrantes.~
+@58521 = ~Notre troisième compagnon est Hexxat. Même si toutes ses pensées sont fixées sur son prochain boulot, c'est une voleuse compétente et c'est un précieux membre du groupe.~
+@58522 = ~La suivante est Hexxat. Elle ne parle pas beaucoup d'elle-même, mais elle sait crocheter des serrures récalcitrantes.~
+@58523 = ~La suivante est Hexxat. Même si toutes ses pensées sont fixées sur son prochain boulot, c'est une voleuse compétente et c'est un précieux membre du groupe.~
+@58524 = ~Elle ne parle pas beaucoup d'elle-même, mais elle sait crocheter des serrures récalcitrantes.~
+@58525 = ~Même si toutes ses pensées sont fixées sur son prochain boulot, c'est une voleuse compétente et c'est un précieux membre du groupe.~
+@58526 = ~Et pour finir, et non des moindres, voici Hexxat. C'est un vampire d'origine Chultan et un puissant allié de mon groupe.~
+@58527 = ~Et pour finir, et non des moindres, voici Hexxat. C'est une voleuse talentueuse et c'est un précieux membre du groupe.~
+@58528 = ~Notre prochain compagnon est Hexxat. C'est un vampire d'origine Chultan et un puissant allié de mon groupe.~
+@58529 = ~Notre prochain compagnon est Hexxat. C'est une voleuse talentueuse et c'est un précieux membre du groupe.~
+@58530 = ~Notre troisième compagnon est Hexxat. C'est un vampire d'origine Chultan et un puissant allié de mon groupe.~
+@58531 = ~Notre troisième compagnon est Hexxat. C'est une voleuse talentueuse et c'est un précieux membre du groupe.~
+@58532 = ~Le suivant est Hexxat. C'est un vampire d'origine Chultan et un puissant allié de mon groupe.~
+@58533 = ~Le suivant est Hexxat. C'est une voleuse talentueuse et c'est un précieux membre du groupe.~
+@58534 = ~C'est un vampire d'origine Chultan et un puissant allié de mon groupe.~
+@58535 = ~C'est une voleuse talentueuse et c'est un précieux membre du groupe.~
+@58536 = ~Et pour finir, et non des moindres, voici Rasaad. C'est un moine qui croit aux enseignements de Selûne. Il est actuellement dans une quête sainte pour venger la mort de son frère.~
+@58537 = ~Et pour finir, et non des moindres, voici Rasaad. C'est un moine de la conscience solaire et c'est un précieux membre du groupe.~
+@58538 = ~Notre prochain compagnon est Rasaad. C'est un moine qui croit aux enseignements de Selûne. Il est actuellement dans une quête sainte pour venger la mort de son frère.~
+@58539 = ~Notre prochain compagnon est Rasaad. C'est un moine de la conscience solaire et c'est un précieux membre du groupe.~
+@58540 = ~Notre troisième compagnon est Rasaad. C'est un moine qui croit aux enseignements de Selûne. Il est actuellement dans une quête sainte pour venger la mort de son frère.~
+@58541 = ~Notre troisième compagnon est Rasaad. C'est un moine de la conscience solaire et c'est un précieux membre du groupe.~
+@58542 = ~Le suivant est Rasaad. C'est un moine qui croit aux enseignements de Selûne. Il est actuellement dans une quête sainte pour venger la mort de son frère.~
+@58543 = ~Le suivant est Rasaad. C'est un moine de la conscience solaire et c'est un précieux membre du groupe.~
+@58544 = ~C'est un moine qui croit aux enseignements de Selûne. Il est actuellement dans une quête sainte pour venger la mort de son frère.~
+@58545 = ~C'est un moine de la conscience solaire et c'est un précieux membre du groupe.~
+@58546 = ~Et pour finir, et non des moindres, voici Wilson. Il a une volonté de fer, il est puissant et c'est un compagnon fidèle.~
+@58547 = ~Et pour finir, et non des moindres, voici Wilson. Il a une volonté de fer, il est puissant et c'est un précieux membre du groupe.~
+@58548 = ~Notre prochain compagnon est Wilson. Il a une volonté de fer, il est puissant et c'est un compagnon fidèle.~
+@58549 = ~Notre prochain compagnon est Wilson. Il a une volonté de fer, il est puissant et c'est un précieux membre du groupe.~
+@58550 = ~Notre troisième compagnon est Wilson. Il a une volonté de fer, il est puissant et c'est un compagnon fidèle.~
+@58551 = ~Notre troisième compagnon est Wilson. Il a une volonté de fer, il est puissant et c'est un précieux membre du groupe.~
+@58552 = ~Le suivant est Wilson. Il a une volonté de fer, il est puissant et c'est un compagnon fidèle.~
+@58553 = ~Le suivant est Wilson. Il a une volonté de fer, il est puissant et c'est un précieux membre du groupe.~
+@58554 = ~Il a une volonté de fer, il est puissant et c'est un compagnon fidèle.~
+@58555 = ~Il a une volonté de fer, il est puissant et c'est un précieux membre du groupe.~
+@58556 = ~Tu es anormalement faible pour un génie. Je commence à douter que tu en vaille la peine même si <CHARNAME> nous a poussé à venir te chercher.~
+@58557 = ~La valeur du pouvoir réside dans l'œil de celui qui regarde. La force brute et un comportement terrifiant ne sont pas les seuls moyens de définir la valeur de quelqu'un.~
+@58558 = ~Tu crois vraiment à ces bêtises ? Je n'ai pas encore été témoin d'un seul cas où tes adversaires ont été submergés simplement par la bonté de ton cœur.~
+@58559 = ~Si vous commencez à parcourir le monde les yeux ouverts et l'esprit ouvert, vous changerez tôt ou tard d'avis.~
+@58560 = ~C'est génial d'avoir plus de gens inhabituels... euh, de génies dans le coin. Je veux dire encore plus inhabituel que moi. Et <CHARNAME>, bien sûr.~
+@58561 = ~Chacun est inhabituel à sa façon. Je ne suis pas plus une exception que vous ou les gens que nous rencontrons tous les jours.~
+@58562 = ~Veuillez excuser ma longue remarque. Je suis heureux de faire votre connaissance, Neera.~
+@58563 = ~Non, c'est bon. On en reparlera plus tard, si vous voulez.~
+@58564 = ~Je suis sûr que nous trouverons le temps de parler au cours des voyages qui nous attendent.~
+@58565 = ~Je dois aller à la tombe de Dragomir.~
+@58566 = ~Je suis heureux de faire... votre connaissance. Puis-je vous demander pourquoi vous avez choisi de rejoindre le groupe de <CHARNAME> ?~
+@58567 = ~Alors votre chemin est déjà tracé. Je vous souhaite la force et la persévérance de trouver ce que vous cherchez.~
+@58568 = ~Afaaq, que se passe-t-il ?~
+@58569 = ~Ne vous inquiétez pas, mon seigneur. Je suis certain que tout deviendra clair très bientôt.~~Ne vous inquiétez pas, ma dame. Je suis certain que tout deviendra clair très bientôt.~
+@58570 = ~C'est très agréable d'avoir un des légendaires génies à nos côtés. Toi et moi devrions apprendre à mieux nous connaître.~
+@58571 = ~Vous avez embrassé les ténèbres dans toute leur étendue. Je doute que nous ayons quelque chose en commun qui justifie une connaissance, vampire.~
+@58572 = ~Pourquoi tant de préjugés, Afaaq ? Il y a sûrement une étincelle de curiosité en vous qui veut en savoir plus sur moi.~
+@58573 = ~Vos belles paroles sont gaspillées avec moi. Je tolérerai votre présence tant que <CHARNAME> le souhaitera, mais n'attendez pas plus que ça.~
+@58574 = ~Salutations, Afaaq. J'aurais aimé qu'on se rencontre dans de meilleures circonstances. Aucune créature ne mérite d'être emprisonnée comme vous l'êtes.~
+@58575 = ~J'apprécie votre sentiment. Mais votre situation n'est pas moins grave que la mienne. Une prison par devoir peut être aussi puissante qu'une prison formée par magie.~
+@58576 = ~Vous avez probablement raison. Mais je dois suivre cette voie jusqu'à son terme.~
+@58578 = ~La fin ne doit pas nécessairement être amère. Je suis certain que vous finirez par l'emporter.~
+@58579 = ~GROGNE ?~
+@58580 = ~Vous avez raison. Je suis persuadé que <CHARNAME> peut y remédier.~
+@58581 = ~GROGNE !~
+@58582 = ~C'est très perspicace de votre part. Si quelqu'un peut le faire, alors c'est <CHARNAME>.~
+@58583 = ~Et toi aussi, mon ami.~
+
+
+// from misc.tra
+
+
+// from quest2.tra
+@2213 = ~Cette jungle me semble vaguement familière. Comme un vague souvenir ou un rêve d'une vie d'il y a très longtemps. Je ne serais pas surpris si la pierre nous téléportait dans la jungle de Chult, ou peut-être dans les jungles noires.~
+@2214 = ~Quoi qu'il en soit, ce sera une diversion intéressante. Ai-je raison, <CHARNAME> ?~
+
+@2940 = ~Le chapeau émet une lueur bleue. Il est étonnamment léger et semble avoir été conçu pour un mage en particulier.~
+
+@2941 = ~Il y a des siècles, le magicien fou Harash Matar a demandé à un enchanteur gnome local de trouver un moyen d'utiliser ses pouvoirs au maximum. Le gnome connaissait l'état mental du magicien et a façonné une coiffe qui transforme les pensées chaotiques de celui qui le porte en puissants sorts.
+
+Le chapeau s'est avéré plus efficace qu'il ne l'imaginait. Peu après que le gnome eut livré son chef-d'œuvre, le sorcier fou a accidentellement appelé une horde de démons dans sa ville natale. Ils ravagèrent tout ce qui était à leur portée et tuèrent tous les habitants de la ville. Seul cette coiffe a survécu au massacre.
+
+Le chapeau puise dans les forces chaotiques de l'esprit, permettant à celui qui le porte de lancer des sorts qui sont généralement au-delà de ses capacités. En raison de sa nature particulière, les personnages qui ne suivent pas le chemin chaotique seront dans l'impossibilité de l'utiliser.
+
+Capacité d'équipement :
+Effet : Bouclier du chaos
+Protège un peu le porteur des effets secondaires dangereux lors du lancement d'un sort de magie entropique.
+
+Capacité spéciale (3x par jour) :
+Rupture hasardeuse de Nahal
+Permet à l'utilisateur de lancer n'importe quel sort du livre de sorts sans restriction de niveau. Parce qu'il s'appuie sur les énergies chaotiques de l'esprit, le plus souvent le résultat sera désastreux ou très éloigné de ce que le lanceur espère.~
+
+
+// from quest5.tra
+@6809 = ~Cette baguette magique a un nombre limité de charges qui vous permet, à vous et à votre groupe, de résister à la chaleur extrême provenant de la lave ou de sources de chaleur similaires. Il ne protège PAS contre les effets brûlants du contact direct avec le feu.
+
+STATISTIQUES :
+
+Spécial :  Protège contre la chaleur
+Portée : groupe complet
+Durée : 8 heures~
+
+@6822 = ~On dirait que cette baguette va s'enflammer à un moment ou à un autre. La partie inférieure est métallique et très organique au toucher. Sa partie supérieure semble brûler mais n'émet pas de chaleur.
+
+Capacités spéciales : (dix charges chacune):
+
+ Aura de flammes mortelles
+    Durée : un tour
+ Convocation d'Élémental de Feu
+    Convoque un Élémental de Feu de 24 dés de vie
+    Durée : 4 heures
+ Comète
+    Étourdit 1D4 rounds et inflige 10D10 points de dégâts de feu aux ennemis dans un rayon de 10m.~
+
+@6826 = ~Cette excellente création contient des enchantements très puissants qu'aucun mortel n'est plus capable de produire. Lorsqu'il est équipé, il permet non seulement de protéger l'utilisateur des forces élémentaires du monde, mais aussi de projeter une partie des dégâts sur les attaquants.
+
+Capacités spéciales :
+
+ Bouclier de feu (Rouge)
+ Durée : deux tours
+ Trois fois par jour
+
+ Bouclier de feu (Bleu)
+ Durée : deux tours
+ Trois fois par jour
+
+ Bouclier d'air
+ Durée : deux tours
+ Deux fois par jour~
+
+@6828 = ~Le cimeterre crépite d'énergie lorsque vous le tenez dans votre main et chaque coup semble couper l'air lui-même.
+
+STATISTICS:
+
+Capacités d'équipement :
+   50% de résistance à l’électricité
+   protection contre l'étourdissement
+
+Capacités de combat :
+   Coup de foudre
+   (chaque coup étourdi la cible pendant deux rounds si elle rate un jet de sauvegarde contre la mort)
+   Électrocution
+   (10% de chance à chaque coup que la cible doivent réussir un jet de sauvegarde contre la mort ou mourir)
+
+Dégâts : 1D8 +4, +2D8 dégâts d’électricité
+TAC0 : +4
+Type de Dégâts : tranchant
+Poids : 2
+Facteur de Vitesse : 1
+Type de compétence : cimeterre/Wakizashi/Ninja-To
+Type : arme à 1 main
+Force nécessaire : 8~
+
+@6845 = ~Le crâne rayonne d'une aura de menace écrasante et vous avez le sentiment qu'il est toujours possédé par l'esprit de la demi-liche elle-même.
+
+STATISTIQUES :
+
+*MAUDIT*
+
+Capacités spéciales (trois fois par jour) :
+ Absorber la force vitale :
+ Draine trois niveaux et cause 3d8+8 de dégâts à la victime tout en guérissant le lanceur de sorts en même temps.
+ Portée : 13 mètres
+
+Capacité d'équipement :
+ Bénédiction du mort-vivant 
+ Le porteur obtient à la fois les malédictions et les bénédictions des morts-vivants pendant une courte période.
+ Cela inclut :
+   - Immunité à la magie de la mort,
+     drain de niveau et panique
+   - Résistance accrue aux
+     dommages physiques et causés par le froid
+   - Immunité à la hâte
+   - Vulnérabilité au feu
+   - Déclin lent du corps et de l'esprit
+   - Et plus encore....~
+
+@6851 = ~Un petit clan de nains inventa une substance étrange qui, mélangée correctement, pouvait briser même la pierre la plus dure. Il s'est rapidement transformé en un outil d'aide au creusement de tunnels et de grottes. Malheureusement, un dépôt de cette substance très dangereuse a explosé dans la ville, anéantissant tout le clan.
+
+Les instructions sur la façon de produire la substance ont toutefois survécu. Un groupe de scouts derro a découvert la ville détruite et a récupéré une partie de la substance, ainsi que la recette sur la façon de la créer. Étant une race cruelle et maléfique, ils ont vite découvert tout son potentiel et en ont fait une arme. Lorsqu'il est activé, il explose après un court délai et inflige des dégâts de feu à toutes les créatures qui se trouvent à proximité immédiate. Plus tard, un clerc derro de Diirinka perfectionna cette arme en y ajoutant un déclencheur de proximité magique. Une fois activée, l'arme restera en place et explosera seulement si une créature s'en approche.
+
+STATISTIQUES :
+
+Effet: Piège de feu explosif
+Dégâts: 6D6 dégâts de feu
+Déclencheur : Entrée dans un rayon de 7 mètres autour du piège
+Affecte : Tout le monde dans un rayon de 10 mètres~
+
+@6885 = ~La puissance de ce crâne a été légèrement affaiblie par le rituel de purification. Néanmoins, il contient encore une grande partie de son ancien pouvoir.
+
+STATISTIQUES :
+
+Capacité d'équipement :
+ Bénédiction du mort-vivant 
+ Le porteur obtient à la fois les malédictions et les bénédictions des morts-vivants.
+ Cela inclut :
+   - Immunité à la magie de la mort,
+     drain de niveau et panique
+   - Résistance accrue aux
+     dommages physiques et causés par le froid
+   - Immunité à la hâte
+   - Vulnérabilité au feu~

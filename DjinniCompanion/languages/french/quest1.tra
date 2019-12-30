@@ -1,0 +1,246 @@
+// -*- coding: cp1252 -*-
+// *** Textes relatifs à la quête n°1 : "Le jeu du chat et de la souris" (index 1000...1999)
+
+// Dialogue : rakshasa
+@1100 = ~C'était facile.~
+@1101 = ~Ouais !~
+@1102 = ~C'était tout ?~
+@1103 = ~Ne me dérangez pas dans ma chasse, <RACE>.~
+@1104 = ~Je vous ai dit de ne pas me déranger ! Vous effrayez ma proie.~
+@1105 = ~Ne mettez pas ma patience à l'épreuve, <RACE>, ou vous serez ma prochaine cible !~
+@1106 = ~C'est ça, ! Voyons comment vous gérez ça.~
+@1107 = ~Stop !~
+@1108 = ~Que fait un <RACE> sur notre territoire ? ~
+@1109 = ~Qu'est-ce que vous êtes ?~
+@1110 = ~Qui êtes-vous ?~
+@1111 = ~Un téléporteur nous a amenés ici. Où sommes-nous ?~
+@1112 = ~Nous sommes venus ici par accident. Je pense qu'on devrait s'en aller maintenant. Au revoir.~
+@1113 = ~Je suis désolé, ce n'était pas notre intention de vous déranger. Nous allons prendre congé.~~Je suis désolée, ce n'était pas notre intention de vous déranger. Nous allons prendre congé.~
+@1114 = ~Nous préférons mourir plutôt que de vous dire quoi que ce soit.~
+@1115 = ~On n'a rien à vous dire. Vous devez voir notre chef. Il décidera quoi faire de vous.~
+@1116 = ~Très bien, on vous suit~
+@1117 = ~Je vais y réfléchir.~
+@1118 = ~Non, je ne fais pas confiance à ceux de votre espèce.~
+@1119 = ~Puisque vous connaissez déjà notre présence, je ne peux pas vous laisser partir. Notre chef décidera quoi faire de vous.~
+@1120 = ~Très bien, j'accepte.~
+@1121 = ~Ne faites rien d'imprudent ou nous vous tuerons ici et tout de suite.~
+@1122 = ~Il n'y a rien à réfléchir, <RACE>. Vous allez obéir à nos ordres ou en subir les conséquences !~
+@1123 = ~Alors vous mourrez. ATTAQUE !~
+@1124 = ~Que voulez-vous de nous, <RACE> ?~
+@1125 = ~Que faites-vous ici ?~
+@1126 = ~Rien.~
+@1127 = ~J'ai décidé de mettre fin à votre existence. Mourrez !~
+@1128 = ~C'est très inhabituel que notre chef vous laisse vivre.~
+@1129 = ~Avez-vous quelque chose à dire ?~
+@1130 = ~Je suis désolé de vous déranger.~~Je suis désolée de vous déranger.~
+@1131 = ~Vous avez de la chance de ne pas être chassé comme la proie que vous êtes.~
+@1132 = ~Qu'attendez-vous de nous ?~
+@1133 = ~Parlez à notre chef si vous voulez savoir quelque chose.~
+@1134 = ~Alors arrête de m'ennuyer !~
+@1135 = ~Vous avez capturé le dao ? Notre chef sera ravi.~
+@1136 = ~Alors vous êtes utile après tout. Apportez votre trophée à notre chef.~
+
+
+// Dialogue : Mahel (chef des rakshasas)
+@1200 = ~Nooon !!! Mon fidèle Narantaka !~
+@1201 = ~Un <RACE> a trouvé le chemin jusqu'à notre campement ?~
+@1202 = ~Qui êtes-vous ? Dites-le-nous tout de suite !~
+@1203 = ~Mon nom est <GABBER>. Qui... ou qu'est-ce que vous êtes ?~
+@1204 = ~Mon nom est <GABBER>. Qui êtes-vous, rakshasa ?~
+@1205 = ~Je suis... un aventurier qui est tombé sur votre camp par hasard.~~Je suis... une aventurière qui est tombé sur votre camp par hasard.~
+@1206 = ~J'aimerais connaître votre nom avant de vous dire quoi que ce soit.~
+@1207 = ~Je ne vous dirai rien si vous continuez votre comportement malpoli.~
+@1208 = ~ Nous sommes les chasseurs, vous êtes la proie. C'est tout ce que vous devez savoir sur nous. Vous pouvez toujours nous être utile, malgré votre ignorance.~
+@1209 = ~Je m'appelle Mahel, <GABBER>. Et je suis le chef de notre groupe de chasseurs.~
+@1210 = ~Vous êtes une pitoyable excuse pour votre race. Mais vous pouvez toujours nous être utile.~
+@1211 = ~Je ne sais pas si vous êtes audacieux ou simplement ignorant, mais j'aime votre franchise. Je suis Mahel, le chef de notre groupe de chasseurs.~~Je ne sais pas si vous êtes audacieuse ou simplement ignorante, mais j'aime votre franchise. Je suis Mahel, le chef de notre groupe de chasseurs.~
+@1212 = ~Vous osez ?~
+@1213 = ~Nous vous traquerons et nous nous régalerons de vos entrailles. ATTAQUEZ-LES !~
+@1214 = ~Nous sommes venus ici il y a plusieurs lunes pour chasser et nous régaler. Mais nous avons éveillé l'intérêt de nos ennemis, les génies dao.~
+@1215 = ~Pour l'instant ils ne nous ont pas encore directement traqués. Nous sommes fatigués de leurs jeux.~
+@1216 = ~Hum, je ne les sens plus. Ils ne seraient pas partis a moins d'avoir récupéré leur dû.~
+@1217 = ~Votre odeur révèle que vous avez déjà travaillé pour eux. Avez-vous battu notre champion Ihtafeer ?~
+@1218 = ~Oui, nous avons livré sa tête aux génies Dao.~
+@1219 = ~(Mensonge) Non, nous avons détruit les génies dao.~
+@1220 = ~Je ne sais pas de quoi vous parlez.~
+@1221 = ~Nous les avons déjà détruits.~
+@1222 = ~(Mensonge) En fait, nous leur avons apporté la tête d'un rakshasa et ils sont partis.~
+@1223 = ~Hum, est-ce que je sens l'odeur des génies sur toi ? Peu importe.~
+@1224 = ~J'ai quelque chose en tête pour pimenter notre chasse. Vous pouvez nous amener leur chef.~
+@1225 = ~Ne l'écoutez pas. Les rakshasa sont des créatures démoniaques et n'ont que de mauvaises intentions.~
+@1226 = ~Les rakshasa sont des créatures maléfiques sans honneur. Ne vous soumettez pas à leurs caprices.~
+@1227 = ~Je préférerais tuer ces créatures sur place et en finir avec elles. Il est peu probable qu'ils nous laisseront vivre une fois que nous aurons accompli leurs basses-besognes.~
+@1228 = ~J'ai des connaissances sur ces créatures. Ils se font appeler rakshasa, des créatures maléfiques avec de fortes tendances prédatrices.~
+@1229 = ~Faites attention avec eux. On n'est peut-être qu'un morceau de viande pour eux.~
+@1230 = ~Les rakshasa ne font pas partie de l'ordre naturel de notre monde. Quel que soit leur plan, il provoquera certainement une forte réaction de la part de leurs adversaires.~
+@1231 = ~Notre ami veut que tu danses sur son air, mon corbeau. Ou vous demandez-vous si l'air de l'autre côté est plus à votre goût ?~
+@1232 = ~C'est une tournure des événements des plus intéressantes. Tu peux choisir entre les airs des génies et les rakshasas, mon corbeau. As-tu une préférence ?~
+@1233 = ~En parlant de danse, j'ai rencontré une barde gnome dans ma jeunesse quand--~
+@1234 = ~S'il te plaît, pas maintenant. Je veux savoir comment ce petit numéro évolue avant que notre hôte perde patience.~
+@1235 = ~Les créatures puissantes ont toujours des objets puissants en leur possession. Vous seriez idiot de refuser son offre.~~Les créatures puissantes ont toujours des objets puissants en leur possession. Vous seriez idiote de refuser son offre.~
+@1236 = ~Je vous suggère d'accepter son offre pour l'instant. Vous pourrez reconsidérer votre décision après avoir entendu l'autre camp. Pensez-y bien.~
+@1237 = ~Je vous suggère d'accepter son offre. Vous avez déjà tué son sous-fifre Ihtafeer et vous pouvez lui rendre la tête pour une récompense.~
+@1238 = ~Pourquoi ne pas prendre le meilleur des deux côtés ?~
+@1239 = ~Argh, voulez-vous vraiment vous prosterner devant ces bêtes ? On a qu'à leur casser la tête et piller leurs cadavres. Ce ferait un problème en moins et des richesses en plus pour nous.~
+@1240 = ~Faites-le et j'en serai ravi.~
+@1241 = ~Je doute que les génies dao soient disposés à vous rencontrer.~
+@1242 = ~Oui, je vais le faire.~
+@1243 = ~Quelle sera notre récompense pour cette tâche ?~
+@1244 = ~Je ne suis pas intéressé par votre offre.~~Je ne suis pas intéressée par votre offre.~
+@1245 = ~Non, je ne trahirai jamais les génies Dao.~
+@1246 = ~Vous êtes un puissant spécimen, en effet, si vous avez réussi à vaincre un ruhk dans un franc combat. ~
+@1247 = ~Je ne pense pas que vous nous disiez la vérité. Ton odeur te trahit.~
+@1248 = ~Vous êtes un puissant spécimen, en effet, si vous avez été capable d'affronter les génies dao.~
+@1249 = ~Vous êtes digne de devenir notre proie.~
+@1250 = ~Les règles du jeu ont changé, mes frères. Nous vous traquerons et nous nous régalerons de vos entrailles. ATTAQUEZ-LES !~
+@1251 = ~Ils n'auraient pas vraiment le choix, une fois que vous en aurez fini avec eux.~
+@1252 = ~Alors, quelle est votre réponse ?~
+@1253 = ~Très bien, je vais le faire.~
+@1254 = ~Vous êtes plus intelligent que je ne le pensais.~~Vous êtes plus intelligente que je ne le pensais.~
+@1255 = ~Tenez, prenez cette boîte. Elle contient un sort qui piégera l'esprit du génie dao.~
+@1256 = ~L'objet n'a qu'une seule charge, alors assurez-vous de ne viser que le khan Zahraa. Une fois qu'il est piégé, ramenez-le-nous immédiatement. Est-ce que vous comprenez ?~
+@1257 = ~Oui, absolument. Je vais piéger le khan Zahraa et vous le ramener.~
+@1258 = ~Pourriez-vous répéter ça encore une fois s'il vous plaît ?~
+@1259 = ~Tout bien réfléchi, je ne veux pas le faire.~
+@1260 = ~Ne mettez pas ma patience à l'épreuve, <RACE> ! Vous jouez avec votre vie.~
+@1261 = ~Si vous arrivez à répondre à nos exigences, j'y réfléchirai peut-être.~
+@1262 = ~J'ai quelque chose de rare en ma possession qui pourrait vous être utile. Satisfaisiez notre demande, et c'est à vous.~
+@1263 = ~Je pense que vous avez mal compris. Je ne vous offre pas cette tâche. Je l'exige.~
+@1264 = ~Je n'ai pas le choix, n'est-ce pas ? Très bien, je vais le faire.~
+@1265 = ~Non, je ne reçois pas d'ordres de votre espèce.~
+@1266 = ~Vous osez nous la refuser ? Nous nous régalerons de vos entrailles. ATTAQUEZ-LES !~
+@1267 = ~Très bien. J'attendrai votre retour avec impatience.~
+@1268 = ~Une fois de plus.~
+@1269 = ~Retournez aux génies dao et utilisez la boîte sur le khan Zahraa. Ne l'utilisez sur personne d'autre car vous n'avez droit qu'à une seule tentative.~
+@1270 = ~Quand il sera piégé, revenez me voir immédiatement. Vous comprenez maintenant ?~
+@1271 = ~Oui. Je vais piéger le khan Zahraa et vous le ramener.~
+@1272 = ~Vous nous revenez encore. Qu'est-ce que vous voulez ?~
+@1273 = ~Pourriez-vous s'il vous plaît répéter votre tâche à nouveau ?~
+@1274 = ~Il n'y a rien d'autre que j'ai besoin de savoir.~
+@1275 = ~Bien. Allez maintenant et accomplissez votre tâche.~
+@1276 = ~Vous nous revenez encore ?~
+@1277 = ~Je ne sens plus les génies, mais notre piège est toujours vide ?~
+@1278 = ~Vous nous avez fait faux bond ? Nous nous régalerons de vos entrailles. ATTAQUEZ-LES !~
+@1279 = ~Vous revenez ?~
+@1280 = ~Vous revenez victorieux. Je peux sentir une créature dans notre piège. Donne-le moi !~
+@1281 = ~Voyons ce que vous nous avez apporté...~
+@1282 = ~Ah, je sens le génie piégé. Très bien.~
+@1283 = ~Vous avez rempli votre part du marché. Cette lampe magique est votre récompense. Vous êtes très ingénieux pour un <RACE>.~~Vous avez rempli votre part du marché. Cette lampe magique est votre récompense. Vous êtes très ingénieuse pour une <RACE>.~
+@1284 = ~Notre accord est terminé. Nous allons partir maintenant, et vous devriez en faire autant.~
+@1285 = ~Ce n'est pas le génie demandé !~
+@1286 = ~Vous osez essayer de nous flouer ? Nous nous régalerons de vos entrailles. ATTAQUEZ-LES !~
+@1287 = ~Je n'ai plus rien à vous dire jusqu'à ce que vous ayez terminé votre tâche.~
+@1288 = ~Vous osez nous voler ? Nous nous régalerons de vos entrailles. ATTAQUEZ-LES !~
+@1289 = ~J'ai changé d'avis. Il n'y a aucune chance que j'accomplisse un acte aussi noir pour vous.~
+
+
+// Dialogue : Haut Marchand Busya
+@1400 = ~J'ai emprisonné leur chef et je me suis occupé des autres génies... ils ne vous ennuieront plus.~
+
+
+// Dialogue : Seigneur Logan Coprith
+@1420 = ~Je me suis chargé du problème pour vous... J'ai emprisonné leur chef et me suis occupé des autres génies.~
+@1421 = ~Oui. C'était difficile, mais j'ai emprisonné leur chef et je me suis occupé des autres génies.~
+
+
+// Dialogue : Khan Zahraa et les Génies dao 
+@1450 = ~Tu oses salir notre présence avec un de ces djinns, mortel ?~ [a7slnt_s]
+@1451 = ~Ah, je vois. C'est votre esclave personnel. Gardez votre animal sous contrôle pour éviter les distractions inutiles.~
+@1452 = ~Tu es trop indigne de nous pour provoquer une réaction hostile de ma part. Mais répète ça et je ne retiendrai pas ma colère.~
+@1453 = ~Je vais te montrer la différence entre nous en te détruisant toi et ton pathétique maître !~
+@1454 = ~Vos railleries n'auront aucun effet sur moi, Dao, car je sens que vous êtes aussi lié par le service. Que ce soit par magie ou par contrat, c'est simplement une question de sémantique.~
+@1455 = ~Calmez-vous, s'il vous plaît, vous deux ! Il n'y a pas besoin d'hostilité.~
+@1456 = ~Ça pourrait devenir intéressant. Ne perdez pas contre lui, Afaaq !~
+@1457 = ~Dégage de ma vue, djinn.~
+@1458 = ~Votre espèce n'est pas la bienvenue ici. Partez !~
+@1459 = ~S'il te plaît, garde ton djinn en laisse, mortel !~
+
+
+// Dialogue : citoyen de Franc-Marché
+@1500 = ~Ahhhh ! Ce sont les génies de la tente ! Ahhhh !~
+@1501 = ~Eek ! Tu es l'un des génies ! S'il te plaît, ne me fais pas de mal !~
+@1502 = ~Eek ! Est-ce c'est l'un des génies ? S'il te plaît, ne me fais pas de mal !~
+@1503 = ~Pourquoi le seigneur Logan n'a-t-il pas déjà chassé ces foutus génies ? Si j'avais mon mot à dire...~
+@1504 = ~Ahh ! Il y en a un ! Je plaisantais, c'est tout. Veuillez m'excuser.~
+
+// Dialogue : quête secondaire "Les restes d'Adratha"
+@1550 = ~Vous devez m'aider, s'il vous plaît !~
+@1551 = ~Délivrez-moi de cette misère. Mon esprit est piégé dans la magie noire de cet endroit.~
+@1552 = ~Je vous implore, étranger. Emmenez mes restes loin de cet endroit sombre. S'il vous plaît...~
+@1553 = ~Je suis... j'étais Adratha. Une nuit, ces monstres sont apparus et m'ont tué de façon atroce. Quand je me suis réveillé à nouveau, j'étais pris au piège dans ce paysage cauchemardesque, incapable de m'échapper.~
+@1554 = ~Ne voyez-vous pas les formes grotesques de troncs morts qui étaient autrefois de beaux arbres ? Ne sentez-vous pas la chaleur de ce sombre paysage quand vous le touchez ?~
+@1555 = ~S'il vous plaît, étranger ! Libérez-moi de cette misère.~
+@1556 = ~Enlevez mes restes de cet endroit sombre et enterrez-les dans le sol de ma maison. Peut-être qu'alors, je pourrai enfin trouver la paix.~
+@1557 = ~Qui êtes-vous ?~
+@1558 = ~Comment puis-je vous aider ?~
+@1559 = ~Je n'ai pas le temps de m'occuper des fantômes.~
+@1560 = ~Mais ce paysage m'a l'air plutôt beau.~
+@1561 = ~J'ai les restes de l'herboriste Adratha en ma possession. Pouvez-vous apaiser son esprit ?~
+@1562 = ~Vous avez bien fait. Je peux l'enterrer selon les traditions druidiques. Cela devrait apporter un peu de paix à son âme torturée.~
+@1563 = ~Veuillez prendre ceci en retour.~
+@1564 = ~J'ai en ma possession les restes d'Adratha, la vendeuse de potions du Bosquet aux druides. Pouvez-vous apaiser son esprit ?~
+@1565 = ~Oui, je peux le faire. Je promets de m'occuper de ceux-ci personnellement. Sa dépouille sera enterrée dans le cimetière de notre ville.~
+@1566 = ~J'aimerais que vous acceptiez ceci pour votre service.~
+
+// Textes diverses
+@1600 = ~Les restes d'Adratha~
+@1601 = ~A en juger par la structure du squelette et les objets que vous avez trouvés sur son lieu de repos, vous soupçonnez que ces os sont les restes d'Adratha, la véritable herboriste du Bosquet des druides.~
+@1602 = ~Piège à génie Dao~
+@1603 = ~Cette boîte exceptionnellement lourde dégage une forte magie qui vous donne la possibilité de piéger la créature ciblée. Le leader rakshasa vous a dit de ne l'utiliser que sur le khan Zahraa.~
+@1604 = ~Cette boîte exceptionnellement lourde dégage une forte magie qui contient l'âme de la créature que vous y avez enfermée.~
+@1605 = ~Portail magique~
+@1606 = ~Vous sortez du téléporteur et sentez une aura sombre et menaçante émanant du cercle magique. Vous êtes sûr que celui qui a mis cette magie en place sait déjà que vous êtes ici.~~Vous sortez du téléporteur et sentez une aura sombre et menaçante émanant du cercle magique. Vous êtes sûre que celui qui a mis cette magie en place sait déjà que vous êtes ici.~
+@1607 = ~Mahel~
+@1608 = ~Chasseur Rakshasa~
+@1609 = ~Narantaka~
+@1610 = ~Le portail est protégé par une sorte de champ de force qui bloque toute tentative d'y entrer.~
+
+
+// Entrées de journal
+@1800 = ~Le jeu du chat et de la souris
+
+Après avoir vaincu Ihtafeer et ses deux frères, j'ai trouvé un téléporteur ouvert et toujours actif. Peut-être que je pourrai aller au fond de toute l'affaire une fois que je l'aurais franchi.~
+@1801 = ~Le jeu du chat et de la souris
+
+J'ai franchi le portail qui est apparu après que j'ai attaqué le rakshasa déguisé dans la forêt de druides.
+
+Il m'a transporté dans un cercle magique dans un endroit inconnu. Je devrais être sur mes gardes, même si l'environnement immédiat semble être faussement calme.~
+@1802 = ~Le jeu du chat et de la souris
+
+J'ai rencontré un groupe de chasseurs rakshasas dirigé par le rakshasa Mahel.
+
+Au lieu de me tuer ou de me traquer, il m'a donné la chance de travailler pour lui. Je dois retourner à Franc-Marché et piéger le chef des génies dao, le khan Zahraa, dans une boîte magique. Une fois la tâche accomplie, je devrais retourner le voir pour recevoir ma récompense.~
+@1803 = ~Le jeu du chat et de la souris
+
+J'ai offensé les rakshassa d'une manière ou d'une autre et ils ont commencé à m'attaquer.~
+@1804 = ~Le jeu du chat et de la souris
+
+Le chef rakshasa n'a pas été amusé par mes actions et m'a attaqué immédiatement.~
+@1810 = ~Le jeu du chat et de la souris
+
+Après avoir livré le génie piégé au rakshasa, leur chef m'a récompensé avec une sorte de lampe magique. Je suis vraiment curieux de savoir ce qu'elle pourrait contenir.~
+@1811 = ~Le jeu du chat et de la souris
+
+J'ai réussi à voler une lampe magique au chef rakshasa. Je suis vraiment curieux de savoir ce qu'elle pourrait contenir.~
+@1812 = ~Le jeu du chat et de la souris
+
+Après avoir vaincu le leader rakshasa, j'ai trouvé une lampe magique en sa possession. Je suis vraiment curieux de savoir ce qu'elle pourrait contenir.~
+@1820 = ~Le jeu du chat et de la souris
+
+La lampe magique du leader rakshasa s'est avérée être un réceptacle pour un djinn piégé.
+
+C'est un artefact précieux. Je me demande qui était assez puissant pour asservir une créature aussi puissante. J'espère que le djinn satisfera ma curiosité.~
+@1850 = ~Les restes d'Adratha
+
+L'esprit torturé d'Adratha la vendeuse de potions m'a parlé et m'a demandé de mettre sa dépouille au repos. Peut-être que les druides locaux ou un prêtre peuvent m'aider à le faire.~
+@1851 = ~Les restes d'Adratha
+
+L'esprit torturé d'Adratha la vendeuse de potions m'a parlé et m'a demandé de mettre sa dépouille au repos.
+
+Ça ne m'intéresse pas vraiment, mais ça ne me ferait pas de mal de m'occuper de ça en plus. Peut-être que les druides locaux ou un prêtre peuvent m'aider à le faire.~
+@1860 = ~Les restes d'Adratha
+
+J'ai donné les restes d'Adratha au maître Verthan du Bosquet aux druides. Il était content et m'a récompensé avec une puissante potion magique.~
+@1861 = ~Les restes d'Adratha
+
+J'ai donné les restes d'Adratha à Overgold Renwellyn, le chef du temple de Waukyne à Franc-Marché. Il m'a été reconnaissant et m'a récompensé par un puissant parchemin magique de protection.~
