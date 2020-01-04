@@ -1,6 +1,6 @@
 BACKUP ~DjinniCompanion/backup~
 SUPPORT ~http://www.shsforums.net/forum/651-djinni-companion/~
-VERSION ~v2.7~
+VERSION ~v2.8~
 
 ALWAYS
   INCLUDE ~DjinniCompanion/lib/eet.tph~
