@@ -1,6 +1,7 @@
 // Supported languages
 var LANG_EN = "en";
 var LANG_DE = "de";
+var LANG_FR = "fr";
 
 // definition of hints for supported languages
 var hintTable = [];
@@ -23,6 +24,16 @@ hintTable[LANG_DE] =
   "Vorsicht! Wenn Ihr bestimmte Quest-relevante Gegenstände in Afaaqs Gepäck ablegt, könntet Ihr geskriptete Überprüfungen umgehen.",
   "Macht Euch auf eine böse Überraschung gefasst, wenn Ihr es wagt, den Schädel des Halbleichnams für eine längere Zeit zu tragen.",
   "Die einsame Kiste auf einer Felsformation in der Magmahöhle unterhalb Amkethrans kann Euch eine Menge Zeit und Aufwand ersparen, wenn Ihr es tatsächlich schafft, an ihren Inhalt heranzukommen. ;)"
+];
+hintTable[LANG_FR] = 
+[
+  "Faites un clic droit sur le cimeterre d'Afaaq pour modifier son comportement. Cela peut être utile pour certains ennemis qui peuvent être vulnérables à des types de dégâts spécifiques.",
+  "Laissez Afaaq parler aux citoyens de temps en temps pour voir des dialogues utiles, intéressants ou amusants.",
+  "Vous pouvez utiliser le menu rapide d'Afaaq pour accéder à une variété d'actions spécifiques ou pour modifier son comportement de script. Il est accessible via le bouton 'Utiliser l'objet'.",
+  "Essayez de parler à la lampe djinn pendant que le djinn est à l'extérieur pour voir des options plus intéressantes.",
+  "Faites attention ! Le fait de mettre certains objets de quête dans l'inventaire d'Afaaq pourrait permettre de contourner les contrôles de script.",
+  "Vous aurez une mauvaise surprise si vous osez équiper le crâne demi-liche pour une période de temps plus longue.",
+  "Le coffre isolé sur une formation rocheuse dans la caverne de magma sous Amkethran peut vous faire gagner beaucoup de temps et d'efforts si vous parvenez à accéder à son contenu. ;)"
 ];
 
 var hintIdx = 0;
