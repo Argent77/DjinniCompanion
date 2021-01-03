@@ -156,7 +156,7 @@ BEGIN @20       // Afaaq, the Djinni Companion (IWD:EE version)
 // Banter Accelerator //
 ////////////////////////
 BEGIN @7      // 15 Minutes
-  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 101
@@ -164,7 +164,7 @@ BEGIN @7      // 15 Minutes
   LAF BanterAccelerator INT_VAR pc_interval = 900 END
 
 BEGIN @8      // 30 Minutes
-  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 102
@@ -172,7 +172,7 @@ BEGIN @8      // 30 Minutes
   LAF BanterAccelerator INT_VAR pc_interval = 1800 END
 
 BEGIN @9      // 45 Minutes
-  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 103
@@ -180,7 +180,7 @@ BEGIN @9      // 45 Minutes
   LAF BanterAccelerator INT_VAR pc_interval = 2700 END
 
 BEGIN @10     // 90 Minutes
-  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 104
@@ -188,7 +188,7 @@ BEGIN @10     // 90 Minutes
   LAF BanterAccelerator INT_VAR pc_interval = 5400 END
 
 BEGIN @11     // 120 Minutes
-  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 105
@@ -201,7 +201,7 @@ BEGIN @11     // 120 Minutes
 // Remove banter soundtrack //
 //////////////////////////////
 BEGIN @15     // Remove Afaaq's banter soundtrack?
-  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
+  REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
   GROUP @19     // Tweaks
   DESIGNATED 200
   COPY_EXISTING ~A7AFQTLK.BCS~ ~override~
@@ -234,7 +234,7 @@ BEGIN @18    // Alternate djinni portrait by Ulb
 // Disable IWD:EE Quest //
 //////////////////////////
 BEGIN @22   // Disable IWD:EE Quest?
-  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 2 @23   // This component requires the IWD:EE version to be installed.
+  REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 2 @23   // This component requires the IWD:EE version to be installed.
   GROUP @19     // Tweaks
   DESIGNATED 400
   COPY_EXISTING ~A7AFQINI.BCS~ ~override~
@@ -247,7 +247,7 @@ BEGIN @22   // Disable IWD:EE Quest?
 // Infinity Animation creatures //
 //////////////////////////////////
 BEGIN @14     // Add Infinity Animation creatures?
-  REQUIRE_COMPONENT ~setup-DjinniCompanion.tp2~ 0 @12         // This component requires the full version to be installed.
+  REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 0 @12         // This component requires the full version to be installed.
   REQUIRE_COMPONENT ~setup-infinityanimations.tp2~ 0 @13      // This component requires Infinity Animation to be installed.
   REQUIRE_COMPONENT ~setup-infinityanimations.tp2~ 50 @16     // This component requires Infinity Animation's subcomponent "Distinctive Genies" to be installed.
   GROUP @19     // Tweaks
