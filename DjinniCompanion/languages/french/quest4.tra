@@ -1,202 +1,202 @@
-// -*- coding: cp1252 -*-
-// *** Textes relatifs à la quête n°4 : "Le don de la liberté" (index 4000...4999)
+// -*- coding: utf-8 -*-
+// *** Textes relatifs Ã  la quÃªte nÂ°4 : "Le don de la libertÃ©" (index 4000...4999)
 
 // lignes de dialogue (jeu standard)
-@4000 = ~Alors... si je comprends bien, l'épée Rasoirnoir est la clé de votre libération, et d'Afaaq's aussi.~
-@4001 = ~Donc, si je vous donnais Rasoirnoir, vous pourriez libérer Afaaq de son enchantement ? Et ça vous libérerait aussi de votre punition ?~
-@4002 = ~Je ne soutiendrai pas votre décision, <CHARNAME>. Vous devez le faire sans moi.~
-@4003 = ~Mais je vois que vous connaissez déjà un tel destin, car je sens quelqu'un dans une situation semblable à la mienne dans vos rangs.~
-@4004 = ~Oui, son nom est Afaaq et il est lié à une lampe magique.~
+@4000 = ~Alors... si je comprends bien, l'Ã©pÃ©e Rasoirnoir est la clÃ© de votre libÃ©ration, et d'Afaaq's aussi.~
+@4001 = ~Donc, si je vous donnais Rasoirnoir, vous pourriez libÃ©rer Afaaq de son enchantement ? Et Ã§a vous libÃ©rerait aussi de votre punition ?~
+@4002 = ~Je ne soutiendrai pas votre dÃ©cision, <CHARNAME>. Vous devez le faire sans moi.~
+@4003 = ~Mais je vois que vous connaissez dÃ©jÃ  un tel destin, car je sens quelqu'un dans une situation semblable Ã  la mienne dans vos rangs.~
+@4004 = ~Oui, son nom est Afaaq et il est liÃ© Ã  une lampe magique.~
 @4005 = ~Je suis curieux de savoir ce qui l'a mis dans cette situation difficile.~
-@4006 = ~Salutations, Afaaq. Je vous souhaite la bienvenue dans ma petite prison. Il semblerait que notre espèce soit destinée à supporter les caprices de plus grandes puissances.~ [A7SLNT_S]
-@4007 = ~Vous avez raison. Pourtant ma prison me laisse plus de liberté, car je suis lié à une lampe que <CHARNAME> a avec lui.~~Vous avez raison. Pourtant ma prison me laisse plus de liberté, car je suis lié à une lampe que <CHARNAME> a avec elle.~
-@4008 = ~D'accord, je vois...  Mais cela pourrait ouvrir la voie à votre liberté.~
-@4009 = ~Il n'y a rien que je désire plus, mais comment est-ce possible ?~
-@4010 = ~L'Enfant de Bhaal a du pouvoir dans ce royaume. Peut-être assez de pouvoir pour surmonter les enchantements qui vous lient à la lampe.~
-@4011 = ~Il semble lié à un artefact de pouvoir. Hmm... ça pourrait ouvrir la voie à sa liberté.~
-@4012 = ~Vous avez du pouvoir dans ce royaume. Peut-être assez de pouvoir pour surmonter les enchantements qui le lient à la lampe.~
+@4006 = ~Salutations, Afaaq. Je vous souhaite la bienvenue dans ma petite prison. Il semblerait que notre espÃ¨ce soit destinÃ©e Ã  supporter les caprices de plus grandes puissances.~ [A7SLNT_S]
+@4007 = ~Vous avez raison. Pourtant ma prison me laisse plus de libertÃ©, car je suis liÃ© Ã  une lampe que <CHARNAME> a avec lui.~~Vous avez raison. Pourtant ma prison me laisse plus de libertÃ©, car je suis liÃ© Ã  une lampe que <CHARNAME> a avec elle.~
+@4008 = ~D'accord, je vois...  Mais cela pourrait ouvrir la voie Ã  votre libertÃ©.~
+@4009 = ~Il n'y a rien que je dÃ©sire plus, mais comment est-ce possible ?~
+@4010 = ~L'Enfant de Bhaal a du pouvoir dans ce royaume. Peut-Ãªtre assez de pouvoir pour surmonter les enchantements qui vous lient Ã  la lampe.~
+@4011 = ~Il semble liÃ© Ã  un artefact de pouvoir. Hmm... Ã§a pourrait ouvrir la voie Ã  sa libertÃ©.~
+@4012 = ~Vous avez du pouvoir dans ce royaume. Peut-Ãªtre assez de pouvoir pour surmonter les enchantements qui le lient Ã  la lampe.~
 @4013 = ~Mais il y a certaines... conditions qui me retiennent ici. A moins qu'elles ne soient remplies, je ne peux rien faire.~
 @4014 = ~Et quelles sont ces conditions ?~
-@4015 = ~Ça le sera, en effet. On vous a donné la clé qui vous permet de mettre fin à ma vie... et ça aussi, c'est une libération.~
-@4016 = ~Non, mon seigneur, ne faites pas ça. Il doit y avoir un autre moyen.~~Non, ma dame, ne faites pas ça. Il doit y avoir un autre moyen.~
-@4017 = ~C'est votre décision, mon seigneur.~~C'est votre décision, ma dame.~
-@4018 = ~J'ai peut-être pris une décision trop hâtive. Il doit y avoir un autre moyen de vous libérer. Pourquoi êtes-vous lié à cet endroit ?~
-@4019 = ~J'ai pris ma décision. Préparez-vous à mourir !~
-@4020 = ~Je me réjouis de la mort... si vous en êtes capable.~
-@4021 = ~J'ai peut-être pris une décision précipitée. Il doit y avoir un autre moyen de vous libérer. Pourriez-vous répéter l'énigme ?~
-@4022 = ~Comme vous m'avez aidé, j'aiderai votre compagnon à mon tour.~
+@4015 = ~Ã‡a le sera, en effet. On vous a donnÃ© la clÃ© qui vous permet de mettre fin Ã  ma vie... et Ã§a aussi, c'est une libÃ©ration.~
+@4016 = ~Non, mon seigneur, ne faites pas Ã§a. Il doit y avoir un autre moyen.~~Non, ma dame, ne faites pas Ã§a. Il doit y avoir un autre moyen.~
+@4017 = ~C'est votre dÃ©cision, mon seigneur.~~C'est votre dÃ©cision, ma dame.~
+@4018 = ~J'ai peut-Ãªtre pris une dÃ©cision trop hÃ¢tive. Il doit y avoir un autre moyen de vous libÃ©rer. Pourquoi Ãªtes-vous liÃ© Ã  cet endroit ?~
+@4019 = ~J'ai pris ma dÃ©cision. PrÃ©parez-vous Ã  mourir !~
+@4020 = ~Je me rÃ©jouis de la mort... si vous en Ãªtes capable.~
+@4021 = ~J'ai peut-Ãªtre pris une dÃ©cision prÃ©cipitÃ©e. Il doit y avoir un autre moyen de vous libÃ©rer. Pourriez-vous rÃ©pÃ©ter l'Ã©nigme ?~
+@4022 = ~Comme vous m'avez aidÃ©, j'aiderai votre compagnon Ã  mon tour.~
 @4023 = ~Briser un enchantement de ce genre n'est pas chose facile. Avez-vous quelque chose en votre possession qui pourrait appuyer ma tentative de le faire ?~
-@4024 = ~Oui, j'ai trouvé un cristal magique qui contient les pouvoirs scellés d'Afaaq.~
-@4025 = ~J'ai bien peur que non. Mais vous m'avez parlé de mes propres pouvoirs dans ce domaine...~
-@4026 = ~C'est exactement ce que je cherchais ! Avec un accès direct à son essence spirituelle, je suis capable de briser les enchantements de la lampe.~
+@4024 = ~Oui, j'ai trouvÃ© un cristal magique qui contient les pouvoirs scellÃ©s d'Afaaq.~
+@4025 = ~J'ai bien peur que non. Mais vous m'avez parlÃ© de mes propres pouvoirs dans ce domaine...~
+@4026 = ~C'est exactement ce que je cherchais ! Avec un accÃ¨s direct Ã  son essence spirituelle, je suis capable de briser les enchantements de la lampe.~
 @4027 = ~L'incantation ne prendra qu'un instant...~
-@4028 = ~Oui... vous êtes étroitement lié à cet endroit. D'une certaine façon, cet endroit fait partie de vous.~
-@4029 = ~Mais sans les moyens d'accéder directement à l'essence spirituelle d'Afaaq, il peut y avoir des risques importants.~
+@4028 = ~Oui... vous Ãªtes Ã©troitement liÃ© Ã  cet endroit. D'une certaine faÃ§on, cet endroit fait partie de vous.~
+@4029 = ~Mais sans les moyens d'accÃ©der directement Ã  l'essence spirituelle d'Afaaq, il peut y avoir des risques importants.~
 @4030 = ~Quel risque ? Qu'est-ce que vous essayez de faire ?~
 @4031 = ~Je vais prendre le risque. Commencez vos incantations !~
-@4032 = ~Votre lien avec le divin agira comme un catalyseur pour surmonter les enchantements de la prison magique d'Afaaq. Si la lampe est gardée par des enchantements supplémentaires, ils vous seront renvoyés.~
-@4033 = ~Bien que je sois raisonnablement sûr que ça ne causera aucun dommage mortel, vous devriez être prêt à tout.~~Bien que je sois raisonnablement sûr que ça ne causera aucun dommage mortel, vous devriez être prête à tout.~
-@4034 = ~Vous m'en demandez trop. Je ne risquerai pas ma vie alors que je cherche encore mon âme.~
-@4035 = ~C'est une décision difficile à prendre. Donnez-moi un moment, j'ai encore besoin de temps pour y réfléchir.~
-@4036 = ~Êtes-vous sûr, mon seigneur ? Il n'y aura pas de seconde chance une fois que je serai parti d'ici.~~Êtes-vous sûr, ma dame ? Il n'y aura pas de seconde chance une fois que je serai parti d'ici.~
-@4037 = ~Oui. Ma décision est définitive.~
-@4038 = ~Peut-être que je devrais y repenser. Pouvez-vous me laisser un moment pour décider ?~
-@4039 = ~Comme vous voudrez. Je suis libre et je vous souhaite bonne chance dans toutes les épreuves auxquelles vous serez confrontés.~
-@4040 = ~Je resterai tant que vous ne quitterez pas cette partie du royaume. Mais prenez une décision rapidement.~
-@4041 = ~Avez-vous déjà pris une décision, mon seigneur ?~~Avez-vous déjà pris une décision, ma dame ?~ [A7SLNT_S]
-@4042 = ~J'ai trouvé ce cristal magique qui contient les pouvoirs scellés d'Afaaq. Serait-il utile pour votre sort ?~
-@4043 = ~Oui, c'est fait...  Je dois refuser votre offre. Mon propre bien-être est trop important pour moi.~
-@4044 = ~Donnez-moi un moment, j'ai encore besoin de temps pour y réfléchir.~
+@4032 = ~Votre lien avec le divin agira comme un catalyseur pour surmonter les enchantements de la prison magique d'Afaaq. Si la lampe est gardÃ©e par des enchantements supplÃ©mentaires, ils vous seront renvoyÃ©s.~
+@4033 = ~Bien que je sois raisonnablement sÃ»r que Ã§a ne causera aucun dommage mortel, vous devriez Ãªtre prÃªt Ã  tout.~~Bien que je sois raisonnablement sÃ»r que Ã§a ne causera aucun dommage mortel, vous devriez Ãªtre prÃªte Ã  tout.~
+@4034 = ~Vous m'en demandez trop. Je ne risquerai pas ma vie alors que je cherche encore mon Ã¢me.~
+@4035 = ~C'est une dÃ©cision difficile Ã  prendre. Donnez-moi un moment, j'ai encore besoin de temps pour y rÃ©flÃ©chir.~
+@4036 = ~ÃŠtes-vous sÃ»r, mon seigneur ? Il n'y aura pas de seconde chance une fois que je serai parti d'ici.~~ÃŠtes-vous sÃ»r, ma dame ? Il n'y aura pas de seconde chance une fois que je serai parti d'ici.~
+@4037 = ~Oui. Ma dÃ©cision est dÃ©finitive.~
+@4038 = ~Peut-Ãªtre que je devrais y repenser. Pouvez-vous me laisser un moment pour dÃ©cider ?~
+@4039 = ~Comme vous voudrez. Je suis libre et je vous souhaite bonne chance dans toutes les Ã©preuves auxquelles vous serez confrontÃ©s.~
+@4040 = ~Je resterai tant que vous ne quitterez pas cette partie du royaume. Mais prenez une dÃ©cision rapidement.~
+@4041 = ~Avez-vous dÃ©jÃ  pris une dÃ©cision, mon seigneur ?~~Avez-vous dÃ©jÃ  pris une dÃ©cision, ma dame ?~ [A7SLNT_S]
+@4042 = ~J'ai trouvÃ© ce cristal magique qui contient les pouvoirs scellÃ©s d'Afaaq. Serait-il utile pour votre sort ?~
+@4043 = ~Oui, c'est fait...  Je dois refuser votre offre. Mon propre bien-Ãªtre est trop important pour moi.~
+@4044 = ~Donnez-moi un moment, j'ai encore besoin de temps pour y rÃ©flÃ©chir.~
 @4045 = ~Je ne vois pas la prison magique d'Afaaq en votre possession. Sans elle, je ne peux rien faire pour lui.~
-@4046 = ~J'ai dû l'égarer. Attendez s'il vous plaît un moment pendant que je la cherche.~
-@4047 = ~Très bien. Laissez-moi préparer le sort.~
+@4046 = ~J'ai dÃ» l'Ã©garer. Attendez s'il vous plaÃ®t un moment pendant que je la cherche.~
+@4047 = ~TrÃ¨s bien. Laissez-moi prÃ©parer le sort.~
 @4048 = ~Je vais commencer l'incantation...~ [A7SLNT_S]
-@4049 = ~Très bien. Je vais commencer l'incantation...~
+@4049 = ~TrÃ¨s bien. Je vais commencer l'incantation...~
 @4050 = ~C'est fait.~ [A7SLNT_S]
-@4051 = ~Je vous remercie encore pour ma libération. Bonne chance dans toutes les épreuves que vous allez affronter, mon seigneur. Et que ton avenir brille de mille feux, Afaaq.~~Je vous remercie encore pour ma libération. Bonne chance dans toutes les épreuves que vous allez affronter, ma dame. Et que ton avenir brille de mille feux, Afaaq.~
-@4052 = ~C'est fait et vous avez même survécu relativement indemne.~ [A7SLNT_S]
-// lignes supplémentaires pour la version légère
-@4080 = ~Comme vous m'avez aidé, je vais vous aider aussi.~
-@4081 = ~Vous semblez avoir l'un des miens parmi vous. En sacrifiant votre épée de pouvoir pour ma liberté, vous m'avez aussi donné le pouvoir de libérer votre djinn de ses chaînes.~
-@4082 = ~Laissez-moi préparer le sort...~
+@4051 = ~Je vous remercie encore pour ma libÃ©ration. Bonne chance dans toutes les Ã©preuves que vous allez affronter, mon seigneur. Et que ton avenir brille de mille feux, Afaaq.~~Je vous remercie encore pour ma libÃ©ration. Bonne chance dans toutes les Ã©preuves que vous allez affronter, ma dame. Et que ton avenir brille de mille feux, Afaaq.~
+@4052 = ~C'est fait et vous avez mÃªme survÃ©cu relativement indemne.~ [A7SLNT_S]
+// lignes supplÃ©mentaires pour la version lÃ©gÃ¨re
+@4080 = ~Comme vous m'avez aidÃ©, je vais vous aider aussi.~
+@4081 = ~Vous semblez avoir l'un des miens parmi vous. En sacrifiant votre Ã©pÃ©e de pouvoir pour ma libertÃ©, vous m'avez aussi donnÃ© le pouvoir de libÃ©rer votre djinn de ses chaÃ®nes.~
+@4082 = ~Laissez-moi prÃ©parer le sort...~
 @4083 = ~L'incantation ne prendra qu'un instant...~ [A7SLNT_S]
 @4084 = ~C'est fait.~ [A7SLNT_S]
 
-// lignes de dialogues (QuestPack's Hell Trials installé)
-@4100 = ~Alors.... si je comprends bien.  L'épée Rasoirnoir est la clé de votre libération, et celle d'Afaaq aussi ?~
-@4101 = ~Donc, si je vous donnais Rasoirnoir, vous pourriez libérer Afaaq de son enchantement ?  Et ça vous libérerait aussi de votre punition ?~
+// lignes de dialogues (QuestPack's Hell Trials installÃ©)
+@4100 = ~Alors.... si je comprends bien.  L'Ã©pÃ©e Rasoirnoir est la clÃ© de votre libÃ©ration, et celle d'Afaaq aussi ?~
+@4101 = ~Donc, si je vous donnais Rasoirnoir, vous pourriez libÃ©rer Afaaq de son enchantement ?  Et Ã§a vous libÃ©rerait aussi de votre punition ?~
 @4102 = ~C'est fait, mon seigneur.~~C'est fait, ma dame.~
-@4103 = ~Je ne soutiendrai pas votre décision, <CHARNAME>. Vous devez le faire sans moi.~
-@4104 = ~Je vous souhaite bonne chance dans toutes les épreuves auxquelles vous devrez faire face. Jusqu'à ce qu'on se revoie.~
-@4105 = ~Mais je vois que vous connaissez déjà un tel destin, car je sens quelqu'un dans une situation semblable à la mienne dans vos rangs.~
-@4106 = ~Oui, son nom est Afaaq et il est lié à une lampe magique.~
+@4103 = ~Je ne soutiendrai pas votre dÃ©cision, <CHARNAME>. Vous devez le faire sans moi.~
+@4104 = ~Je vous souhaite bonne chance dans toutes les Ã©preuves auxquelles vous devrez faire face. Jusqu'Ã  ce qu'on se revoie.~
+@4105 = ~Mais je vois que vous connaissez dÃ©jÃ  un tel destin, car je sens quelqu'un dans une situation semblable Ã  la mienne dans vos rangs.~
+@4106 = ~Oui, son nom est Afaaq et il est liÃ© Ã  une lampe magique.~
 @4107 = ~Je suis curieux de savoir ce qui l'a mis dans cette situation difficile.~
-@4108 = ~Salutations, Afaaq. Je vous souhaite la bienvenue dans ma petite prison. Il semblerait que notre espèce soit destinée à supporter les caprices de plus grandes puissances.~ [A7SLNT_S]
-@4109 = ~Vous avez raison. Pourtant ma prison me laisse plus de liberté, car je suis lié à une lampe que <CHARNAME> a avec lui.~~Vous avez raison. Pourtant ma prison me laisse plus de liberté, car je suis lié à une lampe que <CHARNAME> a avec elle.~
-@4110 =  ~D'accord, je vois...  Mais cela pourrait ouvrir la voie à votre liberté.~
-@4111 = ~Il n'y a rien que je désire plus, mais comment est-ce possible ?~
-@4112 = ~L'Enfant de Bhaal a du pouvoir dans ce royaume. Peut-être assez de pouvoir pour surmonter les enchantements qui vous lient à la lampe.~
-@4113 = ~Il semble lié à un artefact de pouvoir. Hmm... ça pourrait ouvrir la voie à sa liberté.~
-@4114 = ~Vous avez du pouvoir dans ce royaume. Peut-être assez de pouvoir pour surmonter les enchantements qui le lient à la lampe.~
+@4108 = ~Salutations, Afaaq. Je vous souhaite la bienvenue dans ma petite prison. Il semblerait que notre espÃ¨ce soit destinÃ©e Ã  supporter les caprices de plus grandes puissances.~ [A7SLNT_S]
+@4109 = ~Vous avez raison. Pourtant ma prison me laisse plus de libertÃ©, car je suis liÃ© Ã  une lampe que <CHARNAME> a avec lui.~~Vous avez raison. Pourtant ma prison me laisse plus de libertÃ©, car je suis liÃ© Ã  une lampe que <CHARNAME> a avec elle.~
+@4110 =  ~D'accord, je vois...  Mais cela pourrait ouvrir la voie Ã  votre libertÃ©.~
+@4111 = ~Il n'y a rien que je dÃ©sire plus, mais comment est-ce possible ?~
+@4112 = ~L'Enfant de Bhaal a du pouvoir dans ce royaume. Peut-Ãªtre assez de pouvoir pour surmonter les enchantements qui vous lient Ã  la lampe.~
+@4113 = ~Il semble liÃ© Ã  un artefact de pouvoir. Hmm... Ã§a pourrait ouvrir la voie Ã  sa libertÃ©.~
+@4114 = ~Vous avez du pouvoir dans ce royaume. Peut-Ãªtre assez de pouvoir pour surmonter les enchantements qui le lient Ã  la lampe.~
 @4115 = ~Mais il y a certaines... conditions qui me retiennent ici. A moins qu'elles ne soient remplies, je ne peux rien faire.~
 @4116 = ~Et quelles sont ces conditions ?~
-@4117 = ~Ça le sera, en effet.  On vous a donné la clé qui vous permet de mettre fin à ma vie... et ça aussi, c'est une libération.~
-@4118 = ~Non, mon seigneur, ne faites pas ça. Il doit y avoir un autre moyen.~~Non, ma dame, ne faites pas ça. Il doit y avoir un autre moyen.~
-@4119 = ~C'est votre décision, mon seigneur.~~C'est votre décision, ma dame.~
-@4120 =  ~J'ai peut-être pris une décision trop hâtive. Il doit y avoir un autre moyen de vous libérer. Pourquoi êtes-vous lié à cet endroit ?~
-@4121 = ~J'ai pris ma décision. Préparez-vous à mourir !~
-@4122 = ~Je me réjouis de la mort... si vous en êtes capable.~~Je me réjouis de la mort... si vous en êtes capable.~
-@4123 = ~J'ai peut-être pris une décision précipitée. Il doit y avoir un autre moyen de vous libérer. Pourriez-vous répéter l'énigme ?~
-@4124 = ~Comme vous m'avez aidé, j'aiderai votre compagnon à mon tour.~
+@4117 = ~Ã‡a le sera, en effet.  On vous a donnÃ© la clÃ© qui vous permet de mettre fin Ã  ma vie... et Ã§a aussi, c'est une libÃ©ration.~
+@4118 = ~Non, mon seigneur, ne faites pas Ã§a. Il doit y avoir un autre moyen.~~Non, ma dame, ne faites pas Ã§a. Il doit y avoir un autre moyen.~
+@4119 = ~C'est votre dÃ©cision, mon seigneur.~~C'est votre dÃ©cision, ma dame.~
+@4120 =  ~J'ai peut-Ãªtre pris une dÃ©cision trop hÃ¢tive. Il doit y avoir un autre moyen de vous libÃ©rer. Pourquoi Ãªtes-vous liÃ© Ã  cet endroit ?~
+@4121 = ~J'ai pris ma dÃ©cision. PrÃ©parez-vous Ã  mourir !~
+@4122 = ~Je me rÃ©jouis de la mort... si vous en Ãªtes capable.~~Je me rÃ©jouis de la mort... si vous en Ãªtes capable.~
+@4123 = ~J'ai peut-Ãªtre pris une dÃ©cision prÃ©cipitÃ©e. Il doit y avoir un autre moyen de vous libÃ©rer. Pourriez-vous rÃ©pÃ©ter l'Ã©nigme ?~
+@4124 = ~Comme vous m'avez aidÃ©, j'aiderai votre compagnon Ã  mon tour.~
 @4125 = ~Briser un enchantement de ce genre n'est pas chose facile. Avez-vous quelque chose en votre possession qui pourrait appuyer ma tentative de le faire ?~
-@4126 = ~Oui, j'ai trouvé un cristal magique qui contient les pouvoirs scellés d'Afaaq.~
-@4127 = ~J'ai bien peur que non. Mais vous m'avez parlé de mes propres pouvoirs dans ce domaine...~
-@4128 = ~C'est exactement ce que je cherchais ! Avec un accès direct à son essence spirituelle, je suis capable de briser les enchantements de la lampe.~
+@4126 = ~Oui, j'ai trouvÃ© un cristal magique qui contient les pouvoirs scellÃ©s d'Afaaq.~
+@4127 = ~J'ai bien peur que non. Mais vous m'avez parlÃ© de mes propres pouvoirs dans ce domaine...~
+@4128 = ~C'est exactement ce que je cherchais ! Avec un accÃ¨s direct Ã  son essence spirituelle, je suis capable de briser les enchantements de la lampe.~
 @4129 = ~L'incantation ne prendra qu'un instant...~
-@4130 = ~Oui... vous êtes étroitement lié à cet endroit. D'une certaine façon, cet endroit fait partie de vous.~
-@4131 = ~Mais sans les moyens d'accéder directement à l'essence spirituelle d'Afaaq, il peut y avoir des risques importants.~
+@4130 = ~Oui... vous Ãªtes Ã©troitement liÃ© Ã  cet endroit. D'une certaine faÃ§on, cet endroit fait partie de vous.~
+@4131 = ~Mais sans les moyens d'accÃ©der directement Ã  l'essence spirituelle d'Afaaq, il peut y avoir des risques importants.~
 @4132 = ~Quel risque ? Qu'est-ce que vous essayez de faire ?~
 @4133 = ~Je vais prendre le risque. Commencez vos incantations !~
-@4134 = ~Votre lien avec le divin agira comme un catalyseur pour surmonter les enchantements de la prison magique d'Afaaq. Si la lampe est gardée par des enchantements supplémentaires, ils vous seront renvoyés.~
-@4135 = ~Bien que je sois raisonnablement sûr que ça ne causera aucun dommage mortel, vous devriez être prêt à tout.~~Bien que je sois raisonnablement sûr que ça ne causera aucun dommage mortel, vous devriez être prête à tout.~
-@4136 = ~Vous m'en demandez trop. Je ne risquerai pas ma vie alors que je cherche encore mon âme.~
-@4137 = ~C'est une décision difficile à prendre. Donnez-moi un moment, j'ai encore besoin de temps pour y réfléchir.~
-@4138 = ~Êtes-vous sûr, mon seigneur ? Il n'y aura pas de seconde chance une fois que je serai parti d'ici.~~Êtes-vous sûr, ma dame ? Il n'y aura pas de seconde chance une fois que je serai parti d'ici.~
-@4139 = ~Oui. Ma décision est définitive.~
-@4140 = ~Peut-être que je devrais y repenser. Pouvez-vous me laisser un moment pour décider ?~
-@4141 = ~Comme vous voudrez. Je suis libre et je vous souhaite bonne chance dans toutes les épreuves auxquelles vous serez confrontés.~
-@4142 = ~Comme vous voudrez. Je vous souhaite bonne chance dans toutes les épreuves auxquelles vous serez confrontés. Jusqu'à ce qu'on se revoie.~
-@4143 = ~Je resterai tant que vous ne quitterez pas cette partie du royaume. Mais prenez une décision rapidement.~
-@4144 = ~Je vais rester ici un moment. Mais je suggère de prendre une décision rapidement.~
-@4145 = ~Avez-vous déjà pris une décision, mon seigneur ?~~Avez-vous déjà pris une décision, ma dame ?~ [A7SLNT_S]
-@4146 = ~J'ai trouvé ce cristal magique qui contient les pouvoirs scellés d'Afaaq. Serait-il utile pour votre sort ?~
-@4147 = ~Oui, c'est fait...  Je dois refuser votre offre. Mon propre bien-être est trop important pour moi.~
-@4148 = ~Donnez-moi un moment, j'ai encore besoin de temps pour y réfléchir.~
+@4134 = ~Votre lien avec le divin agira comme un catalyseur pour surmonter les enchantements de la prison magique d'Afaaq. Si la lampe est gardÃ©e par des enchantements supplÃ©mentaires, ils vous seront renvoyÃ©s.~
+@4135 = ~Bien que je sois raisonnablement sÃ»r que Ã§a ne causera aucun dommage mortel, vous devriez Ãªtre prÃªt Ã  tout.~~Bien que je sois raisonnablement sÃ»r que Ã§a ne causera aucun dommage mortel, vous devriez Ãªtre prÃªte Ã  tout.~
+@4136 = ~Vous m'en demandez trop. Je ne risquerai pas ma vie alors que je cherche encore mon Ã¢me.~
+@4137 = ~C'est une dÃ©cision difficile Ã  prendre. Donnez-moi un moment, j'ai encore besoin de temps pour y rÃ©flÃ©chir.~
+@4138 = ~ÃŠtes-vous sÃ»r, mon seigneur ? Il n'y aura pas de seconde chance une fois que je serai parti d'ici.~~ÃŠtes-vous sÃ»r, ma dame ? Il n'y aura pas de seconde chance une fois que je serai parti d'ici.~
+@4139 = ~Oui. Ma dÃ©cision est dÃ©finitive.~
+@4140 = ~Peut-Ãªtre que je devrais y repenser. Pouvez-vous me laisser un moment pour dÃ©cider ?~
+@4141 = ~Comme vous voudrez. Je suis libre et je vous souhaite bonne chance dans toutes les Ã©preuves auxquelles vous serez confrontÃ©s.~
+@4142 = ~Comme vous voudrez. Je vous souhaite bonne chance dans toutes les Ã©preuves auxquelles vous serez confrontÃ©s. Jusqu'Ã  ce qu'on se revoie.~
+@4143 = ~Je resterai tant que vous ne quitterez pas cette partie du royaume. Mais prenez une dÃ©cision rapidement.~
+@4144 = ~Je vais rester ici un moment. Mais je suggÃ¨re de prendre une dÃ©cision rapidement.~
+@4145 = ~Avez-vous dÃ©jÃ  pris une dÃ©cision, mon seigneur ?~~Avez-vous dÃ©jÃ  pris une dÃ©cision, ma dame ?~ [A7SLNT_S]
+@4146 = ~J'ai trouvÃ© ce cristal magique qui contient les pouvoirs scellÃ©s d'Afaaq. Serait-il utile pour votre sort ?~
+@4147 = ~Oui, c'est fait...  Je dois refuser votre offre. Mon propre bien-Ãªtre est trop important pour moi.~
+@4148 = ~Donnez-moi un moment, j'ai encore besoin de temps pour y rÃ©flÃ©chir.~
 @4149 = ~Je ne vois pas la prison magique d'Afaaq en votre possession. Sans elle, je ne peux rien faire pour lui.~
-@4150 = ~J'ai dû l'égarer. Attendez s'il vous plaît un moment pendant que je la cherche.~
+@4150 = ~J'ai dÃ» l'Ã©garer. Attendez s'il vous plaÃ®t un moment pendant que je la cherche.~
 @4151 = ~Mais j'aurai besoin de Rasoirnoir temporairement, pour lancer le sort. Sans elle, je suis impuissant dans ce royaume.~
-@4152 = ~Très bien. Laissez-moi préparer le sort.~
+@4152 = ~TrÃ¨s bien. Laissez-moi prÃ©parer le sort.~
 @4153 =  ~Je vais commencer l'incantation...~ [A7SLNT_S]
-@4154 = ~Très bien. Je vais commencer l'incantation...~
+@4154 = ~TrÃ¨s bien. Je vais commencer l'incantation...~
 @4155 = ~C'est fait.~ [A7SLNT_S]
-@4156 = ~C'est fait et vous avez même survécu relativement indemne.~ [A7SLNT_S]
-@4157 = ~Je vous remercie encore pour ma libération. Bonne chance dans toutes les épreuves que vous allez affronter, mon seigneur. Et que ton avenir brille de mille feux, Afaaq.~~Je vous remercie encore pour ma libération. Bonne chance dans toutes les épreuves que vous allez affronter, ma dame. Et que ton avenir brille de mille feux, Afaaq.~
+@4156 = ~C'est fait et vous avez mÃªme survÃ©cu relativement indemne.~ [A7SLNT_S]
+@4157 = ~Je vous remercie encore pour ma libÃ©ration. Bonne chance dans toutes les Ã©preuves que vous allez affronter, mon seigneur. Et que ton avenir brille de mille feux, Afaaq.~~Je vous remercie encore pour ma libÃ©ration. Bonne chance dans toutes les Ã©preuves que vous allez affronter, ma dame. Et que ton avenir brille de mille feux, Afaaq.~
 
-// lignes supplémentaires pour la version légère
-@4180 = ~Comme vous m'avez aidé, je vais vous aider aussi.~
-@4181 = ~Vous semblez avoir l'un des miens parmi vous. En sacrifiant votre épée de pouvoir pour ma liberté, vous m'avez aussi donné le pouvoir de libérer votre djinn de ses chaînes.~
-@4182 = ~C'est fait, mon seigneur. Maintenant que ma liberté est garantie, je peux vous aider aussi.~~C'est fait, ma dame. Maintenant que ma liberté est garantie, je peux vous aider aussi.~
-@4183 = ~Vous semblez avoir l'un des miens parmi vous. Si vous me prêtez votre épée de pouvoir un instant, je peux libérer votre djinn de ses chaînes. Ne vous inquiétez pas, l'épée ne sera pas endommagée dans le processus.~
-@4184 = ~Laissez-moi préparer le sort....~
+// lignes supplÃ©mentaires pour la version lÃ©gÃ¨re
+@4180 = ~Comme vous m'avez aidÃ©, je vais vous aider aussi.~
+@4181 = ~Vous semblez avoir l'un des miens parmi vous. En sacrifiant votre Ã©pÃ©e de pouvoir pour ma libertÃ©, vous m'avez aussi donnÃ© le pouvoir de libÃ©rer votre djinn de ses chaÃ®nes.~
+@4182 = ~C'est fait, mon seigneur. Maintenant que ma libertÃ© est garantie, je peux vous aider aussi.~~C'est fait, ma dame. Maintenant que ma libertÃ© est garantie, je peux vous aider aussi.~
+@4183 = ~Vous semblez avoir l'un des miens parmi vous. Si vous me prÃªtez votre Ã©pÃ©e de pouvoir un instant, je peux libÃ©rer votre djinn de ses chaÃ®nes. Ne vous inquiÃ©tez pas, l'Ã©pÃ©e ne sera pas endommagÃ©e dans le processus.~
+@4184 = ~Laissez-moi prÃ©parer le sort....~
 @4185 = ~L'incantation ne prendra qu'un instant....~ [A7SLNT_S]
 @4186 = ~C'est fait.~ [A7SLNT_S]
-@4187 = ~Je vous remercie encore pour ma libération. Bonne chance dans toutes les épreuves que vous allez affronter, mon seigneur. Et que ton avenir brille de mille feux, Afaaq.~~Je vous remercie encore pour ma libération. Bonne chance dans toutes les épreuves que vous allez affronter, ma dame. Et que ton avenir brille de mille feux, Afaaq.~
-@4188 = ~Bonne chance dans toutes les épreuves que vous allez affronter, mon seigneur. Et que ton avenir brille de mille feux, Afaaq.~~Bonne chance dans toutes les épreuves que vous allez affronter, ma dame. Et que ton avenir brille de mille feux, Afaaq.~
+@4187 = ~Je vous remercie encore pour ma libÃ©ration. Bonne chance dans toutes les Ã©preuves que vous allez affronter, mon seigneur. Et que ton avenir brille de mille feux, Afaaq.~~Je vous remercie encore pour ma libÃ©ration. Bonne chance dans toutes les Ã©preuves que vous allez affronter, ma dame. Et que ton avenir brille de mille feux, Afaaq.~
+@4188 = ~Bonne chance dans toutes les Ã©preuves que vous allez affronter, mon seigneur. Et que ton avenir brille de mille feux, Afaaq.~~Bonne chance dans toutes les Ã©preuves que vous allez affronter, ma dame. Et que ton avenir brille de mille feux, Afaaq.~
 
-// lignes de dialogues (spéciales)
+// lignes de dialogues (spÃ©ciales)
 @4200 = ~Je ne vous aiderai pas. Vous combattrez seul, <CHARNAME>.~
-@4201 = ~Vous avez tué le génie et raté ma seule chance d'être libéré de ma prison ? Je ne peux plus supporter ça !~
-@4202 = ~Le génie de votre test de l’avarice avait le pouvoir de me libérer de ma prison et vous n'avez pas saisi l'occasion de le faire ?~
-@4203 = ~Vous êtes en effet une créature avare. Je ne le supporte plus !~
-@4204 = ~J'abandonne ! Dans ma forme actuelle, je suis incapable d'accomplir quoi que ce soit. Vous avez gagné et j'obéirai à vos ordres.~
+@4201 = ~Vous avez tuÃ© le gÃ©nie et ratÃ© ma seule chance d'Ãªtre libÃ©rÃ© de ma prison ? Je ne peux plus supporter Ã§a !~
+@4202 = ~Le gÃ©nie de votre test de lâ€™avarice avait le pouvoir de me libÃ©rer de ma prison et vous n'avez pas saisi l'occasion de le faire ?~
+@4203 = ~Vous Ãªtes en effet une crÃ©ature avare. Je ne le supporte plus !~
+@4204 = ~J'abandonne ! Dans ma forme actuelle, je suis incapable d'accomplir quoi que ce soit. Vous avez gagnÃ© et j'obÃ©irai Ã  vos ordres.~
 
 // lignes de dialogues (IWD)
-@4300 = ~Il se trouve que j'ai une lampe djinn en ma possession. Est-il possible de briser l'enchantement qui lie le djinn à la lampe ?~
-@4301 = ~J'ai changé d'avis. Essayez de briser les sceaux, que ça restaure certains pouvoirs d'Afaaq.~
-@4302 = ~On m'appelle peut-être la voyante, mais je peux aussi jeter un sort ou deux. Laissez-moi voir votre lampe.~
-@4303 = ~Voilà pour vous~
-@4304 = ~Hmm, les enchantements sont vieux et puissants. Je peux essayer de briser les sceaux mineurs, mais cela ne rétablira qu'une partie des pouvoirs du djinn. Il sera toujours attaché à la lampe.~
-@4305 = ~C'est certainement une amélioration par rapport à son état actuel. S'il vous plaît, faites-le.~
-@4306 = ~Tout bien réfléchi, j'aimerais garder le djinn tel qu'il est.~
-@4307 = ~Il se trouve que j'ai une lampe djinn en ma possession. Avez-vous un moyen de briser l'enchantement qui lie le djinn à la lampe ?~
-@4308 = ~J'ai changé d'avis. S'il vous plaît, essayez de briser l'enchantement sur la lampe djinn.~
-@4309 = ~J'ai changé d'avis. Je suis prêt à payer vos 20 000 pièces d'or. S'il vous plaît, essayez de briser l'enchantement sur la lampe djinn.~
-@4310 = ~J'ai changé d'avis. Je suis prêt à payer vos 16 000 pièces d'or. S'il vous plaît, essayez de briser l'enchantement sur la lampe djinn.~
-@4311 = ~Hmm, c'est une demande singulière. J'ai quelque chose en ma possession qui pourrait m'aider à accomplir la tâche que vous avez demandée.~
-@4312 = ~C'est un artefact qui contient une puissante magie pour briser même les anciens et puissants enchantements que je peux sentir sur votre lampe. Par coïncidence, il se trouve que je sais aussi comment manipuler cet artefact correctement.~
-@4313 = ~Je vois où vous voulez en venir. Combien cela me coûtera-t-il ?~
-@4314 = ~Tout bien réfléchi, j'aimerais garder le djinn tel qu'il est. Au revoir, Nym.~
-@4315 = ~Vous devez comprendre que des artefacts de cette qualité sont difficiles à trouver. Je demande donc la modeste somme de 20.000 pièces d'or pour mes services.~
+@4300 = ~Il se trouve que j'ai une lampe djinn en ma possession. Est-il possible de briser l'enchantement qui lie le djinn Ã  la lampe ?~
+@4301 = ~J'ai changÃ© d'avis. Essayez de briser les sceaux, que Ã§a restaure certains pouvoirs d'Afaaq.~
+@4302 = ~On m'appelle peut-Ãªtre la voyante, mais je peux aussi jeter un sort ou deux. Laissez-moi voir votre lampe.~
+@4303 = ~VoilÃ  pour vous~
+@4304 = ~Hmm, les enchantements sont vieux et puissants. Je peux essayer de briser les sceaux mineurs, mais cela ne rÃ©tablira qu'une partie des pouvoirs du djinn. Il sera toujours attachÃ© Ã  la lampe.~
+@4305 = ~C'est certainement une amÃ©lioration par rapport Ã  son Ã©tat actuel. S'il vous plaÃ®t, faites-le.~
+@4306 = ~Tout bien rÃ©flÃ©chi, j'aimerais garder le djinn tel qu'il est.~
+@4307 = ~Il se trouve que j'ai une lampe djinn en ma possession. Avez-vous un moyen de briser l'enchantement qui lie le djinn Ã  la lampe ?~
+@4308 = ~J'ai changÃ© d'avis. S'il vous plaÃ®t, essayez de briser l'enchantement sur la lampe djinn.~
+@4309 = ~J'ai changÃ© d'avis. Je suis prÃªt Ã  payer vos 20 000 piÃ¨ces d'or. S'il vous plaÃ®t, essayez de briser l'enchantement sur la lampe djinn.~
+@4310 = ~J'ai changÃ© d'avis. Je suis prÃªt Ã  payer vos 16 000 piÃ¨ces d'or. S'il vous plaÃ®t, essayez de briser l'enchantement sur la lampe djinn.~
+@4311 = ~Hmm, c'est une demande singuliÃ¨re. J'ai quelque chose en ma possession qui pourrait m'aider Ã  accomplir la tÃ¢che que vous avez demandÃ©e.~
+@4312 = ~C'est un artefact qui contient une puissante magie pour briser mÃªme les anciens et puissants enchantements que je peux sentir sur votre lampe. Par coÃ¯ncidence, il se trouve que je sais aussi comment manipuler cet artefact correctement.~
+@4313 = ~Je vois oÃ¹ vous voulez en venir. Combien cela me coÃ»tera-t-il ?~
+@4314 = ~Tout bien rÃ©flÃ©chi, j'aimerais garder le djinn tel qu'il est. Au revoir, Nym.~
+@4315 = ~Vous devez comprendre que des artefacts de cette qualitÃ© sont difficiles Ã  trouver. Je demande donc la modeste somme de 20.000 piÃ¨ces d'or pour mes services.~
 @4316 = ~N'y a-t-il pas moyen de faire baisser le prix ?~
 @4317 = ~D'accord, je paierai vos frais.~
 @4318 = ~C'est trop cher pour moi. Je dois refuser votre offre pour l'instant. Au revoir, Nym.~
-@4319 = ~Malheureusement non. L'artefact est très cher, après tout. On est d'accord ?~
-@4320 = ~Eh bien, je ne suis pas pressé de créer un précédent. Mais je pourrais faire une exception pour vous, étranger, tant que vous n'en parlez pas. Je peux baisser le prix à 16 000 pièces d'or. Acceptez-vous ?~
-@4321 = ~Vous avez pris une sage décision. Laissez-moi regarder la lampe de plus près.~
-@4322 = ~Ça ne prendra qu'un instant.~
-@4323 = ~Malheureusement, je n'ai pas réussi à briser tous les enchantements. Le djinn est toujours attaché à la lampe, mais je pourrais restaurer la plupart de ses pouvoirs.~
-@4324 = ~Comme je n'ai pas pu remplir ma part de l'accord de manière satisfaisante, je vais réduire les frais d'origine de 4000 pièces d'or.~
-@4325 = ~Très bien. Je peux essayer de briser l'enchantement avec un artefact puissant que j'ai en ma possession.~
+@4319 = ~Malheureusement non. L'artefact est trÃ¨s cher, aprÃ¨s tout. On est d'accord ?~
+@4320 = ~Eh bien, je ne suis pas pressÃ© de crÃ©er un prÃ©cÃ©dent. Mais je pourrais faire une exception pour vous, Ã©tranger, tant que vous n'en parlez pas. Je peux baisser le prix Ã  16 000 piÃ¨ces d'or. Acceptez-vous ?~
+@4321 = ~Vous avez pris une sage dÃ©cision. Laissez-moi regarder la lampe de plus prÃ¨s.~
+@4322 = ~Ã‡a ne prendra qu'un instant.~
+@4323 = ~Malheureusement, je n'ai pas rÃ©ussi Ã  briser tous les enchantements. Le djinn est toujours attachÃ© Ã  la lampe, mais je pourrais restaurer la plupart de ses pouvoirs.~
+@4324 = ~Comme je n'ai pas pu remplir ma part de l'accord de maniÃ¨re satisfaisante, je vais rÃ©duire les frais d'origine de 4000 piÃ¨ces d'or.~
+@4325 = ~TrÃ¨s bien. Je peux essayer de briser l'enchantement avec un artefact puissant que j'ai en ma possession.~
 
 
-// Entrées de journal
-@4800 = ~Le don de la liberté
+// EntrÃ©es de journal
+@4800 = ~Le don de la libertÃ©
 
-J'ai décidé de garder Rasoirnoir et de tuer le génie à la place. Manifestement, Afaaq n’était pas amusé par ma décision et a refusé de coopérer.~
+J'ai dÃ©cidÃ© de garder Rasoirnoir et de tuer le gÃ©nie Ã  la place. Manifestement, Afaaq nâ€™Ã©tait pas amusÃ© par ma dÃ©cision et a refusÃ© de coopÃ©rer.~
 
-@4801 = ~Le don de la liberté
+@4801 = ~Le don de la libertÃ©
 
-Le génie d'une de mes épreuves de l'enfer a proposé son aide pour libérer Afaaq de son emprisonnement. Cependant, il doit canaliser sa magie à travers mon essence spirituelle, ce qui pourrait avoir sur moi des effets néfastes.~
+Le gÃ©nie d'une de mes Ã©preuves de l'enfer a proposÃ© son aide pour libÃ©rer Afaaq de son emprisonnement. Cependant, il doit canaliser sa magie Ã  travers mon essence spirituelle, ce qui pourrait avoir sur moi des effets nÃ©fastes.~
 
-@4802 = ~Le don de la liberté
+@4802 = ~Le don de la libertÃ©
 
-Afaaaq est enfin libre ! Il est ravi et je peux voir son impatience de rentrer enfin chez lui. Cependant, il a promis de rester avec moi jusqu'à ce que j'aie repris mon âme à Irenicus.~
+Afaaaq est enfin libre ! Il est ravi et je peux voir son impatience de rentrer enfin chez lui. Cependant, il a promis de rester avec moi jusqu'Ã  ce que j'aie repris mon Ã¢me Ã  Irenicus.~
 
-@4825 = ~Le don de la liberté
+@4825 = ~Le don de la libertÃ©
 
-Afaaaq est enfin libre ! Il est ravi de sa liberté retrouvée et m'a promis de m'accompagner dans mon voyage aussi longtemps que je le voudrais.~
+Afaaaq est enfin libre ! Il est ravi de sa libertÃ© retrouvÃ©e et m'a promis de m'accompagner dans mon voyage aussi longtemps que je le voudrais.~
 
-@4826 = ~Le don de la liberté
+@4826 = ~Le don de la libertÃ©
 
-La colère d'Afaaq au sujet de ma décision a entraîné une dispute entre nous. Finalement, j'ai été victorieux et Afaaq a accepté mon autorité une fois pour toutes.~
+La colÃ¨re d'Afaaq au sujet de ma dÃ©cision a entraÃ®nÃ© une dispute entre nous. Finalement, j'ai Ã©tÃ© victorieux et Afaaq a acceptÃ© mon autoritÃ© une fois pour toutes.~
 
-@4827 = ~Le don de la liberté
+@4827 = ~Le don de la libertÃ©
 
-Afaaaq a été fidèle à sa parole et m'a aidé à reprendre mon âme à Irenicus. Alors puisqu'il a tenu parole, j'ai répondu positivement à son désir de rentrer chez lui.~
+Afaaaq a Ã©tÃ© fidÃ¨le Ã  sa parole et m'a aidÃ© Ã  reprendre mon Ã¢me Ã  Irenicus. Alors puisqu'il a tenu parole, j'ai rÃ©pondu positivement Ã  son dÃ©sir de rentrer chez lui.~
 
-@4828 = ~Le don de la liberté
+@4828 = ~Le don de la libertÃ©
 
-Afaaaq a été fidèle à sa parole et m'a aidé à reprendre mon âme à Irenicus. Cependant, voyant son utilité au combat, j'ai refusé d'accéder à sa demande de me quitter. Après un combat entre nous, il a accepté mon autorité une fois pour toutes.~
+Afaaaq a Ã©tÃ© fidÃ¨le Ã  sa parole et m'a aidÃ© Ã  reprendre mon Ã¢me Ã  Irenicus. Cependant, voyant son utilitÃ© au combat, j'ai refusÃ© d'accÃ©der Ã  sa demande de me quitter. AprÃ¨s un combat entre nous, il a acceptÃ© mon autoritÃ© une fois pour toutes.~
 
 
 // Textes divers

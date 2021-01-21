@@ -1,4 +1,4 @@
-// -*- coding: cp1252 -*-
+// -*- coding: utf-8 -*-
 // *** General dialog lines for Afaaq (index 10000 and up)
 
 // *** Player-initiated dialog lines (index 10000...10999) ***
@@ -280,14 +280,14 @@
 @10276 = ~It saddens me that our kind is only known for its rather unimportant power to grant wishes. You are right, however.~
 @10277 = ~You are right, our people hail from the Elemental Plane of Air. In fact, many of our kind are still living there.~
 @10278 = ~I am impressed by your knowledge about us, my <PRO_LADYLORD>. You are right, a great number of our people travelled to the prime material plane millennia ago and settled in the region known as Calimshan in this day and age.~
-@10279 = ~We are the djinn, genies of the Elemental Plane of Air. Eons ago, long before the dawn of the mortal races, our kind aided the primordials in their ancient battle with the gods over control of Faer鹡. Most of the primordials had been destroyed or banished from Toril in the course of the war and many of my kind were imprisoned in common objects and scattered all over the plane.~
-@10280 = ~Many ages ago a large group of djinn, led by our great leader Calim, travelled to Faer鹡 and founded the Calim Empire. This event has been recorded in your history books as "The Great Arrival". In a short time we had built large cities and proceeded to expand our domain to the south and west of the Marching Mountains.~
+@10279 = ~We are the djinn, genies of the Elemental Plane of Air. Eons ago, long before the dawn of the mortal races, our kind aided the primordials in their ancient battle with the gods over control of Faer没n. Most of the primordials had been destroyed or banished from Toril in the course of the war and many of my kind were imprisoned in common objects and scattered all over the plane.~
+@10280 = ~Many ages ago a large group of djinn, led by our great leader Calim, travelled to Faer没n and founded the Calim Empire. This event has been recorded in your history books as "The Great Arrival". In a short time we had built large cities and proceeded to expand our domain to the south and west of the Marching Mountains.~
 @10281 = ~Unfortunately, our progress had suffered a setback when we were attacked by a flight of dragons. As a result, our leader Calim led a campaign against the dragons of the Marching Mountains and returned victorious a couple of decades later.~
 @10282 = ~(Eagerly listen to his story...)~
 @10283 = ~(yawn) Oh, I'm sorry...please go on.~
 @10284 = ~It sounds like you witnessed those events first-hand?~
 @10285 = ~Very interesting, but let's talk about something else.~
-@10286 = ~I see you have paid attention. You are right, my <PRO_LADYLORD>, I was a soldier in the service of a lesser caliph at that time. The whole court followed Calim to Faer鹡.~
+@10286 = ~I see you have paid attention. You are right, my <PRO_LADYLORD>, I was a soldier in the service of a lesser caliph at that time. The whole court followed Calim to Faer没n.~
 @10287 = ~Our empire, reigned by the noble Calim, flourished for millennia. Only minor skirmishes with the neighboring races and the haughty marids threatened our rule at times.~
 @10288 = ~However, a millennia or two later a series of events led to our downfall. Our enemies the efreets, led by their leader Memnon, moved against us. The following war lasted centuries and destroyed much of our empire.~
 @10289 = ~Eventually, a group of elven high mages intervened and managed to capture both Calim and Memnon, along with a great number of djinn and efreet. They disembodied our leaders and bound their essences to the sky and earth which created a region now called the Calim Desert.~
@@ -300,7 +300,7 @@
 @10296 = ~The toll of life on both sides was unimaginable. Beings such as us genies are merely cast back into the void only to re-emerge some time later in our respective plane of origin. The majority of combatants were mortal however, and even a great many immortal beings had been enslaved or imprisoned into magical artifacts in the course of the war.~
 @10297 = ~Although I survived the war relatively unscathed, it changed the very core of my existence forever...~
 @10298 = ~Yes, but I do not want to talk about it.~
-@10299 = ~In the following centuries, many of our people returned to our home or founded their own empires somewhere on or above Faer鹡, hidden from the curious eyes of mortals.~
+@10299 = ~In the following centuries, many of our people returned to our home or founded their own empires somewhere on or above Faer没n, hidden from the curious eyes of mortals.~
 @10300 = ~Others are still bound to artifacts waiting to be released one day. A great many of them have been discovered and misused by you mortals, hence it is commonly known that we are able to grant wishes to your kind.~
 @10301 = ~A fascinating story. Do you mind telling me more about your culture, Afaaq?~
 @10302 = ~(yawn) Your long-winded and weary talk reminds me of the classes I had to attend in Candlekeep.~
@@ -317,7 +317,7 @@
 @10313 = ~We have been ruled by him since the beginnings of time. You mortals most likely do not know much about him, as he lives in the Court of Ice and Steel within the Elemental Plane of Air.~
 @10314 = ~He is served by various nobles and officials, including lesser caliphs, viziers, beys, emirs, sheiks, sherrifs, and maliks. Most of the djinns in existence were at one time or another in the service of a caliph or other noble.~
 @10315 = ~The word of the Grand Caliph is law. Disobeying him always means death, but a djinni may risk punishment even for breaking the laws of the lesser nobles.~
-@10316 = ~That is why many djinn left their home and visited Faer鹡 or other places outside the jurisdiction of the Grand Caliph.~
+@10316 = ~That is why many djinn left their home and visited Faer没n or other places outside the jurisdiction of the Grand Caliph.~
 @10317 = ~Did you leave your home for the same reason?~
 @10318 = ~An interesting insight into your culture, but let's talk about something else.~
 @10319 = ~You are very perceptive, my <PRO_LADYLORD>. Our great leader Calim and all who followed him shared a common ideal. Leaving behind our restrictive government was surely part of it.~
@@ -586,7 +586,7 @@
 @10585 = ~I am skilled in both using swords and magic. My current predicament limits my abilities, however. Being a djinni grants me a couple of additional traits as well.~
 @10586 = ~As you wish.~
 @10587 = ~I have heard many stories about Baldur's Gate while I roamed this plane. Despite being situated in the more untamed parts of the world it has weathered past trials and crises remarkably well.~
-@10588 = ~The settlements in the northern parts of Faer鹡 feel empty and quiet compared to Calimshan. Even the smallest Calishite village is full of bustling activity.~
+@10588 = ~The settlements in the northern parts of Faer没n feel empty and quiet compared to Calimshan. Even the smallest Calishite village is full of bustling activity.~
 @10589 = ~The countryside along the Sword Coast appears to be more open and untouched by civilization. You may encounter a great variety of creatures and monsters that make these lands their home.~
 @10590 = ~This castle must have endured much in the short time of its existence. I can feel the burden of past events within the very walls of the building itself.~
 @10591 = ~How about an Elixir of Health?~
@@ -1394,7 +1394,7 @@ though he fought back like a crack of loud thunder."~
 @58009 = ~I don't really want talk about it.~
 @58010 = ~I can sense your power, my <PRO_LADYLORD>. But having companions on your side may provide more than mere strength in your journey.~
 @58011 = ~So you want to rely on your own skills? You have made a brave decision, but you appear strong enough to me.~
-@58012 = ~I share your sentiment. I was travelling alone for the very same reason across the plains of Faer鹡.~
+@58012 = ~I share your sentiment. I was travelling alone for the very same reason across the plains of Faer没n.~
 @58013 = ~But even so, you should not underestimate the strength and toughness of your fellow adventurers. They have a will of their own and may be willing to risk their lives for your cause.~
 @58014 = ~You may, indeed. But there are times when you have to face overwhelming obstacles which exceed even your own strength.~
 @58015 = ~You should not underestimate the strength and toughness of your fellow adventurers. They have a will of their own and may help you to overcome your own troubles.~
@@ -2034,17 +2034,17 @@ Over the course of many millennia Afaaq accumulated a vast amount of knowledge a
 
 
 // Afaaq's Epilogues
-@64090 = ~Afaaq continued his journey with <CHARNAME> which took them halfway across Faer鹡 and back. They defeated raiding parties of sahuagin on the western borders of Tethyr and pushed back an invasion of frost giants threatening Luskan and the surrounding settlements.
+@64090 = ~Afaaq continued his journey with <CHARNAME> which took them halfway across Faer没n and back. They defeated raiding parties of sahuagin on the western borders of Tethyr and pushed back an invasion of frost giants threatening Luskan and the surrounding settlements.
 
 Eventually Afaaq parted with <CHARNAME> and returned to his home on the Elemental Plane of Air at long last where he hoped to live a quiet life. But news of his deeds had even reached the ears of the Grand Caliph who offered him a position as advisor in mortal affairs at the Court of Ice and Steel.
 
-However, as much as his time allows it, he takes the chance and travels across Faer鹡 in search of his kinsmen still waiting to be released from their imprisonments.~
+However, as much as his time allows it, he takes the chance and travels across Faer没n in search of his kinsmen still waiting to be released from their imprisonments.~
 @64091 = ~Afaaq left <CHARNAME> immediately after this event, returning to the Elemental Plane of Air at long last where he hoped to live a quiet life. But news of his deeds had even reached the ears of the Grand Caliph who offered him a position as advisor in mortal affairs at the Court of Ice and Steel.
 
-However, as much as his time allows it, he takes the chance and travels across Faer鹡 in search of his kinsmen still waiting to be released from their imprisonments.~
+However, as much as his time allows it, he takes the chance and travels across Faer没n in search of his kinsmen still waiting to be released from their imprisonments.~
 @64092 = ~After <CHARNAME>'s ascension to godhood, Afaaq returned to the Elemental Plane of Air at long last where he hoped to live a quiet life. But news of his deeds had even reached the ears of the Grand Caliph who offered him a position as advisor in mortal affairs at the Court of Ice and Steel.
 
-However, as much as his time allows it, he takes the chance and travels across Faer鹡 in search of his kinsmen still waiting to be released from their imprisonments.~
+However, as much as his time allows it, he takes the chance and travels across Faer没n in search of his kinsmen still waiting to be released from their imprisonments.~
 
 
 // Journal entries

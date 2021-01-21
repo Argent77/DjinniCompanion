@@ -1,198 +1,198 @@
-// -*- coding: cp1252 -*-
-// *** Textes relatifs à la quête n°3 : "Une rencontre inattendue" (index 3000...3999)
+// -*- coding: utf-8 -*-
+// *** Textes relatifs Ã  la quÃªte nÂ°3 : "Une rencontre inattendue" (index 3000...3999)
 
 // Dialogue : les marchands duergar de la carte AR2100
-@3000 = ~Et je vous conseille d'éviter le passage derrière nous. Nous sommes tombés accidentellement sur un camp de guerriers drows il n'y a pas si longtemps.~
-@3001 = ~Maintenant ils ont bloqué le chemin pour les non-drows; je suppose qu'ils veulent qu'on les laisse seuls.~
+@3000 = ~Et je vous conseille d'Ã©viter le passage derriÃ¨re nous. Nous sommes tombÃ©s accidentellement sur un camp de guerriers drows il n'y a pas si longtemps.~
+@3001 = ~Maintenant ils ont bloquÃ© le chemin pour les non-drows; je suppose qu'ils veulent qu'on les laisse seuls.~
 @3002 = ~Un groupe de guerriers drows ? Savez-vous pourquoi ils sont ici ?~
-@3003 = ~Merci pour l'avertissement, mais nous n'avons rien à faire avec les drows.~
-@3004 = ~J'ai bien peur que non. Les Drows ne sont pas connus pour partager leurs informations avec les gens de l'extérieur.~
-@3005 = ~Ahh, vous êtes de retour. Pardonnez-nous, mais nous sommes un peu nerveux en ce moment.~
-@3006 = ~Nous sommes tombés par hasard sur un camp de guerriers drows il n'y a pas si longtemps. Là, dans le passage derrière notre dos.~
-@3007 = ~Voulez-vous jeter un coup d'œil à mes marchandises maintenant, ou y a-t-il autre chose que je puisse faire ?~
-@3008 = ~Quand vous voudrez entrer dans le passage derrière nous, nous vous dégagerons le passage.~
+@3003 = ~Merci pour l'avertissement, mais nous n'avons rien Ã  faire avec les drows.~
+@3004 = ~J'ai bien peur que non. Les Drows ne sont pas connus pour partager leurs informations avec les gens de l'extÃ©rieur.~
+@3005 = ~Ahh, vous Ãªtes de retour. Pardonnez-nous, mais nous sommes un peu nerveux en ce moment.~
+@3006 = ~Nous sommes tombÃ©s par hasard sur un camp de guerriers drows il n'y a pas si longtemps. LÃ , dans le passage derriÃ¨re notre dos.~
+@3007 = ~Voulez-vous jeter un coup d'Å“il Ã  mes marchandises maintenant, ou y a-t-il autre chose que je puisse faire ?~
+@3008 = ~Quand vous voudrez entrer dans le passage derriÃ¨re nous, nous vous dÃ©gagerons le passage.~
 @3009 = ~Parlez-moi de ce passage et faites vite.~
-@3010 = ~Bien sûr, malla C'rintri. Nous avons trouvé le camp de drow il y a plusieurs jours, dans le tunnel derrière. Ils posaient des questions sur ce qui se passe dans cette région.~
-@3011 = ~Mais maintenant ils ont verrouillé le tunnel. Nous ne pouvons pas entrer, mais vous le pouvez.~
+@3010 = ~Bien sÃ»r, malla C'rintri. Nous avons trouvÃ© le camp de drow il y a plusieurs jours, dans le tunnel derriÃ¨re. Ils posaient des questions sur ce qui se passe dans cette rÃ©gion.~
+@3011 = ~Mais maintenant ils ont verrouillÃ© le tunnel. Nous ne pouvons pas entrer, mais vous le pouvez.~
 @3012 = ~C'est tout ce que je voulais savoir. Je vous laisse la vie. Au revoir.~
-@3013 = ~J'ai été assez occupé ces derniers jours. Vous arrivez, les deux autres, et le campement à l'arrière... mauvais signe, c'est sûr.~
-@3014 = ~A part le mage emprisonné et le campement des drows, je n'ai rien vu d'inhabituel.~
-@3015 = ~Il semble que la Maison Arabani ait connu des temps difficiles. Ils ont même été forcés de former une alliance avec la Maison Jae'llat pour survivre.~
-@3016 = ~La Maison Arabani était autrefois notre principal client. Dommage qu'ils se soient trouvés dans une situation difficile. Et maintenant que la Maison Jae'llat a un pied dans la place, leur avenir s'annonce désastreux.~
+@3013 = ~J'ai Ã©tÃ© assez occupÃ© ces derniers jours. Vous arrivez, les deux autres, et le campement Ã  l'arriÃ¨re... mauvais signe, c'est sÃ»r.~
+@3014 = ~A part le mage emprisonnÃ© et le campement des drows, je n'ai rien vu d'inhabituel.~
+@3015 = ~Il semble que la Maison Arabani ait connu des temps difficiles. Ils ont mÃªme Ã©tÃ© forcÃ©s de former une alliance avec la Maison Jae'llat pour survivre.~
+@3016 = ~La Maison Arabani Ã©tait autrefois notre principal client. Dommage qu'ils se soient trouvÃ©s dans une situation difficile. Et maintenant que la Maison Jae'llat a un pied dans la place, leur avenir s'annonce dÃ©sastreux.~
 @3017 = ~Parlez-moi de la Maison Arabani.~
-@3018 = ~Ah, noble Maison Arabani. Une Maison forte, avant, et très prometteuse. Mais Mère Lolth peut être inconstante. Ils ont parié gros pour prendre le contrôle de la ville et ont perdu contre la Maison Despana.~
-@3019 = ~Ils ont été forcés de s'allier à la Maison Jae'llat pour survivre. Toutefois, la Maison Arabani n'a pas perdu sa fierté et pourrait à l'avenir se relever. Comme je l'ai dit, Mère Lolth peut être inconstante.~
+@3018 = ~Ah, noble Maison Arabani. Une Maison forte, avant, et trÃ¨s prometteuse. Mais MÃ¨re Lolth peut Ãªtre inconstante. Ils ont pariÃ© gros pour prendre le contrÃ´le de la ville et ont perdu contre la Maison Despana.~
+@3019 = ~Ils ont Ã©tÃ© forcÃ©s de s'allier Ã  la Maison Jae'llat pour survivre. Toutefois, la Maison Arabani n'a pas perdu sa fiertÃ© et pourrait Ã  l'avenir se relever. Comme je l'ai dit, MÃ¨re Lolth peut Ãªtre inconstante.~
 
 
 // Dialogue : Tathas Melarn
-@3100 = ~Qu'avons-nous là ?~
+@3100 = ~Qu'avons-nous lÃ  ?~
 @3101 = ~Vous venez de la ville d'Ust Natha, non ?~
 @3102 = ~Identifiez-vous !~
-@3103 = ~Je m'appelle Veldrin. Je viens de Ched Nasad et je suis arrivé à Ust Natha il y a quelques jours.~
+@3103 = ~Je m'appelle Veldrin. Je viens de Ched Nasad et je suis arrivÃ© Ã  Ust Natha il y a quelques jours.~
 @3104 = ~Je m'appelle <GABBER> et je viens du repaire d'Adalon.~
 @3105 = ~Je suis votre mort si vous ne nous laissez pas partir.~
-@3106 = ~(Laissez-moi m'en occuper, <CHARNAME>, j'ai déjà vu son insigne de Maison quelque part auparavant.)~
-@3107 = ~Nous sommes des agents de la Maison Maerret de Ched Nasad, dirigée par notre commandant Veldrin. Vous seriez bien avisé de ne pas fouiller davantage dans cette affaire, Malla Qu'el'faeruk, même si vous êtes un allié de notre Maison.~
-@3108 = ~Alors, vous venez de Ched Nasad ? Je ne vois pas votre insigne, à quelle Maison appartenez-vous ?~
-@3109 = ~Je n'appartiens à aucune Maison. Je suis un drow renégat.~~Je n'appartiens à aucune Maison. Je suis une drow renégate.~
+@3106 = ~(Laissez-moi m'en occuper, <CHARNAME>, j'ai dÃ©jÃ  vu son insigne de Maison quelque part auparavant.)~
+@3107 = ~Nous sommes des agents de la Maison Maerret de Ched Nasad, dirigÃ©e par notre commandant Veldrin. Vous seriez bien avisÃ© de ne pas fouiller davantage dans cette affaire, Malla Qu'el'faeruk, mÃªme si vous Ãªtes un alliÃ© de notre Maison.~
+@3108 = ~Alors, vous venez de Ched Nasad ? Je ne vois pas votre insigne, Ã  quelle Maison appartenez-vous ?~
+@3109 = ~Je n'appartiens Ã  aucune Maison. Je suis un drow renÃ©gat.~~Je n'appartiens Ã  aucune Maison. Je suis une drow renÃ©gate.~
 @3110 = ~Je suis de la Maison Do'Urden.~
 @3111 = ~Je suis membre de la Maison Maerret.~
 @3112 = ~Je n'ai pas le droit d'en parler pendant que je travaille pour Ust Natha.~
-@3113 = ~Je suis en mission secrète et je n'en parlerai sans doute même pas à un membre distingué de Sorcere.~
-@3114 = ~Je refuse d'être interrogé par vous ou par qui que ce soit d'autre.~
-@3115 = ~Vous êtes un drow renégat ? Ne me racontez pas un mensonge si grossier, Wael. Vous n'auriez pas pu quitter Ched Nasad vivant sans le soutien d'une Maison.~~Vous êtes une drow renégate ? Ne me racontez pas un mensonge si grossier, Wael. Vous n'auriez pas pu quitter Ched Nasad vivante sans le soutien d'une Maison.~
-@3116 = ~Si vous saviez quoi que ce soit de la vie de drow, vous ne m'auriez pas dit de telles bêtises. Je suppose que vous n'êtes même pas drow pour commencer, ou quoi que vous en disiez, noble Iraedril...~
-@3117 = ~Vous êtes toujours aussi perspicace. Mes divinations révèlent que cette créature est un <PRO_RACE> de la surface.~~Vous êtes toujours aussi perspicace. Mes divinations révèlent que cette créature est une <PRO_RACE> de la surface.~
-@3118 = ~Donc, vous êtes un Nasadran de la Maison Do'Urden. Je parie que la prochaine fois vous me direz que votre vrai nom est Drizzt ?~
-@3119 = ~Il n'y a pas de Maison Do'Urden à Ched Nasad. Vous êtes soit exceptionnellement stupide, soit même pas drow pour commencer. Qu'en dites-vous, noble Iraedril...~
+@3113 = ~Je suis en mission secrÃ¨te et je n'en parlerai sans doute mÃªme pas Ã  un membre distinguÃ© de Sorcere.~
+@3114 = ~Je refuse d'Ãªtre interrogÃ© par vous ou par qui que ce soit d'autre.~
+@3115 = ~Vous Ãªtes un drow renÃ©gat ? Ne me racontez pas un mensonge si grossier, Wael. Vous n'auriez pas pu quitter Ched Nasad vivant sans le soutien d'une Maison.~~Vous Ãªtes une drow renÃ©gate ? Ne me racontez pas un mensonge si grossier, Wael. Vous n'auriez pas pu quitter Ched Nasad vivante sans le soutien d'une Maison.~
+@3116 = ~Si vous saviez quoi que ce soit de la vie de drow, vous ne m'auriez pas dit de telles bÃªtises. Je suppose que vous n'Ãªtes mÃªme pas drow pour commencer, ou quoi que vous en disiez, noble Iraedril...~
+@3117 = ~Vous Ãªtes toujours aussi perspicace. Mes divinations rÃ©vÃ¨lent que cette crÃ©ature est un <PRO_RACE> de la surface.~~Vous Ãªtes toujours aussi perspicace. Mes divinations rÃ©vÃ¨lent que cette crÃ©ature est une <PRO_RACE> de la surface.~
+@3118 = ~Donc, vous Ãªtes un Nasadran de la Maison Do'Urden. Je parie que la prochaine fois vous me direz que votre vrai nom est Drizzt ?~
+@3119 = ~Il n'y a pas de Maison Do'Urden Ã  Ched Nasad. Vous Ãªtes soit exceptionnellement stupide, soit mÃªme pas drow pour commencer. Qu'en dites-vous, noble Iraedril...~
 @3120 = ~Un membre de la Maison Maerret alors. Je vous salue, Veldrin Maerret. Je m'appelle Tathas de la Maison Melarn, et je suis un membre de haut rang de Sorcere...~
-@3121 = ~Si je peux vous interrompre. Mes divinations ont révélé sa véritable identité.~
-@3122 = ~La créature devant vous est un <PRO_RACE> de la surface.~~La créature devant vous est une <PRO_RACE> de la surface.~
-@3123 = ~Je vous félicite pour votre obéissance à votre maison.~
-@3124 = ~Votre manque de persuasion, cependant, suggère que vous êtes peut-être trop inexpérimenté pour vos fonctions.~~Votre manque de persuasion, cependant, suggère que vous êtes peut-être trop inexpérimentée pour vos fonctions.~
-@3125 = ~Alors je respecterai votre décision pour l'instant. Je m'appelle Tathas de la Maison Melarn, membre de haut rang de Sorcere...~
-@3126 = ~C'est bien ce que je pensais. Seule une créature de surface peut afficher un comportement aussi stupide.~
-@3127 = ~Mais vous êtes habilement déguisé en drow, ce qui signifie qu'un esprit puissant guide vos actions. Vous pourriez m'être utile, après tout.~
-@3128 = ~Vous êtes un <PRO_RACE> ? Ça explique vos manières si peu raffinées.~~Vous êtes une <PRO_RACE> ? Ça explique vos manières si peu raffinées.~
-@3129 = ~Mais votre véritable identité n'a pas encore été découverte, ce qui est prometteur. Vous pourriez m'être utile, après tout.~
-@3130 = ~Est-ce que c'est vrai ? C'est inattendu. Vous m'avez trompé intelligemment, ce qui parle en bien de vous.~
-@3131 = ~Si vous continuez à jouer votre rôle si bien, vous pourriez m'être d'une certaine utilité.~
-@3132 = ~Mon entourage et moi sommes arrivés de Ched Nasad il n'y a pas si longtemps.~
-@3133 = ~Nous avons appris que Ust Natha se prépare à la guerre avec les elfes de surface. Une guerre d'une telle ampleur n'a pas eu lieu depuis longtemps dans cette région de l'ombreterre, alors nous allons profiter de cette occasion et étendre un peu notre influence.~
-@3134 = ~Notre maison avait des liens avec la Maison Arabani il y a bien longtemps, avant même la fondation de Ched Nasad. Je veux... renouer ces liens et vous pourriez m'aider à atteindre ce but.~
-@3135 = ~Ce sera profitable pour vous aussi. J'ai senti une présence familière quand vous êtes entré et le djinn devant moi l'a prouvé.~
-@3136 = ~Comment allez-vous, Afaaq ? Aimez-vous votre séjour dans le plan matériel primaire jusqu'à présent ?~
-@3137 = ~Vous devriez le savoir mieux que quiconque. Ma vie depuis n'a été qu'un cauchemar sans fin de pertes et de tourments, et je vous dois tout cela.~
-@3138 = ~Mais je ne suis pas surpris de vous revoir. Vous avez toujours été poussé par votre désir de pouvoir et d'influence, et une situation comme celle-ci est une opportunité tentante pour des gens comme vous.~
-@3139 = ~Vous êtes toujours aussi ennuyeux qu'il y a longtemps. C'est pour ça que je n'ai pas pris la peine de vous retrouver.~
+@3121 = ~Si je peux vous interrompre. Mes divinations ont rÃ©vÃ©lÃ© sa vÃ©ritable identitÃ©.~
+@3122 = ~La crÃ©ature devant vous est un <PRO_RACE> de la surface.~~La crÃ©ature devant vous est une <PRO_RACE> de la surface.~
+@3123 = ~Je vous fÃ©licite pour votre obÃ©issance Ã  votre maison.~
+@3124 = ~Votre manque de persuasion, cependant, suggÃ¨re que vous Ãªtes peut-Ãªtre trop inexpÃ©rimentÃ© pour vos fonctions.~~Votre manque de persuasion, cependant, suggÃ¨re que vous Ãªtes peut-Ãªtre trop inexpÃ©rimentÃ©e pour vos fonctions.~
+@3125 = ~Alors je respecterai votre dÃ©cision pour l'instant. Je m'appelle Tathas de la Maison Melarn, membre de haut rang de Sorcere...~
+@3126 = ~C'est bien ce que je pensais. Seule une crÃ©ature de surface peut afficher un comportement aussi stupide.~
+@3127 = ~Mais vous Ãªtes habilement dÃ©guisÃ© en drow, ce qui signifie qu'un esprit puissant guide vos actions. Vous pourriez m'Ãªtre utile, aprÃ¨s tout.~
+@3128 = ~Vous Ãªtes un <PRO_RACE> ? Ã‡a explique vos maniÃ¨res si peu raffinÃ©es.~~Vous Ãªtes une <PRO_RACE> ? Ã‡a explique vos maniÃ¨res si peu raffinÃ©es.~
+@3129 = ~Mais votre vÃ©ritable identitÃ© n'a pas encore Ã©tÃ© dÃ©couverte, ce qui est prometteur. Vous pourriez m'Ãªtre utile, aprÃ¨s tout.~
+@3130 = ~Est-ce que c'est vrai ? C'est inattendu. Vous m'avez trompÃ© intelligemment, ce qui parle en bien de vous.~
+@3131 = ~Si vous continuez Ã  jouer votre rÃ´le si bien, vous pourriez m'Ãªtre d'une certaine utilitÃ©.~
+@3132 = ~Mon entourage et moi sommes arrivÃ©s de Ched Nasad il n'y a pas si longtemps.~
+@3133 = ~Nous avons appris que Ust Natha se prÃ©pare Ã  la guerre avec les elfes de surface. Une guerre d'une telle ampleur n'a pas eu lieu depuis longtemps dans cette rÃ©gion de l'ombreterre, alors nous allons profiter de cette occasion et Ã©tendre un peu notre influence.~
+@3134 = ~Notre maison avait des liens avec la Maison Arabani il y a bien longtemps, avant mÃªme la fondation de Ched Nasad. Je veux... renouer ces liens et vous pourriez m'aider Ã  atteindre ce but.~
+@3135 = ~Ce sera profitable pour vous aussi. J'ai senti une prÃ©sence familiÃ¨re quand vous Ãªtes entrÃ© et le djinn devant moi l'a prouvÃ©.~
+@3136 = ~Comment allez-vous, Afaaq ? Aimez-vous votre sÃ©jour dans le plan matÃ©riel primaire jusqu'Ã  prÃ©sent ?~
+@3137 = ~Vous devriez le savoir mieux que quiconque. Ma vie depuis n'a Ã©tÃ© qu'un cauchemar sans fin de pertes et de tourments, et je vous dois tout cela.~
+@3138 = ~Mais je ne suis pas surpris de vous revoir. Vous avez toujours Ã©tÃ© poussÃ© par votre dÃ©sir de pouvoir et d'influence, et une situation comme celle-ci est une opportunitÃ© tentante pour des gens comme vous.~
+@3139 = ~Vous Ãªtes toujours aussi ennuyeux qu'il y a longtemps. C'est pour Ã§a que je n'ai pas pris la peine de vous retrouver.~
 @3140 = ~Vous le sentez, n'est-ce pas ? Votre essence spirituelle fait toujours partie de ma collection.~
-@3141 = ~Ce sera profitable pour vous aussi. Je peux sentir une présence familière en votre possession que je n'ai pas ressentie depuis des lustres.~
-@3142 = ~Vous avez une vieille "connaissance" à moi avec vous, n'est-ce pas ? Oui, je sens le djinn Afaaq quelque part par là.~
-@3143 = ~Oui, il est lié à une lampe magique que je possède.~
+@3141 = ~Ce sera profitable pour vous aussi. Je peux sentir une prÃ©sence familiÃ¨re en votre possession que je n'ai pas ressentie depuis des lustres.~
+@3142 = ~Vous avez une vieille "connaissance" Ã  moi avec vous, n'est-ce pas ? Oui, je sens le djinn Afaaq quelque part par lÃ .~
+@3143 = ~Oui, il est liÃ© Ã  une lampe magique que je possÃ¨de.~
 @3144 = ~Cela ne vous regarde pas, Tathas.~
-@3145 = ~Vous en profiterez aussi. En tant que membre de Sorcere, j'ai accès à des sorts magiques puissants et uniques. J'en partagerai peut-être une ou deux copies avec vous.~
-@3146 = ~C'est... unique. Croyez-moi ou non, il était en ma compagnie il y a longtemps, avant que je ne le perde de vue.~
+@3145 = ~Vous en profiterez aussi. En tant que membre de Sorcere, j'ai accÃ¨s Ã  des sorts magiques puissants et uniques. J'en partagerai peut-Ãªtre une ou deux copies avec vous.~
+@3146 = ~C'est... unique. Croyez-moi ou non, il Ã©tait en ma compagnie il y a longtemps, avant que je ne le perde de vue.~
 @3147 = ~La plupart de ses pouvoirs sont toujours en ma possession, dont je fais usage de temps en temps.~
-@3148 = ~Vous n'avez pas besoin de me dire quoi que ce soit, mais mes sens ne m'ont jamais trompé.~
-@3149 = ~Il était en ma compagnie il y a longtemps, avant que je ne le perde de vue. La plus grande partie de son pouvoir est toujours en ma possession, dont je fais usage de temps en temps.~
-@3150 = ~Je vous récompenserai avec l'âme d'Afaaq si vous acceptez de travailler pour moi, Veldrin. Ai-je éveillé votre intérêt ?~
+@3148 = ~Vous n'avez pas besoin de me dire quoi que ce soit, mais mes sens ne m'ont jamais trompÃ©.~
+@3149 = ~Il Ã©tait en ma compagnie il y a longtemps, avant que je ne le perde de vue. La plus grande partie de son pouvoir est toujours en ma possession, dont je fais usage de temps en temps.~
+@3150 = ~Je vous rÃ©compenserai avec l'Ã¢me d'Afaaq si vous acceptez de travailler pour moi, Veldrin. Ai-je Ã©veillÃ© votre intÃ©rÃªt ?~
 @3151 = ~J'aimerais d'abord savoir ce que vous attendez de moi.~
 @3152 = ~Oui, je travaillerai pour vous.~
-@3153 = ~Vous avez asservi Afaaq pendant des siècles ! Je ne travaillerai jamais pour vous.~
-@3154 = ~S'il vous plaît, donnez-moi un moment pour y réfléchir.~
-@3155 = ~Ai-je éveillé votre intérêt ?~
+@3153 = ~Vous avez asservi Afaaq pendant des siÃ¨cles ! Je ne travaillerai jamais pour vous.~
+@3154 = ~S'il vous plaÃ®t, donnez-moi un moment pour y rÃ©flÃ©chir.~
+@3155 = ~Ai-je Ã©veillÃ© votre intÃ©rÃªt ?~
 @3156 = ~Oui, j'accepte votre offre.~
-@3157 = ~Non, ça ne m'intéresse pas de jouer un rôle dans vos combines.~
-@3158 = ~J'ai besoin de temps pour y réfléchir.~
-@3159 = ~Ça je ne peux pas le faire avant que vous ne vous engagiez envers nous. Je vous ai assez parlé de mes projets. Êtes-vous intéressé ?~~Ça je ne peux pas le faire avant que vous ne vous engagiez envers nous. Je vous ai assez parlé de mes projets. Êtes-vous intéressée ?~
-@3160 = ~Non, ça ne m'intéresse pas de travailler pour vous.~
-@3161 = ~Quelle déception vous vous avérez être. Faisons vite, j'ai des choses plus importantes à faire.~
-@3162 = ~Salutations Veldrin, on se retrouve. Puisque vous êtes toujours vivant, avez-vous pris une décision ?~~Salutations Veldrin, on se retrouve. Puisque vous êtes toujours vivante, avez-vous pris une décision ?~
-@3163 = ~J'ai encore besoin de temps pour y réfléchir.~
-@3164 = ~Je serai encore là pour un petit moment, mais ne tardez pas trop à vous décider.~
-@3165 = ~C'est malheureux. Ça veut aussi dire que vous êtes devenu un obstacle à mes plans. Ne vous inquiétez pas, ce sera rapide et douloureux.~~C'est malheureux. Ça veut aussi dire que vous êtes devenue un obstacle à mes plans. Ne vous inquiétez pas, ce sera rapide et douloureux.~
-@3166 = ~Vous êtes sans aucun doute un imbécile, me parlant de votre vrai passé alors que vous étiez déguisé en l'un des nôtres.~
-@3167 = ~Je vais vous faire une faveur et vous libérer de votre vie pathétique. Croyez-moi, c'est pour le bien de tous.~
-@3168 = ~Vous avez pris une sage décision. Voilà mon plan, alors écoute-moi attentivement.~
-@3169 = ~Étant déguisé en l'un d'entre nous depuis si peu de temps, vous n'avez très probablement pas encore de liens étroits avec les grandes maisons de Ust Natha.~
-@3170 = ~Trouvez un moyen de franchir les protections de la Maison Arabani. Elle sera probablement gardée, mais vous avez l'air assez fort pour y faire face.~
-@3171 = ~Une fois que vous aurez passé les protections, trouvez la Mère Matrone Xunvrae d'Arabani et tuez-la. Revenez avec son Insigne de Maison et vous recevrez votre récompense.~
-@3172 = ~Savez-vous où je peux trouver son Insigne de Maison ?~
+@3157 = ~Non, Ã§a ne m'intÃ©resse pas de jouer un rÃ´le dans vos combines.~
+@3158 = ~J'ai besoin de temps pour y rÃ©flÃ©chir.~
+@3159 = ~Ã‡a je ne peux pas le faire avant que vous ne vous engagiez envers nous. Je vous ai assez parlÃ© de mes projets. ÃŠtes-vous intÃ©ressÃ© ?~~Ã‡a je ne peux pas le faire avant que vous ne vous engagiez envers nous. Je vous ai assez parlÃ© de mes projets. ÃŠtes-vous intÃ©ressÃ©e ?~
+@3160 = ~Non, Ã§a ne m'intÃ©resse pas de travailler pour vous.~
+@3161 = ~Quelle dÃ©ception vous vous avÃ©rez Ãªtre. Faisons vite, j'ai des choses plus importantes Ã  faire.~
+@3162 = ~Salutations Veldrin, on se retrouve. Puisque vous Ãªtes toujours vivant, avez-vous pris une dÃ©cision ?~~Salutations Veldrin, on se retrouve. Puisque vous Ãªtes toujours vivante, avez-vous pris une dÃ©cision ?~
+@3163 = ~J'ai encore besoin de temps pour y rÃ©flÃ©chir.~
+@3164 = ~Je serai encore lÃ  pour un petit moment, mais ne tardez pas trop Ã  vous dÃ©cider.~
+@3165 = ~C'est malheureux. Ã‡a veut aussi dire que vous Ãªtes devenu un obstacle Ã  mes plans. Ne vous inquiÃ©tez pas, ce sera rapide et douloureux.~~C'est malheureux. Ã‡a veut aussi dire que vous Ãªtes devenue un obstacle Ã  mes plans. Ne vous inquiÃ©tez pas, ce sera rapide et douloureux.~
+@3166 = ~Vous Ãªtes sans aucun doute un imbÃ©cile, me parlant de votre vrai passÃ© alors que vous Ã©tiez dÃ©guisÃ© en l'un des nÃ´tres.~
+@3167 = ~Je vais vous faire une faveur et vous libÃ©rer de votre vie pathÃ©tique. Croyez-moi, c'est pour le bien de tous.~
+@3168 = ~Vous avez pris une sage dÃ©cision. VoilÃ  mon plan, alors Ã©coute-moi attentivement.~
+@3169 = ~Ã‰tant dÃ©guisÃ© en l'un d'entre nous depuis si peu de temps, vous n'avez trÃ¨s probablement pas encore de liens Ã©troits avec les grandes maisons de Ust Natha.~
+@3170 = ~Trouvez un moyen de franchir les protections de la Maison Arabani. Elle sera probablement gardÃ©e, mais vous avez l'air assez fort pour y faire face.~
+@3171 = ~Une fois que vous aurez passÃ© les protections, trouvez la MÃ¨re Matrone Xunvrae d'Arabani et tuez-la. Revenez avec son Insigne de Maison et vous recevrez votre rÃ©compense.~
+@3172 = ~Savez-vous oÃ¹ je peux trouver son Insigne de Maison ?~
 @3173 = ~Je vais le faire tout de suite.~
-@3174 = ~Après réflexion, j'ai décidé de refuser votre offre~
-@3175 = ~Si je savais où il est, je ne vous demanderais pas de le récupérer. Il est probablement quelque part dans son voisinage immédiat, ou en sécurité dans sa chambre privée.~
-@3176 = ~Très bien. Ne me décevez pas, Veldrin, ou aucun pouvoir d'aucune maison ne vous protégera de la colère de la Maison Melarn.~
-@3177 = ~Plus vite vous serez de retour, plus vite vous aurez votre récompense.~
+@3174 = ~AprÃ¨s rÃ©flexion, j'ai dÃ©cidÃ© de refuser votre offre~
+@3175 = ~Si je savais oÃ¹ il est, je ne vous demanderais pas de le rÃ©cupÃ©rer. Il est probablement quelque part dans son voisinage immÃ©diat, ou en sÃ©curitÃ© dans sa chambre privÃ©e.~
+@3176 = ~TrÃ¨s bien. Ne me dÃ©cevez pas, Veldrin, ou aucun pouvoir d'aucune maison ne vous protÃ©gera de la colÃ¨re de la Maison Melarn.~
+@3177 = ~Plus vite vous serez de retour, plus vite vous aurez votre rÃ©compense.~
 @3178 = ~Avez-vous d'autres questions concernant votre mission ?~
-@3179 = ~Pourriez-vous répéter votre mission pour moi ?~
-@3180 = ~Non, je vais le faire immédiatement.~
-@3181 = ~En y repensant, j'ai décidé de rompre notre partenariat.~
-@3182 = ~Vous devriez vraiment prendre des notes quand je vous dis quelque chose d'aussi important que ça.~
+@3179 = ~Pourriez-vous rÃ©pÃ©ter votre mission pour moi ?~
+@3180 = ~Non, je vais le faire immÃ©diatement.~
+@3181 = ~En y repensant, j'ai dÃ©cidÃ© de rompre notre partenariat.~
+@3182 = ~Vous devriez vraiment prendre des notes quand je vous dis quelque chose d'aussi important que Ã§a.~
 @3183 = ~Oui, faites-le et je me ferai un plaisir de vous aider.~
-@3184 = ~Il est probablement quelque part dans son voisinage immédiat, ou en sécurité dans sa chambre privée.~
-@3185 = ~Bienvenue, Veldrin. Avez-vous de bonnes nouvelles à annoncer ?~
-@3186 = ~Oui, je vous ai apporté l'Insigne de la Maison Arabani.~
+@3184 = ~Il est probablement quelque part dans son voisinage immÃ©diat, ou en sÃ©curitÃ© dans sa chambre privÃ©e.~
+@3185 = ~Bienvenue, Veldrin. Avez-vous de bonnes nouvelles Ã  annoncer ?~
+@3186 = ~Oui, je vous ai apportÃ© l'Insigne de la Maison Arabani.~
 @3187 = ~J'ai encore besoin de temps pour me procurer l'insigne.~
-@3188 = ~Bienvenue, <GABBER>. Avez-vous de bonnes nouvelles à annoncer ?~
-@3189 = ~Oui, j'ai ramené l'Insigne de la Maison Arabani.~
-@3190 = ~Dépêchez-vous ! Nous ne pouvons pas nous permettre de rester ici trop longtemps, sinon nous serons découverts tôt ou tard.~
-@3191 = ~C'est une très bonne nouvelle. Je peux l'avoir ?~
-@3192 = ~Vous m'avez été très utile, mais je suis au regret de vous dire que mon hospitalité prend fin maintenant.~
-@3193 = ~Je ne peux pas vous laisser parler à tout le monde de nos affaires. Ne vous inquiétez pas, ce sera rapide et douloureux.~
-@3194 = ~Je pense que oui. J'ai réussi à convaincre Xunvrae d'Arabani de me donner une pierre d'ancrage de sa maison qu'on m'a ordonné d'utiliser sur vous. C'est à vous d'en faire ce que vous voulez.~
-@3195 = ~Vous avez bien fait. Avec ça, j'avancerai encore plus vite que je ne l'avais prévu. Donnez la moi.~
+@3188 = ~Bienvenue, <GABBER>. Avez-vous de bonnes nouvelles Ã  annoncer ?~
+@3189 = ~Oui, j'ai ramenÃ© l'Insigne de la Maison Arabani.~
+@3190 = ~DÃ©pÃªchez-vous ! Nous ne pouvons pas nous permettre de rester ici trop longtemps, sinon nous serons dÃ©couverts tÃ´t ou tard.~
+@3191 = ~C'est une trÃ¨s bonne nouvelle. Je peux l'avoir ?~
+@3192 = ~Vous m'avez Ã©tÃ© trÃ¨s utile, mais je suis au regret de vous dire que mon hospitalitÃ© prend fin maintenant.~
+@3193 = ~Je ne peux pas vous laisser parler Ã  tout le monde de nos affaires. Ne vous inquiÃ©tez pas, ce sera rapide et douloureux.~
+@3194 = ~Je pense que oui. J'ai rÃ©ussi Ã  convaincre Xunvrae d'Arabani de me donner une pierre d'ancrage de sa maison qu'on m'a ordonnÃ© d'utiliser sur vous. C'est Ã  vous d'en faire ce que vous voulez.~
+@3195 = ~Vous avez bien fait. Avec Ã§a, j'avancerai encore plus vite que je ne l'avais prÃ©vu. Donnez la moi.~
 @3196 = ~Oui, je sens ses enchantements...~
-@3197 = ~Je pense que je peux l'utiliser à mon avantage. La vénérable mère matrone de la Maison Arabani recevra son prix, mais ce sera à mes conditions, hé hé.~
-@3198 = ~Je vous salue, Mère Matrone Xunvrae d'Arabani. Je suis Tathas Melarn.~
-@3199 = ~QUOI ? Comment avez-vous passé mes protections ?~
-@3200 = ~Ah, je vois. Vous avez déformé mes enchantements sur la pierre d'ancrage. Mais vous ne réussirez pas.~
+@3197 = ~Je pense que je peux l'utiliser Ã  mon avantage. La vÃ©nÃ©rable mÃ¨re matrone de la Maison Arabani recevra son prix, mais ce sera Ã  mes conditions, hÃ© hÃ©.~
+@3198 = ~Je vous salue, MÃ¨re Matrone Xunvrae d'Arabani. Je suis Tathas Melarn.~
+@3199 = ~QUOI ? Comment avez-vous passÃ© mes protections ?~
+@3200 = ~Ah, je vois. Vous avez dÃ©formÃ© mes enchantements sur la pierre d'ancrage. Mais vous ne rÃ©ussirez pas.~
 @3201 = ~Nous allons voir.~
-@3202 = ~Je suis un peu occupé, là~
-@3203 = ~S'il vous plaît, n'interrompez pas ma concentration.~
-@3204 = ~Je voudrais parler à Veldrin.~
+@3202 = ~Je suis un peu occupÃ©, lÃ ~
+@3203 = ~S'il vous plaÃ®t, n'interrompez pas ma concentration.~
+@3204 = ~Je voudrais parler Ã  Veldrin.~
 @3205 = ~C'est fait, Veldrin.~
 @3206 = ~Sans votre aide, il aurait fallu beaucoup plus de temps et de ressources pour renverser la Maison Arabani.~
-@3207 = ~C'est pourquoi vous pouvez avoir le premier butin de ma petite opération.~
-@3208 = ~C'est un anneau que j'ai utilisé régulièrement dans le passé. Il amènera temporairement toute créature d'origine élémentaire sous votre contrôle. Il est à vous maintenant.~
+@3207 = ~C'est pourquoi vous pouvez avoir le premier butin de ma petite opÃ©ration.~
+@3208 = ~C'est un anneau que j'ai utilisÃ© rÃ©guliÃ¨rement dans le passÃ©. Il amÃ¨nera temporairement toute crÃ©ature d'origine Ã©lÃ©mentaire sous votre contrÃ´le. Il est Ã  vous maintenant.~
 @3209 = ~Vous pouvez continuer vos affaires dans cette ville, je m'en fiche. Tant que vous ne racontez pas un mot de cet incident.~
-@3210 = ~Voici un parchemin puissant auquel seuls les membres respectés de Sorcere ont accès. Il est à vous maintenant.~
-@3211 = ~Je l'ai déjà senti lors de notre dernière bataille. Vous avez une vieille... connaissance avec vous.~
+@3210 = ~Voici un parchemin puissant auquel seuls les membres respectÃ©s de Sorcere ont accÃ¨s. Il est Ã  vous maintenant.~
+@3211 = ~Je l'ai dÃ©jÃ  senti lors de notre derniÃ¨re bataille. Vous avez une vieille... connaissance avec vous.~
 @3212 = ~Comment allez-vous, Afaaq ?~
-@3213 = ~Vous devriez le savoir mieux que quiconque. Ma vie a été un cauchemar sans fin de pertes et de tourments, et c'est à vous que je le dois.~
-@3214 = ~Oui, je n'ai pas oublié. Et vous l'avez déjà ressenti, n'est-ce pas ?~
-@3215 = ~J'ai toujours ton essence spirituelle en ma possession. Elle est à vous maintenant.~
-@3216 = ~Je vais vous donner l'essence spirituelle d'Afaaq en récompense. C'est un objet puissant, et c'est à vous de décider quoi en faire.~
-@3217 = ~Voici un anneau que j'ai utilisé régulièrement dans le passé. Il amènera temporairement toute créature d'origine élémentaire sous votre contrôle. Voici aussi de l'or pour votre aide dans la dernière bataille.~
-@3218 = ~Voilà des parchemins puissants auxquels seuls les membres respectés de Sorcere ont accès. Ils sont à vous maintenant.~
-@3219 = ~J'ai toujours votre essence spirituelle en ma possession. Elle est à vous maintenant. Et pour votre aide lors de la dernière bataille, je vais y ajouter un petit bonus.~
-@3220 = ~Je vais vous donner l'essence spirituelle d'Afaaq en récompense. C'est un objet puissant, et c'est à vous de décider quoi en faire. Et pour votre aide lors de la dernière bataille, je vais aussi y ajouter un petit bonus.~
-@3221 = ~Je suis occupé en ce moment. Revenez me parler plus tard, s'il vous plaît.~
-@3222 = ~Bonne journée à vous. Comment allez-vous ?~
+@3213 = ~Vous devriez le savoir mieux que quiconque. Ma vie a Ã©tÃ© un cauchemar sans fin de pertes et de tourments, et c'est Ã  vous que je le dois.~
+@3214 = ~Oui, je n'ai pas oubliÃ©. Et vous l'avez dÃ©jÃ  ressenti, n'est-ce pas ?~
+@3215 = ~J'ai toujours ton essence spirituelle en ma possession. Elle est Ã  vous maintenant.~
+@3216 = ~Je vais vous donner l'essence spirituelle d'Afaaq en rÃ©compense. C'est un objet puissant, et c'est Ã  vous de dÃ©cider quoi en faire.~
+@3217 = ~Voici un anneau que j'ai utilisÃ© rÃ©guliÃ¨rement dans le passÃ©. Il amÃ¨nera temporairement toute crÃ©ature d'origine Ã©lÃ©mentaire sous votre contrÃ´le. Voici aussi de l'or pour votre aide dans la derniÃ¨re bataille.~
+@3218 = ~VoilÃ  des parchemins puissants auxquels seuls les membres respectÃ©s de Sorcere ont accÃ¨s. Ils sont Ã  vous maintenant.~
+@3219 = ~J'ai toujours votre essence spirituelle en ma possession. Elle est Ã  vous maintenant. Et pour votre aide lors de la derniÃ¨re bataille, je vais y ajouter un petit bonus.~
+@3220 = ~Je vais vous donner l'essence spirituelle d'Afaaq en rÃ©compense. C'est un objet puissant, et c'est Ã  vous de dÃ©cider quoi en faire. Et pour votre aide lors de la derniÃ¨re bataille, je vais aussi y ajouter un petit bonus.~
+@3221 = ~Je suis occupÃ© en ce moment. Revenez me parler plus tard, s'il vous plaÃ®t.~
+@3222 = ~Bonne journÃ©e Ã  vous. Comment allez-vous ?~
 @3223 = ~Nous sommes toujours en train d'enlever toutes les traces de la famille Arabani.~
-@3224 = ~C'est inattendu, Veldrin. Vous êtes plus débrouillard que je ne l'imaginais.~
+@3224 = ~C'est inattendu, Veldrin. Vous Ãªtes plus dÃ©brouillard que je ne l'imaginais.~
 @3225 = ~Puis-je l'avoir ?~
-@3226 = ~C'est bon de vous voir, mon ami. Je craignais que vous n'ayez été blessé par les habitants moins civilisés de l'Ombreterre.~~C'est bon de vous voir, mon amie. Je craignais que vous n'ayez été blessé par les habitants moins civilisés de l'Ombreterre.~
-@3227 = ~D'autant plus que j'ai causé beaucoup de soucis à votre compagnon Afaaq en le privant de ses pouvoirs et en le laissant dans cet état de vulnérabilité.~
-@3228 = ~J'aimerais faire amende honorable pour mes actes imprudents dans le passé.~
-@3229 = ~Prouvez vos intentions et rendez-moi mes pouvoirs volés.~
-@3230 = ~Certainement, mon ami. Par chance, j'ai encore en ma possession le réceptacle avec votre essence scellée. S'il vous plaît, reprenez-la et restaurez-la quand vous en aurez l'occasion.~
+@3226 = ~C'est bon de vous voir, mon ami. Je craignais que vous n'ayez Ã©tÃ© blessÃ© par les habitants moins civilisÃ©s de l'Ombreterre.~~C'est bon de vous voir, mon amie. Je craignais que vous n'ayez Ã©tÃ© blessÃ© par les habitants moins civilisÃ©s de l'Ombreterre.~
+@3227 = ~D'autant plus que j'ai causÃ© beaucoup de soucis Ã  votre compagnon Afaaq en le privant de ses pouvoirs et en le laissant dans cet Ã©tat de vulnÃ©rabilitÃ©.~
+@3228 = ~J'aimerais faire amende honorable pour mes actes imprudents dans le passÃ©.~
+@3229 = ~Prouvez vos intentions et rendez-moi mes pouvoirs volÃ©s.~
+@3230 = ~Certainement, mon ami. Par chance, j'ai encore en ma possession le rÃ©ceptacle avec votre essence scellÃ©e. S'il vous plaÃ®t, reprenez-la et restaurez-la quand vous en aurez l'occasion.~
 @3231 = ~Pour desceller...~
-@3232 = ~Quelle chance que j'aie encore en ma possession le réceptacle de l'essence d'Afaaq. S'il vous plaît, prenez-le et restaurez votre ami quand vous en aurez l'occasion.~
-@3233 = ~En gage de notre amitié, j'aimerais vous offrir un cadeau qui, je l'espère, rendra certaines rencontres moins difficiles.~
-@3234 = ~Reprenez vos esprits, commandant ! Cet homme est un <PRO_RACE> déguisé, et il n'est pas fiable.~~Reprenez vos esprits, commandant ! Cette femme est une <PRO_RACE> déguisée, et elle n'est pas fiable.~
-@3235 = ~Je vous félicite d'avoir réussi à me tromper. Mais maintenant, faites face aux conséquences de vos actes.~
-@3236 = ~Expédiez-les vite ! Ils ne sont pas autorisés à révéler notre présence.~
+@3232 = ~Quelle chance que j'aie encore en ma possession le rÃ©ceptacle de l'essence d'Afaaq. S'il vous plaÃ®t, prenez-le et restaurez votre ami quand vous en aurez l'occasion.~
+@3233 = ~En gage de notre amitiÃ©, j'aimerais vous offrir un cadeau qui, je l'espÃ¨re, rendra certaines rencontres moins difficiles.~
+@3234 = ~Reprenez vos esprits, commandant ! Cet homme est un <PRO_RACE> dÃ©guisÃ©, et il n'est pas fiable.~~Reprenez vos esprits, commandant ! Cette femme est une <PRO_RACE> dÃ©guisÃ©e, et elle n'est pas fiable.~
+@3235 = ~Je vous fÃ©licite d'avoir rÃ©ussi Ã  me tromper. Mais maintenant, faites face aux consÃ©quences de vos actes.~
+@3236 = ~ExpÃ©diez-les vite ! Ils ne sont pas autorisÃ©s Ã  rÃ©vÃ©ler notre prÃ©sence.~
 
 
 // Dialog lines: Melarn entourage
 @3300 = ~Salutations <MALEFEMALE>. Je suis le premier capitaine sous les ordres de Tathas.~
-@3301 = ~Je m'excuse de mon manque de manières, mais tant que vous n'avez pas décidé de travailler pour nous, je ne peux rien vous offrir.~
-@3302 = ~En tant que recrue de notre commandant, vous pouvez faire appel à mes services. J'offre un endroit sûr pour vous reposer et une petite sélection d'armes et d'armures à vendre.~
-@3303 = ~Je vous salue à nouveau, <MALEFEMALE>. Mais à moins que vous n'ayez accepté l'offre du commandant, je ne peux rien faire pour vous.~
-@3304 = ~Je vous salue à nouveau, Veldrin.~
-@3305 = ~Je vous salue à nouveau, <GABBER>.~
+@3301 = ~Je m'excuse de mon manque de maniÃ¨res, mais tant que vous n'avez pas dÃ©cidÃ© de travailler pour nous, je ne peux rien vous offrir.~
+@3302 = ~En tant que recrue de notre commandant, vous pouvez faire appel Ã  mes services. J'offre un endroit sÃ»r pour vous reposer et une petite sÃ©lection d'armes et d'armures Ã  vendre.~
+@3303 = ~Je vous salue Ã  nouveau, <MALEFEMALE>. Mais Ã  moins que vous n'ayez acceptÃ© l'offre du commandant, je ne peux rien faire pour vous.~
+@3304 = ~Je vous salue Ã  nouveau, Veldrin.~
+@3305 = ~Je vous salue Ã  nouveau, <GABBER>.~
 @3306 = ~Avez-vous besoin de mes services ?~
 @3307 = ~J'aimerais me reposer quelques heures.~
-@3308 = ~J'aimerais voir ce que vous avez à vendre.~
+@3308 = ~J'aimerais voir ce que vous avez Ã  vendre.~
 @3309 = ~Pas pour le moment.~
-@3310 = ~Peut-être une autre fois.~
-@3311 = ~Je suis un peu occupé en ce moment.~
-@3312 = ~Vous avez du potentiel, <MALEFEMALE>. Si vous voulez vous joindre à notre maison, je soutiendrai votre demande.~
+@3310 = ~Peut-Ãªtre une autre fois.~
+@3311 = ~Je suis un peu occupÃ© en ce moment.~
+@3312 = ~Vous avez du potentiel, <MALEFEMALE>. Si vous voulez vous joindre Ã  notre maison, je soutiendrai votre demande.~
 @3313 = ~L'Arabani n'avait aucune chance contre nous.~
 @3314 = ~Vous auriez un avenir dans notre maison.~
 @3320 = ~Ne me parle pas, vers de terre.~
-@3321 = ~Tu ose me parler ? Dégage !~
-@3322 = ~Les drows règnent en maître. Et je suis ce qu'ils ont de mieux.~
-@3323 = ~Fuis devant la Reine Araignée.~
+@3321 = ~Tu ose me parler ? DÃ©gage !~
+@3322 = ~Les drows rÃ¨gnent en maÃ®tre. Et je suis ce qu'ils ont de mieux.~
+@3323 = ~Fuis devant la Reine AraignÃ©e.~
 @3324 = ~Ne m'interrompez pas dans mon travail, <MALEFEMALE>.~
-@3325 = ~Tu as le droit de vivre un jour de plus, homme. Sois reconnaissant pour ça.~~Tu as le droit de vivre un jour de plus, femme. Sois reconnaissante pour ça.~
+@3325 = ~Tu as le droit de vivre un jour de plus, homme. Sois reconnaissant pour Ã§a.~~Tu as le droit de vivre un jour de plus, femme. Sois reconnaissante pour Ã§a.~
 @3330 = ~Laissez-moi tranquille, <MALEFEMALE>. Je travaille sur mes formules et vous interrompez ma concentration.~
-@3331 = ~Je suis ici à la demande de notre maître.~
-@3332 = ~Vous devriez adresser vos questions à notre commandant.~
-@3333 = ~Je suis un peu occupé en ce moment.~
-@3334 = ~Vous seriez un candidat prometteur pour Sorcere, pourquoi ne pas vous joindre à nous ?~
-@3335 = ~Grâce à vous, notre maison a un pied dans cette ville.~
-@3340 = ~Ne vous adressez pas à moi, homme. Vous êtes un étranger et seulement toléré pour le moment.~~Ne vous adressez pas à moi, femme. Vous êtes une étrangère et seulement tolérée pour le moment.~
+@3331 = ~Je suis ici Ã  la demande de notre maÃ®tre.~
+@3332 = ~Vous devriez adresser vos questions Ã  notre commandant.~
+@3333 = ~Je suis un peu occupÃ© en ce moment.~
+@3334 = ~Vous seriez un candidat prometteur pour Sorcere, pourquoi ne pas vous joindre Ã  nous ?~
+@3335 = ~GrÃ¢ce Ã  vous, notre maison a un pied dans cette ville.~
+@3340 = ~Ne vous adressez pas Ã  moi, homme. Vous Ãªtes un Ã©tranger et seulement tolÃ©rÃ© pour le moment.~~Ne vous adressez pas Ã  moi, femme. Vous Ãªtes une Ã©trangÃ¨re et seulement tolÃ©rÃ©e pour le moment.~
 @3341 = ~Ne m'interrompez pas dans mon travail, <MALEFEMALE>.~
 @3342 = ~Vous seriez un atout pour notre maison.~
 @3350 = ~*BURP*~
@@ -200,17 +200,17 @@
 @3352 = ~*CRUNCH-SLURP*~
 @3353 = ~Aha, et puis...~
 @3354 = ~Oui, mais...~
-@3355 = ~Allez-vous arrêter de nous importuner ?~
+@3355 = ~Allez-vous arrÃªter de nous importuner ?~
 @3356 = ~Allez-vous-en !~
-@3357 = ~Parlez à quelqu'un d'autre !~
-@3360 = ~Arrête de me distraire ! Vous ne voyez pas que je suis occupé ?~
-@3361 = ~Pas le temps de parler, occupé à se battre.~
-@3362 = ~Ne me dérangez pas.~
-@3363 = ~Je vais gagner, c'est sûr !~
+@3357 = ~Parlez Ã  quelqu'un d'autre !~
+@3360 = ~ArrÃªte de me distraire ! Vous ne voyez pas que je suis occupÃ© ?~
+@3361 = ~Pas le temps de parler, occupÃ© Ã  se battre.~
+@3362 = ~Ne me dÃ©rangez pas.~
+@3363 = ~Je vais gagner, c'est sÃ»r !~
 @3364 = ~C'est la vie.~
 @3365 = ~Il n'a aucune chance !~
-@3366 = ~Parlez à quelqu'un d'autre, voulez-vous ?~
-@3367 = ~Soyez attentif à ce combat et vous apprendrez quelque chose.~
+@3366 = ~Parlez Ã  quelqu'un d'autre, voulez-vous ?~
+@3367 = ~Soyez attentif Ã  ce combat et vous apprendrez quelque chose.~
 @3368 = ~Haegar est inutile au combat, vous ne trouvez pas ?~
 @3369 = ~Ce combat est excellent.~
 @3370 = ~*BURP*~
@@ -218,244 +218,244 @@
 @3372 = ~Ce combat est excellent !~
 @3373 = ~*BURP*~
 @3374 = ~Vous voulez vous battre aussi ?~
-@3380 = ~Je dirige les forces de ma Maison quand c'est nécessaire.  Vous ne seriez que de la chair à canon dans une telle bataille.~
-@3381 = ~Vous êtes un étranger, <MALEFEMALE>. Je n'ai rien à vous dire.~
-@3382 = ~J'ai hâte de prouver mes compétences contre nos ennemis.~
-@3383 = ~Je suis un peu occupé là.~
+@3380 = ~Je dirige les forces de ma Maison quand c'est nÃ©cessaire.  Vous ne seriez que de la chair Ã  canon dans une telle bataille.~
+@3381 = ~Vous Ãªtes un Ã©tranger, <MALEFEMALE>. Je n'ai rien Ã  vous dire.~
+@3382 = ~J'ai hÃ¢te de prouver mes compÃ©tences contre nos ennemis.~
+@3383 = ~Je suis un peu occupÃ© lÃ .~
 @3384 = ~Les Arabani n'avaient aucune chance contre nous.~
 @3385 = ~Vous auriez un avenir dans notre maison.~
-@3390 = ~Si vous rencontrez une prêtresse de Lolth, baissez les yeux et ne vous adressez pas à elle.  Vous n'êtes rien pour elles, tout comme vous n'êtes rien pour une Mère Matrone.~
-@3391 = ~J'ai hâte de prouver mes compétences contre nos ennemis.~
-@3392 = ~Nous sommes prêts à frapper dès que notre commandant nous en donnera l'ordre.~
-@3393 = ~Notre commandant est invincible au combat. Ses pouvoirs magiques ont même fait tomber un orbe ancien, le plus puissant des tyrannoeils.~
-@3394 = ~Je suis un peu occupé là.~
+@3390 = ~Si vous rencontrez une prÃªtresse de Lolth, baissez les yeux et ne vous adressez pas Ã  elle.  Vous n'Ãªtes rien pour elles, tout comme vous n'Ãªtes rien pour une MÃ¨re Matrone.~
+@3391 = ~J'ai hÃ¢te de prouver mes compÃ©tences contre nos ennemis.~
+@3392 = ~Nous sommes prÃªts Ã  frapper dÃ¨s que notre commandant nous en donnera l'ordre.~
+@3393 = ~Notre commandant est invincible au combat. Ses pouvoirs magiques ont mÃªme fait tomber un orbe ancien, le plus puissant des tyrannoeils.~
+@3394 = ~Je suis un peu occupÃ© lÃ .~
 @3395 = ~Les Arabani n'avaient aucune chance contre nous.~
 @3396 = ~Vous auriez un avenir dans notre maison.~
-@3400 = ~Ne me faites pas de mal, s'il vous plaît.~
+@3400 = ~Ne me faites pas de mal, s'il vous plaÃ®t.~
 @3401 = ~Je travaille plus dur. Je vous le promets.~
-@3402 = ~Je ne suis pas autorisé à parler aux étrangers.~
-@3403 = ~Parlez au maître si vous voulez quelque chose.~
+@3402 = ~Je ne suis pas autorisÃ© Ã  parler aux Ã©trangers.~
+@3403 = ~Parlez au maÃ®tre si vous voulez quelque chose.~
 @3404 = ~Vous n'allez pas plus loin.~
-@3405 = ~Le tunnel derrière nous est bloqué.~
-@3406 = ~C'est dangereux dans le tunnel derrière nous.~
+@3405 = ~Le tunnel derriÃ¨re nous est bloquÃ©.~
+@3406 = ~C'est dangereux dans le tunnel derriÃ¨re nous.~
 
 
 // Lignes de textes : Maison Arabani
-@3500 = ~Qui êtes-vous ? Comment osez-vous vous adresser à une Mère Matrone sans y être invité ? Parlez, vite !~~Qui êtes-vous ? Comment osez-vous vous adresser à une Mère Matrone sans y être invitée ? Parlez, vite !~
+@3500 = ~Qui Ãªtes-vous ? Comment osez-vous vous adresser Ã  une MÃ¨re Matrone sans y Ãªtre invitÃ© ? Parlez, vite !~~Qui Ãªtes-vous ? Comment osez-vous vous adresser Ã  une MÃ¨re Matrone sans y Ãªtre invitÃ©e ? Parlez, vite !~
 @3501 = ~Je suis Veldrin, un favori de la Maison Despana. J'ai besoin de discuter d'une affaire urgente~
-@3502 = ~Je m'appelle Veldrin, vénérable Mère Matrone. Je viens vous mettre en garde contre Tathas de la Maison Melarn. J'ai appris qu'il vous attaquera bientôt alors que vos armées sont préoccupées ailleurs.~
-@3503 = ~Je m'appelle Veldrin et je viens avec des informations sur un vieil ennemi de votre maison. Tathas Melarn a l'ambition d'étendre son influence dans cette ville pendant que vos armées sont préoccupées par la guerre avec ces détestés elfes de surface.~
-@3504 = ~Donnez-moi votre Insigne de Maison et j’épargnerai votre vie !~
-@3505 = ~Je suis votre perte. Défendez-vous !~
-@3506 = ~Vous n'êtes pas en position d'exiger quoi que ce soit de moi, <MALEFEMALE>. Mais je suis généreuse aujourd'hui, parlez-moi de votre affaire "urgente" et j'y réfléchirai.~
+@3502 = ~Je m'appelle Veldrin, vÃ©nÃ©rable MÃ¨re Matrone. Je viens vous mettre en garde contre Tathas de la Maison Melarn. J'ai appris qu'il vous attaquera bientÃ´t alors que vos armÃ©es sont prÃ©occupÃ©es ailleurs.~
+@3503 = ~Je m'appelle Veldrin et je viens avec des informations sur un vieil ennemi de votre maison. Tathas Melarn a l'ambition d'Ã©tendre son influence dans cette ville pendant que vos armÃ©es sont prÃ©occupÃ©es par la guerre avec ces dÃ©testÃ©s elfes de surface.~
+@3504 = ~Donnez-moi votre Insigne de Maison et jâ€™Ã©pargnerai votre vie !~
+@3505 = ~Je suis votre perte. DÃ©fendez-vous !~
+@3506 = ~Vous n'Ãªtes pas en position d'exiger quoi que ce soit de moi, <MALEFEMALE>. Mais je suis gÃ©nÃ©reuse aujourd'hui, parlez-moi de votre affaire "urgente" et j'y rÃ©flÃ©chirai.~
 @3507 = ~Je veux vous parler d'une possible attaque contre votre maison dans un futur proche.~
-@3508 = ~Je dois vous mettre en garde contre Tathas de la maison Melarn. Il se prépare à attaquer votre maison.~
-@3509 = ~Je m'attendais à un assassin, mais vous ressemblez plus à un nigaud. Vous verrez que nous sommes tout sauf impuissants. Gardes, occupez-vous de cet imbécile !~
-@3510 = ~Bah.  Je ne tolérerai pas d'imbéciles dans ma maison. Gardes, attaquez-les !~
-@3511 = ~Ma maison est toujours la cible de menaces et de tentatives d'assassinat. Quel est votre véritable but, Veldrin ? Vous renseigner sur nos faiblesses ?~
-@3512 = ~Notre maison est forte. Plus forte que n'importe quelle maison de la ville. Quel que soit votre plan, il échouera. Gardes, attaquez ces espions !~
-@3513 = ~La maison Melarn... J'en ai entendu parler. Ils sont forts à Ched Nasad, n'est-ce pas ?~
+@3508 = ~Je dois vous mettre en garde contre Tathas de la maison Melarn. Il se prÃ©pare Ã  attaquer votre maison.~
+@3509 = ~Je m'attendais Ã  un assassin, mais vous ressemblez plus Ã  un nigaud. Vous verrez que nous sommes tout sauf impuissants. Gardes, occupez-vous de cet imbÃ©cile !~
+@3510 = ~Bah.  Je ne tolÃ©rerai pas d'imbÃ©ciles dans ma maison. Gardes, attaquez-les !~
+@3511 = ~Ma maison est toujours la cible de menaces et de tentatives d'assassinat. Quel est votre vÃ©ritable but, Veldrin ? Vous renseigner sur nos faiblesses ?~
+@3512 = ~Notre maison est forte. Plus forte que n'importe quelle maison de la ville. Quel que soit votre plan, il Ã©chouera. Gardes, attaquez ces espions !~
+@3513 = ~La maison Melarn... J'en ai entendu parler. Ils sont forts Ã  Ched Nasad, n'est-ce pas ?~
 @3514 = ~Qu'est-ce qu'ils veulent ? Raconte-moi tout !~
-@3515 = ~Ils ont l'intention d'utiliser la tourmente de la guerre à leur avantage et veulent s'emparer de votre maison. Leur armée se tient prête et entrera en action bientôt.~
-@3516 = ~Tathas Melarn désire votre Insigne de Maison pour ses projets. Il m'a chargé de le récupérer, mais je ne veux pas le faire.~
-@3517 = ~Quelle honnête <MALEFEMALE> vous êtes. J'apprécie vraiment.~
-@3518 = ~Je vais prendre les choses en main. D'abord, je vais m'occuper de vous, sinon vous pourriez être tenté de révéler mes plans à quiconque vous rencontrerez. Gardes, aidez-moi à éliminer cet idiot !~
-@3519 = ~C'est vraiment une mauvaise nouvelle. Mon armée participe aussi à la guerre, et ma maison est plus vulnérable que d'habitude.~
-@3520 = ~Vous semblez déjà le savoir, alors je propose un marché. Je vous donnerai un objet que vous utiliserez à proximité de Tathas Melarn. Cela le mettra hors d'état de nuire et me l'amènera.~
-@3521 = ~Faites le et je vous récompenserai généreusement. La maison Arabani est une maison prospère.~
+@3515 = ~Ils ont l'intention d'utiliser la tourmente de la guerre Ã  leur avantage et veulent s'emparer de votre maison. Leur armÃ©e se tient prÃªte et entrera en action bientÃ´t.~
+@3516 = ~Tathas Melarn dÃ©sire votre Insigne de Maison pour ses projets. Il m'a chargÃ© de le rÃ©cupÃ©rer, mais je ne veux pas le faire.~
+@3517 = ~Quelle honnÃªte <MALEFEMALE> vous Ãªtes. J'apprÃ©cie vraiment.~
+@3518 = ~Je vais prendre les choses en main. D'abord, je vais m'occuper de vous, sinon vous pourriez Ãªtre tentÃ© de rÃ©vÃ©ler mes plans Ã  quiconque vous rencontrerez. Gardes, aidez-moi Ã  Ã©liminer cet idiot !~
+@3519 = ~C'est vraiment une mauvaise nouvelle. Mon armÃ©e participe aussi Ã  la guerre, et ma maison est plus vulnÃ©rable que d'habitude.~
+@3520 = ~Vous semblez dÃ©jÃ  le savoir, alors je propose un marchÃ©. Je vous donnerai un objet que vous utiliserez Ã  proximitÃ© de Tathas Melarn. Cela le mettra hors d'Ã©tat de nuire et me l'amÃ¨nera.~
+@3521 = ~Faites le et je vous rÃ©compenserai gÃ©nÃ©reusement. La maison Arabani est une maison prospÃ¨re.~
 @3522 = ~J'accepte votre offre. Tathas Melarn ne sera plus libre longtemps.~
-@3523 = ~Je ne veux plus être impliqué dans cette affaire. Je dois refuser votre offre.~
+@3523 = ~Je ne veux plus Ãªtre impliquÃ© dans cette affaire. Je dois refuser votre offre.~
 @3524 = ~Bien. C'est une pierre d'ancrage. Elle vous permettra de passer les protections tant que vous l'aurez en votre possession.~
-@3525 = ~Il se chargera également de Tathas Melarn lorsque vous l'utiliserez à sa proximité. Je m'attends à des résultats rapides. Bonne chance.~
-@3526 = ~Vous êtes déjà impliqué, que ça vous plaise ou non. J'accepte votre décision, mais je ne peux pas vous permettre de marcher librement tant que vous nous connaissez.~
-@3527 = ~Gardes, aidez-moi à les éliminer rapidement !~
-@3528 = ~Avez-vous fait des progrès dans votre mission ?~
-@3529 = ~Pas encore, Mère Matrone.~
-@3530 = ~Vous osez me voler ? Gardes, à l'attaque !~
-@3531 = ~J'exige des résultats. Faites vite !~
-@3532 = ~Bienvenue dans ma maison. Je suppose que vous êtes Tathas Melarn. Mais je suis sûr que nous apprendrons à mieux nous connaître dans un avenir proche.~
-@3533 = ~Veldrin, vous m'avez trahi ? Je vais vous détruire ! ET JE DÉTRUIRAI LA MAISON ARABANI AUSSI !!!~
-@3534 = ~Vous ne ferez rien d'autre que d'obéir à mes ordres. Je suis sûr que votre... coopération s'avérera utile.~
-@3535 = ~Ah, et je vais vous prendre ça. Ces cristaux seront inestimables entre de bonnes mains.~
-@3536 = ~Vous m'avez été très utile. Avec Tathas Melarn sous mon influence, notre maison régnera en maître. Mais maintenant, votre récompense.~
-@3537 = ~Ne croyez pas que j'ai oublié la destruction de Deirex, un allié respecté de notre maison.~
+@3525 = ~Il se chargera Ã©galement de Tathas Melarn lorsque vous l'utiliserez Ã  sa proximitÃ©. Je m'attends Ã  des rÃ©sultats rapides. Bonne chance.~
+@3526 = ~Vous Ãªtes dÃ©jÃ  impliquÃ©, que Ã§a vous plaise ou non. J'accepte votre dÃ©cision, mais je ne peux pas vous permettre de marcher librement tant que vous nous connaissez.~
+@3527 = ~Gardes, aidez-moi Ã  les Ã©liminer rapidement !~
+@3528 = ~Avez-vous fait des progrÃ¨s dans votre mission ?~
+@3529 = ~Pas encore, MÃ¨re Matrone.~
+@3530 = ~Vous osez me voler ? Gardes, Ã  l'attaque !~
+@3531 = ~J'exige des rÃ©sultats. Faites vite !~
+@3532 = ~Bienvenue dans ma maison. Je suppose que vous Ãªtes Tathas Melarn. Mais je suis sÃ»r que nous apprendrons Ã  mieux nous connaÃ®tre dans un avenir proche.~
+@3533 = ~Veldrin, vous m'avez trahi ? Je vais vous dÃ©truire ! ET JE DÃ‰TRUIRAI LA MAISON ARABANI AUSSI !!!~
+@3534 = ~Vous ne ferez rien d'autre que d'obÃ©ir Ã  mes ordres. Je suis sÃ»r que votre... coopÃ©ration s'avÃ©rera utile.~
+@3535 = ~Ah, et je vais vous prendre Ã§a. Ces cristaux seront inestimables entre de bonnes mains.~
+@3536 = ~Vous m'avez Ã©tÃ© trÃ¨s utile. Avec Tathas Melarn sous mon influence, notre maison rÃ©gnera en maÃ®tre. Mais maintenant, votre rÃ©compense.~
+@3537 = ~Ne croyez pas que j'ai oubliÃ© la destruction de Deirex, un alliÃ© respectÃ© de notre maison.~
 @3538 = ~Vous paierez pour votre impudence. Gardes, attaquez-les !~
-@3539 = ~Le combat est terminé et la Maison Arabani est victorieuse comme toujours.~
-@3540 = ~Le combat est terminé et avec votre aide, la Maison Arabani est victorieuse.~
-@3541 = ~Mais votre trahison nous a causé des ennuis inutiles. Et je n'ai pas oublié la destruction de Deirex, un allié respecté de notre maison.~
-@3542 = ~Vous paierez de votre vie. Gardes, à l'attaque !~
-@3543 = ~Ne pensez pas que votre attaque sur la maison Jae'llat est passée inaperçue. Deirex et la Mère Matrone Hindra étaient des alliées respectées de notre maison.~
-@3544 = ~Mais votre trahison nous a causé des ennuis inutiles. Ne présumez pas que votre attaque sur la maison Jae'llat est passée inaperçue.~
-@3545 = ~Deirex et la Mère Matrone Hindra étaient des alliées respectées de notre maison.~
+@3539 = ~Le combat est terminÃ© et la Maison Arabani est victorieuse comme toujours.~
+@3540 = ~Le combat est terminÃ© et avec votre aide, la Maison Arabani est victorieuse.~
+@3541 = ~Mais votre trahison nous a causÃ© des ennuis inutiles. Et je n'ai pas oubliÃ© la destruction de Deirex, un alliÃ© respectÃ© de notre maison.~
+@3542 = ~Vous paierez de votre vie. Gardes, Ã  l'attaque !~
+@3543 = ~Ne pensez pas que votre attaque sur la maison Jae'llat est passÃ©e inaperÃ§ue. Deirex et la MÃ¨re Matrone Hindra Ã©taient des alliÃ©es respectÃ©es de notre maison.~
+@3544 = ~Mais votre trahison nous a causÃ© des ennuis inutiles. Ne prÃ©sumez pas que votre attaque sur la maison Jae'llat est passÃ©e inaperÃ§ue.~
+@3545 = ~Deirex et la MÃ¨re Matrone Hindra Ã©taient des alliÃ©es respectÃ©es de notre maison.~
 
-@3560 = ~Qui êtes-vous ? Comment avez-vous passé les protections ?!  Ce doivent être des assassins. Attaquez-les !~
-@3568 = ~Vous pouvez entrer librement dans notre maison tant que vous possédez la pierre d'ancrage.~
-@3569 = ~N'oubliez pas que vous êtes sous étroite surveillance pendant que vous êtes ici.~
+@3560 = ~Qui Ãªtes-vous ? Comment avez-vous passÃ© les protections ?!  Ce doivent Ãªtre des assassins. Attaquez-les !~
+@3568 = ~Vous pouvez entrer librement dans notre maison tant que vous possÃ©dez la pierre d'ancrage.~
+@3569 = ~N'oubliez pas que vous Ãªtes sous Ã©troite surveillance pendant que vous Ãªtes ici.~
 
-@3580 = ~Des intrus sont entrés dans notre bâtiment. Attaquez-les !~
-@3581 = ~Qui que vous soyez, vous devez d'abord parler à la Mère Matrone. Elle décidera de ce qu'il faut faire de vous.~
-@3582 = ~Je ne vous fais pas confiance. Mais j'obéirai aux ordres de la Mère Matrone.~
+@3580 = ~Des intrus sont entrÃ©s dans notre bÃ¢timent. Attaquez-les !~
+@3581 = ~Qui que vous soyez, vous devez d'abord parler Ã  la MÃ¨re Matrone. Elle dÃ©cidera de ce qu'il faut faire de vous.~
+@3582 = ~Je ne vous fais pas confiance. Mais j'obÃ©irai aux ordres de la MÃ¨re Matrone.~
 @3583 = ~Je n'ai aucune raison de vous parler.~
 
-@3590 = ~Comment avez-vous passé les protections ? Des intrus sont entrés, attaquez-les !~
-@3591 = ~Comment avez-vous passé les protections ? Vous devez parler à la Mère Matrone immédiatement. Elle décidera de ce qu'il faut faire de vous.~
-@3592 = ~N'oubliez pas que vous êtes sous étroite surveillance pendant que vous êtes ici.~
+@3590 = ~Comment avez-vous passÃ© les protections ? Des intrus sont entrÃ©s, attaquez-les !~
+@3591 = ~Comment avez-vous passÃ© les protections ? Vous devez parler Ã  la MÃ¨re Matrone immÃ©diatement. Elle dÃ©cidera de ce qu'il faut faire de vous.~
+@3592 = ~N'oubliez pas que vous Ãªtes sous Ã©troite surveillance pendant que vous Ãªtes ici.~
 @3593 = ~Ne faites pas de faux pas ou ce sera votre dernier !~
-@3594 = ~Parlez à la Mère Matrone si vous voulez quelque chose.~
-@3595 = ~Nous protégeons la Mère nourrice avec nos vies, si nécessaire.~
+@3594 = ~Parlez Ã  la MÃ¨re Matrone si vous voulez quelque chose.~
+@3595 = ~Nous protÃ©geons la MÃ¨re nourrice avec nos vies, si nÃ©cessaire.~
 
 
 // journal entries
 @3800 = ~Une rencontre inattendue
 
-Un groupe de marchands de Duergar a mentionné un passage secret gardé dans leur dos qui mène à un campement d'un groupe de drows.~
+Un groupe de marchands de Duergar a mentionnÃ© un passage secret gardÃ© dans leur dos qui mÃ¨ne Ã  un campement d'un groupe de drows.~
 
 @3801 = ~Une rencontre inattendue
 
-Comme les duerguars me l'ont dit, le passage sud est protégé contre les non-drows. Je dois trouver un moyen pour y  passer.~
+Comme les duerguars me l'ont dit, le passage sud est protÃ©gÃ© contre les non-drows. Je dois trouver un moyen pour y  passer.~
 
 @3802 = ~Une rencontre inattendue
 
-Aussi improbable que cela puisse paraître, mon déguisement magique de membre de la société drow m'a permis de passer outre les protections. Le passage semble abandonné, mais avec des drows impliqués, tout peut arriver.~
+Aussi improbable que cela puisse paraÃ®tre, mon dÃ©guisement magique de membre de la sociÃ©tÃ© drow m'a permis de passer outre les protections. Le passage semble abandonnÃ©, mais avec des drows impliquÃ©s, tout peut arriver.~
 
 @3803 = ~Une rencontre inattendue
 
-Les drows m'ont surpris et m'ont emmené devant leur commandant, Tathas Melarn. Il m'a demandé de travailler pour lui et m'a promis des sorts puissants comme récompense pour son sale boulot.~
+Les drows m'ont surpris et m'ont emmenÃ© devant leur commandant, Tathas Melarn. Il m'a demandÃ© de travailler pour lui et m'a promis des sorts puissants comme rÃ©compense pour son sale boulot.~
 
 @3804 = ~Une rencontre inattendue
 
-Les drows m'ont surpris et m'ont emmené devant leur commandant, Tathas Melarn. Il m'a demandé de travailler pour lui et m'a promis l'essence spirituelle avec le pouvoir scellé de l'Afaaq comme récompense pour avoir fait son sale boulot.~
+Les drows m'ont surpris et m'ont emmenÃ© devant leur commandant, Tathas Melarn. Il m'a demandÃ© de travailler pour lui et m'a promis l'essence spirituelle avec le pouvoir scellÃ© de l'Afaaq comme rÃ©compense pour avoir fait son sale boulot.~
 
 @3805 = ~Une rencontre inattendue
 
-J'ai accepté de travailler pour Tathas Melarn. Mes ordres sont d'entrer dans la Maison Arabani et d'assassiner leur Mère Matrone  Xunvrae d'Arabani.
+J'ai acceptÃ© de travailler pour Tathas Melarn. Mes ordres sont d'entrer dans la Maison Arabani et d'assassiner leur MÃ¨re Matrone  Xunvrae d'Arabani.
 
-Quand elle sera morte, je devrai retourner à Tathas avec son insigne de maison. J'espère qu'il est fidèle à sa parole et qu'il me récompensera comme il se doit pour une action aussi maléfique.~
+Quand elle sera morte, je devrai retourner Ã  Tathas avec son insigne de maison. J'espÃ¨re qu'il est fidÃ¨le Ã  sa parole et qu'il me rÃ©compensera comme il se doit pour une action aussi malÃ©fique.~
 
 @3806 = ~Une rencontre inattendue
 
-Après avoir donné la pierre d'ancrage à Tathas, il m'a téléporté à la maison Arabani pour tenter de la conquérir.~
+AprÃ¨s avoir donnÃ© la pierre d'ancrage Ã  Tathas, il m'a tÃ©lÃ©portÃ© Ã  la maison Arabani pour tenter de la conquÃ©rir.~
 
 @3807 = ~Une rencontre inattendue
 
-J'ai révélé les plans de Tathas à la Mère Matrone de la Maison Arabani.
+J'ai rÃ©vÃ©lÃ© les plans de Tathas Ã  la MÃ¨re Matrone de la Maison Arabani.
 
-Elle m'a promis une récompense si je pouvais piéger Tathas Melarn avec une pierre d'ancrage qu'elle m'avait donnée. La pierre me permet aussi d'entrer dans la maison Arabani à tout moment.~
+Elle m'a promis une rÃ©compense si je pouvais piÃ©ger Tathas Melarn avec une pierre d'ancrage qu'elle m'avait donnÃ©e. La pierre me permet aussi d'entrer dans la maison Arabani Ã  tout moment.~
 
 @3808 = ~Une rencontre inattendue
 
-Il semble que la Maison Arabani ait été forcée de s'allier à la Maison Jae'llat. Il y a peut-être un moyen d'utiliser cette situation à mon avantage.~
+Il semble que la Maison Arabani ait Ã©tÃ© forcÃ©e de s'allier Ã  la Maison Jae'llat. Il y a peut-Ãªtre un moyen d'utiliser cette situation Ã  mon avantage.~
 
 @3820 = ~Une rencontre inattendue
 
-Tathas Melarn et sa suite drow sont devenus hostiles et m'ont attaqué quand j'ai refusé de coopérer.~
+Tathas Melarn et sa suite drow sont devenus hostiles et m'ont attaquÃ© quand j'ai refusÃ© de coopÃ©rer.~
 
 @3821 = ~Une rencontre inattendue
 
-J'ai refusé de travailler pour Tathas Melarn. Il était contrarié et notre conversation s'est terminée dans la violence.~
+J'ai refusÃ© de travailler pour Tathas Melarn. Il Ã©tait contrariÃ© et notre conversation s'est terminÃ©e dans la violence.~
 
 @3822 = ~Une rencontre inattendue
 
-Le commandant drow a découvert que je n'étais pas drow et m'a attaqué.~
+Le commandant drow a dÃ©couvert que je n'Ã©tais pas drow et m'a attaquÃ©.~
 
 @3823 = ~Une rencontre inattendue
 
-Malheureusement, Tathas Melarn n'a pas tenu parole. Au lieu de me récompenser pour mes efforts, il est devenu hostile et m'a attaqué.~
+Malheureusement, Tathas Melarn n'a pas tenu parole. Au lieu de me rÃ©compenser pour mes efforts, il est devenu hostile et m'a attaquÃ©.~
 
 @3824 = ~Une rencontre inattendue
 
-Mon association avec la maison Melarn s'est finalement avérée rentable. Tathas m'a généreusement récompensé.
+Mon association avec la maison Melarn s'est finalement avÃ©rÃ©e rentable. Tathas m'a gÃ©nÃ©reusement rÃ©compensÃ©.
 
-J'espère que les autres maisons d'Ust Natha n'apprendront rien à ce sujet ou mon chemin vers Irenicus sera d'autant plus difficile.~
+J'espÃ¨re que les autres maisons d'Ust Natha n'apprendront rien Ã  ce sujet ou mon chemin vers Irenicus sera d'autant plus difficile.~
 
 @3825 = ~Une rencontre inattendue
 
-Mon association avec la maison Melarn s'est finalement avérée rentable. Tathas m'a récompensé avec l'essence spirituelle d'Afaaq.
+Mon association avec la maison Melarn s'est finalement avÃ©rÃ©e rentable. Tathas m'a rÃ©compensÃ© avec l'essence spirituelle d'Afaaq.
 
-J'espère que les autres maisons d'Ust Natha n'apprendront rien à ce sujet ou mon chemin vers Irenicus sera d'autant plus difficile.~
+J'espÃ¨re que les autres maisons d'Ust Natha n'apprendront rien Ã  ce sujet ou mon chemin vers Irenicus sera d'autant plus difficile.~
 
 @3826 = ~Une rencontre inattendue
 
-Xunvrae d'Arabani m'a trahi. Au lieu de me donner une récompense, elle est devenue hostile et m'a attaqué.~
+Xunvrae d'Arabani m'a trahi. Au lieu de me donner une rÃ©compense, elle est devenue hostile et m'a attaquÃ©.~
 
 @3827 = ~Une rencontre inattendue
 
-Xunvrae d'Arabani n'a pas été amusé par ma décision de la trahir. Elle est devenue hostile dès que Tathas Melarn et son groupe de guerre ont été vaincus.~
+Xunvrae d'Arabani n'a pas Ã©tÃ© amusÃ© par ma dÃ©cision de la trahir. Elle est devenue hostile dÃ¨s que Tathas Melarn et son groupe de guerre ont Ã©tÃ© vaincus.~
 
 @3828 = ~Une rencontre inattendue
 
-Le passage souterrain derrière les marchands duergars semble abandonné depuis un certain temps. Qui que ce soit qui étaient là, je n'ai trouvé aucune trace d'eux.~
+Le passage souterrain derriÃ¨re les marchands duergars semble abandonnÃ© depuis un certain temps. Qui que ce soit qui Ã©taient lÃ , je n'ai trouvÃ© aucune trace d'eux.~
 
 @3850 = ~Une rencontre inattendue
 
-La collection d'essences spirituelles s'est avérée très importante pour Afaaq. Il a été capable de distinguer sa essence.
+La collection d'essences spirituelles s'est avÃ©rÃ©e trÃ¨s importante pour Afaaq. Il a Ã©tÃ© capable de distinguer sa essence.
 
-Je ne sais pas encore comment l'utiliser, mais il était très soulagé quand il l'a trouvé.~
+Je ne sais pas encore comment l'utiliser, mais il Ã©tait trÃ¨s soulagÃ© quand il l'a trouvÃ©.~
 
 @3851 = ~Une rencontre inattendue
 
-Tathas Melarn m'a récompensé avec l'essence spirituelle d'Afaaq. Je ne sais pas encore comment l'utiliser, mais Afaaq semble être soulagé qu'il soit en notre possession.~
+Tathas Melarn m'a rÃ©compensÃ© avec l'essence spirituelle d'Afaaq. Je ne sais pas encore comment l'utiliser, mais Afaaq semble Ãªtre soulagÃ© qu'il soit en notre possession.~
 
 @3852 = ~Une rencontre inattendue
 
-Ma tentative de charmer Tathas Melarn n'a été que partiellement couronnée de succès. J'ai réussi à obtenir l'âme d'Afaaq, mais je n'ai pas pu empêcher tout le camp des drows de se retourner contre moi après que ses prêtresses eurent détecté la tromperie.
+Ma tentative de charmer Tathas Melarn n'a Ã©tÃ© que partiellement couronnÃ©e de succÃ¨s. J'ai rÃ©ussi Ã  obtenir l'Ã¢me d'Afaaq, mais je n'ai pas pu empÃªcher tout le camp des drows de se retourner contre moi aprÃ¨s que ses prÃªtresses eurent dÃ©tectÃ© la tromperie.
 
-L'essence spirituelle d'Afaaq semble être scellée d'une manière ou d'une autre, mais Afaaq semble être soulagé qu'elle soit entrée en notre possession. Je trouverai peut-être un moyen d'y accéder plus tard.~
+L'essence spirituelle d'Afaaq semble Ãªtre scellÃ©e d'une maniÃ¨re ou d'une autre, mais Afaaq semble Ãªtre soulagÃ© qu'elle soit entrÃ©e en notre possession. Je trouverai peut-Ãªtre un moyen d'y accÃ©der plus tard.~
 
 @3853 = ~Une rencontre inattendue
 
-Ma tentative de charmer Tathas Melarn n'a été que partiellement couronnée de succès. J'ai pu obtenir de lui un bel artefact, mais je n'ai pas pu empêcher tout le camp des drows de se retourner contre moi après que ses prêtresses eurent détecté la tromperie.~
+Ma tentative de charmer Tathas Melarn n'a Ã©tÃ© que partiellement couronnÃ©e de succÃ¨s. J'ai pu obtenir de lui un bel artefact, mais je n'ai pas pu empÃªcher tout le camp des drows de se retourner contre moi aprÃ¨s que ses prÃªtresses eurent dÃ©tectÃ© la tromperie.~
 
 
 // Misc. strings
 @3900 = ~Campement dduergar et Passage sud~
-@3901 = ~L'entrée de ce passage est bloquée. Les runes magiques sur le sol vous indiquent que seul les drows peuvent passer.~
-@3902 = ~Ce tunnel mène plus profondément dans l'obscurité, mais il est à moitié enterré sous les débris et il semble trop dangereux pour y pénétrer.~
+@3901 = ~L'entrÃ©e de ce passage est bloquÃ©e. Les runes magiques sur le sol vous indiquent que seul les drows peuvent passer.~
+@3902 = ~Ce tunnel mÃ¨ne plus profondÃ©ment dans l'obscuritÃ©, mais il est Ã  moitiÃ© enterrÃ© sous les dÃ©bris et il semble trop dangereux pour y pÃ©nÃ©trer.~
 @3903 = ~Insigne de la maison Arabani~
-@3904 = ~Cette petite amulette adamantine a une gravure délicate sur sa surface qui scintille légèrement. Le symbole est celui de la Maison Arabani. Il y a aussi des marques non identifiables qui font probablement référence à un membre spécifique de la maison.~
+@3904 = ~Cette petite amulette adamantine a une gravure dÃ©licate sur sa surface qui scintille lÃ©gÃ¨rement. Le symbole est celui de la Maison Arabani. Il y a aussi des marques non identifiables qui font probablement rÃ©fÃ©rence Ã  un membre spÃ©cifique de la maison.~
 @3905 = ~Tathas Melarn~
 @3906 = ~Iraedril Do'ndar~
 @3907 = ~Capitaine drow~
 @3908 = ~Guerrier duergar~
 @3909 = ~Collection d'essences spirituelles.~
-@3910 = ~Les cristaux sont exceptionnellement lourds et semblent enveloppés d'une aura sombre. En y regardant de plus près, ils semblent absorber la lumière environnante, ce qui les rend plus sombres qu'ils ne l'étaient à l'origine.~
-@3911 = ~Cette collection de cristaux contient les essences des êtres extraplanaires que Tathas Melarn a asservis dans sa vie. L'un d'eux contient l'essence élémentaire dAfaaq, mais je n'ai pas encore déterminé le bon.~
+@3910 = ~Les cristaux sont exceptionnellement lourds et semblent enveloppÃ©s d'une aura sombre. En y regardant de plus prÃ¨s, ils semblent absorber la lumiÃ¨re environnante, ce qui les rend plus sombres qu'ils ne l'Ã©taient Ã  l'origine.~
+@3911 = ~Cette collection de cristaux contient les essences des Ãªtres extraplanaires que Tathas Melarn a asservis dans sa vie. L'un d'eux contient l'essence Ã©lÃ©mentaire dAfaaq, mais je n'ai pas encore dÃ©terminÃ© le bon.~
 @3912 = ~Essnce spritituelle d'Afaaq~
-@3913 = ~Ce cristal magique contient l'essence élémentaire d'Afaaq. Bien qu'il soit maintenant en ma possession, je n'ai pas encore trouvé comment libérer les énergies confinées en son sein.~
+@3913 = ~Ce cristal magique contient l'essence Ã©lÃ©mentaire d'Afaaq. Bien qu'il soit maintenant en ma possession, je n'ai pas encore trouvÃ© comment libÃ©rer les Ã©nergies confinÃ©es en son sein.~
 @3914 = ~Pierre d'ancrage Arabani~
-@3915 = ~La pierre d'ancrage de la Maison Arabani vous permet d'entrer dans leur maison à tout moment.
+@3915 = ~La pierre d'ancrage de la Maison Arabani vous permet d'entrer dans leur maison Ã  tout moment.
 
-Cette pierre particulière contient également un autre enchantement. S'il est utilisé à proximité immédiate de Tathas Melarn, il le piégera et le téléportera dans le voisinage immédiat de Xunvrae d'Arabani.~
+Cette pierre particuliÃ¨re contient Ã©galement un autre enchantement. S'il est utilisÃ© Ã  proximitÃ© immÃ©diate de Tathas Melarn, il le piÃ©gera et le tÃ©lÃ©portera dans le voisinage immÃ©diat de Xunvrae d'Arabani.~
 
-@3916 = ~La pierre d'ancrage brille brièvement et vous pouvez entrer dans le bâtiment.~
+@3916 = ~La pierre d'ancrage brille briÃ¨vement et vous pouvez entrer dans le bÃ¢timent.~
 @3917 = ~C'est parti !~
 @3918 = ~Quel drow !~
-@3919 = ~Êtes-vous des espions d'Ust Natha ~
-@3920 = ~Qui que vous soyez, vous devez nous suivre jusqu'à notre commandant.~
+@3919 = ~ÃŠtes-vous des espions d'Ust Natha ~
+@3920 = ~Qui que vous soyez, vous devez nous suivre jusqu'Ã  notre commandant.~
 @3921 = ~Qu'est... Qu'est-ce qui se passe ?!~
 @3922 = ~NOOOON !!!~
 @3923 = ~Je vais briser l'enchantement.~
-@3924 = ~Vous avez déclenché une alarme.~
-@3925 = ~Anneau de contrôle élémentaire~
-@3926 = ~Cet anneau a été créé dans un seul but, celui d'asservir les élémentaux de toutes sortes. L'ancien propriétaire Tathas Melarn a encore amélioré ses capacités et a ajouté la capacité d'asservir de nombreux êtres liés aux éléments.
+@3924 = ~Vous avez dÃ©clenchÃ© une alarme.~
+@3925 = ~Anneau de contrÃ´le Ã©lÃ©mentaire~
+@3926 = ~Cet anneau a Ã©tÃ© crÃ©Ã© dans un seul but, celui d'asservir les Ã©lÃ©mentaux de toutes sortes. L'ancien propriÃ©taire Tathas Melarn a encore amÃ©liorÃ© ses capacitÃ©s et a ajoutÃ© la capacitÃ© d'asservir de nombreux Ãªtres liÃ©s aux Ã©lÃ©ments.
 
-Capacités spéciales :
-Charme les créatures suivantes (3x/jour) :
-  - Élémentaires de l'air
-  - Élémentaires de la Terre
-  - Élémentaires du feu
+CapacitÃ©s spÃ©ciales :
+Charme les crÃ©atures suivantes (3x/jour) :
+  - Ã‰lÃ©mentaires de l'air
+  - Ã‰lÃ©mentaires de la Terre
+  - Ã‰lÃ©mentaires du feu
   - Djinns
   - Daos
   - Efreets
-  - Méphits (toutes sortes)
+  - MÃ©phits (toutes sortes)
 L'enchantement dure cinq tours.~
-@3927 = ~L'objet clignote un instant et disparaît de votre sac à dos.~
+@3927 = ~L'objet clignote un instant et disparaÃ®t de votre sac Ã  dos.~
 @3928 = ~Tathas Melarn est trop loin pour que cela soit efficace.~
 @3929 = ~*Hhrrg*~
 @3930 = ~*Hnnn*~
 @3931 = ~*Hhrnnn*~
 @3932 = ~*Nff*~
-@3933 = ~Je suis épuisé.~
+@3933 = ~Je suis Ã©puisÃ©.~
 @3934 = ~*Groan*~
 @3935 = ~AARRGH!~
 @3936 = ~HAAAAH!!~
@@ -463,8 +463,8 @@ L'enchantement dure cinq tours.~
 @3938 = ~Bouge tes pieds !~
 @3939 = ~Oui, viens !~
 @3940 = ~Tu peux le battre !~
-@3941 = ~Plus à gauche !~
-@3942 = ~Attention à ton flanc droit !~
+@3941 = ~Plus Ã  gauche !~
+@3942 = ~Attention Ã  ton flanc droit !~
 @3943 = ~Quel combat !~
 @3944 = ~Ouais, viens !~
 @3945 = ~Viens !  Viens !~
@@ -483,21 +483,21 @@ L'enchantement dure cinq tours.~
 @3958 = ~*Baille*~
 @3959 = ~*Ronfle*~
 @3960 = ~Quoi ?!~
-@3961 = ~Bien sûr, je...~
+@3961 = ~Bien sÃ»r, je...~
 @3962 = ~Peu importe.~
 @3963 = ~*hic*~
 @3964 = ~*soupir*~
-@3965 = ~Bien sûr...~
+@3965 = ~Bien sÃ»r...~
 @3966 = ~Je ne sais pas...~
-@3967 = ~Peut-être que nous...~
-@3968 = ~La pierre gardienne s'allume brièvement et vous pouvez entrer dans le bâtiment.~
-@3969 = ~La pierre gardienne semble ne plus fonctionner sur cette barrière. Il n'y a aucun moyen d'entrer de nouveau dans le bâtiment.~
-@3970 = ~C'est la pierre gardienne qui vous permettra d'accéder à la Maison Jae'llat et aux Maisons alliées. Sans la pierre, les salles rendent les lieux impénétrables.
+@3967 = ~Peut-Ãªtre que nous...~
+@3968 = ~La pierre gardienne s'allume briÃ¨vement et vous pouvez entrer dans le bÃ¢timent.~
+@3969 = ~La pierre gardienne semble ne plus fonctionner sur cette barriÃ¨re. Il n'y a aucun moyen d'entrer de nouveau dans le bÃ¢timent.~
+@3970 = ~C'est la pierre gardienne qui vous permettra d'accÃ©der Ã  la Maison Jae'llat et aux Maisons alliÃ©es. Sans la pierre, les salles rendent les lieux impÃ©nÃ©trables.
 
 STATISTIQUES :
 
 Poids : 1~
-@3971 = ~Ce passage mène aux parties basses de la ville. La quantité de débris et de toiles d'araignée suggère qu'elle a été abandonnée il y a longtemps.~
+@3971 = ~Ce passage mÃ¨ne aux parties basses de la ville. La quantitÃ© de dÃ©bris et de toiles d'araignÃ©e suggÃ¨re qu'elle a Ã©tÃ© abandonnÃ©e il y a longtemps.~
 @3972 = ~Maison Arabani~
 @3973 = ~Passage vers la maison Arabani~
 @3974 = ~Xunvrae d'Arabani~
@@ -505,11 +505,11 @@ Poids : 1~
 @3976 = ~Vlonyrr d'Arabani~
 @3977 = ~Garde Arabani ~
 @3978 = ~Mage Arabani ~
-@3979 = ~Prêtresse Arabani~
+@3979 = ~PrÃªtresse Arabani~
 @3980 = ~<PLAYER1> a appris quelque chose en regardant les duergars se bagarrer pendant un moment.~
 @3981 = ~<PLAYER2> a appris quelque chose en regardant les duergars se bagarrer pendant un moment.~
 @3982 = ~<PLAYER3> a appris quelque chose en regardant les duergars se bagarrer pendant un moment.~
 @3983 = ~<PLAYER4> a appris quelque chose en regardant les duergars se bagarrer pendant un moment.~
 @3984 = ~<PLAYER5> a appris quelque chose en regardant les duergars se bagarrer pendant un moment.~
 @3985 = ~<PLAYER6> a appris quelque chose en regardant les duergars se bagarrer pendant un moment.~
-@3986 = ~La porte est gardée par magie. Passer au travers signifierait la mort instantanée. Vous devrez trouver la pierre gardienne de la Maison Arabani ou de ses maisons alliées si vous souhaitez y entrer.~
+@3986 = ~La porte est gardÃ©e par magie. Passer au travers signifierait la mort instantanÃ©e. Vous devrez trouver la pierre gardienne de la Maison Arabani ou de ses maisons alliÃ©es si vous souhaitez y entrer.~

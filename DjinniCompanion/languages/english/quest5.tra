@@ -1,4 +1,4 @@
-// -*- coding: cp1252 -*-
+// -*- coding: utf-8 -*-
 // *** Strings related to Quest 5: "Playing with fire" (index 5000...7999)
 
 // Dialog lines:
@@ -95,7 +95,7 @@
 @5090 = ~Demon lords are in control over one or more layers of the Abyss. If you manage to destroy a demon lord while leaving his heart intact, you could offer it to Malik as another substitute.~
 @5091 = ~The heart contains much of the demon lord's power and, more importantly, still shares a connection to the demon's layer of the Abyss.~
 @5092 = ~Coincidentally, we already have a heart of a demon lord in our possession.~
-@5093 = ~I know of only a few places within Faerûn which harbor demons. The most famous place is Ascalhorn, also known as Hellgate Keep, but it is too far away to be of use.~
+@5093 = ~I know of only a few places within FaerÃ»n which harbor demons. The most famous place is Ascalhorn, also known as Hellgate Keep, but it is too far away to be of use.~
 @5094 = ~I suggest that you look for ancient sites linked to myths and stories about extraplanar involvements. Other possibilities to find powerful demons are demonic cults, but they usually practice in secret and would be even more difficult to find.~
 @5095 = ~Please tell me more about the phylacteries of powerful demiliches.~
 @5096 = ~Thanks, I will ask Lord Malik if he settles on the heart of a demon lord as a substitute.~
@@ -983,7 +983,7 @@ However, he also demands knowledge of how to tap its powers. Maybe Karim can hel
 
 I was able to persuade Lord Malik to settle on the heart of a powerful demon lord instead of the "Crown of Qadeej".
 
-All I need to do now is to find a ruler of the Abyss somewhere on Faerûn and defeat it.~
+All I need to do now is to find a ruler of the Abyss somewhere on FaerÃ»n and defeat it.~
 @6534 = ~Playing with fire
 
 Karim told me that his sources tell of a fortress which contains an unknown evil. Its name is Watcher's Keep and it is situated on the southern border of Amn.

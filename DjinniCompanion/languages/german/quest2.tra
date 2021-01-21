@@ -1,43 +1,43 @@
-// -*- coding: cp1252 -*-
+// -*- coding: utf-8 -*-
 // *** Strings related to Quest 2: "Vengeance" (index 2000...2999)
 
 // *** Dialog: Serpent Statue ***
-@2001 = ~Die Augen der Schlangenstatue beginnen zu glühen, und <GABBER> bemerkt eine fremdartige Präsenz in <HISHER>em Kopf. Sie spricht mit einer kraftvollen Stimme direkt in <HISHER>em Verstand.~
-@2002 = ~DU BIST MEINER PRÄSENZ NICHT WÜRDIG. HINFORT!~
-@2003 = ~So schnell wie sie gekommen ist, zieht sie sich wieder zurück und hinterlässt einen etwas erschütterten <GABBER>.~
-@2005 = ~Die Augen der Schlangenstatue beginnen zu glühen, und Du bemerkst eine fremdartige Präsenz in Deinem Kopf. Es fühlt sich an, als ob Dein Verstand sondiert wird... zuerst behutsam, dann mit mehr Beharrlichkeit.~
-@2006 = ~Bilder aus Deiner Kindheit in Kerzenburg und aus jüngerer Vergangenheit huschen vor Deinen Augen vorbei, gelegentlich vermischt mit einem Gefühl von distanzierter Belustigung. Die Bilder enden so schnell wie sie kamen. Dann beginnt eine Stimme durch Deinen Kopf zu hallen.~
-@2007 = ~Die Augen der Schlangenstatue beginnen zu glühen als Dein Verstand wiederholt von der Präsenz sondiert wird.~
-@2008 = ~Ihr steht wieder vor mir. Habt Ihr Eure Meinung geändert? Seid Ihr jetzt bereit meine Rätsel zu lösen?~
+@2001 = ~Die Augen der Schlangenstatue beginnen zu glÃ¼hen, und <GABBER> bemerkt eine fremdartige PrÃ¤senz in <HISHER>em Kopf. Sie spricht mit einer kraftvollen Stimme direkt in <HISHER>em Verstand.~
+@2002 = ~DU BIST MEINER PRÃ„SENZ NICHT WÃœRDIG. HINFORT!~
+@2003 = ~So schnell wie sie gekommen ist, zieht sie sich wieder zurÃ¼ck und hinterlÃ¤sst einen etwas erschÃ¼tterten <GABBER>.~
+@2005 = ~Die Augen der Schlangenstatue beginnen zu glÃ¼hen, und Du bemerkst eine fremdartige PrÃ¤senz in Deinem Kopf. Es fÃ¼hlt sich an, als ob Dein Verstand sondiert wird... zuerst behutsam, dann mit mehr Beharrlichkeit.~
+@2006 = ~Bilder aus Deiner Kindheit in Kerzenburg und aus jÃ¼ngerer Vergangenheit huschen vor Deinen Augen vorbei, gelegentlich vermischt mit einem GefÃ¼hl von distanzierter Belustigung. Die Bilder enden so schnell wie sie kamen. Dann beginnt eine Stimme durch Deinen Kopf zu hallen.~
+@2007 = ~Die Augen der Schlangenstatue beginnen zu glÃ¼hen als Dein Verstand wiederholt von der PrÃ¤senz sondiert wird.~
+@2008 = ~Ihr steht wieder vor mir. Habt Ihr Eure Meinung geÃ¤ndert? Seid Ihr jetzt bereit meine RÃ¤tsel zu lÃ¶sen?~
 @2009 = ~Ja, ich bin bereit.~
 @2010 = ~Nein, ich versuche einen anderen Weg in den Tempel zu finden.~
-@2011 = ~Ihr seid keiner meiner Anhänger. Eure Art gehört nicht hier her, aber ich spüre dass Ihr mehr seid als Ihr erscheint.~
-@2012 = ~Ja, ich spüre Eure göttliche Macht in Eurer Seele.~
-@2013 = ~Ich kenne Eure Absicht, <GABBER>. Ihr wollt Euren Preis von meinen Jägern zurückgewinnen.~
+@2011 = ~Ihr seid keiner meiner AnhÃ¤nger. Eure Art gehÃ¶rt nicht hier her, aber ich spÃ¼re dass Ihr mehr seid als Ihr erscheint.~
+@2012 = ~Ja, ich spÃ¼re Eure gÃ¶ttliche Macht in Eurer Seele.~
+@2013 = ~Ich kenne Eure Absicht, <GABBER>. Ihr wollt Euren Preis von meinen JÃ¤gern zurÃ¼ckgewinnen.~
 @2014 = ~Ich habe keine Ahnung wovon Ihr redet.~
-@2015 = ~Ihr habt Recht. Ich beabsichtige alles zurückzuerlangen, was sie mir gestohlen haben.~
-@2016 = ~Ihr könnt mir nichts vormachen. Ich kenne Eure Gedanken.~
-@2017 = ~Ihr seid mutig, meinen Jägern in unbekanntes Gebiet zu folgen.~
-@2018 = ~Ich respektiere Stärke und Gerissenheit. Meine Anhänger haben mich sehr enttäuscht, daher werde ich Euch helfen.~
-@2019 = ~Beweist mir Euren Wert und ich werde Euch einen Schritt näher an Euer Ziel bringen.~
+@2015 = ~Ihr habt Recht. Ich beabsichtige alles zurÃ¼ckzuerlangen, was sie mir gestohlen haben.~
+@2016 = ~Ihr kÃ¶nnt mir nichts vormachen. Ich kenne Eure Gedanken.~
+@2017 = ~Ihr seid mutig, meinen JÃ¤gern in unbekanntes Gebiet zu folgen.~
+@2018 = ~Ich respektiere StÃ¤rke und Gerissenheit. Meine AnhÃ¤nger haben mich sehr enttÃ¤uscht, daher werde ich Euch helfen.~
+@2019 = ~Beweist mir Euren Wert und ich werde Euch einen Schritt nÃ¤her an Euer Ziel bringen.~
 @2020 = ~Wie kann ich meinen Wert beweisen?~
-@2021 = ~Ich möchte Eure Spielchen nicht spielen.~
-@2022 = ~Ihr habt Eure Gerissenheit bewiesen indem Ihr meine Jäger bestohlen habt.~
-@2023 = ~Ihr habt Eure Stärke bewiesen indem Ihr meine Jäger besiegt habt.~
-@2024 = ~Allerdings reicht körperliche Stärke oder Talent nicht aus.~
-@2025 = ~Wenn Ihr meine Rätsel korrekt beantwortet, werde ich Euch meine Hilfe gewähren.~
-@2026 = ~Also schön, ich akzeptiere Eure Herausforderung.~
-@2027 = ~Hier ist mein erstes Rätsel. Hört genau zu.~
-@2028 = ~Das ist richtig. Nun zu meinem zweiten Rätsel.~
-@2029 = ~Ich bin beeindruckt. Hier kommt mein letztes Rätsel.~
-@2030 = ~Ich möchte Eure Spielchen nicht mehr spielen.~
-@2031 = ~Ihr habt meine Neugier befriedigt und alle Rätsel richtig gelöst. Als Gegenleistung werde ich Euch helfen.~
+@2021 = ~Ich mÃ¶chte Eure Spielchen nicht spielen.~
+@2022 = ~Ihr habt Eure Gerissenheit bewiesen indem Ihr meine JÃ¤ger bestohlen habt.~
+@2023 = ~Ihr habt Eure StÃ¤rke bewiesen indem Ihr meine JÃ¤ger besiegt habt.~
+@2024 = ~Allerdings reicht kÃ¶rperliche StÃ¤rke oder Talent nicht aus.~
+@2025 = ~Wenn Ihr meine RÃ¤tsel korrekt beantwortet, werde ich Euch meine Hilfe gewÃ¤hren.~
+@2026 = ~Also schÃ¶n, ich akzeptiere Eure Herausforderung.~
+@2027 = ~Hier ist mein erstes RÃ¤tsel. HÃ¶rt genau zu.~
+@2028 = ~Das ist richtig. Nun zu meinem zweiten RÃ¤tsel.~
+@2029 = ~Ich bin beeindruckt. Hier kommt mein letztes RÃ¤tsel.~
+@2030 = ~Ich mÃ¶chte Eure Spielchen nicht mehr spielen.~
+@2031 = ~Ihr habt meine Neugier befriedigt und alle RÃ¤tsel richtig gelÃ¶st. Als Gegenleistung werde ich Euch helfen.~
 @2032 = ~Nehmt meinen Schutzstein, einen von vier. Die verbleibenden drei sind nah, aber passt auf! Meine Verzauberungen werden nicht ohne Gegenwehr weichen.~
 @2033 = ~Das ist nicht die richtige Antwort!~
 @2034 = ~Die Starken werden belohnt, und die Schwachen werden...~
 @2035 = ~BESTRAFT!~
-@2036 = ~Also wollt Ihr nur auf Eure eigene Kraft vertrauen. Glaubt Ihr dass Eure göttliche Abstammung mächtig genug is, um meine Schutzzauber zu überwinden?~
-@2037 = ~So sei es. Tut was Ihr für richtig haltet. Seid Euch aber bewusst, dass Ihr meine Macht überwinden müsst, wenn Ihr vorankommen wollt.~
+@2036 = ~Also wollt Ihr nur auf Eure eigene Kraft vertrauen. Glaubt Ihr dass Eure gÃ¶ttliche Abstammung mÃ¤chtig genug is, um meine Schutzzauber zu Ã¼berwinden?~
+@2037 = ~So sei es. Tut was Ihr fÃ¼r richtig haltet. Seid Euch aber bewusst, dass Ihr meine Macht Ã¼berwinden mÃ¼sst, wenn Ihr vorankommen wollt.~
 
 
 // Riddles and answers
@@ -56,8 +56,8 @@ man stirbt, wo man mich ganz entbehret.~
 @2106 = ~Ein Sukkubus?~
 @2107 = ~Wasser?~
 
-@2110 = ~Verhüllend und verhüllt gebäre
-ich ohne Schmerzen manche Zähre.
+@2110 = ~VerhÃ¼llend und verhÃ¼llt gebÃ¤re
+ich ohne Schmerzen manche ZÃ¤hre.
 Ich steige durch und weissag oft Gefahr,
 ich dringe himmelan und bin verlorn.
 Die Mutter, welche mich gebar,
@@ -72,39 +72,39 @@ wird gar nicht ohne mich geborn.~
 
 @2120 = ~Etwas, das alles und jeden verschlingt:
 Baum, der rauscht, Vogel, der singt,
-frisst Eisen, zermalmt den härtesten Stein,
-zerbeißt jedes Schwert, zerbricht jeden Schrein,
-Schlägt Könige nieder, schleift ihren Palast,
-trägt mächtigen Fels fort als leicht Last.~
+frisst Eisen, zermalmt den hÃ¤rtesten Stein,
+zerbeiÃŸt jedes Schwert, zerbricht jeden Schrein,
+SchlÃ¤gt KÃ¶nige nieder, schleift ihren Palast,
+trÃ¤gt mÃ¤chtigen Fels fort als leicht Last.~
 @2121 = ~Die Zeit?!~
 @2122 = ~Ein Sturm?~
 @2123 = ~Ein unzufriedenes Volk!~
 @2124 = ~Das Schwert!!~
 @2125 = ~Feuer.~
 @2126 = ~Ein Oger!~
-@2127 = ~Ein wütender Berserker?~
+@2127 = ~Ein wÃ¼tender Berserker?~
 
 
 // TRANSLATORS: This riddle only works in english, replace it with whatever you like (number of answers must not change!)
-@2130 = ~Es führt dich meilenweit von dannen
+@2130 = ~Es fÃ¼hrt dich meilenweit von dannen
 Und bleibt doch stets an seinem Ort.
-Es hat nicht Flügel auszuspannen
-Und trägt dich durch die Lüfte fort.
-Es ist die allerschnellste Fähre,
+Es hat nicht FlÃ¼gel auszuspannen
+Und trÃ¤gt dich durch die LÃ¼fte fort.
+Es ist die allerschnellste FÃ¤hre,
 Die jemals einen Wandrer trug,
-Und durch das größte aller Meere
-Trägt es dich mit Gedankenflug;
+Und durch das grÃ¶ÃŸte aller Meere
+TrÃ¤gt es dich mit Gedankenflug;
 Ihm ist ein Augenblick genug.~
 @2131 = ~Phantasie?!~
 @2132 = ~Ein Pferd.~
 @2133 = ~Der Wind?~
 @2134 = ~Magie!!~
 @2135 = ~Eine Landkarte??~
-@2136 = ~Ein Fremdenführer?!~
+@2136 = ~Ein FremdenfÃ¼hrer?!~
 @2137 = ~Ein Vogel.~
 
 @2140 = ~Ich lebe ohne Seele
-und höre ohne Ohren.
+und hÃ¶re ohne Ohren.
 Ich rede ohne Mund,
 werd in der Luft geboren.~
 @2141 = ~Das Echo!~
@@ -120,157 +120,157 @@ werd in der Luft geboren.~
 @2200 = ~Eindringlinge haben unser Gebiet betreten! Wir werden Euch hier und jetzt aufhalten. Angriff!~
 @2201 = ~Seid Ihr diejenigen, die meinem Gefolge den Dschinn abgenommen habt? Bald werdet Ihr alle machtlos sein, sobald er Ravanna geopfert wird!~
 @2202 = ~Ihr seid weit gekommen, <PRO_RACE>. Aber das ist Euer Ende. Ich werde in Ravannas Gunst aufsteigen, indem ich Euch und den Dschinn opfere.~
-@2203 = ~Greift sie an, meine Jünger. Sie dürfen nicht überleben!~
-@2204 = ~Wir scheinen weit von Amn wegtransportiert worden zu sein. Sowohl Klima als auch die Pflanzenwelt unterscheiden sich deutlich von dem der Schwertküste.~
-@2205 = ~Ich bin noch nie so weit südlich unterwegs, aber ich glaube, dass dieser Wald zum Dschungel von Chult gehört.~
-@2206 = ~Die magischen Kräfte der Rakshasas haben uns sehr weit in den Süden verschlagen.~
-@2207 = ~Ich kenne diese Pflanzen aus meiner Lehrzeit. Der Klang der Vögel erinnert mich an Arten, die ich während meines Besuchs eines Druidenhains in den südlichen Ländern beobachten durfte.~
-@2208 = ~Die Art zu Eurer Linken ist eine Macauba-Palme. Ihr könnt sie sehr leicht an den scharfen Stacheln erkennen, die aus ihrem Stamm herausragen. Sie--~
-@2209 = ~Danke Cernd, aber ich bin jetzt wirklich nicht in der Stimmung, um mit Euch die Wunder der Natur zu erörtern. Vergesst nicht, dass wir Afaaq retten müssen.~
-@2210 = ~Habt Ihr nichts Besseres zu tun, als mich über Bäume und Büsche zu belehren? Wir sind hier, um den Dschinn aus den Klauen der Rakshasas zu befreien.~
-@2211 = ~Es ist niemals Zeitverschwendung, mehr über die Schönheit der Natur zu lernen. Aber Ihr habt natürlich Recht, alles zu seiner Zeit. Wir sollten vorsichtig voranschreiten und den Rakshasas die Bedeutung des Gleichgewichts klarmachen.~
-@2212 = ~Ihr mögt Recht haben, Jaheira. Ich erkenne einige der Pflanzen aus meiner Lehrzeit. Und der Klang der Vögel erinnert mich an Arten, die ich während meines Besuchs eines Druidenhains in den südlichen Ländern beobachten durfte.~
+@2203 = ~Greift sie an, meine JÃ¼nger. Sie dÃ¼rfen nicht Ã¼berleben!~
+@2204 = ~Wir scheinen weit von Amn wegtransportiert worden zu sein. Sowohl Klima als auch die Pflanzenwelt unterscheiden sich deutlich von dem der SchwertkÃ¼ste.~
+@2205 = ~Ich bin noch nie so weit sÃ¼dlich unterwegs, aber ich glaube, dass dieser Wald zum Dschungel von Chult gehÃ¶rt.~
+@2206 = ~Die magischen KrÃ¤fte der Rakshasas haben uns sehr weit in den SÃ¼den verschlagen.~
+@2207 = ~Ich kenne diese Pflanzen aus meiner Lehrzeit. Der Klang der VÃ¶gel erinnert mich an Arten, die ich wÃ¤hrend meines Besuchs eines Druidenhains in den sÃ¼dlichen LÃ¤ndern beobachten durfte.~
+@2208 = ~Die Art zu Eurer Linken ist eine Macauba-Palme. Ihr kÃ¶nnt sie sehr leicht an den scharfen Stacheln erkennen, die aus ihrem Stamm herausragen. Sie--~
+@2209 = ~Danke Cernd, aber ich bin jetzt wirklich nicht in der Stimmung, um mit Euch die Wunder der Natur zu erÃ¶rtern. Vergesst nicht, dass wir Afaaq retten mÃ¼ssen.~
+@2210 = ~Habt Ihr nichts Besseres zu tun, als mich Ã¼ber BÃ¤ume und BÃ¼sche zu belehren? Wir sind hier, um den Dschinn aus den Klauen der Rakshasas zu befreien.~
+@2211 = ~Es ist niemals Zeitverschwendung, mehr Ã¼ber die SchÃ¶nheit der Natur zu lernen. Aber Ihr habt natÃ¼rlich Recht, alles zu seiner Zeit. Wir sollten vorsichtig voranschreiten und den Rakshasas die Bedeutung des Gleichgewichts klarmachen.~
+@2212 = ~Ihr mÃ¶gt Recht haben, Jaheira. Ich erkenne einige der Pflanzen aus meiner Lehrzeit. Und der Klang der VÃ¶gel erinnert mich an Arten, die ich wÃ¤hrend meines Besuchs eines Druidenhains in den sÃ¼dlichen LÃ¤ndern beobachten durfte.~
 // reserved: @2213 @2214
 
 
 // Marilith statue strings
-@2300 = ~Diese Statue scheint so alt wie der Wald selbst zu sein. Ihr könnt allerdings keine Spuren des Verfalls erkennen.~
-@2301 = ~Als Ihr der Statue näher kommt, öffnet sie ihre Augen und dreht ihren Kopf, bis er in südliche Richtung schaut. Ihr wartet noch ein Weile, aber die Statue scheint sich nicht mehr zu regen.~
-@2302 = ~Die Statue bewegt sich nicht mehr, aber ihr Kopf schaut immer noch in südliche Richtung.~
-@2303 = ~Als Ihr der Statue näherkommt, hört Ihr nur ein leises summen von ihr ausgehen.~
-@2304 = ~Als Ihr der Statue näherkommt, wird sie lebendig und öffnet ihre glühenden Augen. Ihr Blick trifft Euren, der Euch ein Schauer über den Rücken laufen lässt. Dann fängt ihr Kopf an, sich langsam zu drehen, bis er in östliche Richtung schaut. Ihr wartet noch ein wenig, aber die Statue scheint sich nicht weiter zu regen.~
-@2305 = ~Die Statue bewegt sich nicht mehr, aber ihr Kopf schaut immer noch in östliche Richtung.~
-@2306 = ~Als Ihr der Statue näherkommt, fängt sie langsam an, ihren Kopf zu drehen. Ihr wartet geduldig, bis er aufhört sich zu bewegen. Ihr vermutet, dass Ihr die nächste Statue wieder in südlicher Richtung finden könnt.~
-@2307 = ~Die Statue bewegt sich nicht mehr, aber ihr Kopf schaut immer noch in südliche Richtung.~
-@2308 = ~Als Ihr der Statue näherkommt, hebt sie schlagartig ihren Kopf. Danach dreht sie ihn langsam in westliche Richtung.~
+@2300 = ~Diese Statue scheint so alt wie der Wald selbst zu sein. Ihr kÃ¶nnt allerdings keine Spuren des Verfalls erkennen.~
+@2301 = ~Als Ihr der Statue nÃ¤her kommt, Ã¶ffnet sie ihre Augen und dreht ihren Kopf, bis er in sÃ¼dliche Richtung schaut. Ihr wartet noch ein Weile, aber die Statue scheint sich nicht mehr zu regen.~
+@2302 = ~Die Statue bewegt sich nicht mehr, aber ihr Kopf schaut immer noch in sÃ¼dliche Richtung.~
+@2303 = ~Als Ihr der Statue nÃ¤herkommt, hÃ¶rt Ihr nur ein leises summen von ihr ausgehen.~
+@2304 = ~Als Ihr der Statue nÃ¤herkommt, wird sie lebendig und Ã¶ffnet ihre glÃ¼henden Augen. Ihr Blick trifft Euren, der Euch ein Schauer Ã¼ber den RÃ¼cken laufen lÃ¤sst. Dann fÃ¤ngt ihr Kopf an, sich langsam zu drehen, bis er in Ã¶stliche Richtung schaut. Ihr wartet noch ein wenig, aber die Statue scheint sich nicht weiter zu regen.~
+@2305 = ~Die Statue bewegt sich nicht mehr, aber ihr Kopf schaut immer noch in Ã¶stliche Richtung.~
+@2306 = ~Als Ihr der Statue nÃ¤herkommt, fÃ¤ngt sie langsam an, ihren Kopf zu drehen. Ihr wartet geduldig, bis er aufhÃ¶rt sich zu bewegen. Ihr vermutet, dass Ihr die nÃ¤chste Statue wieder in sÃ¼dlicher Richtung finden kÃ¶nnt.~
+@2307 = ~Die Statue bewegt sich nicht mehr, aber ihr Kopf schaut immer noch in sÃ¼dliche Richtung.~
+@2308 = ~Als Ihr der Statue nÃ¤herkommt, hebt sie schlagartig ihren Kopf. Danach dreht sie ihn langsam in westliche Richtung.~
 @2309 = ~Die Statue bewegt sich nicht mehr, aber ihr Kopf schaut immer noch in westliche Richtung.~
-@2310 = ~Als Ihr der Statue näherkommt, hebt sie langsam den Kopf und öffnet ihre Augen. Ihre Augen fallen auf Euch und Ihr spürt, wie sie direkt in Eure Seele brennen. Die Welt um Euch herum fängt an sich zu drehen und Ihr verliert das Gefühl für Raum und Zeit. Als Ihr wieder zu Euch kommt, scheint die Statue wieder leblos zu wirken. Allerdings entdeckt Ihr einen Schutzstein in Eurem Gepäck.~
-@2311 = ~Die Statue bewegt sich nicht mehr, aber Ihr habt das Gefühl als ob Euch ihre Augen Euch immer noch folgen.~
+@2310 = ~Als Ihr der Statue nÃ¤herkommt, hebt sie langsam den Kopf und Ã¶ffnet ihre Augen. Ihre Augen fallen auf Euch und Ihr spÃ¼rt, wie sie direkt in Eure Seele brennen. Die Welt um Euch herum fÃ¤ngt an sich zu drehen und Ihr verliert das GefÃ¼hl fÃ¼r Raum und Zeit. Als Ihr wieder zu Euch kommt, scheint die Statue wieder leblos zu wirken. Allerdings entdeckt Ihr einen Schutzstein in Eurem GepÃ¤ck.~
+@2311 = ~Die Statue bewegt sich nicht mehr, aber Ihr habt das GefÃ¼hl als ob Euch ihre Augen Euch immer noch folgen.~
 
 
 // Cutscene strings
-@2400 = ~Ihr seid schwer zu fassen, aber endlich haben wir Euch aufgespürt.~
-@2401 = ~Habt Ihr wirklich gedacht, dass Ihr mit unserer wertvollen Lampe einfach so davonkommen könntet?~
+@2400 = ~Ihr seid schwer zu fassen, aber endlich haben wir Euch aufgespÃ¼rt.~
+@2401 = ~Habt Ihr wirklich gedacht, dass Ihr mit unserer wertvollen Lampe einfach so davonkommen kÃ¶nntet?~
 @2402 = ~Ich werde sie wieder an mich nehmen...~
-@2403 = ~Greift an, meine Brüder. Kämpft für den Ruhm Ravannas!~
+@2403 = ~Greift an, meine BrÃ¼der. KÃ¤mpft fÃ¼r den Ruhm Ravannas!~
 @2404 = ~Ich werde unsere Beute zum Meister bringen.~
-@2405 = ~Für Ravannas Ruhm!~
-@2406 = ~Für Ravanna!~
-@2407 = ~Der anhaltende Kampf verhindert, dass Ihr Euch auf die Kräfte der Kugel konzentrieren könnt.~
-@2408 = ~Die Jadekugel fängt an zu glühen und Ihr werdet von gleißendem Licht umgeben...~
-@2409 = ~Die Jadekugel flackert kurz auf, bevor sie sich in eine Staubwolke verwandelt. Es scheint, als ob die Magie des Steins bereits verbraucht wurde. Ihr habt den Dschinn für immer verloren.~
-@2410 = ~Die Jadekugel rührt sich nicht.~
-@2411 = ~Ihr konzentriert Eure Gedanken auf die Jadekugel in Euren Händen.~
-@2412 = ~Nach einigen Augenblicken fängt sie an zu glühen und Ihr werdet von gleißendem Licht umgeben...~
-@2413 = ~Nach einigen Augenblicken flackert sie nur kurz auf, bevor sie sich in eine Staubwolke verwandelt. Es scheint, als ob die Magie des Steins bereits verbraucht wurde. Ihr habt den Dschinn für immer verloren.~
+@2405 = ~FÃ¼r Ravannas Ruhm!~
+@2406 = ~FÃ¼r Ravanna!~
+@2407 = ~Der anhaltende Kampf verhindert, dass Ihr Euch auf die KrÃ¤fte der Kugel konzentrieren kÃ¶nnt.~
+@2408 = ~Die Jadekugel fÃ¤ngt an zu glÃ¼hen und Ihr werdet von gleiÃŸendem Licht umgeben...~
+@2409 = ~Die Jadekugel flackert kurz auf, bevor sie sich in eine Staubwolke verwandelt. Es scheint, als ob die Magie des Steins bereits verbraucht wurde. Ihr habt den Dschinn fÃ¼r immer verloren.~
+@2410 = ~Die Jadekugel rÃ¼hrt sich nicht.~
+@2411 = ~Ihr konzentriert Eure Gedanken auf die Jadekugel in Euren HÃ¤nden.~
+@2412 = ~Nach einigen Augenblicken fÃ¤ngt sie an zu glÃ¼hen und Ihr werdet von gleiÃŸendem Licht umgeben...~
+@2413 = ~Nach einigen Augenblicken flackert sie nur kurz auf, bevor sie sich in eine Staubwolke verwandelt. Es scheint, als ob die Magie des Steins bereits verbraucht wurde. Ihr habt den Dschinn fÃ¼r immer verloren.~
 
 
 // journal entries
 @2800 = ~Vergeltung
 
-Eine Gruppe Rakshasas hat uns aufgelauert. Bevor ich reagieren konnte, hat sich ihr Anführer auf magische Art und Weise die Lampe des Dschinns geschnappt und sich wegtransportiert.
+Eine Gruppe Rakshasas hat uns aufgelauert. Bevor ich reagieren konnte, hat sich ihr AnfÃ¼hrer auf magische Art und Weise die Lampe des Dschinns geschnappt und sich wegtransportiert.
 
-Seine Schergen blieben zurück um sich um mich zu kümmern. Ich sollte mich beeilen und ihnen folgen, bevor der Dschinn endgültig für mich verloren ist.~
+Seine Schergen blieben zurÃ¼ck um sich um mich zu kÃ¼mmern. Ich sollte mich beeilen und ihnen folgen, bevor der Dschinn endgÃ¼ltig fÃ¼r mich verloren ist.~
 
 @2801 = ~Vergeltung
 
 Ich habe die Jadekugel benutzt, die ich im Besitz der Rakshasas gefunden habe. Sie transportierte mich in einen mir unbekannten Urwald.
 
-Das Klima unterscheidet sich sehr deutlich von Amn, daher kann ich praktisch überall sein.~
+Das Klima unterscheidet sich sehr deutlich von Amn, daher kann ich praktisch Ã¼berall sein.~
 
 @2802 = ~Vergeltung
 
-Ich habe einen alten Tempel im südlichen Teil des Urwalds entdeckt. Als ich versuchte ihn zu betreten, wurde ich durch ein unsichtbares Kraftfeld aufgehalten.
+Ich habe einen alten Tempel im sÃ¼dlichen Teil des Urwalds entdeckt. Als ich versuchte ihn zu betreten, wurde ich durch ein unsichtbares Kraftfeld aufgehalten.
 
-Ich muss einen Weg finden, die Barriere zu überwinden.~
+Ich muss einen Weg finden, die Barriere zu Ã¼berwinden.~
 
 @2803 = ~Vergeltung
 
-Ich habe einen Schutzstein gefunden, der eine geheimnisvolle Aura ausstrahlt. Noch weiß ich nicht, welche Bedeutung er hat, aber er sieht auf jedem Fall wichtig aus.~
+Ich habe einen Schutzstein gefunden, der eine geheimnisvolle Aura ausstrahlt. Noch weiÃŸ ich nicht, welche Bedeutung er hat, aber er sieht auf jedem Fall wichtig aus.~
 
 @2804 = ~Vergeltung
 
-Ich habe einen Schutzstein gefunden, der eine geheimnisvolle Aura ausstrahlt. Vielleicht hat er etwas mit der unsichtbaren Barriere in der südlichen Tempelanlage zu tun.~
+Ich habe einen Schutzstein gefunden, der eine geheimnisvolle Aura ausstrahlt. Vielleicht hat er etwas mit der unsichtbaren Barriere in der sÃ¼dlichen Tempelanlage zu tun.~
 
 @2805 = ~Vergeltung
 
-Ich bin auf eine Statue gestoßen, die eine schlangenähnliche Form aufweist. Sie kommunizierte mit mir telepatisch und forderte mich zu einem geistigen Wettstreit heraus.
+Ich bin auf eine Statue gestoÃŸen, die eine schlangenÃ¤hnliche Form aufweist. Sie kommunizierte mit mir telepatisch und forderte mich zu einem geistigen Wettstreit heraus.
 
-Nachdem ich ihre Rätsel erfolgreich lösen konnte, belohnte sie mich mit einem magischen Schutzstein, der wahrscheinlich etwas mit dem Kraftfeld der südlichen Tempelanlage zu tun hat. Die Statue erwähnte auch, dass ich letztendlich vier Schutzsteine benötige, um weiterzukommen. Außerdem scheint das Kraftfeld noch zusätzliche Abwehrmechanismen zu besitzen.~
+Nachdem ich ihre RÃ¤tsel erfolgreich lÃ¶sen konnte, belohnte sie mich mit einem magischen Schutzstein, der wahrscheinlich etwas mit dem Kraftfeld der sÃ¼dlichen Tempelanlage zu tun hat. Die Statue erwÃ¤hnte auch, dass ich letztendlich vier Schutzsteine benÃ¶tige, um weiterzukommen. AuÃŸerdem scheint das Kraftfeld noch zusÃ¤tzliche Abwehrmechanismen zu besitzen.~
 
 @2806 = ~Vergeltung
 
-Ich bin auf eine Statue gestoßen, die eine schlangenähnliche Form aufweist. Sie kommunizierte mit mir telepatisch und forderte mich zu einem geistigen Wettstreit heraus.
+Ich bin auf eine Statue gestoÃŸen, die eine schlangenÃ¤hnliche Form aufweist. Sie kommunizierte mit mir telepatisch und forderte mich zu einem geistigen Wettstreit heraus.
 
-Als ich die Herausforderung ablehnte, sagte sie mir, dass ich "göttliche Kräfte" benötigen würde, um die Schutzbarrieren des Tempels zu überwinden.~
+Als ich die Herausforderung ablehnte, sagte sie mir, dass ich "gÃ¶ttliche KrÃ¤fte" benÃ¶tigen wÃ¼rde, um die Schutzbarrieren des Tempels zu Ã¼berwinden.~
 
 @2807 = ~Vergeltung
 
-Nachdem ich die Barrieren der Tempelanlage überwunden hatte, wurde ich von einem mächtigen Hohepriester der Rakshasas erwartet.
+Nachdem ich die Barrieren der Tempelanlage Ã¼berwunden hatte, wurde ich von einem mÃ¤chtigen Hohepriester der Rakshasas erwartet.
 
 Der Kampf war schwierig, konnte mich aber letztendlich durchsetzen. Mit dem Tode des Hohepriesters verschwand auch die letzte Barriere um den Altar, sodass ich auf dessen Opfergaben zugreifen kann.~
 
 @2810 = ~Vergeltung
 
-Nach dem Sieg über den Hohepriester konnte ich mich zurück nach Amn teleportieren. Ich hoffe inständig, dass ich zumindest für eine Weile von weiteren Rakshasa-Angriffen verschont bleibe.~
+Nach dem Sieg Ã¼ber den Hohepriester konnte ich mich zurÃ¼ck nach Amn teleportieren. Ich hoffe instÃ¤ndig, dass ich zumindest fÃ¼r eine Weile von weiteren Rakshasa-Angriffen verschont bleibe.~
 
 
 // misc. strings for map A77004
-@2900 = ~Der Kopf der Schlangenstatue wirkt beinahe lebendig. Ihr spürt, dass Euch irgend...etwas beobachtet.~
+@2900 = ~Der Kopf der Schlangenstatue wirkt beinahe lebendig. Ihr spÃ¼rt, dass Euch irgend...etwas beobachtet.~
 @2901 = ~Der Kopf der Schlangenstatue schweigt.~
 @2902 = ~Magisches Portal~
 @2903 = ~Tempel~
 @2904 = ~Yuan-Ti Schutzstein 1~
-@2905 = ~Dieser Stein fühlt sich ungewöhnlich kalt an. Er besitzt einige Muster, die Ihr nicht versteht.~
+@2905 = ~Dieser Stein fÃ¼hlt sich ungewÃ¶hnlich kalt an. Er besitzt einige Muster, die Ihr nicht versteht.~
 @2907 = ~Yuan-Ti Schutzstein 2~
 @2908 = ~Obwohl dieser Stein sehr grob verarbeitet wurde, besitzt er einige komplexe Muster, die Ihr nicht versteht.~
 @2910 = ~Yuan-Ti Schutzstein 3~
-@2911 = ~Dieser ungewöhnlich schwere Stein wurde aus einem unbekannten Material gefertigt. Obwohl seine Muster kaum wahrnehmbar sind, brennen sie sich fast in Euren Verstand.~
+@2911 = ~Dieser ungewÃ¶hnlich schwere Stein wurde aus einem unbekannten Material gefertigt. Obwohl seine Muster kaum wahrnehmbar sind, brennen sie sich fast in Euren Verstand.~
 @2913 = ~Yuan-Ti Schutzstein 4~
-@2914 = ~Auf den ersten Blick sieht dieser Stein aus wie jeder andere, aber bald könnt Ihr kleine Markierungen erkennen, die im Dunkeln schwach zu leuchten scheinen.~
+@2914 = ~Auf den ersten Blick sieht dieser Stein aus wie jeder andere, aber bald kÃ¶nnt Ihr kleine Markierungen erkennen, die im Dunkeln schwach zu leuchten scheinen.~
 @2916 = ~Schlangenstatue~
-@2917 = ~Yuan-Ti-Schlüssel~
-@2918 = ~Diesen Schlüssel habt Ihr am Körper eines Yuan-ti-Magiers gefunden.~
+@2917 = ~Yuan-Ti-SchlÃ¼ssel~
+@2918 = ~Diesen SchlÃ¼ssel habt Ihr am KÃ¶rper eines Yuan-ti-Magiers gefunden.~
 @2919 = ~Yuan-Ti-Meister~
 @2920 = ~Hohepriester der Ak'chazar~
-@2921 = ~Der Eingang zum Tempel wird von einem unüberwindbaren Kraftfeld blockiert.~
-@2922 = ~Dieses Gebäude scheint als Unterkunft der einheimischen Bevölkerung zu dienen. Ihr seht nichts Ungewöhnliches.~
+@2921 = ~Der Eingang zum Tempel wird von einem unÃ¼berwindbaren Kraftfeld blockiert.~
+@2922 = ~Dieses GebÃ¤ude scheint als Unterkunft der einheimischen BevÃ¶lkerung zu dienen. Ihr seht nichts UngewÃ¶hnliches.~
 @2923 = ~Dieser antike Steinaltar scheint bereits hunderte Jahre alt zu sein. Er muss aber noch vor Kurzem benutzt worden sein, auch wenn Ihr keine Opfergaben seht.~
-@2924 = ~Eine unüberwindbare Barriere versperrt Euren Weg. Ihr müsst zuerst einen Weg finden, sie auszuschalten.~
-@2925 = ~Ihr seid zu weit weg, um sie näher zu untersuchen.~
-@2926 = ~Eine weitere Barriere versperrt Euren Weg. Ihr müsst zuerst einen Weg finden, sie auszuschalten.~
-@2927 = ~Das Portal scheint nicht zu funktionieren. Ihr müsst zuerst einen Weg finden, es zu aktivieren.~
-@2928 = ~Als Ihr den richtigen Schutzstein in den Steckplatz einführt, fängt er an, in einem violetten Licht zu glühen. Ihr hört ein Geräusch hinter Euch...~
+@2924 = ~Eine unÃ¼berwindbare Barriere versperrt Euren Weg. Ihr mÃ¼sst zuerst einen Weg finden, sie auszuschalten.~
+@2925 = ~Ihr seid zu weit weg, um sie nÃ¤her zu untersuchen.~
+@2926 = ~Eine weitere Barriere versperrt Euren Weg. Ihr mÃ¼sst zuerst einen Weg finden, sie auszuschalten.~
+@2927 = ~Das Portal scheint nicht zu funktionieren. Ihr mÃ¼sst zuerst einen Weg finden, es zu aktivieren.~
+@2928 = ~Als Ihr den richtigen Schutzstein in den Steckplatz einfÃ¼hrt, fÃ¤ngt er an, in einem violetten Licht zu glÃ¼hen. Ihr hÃ¶rt ein GerÃ¤usch hinter Euch...~
 @2930 = ~Greift sie an!~
-@2931 = ~Als das letzte Monster stirbt, hört Ihr einen schrillen Ton und nehmt ein leichtes Flackern der Luft war. Die Barriere hat sich aufgelöst.~
-@2932 = ~Ihr hört einen schrillen Ton und nehmt ein leichtes Flackern der Luft war. Die äußere Barriere hat sich aufgelöst.~
-@2933 = ~Nachdem Ihr den letzten Schutzstein in den Steckplatz eingeführt habt, nehmt Ihr ein Flackern der Luft war. Der verschwundene Barriere gibt den Blick auf die wahre Kulisse vor Euch frei. Ihr seid nicht allein an diesem Ort.~
+@2931 = ~Als das letzte Monster stirbt, hÃ¶rt Ihr einen schrillen Ton und nehmt ein leichtes Flackern der Luft war. Die Barriere hat sich aufgelÃ¶st.~
+@2932 = ~Ihr hÃ¶rt einen schrillen Ton und nehmt ein leichtes Flackern der Luft war. Die Ã¤uÃŸere Barriere hat sich aufgelÃ¶st.~
+@2933 = ~Nachdem Ihr den letzten Schutzstein in den Steckplatz eingefÃ¼hrt habt, nehmt Ihr ein Flackern der Luft war. Der verschwundene Barriere gibt den Blick auf die wahre Kulisse vor Euch frei. Ihr seid nicht allein an diesem Ort.~
 @2934 = ~Ihr nehmt ein leichtes Flackern der Luft war, und die verschwundene Barriere gibt den Blick auf die wahre Kulisse vor Euch frei. Ihr seid nicht allein an diesem Ort.~
-@2935 = ~Mit dem Sieg über den Hohepriester der Ak'chazar löst sich das Schutzfeld um den Altar auf.~
+@2935 = ~Mit dem Sieg Ã¼ber den Hohepriester der Ak'chazar lÃ¶st sich das Schutzfeld um den Altar auf.~
 @2936 = ~Jadekugel~
-@2937 = ~Die Kugel, die Ihr am Körper eines Rakshasas gefunden habt, fühlt sich kühl an und schaut fast wie eine Flüssigkeit aus. Als Ihr sie in Eurer Hand haltet, gibt sie ein schwach pulsierendes Glühen ab. Ihr könnt die inherente Magie fast spüren. Wie eine so wild agierende Spezies wie die Rakshasas solch filigrane Artefakte erschaffen konnte, ist Euch ein Rätsel.~
+@2937 = ~Die Kugel, die Ihr am KÃ¶rper eines Rakshasas gefunden habt, fÃ¼hlt sich kÃ¼hl an und schaut fast wie eine FlÃ¼ssigkeit aus. Als Ihr sie in Eurer Hand haltet, gibt sie ein schwach pulsierendes GlÃ¼hen ab. Ihr kÃ¶nnt die inherente Magie fast spÃ¼ren. Wie eine so wild agierende Spezies wie die Rakshasas solch filigrane Artefakte erschaffen konnte, ist Euch ein RÃ¤tsel.~
 @2938 = ~Magierhut~
 @2939 = ~Matars Spitzhut~
-@2940 = ~Der Hut strahlt in einem hellen blau. Er ist überraschend leicht und scheint für einen bestimmten Magier gefertigt worden zu sein.
+@2940 = ~Der Hut strahlt in einem hellen blau. Er ist Ã¼berraschend leicht und scheint fÃ¼r einen bestimmten Magier gefertigt worden zu sein.
 
 Kann nur verwendet werden von:
  Magiern (auch mehrklassig und mit Klassenkombination)
  Barden
  Chaotischen Charakteren~
 
-@2941 = ~Vor vielen Jahrhunderten beauftragte der verrückte Magier Harash Matar einen gnomischen Zauberer der Gegend, einen Weg zu finden, um seine magischen Kräfte aufs Vollste ausnutzen zu können. Der Gnom wusste von der Geistesverfassung des Magiers und fertigte eine Kopfbedeckung, die die chaotischen Gedanken ihres Trägers in mächtige Zaubersprüche fließen lassen konnte.
+@2941 = ~Vor vielen Jahrhunderten beauftragte der verrÃ¼ckte Magier Harash Matar einen gnomischen Zauberer der Gegend, einen Weg zu finden, um seine magischen KrÃ¤fte aufs Vollste ausnutzen zu kÃ¶nnen. Der Gnom wusste von der Geistesverfassung des Magiers und fertigte eine Kopfbedeckung, die die chaotischen Gedanken ihres TrÃ¤gers in mÃ¤chtige ZaubersprÃ¼che flieÃŸen lassen konnte.
 
-Der Hut erwieß sich als viel effektiver als er es sich vorstellen konnte. Schon bald nachdem der Gnom sein Meisterwerk ablieferte, rief der verrückte Magier in seiner Heimatstadt versehentlich eine Horde Dämonen herbei. Sie verwüsteten alles in ihrer Nähe und töteten alle Bewohner. Nur diese Kopfbedeckung überstand das Massaker.
+Der Hut erwieÃŸ sich als viel effektiver als er es sich vorstellen konnte. Schon bald nachdem der Gnom sein Meisterwerk ablieferte, rief der verrÃ¼ckte Magier in seiner Heimatstadt versehentlich eine Horde DÃ¤monen herbei. Sie verwÃ¼steten alles in ihrer NÃ¤he und tÃ¶teten alle Bewohner. Nur diese Kopfbedeckung Ã¼berstand das Massaker.
 
-Der Hut zapft die chaotischen Kräfte des Geistes an und ermöglicht seinem Träger, Zauber zu wirken, die normalerweise jenseits seiner oder ihrer Fähigkeiten liegen. Wegen der speziellen Natur der Verzauberung können nur Personen, die sich dem Chaos hingeben, diesen Hut nutzen.
+Der Hut zapft die chaotischen KrÃ¤fte des Geistes an und ermÃ¶glicht seinem TrÃ¤ger, Zauber zu wirken, die normalerweise jenseits seiner oder ihrer FÃ¤higkeiten liegen. Wegen der speziellen Natur der Verzauberung kÃ¶nnen nur Personen, die sich dem Chaos hingeben, diesen Hut nutzen.
 
 EIGENSCHAFTEN:
 
 Chaosschild
-  Schützt den Träger etwas vor den gefährlichen Nebenwirkungen, wenn ein Zauber mittels unbändiger Magie gewirkt wird.
+  SchÃ¼tzt den TrÃ¤ger etwas vor den gefÃ¤hrlichen Nebenwirkungen, wenn ein Zauber mittels unbÃ¤ndiger Magie gewirkt wird.
 
 Nahals gewagte Hexerei (3x/Tag)
-  Ermöglicht es dem Träger, einen beliebigen Zauber aus dem Zauberbuch zu sprechen. Da er sich die chaotischen Kräfte seines Geistes zu Nutze macht, endet er in der Regel im Desaster oder zumindest in einer Wirkung, die nicht vom Magier gewünscht wurde.
+  ErmÃ¶glicht es dem TrÃ¤ger, einen beliebigen Zauber aus dem Zauberbuch zu sprechen. Da er sich die chaotischen KrÃ¤fte seines Geistes zu Nutze macht, endet er in der Regel im Desaster oder zumindest in einer Wirkung, die nicht vom Magier gewÃ¼nscht wurde.
 
 Kann nur verwendet werden von:
  Magiern (auch mehrklassig und mit Klassenkombination)

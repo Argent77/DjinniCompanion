@@ -1,13 +1,13 @@
-// -*- coding: cp1252 -*-
+// -*- coding: utf-8 -*-
 // *** Strings related to Quest 1: "A game of cat-and-mouse" (index 1000...1999)
 
 // Dialog: rakshasa
 @1100 = ~Das war einfach.~
 @1101 = ~Ja!~
 @1102 = ~War das alles?~
-@1103 = ~Stört mich nicht beim Jagen, <RACE>.~
-@1104 = ~Ich sagte, dass Ihr mich nicht stören sollt! Ihr verscheucht meine Beute.~
-@1105 = ~Stellt meine Geduld nicht auf die Probe, <RACE>, oder Ihr seid mein nächstes Ziel!~
+@1103 = ~StÃ¶rt mich nicht beim Jagen, <RACE>.~
+@1104 = ~Ich sagte, dass Ihr mich nicht stÃ¶ren sollt! Ihr verscheucht meine Beute.~
+@1105 = ~Stellt meine Geduld nicht auf die Probe, <RACE>, oder Ihr seid mein nÃ¤chstes Ziel!~
 @1106 = ~Jetzt reichts! Mal sehen wie Ihr damit fertig werdet.~
 @1107 = ~Halt!~
 @1108 = ~Was macht ein <RACE> in unserem Revier?~
@@ -15,30 +15,30 @@
 @1110 = ~Wer seid Ihr?~
 @1111 = ~Ein magisches Portal hat uns hierher gebracht. Wo sind wir?~
 @1112 = ~Wir sind nur aus Versehen hier. Ich denke, dass wir wieder gehen sollten. Lebt wohl.~
-@1113 = ~Es tut mir Leid. Es war nicht meine Absicht, Euch zu stören. Ich werde mich zurückziehen.~
-@1114 = ~Wir würden eher sterben als Euch irgendetwas zu sagen.~
-@1115 = ~Wir müssen Euch gar nichts sagen. Sucht unseren Anführer auf. Er wird entscheiden was mit Euch geschieht.~
+@1113 = ~Es tut mir Leid. Es war nicht meine Absicht, Euch zu stÃ¶ren. Ich werde mich zurÃ¼ckziehen.~
+@1114 = ~Wir wÃ¼rden eher sterben als Euch irgendetwas zu sagen.~
+@1115 = ~Wir mÃ¼ssen Euch gar nichts sagen. Sucht unseren AnfÃ¼hrer auf. Er wird entscheiden was mit Euch geschieht.~
 @1116 = ~Nun gut. Geht vor!~
-@1117 = ~Ich möchte erstmal darüber nachdenken.~
-@1118 = ~Nein! Ich traue Eurer Art nicht über den Weg.~
-@1119 = ~Da Ihr bereits über unsere Gegenwart Bescheid wisst, kann ich Euch nicht erlauben, zu gehen. Unser Anführer wird über Euch entscheiden.~
+@1117 = ~Ich mÃ¶chte erstmal darÃ¼ber nachdenken.~
+@1118 = ~Nein! Ich traue Eurer Art nicht Ã¼ber den Weg.~
+@1119 = ~Da Ihr bereits Ã¼ber unsere Gegenwart Bescheid wisst, kann ich Euch nicht erlauben, zu gehen. Unser AnfÃ¼hrer wird Ã¼ber Euch entscheiden.~
 @1120 = ~Nun gut. Ich stimme zu.~
-@1121 = ~Tut nichts unüberlegtes oder wir werden Euch hier und jetzt erledigen.~
+@1121 = ~Tut nichts unÃ¼berlegtes oder wir werden Euch hier und jetzt erledigen.~
 @1122 = ~Da gibt es nichts nachzudenken, <RACE>. Befolgt meine Befehle oder tragt die Konsequenzen!~
 @1123 = ~Dann werdet Ihr sterben. GREIFT AN!~
 @1124 = ~Was wollt Ihr von uns, <RACE>?~
 @1125 = ~Warum seid Ihr hier?~
 @1126 = ~Nichts.~
 @1127 = ~Ich habe beschlossen, Eurer Existenz ein Ende zu bereiten. Sterbt!~
-@1128 = ~Es ist höchst ungewöhnlich, dass Euch unser Anführer am Leben lässt.~
+@1128 = ~Es ist hÃ¶chst ungewÃ¶hnlich, dass Euch unser AnfÃ¼hrer am Leben lÃ¤sst.~
 @1129 = ~Habt Ihr irgendetwas zu sagen?~
-@1130 = ~Ich bedauere, Euch gestört zu haben.~
+@1130 = ~Ich bedauere, Euch gestÃ¶rt zu haben.~
 @1131 = ~Seid froh, dass wir Euch nicht wie Beute jagen.~
 @1132 = ~Was wollt Ihr von uns?~
-@1133 = ~Sprecht mit unserem Anführer wenn Ihr etwas wissen wollt.~
-@1134 = ~Dann hört auf, uns zu belästigen!~
-@1135 = ~Habt Ihr den Dao eingekerkert? Unser Anführer wird erfreut sein.~
-@1136 = ~Ihr seid also doch zu irgendetwas nütze. Bringt Eure Trophäe zu unserem Anführer.~
+@1133 = ~Sprecht mit unserem AnfÃ¼hrer wenn Ihr etwas wissen wollt.~
+@1134 = ~Dann hÃ¶rt auf, uns zu belÃ¤stigen!~
+@1135 = ~Habt Ihr den Dao eingekerkert? Unser AnfÃ¼hrer wird erfreut sein.~
+@1136 = ~Ihr seid also doch zu irgendetwas nÃ¼tze. Bringt Eure TrophÃ¤e zu unserem AnfÃ¼hrer.~
 
 
 // Dialog: Mahel (rakshasa leader)
@@ -47,209 +47,209 @@
 @1202 = ~Wer seid Ihr? Sagt es uns sofort!~
 @1203 = ~Mein Name ist <GABBER>. Wer... oder was seid Ihr?~
 @1204 = ~Mein Name ist <GABBER>. Wer seid Ihr, Rakshasa?~
-@1205 = ~Ich bin... ein Abenteurer, der nur durch Zufall auf Euer Lager gestoßen ist.~
-@1206 = ~Ich würde erstmal gerne Euren Namen wissen, bevor ich Euch irgendetwas erzähle.~
-@1207 = ~Ich sage Euch gar nichts, solange Ihr Euch weiter so unhöflich verhaltet.~
-@1208 = ~Wir sind Jäger und Ihr seid die Beute. Das ist alles, was Ihr über uns wissen müsst. Vielleicht seid Ihr uns trotzdem von Nutzen, ungeachtet Eurer Anhnungslosigkeit.~
-@1209 = ~Ich werde Mahel genannt, <GABBER>, und bin Anführer unseres Jagdtrupps.~
-@1210 = ~Ihr seid ein bemitleidenswertes Exemplar der Rasse <RACE>. Allerdings könntet Ihr uns trotzdem von Nutzen sein.~
-@1211 = ~Ich weiß nicht, ob Ihr mutig oder lediglich ahnungslos seid, aber ich mag Eure Direktheit. Ich bin Mahel, der Anführer unseres Jagdtrupps.~
+@1205 = ~Ich bin... ein Abenteurer, der nur durch Zufall auf Euer Lager gestoÃŸen ist.~
+@1206 = ~Ich wÃ¼rde erstmal gerne Euren Namen wissen, bevor ich Euch irgendetwas erzÃ¤hle.~
+@1207 = ~Ich sage Euch gar nichts, solange Ihr Euch weiter so unhÃ¶flich verhaltet.~
+@1208 = ~Wir sind JÃ¤ger und Ihr seid die Beute. Das ist alles, was Ihr Ã¼ber uns wissen mÃ¼sst. Vielleicht seid Ihr uns trotzdem von Nutzen, ungeachtet Eurer Anhnungslosigkeit.~
+@1209 = ~Ich werde Mahel genannt, <GABBER>, und bin AnfÃ¼hrer unseres Jagdtrupps.~
+@1210 = ~Ihr seid ein bemitleidenswertes Exemplar der Rasse <RACE>. Allerdings kÃ¶nntet Ihr uns trotzdem von Nutzen sein.~
+@1211 = ~Ich weiÃŸ nicht, ob Ihr mutig oder lediglich ahnungslos seid, aber ich mag Eure Direktheit. Ich bin Mahel, der AnfÃ¼hrer unseres Jagdtrupps.~
 @1212 = ~Ihr wagt es?~
 @1213 = ~Wir werden Euch zur Strecke bringen und uns an Euren Innereien laben. GREIFT AN!~
 @1214 = ~Wir sind vor einigen Monden hierhergekommen, um zu Jagen und zu Schlemmen. Allerdings haben wir durch unserer Anwesenheit das Interesse unserer Feinde, den Dao-Dschinns, geweckt.~
-@1215 = ~Sie haben uns bisher nicht direkt verfolgt. Trotzdem werden uns ihre Spielchen langsam lästig.~
-@1216 = ~Hmm, ich kann Sie nicht mehr wittern. Sie würden diese Gegend niemals ohne ihren Preis verlassen.~
-@1217 = ~Euer Geruch entlarvt Euch, <GABBER>. Habt Ihr unsere Kämpferin Ihtafeer vernichtet?~
+@1215 = ~Sie haben uns bisher nicht direkt verfolgt. Trotzdem werden uns ihre Spielchen langsam lÃ¤stig.~
+@1216 = ~Hmm, ich kann Sie nicht mehr wittern. Sie wÃ¼rden diese Gegend niemals ohne ihren Preis verlassen.~
+@1217 = ~Euer Geruch entlarvt Euch, <GABBER>. Habt Ihr unsere KÃ¤mpferin Ihtafeer vernichtet?~
 @1218 = ~Ja, wir haben ihren Kopf bei den Dao-Dschinns abgeliefert.~
-@1219 = ~(Lüge) Nein, wir haben die Dao-Dschinns vernichtet.~
+@1219 = ~(LÃ¼ge) Nein, wir haben die Dao-Dschinns vernichtet.~
 @1220 = ~Ich habe keine Ahnung wovon Ihr sprecht.~
 @1221 = ~Wir haben sie bereits vernichtet.~
-@1222 = ~(Lüge) Eigentlich haben wir ihnen nur den Kopf eines Rakshasa gebracht und sie sind abgezogen.~
+@1222 = ~(LÃ¼ge) Eigentlich haben wir ihnen nur den Kopf eines Rakshasa gebracht und sie sind abgezogen.~
 @1223 = ~Hmm, rieche ich etwa den Gestank der Dschinns an Euch? Egal.~
-@1224 = ~Ich habe eine Idee, die unserer Jagd etwas mehr Würze geben könnte. Ihr könnt deren Anführer zu uns bringen.~
-@1225 = ~Hört nicht auf ihn. Rakshasas sind dämonische Kreaturen und haben nur bösartige Absichten.~
-@1226 = ~Rakshasas sind bösartige Wesen ohne Ehre. Unterwerft Euch nicht deren Launen.~
-@1227 = ~Wäre es an mir, ich würde diese Monster ohne zu Zögern erschlagen. Es ist sehr zweifelhaft dass sie uns am Leben lassen, nachdem wir Ihre Forderungen erfüllt haben.~
-@1228 = ~Mir sind diese Wesen bekannt. Sie nennen sich Rakshasa und sind von Natur aus bösartig. Ihre räuberischen Neigungen sind geradezu legendär.~
-@1229 = ~Seid auf der Hut! Wir sind für sie möglicherweise nur ein Stück Fleisch.~
-@1230 = ~Die Rakshasas sind nicht Teil der natürlichen Ordnung unserer Welt. Was auch immer sie für Pläne haben, sie werden auf jeden Fall heftige Reaktionen ihrer Widersacher nach sich ziehen.~
-@1231 = ~Unser Freund hier möchte uns nach seiner Pfeife tanzen lassen. Oder ist die Melodie der anderen Seite eher nach Eurem Geschmack?~
-@1232 = ~Das ist eine interessante Wende des Schicksals, mein Rabe. Ihr könnt wählen zwischen einem Bolero der Rakshasa oder dem Tango der Genies. Welchen Tanz würdet Ihr bevorzugen?~
+@1224 = ~Ich habe eine Idee, die unserer Jagd etwas mehr WÃ¼rze geben kÃ¶nnte. Ihr kÃ¶nnt deren AnfÃ¼hrer zu uns bringen.~
+@1225 = ~HÃ¶rt nicht auf ihn. Rakshasas sind dÃ¤monische Kreaturen und haben nur bÃ¶sartige Absichten.~
+@1226 = ~Rakshasas sind bÃ¶sartige Wesen ohne Ehre. Unterwerft Euch nicht deren Launen.~
+@1227 = ~WÃ¤re es an mir, ich wÃ¼rde diese Monster ohne zu ZÃ¶gern erschlagen. Es ist sehr zweifelhaft dass sie uns am Leben lassen, nachdem wir Ihre Forderungen erfÃ¼llt haben.~
+@1228 = ~Mir sind diese Wesen bekannt. Sie nennen sich Rakshasa und sind von Natur aus bÃ¶sartig. Ihre rÃ¤uberischen Neigungen sind geradezu legendÃ¤r.~
+@1229 = ~Seid auf der Hut! Wir sind fÃ¼r sie mÃ¶glicherweise nur ein StÃ¼ck Fleisch.~
+@1230 = ~Die Rakshasas sind nicht Teil der natÃ¼rlichen Ordnung unserer Welt. Was auch immer sie fÃ¼r PlÃ¤ne haben, sie werden auf jeden Fall heftige Reaktionen ihrer Widersacher nach sich ziehen.~
+@1231 = ~Unser Freund hier mÃ¶chte uns nach seiner Pfeife tanzen lassen. Oder ist die Melodie der anderen Seite eher nach Eurem Geschmack?~
+@1232 = ~Das ist eine interessante Wende des Schicksals, mein Rabe. Ihr kÃ¶nnt wÃ¤hlen zwischen einem Bolero der Rakshasa oder dem Tango der Genies. Welchen Tanz wÃ¼rdet Ihr bevorzugen?~
 @1233 = ~Wo wir schon beim Tanzen sind. Ich habe mal in meiner Jugend einen gnomischen Barden getroffen, der...~
-@1234 = ~Später bitte, mein Freund. Ich bin neugierig, wie sich dieser kleine Akt entwickelt, bevor unser Gastgeber die Geduld verliert.~
-@1235 = ~Mächtige Wesen haben oft mächtige Artefakte in ihrem Besitz. Ihr wäret ein Narr, Euch diese Gelegenheit durch die Lappen gehen zu lassen.~
-@1236 = ~Ich schlage vor, deren Angebot erst einmal anzunehmen. Ihr könnt Euch später immer noch umentscheiden, nachdem Ihr die andere Seite angehört habt. Denkt darüber nach.~
-@1237 = ~Ich schlage vor, deren Angebot erst einmal anzunehmen. Ihr habt bereits seinen Untergebene Ihtafeer besiegt und könnt den Kopf gegen eine Belohnung eintauschen.~
-@1238 = ~Warum solltet Ihr nicht das Beste beider Seiten für Euch herausholen?~
-@1239 = ~Ahhhr, wollt Ihr wirklich diesen Biestern in den Allerwertesten kriechen? Lasst uns lieber zu unseren Waffen greifen. Dann können wir wenigstens ihre Schätze plündern.~
+@1234 = ~SpÃ¤ter bitte, mein Freund. Ich bin neugierig, wie sich dieser kleine Akt entwickelt, bevor unser Gastgeber die Geduld verliert.~
+@1235 = ~MÃ¤chtige Wesen haben oft mÃ¤chtige Artefakte in ihrem Besitz. Ihr wÃ¤ret ein Narr, Euch diese Gelegenheit durch die Lappen gehen zu lassen.~
+@1236 = ~Ich schlage vor, deren Angebot erst einmal anzunehmen. Ihr kÃ¶nnt Euch spÃ¤ter immer noch umentscheiden, nachdem Ihr die andere Seite angehÃ¶rt habt. Denkt darÃ¼ber nach.~
+@1237 = ~Ich schlage vor, deren Angebot erst einmal anzunehmen. Ihr habt bereits seinen Untergebene Ihtafeer besiegt und kÃ¶nnt den Kopf gegen eine Belohnung eintauschen.~
+@1238 = ~Warum solltet Ihr nicht das Beste beider Seiten fÃ¼r Euch herausholen?~
+@1239 = ~Ahhhr, wollt Ihr wirklich diesen Biestern in den Allerwertesten kriechen? Lasst uns lieber zu unseren Waffen greifen. Dann kÃ¶nnen wir wenigstens ihre SchÃ¤tze plÃ¼ndern.~
 @1240 = ~Willigt ein und wir werden zufrieden sein.~
-@1241 = ~Ich bezweifle, dass sich die Dao-Dschinns freiwillig mit Euch treffen würden.~
+@1241 = ~Ich bezweifle, dass sich die Dao-Dschinns freiwillig mit Euch treffen wÃ¼rden.~
 @1242 = ~Ja, ich werde es tun.~
-@1243 = ~Und was ist unsere Belohnung für diese Tat?~
+@1243 = ~Und was ist unsere Belohnung fÃ¼r diese Tat?~
 @1244 = ~Ich bin nicht an Eurem Angebot interessiert.~
 @1245 = ~Nein! Ich werde die Dao-Dschinns niemals hintergehen.~
 @1246 = ~Ihr seid in der Tat ein beeindruckendes Exemplar, wenn Ihr in der Lage wart, einen Ruhk im direkten Kampf zu besiegen.~
-@1247 = ~Ich glaube nicht, dass Ihr uns die Wahrheit sagt. Euer Geruch verrät Euch.~
+@1247 = ~Ich glaube nicht, dass Ihr uns die Wahrheit sagt. Euer Geruch verrÃ¤t Euch.~
 @1248 = ~Ihr seid in der Tat ein beeindruckendes Exemplar, wenn Ihr in der Lage wart, die Dao-Dschinns zu besiegen.~
 @1249 = ~Ihr seid es wert, unsere Beute zu werden.~
-@1250 = ~Meine Brüder, nehmt eure Jagd wieder auf! Wir haben neue Beute. Und Ihr Sterbliche, zittert vor uns und verkriecht Euch. Wir werden Euch zur Strecke bringen und uns an Euren Eingeweiden laben. GREIFT AN!~
-@1251 = ~Sie würden keine andere Wahl haben, nachdem Ihr mit ihnen fertig seid.~
+@1250 = ~Meine BrÃ¼der, nehmt eure Jagd wieder auf! Wir haben neue Beute. Und Ihr Sterbliche, zittert vor uns und verkriecht Euch. Wir werden Euch zur Strecke bringen und uns an Euren Eingeweiden laben. GREIFT AN!~
+@1251 = ~Sie wÃ¼rden keine andere Wahl haben, nachdem Ihr mit ihnen fertig seid.~
 @1252 = ~Wie lautet Eure Antwort?~
 @1253 = ~Nun gut, ich werde es tun.~
 @1254 = ~Ihr seid intelligenter als ich dachte.~
-@1255 = ~Nehmt diese Büchse. Sie ist mit einem Zauber belegt, der die Seele des Dao-Dschinns einfangen kann.~
-@1256 = ~Ihr habt nur einen Versuch, also sorgt dafür, dass Ihr nur Khan Zahraa anvisiert. Sobald Ihr ihn eingefangen habt, kommt sofort zu mir zurück. Habt Ihr verstanden?~
-@1257 = ~Ja, absolut. Ich werde die Seele Khaan Zahraas mit der Büchse einfangen und sie Euch zurückbringen.~
-@1258 = ~Könntet Ihr das bitte noch einmal wiederholen?~
-@1259 = ~Nach nochmaliger Überlegung lehne ich lieber ab.~
+@1255 = ~Nehmt diese BÃ¼chse. Sie ist mit einem Zauber belegt, der die Seele des Dao-Dschinns einfangen kann.~
+@1256 = ~Ihr habt nur einen Versuch, also sorgt dafÃ¼r, dass Ihr nur Khan Zahraa anvisiert. Sobald Ihr ihn eingefangen habt, kommt sofort zu mir zurÃ¼ck. Habt Ihr verstanden?~
+@1257 = ~Ja, absolut. Ich werde die Seele Khaan Zahraas mit der BÃ¼chse einfangen und sie Euch zurÃ¼ckbringen.~
+@1258 = ~KÃ¶nntet Ihr das bitte noch einmal wiederholen?~
+@1259 = ~Nach nochmaliger Ãœberlegung lehne ich lieber ab.~
 @1260 = ~Fordert meine Geduld nicht heraus, <RACE>! Als Belohnung schenke ich Euch Euer Leben.~
-@1261 = ~Solltet Ihr tatsächlich in der Lage sein, meine Forderung zu erfüllen, überdenke ich es mir vielleicht noch einmal.~
-@1262 = ~Ich habe eine sehr nützliche Rarität in meinem Besitz die Euch gehört, sobald Ihr meine Forderung erfüllt habt.~
+@1261 = ~Solltet Ihr tatsÃ¤chlich in der Lage sein, meine Forderung zu erfÃ¼llen, Ã¼berdenke ich es mir vielleicht noch einmal.~
+@1262 = ~Ich habe eine sehr nÃ¼tzliche RaritÃ¤t in meinem Besitz die Euch gehÃ¶rt, sobald Ihr meine Forderung erfÃ¼llt habt.~
 @1263 = ~Ich glaube, Ihr habt mich falsch verstanden. Ich biete Euch diese Aufgabe nicht an. Ich verlange sie von Euch!~
 @1264 = ~Da habe ich wohl keine andere Wahl. Nun gut, ich werde es tun.~
 @1265 = ~Nein. Ich werde keine Forderungen von Euresgleichen entgegennehmen.~
 @1266 = ~Ihr wagt es, Euch uns zu widersetzen? Wir werden uns an Euren Innereien laben. GREIFT AN!~
-@1267 = ~Sehr gut. Ich erwarte begierig Eure Rückkehr.~
+@1267 = ~Sehr gut. Ich erwarte begierig Eure RÃ¼ckkehr.~
 @1268 = ~Und noch einmal.~
-@1269 = ~Bringt mir die Seele des Dao-Dschinns, indem Ihr die Büchse benutzt, die ich Euch gegeben habe. Ihr habt nur einen Versuch, daher benutzt sie an niemand anderen.~
-@1270 = ~Kehrt sofort zu mir zurück, sobald er eingefangen wurde. Habt Ihr mich verstanden?~
-@1271 = ~Ja. Ich werde die Seele von Khan Zahraa einfangen und sie zu Euch zurückbringen.~
-@1272 = ~Ihr kehrt erneut zu uns zurück. Was wollt Ihr?~
-@1273 = ~Könntet Ihr uns bitte noch einmal unsere Aufgabe erklären?~
+@1269 = ~Bringt mir die Seele des Dao-Dschinns, indem Ihr die BÃ¼chse benutzt, die ich Euch gegeben habe. Ihr habt nur einen Versuch, daher benutzt sie an niemand anderen.~
+@1270 = ~Kehrt sofort zu mir zurÃ¼ck, sobald er eingefangen wurde. Habt Ihr mich verstanden?~
+@1271 = ~Ja. Ich werde die Seele von Khan Zahraa einfangen und sie zu Euch zurÃ¼ckbringen.~
+@1272 = ~Ihr kehrt erneut zu uns zurÃ¼ck. Was wollt Ihr?~
+@1273 = ~KÃ¶nntet Ihr uns bitte noch einmal unsere Aufgabe erklÃ¤ren?~
 @1274 = ~Es ist nichts.~
-@1275 = ~Gut. Nun geht und erfüllt Eure Aufgabe.~
-@1276 = ~Ihr kehrt erneut zu uns zurück?~
+@1275 = ~Gut. Nun geht und erfÃ¼llt Eure Aufgabe.~
+@1276 = ~Ihr kehrt erneut zu uns zurÃ¼ck?~
 @1277 = ~Ich kann die Dschinns nicht mehr wittern, obwohl unsere Falle immer noch leer ist.~
 @1278 = ~Ihr habt versagt! Wir werden uns an Euren Innereien laben. GREIFT AN!~
-@1279 = ~Ihr kehrt zurück?~
-@1280 = ~Ihr seid erfolgreich zurückgekehrt. Ich kann die Kreatur in unserer Falle spüren. Her damit!~
+@1279 = ~Ihr kehrt zurÃ¼ck?~
+@1280 = ~Ihr seid erfolgreich zurÃ¼ckgekehrt. Ich kann die Kreatur in unserer Falle spÃ¼ren. Her damit!~
 @1281 = ~Mal schauen was Ihr uns mitgebracht habt...~
-@1282 = ~Ah, ich spüre den Dao-Dschinn in unserer Falle. Sehr gut.~
+@1282 = ~Ah, ich spÃ¼re den Dao-Dschinn in unserer Falle. Sehr gut.~
 @1283 = ~Ihr habt Euren Teil der Abmachung eingehalten. Diese magische Lampe ist Eure Belohnung. Ihr seid sehr erfindungsreich, <RACE>.~
-@1284 = ~Unser Geschäft ist abgeschlossen. Wir werden jetzt aufbrechen. Ihr solltet das auch tun.~
-@1285 = ~Das ist nicht der gewünschte Dschinn!~
+@1284 = ~Unser GeschÃ¤ft ist abgeschlossen. Wir werden jetzt aufbrechen. Ihr solltet das auch tun.~
+@1285 = ~Das ist nicht der gewÃ¼nschte Dschinn!~
 @1286 = ~Ihr wagt es, uns zu hintergehen? Wir werden uns an Euren Innereien laben. GREIFT AN!~
-@1287 = ~Ich habe nichts Weiteres zu sagen, bis Ihr Euren Auftrag erfüllt habt.~
+@1287 = ~Ich habe nichts Weiteres zu sagen, bis Ihr Euren Auftrag erfÃ¼llt habt.~
 @1288 = ~Ihr wagt es, uns zu bestehlen? Wir werden uns an Euren Innereien laben. GREIFT AN!~
-@1289 = ~Ich habe meine Meinung geändert. Ich werde für Euch auf keinen Fall so eine Übeltat vollbringen.~
+@1289 = ~Ich habe meine Meinung geÃ¤ndert. Ich werde fÃ¼r Euch auf keinen Fall so eine Ãœbeltat vollbringen.~
 
 
 // Dialog: High Merchant Busya
-@1400 = ~Ich habe ihren Anführer eingefangen und mich um die verbliebenen Dschinns gekümmert... Sie werden Euch nicht weiter belästigen.~
+@1400 = ~Ich habe ihren AnfÃ¼hrer eingefangen und mich um die verbliebenen Dschinns gekÃ¼mmert... Sie werden Euch nicht weiter belÃ¤stigen.~
 
 
 // Dialog: Lord Logan Coprith
-@1420 = ~Ich habe mich um Euer Problem gekümmert... Ich habe ihren Anführer eingefangen und mich um die verbliebenen Dschinns gekümmert.~
-@1421 = ~Ja. Es war schwierig, aber ich konnte ihren Anführer einkerkern und mich um die verbliebenen Dschinns kümmern.~
+@1420 = ~Ich habe mich um Euer Problem gekÃ¼mmert... Ich habe ihren AnfÃ¼hrer eingefangen und mich um die verbliebenen Dschinns gekÃ¼mmert.~
+@1421 = ~Ja. Es war schwierig, aber ich konnte ihren AnfÃ¼hrer einkerkern und mich um die verbliebenen Dschinns kÃ¼mmern.~
 
 
 // Dialog: Khan Zahraa and Dao genies
 @1450 = ~Ihr wagt es, meine Anwesenheit mit einem dieser Dschinns zu besudeln, Sterblicher?~ [a7slnt_s]
-@1451 = ~Aha! Er ist Euer persönlicher Sklave. Haltet bitte Euer Haustier unter Kontrolle, um unnötige Ablenkungen zu vermeiden.~
-@1452 = ~Ihr seid zu sehr unter meiner Würde um irgendeine feindliche Reaktion herauszufordern. Wiederholt Ihr sie jedoch, dann werde ich meinen Zorn nicht zurückhalten.~
-@1453 = ~Ich werde Euch den Unterschied zwischen uns aufzeigen, indem ich Euch und Euren erbärmlichen Herren vernichte!~
-@1454 = ~Euer Spott zeigt bei mir keine Wirkung, Dao, da ich spüre dass Ihr ebenfalls in den Dienst eines Anderen gezwungen wurdet. Ob durch Magie oder Vertrag ist letztendlich unerheblich.~
+@1451 = ~Aha! Er ist Euer persÃ¶nlicher Sklave. Haltet bitte Euer Haustier unter Kontrolle, um unnÃ¶tige Ablenkungen zu vermeiden.~
+@1452 = ~Ihr seid zu sehr unter meiner WÃ¼rde um irgendeine feindliche Reaktion herauszufordern. Wiederholt Ihr sie jedoch, dann werde ich meinen Zorn nicht zurÃ¼ckhalten.~
+@1453 = ~Ich werde Euch den Unterschied zwischen uns aufzeigen, indem ich Euch und Euren erbÃ¤rmlichen Herren vernichte!~
+@1454 = ~Euer Spott zeigt bei mir keine Wirkung, Dao, da ich spÃ¼re dass Ihr ebenfalls in den Dienst eines Anderen gezwungen wurdet. Ob durch Magie oder Vertrag ist letztendlich unerheblich.~
 @1455 = ~Beruhigt Euch bitte! Es gibt keinen Grund zur Feindseligkeit.~
-@1456 = ~Das könnte interessant werden. Lass Dich nicht unterkriegen, Afaaq!~
+@1456 = ~Das kÃ¶nnte interessant werden. Lass Dich nicht unterkriegen, Afaaq!~
 @1457 = ~Geht mir aus den Augen, Dschinn!~
 @1458 = ~Eure Art ist hier nicht willkommen. Verschwindet!~
-@1459 = ~Haltet doch bitte Euren Dschinn an der kurzen Leine, um Missverständnisse zu vermeiden, Sterblicher.~
+@1459 = ~Haltet doch bitte Euren Dschinn an der kurzen Leine, um MissverstÃ¤ndnisse zu vermeiden, Sterblicher.~
 
 
 // Dialog: Trademeet townsfolk
 @1500 = ~Ahhh! Ihr seid die Dschinns vom Zelt! Ahhh!~
 @1501 = ~Ieeee! Du bist einer der Dschinns! Bitte tut mir nichts!~
 @1502 = ~Ieeee! Ist das einer der Dschinns? Bitte tut mir nichts!~
-@1503 = ~Warum hat Fürst Logan diese verdammten Dschinns nicht schon früher verjagt. Wenn es nach mir ginge...~
-@1504 = ~Ahh! Das ist einer von ihnen! Ich habe nur Spaß gemacht. Entschuldigt mich bitte.~
+@1503 = ~Warum hat FÃ¼rst Logan diese verdammten Dschinns nicht schon frÃ¼her verjagt. Wenn es nach mir ginge...~
+@1504 = ~Ahh! Das ist einer von ihnen! Ich habe nur SpaÃŸ gemacht. Entschuldigt mich bitte.~
 
 // Dialog: Side-quest "Adratha's remains"
-@1550 = ~Bitte, Ihr müsst mir helfen!~
-@1551 = ~Erlöst mich aus diesen Qualen. Meine Seele ist in der dunklen Magie dieses Ortes gefangen.~
-@1552 = ~Ich flehe Euch an, Fremder. Bringt meine sterblichen Überreste fort von diesem verfluchten Ort. Bitte...~
-@1553 = ~Ich bin...war Adratha. Eines Nachts drangen diese Monster in meine Hütte ein und töteten mich auf grausame Art und Weise. Als ich wieder zu mir kam, war ich in dieser albtraumhaften Landschaft gefangen ohne einer Möglichkeit, ihr zu entfliehen.~
-@1554 = ~Seht Ihr nicht die grotesken Formen der toten Stämme, die einst stattliche Bäume waren? Spürt Ihr nicht die unerträgliche Hitze, die von dieser öden Landschaft aufsteigt?~
-@1555 = ~Bitte, Fremder! Erlöst mich aus diesen Qualen.~
-@1556 = ~Bringt meine sterblichen Überreste fort von diesem verfluchten Ort und bestattet sie in heimatlicher Erde. Vielleicht kann ich dann etwas Frieden finden.~
+@1550 = ~Bitte, Ihr mÃ¼sst mir helfen!~
+@1551 = ~ErlÃ¶st mich aus diesen Qualen. Meine Seele ist in der dunklen Magie dieses Ortes gefangen.~
+@1552 = ~Ich flehe Euch an, Fremder. Bringt meine sterblichen Ãœberreste fort von diesem verfluchten Ort. Bitte...~
+@1553 = ~Ich bin...war Adratha. Eines Nachts drangen diese Monster in meine HÃ¼tte ein und tÃ¶teten mich auf grausame Art und Weise. Als ich wieder zu mir kam, war ich in dieser albtraumhaften Landschaft gefangen ohne einer MÃ¶glichkeit, ihr zu entfliehen.~
+@1554 = ~Seht Ihr nicht die grotesken Formen der toten StÃ¤mme, die einst stattliche BÃ¤ume waren? SpÃ¼rt Ihr nicht die unertrÃ¤gliche Hitze, die von dieser Ã¶den Landschaft aufsteigt?~
+@1555 = ~Bitte, Fremder! ErlÃ¶st mich aus diesen Qualen.~
+@1556 = ~Bringt meine sterblichen Ãœberreste fort von diesem verfluchten Ort und bestattet sie in heimatlicher Erde. Vielleicht kann ich dann etwas Frieden finden.~
 @1557 = ~Wer seid Ihr?~
 @1558 = ~Wie kann ich Euch helfen?~
 @1559 = ~Ich habe keine Zeit, mich mit Geistern abzugeben.~
-@1560 = ~Aber dieser Ort sieht so wunderschön aus.~
-@1561 = ~Ich habe hier die sterblichen Überreste der Kräuterfrau Adratha. Sie bat mich, sie in heimatlicher Erde zu bestatten.~
-@1562 = ~Das habt Ihr gut gemacht. Ich kann sie entsprechend der druidischen Traditionen im Hain begraben. Das sollte ihrer gequälten Seele etwas Frieden geben.~
+@1560 = ~Aber dieser Ort sieht so wunderschÃ¶n aus.~
+@1561 = ~Ich habe hier die sterblichen Ãœberreste der KrÃ¤uterfrau Adratha. Sie bat mich, sie in heimatlicher Erde zu bestatten.~
+@1562 = ~Das habt Ihr gut gemacht. Ich kann sie entsprechend der druidischen Traditionen im Hain begraben. Das sollte ihrer gequÃ¤lten Seele etwas Frieden geben.~
 @1563 = ~Bitte nehmt das als Dank.~
-@1564 = ~Ich habe hier die sterblichen Überreste der Kräuterfrau Adratha aus dem Druidenhain. Könnt Ihr ihrer Seele etwas Frieden bringen?~
-@1565 = ~Ja, das kann ich wohl. Ich werde mich persönlich darum kümmern. Ihre Überreste werden auf dem Friedhof der Stadt ihre letzte Ruhe finden.~
-@1566 = ~Als Dank für diese gute Tat gebe ich Euch diese Schriftrolle.~
+@1564 = ~Ich habe hier die sterblichen Ãœberreste der KrÃ¤uterfrau Adratha aus dem Druidenhain. KÃ¶nnt Ihr ihrer Seele etwas Frieden bringen?~
+@1565 = ~Ja, das kann ich wohl. Ich werde mich persÃ¶nlich darum kÃ¼mmern. Ihre Ãœberreste werden auf dem Friedhof der Stadt ihre letzte Ruhe finden.~
+@1566 = ~Als Dank fÃ¼r diese gute Tat gebe ich Euch diese Schriftrolle.~
 
 // Misc. strings
-@1600 = ~Adrathas Überreste~
-@1601 = ~Nach der Skelettstruktur und den Gegenständen in der Nähe ihrer Ruhestätte zu urteilen vermutet Ihr, dass diese Knochen die Überreste von Adratha, der Kräuterfrau des Druidenhains ist.~
+@1600 = ~Adrathas Ãœberreste~
+@1601 = ~Nach der Skelettstruktur und den GegenstÃ¤nden in der NÃ¤he ihrer RuhestÃ¤tte zu urteilen vermutet Ihr, dass diese Knochen die Ãœberreste von Adratha, der KrÃ¤uterfrau des Druidenhains ist.~
 @1602 = ~Dao-Dschinn-Falle~
-@1603 = ~Diese ungewöhnlich schwere Büchse strahlt mächtige Magie aus, die es Euch erlaubt, die Seele der anvisierten Kreatur einzufangen. Der Anführer der Rakshasa hat Euch befohlen, die Büchse nur an Khan Zahraa zu benutzen.~
-@1604 = ~Diese ungewöhnlich schwere Büchse strahlt mächtige Magie aus und beinhaltet die eingekerkerte Seele einer Kreatur.~
+@1603 = ~Diese ungewÃ¶hnlich schwere BÃ¼chse strahlt mÃ¤chtige Magie aus, die es Euch erlaubt, die Seele der anvisierten Kreatur einzufangen. Der AnfÃ¼hrer der Rakshasa hat Euch befohlen, die BÃ¼chse nur an Khan Zahraa zu benutzen.~
+@1604 = ~Diese ungewÃ¶hnlich schwere BÃ¼chse strahlt mÃ¤chtige Magie aus und beinhaltet die eingekerkerte Seele einer Kreatur.~
 @1605 = ~Magisches Portal~
-@1606 = ~Ihr tretet aus dem Portal und fühlt eine dunkle bedrohliche Aura, die von dem magischen Kreis ausstrahlt. Ihr seid Euch ziemlich sicher, dass die Erzeuger des Portals bereits wissen, dass Ihr hier seid.~
+@1606 = ~Ihr tretet aus dem Portal und fÃ¼hlt eine dunkle bedrohliche Aura, die von dem magischen Kreis ausstrahlt. Ihr seid Euch ziemlich sicher, dass die Erzeuger des Portals bereits wissen, dass Ihr hier seid.~
 @1607 = ~Mahel~
-@1608 = ~Rakshasajäger~
+@1608 = ~RakshasajÃ¤ger~
 @1609 = ~Narantaka~
-@1610 = ~Das Portal wird durch eine Art Kraftfeld geschützt, welches Eure Versuche blockiert, es zu betreten.~
+@1610 = ~Das Portal wird durch eine Art Kraftfeld geschÃ¼tzt, welches Eure Versuche blockiert, es zu betreten.~
 
 
 // journal entries
 @1800 = ~Ein Katz-und-Maus-Spiel
 
-Nachdem ich Ihtafeer und ihre zwei Brüder besiegt habe, habe ich ein offenes magisches Portal gefunden, welches immer noch aktiv ist.
+Nachdem ich Ihtafeer und ihre zwei BrÃ¼der besiegt habe, habe ich ein offenes magisches Portal gefunden, welches immer noch aktiv ist.
 
 Vielleicht kann ich der ganzen Geschichte auf den Grund gehen, wenn ich hindurchschreite.~
 @1801 = ~Ein Katz-und-Maus-Spiel
 
-Ich habe das Portal betreten, das sich geöffnet hat nachdem ich die getarnten Rakshasa im Druidenhain angegriffen habe.
+Ich habe das Portal betreten, das sich geÃ¶ffnet hat nachdem ich die getarnten Rakshasa im Druidenhain angegriffen habe.
 
 Es transportierte mich in ein unbekanntes Gebiet. Ich sollte wachsam sein, obwohl die unmittelbare Umgebung ziemlich ruhig erscheint.~
 @1802 = ~Ein Katz-und-Maus-Spiel
 
-Ich bin einem Jagdtrupp Rakshasas begegnet, der vom Rakshasa Mahel angeführt wird. Anstatt mich zu töten oder zu jagen, bot er mir an, für ihn zu arbeiten.
+Ich bin einem Jagdtrupp Rakshasas begegnet, der vom Rakshasa Mahel angefÃ¼hrt wird. Anstatt mich zu tÃ¶ten oder zu jagen, bot er mir an, fÃ¼r ihn zu arbeiten.
 
-Ich soll nach Handelstreff zurückkehren und die Seele des Dao-Dschinn Anführers Khan Zahraa in eine magische Büchse einkerkern. Sobald die Aufgabe erfüllt ist, sollte ich zu den Rakshasas zurückkehren, um mir meine Belohnung abzuholen.~
+Ich soll nach Handelstreff zurÃ¼ckkehren und die Seele des Dao-Dschinn AnfÃ¼hrers Khan Zahraa in eine magische BÃ¼chse einkerkern. Sobald die Aufgabe erfÃ¼llt ist, sollte ich zu den Rakshasas zurÃ¼ckkehren, um mir meine Belohnung abzuholen.~
 @1803 = ~Ein Katz-und-Maus-Spiel
 
-Ich habe die Rakshasa irgendwie beleidigt, was dazu führte, dass sie mich angriffen.~
+Ich habe die Rakshasa irgendwie beleidigt, was dazu fÃ¼hrte, dass sie mich angriffen.~
 @1804 = ~Ein Katz-und-Maus-Spiel
 
-Der Anführer der Rakshasas fühlte sich durch mein Verhalten beleidigt und griff mich sofort an.~
+Der AnfÃ¼hrer der Rakshasas fÃ¼hlte sich durch mein Verhalten beleidigt und griff mich sofort an.~
 @1810 = ~Ein Katz-und-Maus-Spiel
 
-Nachdem ich die eingekerkerte Seele des Dschinns bei den Rakshasas abgeliefert hatte, belohnte mich ihr Anführer mit einer magischen Lampe. Ich bin sehr gespannt, was sie beinhaltet.~
+Nachdem ich die eingekerkerte Seele des Dschinns bei den Rakshasas abgeliefert hatte, belohnte mich ihr AnfÃ¼hrer mit einer magischen Lampe. Ich bin sehr gespannt, was sie beinhaltet.~
 @1811 = ~Ein Katz-und-Maus-Spiel
 
-Ich habe es geschaft, eine magische Lampe vom Anführer der Rakshasas zu stehlen. Ich bin sehr gespannt, was sie beinhaltet.~
+Ich habe es geschaft, eine magische Lampe vom AnfÃ¼hrer der Rakshasas zu stehlen. Ich bin sehr gespannt, was sie beinhaltet.~
 @1812 = ~Ein Katz-und-Maus-Spiel
 
-Nachdem ich den Anführer der Rakshasas besiegt hatte, fand ich eine magische Lampe in seinem Besitz. Ich bin sehr gespannt, was sie beinhaltet.~
+Nachdem ich den AnfÃ¼hrer der Rakshasas besiegt hatte, fand ich eine magische Lampe in seinem Besitz. Ich bin sehr gespannt, was sie beinhaltet.~
 @1820 = ~Ein Katz-und-Maus-Spiel
 
-Die magische Lampe der Rakshasas erwies sich als ein Behältnis eines eingeschlossenen Dschinns. Das ist ein kostbares Artefakt.
+Die magische Lampe der Rakshasas erwies sich als ein BehÃ¤ltnis eines eingeschlossenen Dschinns. Das ist ein kostbares Artefakt.
 
-Ich frage mich, wer so mächtig war, solch eine Kreatur zu versklaven. Hoffentlich kann der Dschinn meine Neugier befriedigen.~
+Ich frage mich, wer so mÃ¤chtig war, solch eine Kreatur zu versklaven. Hoffentlich kann der Dschinn meine Neugier befriedigen.~
 
 
-@1850 = ~Adrathas sterbliche Überreste
+@1850 = ~Adrathas sterbliche Ãœberreste
 
-Die gequälte Seele der Kräuterfrau Adratha kam zu mir und flehte mich an, ihre sterblichen Überreste in heimatlicher Erde beizusetzen.
+Die gequÃ¤lte Seele der KrÃ¤uterfrau Adratha kam zu mir und flehte mich an, ihre sterblichen Ãœberreste in heimatlicher Erde beizusetzen.
 
 Vielleicht kann mit einer der Druiden oder ein Priester dabei behilflich sein.~
 
-@1851 = ~Adrathas sterbliche Überreste
+@1851 = ~Adrathas sterbliche Ãœberreste
 
-Die gequälte Seele der Kräuterfrau Adratha kam zu mir und flehte mich an, ihre sterblichen Überreste in heimatlicher Erde beizusetzen.
+Die gequÃ¤lte Seele der KrÃ¤uterfrau Adratha kam zu mir und flehte mich an, ihre sterblichen Ãœberreste in heimatlicher Erde beizusetzen.
 
 Ich bin daran eigentlich nicht wirklich interessiert, aber es kann auch nicht schaden, ihrer Bitte nachzukommen. Vielleicht kann mit einer der Druiden oder ein Priester dabei behilflich sein.~
 
-@1860 = ~Adrathas sterbliche Überreste
+@1860 = ~Adrathas sterbliche Ãœberreste
 
-Ich habe Adrathas Überreste Meister Verthan vom Druidenhain übergeben. Er war sichtlich zufrieden und belohnte mich mit einem wertvollen magischen Trank.~
+Ich habe Adrathas Ãœberreste Meister Verthan vom Druidenhain Ã¼bergeben. Er war sichtlich zufrieden und belohnte mich mit einem wertvollen magischen Trank.~
 
-@1861 = ~Adrathas sterbliche Überreste
+@1861 = ~Adrathas sterbliche Ãœberreste
 
-Ich habe Adrathas Überreste dem Priester im Tempel der Waukeen von Handelstreff, Übergold Renwellyn, übergeben. Er dankte mir mit einer wertvollen magischen Schutzformel.~
+Ich habe Adrathas Ãœberreste dem Priester im Tempel der Waukeen von Handelstreff, Ãœbergold Renwellyn, Ã¼bergeben. Er dankte mir mit einer wertvollen magischen Schutzformel.~

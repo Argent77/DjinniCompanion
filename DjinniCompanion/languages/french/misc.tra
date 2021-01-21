@@ -1,11 +1,11 @@
-// -*- coding: cp1252 -*-
+// -*- coding: utf-8 -*-
 // *** Textes divers ne s'adaptant pas ailleurs (use index 100 - 999) ***
 
-// Textes liés aux capacités de pistage des rôdeurs
-@100 = ~rakshasas et diverses créatures des bois~
-@101 = ~diverses créatures résistantes au feu, comme les méphits, les élémentaux de feu ou les chiens de l'enfer~
-@102 = ~Des prédateurs, comme des panthères, des serpents géants ou des créatures apparentés aux serpents~
-@103 = ~araignées et ombres des roches~
+// Textes liÃ©s aux capacitÃ©s de pistage des rÃ´deurs
+@100 = ~rakshasas et diverses crÃ©atures des bois~
+@101 = ~diverses crÃ©atures rÃ©sistantes au feu, comme les mÃ©phits, les Ã©lÃ©mentaux de feu ou les chiens de l'enfer~
+@102 = ~Des prÃ©dateurs, comme des panthÃ¨res, des serpents gÃ©ants ou des crÃ©atures apparentÃ©s aux serpents~
+@103 = ~araignÃ©es et ombres des roches~
 
 // Lignes communes qui ne sont pas disponibles dans tous les jeux pris en charge
 @200 = ~*Boit une potion*~

@@ -1,205 +1,205 @@
-// -*- coding: cp1252 -*-
+// -*- coding: utf-8 -*-
 // *** Strings related to Quest 4: "The Gift of Freedom" (index 4000...4999)
 
 // dialog lines (vanilla game)
-@4000 = ~Also... lasst mich das mal klarstellen. Das Schwert Schwarzschnitter ist der Schlüssel, um Euch von Eurer Strafe zu erlösen. Und Afaaq ebenfalls?~
-@4001 = ~Wenn ich Euch also den Schwarzschnitter gäbe, würdet Ihr dann Afaaq aus seiner Verzauberung befreien können? Und das Schwert würde auch Euch von Eurer Strafe erlösen?~
-@4002 = ~Ich werde Eure Entscheidung nicht mittragen, <CHARNAME>. Ihr müsst diese Tat ohne mich vollbringen.~
-@4003 = ~Aber es scheint, als ob Euch so ein Schicksal bereits vertraut ist. Ich spüre jemanden in Eurer Mitte, der sich in einer ähnlichen Situation befindet.~
-@4004 = ~Ja. Er heißt Afaaq und ist an eine magische Lampe gebunden.~
+@4000 = ~Also... lasst mich das mal klarstellen. Das Schwert Schwarzschnitter ist der SchlÃ¼ssel, um Euch von Eurer Strafe zu erlÃ¶sen. Und Afaaq ebenfalls?~
+@4001 = ~Wenn ich Euch also den Schwarzschnitter gÃ¤be, wÃ¼rdet Ihr dann Afaaq aus seiner Verzauberung befreien kÃ¶nnen? Und das Schwert wÃ¼rde auch Euch von Eurer Strafe erlÃ¶sen?~
+@4002 = ~Ich werde Eure Entscheidung nicht mittragen, <CHARNAME>. Ihr mÃ¼sst diese Tat ohne mich vollbringen.~
+@4003 = ~Aber es scheint, als ob Euch so ein Schicksal bereits vertraut ist. Ich spÃ¼re jemanden in Eurer Mitte, der sich in einer Ã¤hnlichen Situation befindet.~
+@4004 = ~Ja. Er heiÃŸt Afaaq und ist an eine magische Lampe gebunden.~
 @4005 = ~Ich bin wissbegierig, was ihn in diese Lage gebracht hat.~
-@4006 = ~Seid gegrüßt, Afaaq. Ich heiße Euch in meinem kleinen Kerker willkommen. Es scheint als ob unsereiner dazu verurteilt ist, die Launen höherer Mächte zu erdulden.~ [A7SLNT_S]
-@4007 = ~Ihr habt Recht. Allerdings erlaubt mir mein Gefängnis mehr Freiheiten, denn ich bin an eine Lampe gebunden, die sich im Besitz von <CHARNAME> befindet.~
-@4008 = ~Ja, ich verstehe... Dieser Umstand könnte Euch jedoch einen Pfad in die Freiheit eröffnen.~
-@4009 = ~Es gibt nichts, was ich mir mehr wünschen würde. Aber wie ist das möglich?~
-@4010 = ~Das Kind Bhaals besitzt Macht in diesem Reich. Möglicherweise genug Macht, um die Verzauberungen zu brechen, die Euch an die Lampe binden.~
-@4011 = ~Er scheint an ein Artefakt der Macht gebunden zu sein. Hmm... dieser Zustand könnte ihm einen Pfad in die Freiheit ermöglichen.~
-@4012 = ~Ihr besitzt Macht in diesem Reich. Möglicherweise genug Macht, um die Verzauberungen zu brechen, die ihn an die Lampe bindet.~
-@4013 = ~Aber es gibt bestimmte... Umstände, die mich davon abhalten. Bis sie überwunden wurden, habe ich nicht die Macht irgendetwas zu tun.~
-@4014 = ~Was für Umstände sind das?~
-@4015 = ~Ja, das würde ich. Euch wurde der Schlüssel gegeben, mit dessen Hilfe Ihr mein Leben beenden könnt... und auch das wäre eine Erlösung.~
-@4016 = ~Nein, <PRO_LADYLORD>. Tut das nicht. Es muss eine andere Lösung geben.~
+@4006 = ~Seid gegrÃ¼ÃŸt, Afaaq. Ich heiÃŸe Euch in meinem kleinen Kerker willkommen. Es scheint als ob unsereiner dazu verurteilt ist, die Launen hÃ¶herer MÃ¤chte zu erdulden.~ [A7SLNT_S]
+@4007 = ~Ihr habt Recht. Allerdings erlaubt mir mein GefÃ¤ngnis mehr Freiheiten, denn ich bin an eine Lampe gebunden, die sich im Besitz von <CHARNAME> befindet.~
+@4008 = ~Ja, ich verstehe... Dieser Umstand kÃ¶nnte Euch jedoch einen Pfad in die Freiheit erÃ¶ffnen.~
+@4009 = ~Es gibt nichts, was ich mir mehr wÃ¼nschen wÃ¼rde. Aber wie ist das mÃ¶glich?~
+@4010 = ~Das Kind Bhaals besitzt Macht in diesem Reich. MÃ¶glicherweise genug Macht, um die Verzauberungen zu brechen, die Euch an die Lampe binden.~
+@4011 = ~Er scheint an ein Artefakt der Macht gebunden zu sein. Hmm... dieser Zustand kÃ¶nnte ihm einen Pfad in die Freiheit ermÃ¶glichen.~
+@4012 = ~Ihr besitzt Macht in diesem Reich. MÃ¶glicherweise genug Macht, um die Verzauberungen zu brechen, die ihn an die Lampe bindet.~
+@4013 = ~Aber es gibt bestimmte... UmstÃ¤nde, die mich davon abhalten. Bis sie Ã¼berwunden wurden, habe ich nicht die Macht irgendetwas zu tun.~
+@4014 = ~Was fÃ¼r UmstÃ¤nde sind das?~
+@4015 = ~Ja, das wÃ¼rde ich. Euch wurde der SchlÃ¼ssel gegeben, mit dessen Hilfe Ihr mein Leben beenden kÃ¶nnt... und auch das wÃ¤re eine ErlÃ¶sung.~
+@4016 = ~Nein, <PRO_LADYLORD>. Tut das nicht. Es muss eine andere LÃ¶sung geben.~
 @4017 = ~Es ist Eure Entscheidung, <PRO_LADYLORD>.~
-@4018 = ~Vielleicht war ich etwas voreilig mit meiner Entscheidung. Es muss auch eine andere Möglichkeit geben, um Euch zu erlösen. Warum seid Ihr an diesen Ort gebunden?~
+@4018 = ~Vielleicht war ich etwas voreilig mit meiner Entscheidung. Es muss auch eine andere MÃ¶glichkeit geben, um Euch zu erlÃ¶sen. Warum seid Ihr an diesen Ort gebunden?~
 @4019 = ~Ich habe mich entschieden. Bereitet Euch auf Euren Tod vor!~
-@4020 = ~Ich würde meinen Tod durchaus willkommen heißen, solltet Ihr dazu in der Lage sein.~
-@4021 = ~Vielleicht war ich etwas voreilig mit meiner Entscheidung. Es muss auch eine andere Möglichkeit geben, um Euch zu erlösen. Könntet Ihr mir bitte noch einmal das Rätsel vortragen?~
-@4022 = ~Da Ihr mir geholfen habt, werde ich im Gegenzug Eurem Gefährten helfen.~
-@4023 = ~Eine Verzauberung dieser Größenordnung zu brechen ist nicht einfach. Habt Ihr etwas in Eurem Besitz, das mir bei meinem Versuch helfen könnte?~
-@4024 = ~Ja, ich habe einen magischen Kristall bei mir, der Afaaqs versiegelte Kräfte beinhaltet.~
-@4025 = ~Leider nicht. Aber Ihr habt erwähnt, dass ich in diesem Reich Macht besitze...~
-@4026 = ~Genau danach habe ich gesucht. Der direkte Zugang zu Afaaqs spiritueller Essenz erlaubt es mir, seine magischen Fesseln zu lösen.~
+@4020 = ~Ich wÃ¼rde meinen Tod durchaus willkommen heiÃŸen, solltet Ihr dazu in der Lage sein.~
+@4021 = ~Vielleicht war ich etwas voreilig mit meiner Entscheidung. Es muss auch eine andere MÃ¶glichkeit geben, um Euch zu erlÃ¶sen. KÃ¶nntet Ihr mir bitte noch einmal das RÃ¤tsel vortragen?~
+@4022 = ~Da Ihr mir geholfen habt, werde ich im Gegenzug Eurem GefÃ¤hrten helfen.~
+@4023 = ~Eine Verzauberung dieser GrÃ¶ÃŸenordnung zu brechen ist nicht einfach. Habt Ihr etwas in Eurem Besitz, das mir bei meinem Versuch helfen kÃ¶nnte?~
+@4024 = ~Ja, ich habe einen magischen Kristall bei mir, der Afaaqs versiegelte KrÃ¤fte beinhaltet.~
+@4025 = ~Leider nicht. Aber Ihr habt erwÃ¤hnt, dass ich in diesem Reich Macht besitze...~
+@4026 = ~Genau danach habe ich gesucht. Der direkte Zugang zu Afaaqs spiritueller Essenz erlaubt es mir, seine magischen Fesseln zu lÃ¶sen.~
 @4027 = ~Es wird nur wenige Augenblicke dauern...~
 @4028 = ~Ja... Ihr seid eng an diesen Ort gebunden. Er ist praktisch ein Teil von Euch.~
-@4029 = ~Aber ohne die Möglichkeit, auf Afaaqs spirituelle Essenz zuzugreifen, könnte es etwas gefährlich werden.~
-@4030 = ~Was kann mir passieren? Was habt Ihr überhaupt vor?~
+@4029 = ~Aber ohne die MÃ¶glichkeit, auf Afaaqs spirituelle Essenz zuzugreifen, kÃ¶nnte es etwas gefÃ¤hrlich werden.~
+@4030 = ~Was kann mir passieren? Was habt Ihr Ã¼berhaupt vor?~
 @4031 = ~Dieses Risiko gehe ich ein. Fangt bitte an!~
-@4032 = ~Euere göttliche Verbundenheit dient mir als Quelle der Macht, um die Verzauberungen von Afaaqs magischem Gefängnis zu brechen. Falls die Lampe aber mit weiteren Schutzzaubern belegt ist, werden sie auf Euch zurückgeworfen.~
-@4033 = ~Auch wenn ich mir sicher bin, dass sie keine Lebensgefahr für Euch bedeuten, solltet Ihr Euch auf unangenehme Überraschungen gefasst machen.~
+@4032 = ~Euere gÃ¶ttliche Verbundenheit dient mir als Quelle der Macht, um die Verzauberungen von Afaaqs magischem GefÃ¤ngnis zu brechen. Falls die Lampe aber mit weiteren Schutzzaubern belegt ist, werden sie auf Euch zurÃ¼ckgeworfen.~
+@4033 = ~Auch wenn ich mir sicher bin, dass sie keine Lebensgefahr fÃ¼r Euch bedeuten, solltet Ihr Euch auf unangenehme Ãœberraschungen gefasst machen.~
 @4034 = ~Ihr verlangt zu viel von mir. Ich werde mein Leben nicht riskieren, solange ich selbst nach meiner Seele suche.~
 @4035 = ~Das ist eine schwierige Entscheidung. Gebt mir bitte einen Moment zum Nachdenken.~
 @4036 = ~Seid Ihr sicher, <PRO_LADYLORD>? Ihr bekommt keine weitere Gelegenheit, nachdem ich diesen Ort verlassen habe.~
 @4037 = ~Ja. Meine Entscheidung steht fest.~
-@4038 = ~Vielleicht sollte ich sie noch einmal überdenken. Könntet Ihr mir einen Moment zum Nachdenken geben?~
-@4039 = ~Wie Ihr wünscht. Ich bin frei und wünsche Euch alles Gute in allen Prüfungen, die noch vor Euch liegen.~
+@4038 = ~Vielleicht sollte ich sie noch einmal Ã¼berdenken. KÃ¶nntet Ihr mir einen Moment zum Nachdenken geben?~
+@4039 = ~Wie Ihr wÃ¼nscht. Ich bin frei und wÃ¼nsche Euch alles Gute in allen PrÃ¼fungen, die noch vor Euch liegen.~
 @4040 = ~Ich werde solange warten, bis Ihr eine Entscheidung getroffen oder diesen Teil des Reiches verlassen habt. Lasst Euch aber nicht zu viel Zeit.~
 @4041 = ~Habt Ihr inzwischen eine Entscheidung getroffen, <PRO_LADYLORD>?~ [A7SLNT_S]
-@4042 = ~Ich habe diesen magischen Kristall gefunden, der Afaaqs versiegelte Kräfte beinhaltet. Könnte er Euch nützlich sein?~
+@4042 = ~Ich habe diesen magischen Kristall gefunden, der Afaaqs versiegelte KrÃ¤fte beinhaltet. KÃ¶nnte er Euch nÃ¼tzlich sein?~
 @4043 = ~Ja, das habe ich. Ich muss leider ablehnen. Mein eigenes Wohlergehen ist mir wichtiger.~
 @4044 = ~Gebt mir bitte noch etwas Zeit zum Nachdenken.~
-@4045 = ~Afaaqs magisches Gefängnis scheint sich nicht in Eurem Besitz zu befinden. Ohne die Lampe ist es mir nicht möglich, die Verzauberung zu brechen.~
-@4046 = ~Ich muss sie verlegt haben. Wartet bitte einen Augenblick, während ich sie suche.~
+@4045 = ~Afaaqs magisches GefÃ¤ngnis scheint sich nicht in Eurem Besitz zu befinden. Ohne die Lampe ist es mir nicht mÃ¶glich, die Verzauberung zu brechen.~
+@4046 = ~Ich muss sie verlegt haben. Wartet bitte einen Augenblick, wÃ¤hrend ich sie suche.~
 @4047 = ~Sehr gut. Dann werde ich den Zauber vorbereiten.~
-@4048 = ~Ich fange mit der Beschwörung an...~ [A7SLNT_S]
-@4049 = ~Sehr gut. Dann fange ich mit der Beschwörung an...~
+@4048 = ~Ich fange mit der BeschwÃ¶rung an...~ [A7SLNT_S]
+@4049 = ~Sehr gut. Dann fange ich mit der BeschwÃ¶rung an...~
 @4050 = ~Es ist vollbracht.~ [A7SLNT_S]
-@4051 = ~Ich danke Euch nochmals für meine Freiheit und wünsche Euch für die bevorliegenden Prüfungen alles Gute, <PRO_LADYLORD>. Und möge Eure Zukunft hell erleuchtet sein, Afaaq.~
-@4052 = ~Es ist vollbracht, und Ihr scheint es ohne größeren Schaden überstanden zu haben.~ [A7SLNT_S]
+@4051 = ~Ich danke Euch nochmals fÃ¼r meine Freiheit und wÃ¼nsche Euch fÃ¼r die bevorliegenden PrÃ¼fungen alles Gute, <PRO_LADYLORD>. Und mÃ¶ge Eure Zukunft hell erleuchtet sein, Afaaq.~
+@4052 = ~Es ist vollbracht, und Ihr scheint es ohne grÃ¶ÃŸeren Schaden Ã¼berstanden zu haben.~ [A7SLNT_S]
 // additional lines for the light version
 @4080 = ~Da Ihr mir geholfen habt, werde ich Euch auch helfen.~
-@4081 = ~Ihr scheint einen meiner eigenen Art in Eurer Mitte zu haben. Das Schwert, welches Ihr geopfert habt, um mir meine Freiheit zu ermöglichen, gibt mir auch die Kraft, Euren Dschinn von seinen Ketten zu befreien.~
+@4081 = ~Ihr scheint einen meiner eigenen Art in Eurer Mitte zu haben. Das Schwert, welches Ihr geopfert habt, um mir meine Freiheit zu ermÃ¶glichen, gibt mir auch die Kraft, Euren Dschinn von seinen Ketten zu befreien.~
 @4082 = ~Dann werde ich den Zauber vorbereiten...~
 @4083 = ~Es wird nur wenige Augenblicke dauern...~ [A7SLNT_S]
 @4084 = ~Es ist vollbracht.~ [A7SLNT_S]
 
 // dialog lines (QuestPack's Hell Trials installed)
-@4100 = ~Also... lasst mich das mal klarstellen. Das Schwert Schwarzschnitter ist der Schlüssel, um Euch von Eurer Strafe zu erlösen. Und Afaaq ebenfalls?~
-@4101 = ~Wenn ich Euch also den Schwarzschnitter gäbe, würdet Ihr dann Afaaq aus seiner Verzauberung befreien können? Und das Schwert würde auch Euch von Eurer Strafe erlösen?~
+@4100 = ~Also... lasst mich das mal klarstellen. Das Schwert Schwarzschnitter ist der SchlÃ¼ssel, um Euch von Eurer Strafe zu erlÃ¶sen. Und Afaaq ebenfalls?~
+@4101 = ~Wenn ich Euch also den Schwarzschnitter gÃ¤be, wÃ¼rdet Ihr dann Afaaq aus seiner Verzauberung befreien kÃ¶nnen? Und das Schwert wÃ¼rde auch Euch von Eurer Strafe erlÃ¶sen?~
 @4102 = ~Es ist vollbracht, <PRO_LADYLORD>.~
-@4103 = ~Ich werde Eure Entscheidung nicht mittragen, <CHARNAME>. Ihr müsst diese Tat ohne mich vollbringen.~
-@4104 = ~Ich wünsche Euch viel Glück in Euren bevorstehenden Prüfungen. Auf ein baldiges Wiedersehen.~
-@4105 = ~Aber es scheint, als ob Euch so ein Schicksal bereits vertraut ist. Ich spüre jemanden in Eurer Mitte, der sich in einer ähnlichen Situation befindet.~
-@4106 = ~Ja. Er heißt Afaaq und ist an eine magische Lampe gebunden.~
+@4103 = ~Ich werde Eure Entscheidung nicht mittragen, <CHARNAME>. Ihr mÃ¼sst diese Tat ohne mich vollbringen.~
+@4104 = ~Ich wÃ¼nsche Euch viel GlÃ¼ck in Euren bevorstehenden PrÃ¼fungen. Auf ein baldiges Wiedersehen.~
+@4105 = ~Aber es scheint, als ob Euch so ein Schicksal bereits vertraut ist. Ich spÃ¼re jemanden in Eurer Mitte, der sich in einer Ã¤hnlichen Situation befindet.~
+@4106 = ~Ja. Er heiÃŸt Afaaq und ist an eine magische Lampe gebunden.~
 @4107 = ~Ich bin wissbegierig, was ihn in diese Lage gebracht hat.~
-@4108 = ~Seid gegrüßt, Afaaq. Ich heiße Euch in meinem kleinen Kerker willkommen. Es scheint als ob unsereiner dazu verurteilt ist, die Launen höherer Mächte zu erdulden.~ [A7SLNT_S]
-@4109 = ~Ihr habt Recht. Allerdings erlaubt mir mein Gefängnis mehr Freiheiten, denn ich bin an eine Lampe gebunden, die sich im Besitz von <CHARNAME> befindet.~
-@4110 = ~Ja, ich verstehe... Dieser Umstand könnte Euch jedoch einen Pfad in die Freiheit eröffnen.~
-@4111 = ~Es gibt nichts, was ich mir mehr wünschen würde. Aber wie ist das möglich?~
-@4112 = ~Das Kind Bhaals besitzt Macht in diesem Reich. Möglicherweise genug Macht, um die Verzauberungen zu brechen, die Euch an die Lampe binden.~
-@4113 = ~Er scheint an ein Artefakt der Macht gebunden zu sein. Hmm... dieser Zustand könnte ihm einen Pfad in die Freiheit ermöglichen.~
-@4114 = ~Ihr besitzt Macht in diesem Reich. Möglicherweise genug Macht, um die Verzauberungen zu brechen, die ihn an die Lampe bindet.~
-@4115 = ~Aber es gibt bestimmte... Umstände, die mich davon abhalten. Bis sie überwunden wurden, habe ich nicht die Macht irgendetwas zu tun.~
-@4116 = ~Was für Umstände sind das?~
-@4117 = ~Ja, wirklich. Euch wurde der Schlüssel gegeben, mit dessen Hilfe Ihr mein Leben beenden könnt... und auch das wäre eine Erlösung.~
-@4118 = ~Nein, <PRO_LADYLORD>. Tut das nicht. Es muss eine andere Lösung geben.~
+@4108 = ~Seid gegrÃ¼ÃŸt, Afaaq. Ich heiÃŸe Euch in meinem kleinen Kerker willkommen. Es scheint als ob unsereiner dazu verurteilt ist, die Launen hÃ¶herer MÃ¤chte zu erdulden.~ [A7SLNT_S]
+@4109 = ~Ihr habt Recht. Allerdings erlaubt mir mein GefÃ¤ngnis mehr Freiheiten, denn ich bin an eine Lampe gebunden, die sich im Besitz von <CHARNAME> befindet.~
+@4110 = ~Ja, ich verstehe... Dieser Umstand kÃ¶nnte Euch jedoch einen Pfad in die Freiheit erÃ¶ffnen.~
+@4111 = ~Es gibt nichts, was ich mir mehr wÃ¼nschen wÃ¼rde. Aber wie ist das mÃ¶glich?~
+@4112 = ~Das Kind Bhaals besitzt Macht in diesem Reich. MÃ¶glicherweise genug Macht, um die Verzauberungen zu brechen, die Euch an die Lampe binden.~
+@4113 = ~Er scheint an ein Artefakt der Macht gebunden zu sein. Hmm... dieser Zustand kÃ¶nnte ihm einen Pfad in die Freiheit ermÃ¶glichen.~
+@4114 = ~Ihr besitzt Macht in diesem Reich. MÃ¶glicherweise genug Macht, um die Verzauberungen zu brechen, die ihn an die Lampe bindet.~
+@4115 = ~Aber es gibt bestimmte... UmstÃ¤nde, die mich davon abhalten. Bis sie Ã¼berwunden wurden, habe ich nicht die Macht irgendetwas zu tun.~
+@4116 = ~Was fÃ¼r UmstÃ¤nde sind das?~
+@4117 = ~Ja, wirklich. Euch wurde der SchlÃ¼ssel gegeben, mit dessen Hilfe Ihr mein Leben beenden kÃ¶nnt... und auch das wÃ¤re eine ErlÃ¶sung.~
+@4118 = ~Nein, <PRO_LADYLORD>. Tut das nicht. Es muss eine andere LÃ¶sung geben.~
 @4119 = ~Es ist Eure Entscheidung, <PRO_LADYLORD>.~
-@4120 = ~Vielleicht war ich etwas voreilig mit meiner Entscheidung. Es muss auch eine andere Möglichkeit geben, um Euch zu erlösen. Warum seid Ihr an diesen Ort gebunden?~
+@4120 = ~Vielleicht war ich etwas voreilig mit meiner Entscheidung. Es muss auch eine andere MÃ¶glichkeit geben, um Euch zu erlÃ¶sen. Warum seid Ihr an diesen Ort gebunden?~
 @4121 = ~Ich habe mich entschieden. Bereitet Euch auf Euren Tod vor!~
-@4122 = ~Ich würde meinen Tod durchaus willkommen heißen, solltet Ihr dazu in der Lage sein.~
-@4123 = ~Vielleicht war ich etwas voreilig mit meiner Entscheidung. Es muss auch eine andere Möglichkeit geben, um Euch zu erlösen. Könntet Ihr mir bitte noch einmal das Rätsel vortragen?~
-@4124 = ~Da Ihr mir geholfen habt, werde ich im Gegenzug Eurem Gefährten helfen.~
-@4125 = ~Eine Verzauberung dieser Größenordnung zu brechen ist nicht einfach. Habt Ihr etwas in Eurem Besitz, das mir bei meinem Versuch helfen könnte?~
-@4126 = ~Ja, ich habe einen magischen Kristall bei mir, der Afaaqs versiegelte Kräfte beinhaltet.~
-@4127 = ~Leider nicht. Aber Ihr habt erwähnt, dass ich in diesem Reich Macht besitze...~
-@4128 = ~Genau danach habe ich gesucht. Der direkte Zugang zu Afaaqs spiritueller Essenz erlaubt es mir, seine magischen Fesseln zu lösen.~
+@4122 = ~Ich wÃ¼rde meinen Tod durchaus willkommen heiÃŸen, solltet Ihr dazu in der Lage sein.~
+@4123 = ~Vielleicht war ich etwas voreilig mit meiner Entscheidung. Es muss auch eine andere MÃ¶glichkeit geben, um Euch zu erlÃ¶sen. KÃ¶nntet Ihr mir bitte noch einmal das RÃ¤tsel vortragen?~
+@4124 = ~Da Ihr mir geholfen habt, werde ich im Gegenzug Eurem GefÃ¤hrten helfen.~
+@4125 = ~Eine Verzauberung dieser GrÃ¶ÃŸenordnung zu brechen ist nicht einfach. Habt Ihr etwas in Eurem Besitz, das mir bei meinem Versuch helfen kÃ¶nnte?~
+@4126 = ~Ja, ich habe einen magischen Kristall bei mir, der Afaaqs versiegelte KrÃ¤fte beinhaltet.~
+@4127 = ~Leider nicht. Aber Ihr habt erwÃ¤hnt, dass ich in diesem Reich Macht besitze...~
+@4128 = ~Genau danach habe ich gesucht. Der direkte Zugang zu Afaaqs spiritueller Essenz erlaubt es mir, seine magischen Fesseln zu lÃ¶sen.~
 @4129 = ~Es wird nur wenige Augenblicke dauern...~
 @4130 = ~Ja... Ihr seid eng an diesen Ort gebunden. Er ist praktisch ein Teil von Euch.~
-@4131 = ~Aber ohne die Möglichkeit, auf Afaaqs spirituelle Essenz zuzugreifen, könnte es etwas gefährlich werden.~
-@4132 = ~Was kann mir passieren? Was habt Ihr überhaupt vor?~
+@4131 = ~Aber ohne die MÃ¶glichkeit, auf Afaaqs spirituelle Essenz zuzugreifen, kÃ¶nnte es etwas gefÃ¤hrlich werden.~
+@4132 = ~Was kann mir passieren? Was habt Ihr Ã¼berhaupt vor?~
 @4133 = ~Dieses Risiko gehe ich ein. Fangt bitte an!~
-@4134 = ~Euere göttliche Verbundenheit dient mir als Quelle der Macht, um die Verzauberungen von Afaaqs magischem Gefängnis zu brechen. Falls die Lampe aber mit weiteren Schutzzaubern belegt ist, werden sie auf Euch zurückgeworfen.~
-@4135 = ~Auch wenn ich mir sicher bin, dass sie keine Lebensgefahr für Euch bedeuten, solltet Ihr Euch auf unangenehme Überraschungen gefasst machen.~
+@4134 = ~Euere gÃ¶ttliche Verbundenheit dient mir als Quelle der Macht, um die Verzauberungen von Afaaqs magischem GefÃ¤ngnis zu brechen. Falls die Lampe aber mit weiteren Schutzzaubern belegt ist, werden sie auf Euch zurÃ¼ckgeworfen.~
+@4135 = ~Auch wenn ich mir sicher bin, dass sie keine Lebensgefahr fÃ¼r Euch bedeuten, solltet Ihr Euch auf unangenehme Ãœberraschungen gefasst machen.~
 @4136 = ~Ihr verlangt zu viel von mir. Ich werde mein Leben nicht riskieren, solange ich selbst nach meiner Seele suche.~
 @4137 = ~Das ist eine schwierige Entscheidung. Gebt mir bitte einen Moment zum Nachdenken.~
 @4138 = ~Seid Ihr sicher, <PRO_LADYLORD>? Ihr bekommt keine weitere Gelegenheit, nachdem ich diesen Ort verlassen habe.~
 @4139 = ~Ja. Meine Entscheidung steht fest.~
-@4140 = ~Vielleicht sollte ich sie noch einmal überdenken. Könntet Ihr mir einen Moment zum Nachdenken geben?~
-@4141 = ~Wie Ihr wünscht. Ich bin frei und wünsche Euch alles Gute in allen Prüfungen, die noch vor Euch liegen.~
-@4142 = ~Wie Ihr wollt. Ich wünsche Euch viel Glück in Euren bevorstehenden Prüfungen. Auf ein baldiges Wiedersehen.~
+@4140 = ~Vielleicht sollte ich sie noch einmal Ã¼berdenken. KÃ¶nntet Ihr mir einen Moment zum Nachdenken geben?~
+@4141 = ~Wie Ihr wÃ¼nscht. Ich bin frei und wÃ¼nsche Euch alles Gute in allen PrÃ¼fungen, die noch vor Euch liegen.~
+@4142 = ~Wie Ihr wollt. Ich wÃ¼nsche Euch viel GlÃ¼ck in Euren bevorstehenden PrÃ¼fungen. Auf ein baldiges Wiedersehen.~
 @4143 = ~Ich werde solange warten, bis Ihr eine Entscheidung getroffen oder diesen Teil des Reiches verlassen habt. Lasst Euch aber nicht zu viel Zeit.~
-@4144 = ~Ich werde hier noch etwas verweilen. Aber ich würde Euch vorschlagen, nicht zu lange mit Eurer Entscheidung zu warten.~
+@4144 = ~Ich werde hier noch etwas verweilen. Aber ich wÃ¼rde Euch vorschlagen, nicht zu lange mit Eurer Entscheidung zu warten.~
 @4145 = ~Habt Ihr inzwischen eine Entscheidung getroffen, <PRO_LADYLORD>?~ [A7SLNT_S]
-@4146 = ~Ich habe diesen magischen Kristall gefunden, der Afaaqs versiegelte Kräfte beinhaltet. Könnte er Euch nützlich sein?~
+@4146 = ~Ich habe diesen magischen Kristall gefunden, der Afaaqs versiegelte KrÃ¤fte beinhaltet. KÃ¶nnte er Euch nÃ¼tzlich sein?~
 @4147 = ~Ja, das habe ich. Ich muss leider ablehnen. Mein eigenes Wohlergehen ist mir wichtiger.~
 @4148 = ~Gebt mir bitte noch etwas Zeit zum Nachdenken.~
-@4149 = ~Afaaqs magisches Gefängnis scheint sich nicht in Eurem Besitz zu befinden. Ohne die Lampe ist es mir nicht möglich, die Verzauberung zu brechen.~
-@4150 = ~Ich muss sie verlegt haben. Wartet bitte einen Augenblick, während ich sie suche.~
-@4151 = ~Aber ich benötige vorübergehend Schwarzschnitter, um den Zauber zu sprechen. Ohne ihn habe ich keine Macht in diesem Reich.~
+@4149 = ~Afaaqs magisches GefÃ¤ngnis scheint sich nicht in Eurem Besitz zu befinden. Ohne die Lampe ist es mir nicht mÃ¶glich, die Verzauberung zu brechen.~
+@4150 = ~Ich muss sie verlegt haben. Wartet bitte einen Augenblick, wÃ¤hrend ich sie suche.~
+@4151 = ~Aber ich benÃ¶tige vorÃ¼bergehend Schwarzschnitter, um den Zauber zu sprechen. Ohne ihn habe ich keine Macht in diesem Reich.~
 @4152 = ~Sehr gut. Dann werde ich den Zauber vorbereiten.~
-@4153 = ~Ich fange mit der Beschwörung an...~ [A7SLNT_S]
-@4154 = ~Sehr gut. Dann fange ich mit der Beschwörung an...~
+@4153 = ~Ich fange mit der BeschwÃ¶rung an...~ [A7SLNT_S]
+@4154 = ~Sehr gut. Dann fange ich mit der BeschwÃ¶rung an...~
 @4155 = ~Es ist vollbracht.~ [A7SLNT_S]
-@4156 = ~Es ist vollbracht, und Ihr scheint es ohne größeren Schaden überstanden zu haben.~ [A7SLNT_S]
-@4157 = ~Ich danke Euch nochmals für meine Freiheit und wünsche Euch für die bevorliegenden Prüfungen alles Gute, <PRO_LADYLORD>. Und möge Eure Zukunft hell erleuchtet sein, Afaaq.~
+@4156 = ~Es ist vollbracht, und Ihr scheint es ohne grÃ¶ÃŸeren Schaden Ã¼berstanden zu haben.~ [A7SLNT_S]
+@4157 = ~Ich danke Euch nochmals fÃ¼r meine Freiheit und wÃ¼nsche Euch fÃ¼r die bevorliegenden PrÃ¼fungen alles Gute, <PRO_LADYLORD>. Und mÃ¶ge Eure Zukunft hell erleuchtet sein, Afaaq.~
 // additional lines for the light version
 @4180 = ~Da Ihr mir geholfen habt, werde ich Euch auch helfen.~
-@4181 = ~Ihr scheint einen meiner eigenen Art in Eurer Mitte zu haben. Das Schwert, welches Ihr geopfert habt, um mir meine Freiheit zu ermöglichen, gibt mir auch die Kraft, Euren Dschinn von seinen Ketten zu befreien.~
+@4181 = ~Ihr scheint einen meiner eigenen Art in Eurer Mitte zu haben. Das Schwert, welches Ihr geopfert habt, um mir meine Freiheit zu ermÃ¶glichen, gibt mir auch die Kraft, Euren Dschinn von seinen Ketten zu befreien.~
 @4182 = ~Es ist vollbracht, <PRO_LADYLORD>. Da Ihr mir meine Freiheit garantiert habt, kann ich Euch auch helfen.~
-@4183 = ~Ihr scheint einen meiner eigenen Art in Eurer Mitte zu haben. Wenn Ihr mir vorübergehend Euer Schwert leiht, dann kann ich Euren Dschinn von seinen Ketten befreien. Keine Sorge, ich werde es nicht beschädigen.~
+@4183 = ~Ihr scheint einen meiner eigenen Art in Eurer Mitte zu haben. Wenn Ihr mir vorÃ¼bergehend Euer Schwert leiht, dann kann ich Euren Dschinn von seinen Ketten befreien. Keine Sorge, ich werde es nicht beschÃ¤digen.~
 @4184 = ~Dann werde ich den Zauber vorbereiten...~
 @4185 = ~Es wird nur wenige Augenblicke dauern...~ [A7SLNT_S]
 @4186 = ~Es ist vollbracht.~ [A7SLNT_S]
-@4187 = ~Ich danke Euch nochmals für meine Freiheit und wünsche Euch für die bevorliegenden Prüfungen alles Gute, <PRO_LADYLORD>. Und möge Eure Zukunft hell erleuchtet sein, Afaaq.~
-@4188 = ~Ich wünsche Euch für die bevorliegenden Prüfungen alles Gute, <PRO_LADYLORD>. Und möge Eure Zukunft hell erleuchtet sein, Afaaq.~
+@4187 = ~Ich danke Euch nochmals fÃ¼r meine Freiheit und wÃ¼nsche Euch fÃ¼r die bevorliegenden PrÃ¼fungen alles Gute, <PRO_LADYLORD>. Und mÃ¶ge Eure Zukunft hell erleuchtet sein, Afaaq.~
+@4188 = ~Ich wÃ¼nsche Euch fÃ¼r die bevorliegenden PrÃ¼fungen alles Gute, <PRO_LADYLORD>. Und mÃ¶ge Eure Zukunft hell erleuchtet sein, Afaaq.~
 
 // dialog lines (special)
 @4200 = ~Ich werde Euch nicht helfen. Dies ist ganz allein Euer Kampf, <CHARNAME>.~
-@4201 = ~Ihr habt den Dschinn vernichtet und damit meine einzige Gelegenheit zunichte gemacht, dieses Gefängnis zu verlassen? Damit seid Ihr zu weit gegangen!~
-@4202 = ~Der Dschinn Eurer Höllenprüfung hatte die Macht, mich von meinen Fesseln zu befreien, und Ihr habt die Gelegenheit dazu nicht genutzt?~
-@4203 = ~Ihr seid wahrhaftig eine selbstsüchtige Kreatur. Damit seid Ihr zu weit gegangen!~
-@4204 = ~Ich gebe auf! In meiner gegenwärtigen Form kann ich Eurer Macht nichts entgegensetzen. Ihr habt gewonnen und ich werde mich Eurem Willen unterwerfen.~
+@4201 = ~Ihr habt den Dschinn vernichtet und damit meine einzige Gelegenheit zunichte gemacht, dieses GefÃ¤ngnis zu verlassen? Damit seid Ihr zu weit gegangen!~
+@4202 = ~Der Dschinn Eurer HÃ¶llenprÃ¼fung hatte die Macht, mich von meinen Fesseln zu befreien, und Ihr habt die Gelegenheit dazu nicht genutzt?~
+@4203 = ~Ihr seid wahrhaftig eine selbstsÃ¼chtige Kreatur. Damit seid Ihr zu weit gegangen!~
+@4204 = ~Ich gebe auf! In meiner gegenwÃ¤rtigen Form kann ich Eurer Macht nichts entgegensetzen. Ihr habt gewonnen und ich werde mich Eurem Willen unterwerfen.~
 
 // dialog lines (IWD)
-@4300 = ~Ich habe zufälligerweise eine Dschinnlampe in meinem Besitz. Wäre es möglich, die Verzauberung zu brechen, welche den Dschinn an die Lampe bindet?~
-@4301 = ~Ich habe es mir anders überlegt. Versucht bitte, die Siegel der Dschinnlampe zu brechen, um Afaaqs Kräfte wiederherzustellen.~
+@4300 = ~Ich habe zufÃ¤lligerweise eine Dschinnlampe in meinem Besitz. WÃ¤re es mÃ¶glich, die Verzauberung zu brechen, welche den Dschinn an die Lampe bindet?~
+@4301 = ~Ich habe es mir anders Ã¼berlegt. Versucht bitte, die Siegel der Dschinnlampe zu brechen, um Afaaqs KrÃ¤fte wiederherzustellen.~
 @4302 = ~Ich mag zwar als Seherin bekannt sein, aber ich kann immer noch den einen oder anderen Zauber sprechen. Zeigt mir doch mal Eure Lampe.~
 @4303 = ~Bitte sehr.~
-@4304 = ~Hmm, die Verzauberungen scheinen alt und mächtig zu sein. Ich kann versuchen, die kleineren Siegel zu brechen. Aber das gibt dem Dschinn nur einige seiner Kräfte zurück. Er wird weiterhin an die Lampe gebunden sein.~
+@4304 = ~Hmm, die Verzauberungen scheinen alt und mÃ¤chtig zu sein. Ich kann versuchen, die kleineren Siegel zu brechen. Aber das gibt dem Dschinn nur einige seiner KrÃ¤fte zurÃ¼ck. Er wird weiterhin an die Lampe gebunden sein.~
 @4305 = ~Das ist auf jeden Fall besser als sein jetziger Zustand. Bitte versucht es.~
-@4306 = ~Bei nochmaliger Überlegung möchte ich den Dschinn lieber im gegenwärtigen Zustand behalten.~
-@4307 = ~Ich habe zufälligerweise eine Dschinnlampe in meinem Besitz. Gibt es eine Möglichkeit, die Verzauberung zu brechen, welche den Dschinn an die Lampe bindet?~
-@4308 = ~Ich habe es mir anders überlegt. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
-@4309 = ~Ich habe es mir anders überlegt. Ich bin bereit, Euren Preis von 20.000 Goldmünzen zu zahlen. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
-@4310 = ~Ich habe es mir anders überlegt. Ich bin bereit, Euren Preis von 16.000 Goldmünzen zu zahlen. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
-@4311 = ~Hmm, das ist eine ungewöhnliche Bitte. Aber ich habe vielleicht etwas in meinem Besitz, das mir behilflich sein kann, Euren Wunsch zu erfüllen.~
-@4312 = ~Es ist ein Artefakt, das mit starker Magie ausgestattet ist. Es kann selbst solch alte und mächtige Verzauberungen brechen, wie ich sie an Eurer Lampe spüre. Wie der Zufall so will, besitze ich auch das nötige Wissen, um die Magie dieses Gegenstands freizusetzen.~
-@4313 = ~Ich sehe schon, wohin das führt. Wieviel wird es mich kosten?~
-@4314 = ~Bei nochmaliger Überlegung möchte ich den Dschinn lieber im gegenwärtigen Zustand behalten. Lebt wohl, Nym.~
-@4315 = ~Ihr müsst verstehen, dass Artefakte dieser Qualität nur sehr schwer zu bekommen sind. Ich verlange nur die bescheidene Summe von 20.000 Goldmünzen für meine Dienste.~
-@4316 = ~Gibt es keine Möglichkeit, den Preis zu senken?~
+@4306 = ~Bei nochmaliger Ãœberlegung mÃ¶chte ich den Dschinn lieber im gegenwÃ¤rtigen Zustand behalten.~
+@4307 = ~Ich habe zufÃ¤lligerweise eine Dschinnlampe in meinem Besitz. Gibt es eine MÃ¶glichkeit, die Verzauberung zu brechen, welche den Dschinn an die Lampe bindet?~
+@4308 = ~Ich habe es mir anders Ã¼berlegt. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
+@4309 = ~Ich habe es mir anders Ã¼berlegt. Ich bin bereit, Euren Preis von 20.000 GoldmÃ¼nzen zu zahlen. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
+@4310 = ~Ich habe es mir anders Ã¼berlegt. Ich bin bereit, Euren Preis von 16.000 GoldmÃ¼nzen zu zahlen. Versucht bitte, die Verzauberung der Dschinnlampe zu brechen.~
+@4311 = ~Hmm, das ist eine ungewÃ¶hnliche Bitte. Aber ich habe vielleicht etwas in meinem Besitz, das mir behilflich sein kann, Euren Wunsch zu erfÃ¼llen.~
+@4312 = ~Es ist ein Artefakt, das mit starker Magie ausgestattet ist. Es kann selbst solch alte und mÃ¤chtige Verzauberungen brechen, wie ich sie an Eurer Lampe spÃ¼re. Wie der Zufall so will, besitze ich auch das nÃ¶tige Wissen, um die Magie dieses Gegenstands freizusetzen.~
+@4313 = ~Ich sehe schon, wohin das fÃ¼hrt. Wieviel wird es mich kosten?~
+@4314 = ~Bei nochmaliger Ãœberlegung mÃ¶chte ich den Dschinn lieber im gegenwÃ¤rtigen Zustand behalten. Lebt wohl, Nym.~
+@4315 = ~Ihr mÃ¼sst verstehen, dass Artefakte dieser QualitÃ¤t nur sehr schwer zu bekommen sind. Ich verlange nur die bescheidene Summe von 20.000 GoldmÃ¼nzen fÃ¼r meine Dienste.~
+@4316 = ~Gibt es keine MÃ¶glichkeit, den Preis zu senken?~
 @4317 = ~In Ordnung. Ich werde Euren Preis zahlen.~
-@4318 = ~Das ist mir zu teuer. Ich muss Euer Angebot fürs Erste ablehnen. Lebt wohl, Nym.~
+@4318 = ~Das ist mir zu teuer. Ich muss Euer Angebot fÃ¼rs Erste ablehnen. Lebt wohl, Nym.~
 @4319 = ~Die gibt es leider nicht. Dieses Artefakt ist immerhin sehr wertvoll. Seid Ihr mit dem Preis einverstanden?~
-@4320 = ~Nun, ich bin nicht wirklich bereit, einen Präzedenzfall zu schaffen. Aber ich könnte für Euch Fremdländer eine Ausnahme machen, sofern Ihr mir versprecht, kein Wort darüber zu verlieren. Wie wäre es mit 16.000 Goldmünzen?~
+@4320 = ~Nun, ich bin nicht wirklich bereit, einen PrÃ¤zedenzfall zu schaffen. Aber ich kÃ¶nnte fÃ¼r Euch FremdlÃ¤nder eine Ausnahme machen, sofern Ihr mir versprecht, kein Wort darÃ¼ber zu verlieren. Wie wÃ¤re es mit 16.000 GoldmÃ¼nzen?~
 @4321 = ~Ihr habt eine weise Entscheidung getroffen. Lasst mich bitte einen genaueren Blick auf die Lampe werfen.~
 @4322 = ~Das wird nur einen Moment dauern.~
-@4323 = ~Leider konnte ich nicht alle Verzauberungen brechen. Der Dschinn ist immer noch an die Lampe gebunden, aber ich konnte zumindest die meisten seiner Kräfte wiederherstellen.~
-@4324 = ~Da ich meinen Teil der Abmachung nicht zur vollen Zufriedenheit erfüllen konnte, werde ich Euch 4000 Goldmünzen von meinem ursprünglichen Preis erstatten.~
-@4325 = ~Nun gut. Ich kann versuchen, die Verzauberung mittels eines mächtigen Artefakts zu brechen, das sich in meinem Besitz befindet.~
+@4323 = ~Leider konnte ich nicht alle Verzauberungen brechen. Der Dschinn ist immer noch an die Lampe gebunden, aber ich konnte zumindest die meisten seiner KrÃ¤fte wiederherstellen.~
+@4324 = ~Da ich meinen Teil der Abmachung nicht zur vollen Zufriedenheit erfÃ¼llen konnte, werde ich Euch 4000 GoldmÃ¼nzen von meinem ursprÃ¼nglichen Preis erstatten.~
+@4325 = ~Nun gut. Ich kann versuchen, die Verzauberung mittels eines mÃ¤chtigen Artefakts zu brechen, das sich in meinem Besitz befindet.~
 
 
 // journal entries
 @4800 = ~Das Geschenk der Freiheit
 
-Ich habe mich entschieden, Schwarzschnitter zu behalten und dafür den Dschinn zu vernichten. Afaaq war natürlich nicht sehr über meine Entscheidung erfreut und hat seine Hilfe im Kampf verweigert.~
+Ich habe mich entschieden, Schwarzschnitter zu behalten und dafÃ¼r den Dschinn zu vernichten. Afaaq war natÃ¼rlich nicht sehr Ã¼ber meine Entscheidung erfreut und hat seine Hilfe im Kampf verweigert.~
 
 @4801 = ~Das Geschenk der Freiheit
 
-Der Dschinn der Höllenprüfung bot mir an, Afaaq aus seiner Bindung an die Lampe zu befreien. Dazu müsste er jedoch seine Magie durch meine göttliche Essenz leiten, was negative Folgen für mich haben kann.~
+Der Dschinn der HÃ¶llenprÃ¼fung bot mir an, Afaaq aus seiner Bindung an die Lampe zu befreien. Dazu mÃ¼sste er jedoch seine Magie durch meine gÃ¶ttliche Essenz leiten, was negative Folgen fÃ¼r mich haben kann.~
 
 @4802 = ~Das Geschenk der Freiheit
 
-Afaaq is endlich frei! Er ist hocherfreut und ich kann seine Ungeduld, endlich in seine Heimat zurückzukehren, gut verstehen. Er versprach jedoch, mir noch bei meiner Konfrontation mit Irenicus zur Seite zu stehen.~
+Afaaq is endlich frei! Er ist hocherfreut und ich kann seine Ungeduld, endlich in seine Heimat zurÃ¼ckzukehren, gut verstehen. Er versprach jedoch, mir noch bei meiner Konfrontation mit Irenicus zur Seite zu stehen.~
 
 @4825 = ~Das Geschenk der Freiheit
 
-Afaaq ist endlich frei! Er ist hocherfreut über seine wiedererlangte Freiheit und versprach, mir weiter auf meiner Reise zur Seite zu stehen.~
+Afaaq ist endlich frei! Er ist hocherfreut Ã¼ber seine wiedererlangte Freiheit und versprach, mir weiter auf meiner Reise zur Seite zu stehen.~
 
 @4826 = ~Das Geschenk der Freiheit
 
-Afaaqs Zorn über meine Entscheidung führte zu einem Kampf zwischen uns. Letztendlich war ich siegreich und Afaaq akzeptierte meine Befehlsgewalt ein für alle Mal.~
+Afaaqs Zorn Ã¼ber meine Entscheidung fÃ¼hrte zu einem Kampf zwischen uns. Letztendlich war ich siegreich und Afaaq akzeptierte meine Befehlsgewalt ein fÃ¼r alle Mal.~
 
 @4827 = ~Das Geschenk der Freiheit
 
-Afaaq hat sein Versprechen gehalten und mir geholfen, meine Seele von Irenicus zurückzuerlangen.
+Afaaq hat sein Versprechen gehalten und mir geholfen, meine Seele von Irenicus zurÃ¼ckzuerlangen.
 
-Im Gegenzug habe ich mein Versprechen gehalten und ihn aus meinen Diensten entlassen, damit er in seine Heimat zurückkehren kann.~
+Im Gegenzug habe ich mein Versprechen gehalten und ihn aus meinen Diensten entlassen, damit er in seine Heimat zurÃ¼ckkehren kann.~
 
 @4828 = ~Das Geschenk der Freiheit
 
-Afaaq hat sein Versprechen gehalten und mir geholfen, meine Seele von Irenicus zurückzuerlangen.
+Afaaq hat sein Versprechen gehalten und mir geholfen, meine Seele von Irenicus zurÃ¼ckzuerlangen.
 
-Nachdem ich seine beeindruckene Kampfkraft gesehen habe, entschied ich mich allerding anders und verweigerte seine Bitte, ihn aus meinen Diensten zu entlassen. Nach einem heftigen Kampf zwischen uns, den ich gewann, akzeptierte er meine Befehlsgewalt ein für alle Mal.~
+Nachdem ich seine beeindruckene Kampfkraft gesehen habe, entschied ich mich allerding anders und verweigerte seine Bitte, ihn aus meinen Diensten zu entlassen. Nach einem heftigen Kampf zwischen uns, den ich gewann, akzeptierte er meine Befehlsgewalt ein fÃ¼r alle Mal.~
 
 
 // Misc. strings
