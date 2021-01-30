@@ -1,3 +1,9 @@
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Argent77/DjinniCompanion?color=darkred&include_prereleases&label=latest%20release)](https://GitHub.com/Argent77/DjinniCompanion/releases/latest)
+[![GitHub release date (latest by date)](https://img.shields.io/github/release-date/Argent77/DjinniCompanion?color=gold)](https://GitHub.com/Argent77/DjinniCompanion/releases/latest)
+[![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/DjinniCompanion/total.svg?color=blueviolet)](https://GitHub.com/Argent77/DjinniCompanion/releases)
+[![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux&color=informational)](https://GitHub.com/Argent77/DjinniCompanion/releases/latest)
+[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German&color=limegreen)]()
+
 # Afaaq, the Djinni Companion
 *A mod for Baldur's Gate II: Throne of Bhaal, Baldur's Gate II: Enhanced Edition and Icewind Dale: Enhanced Edition.*
 
