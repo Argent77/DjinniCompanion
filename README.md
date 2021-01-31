@@ -7,11 +7,10 @@
 # Afaaq, the Djinni Companion
 *A mod for Baldur's Gate II: Throne of Bhaal, Baldur's Gate II: Enhanced Edition and Icewind Dale: Enhanced Edition.*
 
-**Author:** Argent77
+[![Website](https://img.shields.io/static/v1?label=Website&message=Djinni%20Companion&color=ccc7ba&labelColor=eee&style=flat)](https://argent77.github.io/DjinniCompanion/index.html)
 
-**Website:** https://argent77.github.io/DjinniCompanion/index.html
-
-**Discussion:** [Spellhold Studios Forums](http://www.shsforums.net/forum/651-djinni-companion/) or [Beamdog Forums](http://forums.beamdog.com/discussion/41108/mod-afaaq-the-djinni-companion-for-bg2-and-bg2-ee-released/)
+[![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=flat)](http://forums.beamdog.com/discussion/41108)
+[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=flat)](http://www.shsforums.net/forum/651-djinni-companion/)
 
 ## Introduction
 
