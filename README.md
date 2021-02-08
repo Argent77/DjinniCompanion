@@ -1,16 +1,17 @@
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Argent77/DjinniCompanion?color=darkred&include_prereleases&label=latest%20release)](https://GitHub.com/Argent77/DjinniCompanion/releases/latest)
-[![GitHub release date (latest by date)](https://img.shields.io/github/release-date/Argent77/DjinniCompanion?color=gold)](https://GitHub.com/Argent77/DjinniCompanion/releases/latest)
-[![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/DjinniCompanion/total.svg?color=blueviolet)](https://GitHub.com/Argent77/DjinniCompanion/releases)
-[![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux&color=informational)](https://GitHub.com/Argent77/DjinniCompanion/releases/latest)
-[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German&color=limegreen)]()
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Argent77/DjinniCompanion?color=darkred&include_prereleases&label=latest%20release)](https://github.com/Argent77/DjinniCompanion/releases/latest)
+[![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/DjinniCompanion/total.svg?color=gold)](https://github.com/Argent77/DjinniCompanion/releases)
+[![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux&color=informational)](https://github.com/Argent77/DjinniCompanion/releases/latest)
+[![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=indigo)](https://github.com/Argent77/DjinniCompanion)
+[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German&color=limegreen)](https://github.com/Argent77/DjinniCompanion)
 
 # Afaaq, the Djinni Companion
 *A mod for Baldur's Gate II: Throne of Bhaal, Baldur's Gate II: Enhanced Edition and Icewind Dale: Enhanced Edition.*
 
-[![Website](https://img.shields.io/static/v1?label=Website&message=Djinni%20Companion&color=ccc7ba&labelColor=eee&style=flat)](https://argent77.github.io/DjinniCompanion/index.html)
+[![Website](https://img.shields.io/static/v1?label=Website&message=Djinni%20Companion&color=ccc7ba&labelColor=eee&style=for-the-badge)](https://argent77.github.io/DjinniCompanion/index.html "View Readme")
 
-[![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=flat)](http://forums.beamdog.com/discussion/41108)
-[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=flat)](http://www.shsforums.net/forum/651-djinni-companion/)
+[![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=for-the-badge)](http://forums.beamdog.com/discussion/41108 "Beamdog Forums")
+&nbsp;&nbsp;
+[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=for-the-badge)](http://www.shsforums.net/forum/651-djinni-companion/ "Spellhold Studios Forums")
 
 ## Introduction
 
