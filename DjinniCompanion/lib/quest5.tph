@@ -203,6 +203,11 @@ COPY ~DjinniCompanion/items/a7isw1h3.bam~ ~override~
 
 COPY ~DjinniCompanion/items/a7q5hh.itm~ ~override~    // weapon for hell hounds
 
+COPY ~DjinniCompanion/items/a7q5key.itm~ ~override~
+  SAY NAME1 @6886 // Brass key
+  SAY NAME2 @6886 // Brass key
+  SAY UNIDENTIFIED_DESC @6887 // This key is unusually heavy...
+
 // Skull of a demi-lich
 COPY_EXISTING ~tooltip.2da~ ~override~
   SET a7skull = RESOLVE_STR_REF(@6852)    // Absorb Life Force
