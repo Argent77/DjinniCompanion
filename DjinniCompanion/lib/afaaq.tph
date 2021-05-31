@@ -14,6 +14,16 @@ ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
   OUTER_TEXT_SPRINT ITEM_ILAMP "DjinniCompanion/items/bg2ee/a7ilamp.bam"
   OUTER_TEXT_SPRINT PORTRAIT_AFAAQS "DjinniCompanion/portraits/bg2ee/a7afaaqs.bmp"
   OUTER_TEXT_SPRINT DIALOG_BANTER_INTRO "DjinniCompanion/dialogs/bg2ee/A7AfaaqBanter_CHARNAME_Intro.d"
+
+  // Shaman may not exist in earlier patch versions of the game
+  OUTER_SET shaman_id = IDS_OF_SYMBOL(~class~ ~SHAMAN~)
+  OUTER_FOR (i = 2; i <= 6; ++i) BEGIN
+    ACTION_IF (shaman_id > 0) BEGIN
+      OUTER_TEXT_SPRINT EVAL ~class_shaman_p%i%~ ~Class(Player%i%, SHAMAN)~
+    END ELSE BEGIN
+      OUTER_TEXT_SPRINT EVAL ~class_shaman_p%i%~ ~False()~
+    END
+  END
 END ELSE BEGIN
   OUTER_TEXT_SPRINT ITEM_CLAMP "DjinniCompanion/items/a7clamp.bam"
   OUTER_TEXT_SPRINT ITEM_ILAMP "DjinniCompanion/items/a7ilamp.bam"

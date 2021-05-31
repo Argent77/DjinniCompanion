@@ -4989,7 +4989,8 @@ APPEND A7AFAAQ
     + ~Class(Player2, FIGHTER_CLERIC)~ + @58364 /* <PLAYER2> is a talented Fighter/Cleric and a valuable party member. */ + PCIntro.Party.NPC2.1
     + ~Class(Player2, FIGHTER_THIEF)~ + @58365 /* <PLAYER2> is a skilled Fighter/Thief and a valuable party member. */ + PCIntro.Party.NPC2.1
     + ~Class(Player2, FIGHTER_MAGE_THIEF)~ + @58366 /* <PLAYER2> is an impressive Fighter/Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC2.1
-    + ~Class(Player2, DRUID)~ + @58367 /* <PLAYER2> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC2.1
+    + ~%class_shaman_p2%~ + @58584 /* <PLAYER2> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC2.1
+    + ~Class(Player2, DRUID) !%class_shaman_p2%~ + @58367 /* <PLAYER2> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC2.1
     + ~Class(Player2, RANGER)~ + @58368 /* <PLAYER2> is an experienced ranger and a valuable party member. */ + PCIntro.Party.NPC2.1
     + ~Class(Player2, MAGE_THIEF)~ + @58369 /* <PLAYER2> is a talented Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC2.1
     + ~Class(Player2, CLERIC_MAGE)~ + @58370 /* <PLAYER2> is a talented Cleric/Mage and a valuable party member. */ + PCIntro.Party.NPC2.1
@@ -5014,7 +5015,8 @@ APPEND A7AFAAQ
     + ~Class(Player3, FIGHTER_CLERIC)~ + @58385 /* <PLAYER3> is a talented Fighter/Cleric and a valuable party member. */ + PCIntro.Party.NPC3.2
     + ~Class(Player3, FIGHTER_THIEF)~ + @58386 /* <PLAYER3> is a skilled Fighter/Thief and a valuable party member. */ + PCIntro.Party.NPC3.2
     + ~Class(Player3, FIGHTER_MAGE_THIEF)~ + @58387 /* <PLAYER3> is an impressive Fighter/Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC3.2
-    + ~Class(Player3, DRUID)~ + @58388 /* <PLAYER3> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC3.2
+    + ~%class_shaman_p3%~ + @58585 /* <PLAYER3> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC3.2
+    + ~Class(Player3, DRUID) !%class_shaman_p3%~ + @58388 /* <PLAYER3> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC3.2
     + ~Class(Player3, RANGER)~ + @58389 /* <PLAYER3> is an experienced ranger and a valuable party member. */ + PCIntro.Party.NPC3.2
     + ~Class(Player3, MAGE_THIEF)~ + @58390 /* <PLAYER3> is a talented Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC3.2
     + ~Class(Player3, CLERIC_MAGE)~ + @58391 /* <PLAYER3> is a talented Cleric/Mage and a valuable party member. */ + PCIntro.Party.NPC3.2
@@ -5039,7 +5041,8 @@ APPEND A7AFAAQ
     + ~Class(Player4, FIGHTER_CLERIC)~ + @58406 /* <PLAYER4> is a talented Fighter/Cleric and a valuable party member. */ + PCIntro.Party.NPC4.3
     + ~Class(Player4, FIGHTER_THIEF)~ + @58407 /* <PLAYER4> is a skilled Fighter/Thief and a valuable party member. */ + PCIntro.Party.NPC4.3
     + ~Class(Player4, FIGHTER_MAGE_THIEF)~ + @58408 /* <PLAYER4> is an impressive Fighter/Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC4.3
-    + ~Class(Player4, DRUID)~ + @58409 /* <PLAYER4> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC4.3
+    + ~%class_shaman_p4%~ + @58586 /* <PLAYER4> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC4.3
+    + ~Class(Player4, DRUID) !%class_shaman_p4%~ + @58409 /* <PLAYER4> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC4.3
     + ~Class(Player4, RANGER)~ + @58410 /* <PLAYER4> is an experienced ranger and a valuable party member. */ + PCIntro.Party.NPC4.3
     + ~Class(Player4, MAGE_THIEF)~ + @58411 /* <PLAYER4> is a talented Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC4.3
     + ~Class(Player4, CLERIC_MAGE)~ + @58412 /* <PLAYER4> is a talented Cleric/Mage and a valuable party member. */ + PCIntro.Party.NPC4.3
@@ -5064,7 +5067,8 @@ APPEND A7AFAAQ
     + ~Class(Player5, FIGHTER_CLERIC)~ + @58427 /* <PLAYER5> is a talented Fighter/Cleric and a valuable party member. */ + PCIntro.Party.NPC5.1
     + ~Class(Player5, FIGHTER_THIEF)~ + @58428 /* <PLAYER5> is a skilled Fighter/Thief and a valuable party member. */ + PCIntro.Party.NPC5.1
     + ~Class(Player5, FIGHTER_MAGE_THIEF)~ + @58429 /* <PLAYER5> is an impressive Fighter/Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC5.1
-    + ~Class(Player5, DRUID)~ + @58430 /* <PLAYER5> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC5.1
+    + ~%class_shaman_p5%~ + @58587 /* <PLAYER5> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC5.1
+    + ~Class(Player5, DRUID) !%class_shaman_p5%~ + @58430 /* <PLAYER5> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC5.1
     + ~Class(Player5, RANGER)~ + @58431 /* <PLAYER5> is an experienced ranger and a valuable party member. */ + PCIntro.Party.NPC5.1
     + ~Class(Player5, MAGE_THIEF)~ + @58432 /* <PLAYER5> is a talented Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC5.1
     + ~Class(Player5, CLERIC_MAGE)~ + @58433 /* <PLAYER5> is a talented Cleric/Mage and a valuable party member. */ + PCIntro.Party.NPC5.1
@@ -5089,17 +5093,18 @@ APPEND A7AFAAQ
     + ~Class(Player6, FIGHTER_CLERIC)~ + @58448 /* <PLAYER6> is a talented Fighter/Cleric and a valuable party member. */ + PCIntro.Party.NPC6.2
     + ~Class(Player6, FIGHTER_THIEF)~ + @58449 /* <PLAYER6> is a skilled Fighter/Thief and a valuable party member. */ + PCIntro.Party.NPC6.3
     + ~Class(Player6, FIGHTER_MAGE_THIEF)~ + @58450 /* <PLAYER6> is an impressive Fighter/Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC6.1
-    + ~Class(Player6, DRUID)~ + @58451 /* <PLAYER6> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC6.2
-    + ~Class(Player6, RANGER)~ + @58452 /* <PLAYER6> is an experienced ranger and a valuable party member. */ + PCIntro.Party.NPC6.3
-    + ~Class(Player6, MAGE_THIEF)~ + @58453 /* <PLAYER6> is a talented Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC6.1
-    + ~Class(Player6, CLERIC_MAGE)~ + @58454 /* <PLAYER6> is a talented Cleric/Mage and a valuable party member. */ + PCIntro.Party.NPC6.2
-    + ~Class(Player6, CLERIC_THIEF)~ + @58455 /* <PLAYER6> is a talented Cleric/Thief and a valuable party member. */ + PCIntro.Party.NPC6.3
-    + ~Class(Player6, FIGHTER_DRUID)~ + @58456 /* <PLAYER6> is a talented Fighter/Druid and a valuable party member. */ + PCIntro.Party.NPC6.1
-    + ~Class(Player6, FIGHTER_MAGE_CLERIC)~ + @58457 /* <PLAYER6> is an impressive Fighter/Mage/Cleric and a valuable party member. */ + PCIntro.Party.NPC6.2
-    + ~Class(Player6, CLERIC_RANGER)~ + @58458 /* <PLAYER6> is an experienced Cleric/Ranger and a valuable party member. */ + PCIntro.Party.NPC6.3
-    + ~Class(Player6, SORCERER)~ + @58459 /* <PLAYER6> is a talented sorcerer and a valuable party member. */ + PCIntro.Party.NPC6.1
-    + ~Class(Player6, MONK)~ + @58460 /* <PLAYER6> is a skilled monk and a valuable party member. */ + PCIntro.Party.NPC6.2
-    ++ @58461 /* <PLAYER6> is a valuable friend and party member. */ + PCIntro.Party.NPC6.3
+    + ~%class_shaman_p6%~ + @58588 /* <PLAYER6> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC6.2
+    + ~Class(Player6, DRUID) !%class_shaman_p6%~ + @58451 /* <PLAYER6> is an experienced druid and a valuable party member. */ + PCIntro.Party.NPC6.3
+    + ~Class(Player6, RANGER)~ + @58452 /* <PLAYER6> is an experienced ranger and a valuable party member. */ + PCIntro.Party.NPC6.1
+    + ~Class(Player6, MAGE_THIEF)~ + @58453 /* <PLAYER6> is a talented Mage/Thief and a valuable party member. */ + PCIntro.Party.NPC6.2
+    + ~Class(Player6, CLERIC_MAGE)~ + @58454 /* <PLAYER6> is a talented Cleric/Mage and a valuable party member. */ + PCIntro.Party.NPC6.3
+    + ~Class(Player6, CLERIC_THIEF)~ + @58455 /* <PLAYER6> is a talented Cleric/Thief and a valuable party member. */ + PCIntro.Party.NPC6.1
+    + ~Class(Player6, FIGHTER_DRUID)~ + @58456 /* <PLAYER6> is a talented Fighter/Druid and a valuable party member. */ + PCIntro.Party.NPC6.2
+    + ~Class(Player6, FIGHTER_MAGE_CLERIC)~ + @58457 /* <PLAYER6> is an impressive Fighter/Mage/Cleric and a valuable party member. */ + PCIntro.Party.NPC6.3
+    + ~Class(Player6, CLERIC_RANGER)~ + @58458 /* <PLAYER6> is an experienced Cleric/Ranger and a valuable party member. */ + PCIntro.Party.NPC6.1
+    + ~Class(Player6, SORCERER)~ + @58459 /* <PLAYER6> is a talented sorcerer and a valuable party member. */ + PCIntro.Party.NPC6.2
+    + ~Class(Player6, MONK)~ + @58460 /* <PLAYER6> is a skilled monk and a valuable party member. */ + PCIntro.Party.NPC6.3
+    ++ @58461 /* <PLAYER6> is a valuable friend and party member. */ + PCIntro.Party.NPC6.1
   END
 
 

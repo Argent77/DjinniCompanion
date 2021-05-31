@@ -110,6 +110,11 @@
 @58581 = ~BRUMM!~
 @58582 = ~Das ist sehr scharfsinnig von Euch. Wenn es einer schafft, dann ist es <CHARNAME>.~
 @58583 = ~Und Ihr auch, mein Freund.~
+@58584 = ~<PLAYER2> ist ein engagierter Schamane und ein wertvolles Gruppenmitglied.~
+@58585 = ~<PLAYER3> ist ein engagierter Schamane und ein wertvolles Gruppenmitglied.~
+@58586 = ~<PLAYER4> ist ein engagierter Schamane und ein wertvolles Gruppenmitglied.~
+@58587 = ~<PLAYER5> ist ein engagierter Schamane und ein wertvolles Gruppenmitglied.~
+@58588 = ~<PLAYER6> ist ein engagierter Schamane und ein wertvolles Gruppenmitglied.~
 
 
 // from misc.tra

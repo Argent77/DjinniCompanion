@@ -110,6 +110,11 @@
 @58581 = ~GROWL!~
 @58582 = ~That is very perceptive of you. If someone can do it, then it is <CHARNAME>.~
 @58583 = ~And you too, my friend.~
+@58584 = ~<PLAYER2> is a dedicated shaman and a valuable party member.~
+@58585 = ~<PLAYER3> is a dedicated shaman and a valuable party member.~
+@58586 = ~<PLAYER4> is a dedicated shaman and a valuable party member.~
+@58587 = ~<PLAYER5> is a dedicated shaman and a valuable party member.~
+@58588 = ~<PLAYER6> is a dedicated shaman and a valuable party member.~
 
 
 // from misc.tra
