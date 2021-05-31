@@ -36,49 +36,19 @@ END
 
 // Adratha's remains taken
 IF
-  HasItem("a7misc2", Player1)
+  PartyHasItem("a7misc2")
   Global("A7AdrathaSummoned", "A77001", 0)
-THEN RESPONSE #100
-  SetGlobal("A7AdrathaSummoned", "A77001", 1)
-  CreateCreatureObjectOffScreen("a7q1adra", Player1, 0, 0, 0)
-END
-
-IF
-  HasItem("a7misc2", Player2)
-  Global("A7AdrathaSummoned", "A77001", 0)
-THEN RESPONSE #100
-  SetGlobal("A7AdrathaSummoned", "A77001", 1)
-  CreateCreatureObjectOffScreen("a7q1adra", Player2, 0, 0, 0)
-END
-
-IF
-  HasItem("a7misc2", Player3)
-  Global("A7AdrathaSummoned", "A77001", 0)
-THEN RESPONSE #100
-  SetGlobal("A7AdrathaSummoned", "A77001", 1)
-  CreateCreatureObjectOffScreen("a7q1adra", Player3, 0, 0, 0)
-END
-
-IF
-  HasItem("a7misc2", Player4)
-  Global("A7AdrathaSummoned", "A77001", 0)
-THEN RESPONSE #100
-  SetGlobal("A7AdrathaSummoned", "A77001", 1)
-  CreateCreatureObjectOffScreen("a7q1adra", Player4, 0, 0, 0)
-END
-
-IF
-  HasItem("a7misc2", Player5)
-  Global("A7AdrathaSummoned", "A77001", 0)
-THEN RESPONSE #100
-  SetGlobal("A7AdrathaSummoned", "A77001", 1)
-  CreateCreatureObjectOffScreen("a7q1adra", Player5, 0, 0, 0)
-END
-
-IF
-  HasItem("a7misc2", Player6)
-  Global("A7AdrathaSummoned", "A77001", 0)
-THEN RESPONSE #100
-  SetGlobal("A7AdrathaSummoned", "A77001", 1)
-  CreateCreatureObjectOffScreen("a7q1adra", Player6, 0, 0, 0)
+THEN
+  RESPONSE #100
+    SetGlobal("A7AdrathaSummoned", "A77001", 1)
+    CreateCreature("a7q1adra", [3010.772], 10)
+  RESPONSE #100
+    SetGlobal("A7AdrathaSummoned", "A77001", 1)
+    CreateCreature("a7q1adra", [3165.860], 9)
+  RESPONSE #100
+    SetGlobal("A7AdrathaSummoned", "A77001", 1)
+    CreateCreature("a7q1adra", [3448.816], 6)
+  RESPONSE #100
+    SetGlobal("A7AdrathaSummoned", "A77001", 1)
+    CreateCreature("a7q1adra", [3455.730], 5)
 END

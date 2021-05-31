@@ -1,9 +1,17 @@
 // *** Actions for Adratha's ghost ***
 
 IF
+  Global("A7AdrathaTalkTimer", "A77001", 0)
+THEN RESPONSE #100
+  SetGlobalTimer("A7AdrathaTalkTimer", "A77001", 12)
+  Continue()
+END
+
+IF
   OR(2)
     !See([PC])
-    !Range([PC], 15)
+    !Range([PC], 10)
+  !GlobalTimerExpired("A7AdrathaTalkTimer", "A77001")
   Global("AskForHelp", "LOCALS", 0)
 THEN RESPONSE #100
   MoveToObject([PC])
@@ -11,7 +19,9 @@ END
 
 IF
   See([PC])
-  Range([PC], 15)
+  OR(2)
+    Range([PC], 10)
+    GlobalTimerExpired("A7AdrathaTalkTimer", "A77001")
   Global("AskForHelp", "LOCALS", 0)
 THEN RESPONSE #100
   SetGlobal("AskForHelp", "LOCALS", 1)
