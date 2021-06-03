@@ -110,6 +110,11 @@
 @58581 = ~GROGNE !~
 @58582 = ~C'est très perspicace de votre part. Si quelqu'un peut le faire, alors c'est <CHARNAME>.~
 @58583 = ~Et toi aussi, mon ami.~
+@58584 = ~<PLAYER2> est un chaman dévoué et un précieux membre du groupe.~
+@58585 = ~<PLAYER3> est un chaman dévoué et un précieux membre du groupe.~
+@58586 = ~<PLAYER4> est un chaman dévoué et un précieux membre du groupe.~
+@58587 = ~<PLAYER5> est un chaman dévoué et un précieux membre du groupe.~
+@58588 = ~<PLAYER6> est un chaman dévoué et un précieux membre du groupe.~
 
 
 // from misc.tra
