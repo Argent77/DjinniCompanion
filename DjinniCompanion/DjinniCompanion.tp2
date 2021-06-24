@@ -97,6 +97,7 @@ BEGIN @2      // Full Version (includes quests, banters and more)
   REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee eet~ @4      // This mod requires BG2:ToB or BG2:EE to be installed.
   SUBCOMPONENT @1     // Afaaq, the Djinni Companion
   DESIGNATED 0
+  LABEL ~A7-DJINNICOMPANION-MAIN_FULL~
 
   // BG2EE-specific initializations
   INCLUDE ~DjinniCompanion/lib/bg2ee.tph~
@@ -136,6 +137,7 @@ BEGIN @3      // Light Version (the djinni only)
   REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee eet~ @4      // This mod requires BG2:ToB or BG2:EE to be installed.
   SUBCOMPONENT @1     // Afaaq, the Djinni Companion
   DESIGNATED 1
+  LABEL ~A7-DJINNICOMPANION-MAIN_LIGHT~
 
   // BG2EE-specific initializations
   INCLUDE ~DjinniCompanion/lib/bg2ee.tph~
@@ -159,6 +161,7 @@ BEGIN @3      // Light Version (the djinni only)
 BEGIN @20       // Afaaq, the Djinni Companion (IWD:EE version)
   REQUIRE_PREDICATE GAME_IS ~iwdee~ @21      // This mod requires IWD:EE to be installed.
   DESIGNATED 2
+  LABEL ~A7-DJINNICOMPANION-MAIN_IWDEE~
 
   // BG2EE-specific initializations
   INCLUDE ~DjinniCompanion/lib/bg2ee.tph~
@@ -184,6 +187,8 @@ BEGIN @7      // 15 Minutes
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 101
+  LABEL ~A7-DJINNICOMPANION-BANTER_15~
+
   INCLUDE ~DjinniCompanion/lib/functions.tph~
   LAF BanterAccelerator INT_VAR pc_interval = 900 END
 
@@ -192,6 +197,8 @@ BEGIN @8      // 30 Minutes
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 102
+  LABEL ~A7-DJINNICOMPANION-BANTER_30~
+
   INCLUDE ~DjinniCompanion/lib/functions.tph~
   LAF BanterAccelerator INT_VAR pc_interval = 1800 END
 
@@ -200,6 +207,8 @@ BEGIN @9      // 45 Minutes
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 103
+  LABEL ~A7-DJINNICOMPANION-BANTER_45~
+
   INCLUDE ~DjinniCompanion/lib/functions.tph~
   LAF BanterAccelerator INT_VAR pc_interval = 2700 END
 
@@ -208,6 +217,8 @@ BEGIN @10     // 90 Minutes
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 104
+  LABEL ~A7-DJINNICOMPANION-BANTER_90~
+
   INCLUDE ~DjinniCompanion/lib/functions.tph~
   LAF BanterAccelerator INT_VAR pc_interval = 5400 END
 
@@ -216,6 +227,8 @@ BEGIN @11     // 120 Minutes
   SUBCOMPONENT @6     // Change banter frequency (only affects the djinni, default: 60 Minutes)
   GROUP @19     // Tweaks
   DESIGNATED 105
+  LABEL ~A7-DJINNICOMPANION-BANTER_120~
+
   INCLUDE ~DjinniCompanion/lib/functions.tph~
   LAF BanterAccelerator INT_VAR pc_interval = 7200 END
 
@@ -228,6 +241,8 @@ BEGIN @15     // Remove Afaaq's banter soundtrack?
   REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 0 @12     // This component requires the full version to be installed.
   GROUP @19     // Tweaks
   DESIGNATED 200
+  LABEL ~A7-DJINNICOMPANION-REMOVE_SOUNDTRACK~
+
   COPY_EXISTING ~A7AFQTLK.BCS~ ~override~
     DECOMPILE_AND_PATCH BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE ~PlaySong(0)~ ~~
@@ -242,6 +257,7 @@ BEGIN @18    // Alternate djinni portrait by Ulb
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~a7afaaq.cre~ @17     // This component requires either the full version or the light version of the "Djinni Companion" to be installed.
   GROUP @19     // Tweaks
   DESIGNATED 300
+  LABEL ~A7-DJINNICOMPANION-ALTERNATE_PORTRAIT~
 
   // BG2EE-specific stuff
   ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
@@ -261,6 +277,8 @@ BEGIN @22   // Disable IWD:EE Quest?
   REQUIRE_COMPONENT ~DjinniCompanion.tp2~ 2 @23   // This component requires the IWD:EE version to be installed.
   GROUP @19     // Tweaks
   DESIGNATED 400
+  LABEL ~A7-DJINNICOMPANION-IWDEE_DISABLE_QUESTS~
+
   COPY_EXISTING ~A7AFQINI.BCS~ ~override~
     DECOMPILE_AND_PATCH BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(SetGlobal("A7AfaaqLight",.+)\)~ ~\1 SetGlobal("A7HostTower", "GLOBAL", 10)~
@@ -276,6 +294,7 @@ BEGIN @14     // Add Infinity Animation creatures?
   REQUIRE_COMPONENT ~setup-infinityanimations.tp2~ 50 @16     // This component requires Infinity Animation's subcomponent "Distinctive Genies" to be installed.
   GROUP @19     // Tweaks
   DESIGNATED 900
+  LABEL ~A7-DJINNICOMPANION-ADD_IA_CREATURES~
 
   // Changing Efreets in Quest 5 to IA Efreeti animation
   COPY_EXISTING ~a7malik.cre~ ~override~
