@@ -2,7 +2,7 @@
 [![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/DjinniCompanion/total.svg?color=gold)](https://github.com/Argent77/DjinniCompanion/releases)
 [![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux&color=informational)](https://github.com/Argent77/DjinniCompanion/releases/latest)
 [![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG2%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE&color=indigo)](https://github.com/Argent77/DjinniCompanion)
-[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German&color=limegreen)](https://github.com/Argent77/DjinniCompanion)
+[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Simplified%20Chinese&color=limegreen)](https://github.com/Argent77/DjinniCompanion)
 
 # Afaaq, the Djinni Companion
 *A mod for Baldur's Gate II: Throne of Bhaal, Baldur's Gate II: Enhanced Edition and Icewind Dale: Enhanced Edition.*
@@ -81,6 +81,8 @@ If you want to know more, simply talk to him when he is around or in his magical
 **German translation and proofreading:** Many thanks to Gerri
 
 **French translation and proofreading:** Many thanks to Deratiseur
+
+**Simplified Chinese translation and proofreading:** Many thanks to Lewis Liu
 
 **Alternate Afaaq portrait:** provided by Ulb
 
