@@ -88,6 +88,24 @@ LANGUAGE ~Francais~
          ~DjinniCompanion/languages/french/quest3.tra~
          ~DjinniCompanion/languages/french/quest4.tra~
          ~DjinniCompanion/languages/french/quest5.tra~
+LANGUAGE ~Simplified Chinese(translation by Lewis Liu)~
+         ~schinese~
+         ~DjinniCompanion/languages/english/setup.tra~
+         ~DjinniCompanion/languages/english/misc.tra~
+         ~DjinniCompanion/languages/english/afaaq.tra~
+         ~DjinniCompanion/languages/english/quest1.tra~
+         ~DjinniCompanion/languages/english/quest2.tra~
+         ~DjinniCompanion/languages/english/quest3.tra~
+         ~DjinniCompanion/languages/english/quest4.tra~
+         ~DjinniCompanion/languages/english/quest5.tra~
+         ~DjinniCompanion/languages/schinese/setup.tra~
+         ~DjinniCompanion/languages/schinese/misc.tra~
+         ~DjinniCompanion/languages/schinese/afaaq.tra~
+         ~DjinniCompanion/languages/schinese/quest1.tra~
+         ~DjinniCompanion/languages/schinese/quest2.tra~
+         ~DjinniCompanion/languages/schinese/quest3.tra~
+         ~DjinniCompanion/languages/schinese/quest4.tra~
+         ~DjinniCompanion/languages/schinese/quest5.tra~
 
 
 /////////////////////////////////////////
