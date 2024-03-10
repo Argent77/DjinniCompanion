@@ -1,6 +1,6 @@
 BACKUP ~weidu_external/backup/DjinniCompanion~
 SUPPORT ~http://www.shsforums.net/forum/651-djinni-companion/~
-VERSION ~v2.9~
+VERSION ~v2.10~
 
 ALWAYS
   // required because of non-standard BACKUP path
