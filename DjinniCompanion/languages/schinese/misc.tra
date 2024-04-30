@@ -2,7 +2,7 @@
 // *** Misc. strings not fitting elsewhere (use index 100 - 999) ***
 
 // Strings related to rangers' tracking abilities
-@100 = ~罗刹和各种各样的林地生物~
+@100 = ~邪兽鬼和各种各样的林地生物~
 @101 = ~各种各样的耐火生物，如魔蝠、火元素或地猎犬~
 @102 = ~捕食者，如黑豹、巨蛇或类似蛇的生物~
 @103 = ~蜘蛛和土巨怪~
