@@ -5,7 +5,7 @@ IF
   Range(LastTrigger, 10)
   PartyHasItem("A7MISC7")   // Arabani Anchor Stone
 THEN RESPONSE #100
-  DisplayString(Myself, ~The anchor stone glows briefly and you are able to enter the building.~)
+  DisplayString(Myself, @3916)  // The anchor stone glows briefly and you are able to enter the building.
   StartCutSceneMode()
   Wait(2)
   FadeToColor([20.0], 0)
@@ -28,7 +28,7 @@ IF
   Range(LastTrigger, 10)
   PartyHasItem("MISCBF")    // Jae'llat Wardstone
 THEN RESPONSE #100
-  DisplayString(Myself, ~The wardstone glows briefly and you are able to enter the building.~)
+  DisplayString(Myself, @3968)  // The wardstone glows briefly and you are able to enter the building.
   StartCutSceneMode()
   Wait(2)
   FadeToColor([20.0], 0)

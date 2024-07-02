@@ -279,7 +279,7 @@ APPEND A7TATHAS
     SAY @3169 /* Being disguised as one of us for such a short time, you likely don't have close ties to the great houses of Ust Natha yet. */
     = @3170 /* Find a way to pass the protective wards of the Arabani House. It will likely be guarded, but you look strong enough to deal with them. */
     = @3171 /* Once you have passed the wards, find the residing Matron Mother Xunvrae d'Arabani and kill her. Return with her House Insignia and receive your reward. */
-    + ~PartyHasItem("A7MISC4")~ + ~Actually, I have her House Insignia already in my possession.~ + Tathas.3.4.1
+    + ~PartyHasItem("A7MISC4")~ + @3237 /* Actually, I have her House Insignia already in my possession. */ + Tathas.3.4.1
     + ~!PartyHasItem("A7MISC4")~ + @3172 /* Do you know where I might find her House Insignia? */ + Tathas.AgreeOffer.3
     + ~!PartyHasItem("A7MISC4")~ + @3173 /* I will do it at once. */ + Tathas.AgreeOffer.4
     ++ @3174 /* On second thought, I have decided to refuse your offer. */ + Tathas.RefuseOffer

@@ -2032,7 +2032,7 @@ APPEND %afq_dialog%
   END
 
   IF ~~ TalkGeneric.PotionNone
-    SAY ~Then I have to manage without it.~
+    SAY @10399 /* Then I have to manage without it. */
     IF ~~ + TalkGeneric.PC.1
   END
 

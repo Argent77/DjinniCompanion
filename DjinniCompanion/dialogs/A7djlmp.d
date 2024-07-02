@@ -32,54 +32,54 @@ END
 // *** Afaaq senses his sealed spiritual essence somewhere nearby (Quest 3) ***
 // before talking to the duergars
 IF ~~ LampTalk.Quest3SenseSoul.1
-  SAY ~My <PRO_LADYLORD>, I can feel it!  Yes, I am almost certain of it.~
-  = ~I can feel my stolen spiritual essence somewhere nearby. Does this also mean I am to face that person again?~
-  + ~!Global("A7TalkAboutDrow", "GLOBAL", 0)~ + ~Are you talking about the drow who enslaved you once long ago?~ + LampTalk.Quest3SenseSoul.3
-  + ~Global("A7TalkAboutDrow", "GLOBAL", 0)~ + ~Afaaq, what are you talking about?~ + LampTalk.Quest3SenseSoul.4
-  ++ ~We don't have time to search for the ghosts of your past. My first priority is to find Irenicus.~ + LampTalk.Quest3SenseSoul.5
+  SAY @11186 /* My <PRO_LADYLORD>, I can feel it!  Yes, I am almost certain of it. */
+  = @11187 /* I can feel my stolen spiritual essence somewhere nearby. Does this also mean I am to face that person again? */
+  + ~!Global("A7TalkAboutDrow", "GLOBAL", 0)~ + @11188 /* Are you talking about the drow who enslaved you once long ago? */ + LampTalk.Quest3SenseSoul.3
+  + ~Global("A7TalkAboutDrow", "GLOBAL", 0)~ + @11189 /* Afaaq, what are you talking about? */ + LampTalk.Quest3SenseSoul.4
+  ++ @11190 /* We don't have time to search for the ghosts of your past. My first priority is to find Irenicus. */ + LampTalk.Quest3SenseSoul.5
 END
 
 // after talking to the duergars
 IF ~~ LampTalk.Quest3SenseSoul.2
-  SAY ~My <PRO_LADYLORD>, I can feel it!~
-  = ~I can feel my stolen spiritual essence somewhere nearby. The drow party mentioned by those duergars are most certainly in possession of it.~
-  = ~Does this mean I am to face that person again?~
-  + ~!Global("A7TalkAboutDrow", "GLOBAL", 0)~ + ~Are you talking about the drow who enslaved you once long ago?~ + LampTalk.Quest3SenseSoul.3
-  + ~Global("A7TalkAboutDrow", "GLOBAL", 0)~ + ~Afaaq, what are you talking about?~ + LampTalk.Quest3SenseSoul.4
-  ++ ~We don't have time to search for the ghosts of your past. My first priority is to find Irenicus.~ + LampTalk.Quest3SenseSoul.5
+  SAY @11191 /* My <PRO_LADYLORD>, I can feel it! */
+  = @11192 /* I can feel my stolen spiritual essence somewhere nearby. The drow party mentioned by those duergars are most certainly in possession of it. */
+  = @11193 /* Does this mean I am to face that person again? */
+  + ~!Global("A7TalkAboutDrow", "GLOBAL", 0)~ + @11188 /* Are you talking about the drow who enslaved you once long ago? */ + LampTalk.Quest3SenseSoul.3
+  + ~Global("A7TalkAboutDrow", "GLOBAL", 0)~ + @11189 /* Afaaq, what are you talking about? */ + LampTalk.Quest3SenseSoul.4
+  ++ @11190 /* We don't have time to search for the ghosts of your past. My first priority is to find Irenicus. */ + LampTalk.Quest3SenseSoul.5
 END
 
 IF ~~ LampTalk.Quest3SenseSoul.3
-  SAY ~Yes, I am. He took a vital part of my spiritual essence and sealed it away. Even though I have escaped his grasp, my essence is still in his possession.~
-  = ~I implore you, my <PRO_LADYLORD>, to help me get my spiritual essence back. I doubt that I will get a chance like this a second time.~
-  ++ ~Of course, I will help you find your lost soul. I know that feeling of loss too well myself.~ + LampTalk.Quest3SenseSoul.6
-  ++ ~I'll keep my eyes open, but I can't promise anything.~ + LampTalk.Quest3SenseSoul.6
-  ++ ~I will think about it if the oppertunity actually arises. My first priority is to find Irenicus after all.~ + LampTalk.Quest3SenseSoul.7
+  SAY @11194 /* Yes, I am. He took a vital part of my spiritual essence and sealed it away. Even though I have escaped his grasp, my essence is still in his possession. */
+  = @11195 /* I implore you, my <PRO_LADYLORD>, to help me get my spiritual essence back. I doubt that I will get a chance like this a second time. */
+  ++ @11196 /* Of course, I will help you find your lost soul. I know that feeling of loss too well myself. */ + LampTalk.Quest3SenseSoul.6
+  ++ @11197 /* I'll keep my eyes open, but I can't promise anything. */ + LampTalk.Quest3SenseSoul.6
+  ++ @11198 /* I will think about it if the opportunity actually arises. My first priority is to find Irenicus after all. */ + LampTalk.Quest3SenseSoul.7
 END
 
 IF ~~ LampTalk.Quest3SenseSoul.4
-  SAY ~As I have mentioned before, my binding to the lamp had been made possible only because of adverse circumstances. Those circumstances were caused by a drow party that crossed my path ages ago.~
-  = ~I do not want to got into the details, but the drow have taken a major part of my spiritual essence and sealed it away. The loss of my essence made it even impossible for me to return to my home plane.~
-  = ~I implore you, my <PRO_LADYLORD>, to help me get my spiritual essence back. I doubt that I will get a chance like this a second time.~
-  ++ ~Of course, I will help you find your lost soul. I know that feeling of loss all too well myself.~ + LampTalk.Quest3SenseSoul.6
-  ++ ~I'll keep my eyes open, but I can't promise anything.~ + LampTalk.Quest3SenseSoul.6
-  ++ ~I will think about it if the oppertunity actually arises. My first priority is to find Irenicus after all.~ + LampTalk.Quest3SenseSoul.7
+  SAY @11199 /* As I have mentioned before, my binding to the lamp had been made possible only because of adverse circumstances. Those circumstances were caused by a drow party that crossed my path ages ago. */
+  = @11200 /* I do not want to go into the details, but the drow have taken a major part of my spiritual essence and sealed it away. The loss of my essence made it even impossible for me to return to my home plane. */
+  = @11195 /* I implore you, my <PRO_LADYLORD>, to help me get my spiritual essence back. I doubt that I will get a chance like this a second time. */
+  ++ @11201 /* Of course, I will help you find your lost soul. I know that feeling of loss all too well myself. */ + LampTalk.Quest3SenseSoul.6
+  ++ @11197 /* I'll keep my eyes open, but I can't promise anything. */ + LampTalk.Quest3SenseSoul.6
+  ++ @11198 /* I will think about it if the opportunity actually arises. My first priority is to find Irenicus after all. */ + LampTalk.Quest3SenseSoul.7
 END
 
 IF ~~ LampTalk.Quest3SenseSoul.5
-  SAY ~I do understand your impatience, but I implore you not to turn your back on me when the opportunity arises.~
-  ++ ~You are right, of course. I will help you find your lost essence.~ + LampTalk.Quest3SenseSoul.6
-  ++ ~I'll keep my eyes open, but I can't promise anything.~ + LampTalk.Quest3SenseSoul.6
-  ++ ~I will think about it if the oppertunity actually arises.~ + LampTalk.Quest3SenseSoul.7
+  SAY @11202 /* I do understand your impatience, but I implore you not to turn your back on me when the opportunity arises. */
+  ++ @11203 /* You are right, of course. I will help you find your lost essence. */ + LampTalk.Quest3SenseSoul.6
+  ++ @11197 /* I'll keep my eyes open, but I can't promise anything. */ + LampTalk.Quest3SenseSoul.6
+  ++ @11204 /* I will think about it if the opportunity actually arises. */ + LampTalk.Quest3SenseSoul.7
 END
 
 IF ~~ LampTalk.Quest3SenseSoul.6
-  SAY ~I am grateful for your assistance, my <PRO_LADYLORD>. Without your help I would surely be helpless before my former master.~
+  SAY @11205 /* I am grateful for your assistance, my <PRO_LADYLORD>. Without your help I would surely be helpless before my former master. */
   IF ~~ DO ~SetGlobal("A7Q3AfaaqEssence", "AR2100", 3)~ EXIT
 END
 
 IF ~~ LampTalk.Quest3SenseSoul.7
-  SAY ~Fair enough. I trust that you will decide wisely in the end.~
+  SAY @11206 /* Fair enough. I trust that you will decide wisely in the end. */
   IF ~~ DO ~SetGlobal("A7Q3AfaaqEssence", "AR2100", 3)~ EXIT
 END
 
@@ -92,7 +92,7 @@ END
 
 // *** Afaaq's remark after freeing Hendak and the slaves in the Slums of Athkatla ***
 IF ~~ LampTalk.SlaverQuest
-  SAY ~Now that the slavers and their base have been destroyed, you have made this part of the town a little safer...at least for a while. It is now for the authorities and the citizens themselves to prevent their return.~
+  SAY @11216 /* Now that the slavers and their base have been destroyed, you have made this part of the town a little safer...at least for a while. It is now for the authorities and the citizens themselves to prevent their return. */
   IF ~~ DO ~SetGlobal("A7SlaverHendak", "AR0406", 2) IncrementGlobal("A7AfaaqFriendship", "GLOBAL", 1) DisplayStringNoName(Player1, @60028)~ EXIT
 END
 
