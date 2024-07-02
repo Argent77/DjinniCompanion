@@ -1,5 +1,16 @@
 // *** Quest 5-specific ***
 
+// shout IDs used in scripts
+OUTER_SET shout_efreeti_attack = 167
+OUTER_SET shout_salamander_attack = 168
+OUTER_SET shout_djinni_attack = 169
+// specifics IDs used in scripts
+OUTER_SET specific_efreeti = 167
+OUTER_SET specific_djinni = 168
+// timer IDs used in scripts
+OUTER_SET timing_truesight = 167
+OUTER_SET timing_elem = 168
+
 INCLUDE ~DjinniCompanion/lib/ar3001.tph~
 INCLUDE ~DjinniCompanion/lib/ar5500.tph~
 INCLUDE ~DjinniCompanion/lib/ar5503.tph~
@@ -23,17 +34,6 @@ END ELSE BEGIN
   OUTER_TEXT_SPRINT PORTRAIT_KARIMS "DjinniCompanion/portraits/a7karims.bmp"
   OUTER_TEXT_SPRINT PORTRAIT_MALIKS "DjinniCompanion/portraits/a7maliks.bmp"
 END
-
-// shout IDs used in scripts
-OUTER_SET shout_efreeti_attack = 167
-OUTER_SET shout_salamander_attack = 168
-OUTER_SET shout_djinni_attack = 169
-// specifics IDs used in scripts
-OUTER_SET specific_efreeti = 167
-OUTER_SET specific_djinni = 168
-// timer IDs used in scripts
-OUTER_SET timing_truesight = 167
-OUTER_SET timing_elem = 168
 
 // Adding XP rewards for Quest 5
 COPY_EXISTING ~xplist.2da~ ~override~
