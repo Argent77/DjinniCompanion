@@ -518,6 +518,7 @@ COPY ~DjinniCompanion/spells/a7mista.spl~ ~override~
   SAY NAME1 ~Polymorph into Gaseous Cloud~
   SAY UNIDENTIFIED_DESC @60019    // -used by script-
 COPY ~DjinniCompanion/spells/a7djngas.eff~ ~override~
+     ~DjinniCompanion/spells/a7dispma.vvc~ ~override~
 
 COPY ~DjinniCompanion/spells/a7mistb.spl~ ~override~
   SAY NAME1 ~Recover from Polymorph~

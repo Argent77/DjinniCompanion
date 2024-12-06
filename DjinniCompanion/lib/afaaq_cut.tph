@@ -520,7 +520,7 @@ END ELSE BEGIN
   THEN RESPONSE #100
     CutSceneId("A7Afaaq")
     Wait(1)
-    CreateVisualEffect("SPDISPMA",[2073.1274])
+    CreateVisualEffect("A7DISPMA",[2073.1274])
     JumpToPoint([2073.1274])
   END
   >>>>>>>>
