@@ -644,16 +644,29 @@ APPEND A7TATHAS
   // *** Talk to Tathas after quest is over ***
   IF ~Global("A7Quest3", "GLOBAL", 10) RandomNum(3, 1)~ Tathas.8.1
     SAY @3221 /* I am busy right now. Please talk to me later. */
-    IF ~~ EXIT
+    + ~Global("A7TathasReleaseSoulCage","GLOBAL",0) InPartySlot(LastTalkedToBy, 0) CheckStatGT(LastTalkedToBy, 15, INT)~ 
+        + @3238 /* How can I release Afaaq's soul from the gem? */ DO ~SetGlobal("A7TathasReleaseSoulCage","GLOBAL",1)~ + Tathas.8.4
+    IF ~OR(3) !Global("A7TathasReleaseSoulCage","GLOBAL",0) !InPartySlot(LastTalkedToBy, 0) !CheckStatGT(LastTalkedToBy, 15, INT)~ EXIT
   END
 
   IF ~Global("A7Quest3", "GLOBAL", 10) RandomNum(3, 2)~ Tathas.8.2
     SAY @3222 /* Good day to you. How are you doing? */
-    IF ~~ EXIT
+    + ~Global("A7TathasReleaseSoulCage","GLOBAL",0) InPartySlot(LastTalkedToBy, 0) CheckStatGT(LastTalkedToBy, 15, INT)~ 
+        + @3238 /* How can I release Afaaq's soul from the gem? */ DO ~SetGlobal("A7TathasReleaseSoulCage","GLOBAL",1)~ + Tathas.8.4
+    IF ~OR(3) !Global("A7TathasReleaseSoulCage","GLOBAL",0) !InPartySlot(LastTalkedToBy, 0) !CheckStatGT(LastTalkedToBy, 15, INT)~ EXIT
   END
 
   IF ~Global("A7Quest3", "GLOBAL", 10) RandomNum(3, 3)~ Tathas.8.3
     SAY @3223 /* We are still busy removing all traces of the Arabani family. */
+    + ~Global("A7TathasReleaseSoulCage","GLOBAL",0) InPartySlot(LastTalkedToBy, 0) CheckStatGT(LastTalkedToBy, 15, INT)~ 
+        + @3238 /* How can I release Afaaq's soul from the gem? */ DO ~SetGlobal("A7TathasReleaseSoulCage","GLOBAL",1)~ + Tathas.8.4
+    IF ~OR(3) !Global("A7TathasReleaseSoulCage","GLOBAL",0) !InPartySlot(LastTalkedToBy, 0) !CheckStatGT(LastTalkedToBy, 15, INT)~ EXIT
+  END
+
+  IF ~~ Tathas.8.4
+    SAY @3239 /* I have expected that question from you, Veldrin. */
+    = @3240 /* But I have to disappoint you. The enchantment of the soul cage was woven in the binding chamber of my home in Ched Nasad. And only there can it be undone. */
+    = @3241 /* I do not think you can succeed without the help of greater powers. */
     IF ~~ EXIT
   END
 END
