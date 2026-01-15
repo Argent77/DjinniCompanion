@@ -3,8 +3,6 @@ SUPPORT ~http://www.shsforums.net/forum/651-djinni-companion/~
 VERSION ~v2.11~
 
 ALWAYS
-  // required because of non-standard BACKUP path
-  OUTER_TEXT_SPRINT MOD_FOLDER ~DjinniCompanion~
   // root folder for mutable data
   OUTER_TEXT_SPRINT WORK_FOLDER ~weidu_external~
 
